@@ -1,1 +1,9 @@
+.doit.db.db
+
 bin
+cache
+include
+lib
+share
+
+*.pyc
