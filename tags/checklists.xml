@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet type="text/xsl" href="../assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Blog-O! (checklists)</title><link>https://weblog.latte.ca/</link><description></description><atom:link type="application/rss+xml" href="https://weblog.latte.ca/tags/checklists.xml" rel="self"></atom:link><language>en</language><lastBuildDate>Wed, 24 Feb 2016 17:07:40 GMT</lastBuildDate><generator>https://getnikola.com/</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Making sure I don’t forget things.</title><link>https://weblog.latte.ca/blake/tech/thunderbird/checklists.html</link><dc:creator>Blake Winton</dc:creator><description>&lt;div&gt;&lt;p&gt;I’ve created a couple of checklists, and would like to hear any feedback on
+them.  They are a &lt;a href="https://wiki.mozilla.org/User:Bwinton/Review_Checklist"&gt;Review Checklist&lt;/a&gt;, and a &lt;a href="https://wiki.mozilla.org/User:Bwinton/Commit_Checklist"&gt;Commit
+Checklist&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;They came about after I had been working mostly on experimental add-ons for
+a while, and then attempted to push a couple of reviewed fixes.  Since I
+was out of practice, I managed to get something minor wrong on both of the
+pushes.  (The first one failed to attribute the patch to the proper author;
+The second one failed to mention the bug number in the commit message.)
+Since I’m a bit of a perfectionist, this really annoyed me, and so I vowed
+to write up the steps that I go through when I need to commit and push a
+patch, so that I could refer to them later, since if &lt;a href="http://us.macmillan.com/thechecklistmanifesto"&gt;checklists can save
+lives&lt;/a&gt;, then I figure they
+can probably also help me do my job better.  But before I go to that, I
+needed to review a patch, so I wrote up some of the things I look for when
+I review a patch too.&lt;/p&gt;&lt;/div&gt;</description><category>checklists</category><category>commit</category><category>mozilla</category><category>review</category><category>thunderbird</category><guid>https://weblog.latte.ca/blake/tech/thunderbird/checklists.html</guid><pubDate>Sun, 05 Dec 2010 00:49:11 GMT</pubDate></item></channel></rss>

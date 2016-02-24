@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet type="text/xsl" href="../assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Blog-O! (plugins)</title><link>https://weblog.latte.ca/</link><description></description><atom:link type="application/rss+xml" href="https://weblog.latte.ca/tags/plugins.xml" rel="self"></atom:link><language>en</language><lastBuildDate>Wed, 24 Feb 2016 17:07:39 GMT</lastBuildDate><generator>https://getnikola.com/</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Some notes on Bazaar</title><link>https://weblog.latte.ca/blake/tech/bzr/bazaarnotes1.html</link><dc:creator>Blake Winton</dc:creator><description>&lt;p&gt;This started off as a reply to some email on the Bazaar-NG list,
+but it sort of grew and grew, until there were a whole bunch of things
+in it, and I thought it would probably be better as a weblog entry, so
+that I could find it later.&lt;/p&gt;
+
+&lt;p&gt;On to the email...&lt;br&gt;
+Martin Pool wrote:&lt;br&gt;
+&amp;gt; If you have sftp access to your server, then just do&lt;br&gt;
+&amp;gt;   bzr init-repo sftp://user@host/~/myproject&lt;br&gt;
+&amp;gt;   bzr push sftp://user@host/~/myproject/mybranch&lt;br&gt;
+&amp;gt; then on the second machine (eg at work)&lt;br&gt;
+&amp;gt;   bzr init-repo ~/myproject&lt;br&gt;
+&amp;gt;   cd myproject&lt;br&gt;
+&amp;gt;   bzr branch sftp://user@host/~/myproject/mybranch&lt;br&gt;&lt;/p&gt;
+
+&lt;p&gt;As a related question, if I wanted other people to be able to download
+my branch over http, would it suffice to do something on the server
+like&lt;br&gt;&lt;br&gt;
+bzr init-repo ~/www/myproject&lt;br&gt;
+cd ~/www/myproject&lt;br&gt;
+bzr branch sftp://user@host/~/myproject/mybranch&lt;br&gt;&lt;br&gt;
+or would I need to push straight to ~/www/myproject/mybranch?
+&lt;/p&gt;
+
+&lt;p&gt;I'm of two minds here, and I'ld like to explain why, in case it's a
+common problem.  On the one hand, the repo I created by following the
+steps in the first part of Martin's message&lt;br&gt;
+&amp;gt;   bzr init-repo sftp://user@host/~/myproject&lt;br&gt;
+&amp;gt;   bzr push sftp://user@host/~/myproject/mybranch&lt;br&gt;
+should be just the same as any other repository, right?&lt;br&gt;&lt;br&gt;
+But, on the other hand, when I ssh to "user@host", and look in
+~/myproject, all I see is a .bzr directory.  None of the files I
+allegedly pushed.
+&lt;/p&gt;
+
+&lt;p&gt;A search for 'bzr push "no content"' and 'bzr push missing files'
+turns up nothing that makes much sense to me.  running 'bzr help push'
+finally shows me the following lines:&lt;br&gt;
+&amp;gt; The target branch will not have its working tree populated
+because&lt;br&gt;
+&amp;gt; this is both expensive, and is not supported on remote file
+systems.&lt;br&gt;
+which explains it at least a little.  So I started looking for a way
+to push and update, which quickly led me to the push-and-update
+plugin, but I'm now lost as to how to install it into my copy of bzr
+(the binary distribution, running under Windows XP.)  The plugins
+document that ships with bzr says "typically found in
+/usr/lib/python2.4/site-packages/bzrlib/plugins/", but I'm really
+fairly sure that's not where it's located on &lt;i&gt;my&lt;/i&gt; box...  &lt;a href="http://dpi.radiology.uiowa.edu/mifar/doc/bazaar-setup.php"&gt;another
+page&lt;/a&gt; says that it is "usually [...]
+C:\python2.4\site-packages\bzrlib\plugins under Windows", but again,
+that directory doesn't exist where I am.
+&lt;/p&gt;
+
+&lt;p&gt;Since I expect it'll make a difference to any answer I get, let me
+just say upfront that I've installed Bazaar (bzr) 0.18.0 into
+C:\Program Files\Bazaar\ using the Windows standalone installer.  The
+output of "bzr version" is:&lt;br&gt;
+"""&lt;br&gt;
+Bazaar (bzr) 0.18.0&lt;br&gt;
+Using Python interpreter: C:\Program Files\Bazaar\bzr.exe&lt;br&gt;
+Using Python standard library: C:\Program
+Files\Bazaar\lib\library.zip&lt;br&gt;
+Using bzrlib: C:\Program Files\Bazaar\lib\library.zip\bzrlib&lt;br&gt;
+Using Bazaar configuration: C:/Documents and
+Settings/blake/Application Data/bazaar/2.0&lt;br&gt;
+Using Bazaar log file: C:\Documents and Settings\blake\My
+Documents\.bzr.log&lt;br&gt;&lt;br&gt;
+Copyright 2005, 2006, 2007 Canonical Ltd.&lt;br&gt;
+http://bazaar-vcs.org/&lt;br&gt;&lt;br&gt;
+bzr comes with ABSOLUTELY NO WARRANTY.  bzr is free software, and you
+may use, modify and redistribute it under the terms of the GNU General
+Public License version 2 or later.&lt;br&gt;
+"""&lt;br&gt;&lt;br&gt;
+So, where should I put the plugins in this case?&lt;br&gt;&lt;/p&gt;
+
+&lt;p&gt;The answer, as given on irc, seems to be "put it somewhere else and
+set the BZR_PLUGIN_PATH env variable".  Works for me, although it
+would have been nice if the Windows standalone installer did that for
+me, by creating a Plugins directory under the install directory.  And
+as one final note, the BZR_PLUGIN_PATH, which it may contain spaces
+(i.e. "C:\Program Files\Bazaar\Plugins"), must not end in a trailing
+"\".&lt;/p&gt;</description><category>bazaar-ng</category><category>bzr</category><category>http</category><category>notes</category><category>plugins</category><category>push</category><category>sftp</category><category>windows</category><guid>https://weblog.latte.ca/blake/tech/bzr/bazaarnotes1.html</guid><pubDate>Mon, 30 Jul 2007 19:06:13 GMT</pubDate></item></channel></rss>

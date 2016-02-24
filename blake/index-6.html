@@ -1,0 +1,883 @@
+<!DOCTYPE html>
+<html prefix="og: http://ogp.me/ns# article: http://ogp.me/ns/article# " lang="en">
+<head>
+<meta charset="utf-8">
+<base href="https://weblog.latte.ca/blake/index-6.html">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Blake (old posts, page 6) | Blog-O!</title>
+<link href="../assets/css/bootstrap.min.css" rel="stylesheet" type="text/css">
+<link href="../assets/css/rst.css" rel="stylesheet" type="text/css">
+<link href="../assets/css/code.css" rel="stylesheet" type="text/css">
+<link href="../assets/css/colorbox.css" rel="stylesheet" type="text/css">
+<link href="../assets/css/theme.css" rel="stylesheet" type="text/css">
+<meta content="#5670d4" name="theme-color">
+<link rel="alternate" type="application/rss+xml" title="RSS" href="../rss.xml">
+<link rel="canonical" href="https://weblog.latte.ca/blake/index-6.html">
+<link rel="prev" href="index-7.html" type="text/html">
+<link rel="next" href="index-5.html" type="text/html">
+<!--[if lt IE 9]><script src="../assets/js/html5.js"></script><![endif]-->
+</head>
+<body>
+<a href="#content" class="sr-only sr-only-focusable">Skip to main content</a>
+
+<!-- Menubar -->
+
+<nav class="navbar navbar-inverse navbar-static-top"><div class="container">
+<!-- This keeps the margins nice -->
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-navbar" aria-controls="bs-navbar" aria-expanded="false">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="https://weblog.latte.ca/">
+
+                <span id="blog-title">Blog-O!</span>
+            </a>
+        </div>
+<!-- /.navbar-header -->
+        <div class="collapse navbar-collapse" id="bs-navbar" aria-expanded="false">
+            <ul class="nav navbar-nav">
+<li>
+<a href="../archive.html">Archive</a>
+                </li>
+<li>
+<a href="../tags/index.html">Tags</a>
+                </li>
+<li>
+<a href="../rss.xml">RSS feed</a>
+
+                
+            </li>
+</ul>
+<!-- Custom search --><form method="get" id="search" action="//duckduckgo.com/" class="navbar-form pull-right">
+<input type="hidden" name="sites" value="https://weblog.latte.ca/"><input type="hidden" name="k8" value="#444444"><input type="hidden" name="k9" value="#D51920"><input type="hidden" name="kt" value="h"><input type="text" name="q" maxlength="255" placeholder="Search…" style="margin-top: 4px;"><input type="submit" value="DuckDuckGo Search" style="visibility: hidden;">
+</form>
+<!-- End of custom search -->
+
+
+            <ul class="nav navbar-nav navbar-right"></ul>
+</div>
+<!-- /.navbar-collapse -->
+    </div>
+<!-- /.container -->
+</nav><!-- End of Menubar --><div class="container" id="content" role="main">
+    <div class="body-content">
+        <!--Body content-->
+        <div class="row">
+            
+            
+<div class="sectionindex">
+    <header><h2><a href="index.html">Blake (old posts, page 6)</a></h2>
+    </header><div class="postindex">
+    <article class="h-entry post-text"><header><h1 class="p-name entry-title"><a href="employment/newtools.html" class="u-url">Some VSS to Subversion notes.</a></h1>
+        <div class="metadata">
+            <p class="byline author vcard"><span class="byline-name fn">Blake Winton</span></p>
+            <p class="dateline"><a href="employment/newtools.html" rel="bookmark"><time class="published dt-published" datetime="2006-09-16T20:00:00-04:00" itemprop="datePublished" title="2006-09-16 20:00">2006-09-16 20:00</time></a></p>
+                <p class="commentline">
+        
+    <a href="employment/newtools.html#disqus_thread" data-disqus-identifier="/blake/employment/newtools">Comments</a>
+
+
+        </p>
+</div>
+    </header><div class="p-summary entry-summary">
+    <p>From various places around the net.  (Hint: Google "vss to subversion".)
+</p>
+<ul>
+<li>
+<a href="http://tortoisesvn.sourceforge.net/docs/release/TortoiseSVN_en/ch05s18.html">Lock-modify-unlock for Svn.</a>  Not that that's what I think we should 
+    bd doing, but if I've got to sell it, and that's a sticking point, at least
+    I have an answer now.</li>
+  <li>Subversion is said to be much faster.  "Our CC.NET build went from 3
+    minutes to 35 seconds for whole tree!!!!"  I haven't looked up how much of
+    our nightly build time is spent getting files from VSS, but I seem to
+    remember it's not inconsiderable, and that step has been failing more often 
+    recently, so if we can make it both faster and more reliable, that'll be a 
+    good selling point.</li>
+  <li>
+<a href="http://ankhsvn.tigris.org/">Ankhsvn</a> (Wow, what a horrible
+    front page!  If I were <a href="http://pyre.third-bit.com/blog/">Greg
+    Wilson</a>, and <a href="http://pyre.third-bit.com/blog/archives/645.html">grading them on
+    it</a>, they'ld get a 51%.  I mean, it's there, so I'm not going to fail
+    you, but for the love of Pete, hire a graphic designer, or look at the other 
+    two links in this entry, or something.  Please.) or <a href="http://www.pushok.com/soft_svn.php">PushOK</a> or <a href="http://www.visualsvn.com/">VisualSVN</a> for Visual Studio 
+    integration, but everyone seems to use <a href="http://tortoisesvn.tigris.org/">TortoiseSvn</a>.  I
+    wonder if there's something similar for OSX?  Fortunately, Eclipse 
+    integration is good enough that I don't really mind falling back to the 
+    command line client when I have to, but still.</li>
+  <li>A <a href="http://codecorner.tigernews.co.uk/codecorner/presentations/ddd2-subversion.zip">presentation</a> on "Replacing SourceSafe with SubVersion".</li>
+  <li>
+<a href="http://www.pumacode.org/projects/vss2svn">A Perl script</a> 
+    (<i>shudder</i>) to migrate your VSS repository to svn.</li>
+</ul>
+<br>
+And there you go.  Management has been feeling the pain recently, and the Server 
+Team Lead seems onboard with the idea, so we might actually make the change.  
+Exciting times.
+
+    </div>
+    </article><article class="h-entry post-text"><header><h1 class="p-name entry-title"><a href="tech/mac/questions1.html" class="u-url">More questions from a new Mac user.</a></h1>
+        <div class="metadata">
+            <p class="byline author vcard"><span class="byline-name fn">Blake Winton</span></p>
+            <p class="dateline"><a href="tech/mac/questions1.html" rel="bookmark"><time class="published dt-published" datetime="2006-09-08T20:39:00-04:00" itemprop="datePublished" title="2006-09-08 20:39">2006-09-08 20:39</time></a></p>
+                <p class="commentline">
+        
+    <a href="tech/mac/questions1.html#disqus_thread" data-disqus-identifier="/blake/tech/mac/questions1">Comments</a>
+
+
+        </p>
+</div>
+    </header><div class="p-summary entry-summary">
+    <p>Okay, y'all know by now that we've got a new Mac.  And in the grand
+tradition of new computers, I'm trying to burn up all the hard drive
+space with fun or useful utilities.  Since this is pretty much my
+first exposure to OSX, anything goes, since I probably haven't heard
+of it.</p>
+
+<p>Having said that, here's what I have found:
+</p>
+<ul>
+<li><a href="http://quicksilver.blacktree.com/">QuickSilver</a></li>
+<li>I installed <a href="http://growl.info/">Growl</a>, but I don't
+think anything is using it, other than <a href="http://transmission.m0k.org/">Transmission</a>.</li>
+<li>
+<a href="http://www.barebones.com/products/textwrangler/">TextWrangler</a>
+(Freeware, from the people who make <a href="http://www.barebones.com/products/bbedit/index.shtml">BBEdit</a>)
+is surprisingly my editor of choice.  (Well, except for this post.)  I
+was sure I'ld stick with vim, being old-skool like that, but I find I
+want to save my Terminal window for running things, and edit my source
+in an editor.</li>
+</ul>
+<p>Oh, and the two neat new tricks I've learned so far are:
+</p>
+<ul>
+<li>Command-Shift-4, then the spacebar to take a screenshot of
+just one window, and</li>
+<li>
+<pre>sudo defaults write /Library/Preferences/com.apple.loginwindow LoginwindowText -string "My Funny Message!!!"</pre>
+to print a message on the login window.</li>
+</ul>
+</div>
+    </article><article class="h-entry post-text"><header><h1 class="p-name entry-title"><a href="tech/timandruby.html" class="u-url">Response to Tim Bray.</a></h1>
+        <div class="metadata">
+            <p class="byline author vcard"><span class="byline-name fn">Blake Winton</span></p>
+            <p class="dateline"><a href="tech/timandruby.html" rel="bookmark"><time class="published dt-published" datetime="2006-09-06T13:51:00-04:00" itemprop="datePublished" title="2006-09-06 13:51">2006-09-06 13:51</time></a></p>
+                <p class="commentline">
+        
+    <a href="tech/timandruby.html#disqus_thread" data-disqus-identifier="/blake/tech/timandruby">Comments</a>
+
+
+        </p>
+</div>
+    </header><div class="p-summary entry-summary">
+    <p>In a <a href="http://www.tbray.org/ongoing/When/200x/2006/09/05/What-Ruby-Needs">recent weblog entry</a>, Tim Bray wrote about some things he thought
+Ruby lacked.  Since he doesn't have comments enabled, I thought I
+would share my opinions here, as a series of disjointed thoughts.</p>
+
+<p>He said "Ruby needs an IDE.  All programming languages need IDEs."
+Well, I completely agree with that, and for my serious Python
+programming (as opposed to noodling around in Python), I tend to use
+Eclipse, because it's there.  Perhaps Ruby could take the same
+approach...</p>
+
+<p>Of course, he also said a couple of things where I think he's a
+little off the mark.  For instance "I should never have to scroll
+much; IDEs go to a lot of trouble to make it trivial to jump from
+wherever to the source for the method being called, or its docs, or
+the next compile error or breakpoint, or variable declaration, or
+whatever. Scrolling back and forth in a source-code file is just
+stupid."  This I see more as a problem with his choice of editor, or
+perhaps his knowledge of its features.  I'm fairly sure both emacs and
+vi allow you to jump to the things he's asking for...</p>
+
+<p>"certain aspects of Unicode are, on the surface at least,
+objectively racist; for example, why does UTF-8 encoding of characters
+become progressively less efficient as you move from the languages of
+the Western hemisphere to those of the East?"  Hmm...  I don't know...
+My first guess would be because Western languages have approximately a
+10,000th the number of characters as Eastern languages.  My second
+guess would have something to do with Huffman coding and the
+prevalence of Western Language (mainly English) documents on the net,
+but I do recognize that this could be due to my only being able to
+read English.</p>
+
+<p>As for Integration, isn't that what Parrot, .NET, and the JVM are
+supposed to provide us?  If I'm wrong, and the language level is the
+appropriate level to solve this problem, then I sincerely hope that
+it's the Ruby and Python communities who get together to do
+something.</p>
+
+<p>And finally, he missed what I consider to be the most important
+part of an IDE.  (No, not Source Control Integration!)  An integrated
+debugger.  I had to go back to print statements to figure out what was
+happening in Demokritos recently, and it just sucked.  So I added in
+some pdb support, and while it was easy to add the breakpoints, using
+it also sucked.  Can we please show me the list of variables in a box
+at the top of my screen, and more than zero lines of context around
+the currently executing line?  Please?  It was so bad that I'm
+actually going to install Eclipse on my Mac Mini, just to avoid it in
+the future.</p>
+    </div>
+    </article><article class="h-entry post-text"><header><h1 class="p-name entry-title"><a href="tech/mac/questions0.html" class="u-url">Some questions from a new Mac user.</a></h1>
+        <div class="metadata">
+            <p class="byline author vcard"><span class="byline-name fn">Blake Winton</span></p>
+            <p class="dateline"><a href="tech/mac/questions0.html" rel="bookmark"><time class="published dt-published" datetime="2006-08-30T12:47:00-04:00" itemprop="datePublished" title="2006-08-30 12:47">2006-08-30 12:47</time></a></p>
+                <p class="commentline">
+        
+    <a href="tech/mac/questions0.html#disqus_thread" data-disqus-identifier="/blake/tech/mac/questions0">Comments</a>
+
+
+        </p>
+</div>
+    </header><div class="p-summary entry-summary">
+    <p>Cc:-ed to the MacPython list, because they might know.</p>
+<p>Hello,</p>
+
+<p>I'm trying to get Subversion bindings for my installed version of
+MacPython (/Library/Frameworks/Python.framework/Versions/2.4/)  This
+seems to mean that I want to install Subversion, and if so, I would
+like to get it hooked up to Apache so that I can connect to
+http://svn.latte.ca/ (or whatever) on my work computer and access my
+home repository.</p>
+
+<p>Now, I can install the subversion python bindings using
+DarwinPorts, but that won't hook into the Framework version of Python,
+so I've downloaded the Subversion 1.3.2 sources, and I can build them,
+but they complain about my version of Apache.  Specifically, about
+apxs being too old.</p>
+
+<p>Do I really need to upgrade apache to Apache 2 to get this all
+working?</p>
+
+<p>Is there a good way of replacing the default Apache with Apache 2,
+or is that a really bad idea because the Software Update will get
+horribly confused?</p>
+
+<p>Is there another place I should be asking these questions?</p>
+
+<p>Thanks,<br>
+Blake.</p>
+    </div>
+    </article><article class="h-entry post-text"><header><h1 class="p-name entry-title"><a href="tech/mac/badpun.html" class="u-url">Snakes on an Apple!</a></h1>
+        <div class="metadata">
+            <p class="byline author vcard"><span class="byline-name fn">Blake Winton</span></p>
+            <p class="dateline"><a href="tech/mac/badpun.html" rel="bookmark"><time class="published dt-published" datetime="2006-08-24T22:23:00-04:00" itemprop="datePublished" title="2006-08-24 22:23">2006-08-24 22:23</time></a></p>
+                <p class="commentline">
+        
+    <a href="tech/mac/badpun.html#disqus_thread" data-disqus-identifier="/blake/tech/mac/badpun">Comments</a>
+
+
+        </p>
+</div>
+    </header><div class="p-summary entry-summary">
+    <div>
+<p>As I <a href="http://weblog.latte.ca/firstpost.html">mentioned
+before</a>, we got a Mac Mini.  It's been a bit of a pain getting it all
+set up, but I think we're finally done.  The web server is moved over,
+along with all the websites.  The mail server is moved over, and I took
+the opportunity to delete my mother's account.  (That's not as bad as it
+sounds.  She had it redirecting to GMail anyways, and the error message
+says as much.  Of course, since I haven't told her about it yet, this
+will probably come as a bit of a surprise.)  Uh, and that turned out to
+be all the servers I was running.  Well, I was running CherryPy, and
+some other stuff, but it wasn't particularly important, and I've found
+better ways of doing it, for the most part.</p>
+<p>But that's not really why I'm posting here.  I'm posting here because
+I got some cool Python stuff working under the Mac, and I wanted to
+share it.  Specifically, I (or rather, my wife and I) wanted to have a
+window showing on the login screen, displaying <a href="http://weatheroffice.ec.gc.ca/city/pages/on-143_metric_e.html">the
+weather</a>.  After several bits of trial and error, and liberal
+"borrowing" from <a href="http://livingcode.org/">Dethe Elza</a>'s <a href="http://livingcode.org/project/pastels/">Pastels project</a> I
+finally got something which would do what I wanted.  First, the code:</p>
+<table class="codehilitetable"><tr>
+<td class="linenos"><div class="linenodiv"><pre> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65
+66
+67
+68
+69
+70</pre></div></td>
+<td class="code">
+<pre class="code literal-block"><span></span><span class="kn">from</span> <span class="nn">AppKit</span> <span class="kn">import</span> <span class="n">NSObject</span><span class="p">,</span> <span class="n">NSApplication</span><span class="p">,</span> <span class="n">NSTimer</span><span class="p">,</span> <span class="n">NSApp</span><span class="p">,</span> <span class="n">NSURL</span>
+<span class="kn">from</span> <span class="nn">AppKit</span> <span class="kn">import</span> <span class="n">NSURLRequest</span><span class="p">,</span> <span class="n">NSWindow</span><span class="p">,</span> <span class="n">NSTitledWindowMask</span>
+<span class="kn">from</span> <span class="nn">AppKit</span> <span class="kn">import</span> <span class="n">NSClosableWindowMask</span><span class="p">,</span> <span class="n">NSMiniaturizableWindowMask</span>
+<span class="kn">from</span> <span class="nn">AppKit</span> <span class="kn">import</span> <span class="n">NSResizableWindowMask</span><span class="p">,</span> <span class="n">NSBackingStoreBuffered</span>
+<span class="kn">from</span> <span class="nn">BeautifulSoup</span> <span class="kn">import</span> <span class="n">BeautifulSoup</span>
+<span class="kn">from</span> <span class="nn">PyObjCTools</span> <span class="kn">import</span> <span class="n">AppHelper</span>
+<span class="kn">from</span> <span class="nn">WebKit</span> <span class="kn">import</span> <span class="n">WebView</span><span class="p">,</span> <span class="n">WebDataSource</span>
+
+<span class="kn">import</span> <span class="nn">os</span>
+<span class="kn">import</span> <span class="nn">stat</span>
+<span class="kn">import</span> <span class="nn">time</span>
+<span class="kn">import</span> <span class="nn">urllib</span>
+
+<span class="n">width</span><span class="p">,</span> <span class="n">height</span> <span class="o">=</span> <span class="mi">620</span><span class="p">,</span> <span class="mi">540</span>
+
+<span class="k">def</span> <span class="nf">Window</span><span class="p">(</span><span class="n">title</span><span class="p">,</span> <span class="n">width</span><span class="p">,</span> <span class="n">height</span><span class="p">,</span> <span class="n">view</span><span class="o">=</span><span class="bp">None</span><span class="p">):</span>
+    <span class="n">window</span> <span class="o">=</span> <span class="n">NSWindow</span><span class="o">.</span><span class="n">alloc</span><span class="p">()</span><span class="o">.</span><span class="n">initWithContentRect_styleMask_backing_defer_</span><span class="p">(</span>
+        <span class="p">((</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">),(</span><span class="n">width</span><span class="p">,</span><span class="n">height</span><span class="p">)),</span>
+        <span class="n">NSTitledWindowMask</span> <span class="o">|</span>
+        <span class="n">NSClosableWindowMask</span> <span class="o">|</span> 
+        <span class="n">NSMiniaturizableWindowMask</span> <span class="o">|</span>
+        <span class="n">NSResizableWindowMask</span><span class="p">,</span>
+        <span class="n">NSBackingStoreBuffered</span><span class="p">,</span>
+        <span class="bp">False</span><span class="p">)</span>
+    <span class="n">window</span><span class="o">.</span><span class="n">setTitle_</span><span class="p">(</span><span class="n">title</span><span class="p">)</span>
+    <span class="k">if</span> <span class="n">view</span><span class="p">:</span>
+        <span class="n">window</span><span class="o">.</span><span class="n">setContentView_</span><span class="p">(</span><span class="n">view</span><span class="p">)</span>
+    <span class="n">window</span><span class="o">.</span><span class="n">orderFront_</span><span class="p">(</span><span class="n">window</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">window</span>
+
+<span class="k">class</span> <span class="nc">MyAppDelegate</span><span class="p">(</span><span class="n">NSObject</span><span class="p">):</span>
+    <span class="k">def</span> <span class="nf">update</span><span class="p">(</span> <span class="bp">self</span><span class="p">,</span> <span class="n">timer</span> <span class="p">):</span>
+        <span class="n">y</span> <span class="o">=</span> <span class="n">urllib</span><span class="o">.</span><span class="n">urlopen</span><span class="p">(</span> <span class="nb">str</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">wUrl</span><span class="p">)</span> <span class="p">)</span><span class="o">.</span><span class="n">read</span><span class="p">()</span>
+        <span class="n">b</span> <span class="o">=</span> <span class="n">BeautifulSoup</span><span class="p">(</span> <span class="n">y</span> <span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">view</span><span class="o">.</span><span class="n">mainFrame</span><span class="p">()</span><span class="o">.</span><span class="n">loadHTMLString_baseURL_</span><span class="p">(</span>
+            <span class="sd">"""&lt;html&gt;&lt;head&gt;&lt;title&gt;test&lt;title&gt;%s&lt;head&gt;</span>
+<span class="sd">            &lt;body&gt;%s&lt;body&gt;&lt;html&gt;"""</span> <span class="o">%</span>
+            <span class="p">(</span><span class="s2">""</span><span class="o">.</span><span class="n">join</span><span class="p">(</span> <span class="p">[</span><span class="nb">str</span><span class="p">(</span><span class="n">x</span><span class="p">)</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">b</span><span class="o">.</span><span class="n">head</span><span class="o">.</span><span class="n">findAll</span><span class="p">(</span> <span class="s1">'style'</span> <span class="p">)]),</span> <span class="n">b</span><span class="o">.</span><span class="n">body</span><span class="o">.</span><span class="n">div</span><span class="o">.</span><span class="n">div</span><span class="o">.</span><span class="n">div</span><span class="o">.</span><span class="n">div</span><span class="o">.</span><span class="n">div</span><span class="p">),</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">wUrl</span> <span class="p">)</span>
+
+    <span class="k">def</span> <span class="nf">applicationDidFinishLaunching_</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">notification</span><span class="p">):</span>
+        <span class="n">rect</span> <span class="o">=</span> <span class="p">((</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">),(</span><span class="n">width</span><span class="p">,</span> <span class="n">height</span><span class="p">))</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">view</span> <span class="o">=</span> <span class="n">WebView</span><span class="o">.</span><span class="n">alloc</span><span class="p">()</span><span class="o">.</span><span class="n">initWithFrame_</span><span class="p">(</span><span class="n">rect</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">window</span> <span class="o">=</span> <span class="n">Window</span><span class="p">(</span><span class="s1">'Pastels Test'</span><span class="p">,</span> <span class="n">width</span><span class="p">,</span> <span class="n">height</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">view</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">window_delegate</span> <span class="o">=</span> <span class="n">MyWindowDelegate</span><span class="o">.</span><span class="n">alloc</span><span class="p">()</span><span class="o">.</span><span class="n">init</span><span class="p">()</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">window</span><span class="o">.</span><span class="n">setDelegate_</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">window_delegate</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">wUrl</span> <span class="o">=</span> <span class="n">NSURL</span><span class="o">.</span><span class="n">alloc</span><span class="p">()</span><span class="o">.</span><span class="n">initWithString_</span><span class="p">(</span>
+            <span class="s2">"http://weatheroffice.ec.gc.ca/city/pages/on-143_metric_e.html"</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">update</span><span class="p">(</span> <span class="bp">None</span> <span class="p">)</span>
+        <span class="n">timer</span> <span class="o">=</span> <span class="n">NSTimer</span><span class="o">.</span><span class="n">scheduledTimerWithTimeInterval_target_selector_userInfo_repeats_</span><span class="p">(</span>
+            <span class="mi">1800</span><span class="p">,</span> <span class="bp">self</span><span class="p">,</span> <span class="s1">'update'</span><span class="p">,</span> <span class="bp">None</span><span class="p">,</span> <span class="bp">True</span> <span class="p">)</span>
+
+<span class="k">class</span> <span class="nc">MyWindowDelegate</span><span class="p">(</span><span class="n">NSObject</span><span class="p">):</span>
+    <span class="k">def</span> <span class="nf">windowWillClose_</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">notification</span><span class="p">):</span>
+        <span class="n">NSApp</span><span class="p">()</span><span class="o">.</span><span class="n">terminate_</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span>
+
+<span class="k">def</span> <span class="nf">main</span><span class="p">():</span>
+    <span class="n">app_delegate</span> <span class="o">=</span> <span class="n">MyAppDelegate</span><span class="o">.</span><span class="n">alloc</span><span class="p">()</span><span class="o">.</span><span class="n">init</span><span class="p">()</span>
+    <span class="n">NSApplication</span><span class="o">.</span><span class="n">sharedApplication</span><span class="p">()</span><span class="o">.</span><span class="n">setDelegate_</span><span class="p">(</span><span class="n">app_delegate</span><span class="p">)</span>   
+    <span class="n">AppHelper</span><span class="o">.</span><span class="n">runEventLoop</span><span class="p">(</span><span class="n">installInterrupt</span><span class="o">=</span><span class="bp">True</span><span class="p">)</span>
+
+
+<span class="k">if</span> <span class="n">__name__</span> <span class="o">==</span> <span class="s2">"__main__"</span><span class="p">:</span>
+    <span class="k">while</span> <span class="bp">True</span><span class="p">:</span>
+        <span class="k">if</span> <span class="n">os</span><span class="o">.</span><span class="n">stat</span><span class="p">(</span> <span class="s2">"/dev/console"</span> <span class="p">)[</span><span class="n">stat</span><span class="o">.</span><span class="n">ST_UID</span><span class="p">]</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+            <span class="c1"># If the console is owned by root, start the app.</span>
+            <span class="n">main</span><span class="p">()</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="c1"># Otherwise, sleep until it is.</span>
+            <span class="n">time</span><span class="o">.</span><span class="n">sleep</span><span class="p">(</span> <span class="mi">10</span> <span class="p">)</span>
+</pre>
+</td>
+</tr></table>
+<p><br>
+And next, the launchd plist file that keeps it running:</p>
+<table class="codehilitetable"><tr>
+<td class="linenos"><div class="linenodiv"><pre> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28</pre></div></td>
+<td class="code">
+<pre class="code literal-block"><span></span><span class="cp">&lt;?xml version="1.0" encoding="UTF-8"?&gt;</span>
+<span class="cp">&lt;!DOCTYPE plist PUBLIC "-//Apple Computer//DTD PLIST 1.0//EN"</span>
+<span class="cp">"http://www.apple.</span>
+<span class="cp">com/DTDs/PropertyList-1.0.dtd"&gt;</span>
+<span class="nt">&lt;plist</span> <span class="na">version=</span><span class="s">"1.0"</span><span class="nt">&gt;</span>
+<span class="nt">&lt;dict&gt;</span>  
+    <span class="nt">&lt;key&gt;</span>Label<span class="nt">&lt;/key&gt;</span>
+    <span class="nt">&lt;string&gt;</span>ca.latte.update.login.weather<span class="nt">&lt;/string&gt;</span>
+    <span class="nt">&lt;key&gt;</span>ProgramArguments<span class="nt">&lt;/key&gt;</span>
+    <span class="nt">&lt;array&gt;</span> 
+        <span class="nt">&lt;string&gt;</span>/path/to/test.py<span class="nt">&lt;/string&gt;</span>
+    <span class="nt">&lt;/array&gt;</span>
+    <span class="nt">&lt;key&gt;</span>ServiceDescription<span class="nt">&lt;/key&gt;</span>
+    <span class="nt">&lt;string&gt;</span>A program to pop up the weather in a box<span class="nt">&lt;/string&gt;</span>
+    <span class="nt">&lt;key&gt;</span>LowPriorityIO<span class="nt">&lt;/key&gt;</span>
+    <span class="nt">&lt;true/&gt;</span>
+    <span class="nt">&lt;key&gt;</span>RunAtLoad<span class="nt">&lt;/key&gt;</span>
+    <span class="nt">&lt;true/&gt;</span>
+    <span class="nt">&lt;key&gt;</span>OnDemand<span class="nt">&lt;/key&gt;</span>
+    <span class="nt">&lt;false/&gt;</span>
+    <span class="nt">&lt;key&gt;</span>Nice<span class="nt">&lt;/key&gt;</span>
+    <span class="nt">&lt;integer&gt;</span>1<span class="nt">&lt;/integer&gt;</span>
+    <span class="nt">&lt;key&gt;</span>StandardOutPath<span class="nt">&lt;/key&gt;</span>
+    <span class="nt">&lt;string&gt;</span>/path/to/loginWeather.out<span class="nt">&lt;/string&gt;</span>
+    <span class="nt">&lt;key&gt;</span>StandardErrorPath<span class="nt">&lt;/key&gt;</span>
+    <span class="nt">&lt;string&gt;</span>/path/to/loginWeather.err<span class="nt">&lt;/string&gt;</span>
+<span class="nt">&lt;/dict&gt;</span>
+<span class="nt">&lt;/plist&gt;</span>
+</pre>
+</td>
+</tr></table>
+<p>And there you have it.  Way cooler than my previous attempt, which tried
+to write using <tt>sudo defaults write
+/Library/Preferences/com.apple.loginwindow LoginwindowText -string
+"parsed weather info here"</tt>.</p>
+<p>If any of you have any questions, I'ld love to answer them as best I
+can. Just comment, and I'll see what I can dig up.  By which I mean
+email Dethe, and ask him.  ;)</p>
+</div>
+    </div>
+    </article><article class="h-entry post-text"><header><h1 class="p-name entry-title"><a href="random/biking/comingback.html" class="u-url">Coming Back</a></h1>
+        <div class="metadata">
+            <p class="byline author vcard"><span class="byline-name fn">Blake Winton</span></p>
+            <p class="dateline"><a href="random/biking/comingback.html" rel="bookmark"><time class="published dt-published" datetime="2006-08-11T22:03:00-04:00" itemprop="datePublished" title="2006-08-11 22:03">2006-08-11 22:03</time></a></p>
+                <p class="commentline">
+        
+    <a href="random/biking/comingback.html#disqus_thread" data-disqus-identifier="/blake/random/biking/comingback">Comments</a>
+
+
+        </p>
+</div>
+    </header><div class="p-summary entry-summary">
+    <p><a href="http://bwinton.latte.ca/camera/weblog/BikePics/BalmBeachBackRoute.jpg"><img src="http://bwinton.latte.ca/camera/weblog/BikePics/BalmBeachBackRouteSmall.jpg" align="right"></a>(Return path marked in green.)</p>
+
+<p>Based on my experiences with tricky detours heading up to Balm
+Beach, I thought that I should just take nice straight routes home,
+and see how that worked out.  So I took Highway 6/27 straight into
+Barrie, then Concession Road 10 to Bradford, then Yonge Street stright
+to Finch Station.</p>
+
+<p>As I said in the previous post, there was some craziness on the
+trip back.  The weather prediction was a 40% chance of thunderstorms.
+I figure those are better odds than you would get at a casino, and I
+don't really have any other way to get home, so it didn't really
+affect my planning.  I got to Barrie in record time, and figured that
+if the rest of the trip was that easy, I would have nothing to worry
+about.  After an Iced Capp at Timmy's I made my way onto Concession
+Road 10, and kept on keeping on.  Sure enough, 20 minutes out of
+Barrie, the skies opened, and a torrential downpour started.  For most
+of it I was reduced to peering out of one mostly-closed eye, seeing
+only a few tens of feet ahead of me, since the rain was apparently
+pelting its way <i>through</i> my sunglasses, to hit me in the eyes.
+I suppose, in retrospect, that that was a good clue to me that I
+should have pulled over to the side of the road, and waited it out,
+but at the time, I figured I should just keep on riding, over to the
+edge more so that cars wouldn't hit me, because who knows how long the
+rain would last, and I didn't want to be stuck standing there for
+hours.  Well, the rain didn't last that long, but it did manage to
+completely soak me, and my shoes didn't dry out that night, nor the
+next.  Having said that, the wet shirt and shorts did manage to keep
+me comfortably cool for the rest of the ride.</p>
+
+<p>South of Barrie, I stopped in Bradford for a rest, gave Amy a call,
+and went on South down Yonge.  It was getting a little hillier, and so
+I tried to take it a little easier, stopping every now and then.  I
+met a nice kid who was taking the bus to his job at Canada's
+Wonderland.  He was hoping for a thunderstorm, so that he could sit
+around and do nothing, and still get paid.  Heh.  He was also quite
+impressed at my trip so far.  Finally, I saw the CN Tower.  What a
+rush that was.  I worked out at one point that I could describe my
+trip as "Go as far north as you can see.  Then look north again, and
+go as far north as you can see.  Lather.  Rinse.  Repeat."  I never
+did manage to keep track of how many times you would have to do that,
+but it's sort of a neat idea.  Maybe next year.</p>
+    </div>
+    </article><article class="h-entry post-text"><header><h1 class="p-name entry-title"><a href="random/biking/onbiking.html" class="u-url">On Biking; or There and Back Again.</a></h1>
+        <div class="metadata">
+            <p class="byline author vcard"><span class="byline-name fn">Blake Winton</span></p>
+            <p class="dateline"><a href="random/biking/onbiking.html" rel="bookmark"><time class="published dt-published" datetime="2006-07-31T22:39:00-04:00" itemprop="datePublished" title="2006-07-31 22:39">2006-07-31 22:39</time></a></p>
+                <p class="commentline">
+        
+    <a href="random/biking/onbiking.html#disqus_thread" data-disqus-identifier="/blake/random/biking/onbiking">Comments</a>
+
+
+        </p>
+</div>
+    </header><div class="p-summary entry-summary">
+    <p><a href="http://bwinton.latte.ca/camera/weblog/BikePics/BalmBeachActualRoute.jpg"><img src="http://bwinton.latte.ca/camera/weblog/BikePics/BalmBeachActualRouteSmall.jpg" align="right"></a>Well, that took a long time.</p>
+
+<p>It would have been a lot shorter if I hadn't made three wrong
+turns.  The first was missing the short turn South from Holland
+Landing Road onto Bridge Street, and instead going up Bathurst to the
+"No Exit" sign.  (I'm very glad I decided to stop when I saw that
+sign, since the road got quite a bit worse after that.)  The map I'm
+using makes it look like you can just continue along the Holland
+Landing Road, and it will turn into the Bridge Street, but you really
+do need to jog South.</p>
+
+<p>The second was trying to take the North Simcoe Rail Trail, which
+turned out to be much like the Belt Line or the Don Valley Trail, in
+that it was unpaved gravel, but worse, in that it was overgrown by
+flowers, bushes, and grasses.  It also turned out to not be a
+continuous trail, and at one point (between Golf Course Road and
+Hendrie Road) I came across an electrified fence, beyond which were
+six or seven cows.  Now, there were warnings that some sections of the
+trail ran through private property, and because we're not in England,
+where there are Right Of Way laws which force people to let travellers
+through, some of the owners have decided to disallow access through
+their sections.  I'm fine with that.  Of course, since there was no
+way around, I had to backtrack to the last road.  The thing that irks
+me is that there was no indication that that section of trail was a
+dead end, so instead of just cutting around it, I had to waste my time
+finding out for myself.  Between that, and the slow pace I had to take
+while riding through the weeds, and the many road crossings, which
+slowed me down even further, I resolved to stick to paved roads for
+the rest of the trip.</p>
+
+<p>The third was the longest inadvertent detour, and most
+disheartening of all.  When I was heading out of Elmvale, I thought I
+was on Highway 6, which would take me straight to Balm Beach Road, but
+I was actually on Highway 27, which, if you don't take the Highway 6
+exit, turns to the right, and heads off to Waverley after going up a
+huge hill.  A nice couple asked me if I knew where I was, and I had
+them convinced for a second that we were all in Wyevale, because how
+could I be <i>that</i> far off course?  But no, I was, indeed, that
+far off course, and had to backtrack to Highway 6 to continue my
+journey.</p>
+
+<p>Between the extra mileage from the wrong turns, and the extra
+mileage from trying to avoid hills and traffic by heading up Leslie
+instead of up Yonge, and by trying to take the North Simcoe Rail Trail
+and the Tiny Trail, I ended up biking 172 km on the way there, making
+that my first Imperial Century (107 miles).  (And I'm not just saying
+that so that I can have ridden more than <a href="http://crazybikerchick.blogspot.com/2006/07/my-first-century.html">Tanya</a>.)  For comparison, on the way back, starting and ending at
+the same points, I only went 131 km (81 miles).</p>
+
+<p>Some more stats:<br></p>
+<table>
+<tr>
+<th> </th>
+<th>There</th>
+<th>Back</th>
+</tr>
+<tr>
+<td>Top Speed:</td>
+<td>71.2km/h (44.2 mph)</td>
+<td>60.km/h (37.4mph)</td>
+</tr>
+<tr>
+<td>Average Speed:</td>
+<td>23.7km/h (14.7mph)</td>
+<td>24.6km/h (15.3mph)</td>
+</tr>
+</table>
+<br clear="all"><p>Next up, some notes on the trip back to Toronto.</p>
+    </div>
+    </article><article class="h-entry post-text"><header><h1 class="p-name entry-title"><a href="random/biking/theroute.html" class="u-url">The Route.</a></h1>
+        <div class="metadata">
+            <p class="byline author vcard"><span class="byline-name fn">Blake Winton</span></p>
+            <p class="dateline"><a href="random/biking/theroute.html" rel="bookmark"><time class="published dt-published" datetime="2006-07-17T09:42:00-04:00" itemprop="datePublished" title="2006-07-17 09:42">2006-07-17 09:42</time></a></p>
+                <p class="commentline">
+        
+    <a href="random/biking/theroute.html#disqus_thread" data-disqus-identifier="/blake/random/biking/theroute">Comments</a>
+
+
+        </p>
+</div>
+    </header><div class="p-summary entry-summary">
+    <p><a href="http://bwinton.latte.ca/camera/weblog/BikePics/BalmBeachRoute.jpg"><img src="http://bwinton.latte.ca/camera/weblog/BikePics/BalmBeachRouteSmall.jpg" align="right"></a>A while ago, I mentioned that I was going to head up
+to Balm Beach on my bicycle.  Well, the date has been set, and it's
+this coming Saturday.  I've done a couple of successively longer rides
+after the 87km Musselman Lake ride, a 103km ride out to Holland
+Landing and back, and a 126km ride up to Keswick and back.  I've
+planned out a route (see right), and think it should be a long, but
+do-able ride.  It's a little bit longer than my longest ride (which
+was yesterday, up to Keswick and back), but I'm going to start earlier
+(8:00am from Steeles, instead of 9:00am from Finch), and I don't mind
+finishing later.  (I finished the Keswick ride, including taking the
+subway home from Finch, at 5:30pm, but these days, it's light out
+until almost 9:00pm.  I don't really want to be biking for 13 hours
+continuously, but it's good to know that the option is there, if I
+decide to stop for a really long lunch, or something.)</p>
+
+<p>The cue sheet looks something like this:</p>
+<table border="1">
+<tr>
+<th>At</th>
+<th>Dist</th>
+<th>Turn</th>
+<th>Location</th>
+</tr>
+<tr>
+<td>a</td>
+<td>0 (or 2.1) km</td>
+<td>R</td>
+<td>Steeles</td>
+</tr>
+<tr>
+<td>b</td>
+<td>1.1 (or 3.2) km</td>
+<td>L</td>
+<td>Henderson</td>
+</tr>
+<tr>
+<td>c</td>
+<td>2.8  (or 4.9) km</td>
+<td>R</td>
+<td>John</td>
+</tr>
+<tr>
+<td>d</td>
+<td>3.7 (or 5.8) km</td>
+<td>L</td>
+<td>Bayview</td>
+</tr>
+<tr>
+<td>e</td>
+<td>16.4 (or 18.5) km</td>
+<td>R</td>
+<td>Stouffville</td>
+</tr>
+<tr>
+<td>f</td>
+<td>18.6 (or 20.7) km</td>
+<td>L</td>
+<td>Leslie</td>
+</tr>
+<tr>
+<td>g</td>
+<td>37.6 (or 39.7) km</td>
+<td>L</td>
+<td>Mount Albert Road</td>
+</tr>
+<tr>
+<td>h</td>
+<td>41.6 (or 43.7) km</td>
+<td>L</td>
+<td>Yonge</td>
+</tr>
+<tr>
+<td>i</td>
+<td>42.1 (or 44.2) km</td>
+<td>QR</td>
+<td>Holland Landing Road<br>turns into Bridge Street</td>
+</tr>
+<tr>
+<td>j</td>
+<td>48.2 (or 50.3) km</td>
+<td>VL</td>
+<td>Holland Line West</td>
+</tr>
+<tr>
+<td>k</td>
+<td>48.9 (or 51.0) km</td>
+<td>R</td>
+<td>Barrie Street</td>
+</tr>
+<tr>
+<td>l</td>
+<td>50.2 (or 52.3) km</td>
+<td>L</td>
+<td>8th Concession</td>
+</tr>
+<tr>
+<td>m</td>
+<td>53.4 (or 55.5) km</td>
+<td>R</td>
+<td>10th Sideroad</td>
+</tr>
+<tr>
+<td>n</td>
+<td>81.9 (or 84.0) km</td>
+<td>L</td>
+<td>Burton Ave</td>
+</tr>
+<tr>
+<td>o</td>
+<td>??.? km</td>
+<td>?</td>
+<td>A trail, or Highway 40</td>
+</tr>
+<tr>
+<td>p</td>
+<td>??.? km</td>
+<td>R</td>
+<td>North Simcoe Rail Trail</td>
+</tr>
+<tr>
+<td>q</td>
+<td>??.? km</td>
+<td>O</td>
+<td>Balm Beach Road</td>
+</tr>
+</table>
+<p>I'm not exactly sure what's going on at step "m", so I figure I'll
+wing it, depending on how the trail looks, or if there even is a trail
+there.<br clear="all"></p>
+    </div>
+    </article><article class="h-entry post-text"><header><h1 class="p-name entry-title"><a href="random/biking/sotired.html" class="u-url">New Tires!</a></h1>
+        <div class="metadata">
+            <p class="byline author vcard"><span class="byline-name fn">Blake Winton</span></p>
+            <p class="dateline"><a href="random/biking/sotired.html" rel="bookmark"><time class="published dt-published" datetime="2006-06-06T18:32:00-04:00" itemprop="datePublished" title="2006-06-06 18:32">2006-06-06 18:32</time></a></p>
+                <p class="commentline">
+        
+    <a href="random/biking/sotired.html#disqus_thread" data-disqus-identifier="/blake/random/biking/sotired">Comments</a>
+
+
+        </p>
+</div>
+    </header><div class="p-summary entry-summary">
+    <p>In pseudo-preperation for biking from North of Barrie back to
+Toronto, I've bought a new set of tires for my bike.  So now, instead
+of the 2" knobbies, I'm riding on a set of 1.5" slicks.  I haven't
+noticed the difference so far, but it's a fairly short ride from <a href="http://www.ucycle.com">the bike shop</a> to <a href="http://www.phantomfiber.com/location_contact.php">my office</a>,
+and along the way, I was carrying my old tires.  I'm hoping that I'll
+notice more of a difference on my ride home.</p>
+
+<p>But that's not really why I'm posting this.  (I'm also not posting
+this in an attempt to drown out Amy's talk of cute children and
+chcoclate cake.)  I'm posting this because just this morning, I
+changed my tires for the first time in my life!  It's true, I've never
+had a flat before, and I was a little nervous about getting one one my
+big trip, but now that I've changed both the front and the back wheel,
+I see how easy it really is, and it's no longer a concern for me.
+(The instructions I heard from a guy at <a href="http://www.mec.ca/">MEC</a> last Bike Week really helped, and it's really just not that
+hard, although I expect it's a little trickier when it's pouring
+rain.)</p>
+
+<p>In other news, does anyone know of a good bike route from <a href="http://maps.google.com/maps?f=d&amp;hl=en&amp;sll=37.09024,-95.712891&amp;sspn=0.953042,1.7276&amp;saddr=7+Tiny+Beaches+Rd+N,+ON+L0L+1B0,+Canada+(Georgian+Grill)+%4044.693924,-79.998813&amp;daddr=1901+Yonge+Street,+Toronto&amp;om=1">Balm Beach to Toronto</a>?</p>
+    </div>
+    </article><article class="h-entry post-text"><header><h1 class="p-name entry-title"><a href="random/familiar.html" class="u-url">Remind you of anyone?</a></h1>
+        <div class="metadata">
+            <p class="byline author vcard"><span class="byline-name fn">Blake Winton</span></p>
+            <p class="dateline"><a href="random/familiar.html" rel="bookmark"><time class="published dt-published" datetime="2006-01-12T10:04:00-05:00" itemprop="datePublished" title="2006-01-12 10:04">2006-01-12 10:04</time></a></p>
+                <p class="commentline">
+        
+    <a href="random/familiar.html#disqus_thread" data-disqus-identifier="/blake/random/familiar">Comments</a>
+
+
+        </p>
+</div>
+    </header><div class="p-summary entry-summary">
+    <p><a href="http://bwinton.latte.ca/camera/weblog/MorgDel-Large.jpg"><img align="right" src="http://bwinton.latte.ca/camera/weblog/MorgDel-Small.jpg"></a> I
+was chatting with both <a href="http://www.tantastik.org/">Tan</a> and
+<a href="http://book.amberdragon.ca/">Kate</a> recently, and they each
+mentioned how much Delphine looked like me.  I completely agree, and
+have the photo to prove it.</p>
+
+<p>No, that's not actually my sister and my daughter.  That's my
+mother and I, circa 1976(-ish.  I'm guessing that I was three in the
+photo).<br clear="both"></p>
+    </div>
+    </article>
+</div>
+
+        <nav class="postindexpager"><ul class="pager">
+<li class="previous">
+                <a href="index-7.html" rel="prev">Newer posts</a>
+            </li>
+            <li class="next">
+                <a href="index-5.html" rel="next">Older posts</a>
+            </li>
+        </ul></nav><script>var disqus_shortname="latteblog";(function(){var a=document.createElement("script");a.async=true;a.src="https://"+disqus_shortname+".disqus.com/count.js";(document.getElementsByTagName("head")[0]||document.getElementsByTagName("body")[0]).appendChild(a)}());</script>
+</div>
+
+        </div>
+        <!--End of body content-->
+
+        <footer id="footer"><div style="margin-bottom: 12px">Contents © 2016         <a href="mailto:bwinton@latte.ca">Blake Winton</a>
+<a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/2.5/">
+<img alt="Creative Commons License BY-NC-SA" style="border-width: 0; vertical-align: bottom" src="https://licensebuttons.net/l/by-nc-sa/2.5/88x31.png"></a>
+</div>
+            
+        </footer>
+</div>
+</div>
+
+
+            <script src="../assets/js/jquery.min.js"></script><script src="../assets/js/bootstrap.min.js"></script><script src="../assets/js/moment-with-locales.min.js"></script><script src="../assets/js/fancydates.js"></script><script src="../assets/js/jquery.colorbox-min.js"></script><script>$('a.image-reference:not(.islink) img:not(.islink)').parent().colorbox({rel:"gal",maxWidth:"100%",maxHeight:"100%",scalePhotos:true});</script><!-- fancy dates --><script>
+    moment.locale("en");
+    fancydates(0, "YYYY-MM-DD HH:mm");
+    </script><!-- end fancy dates --><script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-5805429-2', 'auto');
+  ga('send', 'pageview');
+
+</script>
+</body>
+</html>

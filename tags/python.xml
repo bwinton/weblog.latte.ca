@@ -1,0 +1,1251 @@
+<?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet type="text/xsl" href="../assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Blog-O! (python)</title><link>https://weblog.latte.ca/</link><description></description><atom:link type="application/rss+xml" href="https://weblog.latte.ca/tags/python.xml" rel="self"></atom:link><language>en</language><lastBuildDate>Wed, 24 Feb 2016 17:07:42 GMT</lastBuildDate><generator>https://getnikola.com/</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Home again…</title><link>https://weblog.latte.ca/blake/tech/vim.html</link><dc:creator>Blake Winton</dc:creator><description>&lt;div&gt;&lt;p&gt;A while ago, I downloaded Aquamacs, an emacs port for OSX, and tried
+to switch to it as my default editor.  I mainly did it because I
+wanted an editor I could add functionality to, à la &lt;a href="http://steve.yegge.googlepages.com/effective-emacs"&gt;Steve Yegge&lt;/a&gt;.  I used it for a
+while, and got fairly proficient at it.  There were a lot of things
+about it I really liked, like the &lt;a href="http://jblevins.org/projects/markdown-mode/"&gt;Markdown mode&lt;/a&gt;, and the ability to edit
+files &lt;a href="http://jeremy.zawodny.com/blog/archives/000983.html"&gt;on a remote host&lt;/a&gt;, and the way I
+could write small functions in &lt;a href="http://www.gnu.org/software/emacs/manual/html_mono/elisp.html"&gt;elisp&lt;/a&gt; and use
+them to make me more productive.&lt;/p&gt;
+&lt;p&gt;But while it worked, and worked well, I didn’t really write all that
+much extra elisp, and whenever I did, I didn’t really enjoy it.  So
+the other day, when I found myself &lt;a href="http://weblog.jamisbuck.org/2005/4/10/text-editing-dilemma"&gt;reading a weblog&lt;/a&gt; about the
+lack of a good graphical text editor on OSX, I found myself agreeing
+with him.  So when I read &lt;a href="http://weblog.jamisbuck.org/2008/10/10/coming-home-to-vim"&gt;a later article&lt;/a&gt; on how the
+author had finally switched back to vim, I thought that I might give
+vim another chance.&lt;/p&gt;
+&lt;p&gt;Well, it turns out that vim is actually pretty close to a perfect text
+editor for me.  It’s got &lt;a href="http://plasticboy.com/markdown-vim-mode/"&gt;Markdown support&lt;/a&gt;, &lt;a href="http://www.petersblog.org/node/466"&gt;remote file editing&lt;/a&gt;, and not only can I write
+functions for it, I can &lt;a href="http://www.vim.org/htmldoc/if_pyth.html"&gt;write them&lt;/a&gt; in
+&lt;a href="http://python.org/"&gt;Python&lt;/a&gt;!  As an example, here’s Steve Yegge’s
+blog-check function in vim/python:&lt;/p&gt;
+&lt;table class="codehilitetable"&gt;&lt;tr&gt;&lt;td class="linenos"&gt;&lt;div class="linenodiv"&gt;&lt;pre&gt; 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13
+14
+15
+16
+17
+18&lt;/pre&gt;&lt;/div&gt;&lt;/td&gt;&lt;td class="code"&gt;&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="k"&gt;function&lt;/span&gt;&lt;span class="p"&gt;!&lt;/span&gt; BlogCheck&lt;span class="p"&gt;()&lt;/span&gt;
+  &lt;span class="k"&gt;python&lt;/span&gt; &lt;span class="o"&gt;&amp;lt;&amp;lt;&lt;/span&gt; END
+&lt;span class="p"&gt;:::&lt;/span&gt;&lt;span class="n"&gt;python&lt;/span&gt;
+&lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="nn"&gt;re&lt;/span&gt;
+&lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="nn"&gt;vim&lt;/span&gt;
+&lt;span class="n"&gt;pattern&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;re&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;compile&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt; &lt;span class="s2"&gt;r"\s"&lt;/span&gt; &lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="n"&gt;count&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="mi"&gt;0&lt;/span&gt;
+&lt;span class="k"&gt;for&lt;/span&gt; &lt;span class="n"&gt;line&lt;/span&gt; &lt;span class="ow"&gt;in&lt;/span&gt; &lt;span class="n"&gt;vim&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;current&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;buffer&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+  &lt;span class="n"&gt;line&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;pattern&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;sub&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt; &lt;span class="s2"&gt;""&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;line&lt;/span&gt; &lt;span class="p"&gt;)&lt;/span&gt;
+  &lt;span class="n"&gt;count&lt;/span&gt; &lt;span class="o"&gt;+=&lt;/span&gt; &lt;span class="nb"&gt;len&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;line&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="k"&gt;if&lt;/span&gt; &lt;span class="n"&gt;count&lt;/span&gt; &lt;span class="o"&gt;&amp;lt;=&lt;/span&gt; &lt;span class="mi"&gt;5000&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+  &lt;span class="n"&gt;message&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s2"&gt;"Okay so far"&lt;/span&gt;
+&lt;span class="k"&gt;else&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+  &lt;span class="n"&gt;message&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s2"&gt;"Dude, too long"&lt;/span&gt;
+&lt;span class="k"&gt;print&lt;/span&gt; &lt;span class="s2"&gt;"&lt;/span&gt;&lt;span class="si"&gt;%s&lt;/span&gt;&lt;span class="s2"&gt;:  &lt;/span&gt;&lt;span class="si"&gt;%d&lt;/span&gt;&lt;span class="s2"&gt; chars, &lt;/span&gt;&lt;span class="si"&gt;%d&lt;/span&gt;&lt;span class="s2"&gt; words"&lt;/span&gt; &lt;span class="o"&gt;%&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;message&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;count&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;count&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="mi"&gt;5&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="p"&gt;:::&lt;/span&gt;&lt;span class="n"&gt;vim&lt;/span&gt;
+END
+&lt;span class="k"&gt;endfunction&lt;/span&gt;
+&lt;/pre&gt;
+&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/div&gt;</description><category>editors</category><category>emacs</category><category>lisp</category><category>python</category><category>switching</category><category>vim</category><guid>https://weblog.latte.ca/blake/tech/vim.html</guid><pubDate>Mon, 02 Feb 2009 20:48:35 GMT</pubDate></item><item><title>How to start developing Basie</title><link>https://weblog.latte.ca/blake/tech/basie/startingdevelopment.html</link><dc:creator>Blake Winton</dc:creator><description>&lt;div&gt;&lt;p&gt;So, first off, I think Python developers these days need to use stuff
+like virtualenv and zc.buildout in order to develop in a sane manner.
+Yeah, this is the first project I’m using them on, but do what I say,
+not what I do.&lt;/p&gt;
+&lt;p&gt;Anyways, on to the instructions.&lt;/p&gt;
+&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;sudo easy_install virtualenv
+virtualenv --no-site-packages basie
+cd basie/
+. bin/activate
+&lt;/pre&gt;
+
+
+&lt;p&gt;Then, you’re gonna need a
+&lt;a href="http://bwinton.latte.ca/Programming/Basie/buildout.cfg"&gt;buildout.cfg&lt;/a&gt;.
+Mine looks like this:&lt;/p&gt;
+&lt;table class="codehilitetable"&gt;&lt;tr&gt;&lt;td class="linenos"&gt;&lt;div class="linenodiv"&gt;&lt;pre&gt; 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11&lt;/pre&gt;&lt;/div&gt;&lt;/td&gt;&lt;td class="code"&gt;&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="k"&gt;[buildout]&lt;/span&gt;
+&lt;span class="na"&gt;parts&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s"&gt;django&lt;/span&gt;
+&lt;span class="na"&gt;eggs&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s"&gt;ipython&lt;/span&gt;
+
+&lt;span class="k"&gt;[django]&lt;/span&gt;
+&lt;span class="na"&gt;recipe&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s"&gt;djangorecipe&lt;/span&gt;
+&lt;span class="na"&gt;version&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s"&gt;trunk&lt;/span&gt;
+&lt;span class="na"&gt;settings&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s"&gt;development&lt;/span&gt;
+&lt;span class="na"&gt;eggs&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s"&gt;${buildout:eggs}&lt;/span&gt;
+&lt;span class="na"&gt;project&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s"&gt;basie&lt;/span&gt;
+&lt;span class="na"&gt;wsgi&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s"&gt;true&lt;/span&gt;
+&lt;/pre&gt;
+&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;p&gt;You’ll also need a
+&lt;a href="http://bwinton.latte.ca/Programming/Basie/bootstrap.py"&gt;bootstrap.py&lt;/a&gt;,
+which will look a little something like this:&lt;/p&gt;
+&lt;table class="codehilitetable"&gt;&lt;tr&gt;&lt;td class="linenos"&gt;&lt;div class="linenodiv"&gt;&lt;pre&gt; 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62&lt;/pre&gt;&lt;/div&gt;&lt;/td&gt;&lt;td class="code"&gt;&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="c1"&gt;##############################################################################&lt;/span&gt;
+&lt;span class="c1"&gt;#&lt;/span&gt;
+&lt;span class="c1"&gt;# Copyright (c) 2006 Zope Corporation and Contributors.&lt;/span&gt;
+&lt;span class="c1"&gt;# All Rights Reserved.&lt;/span&gt;
+&lt;span class="c1"&gt;#&lt;/span&gt;
+&lt;span class="c1"&gt;# This software is subject to the provisions of the Zope Public License,&lt;/span&gt;
+&lt;span class="c1"&gt;# Version 2.1 (ZPL).  A copy of the ZPL should accompany this distribution.&lt;/span&gt;
+&lt;span class="c1"&gt;# THIS SOFTWARE IS PROVIDED "AS IS" AND ANY AND ALL EXPRESS OR IMPLIED&lt;/span&gt;
+&lt;span class="c1"&gt;# WARRANTIES ARE DISCLAIMED, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED&lt;/span&gt;
+&lt;span class="c1"&gt;# WARRANTIES OF TITLE, MERCHANTABILITY, AGAINST INFRINGEMENT, AND FITNESS&lt;/span&gt;
+&lt;span class="c1"&gt;# FOR A PARTICULAR PURPOSE.&lt;/span&gt;
+&lt;span class="c1"&gt;#&lt;/span&gt;
+&lt;span class="c1"&gt;##############################################################################&lt;/span&gt;
+&lt;span class="sd"&gt;"""Bootstrap a buildout-based project&lt;/span&gt;
+
+&lt;span class="sd"&gt;Simply run this script in a directory containing a buildout.cfg.&lt;/span&gt;
+&lt;span class="sd"&gt;The script accepts buildout command-line options, so you can&lt;/span&gt;
+&lt;span class="sd"&gt;use the -c option to specify an alternate configuration file.&lt;/span&gt;
+
+&lt;span class="sd"&gt;$Id$&lt;/span&gt;
+&lt;span class="sd"&gt;"""&lt;/span&gt;
+
+&lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="nn"&gt;os&lt;/span&gt;&lt;span class="o"&gt;,&lt;/span&gt; &lt;span class="nn"&gt;shutil&lt;/span&gt;&lt;span class="o"&gt;,&lt;/span&gt; &lt;span class="nn"&gt;sys&lt;/span&gt;&lt;span class="o"&gt;,&lt;/span&gt; &lt;span class="nn"&gt;tempfile&lt;/span&gt;&lt;span class="o"&gt;,&lt;/span&gt; &lt;span class="nn"&gt;urllib2&lt;/span&gt;
+
+&lt;span class="n"&gt;tmpeggs&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;tempfile&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;mkdtemp&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
+
+&lt;span class="k"&gt;try&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+    &lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="nn"&gt;pkg_resources&lt;/span&gt;
+&lt;span class="k"&gt;except&lt;/span&gt; &lt;span class="ne"&gt;ImportError&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+    &lt;span class="n"&gt;ez&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="p"&gt;{}&lt;/span&gt;
+    &lt;span class="k"&gt;exec&lt;/span&gt; &lt;span class="n"&gt;urllib2&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;urlopen&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s1"&gt;'http://peak.telecommunity.com/dist/ez_setup.py'&lt;/span&gt;
+                         &lt;span class="p"&gt;)&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;read&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt; &lt;span class="ow"&gt;in&lt;/span&gt; &lt;span class="n"&gt;ez&lt;/span&gt;
+    &lt;span class="n"&gt;ez&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="s1"&gt;'use_setuptools'&lt;/span&gt;&lt;span class="p"&gt;](&lt;/span&gt;&lt;span class="n"&gt;to_dir&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="n"&gt;tmpeggs&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;download_delay&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+
+    &lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="nn"&gt;pkg_resources&lt;/span&gt;
+
+&lt;span class="k"&gt;if&lt;/span&gt; &lt;span class="n"&gt;sys&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;platform&lt;/span&gt; &lt;span class="o"&gt;==&lt;/span&gt; &lt;span class="s1"&gt;'win32'&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+    &lt;span class="k"&gt;def&lt;/span&gt; &lt;span class="nf"&gt;quote&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;c&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;
+        &lt;span class="k"&gt;if&lt;/span&gt; &lt;span class="s1"&gt;' '&lt;/span&gt; &lt;span class="ow"&gt;in&lt;/span&gt; &lt;span class="n"&gt;c&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+            &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="s1"&gt;'"&lt;/span&gt;&lt;span class="si"&gt;%s&lt;/span&gt;&lt;span class="s1"&gt;"'&lt;/span&gt; &lt;span class="o"&gt;%&lt;/span&gt; &lt;span class="n"&gt;c&lt;/span&gt; &lt;span class="c1"&gt;# work around spawn lamosity on windows&lt;/span&gt;
+        &lt;span class="k"&gt;else&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+            &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="n"&gt;c&lt;/span&gt;
+&lt;span class="k"&gt;else&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+    &lt;span class="k"&gt;def&lt;/span&gt; &lt;span class="nf"&gt;quote&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;c&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;
+        &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="n"&gt;c&lt;/span&gt;
+
+&lt;span class="n"&gt;cmd&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s1"&gt;'from setuptools.command.easy_install import main; main()'&lt;/span&gt;
+&lt;span class="n"&gt;ws&lt;/span&gt;  &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;pkg_resources&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;working_set&lt;/span&gt;
+&lt;span class="k"&gt;assert&lt;/span&gt; &lt;span class="n"&gt;os&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;spawnle&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;
+    &lt;span class="n"&gt;os&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;P_WAIT&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;sys&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;executable&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;quote&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;sys&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;executable&lt;/span&gt;&lt;span class="p"&gt;),&lt;/span&gt;
+    &lt;span class="s1"&gt;'-c'&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;quote&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;cmd&lt;/span&gt;&lt;span class="p"&gt;),&lt;/span&gt; &lt;span class="s1"&gt;'-mqNxd'&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;quote&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;tmpeggs&lt;/span&gt;&lt;span class="p"&gt;),&lt;/span&gt; &lt;span class="s1"&gt;'zc.buildout'&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
+    &lt;span class="nb"&gt;dict&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;os&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;environ&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
+         &lt;span class="n"&gt;PYTHONPATH&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;
+         &lt;span class="n"&gt;ws&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;find&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;pkg_resources&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;Requirement&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;parse&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s1"&gt;'setuptools'&lt;/span&gt;&lt;span class="p"&gt;))&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;location&lt;/span&gt;
+         &lt;span class="p"&gt;),&lt;/span&gt;
+    &lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="o"&gt;==&lt;/span&gt; &lt;span class="mi"&gt;0&lt;/span&gt;
+
+&lt;span class="n"&gt;ws&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;add_entry&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;tmpeggs&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="n"&gt;ws&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;require&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s1"&gt;'zc.buildout'&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="nn"&gt;zc.buildout.buildout&lt;/span&gt;
+&lt;span class="n"&gt;zc&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;buildout&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;buildout&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;main&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;sys&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;argv&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;:]&lt;/span&gt; &lt;span class="o"&gt;+&lt;/span&gt; &lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="s1"&gt;'bootstrap'&lt;/span&gt;&lt;span class="p"&gt;])&lt;/span&gt;
+&lt;span class="n"&gt;shutil&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;rmtree&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;tmpeggs&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;/pre&gt;
+&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;p&gt;After you’ve got those, it’s basically:&lt;/p&gt;
+&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;python bootstrap.py
+buildout -v
+django help
+django runserver
+&lt;/pre&gt;
+
+
+&lt;p&gt;And when you’re done,
+    deactivate&lt;/p&gt;
+&lt;p&gt;Any comments on things that don’t work would be highly appreciated.&lt;/p&gt;&lt;/div&gt;</description><category>basie</category><category>django</category><category>drproject</category><category>python</category><guid>https://weblog.latte.ca/blake/tech/basie/startingdevelopment.html</guid><pubDate>Wed, 27 Aug 2008 21:03:24 GMT</pubDate></item><item><title>How to add Markdown to your PyBlosxom Blog.</title><link>https://weblog.latte.ca/blake/tech/markdown.html</link><dc:creator>Blake Winton</dc:creator><description>&lt;div&gt;&lt;p&gt;Hopefully this all just works.  Include A&amp;amp;B, and 4 &amp;lt; 5.&lt;/p&gt;
+&lt;h2&gt;Headers&lt;/h2&gt;
+&lt;h3&gt;Smaller headers&lt;/h3&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Blockquotes.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;ul&gt;&lt;li&gt;Lists&lt;/li&gt;
+&lt;li&gt;of &lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;things&lt;/p&gt;
+&lt;p&gt;Blocks of python code could be here.&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;&lt;hr&gt;&lt;p&gt;&lt;em&gt;etc&lt;/em&gt;, &lt;strong&gt;etc&lt;/strong&gt;.&lt;/p&gt;
+&lt;p&gt;Okay, so now that I’ve determined that it works, here’s how I did it:
+I added a new entry parser, called pymarkdown.py, to my plugins
+directory.  The content of the code looks like this:&lt;/p&gt;
+&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="n"&gt;FILE_EXT&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s1"&gt;'md'&lt;/span&gt;
+
+&lt;span class="n"&gt;__version__&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s1"&gt;'pymarkdown 0.1'&lt;/span&gt;
+&lt;span class="n"&gt;__author__&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s1"&gt;'Blake Winton &amp;lt;bwinton+python@latte.ca&amp;gt;'&lt;/span&gt;
+
+&lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="nn"&gt;markdown&lt;/span&gt;
+
+&lt;span class="k"&gt;try&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+    &lt;span class="kn"&gt;from&lt;/span&gt; &lt;span class="nn"&gt;Pyblosxom&lt;/span&gt; &lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="n"&gt;tools&lt;/span&gt;
+&lt;span class="k"&gt;except&lt;/span&gt; &lt;span class="ne"&gt;ImportError&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+    &lt;span class="k"&gt;pass&lt;/span&gt;
+
+&lt;span class="k"&gt;def&lt;/span&gt; &lt;span class="nf"&gt;cb_entryparser&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;entryparsingdict&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;
+       &lt;span class="sd"&gt;"""&lt;/span&gt;
+&lt;span class="sd"&gt;       Register self as markdown file handler&lt;/span&gt;
+&lt;span class="sd"&gt;       """&lt;/span&gt;
+       &lt;span class="n"&gt;entryparsingdict&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="n"&gt;FILE_EXT&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;parse&lt;/span&gt;
+       &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="n"&gt;entryparsingdict&lt;/span&gt;
+
+&lt;span class="k"&gt;def&lt;/span&gt; &lt;span class="nf"&gt;parse&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;filename&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;request&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;
+    &lt;span class="sd"&gt;"""&lt;/span&gt;
+&lt;span class="sd"&gt;    We just read everything off the file here, using the filename as&lt;/span&gt;
+&lt;span class="sd"&gt;    title&lt;/span&gt;
+&lt;span class="sd"&gt;    """&lt;/span&gt;
+    &lt;span class="n"&gt;entrydata&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="p"&gt;{}&lt;/span&gt;
+
+    &lt;span class="n"&gt;f&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="nb"&gt;open&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;filename&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s2"&gt;"r"&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+    &lt;span class="n"&gt;lines&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;f&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;readlines&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
+    &lt;span class="n"&gt;f&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;close&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
+
+    &lt;span class="c1"&gt;# strip off the first line and use that as the title.&lt;/span&gt;
+    &lt;span class="n"&gt;title&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;lines&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;pop&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;strip&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
+    &lt;span class="n"&gt;entrydata&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="s1"&gt;'title'&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;title&lt;/span&gt;
+
+    &lt;span class="c1"&gt;# absorb meta data lines which begin with a # and consist&lt;/span&gt;
+    &lt;span class="c1"&gt;# of a name and a value&lt;/span&gt;
+    &lt;span class="k"&gt;while&lt;/span&gt; &lt;span class="n"&gt;lines&lt;/span&gt; &lt;span class="ow"&gt;and&lt;/span&gt; &lt;span class="n"&gt;lines&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;startswith&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;"#"&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;
+        &lt;span class="n"&gt;meta&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;lines&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;pop&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+        &lt;span class="n"&gt;meta&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;meta&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;:]&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;strip&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;     &lt;span class="c1"&gt;# remove the hash&lt;/span&gt;
+        &lt;span class="n"&gt;meta&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;meta&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;split&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;" "&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+        &lt;span class="n"&gt;entrydata&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="n"&gt;meta&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;strip&lt;/span&gt;&lt;span class="p"&gt;()]&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;meta&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;strip&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
+
+    &lt;span class="c1"&gt;# join the rest of the lines as the story&lt;/span&gt;
+    &lt;span class="n"&gt;story&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s1"&gt;''&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;join&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;lines&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+    &lt;span class="n"&gt;story&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;markdown&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;markdown&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt; &lt;span class="n"&gt;story&lt;/span&gt; &lt;span class="p"&gt;)&lt;/span&gt;
+    &lt;span class="n"&gt;entrydata&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="s1"&gt;'body'&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;story&lt;/span&gt;
+
+    &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="n"&gt;entrydata&lt;/span&gt;
+&lt;/pre&gt;
+
+
+&lt;p&gt;And you’re done.&lt;/p&gt;
+&lt;p&gt;I guess you might be wondering why I would bother doing that, since
+both Amy and I are obviously comfortable writing straight HTML.  Well,
+&lt;a href="http://www.drproject.org/"&gt;DrProject&lt;/a&gt; is switching from a
+custom-built Wiki-ish-syntax parser to a &lt;a href="http://www.freewisdom.org/projects/python-markdown/"&gt;third-party&lt;/a&gt; Markdown parser,
+and I figured this would give me a bit of a headstart on getting used
+to the new syntax, and also give me a bit of a playground for testing
+out new features that I might want to add.&lt;/p&gt;&lt;/div&gt;</description><category>drproject</category><category>markdown</category><category>pyblosxom</category><category>python</category><guid>https://weblog.latte.ca/blake/tech/markdown.html</guid><pubDate>Wed, 27 Feb 2008 17:16:41 GMT</pubDate></item><item><title>Bazaar on the iPod Touch.</title><link>https://weblog.latte.ca/blake/tech/iTouch/bzr.html</link><dc:creator>Blake Winton</dc:creator><description>&lt;p&gt;Because I was curious, and because it has Python, I figured I'ld give it a
+try, and see what happened...&lt;br&gt;
+The results are:&lt;/p&gt;
+&lt;pre&gt;# ./bzr selftest
+testing: /private/var/root/bzr-1.0/bzr
+   /private/var/root/bzr-1.0/bzrlib (1.0.0 python2.5.1.final.0)
+
+bzr: ERROR: exceptions.ImportError: No module named pyexpat
+
+Traceback (most recent call last):
+  File "/private/var/root/bzr-1.0/bzrlib/commands.py", line 802, in run_bzr_catch_errors
+    return run_bzr(argv)
+  File "/private/var/root/bzr-1.0/bzrlib/commands.py", line 758, in run_bzr
+    ret = run(*run_argv)
+  File "/private/var/root/bzr-1.0/bzrlib/commands.py", line 492, in run_argv_aliases
+    return self.run(**all_cmd_args)
+  File "/private/var/root/bzr-1.0/bzrlib/builtins.py", line 2659, in run
+    coverage_dir=coverage,
+  File "/private/var/root/bzr-1.0/bzrlib/tests/__init__.py", line 2373, in selftest
+    suite = test_suite()
+  File "/private/var/root/bzr-1.0/bzrlib/tests/__init__.py", line 2531, in test_suite
+    suite.addTest(loader.loadTestsFromModuleNames(testmod_names))
+  File "/private/var/root/bzr-1.0/bzrlib/tests/TestUtil.py", line 89, in loadTestsFromModuleNames
+    _load_module_by_name(name)
+  File "/private/var/root/bzr-1.0/bzrlib/tests/TestUtil.py", line 96, in _load_module_by_name
+    module = __import__(mod_name)
+  File "/private/var/root/bzr-1.0/bzrlib/tests/test_bundle.py", line 32, in &amp;lt;module&amp;gt;
+    from bzrlib.bundle.bundle_data import BundleTree
+  File "/private/var/root/bzr-1.0/bzrlib/bundle/bundle_data.py", line 42, in &amp;lt;module&amp;gt;
+    from bzrlib.xml5 import serializer_v5
+  File "/private/var/root/bzr-1.0/bzrlib/xml5.py", line 26, in &amp;lt;module&amp;gt;
+    from bzrlib.xml_serializer import SubElement, Element, Serializer
+  File "/private/var/root/bzr-1.0/bzrlib/xml_serializer.py", line 47, in &amp;lt;module&amp;gt;
+    from xml.parsers.expat import ExpatError as ParseError
+  File "/usr/lib/python2.5/xml/parsers/expat.py", line 4, in &amp;lt;module&amp;gt;
+    from pyexpat import *
+ImportError: No module named pyexpat
+
+bzr 1.0.0 on python 2.5.1.final.0 (darwin)
+arguments: ['./bzr', 'selftest']
+encoding: 'ascii', fsenc: 'utf-8', lang: None
+plugins:
+  launchpad            /private/var/root/bzr-1.0/bzrlib/plugins/launchpad [unknown]
+  multiparent          /private/var/root/bzr-1.0/bzrlib/plugins/multiparent.pyc [unknown]
+*** Bazaar has encountered an internal error.
+    Please report a bug at https://bugs.launchpad.net/bzr/+filebug
+    including this traceback, and a description of what you
+    were doing when the error occurred.
+&lt;/pre&gt;
+
+&lt;p&gt;Doing a bit of googling led me &lt;a href="http://gegis.itsmart.fr/trac/browser/trunk/packaging/iphone/README.iPhone?rev=346"&gt;here&lt;/a&gt;
+(or rather, the &lt;a href="http://64.233.167.104/search?q=cache:VHKVDcZWQ4MJ:gegis.itsmart.fr/trac/browser/trunk/packaging/iphone/README.iPhone%3Frev%3D346+iphone+pyexpat+json&amp;amp;hl=en&amp;amp;ct=clnk&amp;amp;cd=1&amp;amp;gl=ca&amp;amp;client=firefox-a"&gt;google
+cache&lt;/a&gt; of that page).  which says: &lt;/p&gt;
+
+&lt;blockquote&gt;# 1/ The python installation from the installer ("unjailed iphone")
+does not come with the pyexpat module.&lt;/blockquote&gt;
+
+&lt;p&gt;So, that's a little surprising.&lt;/p&gt;
+
+&lt;p&gt;I tried to install easy_install, to try an "easy_install pyexpat", but
+because I'm missing a Makefile, that fails with the following:&lt;/p&gt;
+&lt;pre&gt;# python ez_setup.py
+Downloading http://pypi.python.org/packages/2.5/s/setuptools/setuptools-0.6c7-py2.5.egg
+Traceback (most recent call last):
+  File "ez_setup.py", line 229, in &amp;lt;module&amp;gt;
+    main(sys.argv[1:])
+  File "ez_setup.py", line 163, in main
+    from setuptools.command.easy_install import main
+  File "build/bdist.linux-i686/egg/setuptools/__init__.py", line 2, in &amp;lt;module&amp;gt;
+  File "build/bdist.linux-i686/egg/setuptools/extension.py", line 2, in &amp;lt;module&amp;gt;
+  File "build/bdist.linux-i686/egg/setuptools/dist.py", line 5, in &amp;lt;module&amp;gt;
+  File "build/bdist.linux-i686/egg/setuptools/command/__init__.py", line 13, in &amp;lt;module&amp;gt;
+  File "/usr/lib/python2.5/distutils/command/bdist.py", line 29, in &amp;lt;module&amp;gt;
+    class bdist (Command):
+  File "/usr/lib/python2.5/distutils/command/bdist.py", line 37, in bdist
+    "(default: %s)" % get_platform()),
+  File "/usr/lib/python2.5/distutils/util.py", line 78, in get_platform
+    cfgvars = get_config_vars()
+  File "/usr/lib/python2.5/distutils/sysconfig.py", line 493, in get_config_vars
+    func()
+  File "/usr/lib/python2.5/distutils/sysconfig.py", line 352, in _init_posix
+    raise DistutilsPlatformError(my_msg)
+distutils.errors.DistutilsPlatformError: invalid Python installation: unable to open /usr/lib/python2.5/config/Makefile (No such file or directory)
+&lt;/pre&gt;
+
+&lt;p&gt;And that was the end of that.  Interesting, though...&lt;/p&gt;
+
+&lt;p&gt;Oh, yeah, and I ended up going with the iPod Touch (hereafter
+referred to as the iTouch) to replace my Palm TX.  It's not the
+perfect device, as the above stack traces show, but it's pretty good,
+and a fair bit closer than the Palm TX was.&lt;/p&gt;</description><category>bzr</category><category>itouch</category><category>python</category><guid>https://weblog.latte.ca/blake/tech/iTouch/bzr.html</guid><pubDate>Fri, 28 Dec 2007 20:36:28 GMT</pubDate></item><item><title>Learning Python</title><link>https://weblog.latte.ca/blake/tech/python/learningpython.html</link><dc:creator>Blake Winton</dc:creator><description>I'ld like to apologize right now for the length of this post, but
+there's something about someone learning a new tool that immediately
+helps them do something that I really enjoy.
+
+&lt;pre&gt;
+Amy: I think I have a python problem.
+
+Blake:	Ooh, I should be able to help. 
+
+Amy:	Well, it's a problem that could be fixed by python.
+
+Blake:	Close enough. 
+
+Amy:	Ah, it goes beyond help.  I still have to figure out where to
+start.  Like, do I even have python on this machine?  And how do you
+read in something from a file?
+
+Blake:	"python -v" 
+
+Blake:	and:
+ myFile = open( "filename.txt" )
+ for line in myFile:
+   print line 
+ 
+Amy:	Holy, if comes up with a million lines of... stuff.
+Filenames?
+
+Amy:	But then it seems to be 2.3.
+
+Blake:	Perhaps "python -V" 
+
+Amy:	That's better!
+
+Blake:	What did you want to do with the lines in a file? 
+
+Amy:	Well, I want to take a bunch of pieces of data, like company
+names and phone numbers and stuff, and stick it into a specific HTML
+format.
+
+Amy:	So I want to take in a file of data and output HTML.
+
+Amy:	Do I want the HTML format hardcoded into the python or should
+that be another file?
+
+Blake:	Do you have a python prompt up? 
+
+Blake:	Try typing :
+ x = "Amy"
+ print "Hello %s" % x 
+
+Amy:	Ah hah.
+
+Amy:	That's nice.
+
+Blake:	So, I would do something like :
+ myBigTemplate = """abc %s
+ def %s
+ ghi %s"""
+ print myBigTemplate % ('1','2','3') 
+
+Blake:	(triple-quoted strings can span more than one line.) 
+
+Amy:	Oh, I see.  So I set up the formatting and then use 'print' to
+spit out the HTML.
+
+Blake:	Yup.  Oh, the other thing you can do is name the variables
+you're replacing.  So this works:
+ x = { 'name':'Amy', 'food':'apple'}
+ print  "Hi %(name)s, do you want a %(food)s" % x 
+
+Blake:	(Just don't forget the 's' after the closing bracket.) 
+
+Amy:	So you think I should define the HTML format in the python
+script itself?  It seems easier but somehow less clean.
+
+Blake:	Yeah, for now.  You can always change it later.  :) 
+
+Amy:	True.
+
+Amy:	What's wrong with this:
+
+Amy:	myTable = " %(coname)s "
+
+coname = "Big Developer"
+
+print myTable % coname
+
+Blake:	You need to pass a dictionary in if you use the (name)
+feature.  So, make a dictionary of variables, like x = {'coname':"Big
+Developer"} 
+
+Blake:	Then pass that in.  You could call your dictionary "values",
+or something meaningful. 
+
+Amy:	Ooh, that worked.
+
+Amy:	Now I have to figure out how to get the dictionary from a
+different file.
+
+Blake:	What's the format of the file? 
+
+Amy:	Well, I guess it could be something like "Company: Big Developer
+
+Blake:	It could be? 
+
+Amy:	Well, it's going to be exported from Access so I guess I could
+define the format?
+
+Amy:	It sounds like you can anyway.
+
+Amy:	I'm going to work on the assumption you can export text in a
+format like that, for now.
+
+Blake:	Okay, although it might be easier to just assume that the
+first thing on the line is the company... 
+
+Amy:	The problem is that each company could have a varying number
+of employees.
+
+Blake:	What do you want to do in that case? 
+
+Amy:	I want to iterate through all the names, adding a new row to
+my table for each one.  I wonder if it would be possible to include
+the number of names in the dataset.
+
+Amy:	Although if they are the last thing on the line I guess you
+could just go through them until you get to the EOL.
+
+Blake:	You could, or you could repeat the company name for each employee. 
+
+Amy:	But I don't want to repeat the company name in my HTML.
+
+Blake:	Ahhh...  Okay, I understand.  How about:
+ Big Co, "employee1, employee2, employee3", BooYeah 
+
+Amy:	I'm not clear on the function of the "BooYeah".
+
+Blake:	Neither am I.  It's just whatever other data you need in
+there. 
+
+Amy:	Ah hah.  The confusion is because the employees are the end of
+the data.
+
+Blake:	Oh, okay. 
+
+Amy:	Yeah, I think if I could get a comma delimited file with
+company information and employees on each line, I could parse it.
+Assuming it was always correctly formatted. :P
+
+Blake:	But if you're generating it from another program, it should be
+correctly formatted. 
+
+Amy:	It should.
+
+Amy:	"In theory..."  but let's assume it will be.
+
+Blake:	So try "import csv" at the Python prompt. 
+
+Amy:	It didn't do anything.
+
+Blake:	Sure it did.  Type "dir( csv )" or "help( csv )" to see what
+it did. 
+
+Blake:	(There's a webpage at
+http://www.python.org/doc/2.3.2/lib/csv-contents.html that has more
+readable contents of the help. ) 
+
+Blake:	(And as another hint, you probably want to use the DictReader
+class with a restkey of 'employee') 
+
+Amy:	I will copy that and paste it somewhere and hopefully soon it
+will mean something.
+
+Blake:	Feel free to ask me questions about whatever doesn't make
+sense. 
+
+Amy:	Hah.  Part of the problem is that you're not working for me,
+and part of the problem is that I don't even know how to begin asking
+the questions.
+
+Amy:	What's a sequence?
+
+Amy:	As in "remaining data is added as a sequence keyed by the
+value of restkey"?
+
+Blake:	It's just a list. 
+
+Amy:	Okay.
+
+Blake:	x = [1,2,3] is a sequence. 
+
+Amy:	Alright.  So I can iterate through it pretty easily?
+
+Blake:	Yup. 
+
+Blake:	I think I was wrong in my last explanation. 
+
+Blake:	I think what they mean there is that you'll have a dictionary
+with keys of "employee1", "employee2", etc... 
+
+Amy:	Hm.
+
+Amy:	I guess I could work with that.
+
+Blake:	But a good way to find out would be to try running it on a
+file, and printing it out. 
+
+Amy:	How do I call DictReader?
+
+Blake:	No, I take it back again.  I think my first explanation is
+correct.  You'ld have an entry in your dictionary with a key of
+'employees', and a value of ['Bill', 'Jane', 'Ted']. 
+
+Amy:	Do I have to define something else to be a DictReader?
+
+Blake:	First, you create one.:
+ myReader = csv.DictReader( filename, ['company','whateverelse'], 'employees' ) 
+ 
+Blake:	Then, you use it :
+ for values in myReader:
+     print template % values 
+ 
+Amy:	It's too easy!
+
+Blake:	http://www.python.org/doc/2.3.2/lib/node549.html 
+
+Amy:	I give it the fishy eye.
+
+Blake:	That's the beauty of Python.  If you think it's too easy,
+you're on the right track.  :) 
+
+Amy:	Ah hah, it's giving me an error!
+
+Blake:	What's the error? 
+
+Amy:	NameError: name 'data' is not defined
+
+Amy:	Where 'data.csv' is the name of my file.
+
+Blake:	What's the line you used? 
+
+Amy:	myReader = csv.DictReader( data.csv, ['company','address','phone'], 'employees' )
+
+Blake:	You need to put data.csv in quotes, too. 
+
+Amy:	It doesn't say that in the manual!
+
+Blake:	No, that's a syntax thing.
+
+Blake:	Hey, can I post this to the weblog? 
+
+Amy:	Uh, sure.
+
+Amy:	How do I get the values in myReader to just output willy
+nilly?  (I don't have a template yet, I just want to see if they're
+reading in right).
+
+Blake:	print values 
+
+Amy:	I did that but it gave me another ... prompt.  I guess my
+question is actually how do I end a for?
+
+Blake:	Just hit return. 
+
+Amy:	Oh, that really didn't work at all!
+
+Amy:	Here is what I got:
+
+Amy:	{'phone': None, 'company': 'd', 'address': None}
+{'phone': None, 'company': 'a', 'address': None}
+{'phone': None, 'company': 't', 'address': None}
+{'phone': None, 'company': 'a', 'address': None}
+{'phone': None, 'company': '.', 'address': None}
+{'phone': None, 'company': 'c', 'address': None}
+{'phone': None, 'company': 's', 'address': None}
+{'phone': None, 'company': 'v', 'address': None}
+
+Amy:	It's kind of funny how wrong it is.
+
+Blake:	Oh, hah!  Yes.  Read the examples, and see what's different. 
+
+Amy:	Yes, sensai.
+
+Blake:	(Alternately, see what the companies spell if you read them
+going down.) 
+
+Amy:	Yeah, the filename.  That's the funny part.
+
+Blake:	So you need to get it to read your file, instead of reading
+the name of your file. 
+
+Blake:	You can do that one of two ways.  Either use "open( filename
+)", or "file( filename )".  They're the same, under the hood. 
+
+Amy:	Oh, it worked!
+
+Blake:	It did? 
+
+Amy:	Yeah, when I asked it to print values it gave me this: 
+
+Amy:	{'phone': ' 416-574-8372', 'company': 'Huge Builder',
+'employees': [' Bob Smith', ' President', ' Joan Simpson', '
+Vice-President Public Relations', ' Huw Thompson', ' Vice President
+Technology'], 'address': ' 2002 Yonge St'} {'phone': ' 416-938-2837',
+'company': 'Big Buildco', 'employees': [' Joanne Jones', ' CEO'],
+'address': ' 19 King St'}
+
+
+Amy:	Except for some reason it reordered the variables, but I don't
+think that matters.
+
+Blake:	No, cause you'll use them in whatever order you want in your
+HTML template. 
+
+Amy:	Yup.
+
+Amy:	Cool!
+
+Amy:	I could get this working before your dad gets back from his
+golf game!
+
+Blake:	The only other trick will be to get the employee data out.
+For that I'ld use a separate template. 
+
+Blake:	i.e. format the employees into a table first, and then add the
+'employeeTable' to your dictionary. 
+
+Amy:	A table?
+
+Blake:	(To do that, assuming you've got the employee's formatted into
+the variable "temp", you would write:
+ values[ "employeeTable" ] = temp
+ ) 
+
+Blake:	An html table.  Or however else you want to add the employees. 
+
+Amy:	Couldn't I format them after I format the rest of the stuff?
+
+Blake:	You could, but formatting them before makes it easier to
+insert them into the rest of the stuff. 
+
+Amy:	Okay...
+
+Amy:	The whole thing is going to have to be inside the "for values
+in myReader", right?
+
+Blake:	Mostly.  You could define your templates outside, but the
+rest, yeah. 
+
+Amy:	Okay.
+
+Amy:	Why didn't this work:
+for values in myReader:
+...   print " %(company)s "
+
+
+Amy:	It didn't return anything.
+
+Blake:	Because you didn't tell it where to get the company from.
+(You need the " % values" at the end of the print. 
+
+Amy:	Oh.  So "values" is a real thing.
+
+Blake:	At this point, I think you want to switch to a script. 
+
+Amy:	Yeah, just a second. :)
+
+Blake:	So that you can run it over and over again. 
+
+Blake:	Yup, everything is a real thing.  There's very little magic in
+Python. 
+
+Amy:	That's going to take some getting used to.
+
+Blake:	Hopefully it won't be too bad. 
+
+Amy:	Oh, I can tell I'm serious now, i have two shell windows open.
+:P
+
+Blake:	Heh. 
+
+Amy:	How do I do comments?
+
+Blake:	# Like this. 
+
+Amy:	Can I do line breaks wherever?
+
+Blake:	Almost. 
+
+Blake:	For now, let's say "Yes", and if you run into a problem,
+you'll find out. 
+
+Amy:	Okay.
+
+Blake:	(And I can help you figure out where to put the break
+instead.) 
+
+Amy:	Oh my god.
+
+Amy:	It worked.
+
+Amy:	Just like that.
+
+Blake:	Heh.  Now I'm definitely posting this to the weblog.  :) 
+
+Blake:	What did you do for the employee names and titles? 
+
+Amy:	I didn't do that part yet. :P
+
+Blake:	Oh, okay. 
+
+Amy:	I'm just excited I got the company to work.
+
+Amy:	Now I must eat more.
+
+Amy:	I'm running out of food.
+
+Blake:	Heh.  I'll have you pulling your data from the live database
+any second now. 
+
+Amy:	Aiy!  Don't even say that!  Your dad would be so excited.
+
+Blake:	It's really quite easy...  :) 
+
+Amy:	Okay, now I'm stuck on the employees thing.  It's a list
+called "employees"...  can I just do "for values in employees"?
+
+Blake:	You can, but it wouldn't be quite what you wanted. 
+
+Amy:	Ah.
+
+Blake:	The quickest way I've found to get a useful list out of it is
+the following line (assuming you've put the employees list into a
+variable named "x": zip( [y for (i,y) in enumerate(x) if i%2==0], [y
+for (i,y) in enumerate(x) if i%2==1] ) 
+
+Blake:	But that's nigh-unreadable, so perhaps we should try to do it
+an easier way, huh? 
+
+Amy:	Holy wha?!
+
+Blake:	See what I mean? 
+
+Amy:	Yeah.  
+
+Blake:	Ooh, how about this:
+ names = [y for (i,y) in enumerate(x) if i%2==0]
+ titles = [y for (i,y) in enumerate(x) if i%2==1] 
+
+Amy:	First, isn't my employees list in a variable called
+"employees"?
+
+Blake:	Just a sec. 
+
+Blake:	Yes, so replace 'x' with "values['employees']" 
+
+Blake:	Or add the line:
+ x = values['employees']
+ before those other two bits of code. 
+
+Amy:	And then what do "names" and "titles" end up as?  Lists?
+
+Blake:	Yup. 
+
+Amy:	Hm.  That's not really useful because I want to use them in
+pairs, the name then the title.
+
+Amy:	I guess I can use an index to refer to the nth item in each
+list, and they shouls match up.
+
+Blake:	Yes, but you could then write something like:
+ for name,title in zip( names, titles ):
+   print name, title 
+
+Amy:	Should I look up zip or just ask you what it is?
+
+Blake:	(zip takes two lists "[a1,a2,a3]" and "[b1,b2,b3]", and makes
+a new list with both "[ (a1,b1), (a2,b2), (a3,b3) ]" 
+
+Amy:	Oh, okay.
+
+Blake:	enumerate (while I'm here), returns the items in a list, along
+with their indices.  So you could have written:
+ for i, name in enumerate( names ):
+   print name, names[i], titles[i] 
+ 
+Blake:	and "name" and "names[i]" should have the same value. 
+
+Amy:	So basically I'm taking the original employee list, stripping
+it into two lists, and then folding it back into a new list with a
+slightly different format.
+
+Blake:	Yeah.  An easier to use format. 
+
+Blake:	I suppose you could do it all in one go, if you wanted...
+Something like:
+ for i,name in enumerate( values['employees'] ):
+   if i%2 == 1:
+     continue
+   print "name =", values['employees'][i], " title =", values['employees'][i+1] 
+
+Blake:	Which makes more sense to you? 
+
+Amy:	No, I don't like doing things all in one go!
+
+Amy:	I like doing things slowly and methodically.
+
+Amy:	Hm.  It doesn't like "x = values['employees']"  
+
+Amy:	It says values is not defined.
+
+Blake:	What's your whole script look like? 
+
+Blake:	(That line, in specific, should be in the :
+ for values in myReader:
+ block.) 
+
+Amy:	Right.
+
+Amy:	Well, it did something that time!
+
+Blake:	Excellent.  Not what you wanted, I'm guessing. 
+
+Amy:	Nope.
+
+Amy:	But it did what I told it to do.
+
+Blake:	Heh. 
+
+Amy:	I have this: 
+employeeRows = " %(name)s  %(title)s "
+
+and then
+  for name, title in zip( names, titles ):
+    print employeeRows % name, title
+
+Amy:	But I'm not passing in the name, title values right.
+
+Blake:	Yes, since you're not using a dictionary, you can't use the
+%(name)s format. 
+
+Amy:	Do I just use %s&amp;gt;
+
+Amy:	?
+
+Blake:	So, you can do one of two things.  Stick with the %(name)s
+format and switch to a dictionary, or switch to %s and pass them in in
+the correct order. 
+
+Blake:	Switching to a dictionary, by the way, is as easy as changing
+the "% name, title" to "% locals()" 
+
+Amy:	locals()?
+
+Blake:	It's a link to the local variables. 
+
+Blake:	Try putting a "print locals()" at various points in your
+script. 
+
+Amy:	So the local variables are just whatever it's working with
+right now?
+
+Blake:	Pretty much, yeah. 
+
+Amy:	Hm.
+
+Amy:	Now I have to figure out how to stick the employee HTML into a
+variable so I can put it in the rest of the HTML later.
+
+Blake:	What's the format of the html you want to stick it into? 
+
+Blake:	(As a hint, instead of printing it, use += to append it to a
+string...) 
+
+Amy:	Pretty much what I had there, rows in a table.
+
+Blake:	Let me know if you need any help with that, m'kay? 
+
+Amy:	Do I have to define variables?
+
+Blake:	Nope. 
+
+Amy:	Hah, that was a trick question.
+
+Blake:	(Well, kinda nope.) 
+
+Amy:	Traceback (most recent call last):
+  File "first.py", line 26, in ?
+    employeeTable += employeeRows % locals()
+NameError: name 'employeeTable' is not defined
+
+Blake:	You can't just append to something that isn't there. 
+
+Blake:	So start it with:
+ employeeTable = "&amp;lt;table&amp;gt;" 
+
+Amy:	That's better.
+
+Amy:	I wonder what is wrong with my brain that I never remember to
+put the close quote in.
+
+Amy:	How do I tell it to put in a newline?
+
+Blake:	"\n" 
+
+Amy:	Or should I just triple-quote and put it in myself?
+
+Blake:	That would work too. 
+
+Blake:	Whatever looks nicer to you. 
+
+Amy:	\n looks nicer
+
+Amy:	Okay, I think I have the bones of it working.  Now I need to
+put in the real formatting.
+
+Blake:	Cool.  Could you show me some sample output before you do? 
+
+Amy:	Sure.
+
+Amy:	 Huge Builder 
+  Bob Smith   President 
+  Joan Simpson   Vice-President Public Relations 
+  Huw Thompson   Vice President Technology 
+
+ Big Buildco 
+  Joanne Jones   CEO 
+
+Blake:	No phone number? 
+
+Amy:	I didn't do that yet.  I just assumed it would be about the
+same as the company.
+
+Blake:	(Just making sure it's not being overwritten by something
+else...) 
+
+Blake:	Yup.  It will be. 
+
+Amy:	Actually I think I will do the """ thing for the HTML
+templates, so it looks like regular HTML.
+
+Amy:	Uhoh.
+
+Blake:	What? 
+
+Amy:	If a value is empty I want to leave out a row in my table.
+
+Amy:	I will have to do that in an if in my "for values in
+myReader", right?
+
+Blake:	What do you mean by "if a value is empty"? 
+
+Blake:	Oh, if you don't have the title for someone? 
+
+Amy:	Well, more specifically, if the company doesn't have a suite
+number.
+
+Amy:	If it does I want a row with the suite number, if it doesn't I
+don't want that row at all.
+
+Blake:	Yeah.  Or you could build up a sub-template, like the
+employees. 
+
+Blake:	Have a line that looks like:
+ values['suiteNumber'] = "&amp;lt;tr&amp;gt;&amp;lt;td&amp;gt;%(suiteNumber)s&amp;lt;td&amp;gt;&amp;lt;tr&amp;gt;" % values 
+
+Amy:	Either way I will have to break everything else up into
+"before Suite" and "after Suite" templates, though.
+
+Blake:	Not really.  If you added the above line, then you could just
+use "%(suiteNumber)s", and it would output the whole &amp;lt;tr&amp;gt;&amp;lt;td&amp;gt; for you. 
+
+Amy:	Oh, I see.
+
+Amy:	What if suiteNumber is empty, though?
+
+Blake:	Ah, yes, so you would have something like:
+ if values['suiteNumber']:
+   values['suiteNumber'] = "&amp;lt;tr&amp;gt;&amp;lt;td&amp;gt;%(suiteNumber)s&amp;lt;td&amp;gt;&amp;lt;tr&amp;gt;" % values  
+
+Blake:	So, if it was empty, there would be no row, but if it wasn't
+empty, it would get a row of its own. 
+
+Amy:	Ah.  Okay.
+
+Amy:	This is going to be really swell if it works.
+
+Blake:	It will.  One way or another. 
+
+Amy:	Uh oh.
+
+Amy:	One of my data fields has commas in it.
+
+Blake:	A-ha!  Did it mess up? 
+
+Amy:	I didn't try it yet.  Should I quote the data with commas?
+
+Blake:	You shouldn't have to.  The export thing should do it for you. 
+
+Amy:	Shut up!
+
+Amy:	Wait, what export thing?
+
+Amy:	From access or whatever?
+
+Blake:	Yeah. 
+
+Amy:	Okay.  I'm not using real data yet, I'm just making up
+fake(ish) data.
+
+Blake:	Ah, right.  I would just assume that your real data is
+correctly formatted. 
+
+Blake:	(The rules for CSV quoting are kind of odd.) 
+
+Amy:	If I have single quotes within a triple-quoted section, is
+that okay?
+
+Amy:	Or do I have to escape them or something?
+
+Blake:	Yup. 
+
+Blake:	You can also have single-quotes in a double-quoted section, or
+double-quotes in a single-quoted section. 
+
+Blake:	And you can triple-single or triple-double quote stuff, if you
+needed a triple-whatever-the-other-quote-was in it. 
+
+Amy:	Ah, wait.  I meant single-double-quote, not single quote.
+
+Blake:	Whatever. 
+
+Blake:	It all works. 
+
+Amy:	Hm.
+
+Amy:	It's whining about something.
+
+Blake:	What's the complaint? 
+
+Amy:	Traceback (most recent call last):
+  File "second.py", line 71, in ?
+    print myTable % values
+ValueError: unsupported format character '"' (0x22) at index 29
+
+Amy:	Perhaps it is the %?
+
+Blake:	It's probably the %.  To get a % in the output, you need to
+type %%. 
+
+Amy:	Hah!
+
+Amy:	Ta da!
+
+Blake:	It all works? 
+
+Amy:	Kind of, except some values aren't right. 
+
+Amy:	But it's formatting mostly right.
+
+Blake:	Hmm.  Cool. 
+
+Blake:	Back in a sec. 
+
+Amy:	It's not reading the CSV properly -- it's the problem with
+commas inside fields I was talking about before.
+
+Amy:	According to this it should work.
+http://www.python.org/doc/2.3.2/lib/csv-fmt-params.html#csv-fmt-params
+
+Blake:	No? 
+
+Blake:	What's the line it's failing on? 
+
+Blake:	And is this actual data, or hand-created data? 
+
+Amy:	It's my fake data.
+
+Amy:	Ah.  It didn't like my spaces after my commas.
+
+Amy:	When I got rid of them it worked.
+
+Amy:	Whoo!
+
+Blake:	Hurray! 
+
+Amy:	I CAN'T BELIEVE IT WAS SO EASY.
+
+Amy:	You can put that in the blog.
+
+Blake:	Oh, I will. 
+
+Amy:	I'm sure I would have spent way more time looking for and
+downloading and installing and testing a million graphical things, if
+they even exist.
+
+Amy:	Scripting is the shit.
+&lt;/pre&gt;</description><category>python</category><guid>https://weblog.latte.ca/blake/tech/python/learningpython.html</guid><pubDate>Thu, 10 Mar 2005 22:14:00 GMT</pubDate></item><item><title>Why is Python slow?</title><link>https://weblog.latte.ca/blake/tech/python/slow.html</link><dc:creator>Blake Winton</dc:creator><description>&lt;p&gt;I tried replying to &lt;a href="http://peter.mapledesign.co.uk/weblog/archives/python_is_slow.html"&gt;this post&lt;/a&gt; from Peter Bowyer, but the comment submit form was behind an
+httpd-authenticated wall, so I figured I'ld post the reply here instead.
+&lt;/p&gt;&lt;p&gt;
+Have you tried posting to the Python Tutor list (tutor@python.org), and
+asking them why your code is so slow?  You'll probably get some interesting
+responses.
+A couple of things I've noticed off the top:
+You could replace this
+&lt;code&gt;x = 0&lt;br&gt;
+bins = []&lt;br&gt;
+for x in range(MAXSTEPS): bins.append(0)&lt;/code&gt;
+with this
+&lt;code&gt;bins = [0 for x in xrange(MAXSTEPS)]&lt;/code&gt;
+which should be faster for a couple of reasons.  First, list comprehensions
+are faster than repeated calls to append (I believe).  Second, xrange
+should be faster than range, because it just returns the numbers one at a
+time instead of creating the whole list at once.
+&lt;/p&gt;&lt;p&gt;
+Here's some code showing how much faster that one change is:
+&lt;code&gt;&amp;gt;&amp;gt;&amp;gt; t1="""x=0&lt;br&gt;
+... bins=[]&lt;br&gt;
+... for x in xrange(20): bins.append(0)"""&lt;br&gt;
+&amp;gt;&amp;gt;&amp;gt; t2 = """bins = [0 for x in xrange(20)]"""&lt;br&gt;
+&amp;gt;&amp;gt;&amp;gt; time1 = timeit.Timer(t1)&lt;br&gt;
+&amp;gt;&amp;gt;&amp;gt; time2 = timeit.Timer(t2)&lt;br&gt;
+&amp;gt;&amp;gt;&amp;gt; time1.timeit()&lt;br&gt;
+10.322476353976072&lt;br&gt;
+&amp;gt;&amp;gt;&amp;gt; time2.timeit()&lt;br&gt;
+7.6572002255583129&lt;/code&gt;
+&lt;/p&gt;&lt;p&gt;
+As a side note, I ran:
+&lt;code&gt;&amp;gt;&amp;gt;&amp;gt; t3 = """bins = [0] * 300"""&lt;br&gt;
+&amp;gt;&amp;gt;&amp;gt; time1 = timeit.Timer(t1)&lt;br&gt;
+&amp;gt;&amp;gt;&amp;gt; time3.timeit()&lt;br&gt;
+3.0881361995940324&lt;/code&gt;
+which takes half the time of t2 to do 15 times as many entries...
+Interesting.  I'll update this with the results of the other tests as they
+finish running...&lt;/p&gt;
+
+&lt;p&gt;Okay, another thought.  You calculate the distance every time through
+the inner loop, which seems really slow.  Perhaps you could keep track of
+the distance, and update it in the call to walk?&lt;/p&gt;
+
+&lt;p&gt;Update:&lt;br&gt;
+Here are the results from running all of them for 300 iterations.
+&lt;code&gt;&amp;gt;&amp;gt;&amp;gt; t1="""x=0&lt;br&gt;
+... bins=[]&lt;br&gt;
+... for x in xrange(300): bins.append(0)"""&lt;br&gt;
+&amp;gt;&amp;gt;&amp;gt; t2 = """bins = [0 for x in xrange(300)]"""&lt;br&gt;
+&amp;gt;&amp;gt;&amp;gt; t3 = """bins = [0] * 300"""&lt;br&gt;
+&amp;gt;&amp;gt;&amp;gt; time1 = timeit.Timer(t1)&lt;br&gt;
+&amp;gt;&amp;gt;&amp;gt; time2 = timeit.Timer(t2)&lt;br&gt;
+&amp;gt;&amp;gt;&amp;gt; time3 = timeit.Timer(t3)&lt;br&gt;
+&amp;gt;&amp;gt;&amp;gt; time1.timeit()&lt;br&gt;
+144.48788944637977&lt;br&gt;
+&amp;gt;&amp;gt;&amp;gt; time2.timeit()&lt;br&gt;
+105.76589055161526&lt;br&gt;
+&amp;gt;&amp;gt;&amp;gt; time3.timeit()&lt;br&gt;
+3.0881361995940324&lt;/code&gt;&lt;/p&gt;</description><category>python</category><guid>https://weblog.latte.ca/blake/tech/python/slow.html</guid><pubDate>Thu, 23 Dec 2004 15:44:00 GMT</pubDate></item></channel></rss>

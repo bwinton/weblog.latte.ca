@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet type="text/xsl" href="../assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Blog-O! (gambit)</title><link>https://weblog.latte.ca/</link><description></description><atom:link type="application/rss+xml" href="https://weblog.latte.ca/tags/gambit.xml" rel="self"></atom:link><language>en</language><lastBuildDate>Wed, 24 Feb 2016 17:07:39 GMT</lastBuildDate><generator>https://getnikola.com/</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Some notes on cross-compiling GambitC</title><link>https://weblog.latte.ca/blake/tech/iTouch/gambit.html</link><dc:creator>Blake Winton</dc:creator><description>&lt;div&gt;&lt;p&gt;The command to use is:&lt;/p&gt;
+&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;$ env &lt;span class="nv"&gt;CC&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;/usr/local/bin/arm-apple-darwin-gcc &lt;span class="nv"&gt;CC_FOR_BUILD&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;gcc ./configure --host&lt;span class="o"&gt;=&lt;/span&gt;mac&lt;span class="p"&gt;;&lt;/span&gt; make
+&lt;/pre&gt;
+
+
+&lt;p&gt;Well, kind of.  First you do that, then you copy gsc/gsc to gsc/gsc.onboard,
+then you go to a new directory, and type:&lt;/p&gt;
+&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;$ ./configure&lt;span class="p"&gt;;&lt;/span&gt;make
+&lt;/pre&gt;
+
+
+&lt;p&gt;and copy the gsc/gsc from that directory into the first directory.&lt;/p&gt;
+&lt;p&gt;To compile a script into an exe:&lt;/p&gt;
+&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;$ gsc/gsc -:&lt;span class="o"&gt;=&lt;/span&gt;. -c euler.scm
+$ gsc/gsc -:&lt;span class="o"&gt;=&lt;/span&gt;. -link euler.c
+$ /usr/local/bin/arm-apple-darwin-gcc euler.c euler_.c -Iinclude -Llib -lgambc -o euler
+&lt;/pre&gt;
+
+
+&lt;p&gt;It's freaking huge!&lt;/p&gt;
+&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;$ ls -alh euler
+-rwxr-xr-x   &lt;span class="m"&gt;1&lt;/span&gt; bwinton  bwinton  4M Jan &lt;span class="m"&gt;23&lt;/span&gt; 14:22 euler
+$ ls -alh /WifiToggle
+-rwxr-xr-x   &lt;span class="m"&gt;1&lt;/span&gt; bwinton  bwinton  17K Jan &lt;span class="m"&gt;16&lt;/span&gt; 14:07 /WifiToggle
+&lt;/pre&gt;
+
+
+&lt;p&gt;And it's not a lot faster.
+0.1643 seconds for the compiled version, as opposed to 0.1803 seconds for the interpreter. &lt;/p&gt;
+&lt;p&gt;But on my Mac:&lt;/p&gt;
+&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;$ more m1.c
+power_of_2 &lt;span class="o"&gt;(&lt;/span&gt;int x&lt;span class="o"&gt;)&lt;/span&gt; &lt;span class="o"&gt;{&lt;/span&gt; &lt;span class="k"&gt;return&lt;/span&gt; 1&lt;span class="s"&gt;&amp;lt;&amp;lt;x; }&lt;/span&gt;
+&lt;span class="s"&gt;$ more m2.scm&lt;/span&gt;
+&lt;span class="s"&gt;(c-declare "ex&lt;/span&gt;tern int power_of_2 &lt;span class="o"&gt;()&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;&lt;span class="s2"&gt;")&lt;/span&gt;
+&lt;span class="s2"&gt;(define pow2 (c-lambda (int) int "&lt;/span&gt;power_of_2&lt;span class="s2"&gt;"))&lt;/span&gt;
+&lt;span class="s2"&gt;(define (twice x) (cons x x))&lt;/span&gt;
+$&lt;span class="s2"&gt; more m3.scm&lt;/span&gt;
+&lt;span class="s2"&gt;(write (map twice (map pow2 '(1 2 3 4)))) (newline)&lt;/span&gt;
+$&lt;span class="s2"&gt; gsc/gsc -:=. -link -flat -o foo.o1.c m2 m3&lt;/span&gt;
+$&lt;span class="s2"&gt; /usr/local/bin/arm-apple-darwin-gcc -Iinclude -bundle -D___DYNAMIC m1.c m2.c m3.c foo.o1.c -o foo.o1&lt;/span&gt;
+$&lt;span class="s2"&gt; ls -alh foo.o1&lt;/span&gt;
+&lt;span class="s2"&gt;-rwxr-xr-x   1 bwinton  bwinton    13K Jan 23 14:45 foo.o1&lt;/span&gt;
+&lt;/pre&gt;
+
+
+&lt;p&gt;then on the iTouch,&lt;/p&gt;
+&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;# scp bwinton@latte.ca:/Users/bwinton/Programming/Bazaar/iTouch/gambc-v4_1_2/foo.o1 .
+# gsi foo.o1
+((2 . 2) (4 . 4) (8 . 8) (16 . 16))
+# gsi
+Gambit v4.1.2
+
+&amp;gt; (load "foo")
+((2 . 2) (4 . 4) (8 . 8) (16 . 16))
+"/private/var/root/foo.o1"
+&amp;gt; (twice 5)
+(5 . 5)
+&amp;gt; (pow2 10)
+1024
+&lt;/pre&gt;&lt;/div&gt;</description><category>gambit</category><category>itouch</category><category>scheme</category><guid>https://weblog.latte.ca/blake/tech/iTouch/gambit.html</guid><pubDate>Fri, 12 Dec 2008 22:09:47 GMT</pubDate></item><item><title>An odd restriction</title><link>https://weblog.latte.ca/blake/tech/scheme/backtick.html</link><dc:creator>Blake Winton</dc:creator><description>&lt;div&gt;&lt;p&gt;As &lt;a href="http://weblog.latte.ca/blake/tech/iTouch/languages.html"&gt;I mentioned&lt;/a&gt; before, I’ve
+ported Gambit Scheme to my iTouch, and have been playing around with
+it a little.  It’s pretty nice all in all, but I recently ran into a
+small problem while I was trying to play around with macros.  The
+problem?  There’s no way to enter a backtick (`) on the iTouch!  That
+means that I don’t really have a way to write code like&lt;/p&gt;
+&lt;table class="codehilitetable"&gt;&lt;tr&gt;&lt;td class="linenos"&gt;&lt;div class="linenodiv"&gt;&lt;pre&gt;1&lt;/pre&gt;&lt;/div&gt;&lt;/td&gt;&lt;td class="code"&gt;&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="o"&gt;`&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt; &lt;span class="nv"&gt;a&lt;/span&gt; &lt;span class="nv"&gt;b&lt;/span&gt; &lt;span class="o"&gt;,&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nb"&gt;+ &lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt; &lt;span class="mi"&gt;2&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="nv"&gt;d&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;/pre&gt;
+&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;p&gt;which makes writing macros a lot more painful.  Fortunately, I got a
+lot of help from the people on &lt;a href="irc://irc.freenode.net/gambit"&gt;IRC&lt;/a&gt;
+and on the &lt;a href="https://webmail.iro.umontreal.ca/pipermail/gambit-list/"&gt;Gambit mailing list&lt;/a&gt;.
+Specifically, Marc Feeley, the author of Gambit, &lt;a href="https://webmail.iro.umontreal.ca/pipermail/gambit-list/2008-February/002011.html"&gt;posted&lt;/a&gt;
+a snippet of code that I could put into my .gambcini file that would
+add $ as a synonym for `.  The code looked like this:&lt;/p&gt;
+&lt;table class="codehilitetable"&gt;&lt;tr&gt;&lt;td class="linenos"&gt;&lt;div class="linenodiv"&gt;&lt;pre&gt;1
+2
+3
+4
+5
+6
+7&lt;/pre&gt;&lt;/div&gt;&lt;/td&gt;&lt;td class="code"&gt;&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nf"&gt;begin&lt;/span&gt;
+  &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="o"&gt;##&lt;/span&gt;&lt;span class="nv"&gt;readtable-char-class-set!&lt;/span&gt;
+    &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nf"&gt;current-readtable&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+    &lt;span class="sc"&gt;#\$&lt;/span&gt;  &lt;span class="c1"&gt;;; the character to dispatch on&lt;/span&gt;
+    &lt;span class="no"&gt;#t&lt;/span&gt;   &lt;span class="c1"&gt;;; this character is a delimiter&lt;/span&gt;
+    &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="k"&gt;lambda &lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nf"&gt;re&lt;/span&gt; &lt;span class="nv"&gt;c&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="o"&gt;##&lt;/span&gt;&lt;span class="nv"&gt;read-quotation&lt;/span&gt; &lt;span class="nv"&gt;re&lt;/span&gt; &lt;span class="o"&gt;#&lt;/span&gt;&lt;span class="err"&gt;\&lt;/span&gt;&lt;span class="o"&gt;`&lt;/span&gt;&lt;span class="p"&gt;)))&lt;/span&gt;  &lt;span class="c1"&gt;;; handler&lt;/span&gt;
+  &lt;span class="no"&gt;#f&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;/pre&gt;
+&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;p&gt;and the example, which works, is:&lt;/p&gt;
+&lt;table class="codehilitetable"&gt;&lt;tr&gt;&lt;td class="linenos"&gt;&lt;div class="linenodiv"&gt;&lt;pre&gt;1
+2&lt;/pre&gt;&lt;/div&gt;&lt;/td&gt;&lt;td class="code"&gt;&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="nv"&gt;$&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt; &lt;span class="o"&gt;,&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nb"&gt;+ &lt;/span&gt;&lt;span class="mi"&gt;2&lt;/span&gt; &lt;span class="mi"&gt;3&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="mi"&gt;4&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="nv"&gt;output:&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt; &lt;span class="mi"&gt;5&lt;/span&gt; &lt;span class="mi"&gt;4&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;/pre&gt;
+&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;p&gt;If you’re trying to write that code on your iTouch, you might notice that it
+includes the forbidden `, and so you’re once again out of luck.  Except that
+in this case, you can replace #\` with #\u0060, which you can type in on the
+iTouch, and then it’ll all work.&lt;/p&gt;&lt;/div&gt;</description><category>gambit</category><category>itouch</category><category>macros</category><category>scheme</category><guid>https://weblog.latte.ca/blake/tech/scheme/backtick.html</guid><pubDate>Wed, 09 Apr 2008 14:20:43 GMT</pubDate></item></channel></rss>

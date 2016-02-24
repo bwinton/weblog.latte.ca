@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet type="text/xsl" href="../assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Blog-O! (vim)</title><link>https://weblog.latte.ca/</link><description></description><atom:link type="application/rss+xml" href="https://weblog.latte.ca/tags/vim.xml" rel="self"></atom:link><language>en</language><lastBuildDate>Wed, 24 Feb 2016 17:07:45 GMT</lastBuildDate><generator>https://getnikola.com/</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Home again…</title><link>https://weblog.latte.ca/blake/tech/vim.html</link><dc:creator>Blake Winton</dc:creator><description>&lt;div&gt;&lt;p&gt;A while ago, I downloaded Aquamacs, an emacs port for OSX, and tried
+to switch to it as my default editor.  I mainly did it because I
+wanted an editor I could add functionality to, à la &lt;a href="http://steve.yegge.googlepages.com/effective-emacs"&gt;Steve Yegge&lt;/a&gt;.  I used it for a
+while, and got fairly proficient at it.  There were a lot of things
+about it I really liked, like the &lt;a href="http://jblevins.org/projects/markdown-mode/"&gt;Markdown mode&lt;/a&gt;, and the ability to edit
+files &lt;a href="http://jeremy.zawodny.com/blog/archives/000983.html"&gt;on a remote host&lt;/a&gt;, and the way I
+could write small functions in &lt;a href="http://www.gnu.org/software/emacs/manual/html_mono/elisp.html"&gt;elisp&lt;/a&gt; and use
+them to make me more productive.&lt;/p&gt;
+&lt;p&gt;But while it worked, and worked well, I didn’t really write all that
+much extra elisp, and whenever I did, I didn’t really enjoy it.  So
+the other day, when I found myself &lt;a href="http://weblog.jamisbuck.org/2005/4/10/text-editing-dilemma"&gt;reading a weblog&lt;/a&gt; about the
+lack of a good graphical text editor on OSX, I found myself agreeing
+with him.  So when I read &lt;a href="http://weblog.jamisbuck.org/2008/10/10/coming-home-to-vim"&gt;a later article&lt;/a&gt; on how the
+author had finally switched back to vim, I thought that I might give
+vim another chance.&lt;/p&gt;
+&lt;p&gt;Well, it turns out that vim is actually pretty close to a perfect text
+editor for me.  It’s got &lt;a href="http://plasticboy.com/markdown-vim-mode/"&gt;Markdown support&lt;/a&gt;, &lt;a href="http://www.petersblog.org/node/466"&gt;remote file editing&lt;/a&gt;, and not only can I write
+functions for it, I can &lt;a href="http://www.vim.org/htmldoc/if_pyth.html"&gt;write them&lt;/a&gt; in
+&lt;a href="http://python.org/"&gt;Python&lt;/a&gt;!  As an example, here’s Steve Yegge’s
+blog-check function in vim/python:&lt;/p&gt;
+&lt;table class="codehilitetable"&gt;&lt;tr&gt;&lt;td class="linenos"&gt;&lt;div class="linenodiv"&gt;&lt;pre&gt; 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13
+14
+15
+16
+17
+18&lt;/pre&gt;&lt;/div&gt;&lt;/td&gt;&lt;td class="code"&gt;&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="k"&gt;function&lt;/span&gt;&lt;span class="p"&gt;!&lt;/span&gt; BlogCheck&lt;span class="p"&gt;()&lt;/span&gt;
+  &lt;span class="k"&gt;python&lt;/span&gt; &lt;span class="o"&gt;&amp;lt;&amp;lt;&lt;/span&gt; END
+&lt;span class="p"&gt;:::&lt;/span&gt;&lt;span class="n"&gt;python&lt;/span&gt;
+&lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="nn"&gt;re&lt;/span&gt;
+&lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="nn"&gt;vim&lt;/span&gt;
+&lt;span class="n"&gt;pattern&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;re&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;compile&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt; &lt;span class="s2"&gt;r"\s"&lt;/span&gt; &lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="n"&gt;count&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="mi"&gt;0&lt;/span&gt;
+&lt;span class="k"&gt;for&lt;/span&gt; &lt;span class="n"&gt;line&lt;/span&gt; &lt;span class="ow"&gt;in&lt;/span&gt; &lt;span class="n"&gt;vim&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;current&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;buffer&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+  &lt;span class="n"&gt;line&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;pattern&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;sub&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt; &lt;span class="s2"&gt;""&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;line&lt;/span&gt; &lt;span class="p"&gt;)&lt;/span&gt;
+  &lt;span class="n"&gt;count&lt;/span&gt; &lt;span class="o"&gt;+=&lt;/span&gt; &lt;span class="nb"&gt;len&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;line&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="k"&gt;if&lt;/span&gt; &lt;span class="n"&gt;count&lt;/span&gt; &lt;span class="o"&gt;&amp;lt;=&lt;/span&gt; &lt;span class="mi"&gt;5000&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+  &lt;span class="n"&gt;message&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s2"&gt;"Okay so far"&lt;/span&gt;
+&lt;span class="k"&gt;else&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+  &lt;span class="n"&gt;message&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s2"&gt;"Dude, too long"&lt;/span&gt;
+&lt;span class="k"&gt;print&lt;/span&gt; &lt;span class="s2"&gt;"&lt;/span&gt;&lt;span class="si"&gt;%s&lt;/span&gt;&lt;span class="s2"&gt;:  &lt;/span&gt;&lt;span class="si"&gt;%d&lt;/span&gt;&lt;span class="s2"&gt; chars, &lt;/span&gt;&lt;span class="si"&gt;%d&lt;/span&gt;&lt;span class="s2"&gt; words"&lt;/span&gt; &lt;span class="o"&gt;%&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;message&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;count&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;count&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="mi"&gt;5&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="p"&gt;:::&lt;/span&gt;&lt;span class="n"&gt;vim&lt;/span&gt;
+END
+&lt;span class="k"&gt;endfunction&lt;/span&gt;
+&lt;/pre&gt;
+&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/div&gt;</description><category>editors</category><category>emacs</category><category>lisp</category><category>python</category><category>switching</category><category>vim</category><guid>https://weblog.latte.ca/blake/tech/vim.html</guid><pubDate>Mon, 02 Feb 2009 20:48:35 GMT</pubDate></item></channel></rss>

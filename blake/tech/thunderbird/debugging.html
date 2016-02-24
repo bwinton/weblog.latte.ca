@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html prefix="og: http://ogp.me/ns# article: http://ogp.me/ns/article# " lang="en">
+<head>
+<meta charset="utf-8">
+<base href="https://weblog.latte.ca/blake/tech/thunderbird/debugging.html">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>How to (not quite) fix a bug. | Blog-O!</title>
+<link href="../../../assets/css/bootstrap.min.css" rel="stylesheet" type="text/css">
+<link href="../../../assets/css/rst.css" rel="stylesheet" type="text/css">
+<link href="../../../assets/css/code.css" rel="stylesheet" type="text/css">
+<link href="../../../assets/css/colorbox.css" rel="stylesheet" type="text/css">
+<link href="../../../assets/css/theme.css" rel="stylesheet" type="text/css">
+<meta content="#5670d4" name="theme-color">
+<link rel="alternate" type="application/rss+xml" title="RSS" href="../../../rss.xml">
+<link rel="canonical" href="https://weblog.latte.ca/blake/tech/thunderbird/debugging.html">
+<!--[if lt IE 9]><script src="../../../assets/js/html5.js"></script><![endif]--><meta name="author" content="Blake Winton">
+<link rel="prev" href="../../../amy/books/_2010/0305.html" title="Books for the Beginning of 2010" type="text/html">
+<link rel="next" href="../../../cordelia/conversations/conversation02.html" title="Telefool" type="text/html">
+<meta property="og:site_name" content="Blog-O!">
+<meta property="og:title" content="How to (not quite) fix a bug.">
+<meta property="og:url" content="https://weblog.latte.ca/blake/tech/thunderbird/debugging.html">
+<meta property="og:description" content="I’ve run into a bug.  It’s a really annoying bug, because it prevents me from changing
+folders when I try to test any of my Thunderbird changes.
+I tried putting dump statements everywhere, to see if I">
+<meta property="og:type" content="article">
+<meta property="article:published_time" content="2010-03-10T22:17:58-05:00">
+<meta property="article:tag" content="debugging">
+<meta property="article:tag" content="mozilla">
+<meta property="article:tag" content="thunderbird">
+</head>
+<body>
+<a href="#content" class="sr-only sr-only-focusable">Skip to main content</a>
+
+<!-- Menubar -->
+
+<nav class="navbar navbar-inverse navbar-static-top"><div class="container">
+<!-- This keeps the margins nice -->
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-navbar" aria-controls="bs-navbar" aria-expanded="false">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="https://weblog.latte.ca/">
+
+                <span id="blog-title">Blog-O!</span>
+            </a>
+        </div>
+<!-- /.navbar-header -->
+        <div class="collapse navbar-collapse" id="bs-navbar" aria-expanded="false">
+            <ul class="nav navbar-nav">
+<li>
+<a href="../../../archive.html">Archive</a>
+                </li>
+<li>
+<a href="../../../tags/index.html">Tags</a>
+                </li>
+<li>
+<a href="../../../rss.xml">RSS feed</a>
+
+                
+            </li>
+</ul>
+<!-- Custom search --><form method="get" id="search" action="//duckduckgo.com/" class="navbar-form pull-right">
+<input type="hidden" name="sites" value="https://weblog.latte.ca/"><input type="hidden" name="k8" value="#444444"><input type="hidden" name="k9" value="#D51920"><input type="hidden" name="kt" value="h"><input type="text" name="q" maxlength="255" placeholder="Search…" style="margin-top: 4px;"><input type="submit" value="DuckDuckGo Search" style="visibility: hidden;">
+</form>
+<!-- End of custom search -->
+
+
+            <ul class="nav navbar-nav navbar-right"></ul>
+</div>
+<!-- /.navbar-collapse -->
+    </div>
+<!-- /.container -->
+</nav><!-- End of Menubar --><div class="container" id="content" role="main">
+    <div class="body-content">
+        <!--Body content-->
+        <div class="row">
+            
+            
+<article class="post-text h-entry hentry postpage" itemscope="itemscope" itemtype="http://schema.org/Article"><header><h1 class="p-name entry-title" itemprop="headline name"><a href="#" class="u-url">How to (not quite) fix a bug.</a></h1>
+
+        <div class="metadata">
+            <p class="byline author vcard"><span class="byline-name fn">Blake Winton</span></p>
+            <p class="dateline"><a href="#" rel="bookmark"><time class="published dt-published" datetime="2010-03-10T22:17:58-05:00" itemprop="datePublished" title="2010-03-10 22:17">2010-03-10 22:17</time></a></p>
+                <p class="commentline">
+        
+    <a href="debugging.html#disqus_thread" data-disqus-identifier="/blake/tech/thunderbird/debugging">Comments</a>
+
+
+            
+
+        </p>
+</div>
+        
+
+    </header><div class="e-content entry-content" itemprop="articleBody text">
+    <div>
+<p>I’ve run into <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=545933">a bug</a>.  It’s a really annoying bug, because it prevents me from changing
+folders when I try to test any of my Thunderbird changes.</p>
+<p>I tried putting dump statements everywhere, to see if I could figure out
+what was going on, but they were to no avail.  Then, I thought about
+looking for the error code.</p>
+<p>So the <a href="http://silver.warwickcompsoc.co.uk/mozilla/misc/nserror?0x805E0006">error lookup page</a> says
+that the error that’s reported is:</p>
+<pre class="code literal-block"><span></span><span class="k">Module</span>          <span class="nn">Severity</span>        <span class="n">Number</span>
+<span class="n">CONTENT</span> <span class="p">(</span><span class="mi">25</span><span class="p">)</span>    <span class="n">Failure</span> <span class="p">(</span><span class="mi">1</span><span class="p">)</span>     <span class="mi">6</span>
+</pre>
+
+
+<p>And
+<a href="http://scotland.proximity.on.ca/dxr/mozilla-central/content/base/public/nsContentErrors.h.html#l59">DXR</a>
+says that Content Error 6 is:
+    NS_ERROR_CONTENT_BLOCKED</p>
+<p>Which occurs, among other places,
+<a href="http://mxr.mozilla.org/comm-central/source/mozilla/content/base/src/nsDocument.cpp#1129">here</a></p>
+<p>But when I set a breakpoint there, it didn’t hit it.  So instead of
+trusting mxr or dxr, I did a grep (well, an ack, but same thing), and
+started setting breakpoints on a few of the hits.</p>
+<p>The one that hit my breakpoint ended up being <a href="http://mxr.mozilla.org/comm-central/source/mozilla/docshell/base/nsDocShell.cpp#7643">this
+one</a>
+which, weirdly enough, isn’t even listed in the mxr results of <a href="http://mxr.mozilla.org/comm-central/ident?i=NS_ERROR_CONTENT_BLOCKED">this
+search</a></p>
+<p>Now that I’m at the breakpoint, we’re halfway there, I hope.  ;)</p>
+<p>How I got there was:</p>
+<pre class="code literal-block"><span></span>(gdb) bt
+#0  nsDocShell::InternalLoad (…) at …/mozilla/docshell/base/nsDocShell.cpp:7643
+#1  0x152d9daa in nsDocShell::LoadURI (…) at …/mozilla/docshell/base/nsDocShell.cpp:1369
+#2  0x13dc7581 in nsLocation::SetURI (…) at …/mozilla/dom/base/nsLocation.cpp:316
+#3  0x13dc8af3 in nsLocation::SetHrefWithBase (…) at …/mozilla/dom/base/nsLocation.cpp:595
+#4  0x13dc8cf9 in nsLocation::SetHrefWithContext (…) at …/mozilla/dom/base/nsLocation.cpp:542
+#5  0x13dc9120 in nsLocation::SetHref (…) at …/mozilla/dom/base/nsLocation.cpp:510
+#6  0x003fa28e in NS_InvokeByIndex_P (…) at …/mozilla/xpcom/reflect/xptcall/src/md/unix/xptcinvoke_unixish_x86.cpp:179
+#7  0x120f88bb in XPCWrappedNative::CallMethod (…) at …/mozilla/js/src/xpconnect/src/xpcwrappednative.cpp:2727
+#8  0x1210c0c6 in XPCWrappedNative::SetAttribute (…) at xpcprivate.h:2550
+#9  0x12105530 in XPC_WN_GetterSetter (…) at …/mozilla/js/src/xpconnect/src/xpcwrappednativejsops.cpp:1792
+#10 0x001141a7 in js_Invoke (…) at jsinterp.cpp:1388
+[…]
+</pre>
+
+
+<p>And it looks like we get there because the return value of
+NS_CheckContentLoadPolicy is 0x80004003, or NS_ERROR_INVALID_POINTER.</p>
+<p>Then, after dinner, I tracked it down a little further, and if you place a
+breakpoint on the “\n\nAAAAAA\nrv5=%x\n” line in <a href="https://bug545933.bugzilla.mozilla.org/attachment.cgi?id=427516">this patch</a>, you can
+see that it’s the folder = do_QueryInterface(subFolder, &amp;rv); line
+which is causing the failure, because the subFolder’s mRawPtr is null.</p>
+<p>But I have no idea why <em>that</em>’s happening, so I posted what I had, and
+hoped that someone else could take it and run with it.  And Bienvenu did,
+and now it’s much less of a problem for me, and I can go work on other
+things.</p>
+</div>
+    </div>
+    <aside class="postpromonav"><nav><ul itemprop="keywords" class="tags">
+<li><a class="tag p-category" href="../../../tags/debugging.html" rel="tag">debugging</a></li>
+            <li><a class="tag p-category" href="../../../tags/mozilla.html" rel="tag">mozilla</a></li>
+            <li><a class="tag p-category" href="../../../tags/thunderbird.html" rel="tag">thunderbird</a></li>
+        </ul>
+<ul class="pager hidden-print">
+<li class="previous">
+                <a href="../../../amy/books/_2010/0305.html" rel="prev" title="Books for the Beginning of 2010">Previous post</a>
+            </li>
+            <li class="next">
+                <a href="../../../cordelia/conversations/conversation02.html" rel="next" title="Telefool">Next post</a>
+            </li>
+        </ul></nav></aside><section class="comments"><h2>Comments</h2>
+        
+        
+        <div id="disqus_thread"></div>
+        <script>
+        var disqus_shortname ="latteblog",
+            disqus_url="https://weblog.latte.ca/blake/tech/thunderbird/debugging.html",
+        disqus_title="How to (not quite) fix a bug.",
+        disqus_identifier="/blake/tech/thunderbird/debugging",
+        disqus_config = function () {
+            this.language = "en";
+        };
+        (function() {
+            var dsq = document.createElement('script'); dsq.async = true;
+            dsq.src = 'https://' + disqus_shortname + '.disqus.com/embed.js';
+            (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+        })();
+    </script><noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a>
+</noscript>
+    <a href="https://disqus.com" class="dsq-brlink" rel="nofollow">Comments powered by <span class="logo-disqus">Disqus</span></a>
+
+
+        </section></article><script>var disqus_shortname="latteblog";(function(){var a=document.createElement("script");a.async=true;a.src="https://"+disqus_shortname+".disqus.com/count.js";(document.getElementsByTagName("head")[0]||document.getElementsByTagName("body")[0]).appendChild(a)}());</script>
+</div>
+        <!--End of body content-->
+
+        <footer id="footer"><div style="margin-bottom: 12px">Contents © 2016         <a href="mailto:bwinton@latte.ca">Blake Winton</a>
+<a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/2.5/">
+<img alt="Creative Commons License BY-NC-SA" style="border-width: 0; vertical-align: bottom" src="https://licensebuttons.net/l/by-nc-sa/2.5/88x31.png"></a>
+</div>
+            
+        </footer>
+</div>
+</div>
+
+
+            <script src="../../../assets/js/jquery.min.js"></script><script src="../../../assets/js/bootstrap.min.js"></script><script src="../../../assets/js/moment-with-locales.min.js"></script><script src="../../../assets/js/fancydates.js"></script><script src="../../../assets/js/jquery.colorbox-min.js"></script><script>$('a.image-reference:not(.islink) img:not(.islink)').parent().colorbox({rel:"gal",maxWidth:"100%",maxHeight:"100%",scalePhotos:true});</script><!-- fancy dates --><script>
+    moment.locale("en");
+    fancydates(0, "YYYY-MM-DD HH:mm");
+    </script><!-- end fancy dates --><script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-5805429-2', 'auto');
+  ga('send', 'pageview');
+
+</script>
+</body>
+</html>

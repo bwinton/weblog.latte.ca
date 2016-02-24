@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet type="text/xsl" href="../assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Blog-O! (virtual_machines)</title><link>https://weblog.latte.ca/</link><description></description><atom:link type="application/rss+xml" href="https://weblog.latte.ca/tags/virtual_machines.xml" rel="self"></atom:link><language>en</language><lastBuildDate>Wed, 24 Feb 2016 17:07:44 GMT</lastBuildDate><generator>https://getnikola.com/</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Another reason to use Mercurial (or Git or Bazaar)</title><link>https://weblog.latte.ca/blake/tech/thunderbird/vms.html</link><dc:creator>Blake Winton</dc:creator><description>&lt;div&gt;&lt;p&gt;A lot of the code I write for &lt;a href="http://mozillamessaging.com/"&gt;Thunderbird&lt;/a&gt;
+has to work on &lt;a href="http://www.mozillamessaging.com/en-US/thunderbird/all.html"&gt;all&lt;/a&gt; the platforms
+it supports.  Since I don’t own a &lt;a href="http://www.ubuntu.com/"&gt;Linux&lt;/a&gt; or
+&lt;a href="http://www.microsoft.com/windows/windows-7"&gt;Windows&lt;/a&gt; box, and don’t really
+want to waste the hard drive space on my &lt;a href="http://www.apple.com/ca/macbookpro/specs.html"&gt;MacBook Pro&lt;/a&gt; with a dual- or triple-boot
+setup, I’ve decided to install the other operating systems on virtual
+machines.  (I’ve chosen &lt;a href="http://www.virtualbox.org/"&gt;VirtualBox&lt;/a&gt;, because
+it’s free, and I’m cheap.  As an added bonus, it works quite well, too.)&lt;/p&gt;
+&lt;p&gt;If I was forced to use a centralized version control system, this would
+lead to a bunch of pain, since I wouldn’t want to check in a half-finished
+patch, but I would still really want to see what changes I made for one OS,
+to try and figure out what changes I need to make for the others.  And I
+would want to be able to keep a record of what I did, step by step, so that
+I could undo stuff if it turned out to be a bad idea.  (Hey, that sounds
+like a perfect task for a version control system!  ;)&lt;/p&gt;
+&lt;p&gt;Since Mozilla uses &lt;a href="http://mercurial.selenic.com/"&gt;Mercurial&lt;/a&gt;, I didn’t
+have to deal with any of that.  I had my repository on the host machine,
+which I had cloned from the main repo, and I just cloned it into each of
+the virtual machines.  Whenever I started a VM, I pulled the latest set of
+changes from the host machine; As I fixed stuff on that platform, I
+committed to the repository on the virtual machine; And before I shut down
+the VM, I pushed my changes back to the host machine.  When I wanted to see
+which changes I made to get things working for the platform, it was easy,
+and propagating those changes to the other virtual machines was also easy.&lt;/p&gt;
+&lt;p&gt;When people talk about the advantages of distributed version control, a lot
+of the time they mention being able to still commit your changes when
+you’re on an airplane, and sharing in-progress changes with other people,
+but for people like me who do mainly self-contained stuff and don’t fly
+anywhere, supporting multi-platforms with virtual machines and still being
+able to track my changes might just be the killer feature.&lt;/p&gt;&lt;/div&gt;</description><category>hg</category><category>programming</category><category>virtual_machines</category><guid>https://weblog.latte.ca/blake/tech/thunderbird/vms.html</guid><pubDate>Mon, 14 Sep 2009 16:12:48 GMT</pubDate></item></channel></rss>

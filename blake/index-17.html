@@ -1,0 +1,720 @@
+<!DOCTYPE html>
+<html prefix="og: http://ogp.me/ns# article: http://ogp.me/ns/article# " lang="en">
+<head>
+<meta charset="utf-8">
+<base href="https://weblog.latte.ca/blake/index-17.html">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Blake (old posts, page 17) | Blog-O!</title>
+<link href="../assets/css/bootstrap.min.css" rel="stylesheet" type="text/css">
+<link href="../assets/css/rst.css" rel="stylesheet" type="text/css">
+<link href="../assets/css/code.css" rel="stylesheet" type="text/css">
+<link href="../assets/css/colorbox.css" rel="stylesheet" type="text/css">
+<link href="../assets/css/theme.css" rel="stylesheet" type="text/css">
+<meta content="#5670d4" name="theme-color">
+<link rel="alternate" type="application/rss+xml" title="RSS" href="../rss.xml">
+<link rel="canonical" href="https://weblog.latte.ca/blake/index-17.html">
+<link rel="prev" href="index-18.html" type="text/html">
+<link rel="next" href="index-16.html" type="text/html">
+<!--[if lt IE 9]><script src="../assets/js/html5.js"></script><![endif]-->
+</head>
+<body>
+<a href="#content" class="sr-only sr-only-focusable">Skip to main content</a>
+
+<!-- Menubar -->
+
+<nav class="navbar navbar-inverse navbar-static-top"><div class="container">
+<!-- This keeps the margins nice -->
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-navbar" aria-controls="bs-navbar" aria-expanded="false">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="https://weblog.latte.ca/">
+
+                <span id="blog-title">Blog-O!</span>
+            </a>
+        </div>
+<!-- /.navbar-header -->
+        <div class="collapse navbar-collapse" id="bs-navbar" aria-expanded="false">
+            <ul class="nav navbar-nav">
+<li>
+<a href="../archive.html">Archive</a>
+                </li>
+<li>
+<a href="../tags/index.html">Tags</a>
+                </li>
+<li>
+<a href="../rss.xml">RSS feed</a>
+
+                
+            </li>
+</ul>
+<!-- Custom search --><form method="get" id="search" action="//duckduckgo.com/" class="navbar-form pull-right">
+<input type="hidden" name="sites" value="https://weblog.latte.ca/"><input type="hidden" name="k8" value="#444444"><input type="hidden" name="k9" value="#D51920"><input type="hidden" name="kt" value="h"><input type="text" name="q" maxlength="255" placeholder="Search…" style="margin-top: 4px;"><input type="submit" value="DuckDuckGo Search" style="visibility: hidden;">
+</form>
+<!-- End of custom search -->
+
+
+            <ul class="nav navbar-nav navbar-right"></ul>
+</div>
+<!-- /.navbar-collapse -->
+    </div>
+<!-- /.container -->
+</nav><!-- End of Menubar --><div class="container" id="content" role="main">
+    <div class="body-content">
+        <!--Body content-->
+        <div class="row">
+            
+            
+<div class="sectionindex">
+    <header><h2><a href="index.html">Blake (old posts, page 17)</a></h2>
+    </header><div class="postindex">
+    <article class="h-entry post-text"><header><h1 class="p-name entry-title"><a href="employment/mozilla/x-tags.html" class="u-url">X-Tag: or how to cut your html in half by adding 28 lines of Javascript…</a></h1>
+        <div class="metadata">
+            <p class="byline author vcard"><span class="byline-name fn">Blake Winton</span></p>
+            <p class="dateline"><a href="employment/mozilla/x-tags.html" rel="bookmark"><time class="published dt-published" datetime="2012-07-12T21:39:32-04:00" itemprop="datePublished" title="2012-07-12 21:39">2012-07-12 21:39</time></a></p>
+                <p class="commentline">
+        
+    <a href="employment/mozilla/x-tags.html#disqus_thread" data-disqus-identifier="/blake/employment/mozilla/x-tags">Comments</a>
+
+
+        </p>
+</div>
+    </header><div class="p-summary entry-summary">
+    <div>
+<p>As a side-project, I’ve been working on a prototype which is heavily based on
+<a href="https://people.mozilla.com/~bwinton/australis-customization/customizationMode-liveDemo-i02.html">a demo page</a> from Stephen Horlander.  Now, that page is
+pretty amazing, but if you look at the source (using command-u or control-u in
+Firefox, and command-alt-u or control-alt-u in Chrome), you’ll see a lot of code
+that looks like this:</p>
+<pre class="code literal-block"><span></span><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"menuPanelButton subscribeButton"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"button"</span><span class="nt">&gt;&lt;/div&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"label"</span><span class="nt">&gt;</span>Subscribe<span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
+</pre>
+
+
+<p>and:</p>
+<pre class="code literal-block"><span></span><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"customizeToolbarItem"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"customizeToolbarItemIcon share"</span><span class="nt">&gt;&lt;/div&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"customizeToolbarItemLabel"</span><span class="nt">&gt;</span>Share<span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
+</pre>
+
+
+<p>Now, one or two of those would be fine, but when we get into more than that, the
+repetition really starts to bug me, and I think “Wouldn’t it be better if I
+could just write stuff like:</p>
+<pre class="code literal-block"><span></span><span class="nt">&lt;panel-button</span> <span class="na">type=</span><span class="s">"subscribe"</span><span class="nt">&gt;</span>Subscribe<span class="nt">&lt;/panel-button&gt;</span>
+…
+<span class="nt">&lt;toolbar-item</span> <span class="na">type=</span><span class="s">"share"</span><span class="nt">&gt;</span>Share<span class="nt">&lt;/toolbar-item&gt;</span>
+</pre>
+
+
+<p>instead?”  And it turns out I can, using a new library called
+<a href="http://mozilla.github.com/x-tag/">x-tag</a>!  The first thing I need to do is
+register the new tags I’ll be using.  That’s done with code like this:</p>
+<pre class="code literal-block"><span></span><span class="c1">// These first two lines are here because I’m using require.js, which I’ll</span>
+<span class="c1">// talk about in a future blog post…</span>
+<span class="nx">define</span><span class="p">(</span><span class="kd">function</span> <span class="p">(</span><span class="nx">require</span><span class="p">)</span> <span class="p">{</span>
+  <span class="nx">require</span><span class="p">([</span><span class="s2">"jquery"</span><span class="p">,</span> <span class="s2">"x-tag"</span><span class="p">],</span> <span class="kd">function</span><span class="p">(</span><span class="nx">$</span><span class="p">,</span> <span class="nx">xtag</span><span class="p">)</span> <span class="p">{</span>
+
+    <span class="c1">// And this is the meat of the functionality.</span>
+    <span class="c1">// First, we’ll register the new "panel-button" tag.</span>
+    <span class="nx">xtag</span><span class="p">.</span><span class="nx">register</span><span class="p">(</span><span class="s2">"panel-button"</span><span class="p">,</span> <span class="p">{</span>
+      <span class="nx">onCreate</span><span class="o">:</span> <span class="kd">function</span><span class="p">(){</span>
+        <span class="kd">var</span> <span class="nx">self</span> <span class="o">=</span> <span class="nx">$</span><span class="p">(</span><span class="k">this</span><span class="p">);</span>
+        <span class="c1">// When the tag is first seen, make the innerHTML be this stuff below.</span>
+        <span class="nx">self</span><span class="p">.</span><span class="nx">html</span><span class="p">(</span><span class="s2">"&lt;div class='menuPanelButton "</span> <span class="o">+</span> <span class="nx">self</span><span class="p">.</span><span class="nx">attr</span><span class="p">(</span><span class="s2">"type"</span><span class="p">)</span> <span class="o">+</span> <span class="s2">"'&gt;"</span> <span class="o">+</span>
+                    <span class="s2">"&lt;img src='images/button-"</span> <span class="o">+</span> <span class="nx">self</span><span class="p">.</span><span class="nx">attr</span><span class="p">(</span><span class="s2">"type"</span><span class="p">)</span> <span class="o">+</span> <span class="s2">".png'"</span> <span class="o">+</span>
+                    <span class="s2">"     class='button'&gt;"</span> <span class="o">+</span>
+                    <span class="s2">"&lt;div class='label'&gt;"</span> <span class="o">+</span> <span class="nx">self</span><span class="p">.</span><span class="nx">text</span><span class="p">()</span> <span class="o">+</span> <span class="s2">"&lt;/div&gt;"</span> <span class="o">+</span> 
+                  <span class="s2">"&lt;/div&gt;"</span><span class="p">);</span>
+      <span class="p">},</span>
+    <span class="p">});</span>
+
+    <span class="c1">// And then, we’ll register the new "toolbar-item" tag.</span>
+    <span class="nx">xtag</span><span class="p">.</span><span class="nx">register</span><span class="p">(</span><span class="s2">"toolbar-item"</span><span class="p">,</span> <span class="p">{</span>
+      <span class="nx">onCreate</span><span class="o">:</span> <span class="kd">function</span><span class="p">(){</span>
+        <span class="kd">var</span> <span class="nx">self</span> <span class="o">=</span> <span class="nx">$</span><span class="p">(</span><span class="k">this</span><span class="p">);</span>
+        <span class="c1">// We could also replace this element with the html below, but I</span>
+        <span class="c1">// haven’t done that here because I haven’t needed to yet.</span>
+        <span class="nx">self</span><span class="p">.</span><span class="nx">html</span><span class="p">(</span><span class="s2">"&lt;div class='customizeToolbarItem'&gt;"</span> <span class="o">+</span>
+                    <span class="s2">"&lt;div class='customizeToolbarItemIcon "</span> <span class="o">+</span> <span class="p">(</span><span class="nx">self</span><span class="p">.</span><span class="nx">attr</span><span class="p">(</span><span class="s2">"type"</span><span class="p">)</span> <span class="o">||</span> <span class="s2">""</span><span class="p">)</span> <span class="o">+</span> <span class="s2">"'&gt;&lt;/div&gt;"</span> <span class="o">+</span>
+                    <span class="s2">"&lt;div class='customizeToolbarItemLabel'&gt;"</span> <span class="o">+</span> <span class="nx">self</span><span class="p">.</span><span class="nx">text</span><span class="p">()</span> <span class="o">+</span> <span class="s2">"&lt;/div&gt;"</span> <span class="o">+</span>
+                  <span class="s2">"&lt;/div&gt;"</span><span class="p">);</span>
+      <span class="p">},</span>
+    <span class="p">});</span>
+
+  <span class="p">});</span>
+<span class="p">});</span>
+</pre>
+
+
+<p>The second step is to replace all the old html with the new tags.  (I did
+that, too, of course.)  And there we go.  That’s it.  In the file I was
+modifying, the combination of that and moving the javascript out into a
+separate file took the html from 275 lines down to 146 lines, and let me more
+easily change the buttons around, and add new ones.  I call that a win, and
+from now on, whenever I see large blocks of repeated html, I’m going to be
+seriously tempted to switch them to an x-tag!</p>
+<p>One caveat I will mention is that in my first attempt, I tried to use both the
+<code>content</code> property, and the <code>onCreate</code> method, and that totally didn’t work,
+since the content would be replaced by the value of the content property long
+before I had a chance to muck around with it in the onCreate.  So in the future,
+I think I’ll just jump straight into using the onCreate method, since it’s not
+that much harder.</p>
+</div>
+    </div>
+    </article><article class="h-entry post-text"><header><h1 class="p-name entry-title"><a href="employment/mozilla/jqueryui.html" class="u-url">Requiring jQuery UI.</a></h1>
+        <div class="metadata">
+            <p class="byline author vcard"><span class="byline-name fn">Blake Winton</span></p>
+            <p class="dateline"><a href="employment/mozilla/jqueryui.html" rel="bookmark"><time class="published dt-published" datetime="2012-07-08T18:14:31-04:00" itemprop="datePublished" title="2012-07-08 18:14">2012-07-08 18:14</time></a></p>
+                <p class="commentline">
+        
+    <a href="employment/mozilla/jqueryui.html#disqus_thread" data-disqus-identifier="/blake/employment/mozilla/jqueryui">Comments</a>
+
+
+        </p>
+</div>
+    </header><div class="p-summary entry-summary">
+    <div>
+<p>Yesterday afternoon, I watched <a href="https://air.mozilla.org/apps-templates-dev-ecosystem-tools/">a video</a> from <a href="https://twitter.com/jlongster">James Long</a> about <a href="https://github.com/mozilla/mortar">Mortar</a>, which is a template for making HTML 5 Open Web Apps.  Now, coincidentally, I’m starting a new project (in my spare time, obviously, since it’s a Sunday), and while it’s not an Open Web App, I saw no reason not to use the <a href="https://github.com/volojs/volo">same</a> <a href="http://requirejs.org/">tools</a> they were using.</p>
+<p>Of course, since nothing’s easy, I ran into a problem pretty quickly.  My problem was that every time I tried to <code>require("jquery-ui");</code>, I got an error of “ReferenceError: jQuery is not defined”.  There wasn’t a lot of information about how to fix it, so after most of an afternoon mucking around, I finally came up with something that seems to work, and thought I would post it.</p>
+<ol>
+<li>Go into your <code>www/js/lib</code> directory.</li>
+<li><code>curl -O https://ajax.googleapis.com/ajax/libs/jqueryui/1.8.18/jquery-ui.js</code></li>
+<li>Edit the jquery-ui.js file.  At the top add the line <code>define(["jquery"], function (jQuery) {</code>, and at the bottom, add the line <code>});</code>.</li>
+<li>That’s it.  From there you should be good to go!</li>
+</ol>
+<p>Now, I suspect there’s a better way to do this, and hopefully <a href="https://twitter.com/jrburke">James</a> or <a href="https://twitter.com/clarkbw">Bryan</a> will jump in the comments and tell me what it is, but for now, at least this works.</p>
+</div>
+    </div>
+    </article><article class="h-entry post-text"><header><h1 class="p-name entry-title"><a href="tech/thunderbird/configuringservers.html" class="u-url">Adventures in Mail Servers (or, how I wasted my Sunday afternoon)</a></h1>
+        <div class="metadata">
+            <p class="byline author vcard"><span class="byline-name fn">Blake Winton</span></p>
+            <p class="dateline"><a href="tech/thunderbird/configuringservers.html" rel="bookmark"><time class="published dt-published" datetime="2012-03-25T21:52:11-04:00" itemprop="datePublished" title="2012-03-25 21:52">2012-03-25 21:52</time></a></p>
+                <p class="commentline">
+        
+    <a href="tech/thunderbird/configuringservers.html#disqus_thread" data-disqus-identifier="/blake/tech/thunderbird/configuringservers">Comments</a>
+
+
+        </p>
+</div>
+    </header><div class="p-summary entry-summary">
+    <div>
+<p>I think what I want is pretty simple, or at least, reasonably common.
+I’m just looking for a couple of programs.</p>
+<p>An SMTP server which will accept mail for the accounts at latte.ca, and deliver
+it to a Maildir of my choosing, and let me send mail through it if, and only if,
+I’ve logged in with the password to that account.  (Being able to define a few
+aliases would also be nice.)</p>
+<p>And an IMAP server which will expose the previously-mentioned Maildir, after
+I’ve logged in with the password to that account.</p>
+<p>And yet, every time I try to set that up, something completely falls over for no
+particularly understandable reason, and I end up wasting an afternoon (or more)
+of my life.  I had hoped this time would be different, since I decided not to
+install and configure everything myself, but instead bought a copy of OS X Lion
+Server which was supposed to do all the hard work for me.  I’m not going to
+enumerate all the problems I ran into, but I will say that I still haven’t
+managed to get there.  I’m just done for tonight.</p>
+<p>Anyways, if anyone reading this has a working setup that meets the requirements
+(and the added requirement of needing to use Dovecot and Postfix, since those
+are what’s installed), I would love to get a copy of their config files.  And in
+the meantime, I might seriously look into getting a refund for Lion Server,
+given how badly it’s failed me.  :P</p>
+</div>
+    </div>
+    </article><article class="h-entry post-text"><header><h1 class="p-name entry-title"><a href="tech/thunderbird/buildingonlion.html" class="u-url">Building Thunderbird on OS X Lion (10.7) and XCode 4.2</a></h1>
+        <div class="metadata">
+            <p class="byline author vcard"><span class="byline-name fn">Blake Winton</span></p>
+            <p class="dateline"><a href="tech/thunderbird/buildingonlion.html" rel="bookmark"><time class="published dt-published" datetime="2012-03-06T10:34:10-05:00" itemprop="datePublished" title="2012-03-06 10:34">2012-03-06 10:34</time></a></p>
+                <p class="commentline">
+        
+    <a href="tech/thunderbird/buildingonlion.html#disqus_thread" data-disqus-identifier="/blake/tech/thunderbird/buildingonlion">Comments</a>
+
+
+        </p>
+</div>
+    </header><div class="p-summary entry-summary">
+    <div>
+<p>A few people recently asked me about building Thunderbird on the latest version
+of Mac OS X.  Since I have it working, and to give myself a place to point to
+the next time they ask, I figured it would be a good idea to blog about it.</p>
+<p>So, here’s my <code>.mozconfig</code>.</p>
+<table class="codehilitetable"><tr>
+<td class="linenos"><div class="linenodiv"><pre> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29</pre></div></td>
+<td class="code">
+<pre class="code literal-block"><span></span><span class="c1"># Debug .mozconfig</span>
+mk_add_options <span class="nv">MOZ_MAKE_FLAGS</span><span class="o">=</span>-j4
+mk_add_options <span class="nv">MOZ_OBJDIR</span><span class="o">=</span>@TOPSRCDIR@/../objdir-<span class="sb">`</span>basename <span class="se">\`</span>pwd<span class="se">\`</span><span class="sb">`</span>-<span class="sb">`</span>hg branch<span class="sb">`</span>
+<span class="c1"># mk_add_options AUTOCONF=autoconf213</span>
+ac_add_options --enable-application<span class="o">=</span>mail
+ac_add_options --enable-extensions<span class="o">=</span>default,inspector
+ac_add_options --enable-inspector-apis
+
+<span class="c1"># Compilation options</span>
+ac_add_options --disable-optimize
+ac_add_options --enable-debug
+ac_add_options --enable-tests
+ac_add_options --disable-jemalloc
+<span class="c1">#ac_add_options --enable-trace-malloc</span>
+ac_add_options --enable-chrome-format<span class="o">=</span>symlink
+
+ac_add_options --with-macos-sdk<span class="o">=</span>/Developer/SDKs/MacOSX10.7.sdk
+ac_add_options --enable-macos-target<span class="o">=</span>10.7
+
+<span class="c1"># For NSS symbols</span>
+<span class="nb">export</span> <span class="nv">MOZ_DEBUG_SYMBOLS</span><span class="o">=</span>1
+<span class="c1">#ac_add_options --enable-debug-symbols="-gdwarf-2"</span>
+
+<span class="c1">#Use ccache</span>
+<span class="c1">#ac_add_options --with-ccache=/usr/local/bin/ccache</span>
+
+<span class="c1"># We don't have GCC anymore, since XCode 4.2, so use clang instead.</span>
+<span class="nv">CC</span><span class="o">=</span>clang
+<span class="nv">CXX</span><span class="o">=</span>clang++
+</pre>
+</td>
+</tr></table>
+<p>There are probably a bunch of things I don’t really need in there, so if anyone
+wants to take it, and cut it down to the minimal set, I would definitely
+appreciate it.  But in the meantime, this works for me, and will probably work
+for you, too.</p>
+</div>
+    </div>
+    </article><article class="h-entry post-text"><header><h1 class="p-name entry-title"><a href="random/thirdcircle.html" class="u-url">What angle would you cut a circle at to divide it into thirds?</a></h1>
+        <div class="metadata">
+            <p class="byline author vcard"><span class="byline-name fn">Blake Winton</span></p>
+            <p class="dateline"><a href="random/thirdcircle.html" rel="bookmark"><time class="published dt-published" datetime="2012-01-29T22:29:18-05:00" itemprop="datePublished" title="2012-01-29 22:29">2012-01-29 22:29</time></a></p>
+                <p class="commentline">
+        
+    <a href="random/thirdcircle.html#disqus_thread" data-disqus-identifier="/blake/random/thirdcircle">Comments</a>
+
+
+        </p>
+</div>
+    </header><div class="p-summary entry-summary">
+    <div>
+<p><img src="../images/blake/ThirdCircleProblem.png" align="right">
+The other day I was reading <a href="https://twitter.com/neiltyson/status/162249772806316032">a
+tweet</a> from Neil
+deGrasse Tyson, and it got me thinking…  If you were going to cut a circle into
+three equal pieces using only two cuts, what would the angle to cut them be?
+(Θ in the diagram over on the right side there.)  So I <a href="https://twitter.com/bwinton/status/162250328841007105">asked on
+Twitter</a>, and eventually
+got a reply.  This is my attempt to reconstruct the reasoning behind the
+answer.</p>
+<p><img src="../images/blake/ThirdCircleWorking.png" align="left">
+The easiest way to figure this out, I believe, is to cut the circle in half,
+and then figure out what line divides the semicircle into a 2/3rds to 1/3rd
+ratio.  So let’s do that, and label the points A, B, C, and O (for the origin),
+as shown on the left.  We’ll also label the angle AOB as ɣ, because we'll be
+using it a little more later.</p>
+<p>We know from <a href="http://www.mathsisfun.com/geometry/circle-sector-segment.html">this
+page</a> that the
+area of a segment is r² × (ɣ - sin ɣ) / 2, and we want the segment formed by
+the line AB to contain 1/3rd of the total circle (or 1/3 × π × r²).  Putting
+those together gives us the equation:<br>
+r² × (ɣ - sin ɣ) / 2 = π × r² / 3<br>
+multiplying both sides by 2, and diving both sides by r², we get<br>
+(ɣ - sin ɣ) = 2 × π / 3<br>
+Now all we have to do is simply <a href="http://www.wolframalpha.com/input/?i=%28x+-+sin+x%29+%3D+2+*+pi+%2F+3">solve for
+ɣ</a>
+to get:<br>
+ɣ = 2.60533<br></p>
+<p>That means that the angle BOC is π - ɣ, or 0.53626 radians (or 30.7º).  Now,
+<a href="https://en.wikipedia.org/wiki/Inscribed_angle">the inscribed angle is half the central
+angle</a>, so in theory, to get the
+angle BAD, I should divide that by two, but then I’ll just need to multiply it
+by two again to account for the other half of the circle, so let’s skip all
+that, and just call it 30.7º.</p>
+</div>
+    </div>
+    </article><article class="h-entry post-text"><header><h1 class="p-name entry-title"><a href="tech/thunderbird/gitoutgoing.html" class="u-url">What the heck am I pushing, anyways?</a></h1>
+        <div class="metadata">
+            <p class="byline author vcard"><span class="byline-name fn">Blake Winton</span></p>
+            <p class="dateline"><a href="tech/thunderbird/gitoutgoing.html" rel="bookmark"><time class="published dt-published" datetime="2011-12-08T13:04:17-05:00" itemprop="datePublished" title="2011-12-08 13:04">2011-12-08 13:04</time></a></p>
+                <p class="commentline">
+        
+    <a href="tech/thunderbird/gitoutgoing.html#disqus_thread" data-disqus-identifier="/blake/tech/thunderbird/gitoutgoing">Comments</a>
+
+
+        </p>
+</div>
+    </header><div class="p-summary entry-summary">
+    <div>
+<p>Much of the new work I’m doing these days is being stored in git
+repositories.  Now, I’m not the biggest fan of git, particularly its UI,
+but the advantages of <a href="https://github.com/">GitHub</a> and <a href="http://gitx.frim.nl/">GitX</a> are hard to ignore.  Despite that, I still really
+missed being able to type <code>hg out</code> to see which patches I would be pushing,
+so, after a short chat with (and demo from) <a href="http://blog.mozilla.com/bhearsum/">Ben</a>, I came up with the following:</p>
+<p>Somewhere in your path, add a file named <code>git-outgoing</code> which contains the
+following contents:</p>
+<pre class="code literal-block"><span></span># !/bin/sh
+# Uh, there shouldn’t be a space between the # and ! in the previous
+# line, but the highlighter I’m using seems to require it…
+git push --dry-run $1 2&gt;&amp;1 | awk '/^ / {print $1}' | xargs git log
+</pre>
+
+
+<p>(Make sure it’s executable by whomever needs to use it!)</p>
+<p>Then, in your git config, add the following section:</p>
+<pre class="code literal-block"><span></span><span class="k">[alias]</span>
+    <span class="na">out</span> <span class="o">=</span> <span class="s">outgoing</span>
+</pre>
+
+
+<p>And finally, you should be able to type <code>git out</code>, and see something like:</p>
+<pre class="code literal-block"><span></span>commit 7d4c9b89a4663a07bed030669bae2d3c73ec78dc
+Author: Blake Winton &lt;bwinton@latte.ca&gt;
+Date:   Thu Dec 8 12:22:41 2011 -0500
+
+    Blear 2
+
+commit a4e8c6627bc26d7371fb2614a1c47aaf694957bd
+Author: Blake Winton &lt;bwinton@latte.ca&gt;
+Date:   Thu Dec 8 12:18:04 2011 -0500
+
+    Bleah.
+</pre>
+
+
+<p>So, hopefully some of the rest of you will find this helpful, too, and if you know of a better way to do this, <em>please</em> let me know in the comments!</p>
+</div>
+    </div>
+    </article><article class="h-entry post-text"><header><h1 class="p-name entry-title"><a href="tech/thunderbird/uifutures.html" class="u-url">Thunderbird’s UI Directions.</a></h1>
+        <div class="metadata">
+            <p class="byline author vcard"><span class="byline-name fn">Blake Winton</span></p>
+            <p class="dateline"><a href="tech/thunderbird/uifutures.html" rel="bookmark"><time class="published dt-published" datetime="2011-09-27T11:02:38-04:00" itemprop="datePublished" title="2011-09-27 11:02">2011-09-27 11:02</time></a></p>
+                <p class="commentline">
+        
+    <a href="tech/thunderbird/uifutures.html#disqus_thread" data-disqus-identifier="/blake/tech/thunderbird/uifutures">Comments</a>
+
+
+        </p>
+</div>
+    </header><div class="p-summary entry-summary">
+    <div>
+<p><link rel="stylesheet" type="text/css" href="tech/thunderbird/bugzilla.css"><script type="text/javascript" src="tech/thunderbird/bugzilla.js"></script></p>
+<p>On a <a href="http://breakingtheegg.tumblr.com/post/10525122364/cooking-up-some-tabs-on-top-for-thunderbird">previous post</a> in a different blog, some commenters were asking us if we were
+considering doing things that we have planned to do for a while now, and
+that led me to realize that I haven’t been communicating the future of
+Thunderbird’s UI nearly well enough.  I mainly blame it on my trying to do
+too many other things, and thus failing to cover all the bases.  So, having
+said all that, here is the list of things, in no particular order, that I
+would like to see worked on in the next few versions of Thunderbird.  But
+first, I’ld like to say a little bit about why I want them.</p>
+<p>I recently heard about someone who said “Thunderbird looks like iTunes”,
+and while that’s rather complimentary given the amount of time Apple puts
+into making things look good, it doesn’t really lead me to believe that
+people can pick our product out of a screenshot.  And so one of the overall
+goals is to make Thunderbird iconic.  You can always tell when a screenshot
+is of Apple mail, based on the layout and the lack of colour, and Firefox
+is similarly immediately recognizable because of the big circular back
+button and smaller rectangular forward button.  Similarly, I’m hoping to
+have Thunderbird look different to other apps, while still fitting in on
+the platform, and maintaining a little consistency with Firefox.  Of
+course, that’s not the only goal, nor even the main goal.  My main idea for
+Thunderbird is to let you focus on the content that’s important to you, and
+not be distracted by things you don’t care about.  Hopefully most of the
+changes I talk about here will help that, and as a side benefit also help
+to give us a more unique style.</p>
+<ul>
+<li>
+<p>A simple thing that will make the product nicer to use is just to line
+  things up.  We’re all over the place, and it should be fairly simple to
+  make this better.  There are a couple of bugs that are related to this,
+  and I suspect we could file a few more for various other parts.
+  </p>
+<div id="bug-667235"></div>
+  <div id="bug-689543"></div>
+</li>
+<li>
+<p>We want to put the tabs on top, because they let us put the compose and
+  address book into tabs, while still having the appropriate toolbars.  (As
+  well, having everything be a tab makes the application more consistent,
+  as described in the next point.)
+  </p>
+<div id="bug-644169"></div>
+  <div id="bug-449299"></div>
+  <div id="bug-457270"></div>
+</li>
+<li>
+<p>This leads into removing the standalone Compose and Address Book windows.
+  You’ll still be able to open a window for those functions, but it will
+  just be a regular window with a Compose or Address Book tab.  (No bugs
+  for this yet.  Removals are sensitive things, and we want to get the
+  replacement UI working well before we remove the existing UI.)</p>
+</li>
+<li>
+<p>We really want the Thunderbird button, so that we can hide the menus, and
+  have less Glass on Windows, and make the most common actions easier to
+  find and use.
+  </p>
+<div id="bug-650170"></div>
+</li>
+<li>
+<p>But, to add that button, we first need to see what the most common menu
+  items people use are, therefore we need Test Pilot.
+  </p>
+<div id="bug-679513"></div>
+</li>
+<li>
+<p>We would like to add a HomeTab, to give people a personalized place to
+  land when they start Thunderbird, or open a new window.
+  </p>
+<div id="bug-605652"></div>
+</li>
+<li>
+<p>We would like to merge the Gloda bar and Quick Filter bar, cause duh.
+  </p>
+<div id="bug-667246"></div>
+</li>
+<li>
+<p>Having two different settings locations is too confusing for me, let
+  alone people who don’t care about the details of the product. We want to
+  merge those into a single searchable place for all the settings, a la Mac
+  System Prefs.
+  </p>
+<div id="bug-509397"></div>
+</li>
+<li>
+<p>This next change is more a small, personal thing, rather than part of a
+  grand plan.  It was originally suggested by <a href="http://beltzner.ca/mike/">Mike Beltzner</a>, and while I’ve had some time to work on it, I
+  haven’t had enough to push it through to completion.  Basically, I’ld
+  like to be able to order my email by date, while grouping it by subject.
+  (This is different than threading, because I don’t care about which
+  replies are to which messages.  I just want a single group for the
+  subject, with the messages ordered by date within that group, and the
+  groups ordered by the date of the most recent message.)  There’s no bug
+  for this yet, but as mentioned, I started to write <a href="http://hg.mozilla.org/users/bwinton_latte.ca/bmode/file/65d446ca2d54">an extension</a>,
+  before hitting some annoying bugs that made it hard.</p>
+</li>
+<li>
+<p>Compactify the header.  It’s really too big.  Well, that’s a bit of a
+  lie.  What I really mean here is that we should move the buttons and
+  their toolbar out of the header, to float just above it.  This would
+  allow people to easily turn them off (by removing the entire toolbar),
+  and for those of us who like to keep them, it would make them more
+  visually distinct.  As an added bonus, in vertical mode, we could merge
+  that toolbar with the other toolbars, to get something like <a href="http://www.flickr.com/photos/asadotzler/6137086055/">the
+  pictures</a> of what
+  Thunderbird could look like posted by <a href="http://weblogs.mozillazine.org/asa/">Asa Dotzler</a>.</p>
+</li>
+<li>
+<p>And finally, I think we should remove the Migration Assistant.  It was
+  very useful in the 2.0⇒3.0 transition, but it’s been less and less useful
+  as time goes on, and as people have moved more and more onto Thunderbird
+  3, and 4, and 5…  (No bug for this one either, again, because removals
+  are sensitive things.)</p>
+</li>
+</ul>
+<p>See <a href="tech/thunderbird/uifutures.html" class="all-bugs">all the bugs</a> in one big list.</p>
+<p><small>Many thank-yous to <a href="http://blog.mozilla.com/faaborg/">Alex Faaborg</a>, and <a href="http://www.areweprettyyet.com/">areweprettyyet</a> for the code to link the bugs, and the
+basis of the styling to make them stand out.</small></p>
+</div>
+    </div>
+    </article><article class="h-entry post-text"><header><h1 class="p-name entry-title"><a href="tech/thunderbird/updates.html" class="u-url">A Proposal for Updates with Add-ons.</a></h1>
+        <div class="metadata">
+            <p class="byline author vcard"><span class="byline-name fn">Blake Winton</span></p>
+            <p class="dateline"><a href="tech/thunderbird/updates.html" rel="bookmark"><time class="published dt-published" datetime="2011-09-08T14:49:44-04:00" itemprop="datePublished" title="2011-09-08 14:49">2011-09-08 14:49</time></a></p>
+                <p class="commentline">
+        
+    <a href="tech/thunderbird/updates.html#disqus_thread" data-disqus-identifier="/blake/tech/thunderbird/updates">Comments</a>
+
+
+        </p>
+</div>
+    </header><div class="p-summary entry-summary">
+    <div>
+<p>Add-ons are an important part of many Mozilla products, and many people
+have noticed that they’ve taken a hit as we’ve switched to the Rapid
+Release process.  To help users have a little more control over how well
+their Firefox works, I would like to propose the following slight
+modification to the automatic Update process:</p>
+<p>It all starts when Firefox (and Thunderbird) notice an update is available.</p>
+<p>We immediately check the user’s add-ons to see if they are compatible, or
+if there are compatible versions we haven’t downloaded yet.</p>
+<p>If all the add-ons are compatible (or will be made so at the next
+download), we show the NoAddons dialog:</p>
+<p><img alt="NoAddons dialog" src="../images/blake/updates/NoAddons.png"></p>
+<p>It‘s the same as the current Firefox or Thunderbird update dialog, and as
+you would expect, the “Ask Later” and “Update Firefox” buttons do the same
+things that they do now.</p>
+<p>On the other hand, if there <em>are</em> in-compatible add-ons, we show the Addons
+dialog:</p>
+<p><img alt="Addons dialog" src="../images/blake/updates/Addons.png"></p>
+<p>As you can see, we let the user know which add-ons are incompatible, and
+give the user an extra button at the bottom to do something different.</p>
+<p>The new “Update when my add-ons work” button (wording to be clarified
+later) will check the add-ons periodically, and automatically update
+Firefox when all the add-ons are compatible.  If the add-ons aren’t
+compatible after a week (period of time to be configurable), the user will
+be shown this dialog again, with the (hopefully smaller) list of
+incompatible add-ons.</p>
+<p>Showing the user which add-ons are incompatible will let them decide
+whether the add-ons are important enough to not upgrade, or whether they
+can live with the (hopefully short) period of reduced functionality.</p>
+<p>As always, comments welcome, but keep them polite or they’ll be deleted.</p>
+</div>
+    </div>
+    </article><article class="h-entry post-text"><header><h1 class="p-name entry-title"><a href="tech/thunderbird/makingchoices.html" class="u-url">Customization and choice.</a></h1>
+        <div class="metadata">
+            <p class="byline author vcard"><span class="byline-name fn">Blake Winton</span></p>
+            <p class="dateline"><a href="tech/thunderbird/makingchoices.html" rel="bookmark"><time class="published dt-published" datetime="2011-06-15T10:13:58-04:00" itemprop="datePublished" title="2011-06-15 10:13">2011-06-15 10:13</time></a></p>
+                <p class="commentline">
+        
+    <a href="tech/thunderbird/makingchoices.html#disqus_thread" data-disqus-identifier="/blake/tech/thunderbird/makingchoices">Comments</a>
+
+
+        </p>
+</div>
+    </header><div class="p-summary entry-summary">
+    <div>
+<p>A friend of mine recently
+<a href="https://twitter.com/eccentricflower/status/80817396696358913">said</a>:</p>
+<blockquote>
+<p>EVERY behavior aspect of EVERY application should be user-settable if
+the user is prepared to drill down far enough. No exceptions.
+Even if the user will be shooting his own foot by messing with it.</p>
+</blockquote>
+<p>I, obviously, disagree with him, and wanted to explain why in a few more
+characters than Twitter would allow.</p>
+<p>While giving the user complete control over every aspect of an application
+seems like a good idea, there are two slightly-hidden downsides to it.</p>
+<p>First, every choice you give the user doubles the amount of testing you
+have to do.  (Okay, it doesn’t exactly double it, but it certainly adds a
+testing, maintenance, and support burden.)  Is it a responsible use of your
+time to implement these options if less than 1% of your users will ever
+change them (and risk shooting their own feet), or would it be better for
+everyone to implement a feature that more people would use?</p>
+<p>Second, Emacs notwithstanding, you’ll never get to a great text editor by
+customizing a mail reader.  The whole Unix (and iOS, oddly) philosophy is
+to write each app to do one thing, and do it well.  Not to do a whole bunch
+of optional things.  And if you’re doing only one thing, presenting an
+option to the user to do it or not doesn’t make a lot of sense.</p>
+<p>And finally, because I can’t count, if you offer people too much choice, it
+imposes a cognitive burden on them which can lead to their making no
+choices at all, or at least not making them any happier than when they had
+fewer choices.</p>
+<p>To bring this back to the product I’m working on, we are going out of our
+way to make Thunderbird more usable and part of that is simplifying it by
+offering fewer, more meaningful choices.</p>
+</div>
+    </div>
+    </article><article class="h-entry post-text"><header><h1 class="p-name entry-title"><a href="tech/thunderbird/reviewerchooser.html" class="u-url">Who should review my change?</a></h1>
+        <div class="metadata">
+            <p class="byline author vcard"><span class="byline-name fn">Blake Winton</span></p>
+            <p class="dateline"><a href="tech/thunderbird/reviewerchooser.html" rel="bookmark"><time class="published dt-published" datetime="2011-06-01T20:13:37-04:00" itemprop="datePublished" title="2011-06-01 20:13">2011-06-01 20:13</time></a></p>
+                <p class="commentline">
+        
+    <a href="tech/thunderbird/reviewerchooser.html#disqus_thread" data-disqus-identifier="/blake/tech/thunderbird/reviewerchooser">Comments</a>
+
+
+        </p>
+</div>
+    </header><div class="p-summary entry-summary">
+    <div>
+<p>One of the big questions I had when I started writing patches was who I
+should ask to review them.  Now that I’ve been in the community for a
+while, I’ve got a much better sense of who I should be talking to for the
+type of things I’m likely to write, but there are still times when I want
+to make a change in a part of the code that I haven’t touched before, and
+I’m not sure who to ask.  In those cases, I usually fall back to a fairly
+simple (if non-obvious) set of steps to try and figure out who to pick.</p>
+<ol>
+<li>Get the list of files I’ve changed.</li>
+<li>Get the hg log for those files.</li>
+<li>Check through the log for “r=”, and “sr=”.</li>
+</ol>
+<p>Of course, that’s a fairly easy set of steps to automate, and so I present
+my first cut at <a href="https://github.com/bwinton/Mozilla-Tools/blob/master/getReviewer.py">the automated reviewer chooser</a>!</p>
+<p>Of course, there are a lot of things I’ld like to do with this, such as:</p>
+<ul>
+<li>Improving the documentation.</li>
+<li>Checking to see how well this script would have done on previous commits.</li>
+<li>Taking into account the length of the queues for the reviewers.</li>
+<li>Adding some sort of recent-ness calculations.</li>
+</ul>
+<p>But I think that this tool is useful enough in its current state that
+releasing it and getting feedback on what to actually work on would be a
+win.</p>
+<p>To use it, be in a mercurial source repo, and type <code>getReviewer.py</code> to get
+a list of suggested reviewers for the current differences, or
+<code>getReviewer.py temp.diff</code> or <code>getReviewer.py
+https://bugzilla.mozilla.org/attachment.cgi\?id\=536017</code> to specify a
+different set of changes.</p>
+</div>
+    </div>
+    </article>
+</div>
+
+        <nav class="postindexpager"><ul class="pager">
+<li class="previous">
+                <a href="index-18.html" rel="prev">Newer posts</a>
+            </li>
+            <li class="next">
+                <a href="index-16.html" rel="next">Older posts</a>
+            </li>
+        </ul></nav><script>var disqus_shortname="latteblog";(function(){var a=document.createElement("script");a.async=true;a.src="https://"+disqus_shortname+".disqus.com/count.js";(document.getElementsByTagName("head")[0]||document.getElementsByTagName("body")[0]).appendChild(a)}());</script>
+</div>
+
+        </div>
+        <!--End of body content-->
+
+        <footer id="footer"><div style="margin-bottom: 12px">Contents © 2016         <a href="mailto:bwinton@latte.ca">Blake Winton</a>
+<a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/2.5/">
+<img alt="Creative Commons License BY-NC-SA" style="border-width: 0; vertical-align: bottom" src="https://licensebuttons.net/l/by-nc-sa/2.5/88x31.png"></a>
+</div>
+            
+        </footer>
+</div>
+</div>
+
+
+            <script src="../assets/js/jquery.min.js"></script><script src="../assets/js/bootstrap.min.js"></script><script src="../assets/js/moment-with-locales.min.js"></script><script src="../assets/js/fancydates.js"></script><script src="../assets/js/jquery.colorbox-min.js"></script><script>$('a.image-reference:not(.islink) img:not(.islink)').parent().colorbox({rel:"gal",maxWidth:"100%",maxHeight:"100%",scalePhotos:true});</script><!-- fancy dates --><script>
+    moment.locale("en");
+    fancydates(0, "YYYY-MM-DD HH:mm");
+    </script><!-- end fancy dates --><script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-5805429-2', 'auto');
+  ga('send', 'pageview');
+
+</script>
+</body>
+</html>

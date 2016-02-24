@@ -1,0 +1,4 @@
+Sitemap: https://weblog.latte.ca/sitemapindex.xml
+
+User-Agent: *
+Host: weblog.latte.ca

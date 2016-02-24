@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet type="text/xsl" href="../assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Blog-O! (ucosp)</title><link>https://weblog.latte.ca/</link><description></description><atom:link type="application/rss+xml" href="https://weblog.latte.ca/tags/ucosp.xml" rel="self"></atom:link><language>en</language><lastBuildDate>Wed, 24 Feb 2016 17:07:38 GMT</lastBuildDate><generator>https://getnikola.com/</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Programming Thunderbird in Visual Studio.</title><link>https://weblog.latte.ca/blake/tech/thunderbird/ucosp/weixian-visualstudio.html</link><dc:creator>Blake Winton</dc:creator><description>&lt;div&gt;&lt;p&gt;For your reading pleasure this week, we have a guest post from &lt;a href="mailto:wxwoo@uwaterloo.ca"&gt;Wei Xian
+Woo&lt;/a&gt;.  Wei is a student working on
+&lt;a href="http://www.mozillamessaging.com/"&gt;Thunderbird&lt;/a&gt; as part of
+&lt;a href="http://ucosp.wordpress.com/"&gt;UCOSP&lt;/a&gt;, and has just had &lt;a href="https://bugzilla.mozilla.org/show_bug.cgi?id=408338"&gt;his first
+bug&lt;/a&gt; marked as
+FIXED.  Anyways, that’s enough out of me.  Here’s Wei’s post:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;h4&gt;Programming Thunderbird in Visual Studio.&lt;/h4&gt;
+&lt;p&gt;During this term’s Undergraduate Capstone Open Source Projects (UCOSP)
+Code Sprint held at the University of Toronto in January, I wrote a
+simple Python script for the Thunderbird team to make setting up a
+Visual C++ project for Thunderbird slightly easier for those of us
+working on Windows. Blake suggested making this script public so others
+could benefit from it, so here it is! The script is generic enough to be
+used for any project, not just Thunderbird. Feel free to use it and make
+modifications as you see fit :)&lt;/p&gt;
+&lt;h4&gt;Using the script to create a Visual C++ project for Thunderbird&lt;/h4&gt;
+&lt;p&gt;Create an empty Visual C++ project in Visual Studio.&lt;/p&gt;
+&lt;p&gt;From the command prompt launched by mozilla-build\start-msvc9.bat, do:&lt;/p&gt;
+&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;python /path/to/refreshvcproj.py
+--vcproj=/path/to/thunderbird.vcproj --dir=/path/to/gecko-sdk
+--dir=/path/to/mozilla/comm-central/mozilla/xpcom
+--dir=/path/to/mozilla/comm-central/mail
+&lt;/pre&gt;
+
+
+&lt;p&gt;All files in the specified directories will be included in the project.
+I suggest including only the directories you will be working with.&lt;/p&gt;
+&lt;h4&gt;Configuring the project for debugging:&lt;/h4&gt;
+&lt;p&gt;Open the VC++ project file in Visual Studio, and then open the project's
+Properties.&lt;/p&gt;
+&lt;p&gt;Go to: Configuration Properties -&amp;gt; Debugging.&lt;/p&gt;
+&lt;p&gt;Set Command to \path\to\objdir\mozilla\dist\bin\thunderbird.exe&lt;/p&gt;
+&lt;p&gt;Set Environment to XPCOM_DEBUG_BREAK=warn&lt;/p&gt;
+&lt;h4&gt;And… you’re done!&lt;/h4&gt;
+&lt;p&gt;For better C++ IntelliSense, you might also want to consider getting
+Visual Assist X (an add-on for VS).&lt;/p&gt;
+&lt;h4&gt;Happy coding!&lt;/h4&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;And you can find the script &lt;a href="https://weblog.latte.ca/static/blake/refreshvcproj.py"&gt;over here&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Thanks, Wei!&lt;/p&gt;&lt;/div&gt;</description><category>mozilla</category><category>thunderbird</category><category>ucosp</category><guid>https://weblog.latte.ca/blake/tech/thunderbird/ucosp/weixian-visualstudio.html</guid><pubDate>Tue, 30 Mar 2010 14:11:05 GMT</pubDate></item></channel></rss>

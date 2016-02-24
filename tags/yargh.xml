@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet type="text/xsl" href="../assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Blog-O! (yargh)</title><link>https://weblog.latte.ca/</link><description></description><atom:link type="application/rss+xml" href="https://weblog.latte.ca/tags/yargh.xml" rel="self"></atom:link><language>en</language><lastBuildDate>Wed, 24 Feb 2016 17:07:35 GMT</lastBuildDate><generator>https://getnikola.com/</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Yearrrghhh!</title><link>https://weblog.latte.ca/blake/tech/weblog/yargh.html</link><dc:creator>Blake Winton</dc:creator><description>&lt;p&gt;So, in an attempt to fix Katherine's bug, I've managed to move all
+the entries to a couple of days ago.  I moved back the ones that were
+in my Bloglines cache, but I don't have the correct dates for prior
+ones, so I'm kind of hosed until I look in my backups.  Unless any of
+you happen to have them in your caches, of course...&lt;/p&gt;
+
+&lt;p&gt;Also, yargh.&lt;/p&gt;</description><category>idiocy</category><category>why_oh_why</category><category>yargh</category><guid>https://weblog.latte.ca/blake/tech/weblog/yargh.html</guid><pubDate>Wed, 09 May 2007 21:55:52 GMT</pubDate></item></channel></rss>

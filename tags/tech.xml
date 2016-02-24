@@ -1,0 +1,268 @@
+<?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet type="text/xsl" href="../assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Blog-O! (tech)</title><link>https://weblog.latte.ca/</link><description></description><atom:link type="application/rss+xml" href="https://weblog.latte.ca/tags/tech.xml" rel="self"></atom:link><language>en</language><lastBuildDate>Wed, 24 Feb 2016 17:07:38 GMT</lastBuildDate><generator>https://getnikola.com/</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>DemoCamp 5!</title><link>https://weblog.latte.ca/blake/tech/democamp5.html</link><dc:creator>Blake Winton</dc:creator><description>&lt;p&gt;I took a few notes at &lt;a href="http://barcamp.org/TorCampDemoCamp5"&gt;DemoCamp 5&lt;/a&gt; last night, and thought I'ld throw them up on the
+web, in case anyone found them useful.&lt;/p&gt;
+
+&lt;p&gt;First, some notes on giving a good demo.&lt;br&gt;
+In no particular order:
+&lt;/p&gt;&lt;ul&gt;&lt;li&gt;Set your screensaver's timeout to something long, so that you
+    aren't continually hitting the spacebar/moving the mouse.&lt;/li&gt;
+  &lt;li&gt;Repeat the questions, so that people in the back can hear what
+    was being asked.&lt;/li&gt;
+  &lt;li&gt;Log on before connecting the video.  I forget why, other than it
+    looked a little more professional, perhaps.  Maybe someone forgot
+    their password, or mistyped their username.&lt;/li&gt;
+  &lt;li&gt;Have someone type for you, so that you can concentrate on what
+    you're saying, instead of trying to come up with fake data.&lt;/li&gt;
+  &lt;li&gt;When the demo's run out of time, don't try to fit in just one
+    more thing...  Unless you have someone who can continue typing
+    while you're answering questions.  ;)&lt;/li&gt;
+&lt;/ul&gt;&lt;p&gt;The next thing that struck me as sort of odd was that all the
+presentations were web-based.  Isn't anyone working on a regular
+desktop program anymore?&lt;/p&gt;
+
+&lt;p&gt;Finally, I also had some specific comments for &lt;a href="http://blogmatrix.blogmatrix.com/"&gt;BlogMatrix&lt;/a&gt;, which I
+posted as a &lt;a href="http://davidjanes.com/cgi-bin/xyx999.cgi?entry_id=3619"&gt;comment&lt;/a&gt; on &lt;a href="http://blog.davidjanes.com/"&gt;David Janes'
+blog&lt;/a&gt;.  (I've chatted with David over email a while ago, so I was
+paying particular attention to his demo.)&lt;/p&gt;
+
+&lt;p&gt;In other DemoCamp news, I got a &lt;a href="http://pyre.third-bit.com/blog/archives/000467.html"&gt;shout-out&lt;/a&gt; from &lt;a href="http://pyre.third-bit.com/blog/"&gt;Greg Wilson&lt;/a&gt;, which was very
+gratifying, but I'm afraid I might have given him slightly the wrong
+impression.  I suppose I do think that educators have a responsiblity
+to prepare students for the real world, but I don't think that it's
+the University-level educators who have that responsibility.  I think
+that programming (by which I really mean logical thinking, but
+programming is one of the best ways I know of to teach it, since the
+results are very clearly right or wrong) should be one of the
+mandatory courses in high school.  By the time you get to University,
+you should be learning stuff like Lisp/Scheme, or ML, or concurrency,
+or finite state machines.  Stuff that won't help you get a job, but
+will hopefully help you do your job better, if only by expanding your
+mind, and giving you new approaches to solving problems, or new
+insights into what might be causing the problems in the first place.
+I think that Institutions of Higher Learning should be about Higher
+Learning, and leave the more vocational stuff to vocational schools.
+This is somewhat ironic, since I went to Waterloo for the co-op
+experience, one of the most vocational schools and programs out
+there.&lt;/p&gt;
+
+&lt;p&gt;It could be that I'm looking at this all wrong, and that
+universities are there to prepare you for a job, and then, once you're
+out in the Real World, you go to places like &lt;a href="http://web.engcorp.com/pygta"&gt;PyGTA&lt;/a&gt;, or DemoCamp, or even
+just watch &lt;a href="http://swiss.csail.mit.edu/classes/6.001/abelson-sussman-lectures/"&gt;some videos&lt;/a&gt; and join &lt;a href="http://groups.yahoo.com/group/lispme"&gt;a mailing list&lt;/a&gt; about
+Scheme to do your real learning.  Or maybe I just didn't follow the
+academic path far enough.  When I left, I was &lt;i&gt;really&lt;/i&gt; glad to
+get the hell out of there, but now that I've been in the workforce for
+a few years...  Wait, 7 years?  How did that happen?  Anyways, now
+that I've been in the workforce, I'm thinking that I would like to go
+back and try to get my Masters, or even my PhD in Computer Science.
+At U of T, this time, since I far prefer living in Toronto to living
+in Waterloo.&lt;/p&gt;</description><category>tech</category><guid>https://weblog.latte.ca/blake/tech/democamp5.html</guid><pubDate>Wed, 09 May 2007 21:28:58 GMT</pubDate></item><item><title>Response to Tim Bray.</title><link>https://weblog.latte.ca/blake/tech/timandruby.html</link><dc:creator>Blake Winton</dc:creator><description>&lt;p&gt;In a &lt;a href="http://www.tbray.org/ongoing/When/200x/2006/09/05/What-Ruby-Needs"&gt;recent weblog entry&lt;/a&gt;, Tim Bray wrote about some things he thought
+Ruby lacked.  Since he doesn't have comments enabled, I thought I
+would share my opinions here, as a series of disjointed thoughts.&lt;/p&gt;
+
+&lt;p&gt;He said "Ruby needs an IDE.  All programming languages need IDEs."
+Well, I completely agree with that, and for my serious Python
+programming (as opposed to noodling around in Python), I tend to use
+Eclipse, because it's there.  Perhaps Ruby could take the same
+approach...&lt;/p&gt;
+
+&lt;p&gt;Of course, he also said a couple of things where I think he's a
+little off the mark.  For instance "I should never have to scroll
+much; IDEs go to a lot of trouble to make it trivial to jump from
+wherever to the source for the method being called, or its docs, or
+the next compile error or breakpoint, or variable declaration, or
+whatever. Scrolling back and forth in a source-code file is just
+stupid."  This I see more as a problem with his choice of editor, or
+perhaps his knowledge of its features.  I'm fairly sure both emacs and
+vi allow you to jump to the things he's asking for...&lt;/p&gt;
+
+&lt;p&gt;"certain aspects of Unicode are, on the surface at least,
+objectively racist; for example, why does UTF-8 encoding of characters
+become progressively less efficient as you move from the languages of
+the Western hemisphere to those of the East?"  Hmm...  I don't know...
+My first guess would be because Western languages have approximately a
+10,000th the number of characters as Eastern languages.  My second
+guess would have something to do with Huffman coding and the
+prevalence of Western Language (mainly English) documents on the net,
+but I do recognize that this could be due to my only being able to
+read English.&lt;/p&gt;
+
+&lt;p&gt;As for Integration, isn't that what Parrot, .NET, and the JVM are
+supposed to provide us?  If I'm wrong, and the language level is the
+appropriate level to solve this problem, then I sincerely hope that
+it's the Ruby and Python communities who get together to do
+something.&lt;/p&gt;
+
+&lt;p&gt;And finally, he missed what I consider to be the most important
+part of an IDE.  (No, not Source Control Integration!)  An integrated
+debugger.  I had to go back to print statements to figure out what was
+happening in Demokritos recently, and it just sucked.  So I added in
+some pdb support, and while it was easy to add the breakpoints, using
+it also sucked.  Can we please show me the list of variables in a box
+at the top of my screen, and more than zero lines of context around
+the currently executing line?  Please?  It was so bad that I'm
+actually going to install Eclipse on my Mac Mini, just to avoid it in
+the future.&lt;/p&gt;</description><category>tech</category><guid>https://weblog.latte.ca/blake/tech/timandruby.html</guid><pubDate>Wed, 06 Sep 2006 17:51:00 GMT</pubDate></item><item><title>How to make money on the Interweeb.</title><link>https://weblog.latte.ca/blake/tech/freestuff.html</link><dc:creator>Blake Winton</dc:creator><description>&lt;p&gt;I was listening to &lt;a href="http://www.solomedia.org/podcast/2004/11/maximum-geek-episode-5.htm"&gt;Maximum Geek 5&lt;/a&gt; on the &lt;a href="http://www.ttc.ca/"&gt;subway&lt;/a&gt; this
+morning, and was struck with the need to comment on it.&lt;/p&gt;
+
+&lt;p&gt;To start off with, damn Jeff and Josh (the two hosts) are some huge
+geeks!  (And this coming from someone who wrote &lt;a href="http://palmblosxom.latte.ca"&gt;a Palm conduit&lt;/a&gt; to post to his weblog.)
+What I mean is that listening to them takes me right back to my days in the
+&lt;a href="http://www.csclub.uwaterloo.ca/"&gt;Computer Science Club&lt;/a&gt;
+at the &lt;a href="http://www.uwaterloo.ca/"&gt;University of Waterloo&lt;/a&gt;,
+complete with interrupting each other in the middle of sentences and
+misquoting &lt;a href="http://www.python.org/"&gt;Monty Python&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;Second, Jeff Kirvin is perhaps the most naive, and I mean that in the
+nicest way, person I have ever heard speak.  While I'ld like to believe
+that people would pay for content that I could get for free, I just don't
+have that much faith in human nature, and sadly, my experience seems to
+bear out my conclusions.  I think that at this point in time on the
+Internet, paying for something is always harder than not paying for it, so
+you need to add some sort of value to the paying copy.&lt;/p&gt;
+
+&lt;p&gt;Which means that the &lt;a href="http://www.nytimes.com/"&gt;New York
+Times&lt;/a&gt; has completely the wrong idea.  It's true that they've cut
+themselves off from the rest of the web, and are only harming themselves by
+doing so.  (They're a newspaper, why not make the current month
+pay-to-read, and open up the archives?  Surely their main selling point is
+commentary on what's currently going on!)  So, I have the following
+suggestion for &lt;a href="http://www.solomedia.org/"&gt;Solo Media&lt;/a&gt;:  Put up
+text-only versions of your serials.  By "text-only" I don't just mean
+versions without any formatting, because given the existance of
+alt.binaries.e-books, and the fact that the first few doc readers couldn't
+support formatting, having a non-formatted version is clearly not enough of
+a difference to get people to pay.  What I really mean "text-only" is that
+you should remove all the punctuation, and force capital letters into
+lowercase as well!  It's very rare that people &lt;a href="http://www.google.com/"&gt;search&lt;/a&gt; for a comma, or a semi-colon, and
+most-if-not-all of the search engines are case-insensitive these days, so
+lowercasing everything won't hurt your searchability.  It will allow people
+to quickly find which episode memorable text is located in (and
+approximately where in that episode it is), And it will even give people
+the flavour of the stuff you're writing, but it will also make it much
+harder to read, and probably hard enough that it won't be worth the time to
+try to fix it.&lt;/p&gt;
+
+&lt;p&gt;So that's my idea for you guys.  Feel free to use it, and spread it
+around.  I hope you like it, and may you grow rich off of it.&lt;/p&gt;</description><category>tech</category><guid>https://weblog.latte.ca/blake/tech/freestuff.html</guid><pubDate>Tue, 21 Dec 2004 14:52:00 GMT</pubDate></item><item><title>That wasn't as easy as I'ld hoped.</title><link>https://weblog.latte.ca/blake/tech/installers.html</link><dc:creator>Blake Winton</dc:creator><description>&lt;p&gt;I've started writing an installer for my PalmBlosxom conduit, and
+associated files.  It's been both easier and harder than I had thought.  It
+was way easier to get the installer portion written so far, and I don't see
+any particular difficulties cropping up in that part of it.  Sure, there
+are still a bunch of things to do, like installing the Palm program for
+users who aren't named "bwinton", and learning the strange variant of
+Pascal that the installer uses to script things so that I can accomplish
+the previous task, but by and large that portion of it is done.  The
+uninstall portion of this grand experiment, on the other hand, has been a
+royal pain in the ass.  It was fairly easy when all I did was copy some
+&lt;img src="http://bwinton.latte.ca/camera/weblog/InnoSetup.png" align="right"&gt; files somewhere and I was done, but when I switched to
+registering the conduit with the HotSync application (so that it would run,
+instead of just sitting there), I started getting errors, and nothing I've
+attempted so far can get rid of them.  I guess I can sort of understand why
+it thinks it can't delete the file, but I swear to you, I've unregistered
+the dll it thinks it can't delete about four different ways, and
+furthermore, as soon as the uninstaller exits I can delete the files either
+from the command line, or from the Windows Explorer, without any problem.
+Heck, I can even run the installer again, and it will overwrite them
+without complaining.  I just can't figure out how to do it
+programmatically.  How annoying.&lt;/p&gt;
+
+&lt;p&gt;So,if anyone out there has any experience with InnoSetup, and/or
+uninstalling Palm Conduits, I'ld appreciate it if you could &lt;a href="mailto:bwinton%2Bblog@latte.ca"&gt;drop me a line&lt;/a&gt;, and I'll explain
+in more detail what I'm trying to do, and how it's failing, or you could &lt;a href="http://www.latte.ca/svn/PalmBlosxom/setup.py"&gt;check out the source to
+my setup program&lt;/a&gt; (which generates the .iss file for InnoSetup), and
+hopefully point out my misunderstanding from it.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src="http://bwinton.latte.ca/camera/weblog/NSIS.png" align="right"&gt;&lt;b&gt;Update:&lt;/b&gt; I think I'm going to switch to NSIS.  I tried
+the innosetup newsgroups, but they weren't as helpful as I would have
+hoped.  I'll continue to read them, in the hopes that someone will answer
+my question, but I think that I'm not going to get an answer, or at least
+not one that I like, so NSIS it is.&lt;/p&gt;</description><category>tech</category><guid>https://weblog.latte.ca/blake/tech/installers.html</guid><pubDate>Tue, 05 Oct 2004 14:07:00 GMT</pubDate></item><item><title>No More Text!</title><link>https://weblog.latte.ca/blake/tech/nomoretext.html</link><dc:creator>Blake Winton</dc:creator><description>The idea of IDEs not being forced to rely on text files has been
+popping up in several of the &lt;a href="http://www.cardboard.nu/archives/000250.html"&gt;weblogs&lt;/a&gt; I &lt;a href="http://blog.colorstudy.com/ianb/weblog/2004/03/09.html#P67"&gt;read&lt;/a&gt;.
+While I think Alan has part of the reason correct (there's a lot of
+infrastructure dedicated to dealing with text files), I don't think he
+has it all.  There are definately some &lt;a href="http://www.catb.org/~esr/writings/taoup/html/ch05s01.html"&gt;major
+advantages&lt;/a&gt; to putting things in plain text files, which seem to be
+being ignored
+
+For instance, &lt;a href="http://www.phantomfiber.com/"&gt;my company&lt;/a&gt;
+has moved from a binary resource format to a &lt;a href="http://www.ardiri.com/index.php?redir=palm&amp;amp;cat=pilrc"&gt;text-based
+resource format&lt;/a&gt; precisely because of the advantages it brings.
+(Well, okay, we never went with the binary format, but that's because
+the people making the decision saw the problems it had at previous
+places.)  Those advantages being:
+
+&lt;ul&gt;&lt;li&gt;No tool/vendor lock-in.&lt;/li&gt;
+  &lt;li&gt;Easier to fix when something goes wrong.&lt;/li&gt;
+  &lt;li&gt;Easier to see the differences when something changes.&lt;/li&gt;
+&lt;/ul&gt;
+
+I suppose these benefits could also be had by using a standardized
+text-based (or xml-based) representation of the image for loading and
+saving, along with smarter tools for editing, but I'm not sure that
+making the tools smarter is such a good idea in the first place.
+Should my source code control system really be forced to know about my
+programming language?  What if I change languages?</description><category>tech</category><guid>https://weblog.latte.ca/blake/tech/nomoretext.html</guid><pubDate>Wed, 17 Mar 2004 21:34:00 GMT</pubDate></item><item><title>More New Stuff.</title><link>https://weblog.latte.ca/blake/tech/newstuff2.html</link><dc:creator>Blake Winton</dc:creator><description>So, I've just added the capability to update the weblog over the web.
+Should be a nice feature for those sad days when the SSH daemon dies
+unexpectedly.  And it works fairly well too.  I wonder how well it
+deals with updates?  Oh, and I should also make it output the text in
+a nicer format, but that's all stuff for later.  I've also got the
+XML-RPC interface working, so I can use desktop tools from work to
+post and modify entries.</description><category>tech</category><guid>https://weblog.latte.ca/blake/tech/newstuff2.html</guid><pubDate>Fri, 31 Jan 2003 18:16:00 GMT</pubDate></item><item><title>Neil Gaiman in EffNews.</title><link>https://weblog.latte.ca/blake/tech/effnews1.html</link><dc:creator>Blake Winton</dc:creator><description>After seeing the &lt;a href="http://effbot.org/zone/effbot-exe-index.htm"&gt;EffNews&lt;/a&gt; &lt;a href="http://pythonowns.blogspot.com/2003_01_19_pythonowns_archive.html#87740023"&gt;plugin&lt;/a&gt;
+for Andrew Kuchling's &lt;a href="http://amk.ca/diary/"&gt;journal&lt;/a&gt;,
+I was inspired to try creating one of my own, for Neil Gaiman's
+&lt;a href="http://www.neilgaiman.com/journal/journal.asp"&gt;journal&lt;/a&gt;.
+I think it went pretty well, although I'ld like to spend a little
+more time on it, to do something prettier with the dates.  Perhaps
+later.
+
+&lt;code&gt;&lt;pre&gt;urls = ["http://www.neilgaiman.com/journal/journal.asp"]
+
+def simpleprovider(context, text):
+    context.push("channel", title="Neil Gaiman", link=urls[0])
+    header = '&amp;lt;font Class="bold"&amp;gt; Journal:&amp;lt;font&amp;gt;'
+    signature = '&amp;lt;blockquote&amp;gt;'
+    i = j = k = 0
+    j = text.find(header, j)
+    while 1:
+        i = text.find(signature, j)
+        if i &amp;lt; 0:
+            break
+        j = text.find(signature, i+len(signature))
+        if j &amp;lt; 0:
+            break
+
+        description = text[i:j]
+        context.push("item", link=urls[0], description=description)
+
+if __name__ == "__main__":
+    # test wrapper
+    import urllib
+    class context:
+        def push(self, tag, **kw):
+            print tag, kw
+    simpleprovider(context(), urllib.urlopen(urls[0]).read())
+&lt;/pre&gt;&lt;/code&gt;</description><category>tech</category><guid>https://weblog.latte.ca/blake/tech/effnews1.html</guid><pubDate>Tue, 21 Jan 2003 17:08:00 GMT</pubDate></item><item><title>Hacked, part 2</title><link>https://weblog.latte.ca/blake/tech/hacked2.html</link><dc:creator>Blake Winton</dc:creator><description>&lt;p&gt;Well, mail works now, as does web and even the cute little
+weblog script, but logging on an X session at the console fails
+pretty heinously.  (Specifically, rxvt fails complaining that it
+couldn't open the pseudo-tty, or could not obtain control of tty,
+depending on what random bit I flipped before I tried to launch
+it.)  Plain old xterm seems to work just fine, though.  More
+debugging later, I guess.  For now, I'm just going to go to sleep.
+&lt;/p&gt;</description><category>tech</category><guid>https://weblog.latte.ca/blake/tech/hacked2.html</guid><pubDate>Tue, 21 Jan 2003 04:39:00 GMT</pubDate></item><item><title>More changes to Latte.ca</title><link>https://weblog.latte.ca/blake/tech/hacked1.html</link><dc:creator>Blake Winton</dc:creator><description>&lt;p&gt;Apparently we've been hacked.  Craptastic.  I've changed all the
+files I think they affected, but I also removed a bunch of files
+that I didn't know I needed.  Oh well, everything should get back
+to normal any time now.
+&lt;/p&gt;
+&lt;p&gt;Oh, yeah, and mail doesn't work.  I'll see if I can fix that tonight.
+&lt;/p&gt;</description><category>tech</category><guid>https://weblog.latte.ca/blake/tech/hacked1.html</guid><pubDate>Tue, 21 Jan 2003 00:02:00 GMT</pubDate></item><item><title>Changes to Latte.ca</title><link>https://weblog.latte.ca/blake/tech/newstuff1.html</link><dc:creator>Blake Winton</dc:creator><description>I've been playing around with the webserver here at &lt;a href="http://www.latte.ca/"&gt;Latte.ca&lt;/a&gt;, to see if there was an
+easier weblogging tool that I could set up for people to use.
+One product that caught my eye was &lt;a href="http://www.plone.org/"&gt;Plone&lt;/a&gt;, so I tried to set it up
+&lt;a href="http://weblog.latte.ca/"&gt;here&lt;/a&gt;.  It turned out that
+it required me to set up &lt;a href="http://zope.latte.ca"&gt;Zope&lt;/a&gt;
+(A python-based web application server) first, so I did that too.
+But after using Plone for about 30 seconds, I'm not convinced
+that it's a good weblogging tool (mainly because it seems too
+powerful, and not easy enough to use).  I'm not going to
+uninstall it, but I think I'll stick with &lt;a href="http://www.raelity.org/apps/blosxom/"&gt;Blosxom&lt;/a&gt; for now.
+(Hey, maybe I'll install &lt;a href="http://roughingit.subtlehints.net/pyblosxom"&gt;PyBlosxom&lt;/a&gt;,
+and see if it integrates with Zope at all.)</description><category>tech</category><guid>https://weblog.latte.ca/blake/tech/newstuff1.html</guid><pubDate>Mon, 20 Jan 2003 20:24:00 GMT</pubDate></item></channel></rss>

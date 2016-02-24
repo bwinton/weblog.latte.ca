@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet type="text/xsl" href="../assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Blog-O! (css)</title><link>https://weblog.latte.ca/</link><description></description><atom:link type="application/rss+xml" href="https://weblog.latte.ca/tags/css.xml" rel="self"></atom:link><language>en</language><lastBuildDate>Wed, 24 Feb 2016 17:07:38 GMT</lastBuildDate><generator>https://getnikola.com/</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Drawing lines with CSS.</title><link>https://weblog.latte.ca/blake/tech/firefox/csslines.html</link><dc:creator>Blake Winton</dc:creator><description>&lt;div&gt;&lt;p&gt;One of the things I’m working on as part of my job&lt;sup id="fnref:1"&gt;&lt;a class="footnote-ref" href="https://weblog.latte.ca/blake/tech/firefox/csslines.html#fn:1" rel="footnote"&gt;1&lt;/a&gt;&lt;/sup&gt; at Mozilla is &lt;a href="https://github.com/bwinton/arewecreatingyet"&gt;a tool&lt;/a&gt; to make it easy for designers to
+create mockups that are linked to live bugs, similar to the ones at &lt;a href="http://areweprettyyet.com/4/mainWindow/#"&gt;Are We
+Pretty Yet&lt;/a&gt;.  Now, I’ve got the
+background showing up, and the bugs overlayed on top of it, but as it stands,
+I’m requiring the designers to draw the lines connecting the bugs to the
+various areas in the mockup right on the mockup itself!  This is obviously a
+fairly terrible idea, since it makes it much harder than it should to move
+stuff around after the fact, and requires a ton of up-front planning when
+creating the initial image.  But what are my other options?&lt;/p&gt;
+&lt;p&gt;I thought for a while about layering a canvas element over the mockup; it would
+let me draw whatever shapes I wanted to, but passing the click events through
+to the mockup seemed like it would be fairly annoying, and I don’t think the
+connecting lines should appear in front of the boxes showing the bug details,
+which adds another wrinkle.  Then, over lunch, I started to wonder what it
+would look like if a 1px by 1px black square got stretched and rotated with
+CSS…  So I took some time after lunch, and played around a little, and it seems
+like it just might work!  &lt;a href="http://jsfiddle.net/aBjp7/8/"&gt;Give it a try&lt;/a&gt;, let me
+know if you have any ideas to make it better, and feel free to take the idea
+anywhere you think it might be useful!&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Update:&lt;/strong&gt; In the comments, Andrew points out that I could use a 1px by 1px
+span instead, which would make it &lt;em&gt;much&lt;/em&gt; easier to change the colour of the
+line, so I’ve linked to his jsfiddle instead.  :)&lt;/p&gt;
+&lt;div class="footnote"&gt;
+&lt;hr&gt;&lt;ol&gt;&lt;li id="fn:1"&gt;
+&lt;p&gt;Sometimes I still can’t believe how lucky I am to get to do this stuff all day, and get paid for it! &lt;a class="footnote-backref" href="https://weblog.latte.ca/blake/tech/firefox/csslines.html#fnref:1" rev="footnote" title="Jump back to footnote 1 in the text"&gt;↩&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;&lt;/div&gt;&lt;/div&gt;</description><category>css</category><category>line</category><category>mozilla</category><category>pixel</category><category>transform</category><guid>https://weblog.latte.ca/blake/tech/firefox/csslines.html</guid><pubDate>Fri, 14 Jun 2013 18:57:43 GMT</pubDate></item><item><title>Fixing the blog for iPhones.</title><link>https://weblog.latte.ca/blake/tech/weblog/itouch.html</link><dc:creator>Blake Winton</dc:creator><description>&lt;p&gt;A while ago, I had bought an iPod Touch, and started messing around
+with the CSS on this weblog, to try and get it looking a little nicer
+on the small screen.  Sadly, it never quite worked, and because of a
+bug in my selector (“min-device-width” should have been
+“max-device-width”), I broke the weblog for Safari too.  Fortunately,
+today, I grabbed a copy of the latest version of Safari, and fixed the
+bug!  So now iPhones and iTouches will both get a pretty version of
+the site, and Safari 3.1 looks beautiful again.  Even more beautiful,
+now that SVG is supported.  (&lt;a href="https://weblog.latte.ca/blake/tech/doesThisWorkForYou"&gt;Give it a try&lt;/a&gt;, and let me know if you can see the
+green ? in a circle.)&lt;/p&gt;</description><category>css</category><category>itouch</category><category>weblog</category><guid>https://weblog.latte.ca/blake/tech/weblog/itouch.html</guid><pubDate>Wed, 26 Mar 2008 15:53:08 GMT</pubDate></item></channel></rss>

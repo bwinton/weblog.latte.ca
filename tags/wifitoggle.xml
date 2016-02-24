@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet type="text/xsl" href="../assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Blog-O! (wifitoggle)</title><link>https://weblog.latte.ca/</link><description></description><atom:link type="application/rss+xml" href="https://weblog.latte.ca/tags/wifitoggle.xml" rel="self"></atom:link><language>en</language><lastBuildDate>Wed, 24 Feb 2016 17:07:45 GMT</lastBuildDate><generator>https://getnikola.com/</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>How to dynamically change your icons.</title><link>https://weblog.latte.ca/blake/tech/iTouch/updatingicons.html</link><dc:creator>Blake Winton</dc:creator><description>&lt;div&gt;&lt;p&gt;One of the things I wanted to add to &lt;a href="http://www.csse.uwa.edu.au/~chris/iphone/WifiToggle/"&gt;WifiToggle&lt;/a&gt; was having the
+icon show you whether your wifi was on or off, by having the switch be
+up or down (and the blue glow be on or off, since in Australia a down
+switch means that the light is on, whereas in Canada, it’s the
+opposite).  Sadly, it didn’t seem possible, since Springboard&lt;sup id="fnref:sb"&gt;&lt;a class="footnote-ref" href="https://weblog.latte.ca/blake/tech/iTouch/updatingicons.html#fn:sb" rel="footnote"&gt;1&lt;/a&gt;&lt;/sup&gt;
+seems to cache your icon.png, and ignore any updates you do to it.
+And so that was where I left it for a long time…&lt;/p&gt;
+&lt;p&gt;Recently, however, I was browsing through &lt;a href="http://ericasadun.com/?p=176"&gt;AppFlow&lt;/a&gt; and I noticed that the MobileCalendar
+application’s icon was different than the one in Springboard.
+Specifically, the one on AppFlow was blank, whereas the one in
+Springboard showed me the current day and date (i.e. "Saturday" and
+"1" for today).  How did it do that?  I grabbed the source, and
+grepped through it for the answer, which turned out to be a special
+key in the Info.plist:&lt;/p&gt;
+&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="nt"&gt;&amp;lt;key&amp;gt;&lt;/span&gt;SBIconClass&lt;span class="nt"&gt;&amp;lt;/key&amp;gt;&lt;/span&gt;
+&lt;span class="nt"&gt;&amp;lt;string&amp;gt;&lt;/span&gt;SBCalendarApplicationIcon&lt;span class="nt"&gt;&amp;lt;/string&amp;gt;&lt;/span&gt;
+&lt;/pre&gt;
+
+
+&lt;p&gt;When I set WifiToggle’s SBIconClass key to be the same, I too had the
+day and date drawn on top of my icon!  Partial success!  So now I’m at
+the point of trying to figure out if I can use any class that
+implements the correct interface (I’m thinking specifically about
+adding a class to my application to handle the updates.)  Of course, I
+have no idea what that interface is, but hey, I’m way closer than I
+was this morning, so that’s got to count for something.&lt;/p&gt;
+&lt;div class="footnote"&gt;
+&lt;hr&gt;&lt;ol&gt;&lt;li id="fn:sb"&gt;
+&lt;p&gt;The application launcher on the iTouch. &lt;a class="footnote-backref" href="https://weblog.latte.ca/blake/tech/iTouch/updatingicons.html#fnref:sb" rev="footnote" title="Jump back to footnote 1 in the text"&gt;↩&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;&lt;/div&gt;&lt;/div&gt;</description><category>itouch</category><category>programming</category><category>wifitoggle</category><guid>https://weblog.latte.ca/blake/tech/iTouch/updatingicons.html</guid><pubDate>Sun, 02 Mar 2008 02:11:56 GMT</pubDate></item></channel></rss>

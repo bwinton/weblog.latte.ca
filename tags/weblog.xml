@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet type="text/xsl" href="../assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Blog-O! (weblog)</title><link>https://weblog.latte.ca/</link><description></description><atom:link type="application/rss+xml" href="https://weblog.latte.ca/tags/weblog.xml" rel="self"></atom:link><language>en</language><lastBuildDate>Wed, 24 Feb 2016 17:07:41 GMT</lastBuildDate><generator>https://getnikola.com/</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Fixing the blog for iPhones.</title><link>https://weblog.latte.ca/blake/tech/weblog/itouch.html</link><dc:creator>Blake Winton</dc:creator><description>&lt;p&gt;A while ago, I had bought an iPod Touch, and started messing around
+with the CSS on this weblog, to try and get it looking a little nicer
+on the small screen.  Sadly, it never quite worked, and because of a
+bug in my selector (“min-device-width” should have been
+“max-device-width”), I broke the weblog for Safari too.  Fortunately,
+today, I grabbed a copy of the latest version of Safari, and fixed the
+bug!  So now iPhones and iTouches will both get a pretty version of
+the site, and Safari 3.1 looks beautiful again.  Even more beautiful,
+now that SVG is supported.  (&lt;a href="https://weblog.latte.ca/blake/tech/doesThisWorkForYou"&gt;Give it a try&lt;/a&gt;, and let me know if you can see the
+green ? in a circle.)&lt;/p&gt;</description><category>css</category><category>itouch</category><category>weblog</category><guid>https://weblog.latte.ca/blake/tech/weblog/itouch.html</guid><pubDate>Wed, 26 Mar 2008 15:53:08 GMT</pubDate></item><item><title>What I’ve done here: or, yet another way to blog from your Palm.</title><link>https://weblog.latte.ca/blake/tech/weblog/whativedone.html</link><dc:creator>Blake Winton</dc:creator><description>&lt;div&gt;&lt;p&gt;I thought I’ld take a few minutes to talk about just what it is that’s
+allowing me to write an entry while I’m walking down the street on my way
+to the gym.  (And on my way home from the gym, and on the subway to work
+the next day, because while I’m connected, I’m not necessarily fast at
+either Graffiti or writing weblog entries.)&lt;/p&gt;
+&lt;p&gt;As I’m sure you know, I’m a computer programmer by trade, and so when I run
+into a problem, I tend to want to write a program to fix it for me.  A long
+time ago I got a PalmPilot Professional, partially so that I could keep
+track of my projects and assignments, and partially because I could write
+programs for it in C.  Then, someone wrote a C compiler that ran on the
+Palm.  I was so excited that I could finally write code on the subway!
+Until the first program I wrote crashed my Palm.  I quickly realized that C
+was just too hard a language for writing Palm programs.  (It’s not so bad
+if you’re working on a desktop, and have an IDE, and an emulator to test
+on, but for on-Palm development, it really sucks.)  I also played around
+with an implementation of Forth for the Palm, but I couldn’t get enough of
+a library of utility words built up to do anything useful with it.  Later,
+I learned a language called Python, which was far easier to write programs
+in, both due to being an easier language syntactically, and due to the
+wealth of useful libraries it comes with.  After a while, someone ported
+Python to the Palm, and so I played around with that, but I found it, too,
+was lacking the libraries I needed for it to be useful to me.  Finally,
+someone posted on the Python tutor list about a program called Plua, which
+was an implementation of Lua for the Palm.  There are a lot of things I
+don’t like about Lua the language, but when creating a screen for a Palm
+app is as simple as:&lt;/p&gt;
+&lt;table class="codehilitetable"&gt;&lt;tr&gt;&lt;td class="linenos"&gt;&lt;div class="linenodiv"&gt;&lt;pre&gt; 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13
+14
+15
+16&lt;/pre&gt;&lt;/div&gt;&lt;/td&gt;&lt;td class="code"&gt;&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="n"&gt;pclear&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
+&lt;span class="n"&gt;ptitle&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt; &lt;span class="s2"&gt;"&lt;/span&gt;&lt;span class="s"&gt;PalmBlosxom"&lt;/span&gt; &lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="n"&gt;pmenu&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;&lt;span class="s2"&gt;"&lt;/span&gt;&lt;span class="s"&gt;P:Server Prefs"&lt;/span&gt;&lt;span class="p"&gt;}&lt;/span&gt; &lt;span class="p"&gt;)&lt;/span&gt;
+
+&lt;span class="n"&gt;m32&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="n"&gt;pcheckbox&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;"&lt;/span&gt;&lt;span class="s"&gt;pEdit32"&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="n"&gt;ptab&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
+&lt;span class="n"&gt;name&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;pfield&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt; &lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;24&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;24&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;catName&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="n"&gt;pnl&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
+&lt;span class="n"&gt;pl&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;plist&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt; &lt;span class="mi"&gt;10&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mf"&gt;31.5&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;lst&lt;/span&gt; &lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="n"&gt;pnl&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
+&lt;span class="n"&gt;ptab&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
+&lt;span class="n"&gt;i&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;pbutton&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt; &lt;span class="s2"&gt;"&lt;/span&gt;&lt;span class="s"&gt;Reload"&lt;/span&gt; &lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="n"&gt;ptab&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
+&lt;span class="n"&gt;d&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;pbutton&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt; &lt;span class="s2"&gt;"&lt;/span&gt;&lt;span class="s"&gt;Details"&lt;/span&gt; &lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="n"&gt;ptab&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
+&lt;span class="n"&gt;q&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;pbutton&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt; &lt;span class="s2"&gt;"&lt;/span&gt;&lt;span class="s"&gt;Quit"&lt;/span&gt; &lt;span class="p"&gt;)&lt;/span&gt;
+&lt;/pre&gt;
+&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;p&gt;I’ll put up with a lot of ugliness in the language.&lt;/p&gt;
+&lt;p&gt;Of course, I made it sound like a much smoother progression than it
+actually was.  I took side trips into Basic, Smalltalk, Perl, Scheme, Java,
+Intercal, Visual Basic, and Ruby, but none of those were serious contenders
+for on-Palm programming, and Java is the only one I still use these days.
+But I remember enough of them to be the person to ask when someone at the
+office needs to debug a program written in one of them.&lt;/p&gt;
+&lt;p&gt;Where was I?  Oh, yeah, Plua.  Plua makes it really easy for me to create
+programs for my Palm, and so makes it far more likely that I’ll actually
+complete whatever random project it is that requires a Palm program to be
+written.  In this case, it was a way for me to write weblog entries in the
+standard Palm MemoPad application (or, more accurately, in pEdit, a
+replacement which handles memos of up to 32kb, as opposed to Palm’s 4kb
+size restriction).  Since I was leveraging the standard MemoPad, my
+application was turning out to be much simpler than a full-fledged
+weblogging application, but it was still taking me a long time to write it
+in C++, partially because I needed (or more accurately wanted) to write a
+generic framework for use in other applications I might write, and
+partially because I don’t have a lot of spare time for programming.
+Switching to Plua let me write the application in a day or two, and I can
+easily change things around in it, or add features, without going through
+the hassle of a compliation and hotsync.&lt;/p&gt;
+&lt;p&gt;The hardest piece to get working was the conduit.  Since my Palm doesn’t
+have a WiFi connection, it’s a bit of a pain to use programs which depend
+on network connections.  Conduits, on the other hand, get run every time I
+hotsync, which is usually once or twice per day.  I had been planning on
+writing the conduit in C++, which was going to be quite a pain for me,
+since I  didn’t know of any libraries that could handle ftp over secure
+sockets.  Fortunately, Rick Price asked me whether it would be possible to
+write a conduit in Python.  "Sure", I said, and then started thinking about
+how you would do it.  You could either wrap the C API up into a Python
+library, which would take a lot of work, or you could use Python’s COM
+support to talk to the COM API.  I figured that would probably be an easier
+way to go, and since I had some free time, I started experimenting.  It
+turns out that it was a little harder than I had anticipated, but it still
+wasn’t too bad, and I think I’ve finished the worst of it.  The Secure-FTP
+library was easy to find, and after some firewall config on my home machine
+works quite well.&lt;/p&gt;&lt;/div&gt;</description><category>weblog</category><guid>https://weblog.latte.ca/blake/tech/weblog/whativedone.html</guid><pubDate>Wed, 06 Oct 2004 20:20:00 GMT</pubDate></item><item><title>A New Start.</title><link>https://weblog.latte.ca/blake/tech/weblog/newcomputer.html</link><dc:creator>Blake Winton</dc:creator><description>&lt;p&gt;I got a new computer at work on Monday, and so eagerly switched
+over all my data to it.  But I didn't install all the various programs
+that were on the old machine.  Partly because I had a ton of stuff
+installed, and my registry was a complete mess, and partly because I
+wasn't working on a lot of the tasks I used to work on, and so didn't
+need the tools installed anymore.  But one of the results of this is
+that my oh-so-clever palm-memo-to-weblog-entry conduit isn't
+installed, and indeed, the components it relies on also aren't
+installed, so while I have a perfect chance to write and test an
+installer, I haven't even started that yet, so all the weblog posts
+I'm writing there are likely going to be delayed by a few days or even
+up to a week.&lt;/p&gt;
+
+&lt;p&gt;Boy was I ever right there.  It's taken almost three weeks to get
+that entry posted.  But now my conduit has an installer, and is
+packaged up into a dll, and registers itself and everything, so I
+should be able to send it off to other people with just a little more
+code in the installer.  I'm kind of pumped.  And apparently other
+people are interested in doing something similar, so my little bit of
+code might get released in a couple of other places too.  But for now,
+you can find the conduit, and the setup script which builds the dll
+and the installer &lt;a href="http://www.latte.ca/svn/PalmBlosxom/"&gt;here&lt;/a&gt;.  (The code is in
+the conduit directory, and the setup.py script is in the root.)&lt;/p&gt;</description><category>weblog</category><guid>https://weblog.latte.ca/blake/tech/weblog/newcomputer.html</guid><pubDate>Thu, 30 Sep 2004 18:26:00 GMT</pubDate></item><item><title>Another Clié Weblog Entry.</title><link>https://weblog.latte.ca/blake/tech/weblog/clieentry2.html</link><dc:creator>Blake Winton</dc:creator><description>#datetime 28/7/04 19:11
+&lt;p&gt;
+So the infrastructure has gotten much closer to being done, without being any
+closer to being done.  What I mean is that I built a Palm conduit in Python,
+using Palm's COM API, so I can take advantage of all the nice, high-level
+Python libraries for things like threading, and network access, and security,
+instead of having to locate and figure out how to use other people's, or worse,
+code them up myself!
+&lt;/p&gt;&lt;p&gt;
+There are still a few problems with the framework, I can't seem to call
+anything with a Variant Out parameter, and I haven't tested writing records,
+but other than that, it's golden, and I expect those bugs will be fixed as soon
+as people start playing with it.  And none of the actual sync code is written,
+either, but that will be trivial, right?  Right.  Still, if you're reading
+this, then I must have gotten something working...
+&lt;/p&gt;&lt;p&gt;
+&lt;b&gt;Update:&lt;/b&gt; It is working!  It doesn't synchronize in any way, it just
+uploads the entries and hopes for the best, but I'll fix that later.  You can
+grab a copy of the conduit code &lt;a href="http://www.latte.ca/svn/PalmBlosxom/conduit/"&gt;here&lt;/a&gt;, and the Plua
+source for the app itself &lt;a href="http://www.latte.ca/svn/PalmBlosxom/Lua/"&gt;here&lt;/a&gt;.
+&lt;/p&gt;&lt;p&gt;
+&lt;b&gt;Coming soon:&lt;/b&gt; marking the memos which have been uploaded, so that we
+don't upload them again.  (I've got the code to ignore them working just fine,
+but I haven't delved into the black art of writing a record back to the Palm
+yet.)
+&lt;/p&gt;</description><category>weblog</category><guid>https://weblog.latte.ca/blake/tech/weblog/clieentry2.html</guid><pubDate>Fri, 06 Aug 2004 19:02:00 GMT</pubDate></item><item><title>Test pEdit Weblog Entry.</title><link>https://weblog.latte.ca/blake/tech/weblog/clieentry.html</link><dc:creator>Blake Winton</dc:creator><description>#datetime 4/5/03 15:38
+Someday, this entry will be coming to you from my Clié.  I have a dream, you see.  A dream that I can update my weblog whenever I get a chance, instead of only when I'm at my computer.  A dream that, just by putting memos in a specific category on my Clié, I can add new entries and update older entries with new information whenever I feel like it.</description><category>weblog</category><guid>https://weblog.latte.ca/blake/tech/weblog/clieentry.html</guid><pubDate>Fri, 06 Aug 2004 18:50:00 GMT</pubDate></item></channel></rss>

@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet type="text/xsl" href="../assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Blog-O! (dates)</title><link>https://weblog.latte.ca/</link><description></description><atom:link type="application/rss+xml" href="https://weblog.latte.ca/tags/dates.xml" rel="self"></atom:link><language>en</language><lastBuildDate>Wed, 24 Feb 2016 17:07:38 GMT</lastBuildDate><generator>https://getnikola.com/</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Why is this stuff so hard?</title><link>https://weblog.latte.ca/blake/tech/juliandate.html</link><dc:creator>Blake Winton</dc:creator><description>&lt;p&gt;A couple of days ago, I fixed a bug by deleting the class.  I don’t
+often get to do that, but this class was buggy, hard to use, and
+ill-considered in the first place.  I won’t post the code, but some
+sample output is:
+&lt;/p&gt;&lt;pre&gt;&lt;code&gt;Fri Aug 27 00:00:00 EDT 1976
+Julian Day: 2443017
+Milliseconds since midnight: 43200000
+Thu Aug 26 20:00:00 EDT 1976&lt;/code&gt;&lt;/pre&gt;
+Clearly that’s not right, since the top and bottom date should be the
+same.  So, what was wrong with it?  Well...
+&lt;ul&gt;&lt;li&gt;Julian dates use milliseconds since noon, not milliseconds since
+midnight.&lt;/li&gt;
+&lt;li&gt;The milliseconds since noon should be 57600000, because we’re in
+EDT, which is 4 hours behind UTC.  (The cause of this particular
+bug.)&lt;/li&gt;
+&lt;li&gt;The class was implemented as a subclass of
+&lt;tt&gt;java.util.GregorianCalendar&lt;/tt&gt;.  A Calendar exists soley to link
+a &lt;tt&gt;java.util.Date&lt;/tt&gt; and a &lt;tt&gt;java.util.TimeZone&lt;/tt&gt;, but
+Julian dates are all relative to UTC, so should not be represented as
+a Calendar, much less a Gregorian Calendar.&lt;/li&gt;
+&lt;/ul&gt;&lt;p&gt;I managed to replace almost all the occurrances with
+&lt;tt&gt;java.util.Date&lt;/tt&gt;s, except for a couple of places where I needed
+to group things by day in EST.  Those places I just created a new
+&lt;tt&gt;java.util.GregorianCalendar&lt;/tt&gt;, and used it to figure out where
+to split my groups.  The algorithm to go from the Julian days and
+milliseconds since noon to a &lt;tt&gt;java.util.Date&lt;/tt&gt;, and back again
+is fairly easily derivable from the formula:
+&lt;/p&gt;&lt;pre&gt;&lt;code&gt;date = (julianDate - JULIAN_START) * MILLIS_PER_DAY + julianMillis - MILLIS_PER_DAY/2&lt;/code&gt;&lt;/pre&gt;
+Solve for any one of the three lowercase variables, using a little
+truncating-division, or a little modulo arithmatic to get rid of
+unknown terms, and you’re good to go.  So please, if you’re dealing
+with dates or times, don’t make this mistake, at least not where I
+might run across it.</description><category>bad_code</category><category>dates</category><category>delete</category><category>gregorian</category><category>java</category><category>julian</category><guid>https://weblog.latte.ca/blake/tech/juliandate.html</guid><pubDate>Fri, 13 Jul 2007 18:54:09 GMT</pubDate></item></channel></rss>

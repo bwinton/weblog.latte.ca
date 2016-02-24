@@ -1,0 +1,738 @@
+<!DOCTYPE html>
+<html prefix="og: http://ogp.me/ns# article: http://ogp.me/ns/article# " lang="en">
+<head>
+<meta charset="utf-8">
+<base href="https://weblog.latte.ca/index-8.html">
+<meta name="description" content="A weblog for latte.ca">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Blog-O! (old posts, page 8) | Blog-O!</title>
+<link href="assets/css/bootstrap.min.css" rel="stylesheet" type="text/css">
+<link href="assets/css/rst.css" rel="stylesheet" type="text/css">
+<link href="assets/css/code.css" rel="stylesheet" type="text/css">
+<link href="assets/css/colorbox.css" rel="stylesheet" type="text/css">
+<link href="assets/css/theme.css" rel="stylesheet" type="text/css">
+<meta content="#5670d4" name="theme-color">
+<link rel="alternate" type="application/rss+xml" title="RSS" href="rss.xml">
+<link rel="canonical" href="https://weblog.latte.ca/index-8.html">
+<link rel="prev" href="index-9.html" type="text/html">
+<link rel="next" href="index-7.html" type="text/html">
+<!--[if lt IE 9]><script src="assets/js/html5.js"></script><![endif]-->
+</head>
+<body>
+<a href="#content" class="sr-only sr-only-focusable">Skip to main content</a>
+
+<!-- Menubar -->
+
+<nav class="navbar navbar-inverse navbar-static-top"><div class="container">
+<!-- This keeps the margins nice -->
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-navbar" aria-controls="bs-navbar" aria-expanded="false">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="https://weblog.latte.ca/">
+
+                <span id="blog-title">Blog-O!</span>
+            </a>
+        </div>
+<!-- /.navbar-header -->
+        <div class="collapse navbar-collapse" id="bs-navbar" aria-expanded="false">
+            <ul class="nav navbar-nav">
+<li>
+<a href="archive.html">Archive</a>
+                </li>
+<li>
+<a href="tags/index.html">Tags</a>
+                </li>
+<li>
+<a href="rss.xml">RSS feed</a>
+
+                
+            </li>
+</ul>
+<!-- Custom search --><form method="get" id="search" action="//duckduckgo.com/" class="navbar-form pull-right">
+<input type="hidden" name="sites" value="https://weblog.latte.ca/"><input type="hidden" name="k8" value="#444444"><input type="hidden" name="k9" value="#D51920"><input type="hidden" name="kt" value="h"><input type="text" name="q" maxlength="255" placeholder="Search…" style="margin-top: 4px;"><input type="submit" value="DuckDuckGo Search" style="visibility: hidden;">
+</form>
+<!-- End of custom search -->
+
+
+            <ul class="nav navbar-nav navbar-right"></ul>
+</div>
+<!-- /.navbar-collapse -->
+    </div>
+<!-- /.container -->
+</nav><!-- End of Menubar --><div class="container" id="content" role="main">
+    <div class="body-content">
+        <!--Body content-->
+        <div class="row">
+            
+            
+<div class="postindex">
+    <article class="h-entry post-text"><header><h1 class="p-name entry-title"><a href="blake/tech/weblog/whativedone.html" class="u-url">What I’ve done here: or, yet another way to blog from your Palm.</a></h1>
+        <div class="metadata">
+            <p class="byline author vcard"><span class="byline-name fn">Blake Winton</span></p>
+            <p class="dateline"><a href="blake/tech/weblog/whativedone.html" rel="bookmark"><time class="published dt-published" datetime="2004-10-06T16:20:00-04:00" itemprop="datePublished" title="2004-10-06 16:20">2004-10-06 16:20</time></a></p>
+                <p class="commentline">
+        
+    <a href="blake/tech/weblog/whativedone.html#disqus_thread" data-disqus-identifier="/blake/tech/weblog/whativedone">Comments</a>
+
+
+        </p>
+</div>
+    </header><div class="p-summary entry-summary">
+    <div>
+<p>I thought I’ld take a few minutes to talk about just what it is that’s
+allowing me to write an entry while I’m walking down the street on my way
+to the gym.  (And on my way home from the gym, and on the subway to work
+the next day, because while I’m connected, I’m not necessarily fast at
+either Graffiti or writing weblog entries.)</p>
+<p>As I’m sure you know, I’m a computer programmer by trade, and so when I run
+into a problem, I tend to want to write a program to fix it for me.  A long
+time ago I got a PalmPilot Professional, partially so that I could keep
+track of my projects and assignments, and partially because I could write
+programs for it in C.  Then, someone wrote a C compiler that ran on the
+Palm.  I was so excited that I could finally write code on the subway!
+Until the first program I wrote crashed my Palm.  I quickly realized that C
+was just too hard a language for writing Palm programs.  (It’s not so bad
+if you’re working on a desktop, and have an IDE, and an emulator to test
+on, but for on-Palm development, it really sucks.)  I also played around
+with an implementation of Forth for the Palm, but I couldn’t get enough of
+a library of utility words built up to do anything useful with it.  Later,
+I learned a language called Python, which was far easier to write programs
+in, both due to being an easier language syntactically, and due to the
+wealth of useful libraries it comes with.  After a while, someone ported
+Python to the Palm, and so I played around with that, but I found it, too,
+was lacking the libraries I needed for it to be useful to me.  Finally,
+someone posted on the Python tutor list about a program called Plua, which
+was an implementation of Lua for the Palm.  There are a lot of things I
+don’t like about Lua the language, but when creating a screen for a Palm
+app is as simple as:</p>
+<table class="codehilitetable"><tr>
+<td class="linenos"><div class="linenodiv"><pre> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13
+14
+15
+16</pre></div></td>
+<td class="code">
+<pre class="code literal-block"><span></span><span class="n">pclear</span><span class="p">()</span>
+<span class="n">ptitle</span><span class="p">(</span> <span class="s2">"</span><span class="s">PalmBlosxom"</span> <span class="p">)</span>
+<span class="n">pmenu</span><span class="p">(</span> <span class="p">{</span><span class="s2">"</span><span class="s">P:Server Prefs"</span><span class="p">}</span> <span class="p">)</span>
+
+<span class="n">m32</span><span class="o">=</span><span class="n">pcheckbox</span><span class="p">(</span><span class="s2">"</span><span class="s">pEdit32"</span><span class="p">)</span>
+<span class="n">ptab</span><span class="p">()</span>
+<span class="n">name</span> <span class="o">=</span> <span class="n">pfield</span><span class="p">(</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">24</span><span class="p">,</span> <span class="mi">24</span><span class="p">,</span> <span class="n">catName</span><span class="p">)</span>
+<span class="n">pnl</span><span class="p">()</span>
+<span class="n">pl</span> <span class="o">=</span> <span class="n">plist</span><span class="p">(</span> <span class="mi">10</span><span class="p">,</span> <span class="mf">31.5</span><span class="p">,</span> <span class="n">lst</span> <span class="p">)</span>
+<span class="n">pnl</span><span class="p">()</span>
+<span class="n">ptab</span><span class="p">()</span>
+<span class="n">i</span> <span class="o">=</span> <span class="n">pbutton</span><span class="p">(</span> <span class="s2">"</span><span class="s">Reload"</span> <span class="p">)</span>
+<span class="n">ptab</span><span class="p">()</span>
+<span class="n">d</span> <span class="o">=</span> <span class="n">pbutton</span><span class="p">(</span> <span class="s2">"</span><span class="s">Details"</span> <span class="p">)</span>
+<span class="n">ptab</span><span class="p">()</span>
+<span class="n">q</span> <span class="o">=</span> <span class="n">pbutton</span><span class="p">(</span> <span class="s2">"</span><span class="s">Quit"</span> <span class="p">)</span>
+</pre>
+</td>
+</tr></table>
+<p>I’ll put up with a lot of ugliness in the language.</p>
+<p>Of course, I made it sound like a much smoother progression than it
+actually was.  I took side trips into Basic, Smalltalk, Perl, Scheme, Java,
+Intercal, Visual Basic, and Ruby, but none of those were serious contenders
+for on-Palm programming, and Java is the only one I still use these days.
+But I remember enough of them to be the person to ask when someone at the
+office needs to debug a program written in one of them.</p>
+<p>Where was I?  Oh, yeah, Plua.  Plua makes it really easy for me to create
+programs for my Palm, and so makes it far more likely that I’ll actually
+complete whatever random project it is that requires a Palm program to be
+written.  In this case, it was a way for me to write weblog entries in the
+standard Palm MemoPad application (or, more accurately, in pEdit, a
+replacement which handles memos of up to 32kb, as opposed to Palm’s 4kb
+size restriction).  Since I was leveraging the standard MemoPad, my
+application was turning out to be much simpler than a full-fledged
+weblogging application, but it was still taking me a long time to write it
+in C++, partially because I needed (or more accurately wanted) to write a
+generic framework for use in other applications I might write, and
+partially because I don’t have a lot of spare time for programming.
+Switching to Plua let me write the application in a day or two, and I can
+easily change things around in it, or add features, without going through
+the hassle of a compliation and hotsync.</p>
+<p>The hardest piece to get working was the conduit.  Since my Palm doesn’t
+have a WiFi connection, it’s a bit of a pain to use programs which depend
+on network connections.  Conduits, on the other hand, get run every time I
+hotsync, which is usually once or twice per day.  I had been planning on
+writing the conduit in C++, which was going to be quite a pain for me,
+since I  didn’t know of any libraries that could handle ftp over secure
+sockets.  Fortunately, Rick Price asked me whether it would be possible to
+write a conduit in Python.  "Sure", I said, and then started thinking about
+how you would do it.  You could either wrap the C API up into a Python
+library, which would take a lot of work, or you could use Python’s COM
+support to talk to the COM API.  I figured that would probably be an easier
+way to go, and since I had some free time, I started experimenting.  It
+turns out that it was a little harder than I had anticipated, but it still
+wasn’t too bad, and I think I’ve finished the worst of it.  The Secure-FTP
+library was easy to find, and after some firewall config on my home machine
+works quite well.</p>
+</div>
+    </div>
+    </article><article class="h-entry post-text"><header><h1 class="p-name entry-title"><a href="blake/random/biking/somestats.html" class="u-url">How I've been doing.</a></h1>
+        <div class="metadata">
+            <p class="byline author vcard"><span class="byline-name fn">Blake Winton</span></p>
+            <p class="dateline"><a href="blake/random/biking/somestats.html" rel="bookmark"><time class="published dt-published" datetime="2004-10-06T16:17:00-04:00" itemprop="datePublished" title="2004-10-06 16:17">2004-10-06 16:17</time></a></p>
+                <p class="commentline">
+        
+    <a href="blake/random/biking/somestats.html#disqus_thread" data-disqus-identifier="/blake/random/biking/somestats">Comments</a>
+
+
+        </p>
+</div>
+    </header><div class="p-summary entry-summary">
+    <p>I'm hoping to get a plugin written for the area over on the right there
+which will display some statistics about my last few bike rides.  Ever
+since I got my new bike computer (the Cateye Astrale 8), I've been keeping
+track of all the data it produces, which is to say trip time, trip
+distance, average speed for the trip, maximum speed for the trip, and the
+total distance odometer.  I haven't tried to graph any of it yet, but I'm
+sure that'll come soon enough.  In the meantime, it looks like I'm getting
+faster on average (from 19.2 km/h (12 mph) on my first trip to 21.2 km/h
+(13 mph) on my most recent trip).  It's around 17.16 km (10 .66 miles) to
+my office and back, and I've gone 175 km (108.75 miles) so far.  Of course,
+I've actually gone farther than that, since I biked to work before I got
+the computer, but I'm happy to ignore those trips for the purposes of
+tracking my distance.</p>
+
+<p>Does anyone have any guesses as to what the stats will be by the time it
+gets too cold for me to bike anymore?  Personally, I don't think that I'll
+get too much faster, either on my max speed, or on average.  My trip
+distance will probably increase by a little bit, since I've found some neat
+paths that are just a little out of my way, and I think I'ld like to take
+them.  And I'm hoping to more than double my total distance, which should
+be a no-brainer, since after two more weeks (or 10 trips to and from the
+office), I'll have doubled it, but I'm not sure if the weather will hold
+out that long.  It's been mightily chilly up here for the past few days.
+It was only 4°Celsius (39.2°F) when I rode to work this morning, and I
+could really feel the bite of the wind, even through my tiny cotton gloves.
+If it keeps up like that, I might have to buy a real pair of biking gloves,
+or stop biking for a while.  Though I've got to admit, it was a nice
+feeling to not be all sweaty when I got to the office.</p>
+    </div>
+    </article><article class="h-entry post-text"><header><h1 class="p-name entry-title"><a href="blake/tech/installers.html" class="u-url">That wasn't as easy as I'ld hoped.</a></h1>
+        <div class="metadata">
+            <p class="byline author vcard"><span class="byline-name fn">Blake Winton</span></p>
+            <p class="dateline"><a href="blake/tech/installers.html" rel="bookmark"><time class="published dt-published" datetime="2004-10-05T10:07:00-04:00" itemprop="datePublished" title="2004-10-05 10:07">2004-10-05 10:07</time></a></p>
+                <p class="commentline">
+        
+    <a href="blake/tech/installers.html#disqus_thread" data-disqus-identifier="/blake/tech/installers">Comments</a>
+
+
+        </p>
+</div>
+    </header><div class="p-summary entry-summary">
+    <p>I've started writing an installer for my PalmBlosxom conduit, and
+associated files.  It's been both easier and harder than I had thought.  It
+was way easier to get the installer portion written so far, and I don't see
+any particular difficulties cropping up in that part of it.  Sure, there
+are still a bunch of things to do, like installing the Palm program for
+users who aren't named "bwinton", and learning the strange variant of
+Pascal that the installer uses to script things so that I can accomplish
+the previous task, but by and large that portion of it is done.  The
+uninstall portion of this grand experiment, on the other hand, has been a
+royal pain in the ass.  It was fairly easy when all I did was copy some
+<img src="http://bwinton.latte.ca/camera/weblog/InnoSetup.png" align="right"> files somewhere and I was done, but when I switched to
+registering the conduit with the HotSync application (so that it would run,
+instead of just sitting there), I started getting errors, and nothing I've
+attempted so far can get rid of them.  I guess I can sort of understand why
+it thinks it can't delete the file, but I swear to you, I've unregistered
+the dll it thinks it can't delete about four different ways, and
+furthermore, as soon as the uninstaller exits I can delete the files either
+from the command line, or from the Windows Explorer, without any problem.
+Heck, I can even run the installer again, and it will overwrite them
+without complaining.  I just can't figure out how to do it
+programmatically.  How annoying.</p>
+
+<p>So,if anyone out there has any experience with InnoSetup, and/or
+uninstalling Palm Conduits, I'ld appreciate it if you could <a href="mailto:bwinton%2Bblog@latte.ca">drop me a line</a>, and I'll explain
+in more detail what I'm trying to do, and how it's failing, or you could <a href="http://www.latte.ca/svn/PalmBlosxom/setup.py">check out the source to
+my setup program</a> (which generates the .iss file for InnoSetup), and
+hopefully point out my misunderstanding from it.</p>
+
+<p><img src="http://bwinton.latte.ca/camera/weblog/NSIS.png" align="right"><b>Update:</b> I think I'm going to switch to NSIS.  I tried
+the innosetup newsgroups, but they weren't as helpful as I would have
+hoped.  I'll continue to read them, in the hopes that someone will answer
+my question, but I think that I'm not going to get an answer, or at least
+not one that I like, so NSIS it is.</p>
+    </div>
+    </article><article class="h-entry post-text"><header><h1 class="p-name entry-title"><a href="blake/tech/weblog/newcomputer.html" class="u-url">A New Start.</a></h1>
+        <div class="metadata">
+            <p class="byline author vcard"><span class="byline-name fn">Blake Winton</span></p>
+            <p class="dateline"><a href="blake/tech/weblog/newcomputer.html" rel="bookmark"><time class="published dt-published" datetime="2004-09-30T14:26:00-04:00" itemprop="datePublished" title="2004-09-30 14:26">2004-09-30 14:26</time></a></p>
+                <p class="commentline">
+        
+    <a href="blake/tech/weblog/newcomputer.html#disqus_thread" data-disqus-identifier="/blake/tech/weblog/newcomputer">Comments</a>
+
+
+        </p>
+</div>
+    </header><div class="p-summary entry-summary">
+    <p>I got a new computer at work on Monday, and so eagerly switched
+over all my data to it.  But I didn't install all the various programs
+that were on the old machine.  Partly because I had a ton of stuff
+installed, and my registry was a complete mess, and partly because I
+wasn't working on a lot of the tasks I used to work on, and so didn't
+need the tools installed anymore.  But one of the results of this is
+that my oh-so-clever palm-memo-to-weblog-entry conduit isn't
+installed, and indeed, the components it relies on also aren't
+installed, so while I have a perfect chance to write and test an
+installer, I haven't even started that yet, so all the weblog posts
+I'm writing there are likely going to be delayed by a few days or even
+up to a week.</p>
+
+<p>Boy was I ever right there.  It's taken almost three weeks to get
+that entry posted.  But now my conduit has an installer, and is
+packaged up into a dll, and registers itself and everything, so I
+should be able to send it off to other people with just a little more
+code in the installer.  I'm kind of pumped.  And apparently other
+people are interested in doing something similar, so my little bit of
+code might get released in a couple of other places too.  But for now,
+you can find the conduit, and the setup script which builds the dll
+and the installer <a href="http://www.latte.ca/svn/PalmBlosxom/">here</a>.  (The code is in
+the conduit directory, and the setup.py script is in the root.)</p>
+    </div>
+    </article><article class="h-entry post-text"><header><h1 class="p-name entry-title"><a href="blake/random/biking/routes.html" class="u-url">How I got to work this week.</a></h1>
+        <div class="metadata">
+            <p class="byline author vcard"><span class="byline-name fn">Blake Winton</span></p>
+            <p class="dateline"><a href="blake/random/biking/routes.html" rel="bookmark"><time class="published dt-published" datetime="2004-09-09T14:05:00-04:00" itemprop="datePublished" title="2004-09-09 14:05">2004-09-09 14:05</time></a></p>
+                <p class="commentline">
+        
+    <a href="blake/random/biking/routes.html#disqus_thread" data-disqus-identifier="/blake/random/biking/routes">Comments</a>
+
+
+        </p>
+</div>
+    </header><div class="p-summary entry-summary">
+    <a href="http://bwinton.latte.ca/camera/weblog/bikeRouteLarge.png"><img src="http://bwinton.latte.ca/camera/weblog/bikeRouteSmall.png" align="right"></a>
+<p>For a while now, I've been meaning to bike to work.  It's
+healthier, less crowded, more relaxing, and costs less than taking the TTC.
+Okay, so the two middle reasons are kind of made up, but the first one has been
+getting more and more compelling, and just recently the last one has taken on a
+new urgency.  I calculated that I was spending $19 per week travelling to and
+from work, and since we had to scrimp on our last grocery trip, having an extra
+$20 in the fund would have made a fairly large difference.  So I started biking
+to work.  It was fairly easy on the way there, but much harder on the way back,
+and it wasn't made any easier by my working out just before the ride home, nor
+by the fact that it's mostly uphill.  The next couple of times I tried it,
+however, it was much easier, probably because I'm getting more used to it.  So,
+without further ado, here's the path I take to and mostly from work, with some
+annotations.</p>
+
+<p>
+<b>1.</b>  This is by far the easiest way for me to get started.  It isn't
+marked on the map, but there's a series of laneways there that take me
+right to the start of the Belt Line, an abandoned railway track that was
+turned into a bike/jogging/walking path quite a while ago.<br><b>2.</b>  Zoom!  This big curvy section is all downhill, and there is a
+total of one stop sign on it.  There is also a lot of traffic, and some
+speed bumps, so on my way to work I get to zip by a billion cars, and feel
+extra fast.  Of course, with every good comes a bad, and on the way back I
+nearly die trying to get up the same hill.  (I take the path just to the
+right on the return trip.)  The first time I rode up it, I stopped halfway
+up.  The next time, I geared down to 1-3 (where the first number means the
+easiest gear of three on my front wheel, and the second number means the
+third easist gear of seven on my back wheel).  The next time, I only geared
+down to 2-1.  And the last time, I was still at 3-4 when I hit the top of
+the hill.  I spend most of my time on flat roads switching between 3-5,
+3-6, and 3-7, so my eventual goal is to stay in that range on large hills.
+At which point I'll probably look into changing the ratios of my gears, so
+that I can get more speed on the flat and downhill portions of my
+trip.<br><b>3.</b>  For something on a signed bike lane, this is a remarkably hard
+street to cross, since I have to jog over half a block to get to the new
+bike lane.  The right turn at the light isn't so bad, but the left turn
+from the major road onto the side street can really suck rocks if traffic
+is moving.  I hope they improve it, but I can't really see a good way for
+them to, since that's just the way the road goes.  It's also a pain coming
+the other way, involving a left turn at a light onto a major street.<br><b>4.</b>  I always miss this on the way back, leading to discussion #3
+again.  (I actually did a little more hunting around, and I found out where
+that bike lane actually starts, and ends up, and I think I might take that
+route more often now.) <br><b>5.</b>  There's a light at John and Queen, but not at Beverly and Queen,
+so I always cut over a block here, because crossing major streets is a lot
+easier when the traffic stops for you.<br><b>6.</b>  I actually lock my bike up about ½ a block north of the door
+into my office, partially because it's right outside the back door to my
+office (which is exit only), and partially because it's less likely to be
+used by the bike couriers who are also tenants of this building.<br></p>
+
+<p>And that's my transportation.  I've skipped a couple of days for various
+reasons so far, and I expect I'll continue to skip some days, but I am
+getting a lot more exercise than I used to, which can't be bad.  I'm really
+pretty excited about it, which you could probably have guessed by my
+creating an entire new category just for this post.  Surely I wouldn't do
+that if there was only going to be one post here, would I?  On the down
+side, I now want a lot of new toys for my bike, like a bike computer to
+tell me how far and how fast I've gone, and clipless pedals, and maybe a
+more comfortable seat.<br clear="all"></p>
+    </div>
+    </article><article class="h-entry post-text"><header><h1 class="p-name entry-title"><a href="amy/diversions/booksgood.html" class="u-url">Books Good</a></h1>
+        <div class="metadata">
+            <p class="byline author vcard"><span class="byline-name fn">Amy Brown</span></p>
+            <p class="dateline"><a href="amy/diversions/booksgood.html" rel="bookmark"><time class="published dt-published" datetime="2004-09-06T20:36:00-04:00" itemprop="datePublished" title="2004-09-06 20:36">2004-09-06 20:36</time></a></p>
+                <p class="commentline">
+        
+    <a href="amy/diversions/booksgood.html#disqus_thread" data-disqus-identifier="/amy/diversions/booksgood">Comments</a>
+
+
+        </p>
+</div>
+    </header><div class="p-summary entry-summary">
+    <p>
+In the past, as you have been unfortunate enough to witness, 
+I have been miserable about my life, feeling like it's not going
+anywhere or I'm not doing good enough or I'm not achieving anything or
+whatever.  Recently, however, that feeling has subsided.  I'm feeling
+mellow, like whatever needs doing will get done, and I'll be able to
+deal with stuff as it comes up, and I'm not a big loser.  It's
+refreshing!
+</p>
+<p>
+To what do I attribute this change?  If only I knew.  But I'm working on
+a theory that it has something to do with all the 
+<a href="http://www.latte.ca/~arbrown/reading.html">books</a> 
+I've been reading lately,
+really good books about normal people living their normal lives.  Like
+<em>The Curious Incident of the Dog in the Night-time</em> and 
+<em>Captain Corelli's Mandolin</em> and <em>Clare Callan</em>
+and <em>The Brothers K</em>.  I don't have a lot more to this theory,
+other than that maybe reading all these books has made me pull my 
+head out
+of my own ass and think about other people instead of just sitting around
+worrying about my own "problems".  
+</p>
+<p>
+I also haven't read any parenting advice books lately, I bet that helps.
+There's nothing that makes you think your life is so significant than
+reading a book all about what's wrong with it and what you have to do to
+make it better.
+</p>
+<hr width="30%">
+<p>
+By the way, the reason for all these books is that I finally got off my
+ass (actually got <em>on</em> my ass) and figured out how to use the 
+Toronto Public Library inter-library loan system on the Internet.  Now
+I barely have to do more than think "Huh, I'd like to read that book", and
+I get a call from a nice recorded lady telling me that the book is 
+waiting for me at my local branch.  It's amazing, except that
+<em>About a Boy</em>, <em>Due Preparations
+for the Plague</em>, <em>The Diary of Samuel Pepys</em>, <em>A Fine
+Balance</em>, and <em>Quicksilver</em> <strong>all</strong> arrived
+at the same time, just after I had taken out <em>The Brothers K</em>.
+That's almost 3500 pages of book.  Good thing I also know how to renew over
+the Internet.
+</p>
+    </div>
+    </article><article class="h-entry post-text"><header><h1 class="p-name entry-title"><a href="delphine/firstwords.html" class="u-url">First Words</a></h1>
+        <div class="metadata">
+            <p class="byline author vcard"><span class="byline-name fn">Amy Brown</span></p>
+            <p class="dateline"><a href="delphine/firstwords.html" rel="bookmark"><time class="published dt-published" datetime="2004-09-02T22:08:00-04:00" itemprop="datePublished" title="2004-09-02 22:08">2004-09-02 22:08</time></a></p>
+                <p class="commentline">
+        
+    <a href="delphine/firstwords.html#disqus_thread" data-disqus-identifier="/delphine/firstwords">Comments</a>
+
+
+        </p>
+</div>
+    </header><div class="p-summary entry-summary">
+    <p>
+I think I can officially declare that Delphine's first word is
+"up!"  Spoken imperiously while tugging on pant legs or holding up
+a book to be read.  She also says "Hi" and "Byebye" (actually
+"Buh-bye") but it's hard to tell whether she knows what they mean.
+"Buh-bye" is always accompanied by waving.  She also makes a 
+credible attempt at "Zeyde": "Tz-da", but she definitely doesn't know
+what (who) it means.
+</p>
+<p>
+In other news, she's sleeping pretty well in the crib.  She wails a few
+little wails when we put her down, and then drops off to sleep and 
+stays there until about 5:00 am or 6:00 am.  Then we bring her into
+bed and I desperately try and catch another hour of sleep while she 
+has breakfast.  I would like her to not cry when we put her down, and
+I would like her to not wake up so early, but I do not know how to 
+go about effecting either of those things.  I suppose I could go back
+to the advice books I scorned so thoroughly earlier, but I don't think
+I'm ready for that yet.
+</p>
+<p>
+She's eating pretty well, although I'm breaking a couple of rules
+in order to get her to eat: I don't sit her down in her high chair
+and feed her.  Instead, we hang out in the living room
+and I give her bites of whatever she's having while she toddles around
+and plays and hangs out.  She seems to eat more that way.  I only do
+that for one meal a day, though, and for the other two I make her sit
+properly.  It's not bedlam here, you know.  
+</p>
+<p>
+The other rule I break is that I let her wander around with her sippy 
+cup of milk, which is supposed to be bad for their teeth or make them 
+obese or something.  In general I'm not doing a great job looking after
+her teeth.  She won't let me brush them, and I don't know what the hell
+to do.  Every few days I poke at them ineffectually with her pink and
+yellow baby toothbrush while she clenches her jaw.  Maybe one day she'll 
+actually let me in 
+there.  Anyway, I'm sure my parents never brushed my teeth as a baby,
+and I turned out fine!  (A sound and popular argument among proponents
+of many a lousy parenting technique.)
+</p>
+<p>
+My friend Tanya from pre-natal class and I are both poking idly at
+the idea of doing something productive with our lives; me working
+for my father-in-law to earn money to buy a dishwasher, she making
+a documentary about her husband's family's pursuit of Native status,
+or something.  Clearly she is far cooler than me.  Anyway, to that end
+we need someone else to take care of our babies while we do our shit.
+We bandied about a few ideas, and finally settled on each other!  We're
+going to trade a few hours of child care a week.  I'm a little nervous --
+make that terrified -- about looking after a second toddler, but it's
+worth a try.  Maybe it won't be so bad?  It might be fun, even.  And
+one day soon (I hope) I'll have to look after two kids all the time, so
+this will be good practice.
+</p>
+<p>
+Oh yes.  I don't know if I should post about this because it seems like
+an overshare (I know, I've overshared so much, why stop now?  Because
+I've finally realized that family reads this sometimes is why.)  Anyway,
+I still haven't got my period back, and I'm getting impatient, so I've
+decided if I'm still not fertile by the end of the year I will wean Delphine.
+It will suck, but I don't want my kids to be years and years apart.  If
+I were my mother I would be six months pregnant with my second child
+already.  So, the clock is ticking for Miss Delphine's love/love relationship
+with my bosom.
+</p>
+    </div>
+    </article><article class="h-entry post-text"><header><h1 class="p-name entry-title"><a href="delphine/crib.html" class="u-url">Crib</a></h1>
+        <div class="metadata">
+            <p class="byline author vcard"><span class="byline-name fn">Amy Brown</span></p>
+            <p class="dateline"><a href="delphine/crib.html" rel="bookmark"><time class="published dt-published" datetime="2004-08-18T13:32:00-04:00" itemprop="datePublished" title="2004-08-18 13:32">2004-08-18 13:32</time></a></p>
+                <p class="commentline">
+        
+    <a href="delphine/crib.html#disqus_thread" data-disqus-identifier="/delphine/crib">Comments</a>
+
+
+        </p>
+</div>
+    </header><div class="p-summary entry-summary">
+    <p>
+We've been putting Delphine to sleep in the crib, as Blake mentioned
+below.  We started about a week and a half ago, with mixed results.
+</p>
+<p>
+The first night we put her in the crib and then sat there like idiots
+looking at her, thinking our very presence would calm her and
+eventually she would lie down and sleep.  Instead she cried more, 
+probably wondering why the hell we were just sitting there and not
+rescuing her.  Once we lay down and pretended to be asleep she stopped
+crying within a few minutes, and thereafter cried intermittently 
+for a while before falling asleep.  It's quite possible that she slept
+that entire night sitting up, but we didn't want to look in case she
+wasn't really asleep.
+</p>
+<p>
+The next night we did the bedtime routine and then put her down and
+lay down right away, and it was much better; again only a few minutes
+-- less than ten -- of crying and then intermittent crying for maybe
+twenty or thirty minutes until she fell asleep.  (When I say intermittent
+crying I mean one or two wails followed by three or four minutes of 
+silence.)
+</p>
+<p>
+The following night we moved her into her new bedroom, which turned out
+well because it meant we didn't have to worry about waking her up when
+we went to bed.  We put her down around 8:30 and then proceeded to go about
+our evening like adults.  Adults with two free hands.  Amazing.  (For
+the last fifteen months we have taken turns eating dinner because one
+of us is holding the baby, we have taken turns brushing our teeth and
+going to the washroom, and I have spent half my evenings with Delphine,
+half-asleep, attached to a breast.)
+</p>
+<p>
+We had one glorious night where I nursed her to sleep and then managed
+to put her down in the crib without waking her, and she slept the 
+<em>whole night through</em> without waking up.  We haven't duplicated
+that feat, but I have high hopes.
+</p>
+<p>
+I did a lot of soul-searching before we embarked on this process,
+probably too much.  It made me realize how privileged I am that
+my biggest worry is whether to let my child cry at bedtime -- not
+how I am going to pay the rent, or whether I will be able to get
+drinking water without being shot at or raped, or whether I will
+be allowed to vote.  My mental wrangling
+over this trivial matter bordered on the masturbatory, and frankly
+annoyed me after a few weeks of it.  
+</p>
+<p>
+At the end of all that I just
+decided to get on with it, and soon realized that all the theory in the
+world doesn't amount to much when faced with a real flesh-and-blood
+child.  It didn't take long to learn that, contrary to my research
+she actually cries a good deal less when we're <em>not</em> there,  
+and when we don't go and visit her.  If we pulled a Ferber and went
+and visited her every five minutes, she would just get worked up every
+five minutes and never get to sleep.  "Crying it out" doesn't apply to
+this child because she doesn't cry continuously when she's tired, she
+cries for a few minutes and then stops, and soon falls asleep.
+</p>
+<p>
+She does cry for longer if she's not actually tired; we made the mistake
+of putting her down earlier (got that idea from Dr Weissbluth -- I wonder
+how long it will be before I just ignore all the "experts" altogether)
+and she cried for a solid fifteen minutes.  We retrieved her and she stayed
+up for another hour or so before she was really ready for bed.
+</p>
+<p>
+The crying bothers Blake more than it bothers me.  If I deliberately try
+and imagine how she's feeling I get upset, but if I don't it's just noise.
+I can easily dissociate myself from my emotions and the emotions of others.  
+Maybe I'm autistic. Maybe I'm just a cold bitch.
+</p>
+    </div>
+    </article><article class="h-entry post-text"><header><h1 class="p-name entry-title"><a href="delphine/fifteenmonthcheckup.html" class="u-url">Fifteen Month Checkup</a></h1>
+        <div class="metadata">
+            <p class="byline author vcard"><span class="byline-name fn">Amy Brown</span></p>
+            <p class="dateline"><a href="delphine/fifteenmonthcheckup.html" rel="bookmark"><time class="published dt-published" datetime="2004-08-18T13:05:00-04:00" itemprop="datePublished" title="2004-08-18 13:05">2004-08-18 13:05</time></a></p>
+                <p class="commentline">
+        
+    <a href="delphine/fifteenmonthcheckup.html#disqus_thread" data-disqus-identifier="/delphine/fifteenmonthcheckup">Comments</a>
+
+
+        </p>
+</div>
+    </header><div class="p-summary entry-summary">
+    <p>
+Yesterday we took Delphine for her fifteen month checkup.  Everything
+was generally fine, but she is not growing as fast as she probably 
+should be.  I don't know the exact numbers (Blake?) but I think
+she has gained less than a pound since her last checkup at a year,
+and at that checkup she hadn't gained enough, either.  It could be
+that she's just growing in fits and starts, and this is a slow period,
+or it could be that she's really not getting enough of the right things
+to eat.  (Or I suppose it could be something more sinister, but that's
+unlikely and not worth worrying about at this point.)
+</p>
+<p>
+I find it hard to get her to eat -- she will have a few mouthfuls of
+something and then push it away, and she is fairly selective about what
+she eats.  Today I tried Dr Sears's 
+<a href="http://www.askdrsears.com/html/3/T030800.asp#T031200">nibble tray</a> 
+method:
+I put Cheerios (multi-grain), raspberries, some potato, and frozen peas
+into the compartments of a tart tray (like a muffin tin, but shallower).
+She actually did eat a fair bit of this morning's selection, and
+(surprisingly) not too much of it got ground into the carpet.
+</p>
+<p>
+She's been miserably sick lately, with some kind of non-respiratory
+virus which had her feverish and shaking and puking.  (First puke!)
+She hardly ate at all for a few days.  I'm glad we're still nursing 
+because that was the only thing she would take -- I couldn't get her to
+drink milk or water, or eat anything.  I may never wean her, it's
+so convenient.  I think she's better now; she slept all night with
+no crying, and the viral rash has gone.  
+</p>
+<p>
+She started walking on Friday; just decided it was time, I guess.  She's
+steady on her feet, because she's been practicing for so long.
+It's fun and a little thrilling to watch her walking around, as blasé
+as if she has been doing it for weeks.
+</p>
+<p>
+She doesn't talk yet, at least not in English; sometimes it sounds like
+Cantonese, sometimes it sounds like German.  For a week or so she was
+calling the cats "Meeaaooow", so it could be that her first word was
+in cat.  Hmph.
+</p>
+    </div>
+    </article><article class="h-entry post-text"><header><h1 class="p-name entry-title"><a href="delphine/sleeping/thesaddestthing.html" class="u-url">The Saddest Thing In The World.</a></h1>
+        <div class="metadata">
+            <p class="byline author vcard"><span class="byline-name fn">Amy Brown</span></p>
+            <p class="dateline"><a href="delphine/sleeping/thesaddestthing.html" rel="bookmark"><time class="published dt-published" datetime="2004-08-12T11:57:00-04:00" itemprop="datePublished" title="2004-08-12 11:57">2004-08-12 11:57</time></a></p>
+                <p class="commentline">
+        
+    <a href="delphine/sleeping/thesaddestthing.html#disqus_thread" data-disqus-identifier="/delphine/sleeping/thesaddestthing">Comments</a>
+
+
+        </p>
+</div>
+    </header><div class="p-summary entry-summary">
+    #datetime 6/8/04 14:55
+<p>
+We've decided to teach Delphine to sleep by herself in a crib.  I guess I
+knew that this day would come eventually, but I had hoped that she would
+decide to sleep on her own, uh, on her own.  Or at the very least to be
+able to understand why we were leaving her alone, and to try to work with
+us at least a little.  But she didn't, and isn't, and so she cries and
+cries, and it breaks my heart to not be able to go and pick her up and hold
+her and cuddle her until she's all better.  But I know that that wouldn't
+teach her that she's okay sleeping on her own, so I restrain myself.  On
+the other hand, I can't help but wonder whether not going to her is just
+teaching her that she can't depend on us for help and comforting when she
+needs it.  Being a father is really hard sometimes.
+</p>
+<p>
+Update: For the past two nights, she hasn't woken up when we put her to
+bed, and so has ended up sleeping through the night.  Here's hoping that
+this is a trend that continues.
+</p>
+<p>
+Update #2: It didn't.  She woke up and cried at 4:00 am this morning.  But
+I think she might be getting a new tooth, and in pain.  I would normally
+give her Tylenol, but it wouldn't last through the night, so that plan is a
+non-starter.  Maybe I'll suggest it if she wakes up again.
+</p>
+    </div>
+    </article>
+</div>
+
+        <nav class="postindexpager"><ul class="pager">
+<li class="previous">
+                <a href="index-9.html" rel="prev">Newer posts</a>
+            </li>
+            <li class="next">
+                <a href="index-7.html" rel="next">Older posts</a>
+            </li>
+        </ul></nav><script>var disqus_shortname="latteblog";(function(){var a=document.createElement("script");a.async=true;a.src="https://"+disqus_shortname+".disqus.com/count.js";(document.getElementsByTagName("head")[0]||document.getElementsByTagName("body")[0]).appendChild(a)}());</script>
+</div>
+        <!--End of body content-->
+
+        <footer id="footer"><div style="margin-bottom: 12px">Contents © 2016         <a href="mailto:bwinton@latte.ca">Blake Winton</a>
+<a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/2.5/">
+<img alt="Creative Commons License BY-NC-SA" style="border-width: 0; vertical-align: bottom" src="https://licensebuttons.net/l/by-nc-sa/2.5/88x31.png"></a>
+</div>
+            
+        </footer>
+</div>
+</div>
+
+
+            <script src="assets/js/jquery.min.js"></script><script src="assets/js/bootstrap.min.js"></script><script src="assets/js/moment-with-locales.min.js"></script><script src="assets/js/fancydates.js"></script><script src="assets/js/jquery.colorbox-min.js"></script><script>$('a.image-reference:not(.islink) img:not(.islink)').parent().colorbox({rel:"gal",maxWidth:"100%",maxHeight:"100%",scalePhotos:true});</script><!-- fancy dates --><script>
+    moment.locale("en");
+    fancydates(0, "YYYY-MM-DD HH:mm");
+    </script><!-- end fancy dates --><script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-5805429-2', 'auto');
+  ga('send', 'pageview');
+
+</script>
+</body>
+</html>

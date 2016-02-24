@@ -1,0 +1,220 @@
+<?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet type="text/xsl" href="../assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Blog-O! (itouch)</title><link>https://weblog.latte.ca/</link><description></description><atom:link type="application/rss+xml" href="https://weblog.latte.ca/tags/itouch.xml" rel="self"></atom:link><language>en</language><lastBuildDate>Wed, 24 Feb 2016 17:07:40 GMT</lastBuildDate><generator>https://getnikola.com/</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Some notes on cross-compiling GambitC</title><link>https://weblog.latte.ca/blake/tech/iTouch/gambit.html</link><dc:creator>Blake Winton</dc:creator><description>&lt;div&gt;&lt;p&gt;The command to use is:&lt;/p&gt;
+&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;$ env &lt;span class="nv"&gt;CC&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;/usr/local/bin/arm-apple-darwin-gcc &lt;span class="nv"&gt;CC_FOR_BUILD&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;gcc ./configure --host&lt;span class="o"&gt;=&lt;/span&gt;mac&lt;span class="p"&gt;;&lt;/span&gt; make
+&lt;/pre&gt;
+
+
+&lt;p&gt;Well, kind of.  First you do that, then you copy gsc/gsc to gsc/gsc.onboard,
+then you go to a new directory, and type:&lt;/p&gt;
+&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;$ ./configure&lt;span class="p"&gt;;&lt;/span&gt;make
+&lt;/pre&gt;
+
+
+&lt;p&gt;and copy the gsc/gsc from that directory into the first directory.&lt;/p&gt;
+&lt;p&gt;To compile a script into an exe:&lt;/p&gt;
+&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;$ gsc/gsc -:&lt;span class="o"&gt;=&lt;/span&gt;. -c euler.scm
+$ gsc/gsc -:&lt;span class="o"&gt;=&lt;/span&gt;. -link euler.c
+$ /usr/local/bin/arm-apple-darwin-gcc euler.c euler_.c -Iinclude -Llib -lgambc -o euler
+&lt;/pre&gt;
+
+
+&lt;p&gt;It's freaking huge!&lt;/p&gt;
+&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;$ ls -alh euler
+-rwxr-xr-x   &lt;span class="m"&gt;1&lt;/span&gt; bwinton  bwinton  4M Jan &lt;span class="m"&gt;23&lt;/span&gt; 14:22 euler
+$ ls -alh /WifiToggle
+-rwxr-xr-x   &lt;span class="m"&gt;1&lt;/span&gt; bwinton  bwinton  17K Jan &lt;span class="m"&gt;16&lt;/span&gt; 14:07 /WifiToggle
+&lt;/pre&gt;
+
+
+&lt;p&gt;And it's not a lot faster.
+0.1643 seconds for the compiled version, as opposed to 0.1803 seconds for the interpreter. &lt;/p&gt;
+&lt;p&gt;But on my Mac:&lt;/p&gt;
+&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;$ more m1.c
+power_of_2 &lt;span class="o"&gt;(&lt;/span&gt;int x&lt;span class="o"&gt;)&lt;/span&gt; &lt;span class="o"&gt;{&lt;/span&gt; &lt;span class="k"&gt;return&lt;/span&gt; 1&lt;span class="s"&gt;&amp;lt;&amp;lt;x; }&lt;/span&gt;
+&lt;span class="s"&gt;$ more m2.scm&lt;/span&gt;
+&lt;span class="s"&gt;(c-declare "ex&lt;/span&gt;tern int power_of_2 &lt;span class="o"&gt;()&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;&lt;span class="s2"&gt;")&lt;/span&gt;
+&lt;span class="s2"&gt;(define pow2 (c-lambda (int) int "&lt;/span&gt;power_of_2&lt;span class="s2"&gt;"))&lt;/span&gt;
+&lt;span class="s2"&gt;(define (twice x) (cons x x))&lt;/span&gt;
+$&lt;span class="s2"&gt; more m3.scm&lt;/span&gt;
+&lt;span class="s2"&gt;(write (map twice (map pow2 '(1 2 3 4)))) (newline)&lt;/span&gt;
+$&lt;span class="s2"&gt; gsc/gsc -:=. -link -flat -o foo.o1.c m2 m3&lt;/span&gt;
+$&lt;span class="s2"&gt; /usr/local/bin/arm-apple-darwin-gcc -Iinclude -bundle -D___DYNAMIC m1.c m2.c m3.c foo.o1.c -o foo.o1&lt;/span&gt;
+$&lt;span class="s2"&gt; ls -alh foo.o1&lt;/span&gt;
+&lt;span class="s2"&gt;-rwxr-xr-x   1 bwinton  bwinton    13K Jan 23 14:45 foo.o1&lt;/span&gt;
+&lt;/pre&gt;
+
+
+&lt;p&gt;then on the iTouch,&lt;/p&gt;
+&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;# scp bwinton@latte.ca:/Users/bwinton/Programming/Bazaar/iTouch/gambc-v4_1_2/foo.o1 .
+# gsi foo.o1
+((2 . 2) (4 . 4) (8 . 8) (16 . 16))
+# gsi
+Gambit v4.1.2
+
+&amp;gt; (load "foo")
+((2 . 2) (4 . 4) (8 . 8) (16 . 16))
+"/private/var/root/foo.o1"
+&amp;gt; (twice 5)
+(5 . 5)
+&amp;gt; (pow2 10)
+1024
+&lt;/pre&gt;&lt;/div&gt;</description><category>gambit</category><category>itouch</category><category>scheme</category><guid>https://weblog.latte.ca/blake/tech/iTouch/gambit.html</guid><pubDate>Fri, 12 Dec 2008 22:09:47 GMT</pubDate></item><item><title>More iPhone games…</title><link>https://weblog.latte.ca/blake/tech/iTouch/moregames.html</link><dc:creator>Blake Winton</dc:creator><description>&lt;div&gt;&lt;p&gt;Okay, one game in particular this time.  One of my favourites from
+back in my Palm days.&lt;/p&gt;
+&lt;p&gt;&lt;a href="http://itunes.apple.com/WebObjects/MZStore.woa/wa/viewSoftware?id=297288395&amp;amp;mt=8"&gt;Bike Or Die 2&lt;/a&gt;.&lt;br&gt;&lt;img alt="I can totally land this!" src="https://weblog.latte.ca/images/blake/iTouch/BikeOrDie.png"&gt;&lt;/p&gt;
+&lt;p&gt;It’s awesome.  It’s harder than I remember the Palm version being, but
+that's probably as much because I'm out of practice as anything else.
+After a couple of weeks of playing the beta version, I’m now at the
+point where I rarely hit the wrong button, even though they're
+on-screen instead of being hard buttons.&lt;/p&gt;
+&lt;p&gt;Not only is it a great game for what it is, but it’s got a ton of
+&lt;a href="http://bike.toyspring.com/levels.php"&gt;user-created levels&lt;/a&gt;, and an
+online &lt;a href="http://bike.toyspring.com/view.php"&gt;high score board&lt;/a&gt; (which
+I’m &lt;a href="http://bike.toyspring.com/player.php?p=35"&gt;nowhere near&lt;/a&gt; the top
+of).  The re-playability of this game is stunning.&lt;/p&gt;
+&lt;p&gt;If you're still undecided, you can read &lt;a href="http://forums.toucharcade.com/showthread.php?t=1318"&gt;the
+thread&lt;/a&gt; about it
+on TouchArcade.  (Yeah, I’ve been answering a bunch of questions over
+there.)  There’s also &lt;a href="http://tinyurl.com/bikeordie"&gt;a video&lt;/a&gt; showing
+gameplay from the beta.&lt;/p&gt;
+&lt;p&gt;Finally, it only costs $2.99, but I hear it’s going up to $7 after the
+introductory period is over.  (I suggested he sell it for $7.99-$9.99,
+but he’s apparently a nicer person than I am.)&lt;/p&gt;
+&lt;p&gt;(No, he’s not paying me for this.  Heck, I didn’t even get an iTunes
+gift certificate for all my hard work finding bugs.  I just really
+like the game.)&lt;/p&gt;&lt;/div&gt;</description><category>bikeordie</category><category>games</category><category>itouch</category><guid>https://weblog.latte.ca/blake/tech/iTouch/moregames.html</guid><pubDate>Wed, 19 Nov 2008 18:47:34 GMT</pubDate></item><item><title>iTouch coolness…</title><link>https://weblog.latte.ca/blake/tech/iTouch/coolness.html</link><dc:creator>Blake Winton</dc:creator><description>&lt;div&gt;&lt;p&gt;What more could I say?&lt;/p&gt;
+&lt;p&gt;&lt;img alt="VNC" src="https://weblog.latte.ca/images/blake/iTouch/Vnc.png"&gt;&lt;/p&gt;
+&lt;p&gt;Yeah, it’s my Windows box, displaying my iTouch’s screen, over VNC.&lt;/p&gt;
+&lt;p&gt;Pure coolness.&lt;/p&gt;
+&lt;p&gt;(Oh, and the song it’s playing is Fancy Footwork by Chromeo.)&lt;/p&gt;&lt;/div&gt;</description><category>itouch</category><category>neat.</category><category>vnc</category><guid>https://weblog.latte.ca/blake/tech/iTouch/coolness.html</guid><pubDate>Tue, 30 Sep 2008 21:03:51 GMT</pubDate></item><item><title>iPhone games…</title><link>https://weblog.latte.ca/blake/tech/iTouch/games.html</link><dc:creator>Blake Winton</dc:creator><description>&lt;div&gt;&lt;p&gt;A co-worker recently got a new iPhone, and I since he didn’t have many
+apps on it yet, I thought I’ld send him a list of the stuff I had
+bought/downloaded and enjoyed.  So, without any further ado, here are
+a few of my favourites, all available on the AppStore.&lt;sup id="fnref:appstore"&gt;&lt;a class="footnote-ref" href="https://weblog.latte.ca/blake/tech/iTouch/games.html#fn:appstore" rel="footnote"&gt;1&lt;/a&gt;&lt;/sup&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href="http://phobos.apple.com/WebObjects/MZStore.woa/wa/viewSoftware?id=288337432&amp;amp;mt=8"&gt;Toy Bot Diaries&lt;/a&gt;.  (The link is to the free version, but I bought the &lt;a href="http://phobos.apple.com/WebObjects/MZStore.woa/wa/viewSoftware?id=287747021&amp;amp;mt=8"&gt;full version&lt;/a&gt;.)&lt;br&gt;&lt;img alt="Wheeee!" src="https://weblog.latte.ca/images/blake/iTouch/ToyBot.png"&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href="http://phobos.apple.com/WebObjects/MZStore.woa/wa/viewSoftware?id=290775344&amp;amp;mt=8"&gt;Galcon&lt;/a&gt;.
+(The link is to the free version, but I bought the &lt;a href="http://phobos.apple.com/WebObjects/MZStore.woa/wa/viewSoftware?id=285820845&amp;amp;mt=8"&gt;full version&lt;/a&gt;.)&lt;br&gt;&lt;img alt="Whoa!" src="https://weblog.latte.ca/images/blake/iTouch/Galcon.png"&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href="http://phobos.apple.com/WebObjects/MZStore.woa/wa/viewSoftware?id=290807369&amp;amp;mt=8"&gt;Line Rider&lt;/a&gt;.  ($2.99, but c’mon, it’s Line Rider.  How can you &lt;u&gt;not&lt;/u&gt; get
+it?  ;)&lt;br&gt;&lt;img alt="Aaaaaah!" src="https://weblog.latte.ca/images/blake/iTouch/LineRider.png"&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href="http://phobos.apple.com/WebObjects/MZStore.woa/wa/viewSoftware?id=284540316&amp;amp;mt=8"&gt;Twitterrific&lt;/a&gt;.
+(Free, but only useful if you’re on Twitter.  Which I am.  As
+&lt;a href="http://www.twitter.com/bwinton/"&gt;bwinton&lt;/a&gt;.)&lt;br&gt;&lt;img alt="Chat!" src="https://weblog.latte.ca/images/blake/iTouch/Twitterrific.png"&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href="http://phobos.apple.com/WebObjects/MZStore.woa/wa/viewSoftware?id=285921640&amp;amp;mt=8"&gt;TimmyMe&lt;/a&gt;.  (Free, finds the closest Tim Hortons to you.)&lt;br&gt;&lt;img alt="Caffeine!" src="https://weblog.latte.ca/images/blake/iTouch/TimmyMe.png"&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href="http://phobos.apple.com/WebObjects/MZStore.woa/wa/viewSoftware?id=284972147&amp;amp;mt=8"&gt;Tap Tap Revenge&lt;/a&gt;.  (Free, like Dance Dance Revolution, but for your fingers.  I
+actually don’t play this much, but it’s free.)&lt;br&gt;&lt;img alt="Ba dum dum dum!" src="https://weblog.latte.ca/images/blake/iTouch/TapTap.png"&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href="http://phobos.apple.com/WebObjects/MZStore.woa/wa/viewSoftware?id=285800495&amp;amp;mt=8"&gt;PapiJump&lt;/a&gt;.  (Free.  By the guy who made the world’s most addictive Palm game,
+&lt;a href="http://www.sfcave.com/palm.php"&gt;SFCave&lt;/a&gt;.)&lt;br&gt;&lt;img alt="Boing!" src="https://weblog.latte.ca/images/blake/iTouch/PapiJump.png"&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href="http://phobos.apple.com/WebObjects/MZStore.woa/wa/viewSoftware?id=284940503&amp;amp;mt=8"&gt;Labyrinth&lt;/a&gt;.
+(The link is to the free version.  I didn’t buy the &lt;a href="http://phobos.apple.com/WebObjects/MZStore.woa/wa/viewSoftware?id=284571899&amp;amp;mt=8"&gt;full version&lt;/a&gt; of this.)&lt;br&gt;&lt;img alt="Easy now!" src="https://weblog.latte.ca/images/blake/iTouch/Labyrinth.png"&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href="http://phobos.apple.com/WebObjects/MZStore.woa/wa/viewSoftware?id=284596345&amp;amp;mt=8"&gt;Cube Runner&lt;/a&gt;.  (Free.  I got this after watching someone play it on the subway.)&lt;br&gt;&lt;img alt="Whoo-ha!" src="https://weblog.latte.ca/images/blake/iTouch/CubeRunner.png"&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href="http://phobos.apple.com/WebObjects/MZStore.woa/wa/viewSoftware?id=281736535&amp;amp;mt=8"&gt;Enigmo&lt;/a&gt;.  ($4.99, but really impressive.  Really, really impressive.)&lt;br&gt;&lt;img alt="Ahhhh!" src="https://weblog.latte.ca/images/blake/iTouch/Enigmo.png"&gt;&lt;/p&gt;
+&lt;p&gt;That’s about it…&lt;/p&gt;
+&lt;div class="footnote"&gt;
+&lt;hr&gt;&lt;ol&gt;&lt;li id="fn:appstore"&gt;
+&lt;p&gt;As opposed to Jailbreak apps, which I’ve got a few of.  They tend to be more productivity/programming apps, which I didn’t think he’ld be interested in. &lt;a class="footnote-backref" href="https://weblog.latte.ca/blake/tech/iTouch/games.html#fnref:appstore" rev="footnote" title="Jump back to footnote 1 in the text"&gt;↩&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;&lt;/div&gt;&lt;/div&gt;</description><category>games</category><category>itouch</category><guid>https://weblog.latte.ca/blake/tech/iTouch/games.html</guid><pubDate>Wed, 24 Sep 2008 17:58:51 GMT</pubDate></item><item><title>More pictures.</title><link>https://weblog.latte.ca/delphine/pictures/jul19.html</link><dc:creator>Blake Winton</dc:creator><description>&lt;div&gt;&lt;p&gt;This afternoon, Cordelia wanted to “paint on your computer”!  so after
+I finished my game, I fired up Sketches, and this is what she ended up
+painting.  It’s nothing in particular, but kind of pretty nonetheless.&lt;/p&gt;
+&lt;p align="center"&gt;&lt;img src="https://weblog.latte.ca/images/delphine/2008-07-19/Cordelia.jpg"&gt;&lt;br clear="all"&gt;&lt;/p&gt;&lt;/div&gt;</description><category>cordelia</category><category>images</category><category>itouch</category><category>pictures</category><guid>https://weblog.latte.ca/delphine/pictures/jul19.html</guid><pubDate>Sat, 19 Jul 2008 22:41:03 GMT</pubDate></item><item><title>More pictures.</title><link>https://weblog.latte.ca/delphine/pictures/jun12.html</link><dc:creator>Blake Winton</dc:creator><description>&lt;div&gt;&lt;p&gt;I’ve recently installed a new version of Sketches, and today Delphine
+asked if we could draw another picture.  So we did.  Then we emailed
+it to Amy, and I got Delphine to tell me what letters to write for her
+sentence.  (I also told her about putting a space between each word,
+which is something that Ms. Hollister said that we could tell her
+about if we wanted.)&lt;/p&gt;
+&lt;p&gt;The sentence was “Ths is a heis on a hil wth to bsis.”, which I’m sure
+you can all read as “This is a house on a hill with two bushes.”.&lt;/p&gt;
+&lt;p align="center"&gt;&lt;img src="https://weblog.latte.ca/images/delphine/2008-06-12/Sketches.jpg"&gt;&lt;br clear="all"&gt;&lt;/p&gt;&lt;/div&gt;</description><category>delphine</category><category>images</category><category>itouch</category><category>pictures</category><guid>https://weblog.latte.ca/delphine/pictures/jun12.html</guid><pubDate>Fri, 13 Jun 2008 02:40:39 GMT</pubDate></item><item><title>An odd restriction</title><link>https://weblog.latte.ca/blake/tech/scheme/backtick.html</link><dc:creator>Blake Winton</dc:creator><description>&lt;div&gt;&lt;p&gt;As &lt;a href="http://weblog.latte.ca/blake/tech/iTouch/languages.html"&gt;I mentioned&lt;/a&gt; before, I’ve
+ported Gambit Scheme to my iTouch, and have been playing around with
+it a little.  It’s pretty nice all in all, but I recently ran into a
+small problem while I was trying to play around with macros.  The
+problem?  There’s no way to enter a backtick (`) on the iTouch!  That
+means that I don’t really have a way to write code like&lt;/p&gt;
+&lt;table class="codehilitetable"&gt;&lt;tr&gt;&lt;td class="linenos"&gt;&lt;div class="linenodiv"&gt;&lt;pre&gt;1&lt;/pre&gt;&lt;/div&gt;&lt;/td&gt;&lt;td class="code"&gt;&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="o"&gt;`&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt; &lt;span class="nv"&gt;a&lt;/span&gt; &lt;span class="nv"&gt;b&lt;/span&gt; &lt;span class="o"&gt;,&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nb"&gt;+ &lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt; &lt;span class="mi"&gt;2&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="nv"&gt;d&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;/pre&gt;
+&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;p&gt;which makes writing macros a lot more painful.  Fortunately, I got a
+lot of help from the people on &lt;a href="irc://irc.freenode.net/gambit"&gt;IRC&lt;/a&gt;
+and on the &lt;a href="https://webmail.iro.umontreal.ca/pipermail/gambit-list/"&gt;Gambit mailing list&lt;/a&gt;.
+Specifically, Marc Feeley, the author of Gambit, &lt;a href="https://webmail.iro.umontreal.ca/pipermail/gambit-list/2008-February/002011.html"&gt;posted&lt;/a&gt;
+a snippet of code that I could put into my .gambcini file that would
+add $ as a synonym for `.  The code looked like this:&lt;/p&gt;
+&lt;table class="codehilitetable"&gt;&lt;tr&gt;&lt;td class="linenos"&gt;&lt;div class="linenodiv"&gt;&lt;pre&gt;1
+2
+3
+4
+5
+6
+7&lt;/pre&gt;&lt;/div&gt;&lt;/td&gt;&lt;td class="code"&gt;&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nf"&gt;begin&lt;/span&gt;
+  &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="o"&gt;##&lt;/span&gt;&lt;span class="nv"&gt;readtable-char-class-set!&lt;/span&gt;
+    &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nf"&gt;current-readtable&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+    &lt;span class="sc"&gt;#\$&lt;/span&gt;  &lt;span class="c1"&gt;;; the character to dispatch on&lt;/span&gt;
+    &lt;span class="no"&gt;#t&lt;/span&gt;   &lt;span class="c1"&gt;;; this character is a delimiter&lt;/span&gt;
+    &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="k"&gt;lambda &lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nf"&gt;re&lt;/span&gt; &lt;span class="nv"&gt;c&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="o"&gt;##&lt;/span&gt;&lt;span class="nv"&gt;read-quotation&lt;/span&gt; &lt;span class="nv"&gt;re&lt;/span&gt; &lt;span class="o"&gt;#&lt;/span&gt;&lt;span class="err"&gt;\&lt;/span&gt;&lt;span class="o"&gt;`&lt;/span&gt;&lt;span class="p"&gt;)))&lt;/span&gt;  &lt;span class="c1"&gt;;; handler&lt;/span&gt;
+  &lt;span class="no"&gt;#f&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;/pre&gt;
+&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;p&gt;and the example, which works, is:&lt;/p&gt;
+&lt;table class="codehilitetable"&gt;&lt;tr&gt;&lt;td class="linenos"&gt;&lt;div class="linenodiv"&gt;&lt;pre&gt;1
+2&lt;/pre&gt;&lt;/div&gt;&lt;/td&gt;&lt;td class="code"&gt;&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="nv"&gt;$&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt; &lt;span class="o"&gt;,&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nb"&gt;+ &lt;/span&gt;&lt;span class="mi"&gt;2&lt;/span&gt; &lt;span class="mi"&gt;3&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="mi"&gt;4&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="nv"&gt;output:&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt; &lt;span class="mi"&gt;5&lt;/span&gt; &lt;span class="mi"&gt;4&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;/pre&gt;
+&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;p&gt;If you’re trying to write that code on your iTouch, you might notice that it
+includes the forbidden `, and so you’re once again out of luck.  Except that
+in this case, you can replace #\` with #\u0060, which you can type in on the
+iTouch, and then it’ll all work.&lt;/p&gt;&lt;/div&gt;</description><category>gambit</category><category>itouch</category><category>macros</category><category>scheme</category><guid>https://weblog.latte.ca/blake/tech/scheme/backtick.html</guid><pubDate>Wed, 09 Apr 2008 14:20:43 GMT</pubDate></item><item><title>Fixing the blog for iPhones.</title><link>https://weblog.latte.ca/blake/tech/weblog/itouch.html</link><dc:creator>Blake Winton</dc:creator><description>&lt;p&gt;A while ago, I had bought an iPod Touch, and started messing around
+with the CSS on this weblog, to try and get it looking a little nicer
+on the small screen.  Sadly, it never quite worked, and because of a
+bug in my selector (“min-device-width” should have been
+“max-device-width”), I broke the weblog for Safari too.  Fortunately,
+today, I grabbed a copy of the latest version of Safari, and fixed the
+bug!  So now iPhones and iTouches will both get a pretty version of
+the site, and Safari 3.1 looks beautiful again.  Even more beautiful,
+now that SVG is supported.  (&lt;a href="https://weblog.latte.ca/blake/tech/doesThisWorkForYou"&gt;Give it a try&lt;/a&gt;, and let me know if you can see the
+green ? in a circle.)&lt;/p&gt;</description><category>css</category><category>itouch</category><category>weblog</category><guid>https://weblog.latte.ca/blake/tech/weblog/itouch.html</guid><pubDate>Wed, 26 Mar 2008 15:53:08 GMT</pubDate></item><item><title>More pictures.</title><link>https://weblog.latte.ca/delphine/pictures/mar16.html</link><dc:creator>Blake Winton</dc:creator><description>&lt;p&gt;It’s been a while since Delphine has wanted to play on my little
+computer at bedtime.  We’ve been too busy reading old, old books about
+animals of various kinds.  Yesterday, we both seemed to realize this,
+and decided that tonight we would play on the little computer instead
+of reading books.  I’m sure Delphine was thinking something more along
+the lines of “We’ll play on the little computer, and &lt;i&gt;then&lt;/i&gt; read
+books”, but that was never going to happen.&lt;/p&gt;
+
+&lt;p&gt;The commentary on this is “It’s a head.  On a slide.  With a hat,
+and the sun.”&lt;/p&gt;
+
+&lt;p align="center"&gt;&lt;img src="https://weblog.latte.ca/images/delphine/2008-03-16/Sketches.jpg"&gt;&lt;br clear="all"&gt;&lt;/p&gt;</description><category>delphine</category><category>images</category><category>itouch</category><category>pictures</category><guid>https://weblog.latte.ca/delphine/pictures/mar16.html</guid><pubDate>Mon, 17 Mar 2008 00:54:04 GMT</pubDate></item><item><title>Other dynamically-changing stuff.</title><link>https://weblog.latte.ca/blake/tech/iTouch/updatingnonicons.html</link><dc:creator>Blake Winton</dc:creator><description>&lt;div&gt;&lt;p&gt;Last night I was browsing the newest iTouch apps, and I saw one called
+&lt;a href="http://www.iamas.ac.jp/%7Eaka/iphone/#LEDBanner.app"&gt;LEDBanner&lt;/a&gt;.  It
+allowed you to scroll text across your screen as if your screen was a
+set of LEDs.  My only problem with it was that I couldn’t
+programmatically change the text.  Fortunately the source was
+available, and so, with only minor changes, I now have &lt;a href="https://weblog.latte.ca/static/blake/LEDBanner.zip"&gt;a
+version&lt;/a&gt; which
+lets me change the text to whatever I want.&lt;/p&gt;
+&lt;p&gt;For instance, the following scheme code:&lt;/p&gt;
+&lt;table class="codehilitetable"&gt;&lt;tr&gt;&lt;td class="linenos"&gt;&lt;div class="linenodiv"&gt;&lt;pre&gt; 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13
+14&lt;/pre&gt;&lt;/div&gt;&lt;/td&gt;&lt;td class="code"&gt;&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;#! /usr/bin/gsi
+(define (flmod x y) (fl- x (fl* (floor (fl/ x y)) y)))
+(define (%100 time) (flmod (floor (time-&amp;gt;seconds time))
+(fixnum-&amp;gt;flonum 100)))
+(define (f)
+  (begin
+    (with-output-to-file
+      (list
+        path: "~/Library/Preferences/org.akamatsu.LEDBanner.msg"
+        truncate: #t)
+      (lambda () (display (%100 (current-time)))))
+    (thread-sleep! 3)
+    (f)))
+(f)
+&lt;/pre&gt;
+&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;p&gt;changes the text every three seconds to the number of seconds, modulo
+100.  Which turns out to be a mostly-random number, as shown below.&lt;/p&gt;
+&lt;p&gt;&lt;img alt="The number 8." src="https://weblog.latte.ca/images/blake/led.png" title="Ocho!"&gt;&lt;/p&gt;&lt;/div&gt;</description><category>itouch</category><category>ledbanner</category><category>programming</category><guid>https://weblog.latte.ca/blake/tech/iTouch/updatingnonicons.html</guid><pubDate>Tue, 04 Mar 2008 21:09:59 GMT</pubDate></item></channel></rss>

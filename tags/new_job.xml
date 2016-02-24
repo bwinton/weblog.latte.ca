@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet type="text/xsl" href="../assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Blog-O! (new_job)</title><link>https://weblog.latte.ca/</link><description></description><atom:link type="application/rss+xml" href="https://weblog.latte.ca/tags/new_job.xml" rel="self"></atom:link><language>en</language><lastBuildDate>Wed, 24 Feb 2016 17:07:35 GMT</lastBuildDate><generator>https://getnikola.com/</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>My first couple of days at Mozilla Messaging.</title><link>https://weblog.latte.ca/blake/employment/mozilla/jobatmomo.html</link><dc:creator>Blake Winton</dc:creator><description>&lt;div&gt;&lt;p&gt;A few weeks ago I started a new full-time contract at &lt;a href="http://mozillamessaging.com/"&gt;Mozilla
+Messaging&lt;/a&gt; (a.k.a. the people who brought you
+Thunderbird).  I meant to post this on the Wednesday after I started, but
+didn’t get around to it until now.  So, here you go, my notes from just
+after I started a new job.&lt;/p&gt;
+&lt;p&gt;It has been a pretty crazy couple of days, both because I’m not that used
+to working for a full 8 hours on one thing, and because I’m at the point
+where there’s still so much to learn that I could spend all my time
+researching stuff, and never get anything done.&lt;/p&gt;
+&lt;p&gt;But even with all the stuff for me to learn, I feel like I’ve made a fair
+bit of progress.  There were a few bugs assigned to me, based on &lt;a href="http://hg.mozilla.org/comm-central/rev/98a7de404c08"&gt;a
+previous patch&lt;/a&gt;, as
+well as a couple of things left to do to get &lt;a href="https://bugzilla.mozilla.org/show_bug.cgi?id=45715"&gt;the feature&lt;/a&gt; working, so I jumped
+right in to those.  After I had new patches up for review on all of those
+bugs, I talked with &lt;a href="http://clarkbw.net/blog/"&gt;Bryan Clark&lt;/a&gt; about what bugs
+I should tackle next.  He and &lt;a href="http://ascher.ca/blog/"&gt;David Ascher&lt;/a&gt; both
+suggested that the new &lt;a href="https://bugzilla.mozilla.org/show_bug.cgi?id=autoconfig"&gt;automatic mail server config&lt;/a&gt; dialog could use a
+bit of love.&lt;/p&gt;
+&lt;p&gt;This morning, I did some investigation on group email addresses for &lt;a href="https://bugzilla.mozilla.org/show_bug.cgi?id=496440"&gt;one of
+the bugs&lt;/a&gt; I’m working
+on, and took a look at how the autoconfig dialog was put together so that I
+wouldn’t sound like I was completely lost in the meeting.  (XUL, CSS, and
+Javascript.  No surprises there.  :)  Then, after the &lt;a href="https://wiki.mozilla.org/Thunderbird/StatusMeetings/2009-06-09"&gt;Status
+Meeting&lt;/a&gt;,
+Bryan and I chatted a bit about what the various bugs were that he had
+assigned to me, and what sort of things I might look into to try and fix
+them.  A few hours later, I had a fix for &lt;a href="https://bugzilla.mozilla.org/show_bug.cgi?id=490105"&gt;one of them&lt;/a&gt;, and applied a similar
+fix to &lt;a href="https://bugzilla.mozilla.org/show_bug.cgi?id=490106"&gt;another&lt;/a&gt;.  (As
+an aside, you’ve got to love the 3 hour investigation which ends up being a
+9-character change.  At least while investigating the bug, I learned a lot
+about &lt;a href="https://developer.mozilla.org/en/XUL/hbox"&gt;hboxes&lt;/a&gt;, &lt;a href="https://developer.mozilla.org/en/XUL/vbox"&gt;vboxes&lt;/a&gt;, &lt;a href="https://developer.mozilla.org/en/XUL/Attribute/flex"&gt;flexes&lt;/a&gt;, &lt;a href="https://developer.mozilla.org/en/XUL/grid"&gt;grids&lt;/a&gt;, and &lt;a href="https://developer.mozilla.org/en/XUL/description"&gt;descriptions&lt;/a&gt;, which will hopefully
+come in handy in future bugs.  :)  Finally, I ended the day by reading a
+review of a patch I submitted on Monday morning, making some tweaks to my
+code, and resubmitting it.&lt;/p&gt;
+&lt;p&gt;The final thing that amazes me is that each day is taking up pretty much a
+full page of my log book, which is &lt;em&gt;way&lt;/em&gt; more than usual.  Most of the days
+last month got a line or two.  Really full days would maybe get half a
+page.  But yesterday and today were a solid page, chock full of
+information, each.  I wonder how long this trend will continue.  I hope it
+keeps on going like this for a long time.&lt;/p&gt;&lt;/div&gt;</description><category>mozilla</category><category>new_job</category><category>thunderbird</category><category>work</category><guid>https://weblog.latte.ca/blake/employment/mozilla/jobatmomo.html</guid><pubDate>Tue, 07 Jul 2009 04:04:20 GMT</pubDate></item></channel></rss>

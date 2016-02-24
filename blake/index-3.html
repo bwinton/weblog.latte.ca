@@ -1,0 +1,580 @@
+<!DOCTYPE html>
+<html prefix="og: http://ogp.me/ns# article: http://ogp.me/ns/article# " lang="en">
+<head>
+<meta charset="utf-8">
+<base href="https://weblog.latte.ca/blake/index-3.html">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Blake (old posts, page 3) | Blog-O!</title>
+<link href="../assets/css/bootstrap.min.css" rel="stylesheet" type="text/css">
+<link href="../assets/css/rst.css" rel="stylesheet" type="text/css">
+<link href="../assets/css/code.css" rel="stylesheet" type="text/css">
+<link href="../assets/css/colorbox.css" rel="stylesheet" type="text/css">
+<link href="../assets/css/theme.css" rel="stylesheet" type="text/css">
+<meta content="#5670d4" name="theme-color">
+<link rel="alternate" type="application/rss+xml" title="RSS" href="../rss.xml">
+<link rel="canonical" href="https://weblog.latte.ca/blake/index-3.html">
+<link rel="prev" href="index-4.html" type="text/html">
+<link rel="next" href="index-2.html" type="text/html">
+<!--[if lt IE 9]><script src="../assets/js/html5.js"></script><![endif]-->
+</head>
+<body>
+<a href="#content" class="sr-only sr-only-focusable">Skip to main content</a>
+
+<!-- Menubar -->
+
+<nav class="navbar navbar-inverse navbar-static-top"><div class="container">
+<!-- This keeps the margins nice -->
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-navbar" aria-controls="bs-navbar" aria-expanded="false">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="https://weblog.latte.ca/">
+
+                <span id="blog-title">Blog-O!</span>
+            </a>
+        </div>
+<!-- /.navbar-header -->
+        <div class="collapse navbar-collapse" id="bs-navbar" aria-expanded="false">
+            <ul class="nav navbar-nav">
+<li>
+<a href="../archive.html">Archive</a>
+                </li>
+<li>
+<a href="../tags/index.html">Tags</a>
+                </li>
+<li>
+<a href="../rss.xml">RSS feed</a>
+
+                
+            </li>
+</ul>
+<!-- Custom search --><form method="get" id="search" action="//duckduckgo.com/" class="navbar-form pull-right">
+<input type="hidden" name="sites" value="https://weblog.latte.ca/"><input type="hidden" name="k8" value="#444444"><input type="hidden" name="k9" value="#D51920"><input type="hidden" name="kt" value="h"><input type="text" name="q" maxlength="255" placeholder="Search…" style="margin-top: 4px;"><input type="submit" value="DuckDuckGo Search" style="visibility: hidden;">
+</form>
+<!-- End of custom search -->
+
+
+            <ul class="nav navbar-nav navbar-right"></ul>
+</div>
+<!-- /.navbar-collapse -->
+    </div>
+<!-- /.container -->
+</nav><!-- End of Menubar --><div class="container" id="content" role="main">
+    <div class="body-content">
+        <!--Body content-->
+        <div class="row">
+            
+            
+<div class="sectionindex">
+    <header><h2><a href="index.html">Blake (old posts, page 3)</a></h2>
+    </header><div class="postindex">
+    <article class="h-entry post-text"><header><h1 class="p-name entry-title"><a href="tech/weblog/whativedone.html" class="u-url">What I’ve done here: or, yet another way to blog from your Palm.</a></h1>
+        <div class="metadata">
+            <p class="byline author vcard"><span class="byline-name fn">Blake Winton</span></p>
+            <p class="dateline"><a href="tech/weblog/whativedone.html" rel="bookmark"><time class="published dt-published" datetime="2004-10-06T16:20:00-04:00" itemprop="datePublished" title="2004-10-06 16:20">2004-10-06 16:20</time></a></p>
+                <p class="commentline">
+        
+    <a href="tech/weblog/whativedone.html#disqus_thread" data-disqus-identifier="/blake/tech/weblog/whativedone">Comments</a>
+
+
+        </p>
+</div>
+    </header><div class="p-summary entry-summary">
+    <div>
+<p>I thought I’ld take a few minutes to talk about just what it is that’s
+allowing me to write an entry while I’m walking down the street on my way
+to the gym.  (And on my way home from the gym, and on the subway to work
+the next day, because while I’m connected, I’m not necessarily fast at
+either Graffiti or writing weblog entries.)</p>
+<p>As I’m sure you know, I’m a computer programmer by trade, and so when I run
+into a problem, I tend to want to write a program to fix it for me.  A long
+time ago I got a PalmPilot Professional, partially so that I could keep
+track of my projects and assignments, and partially because I could write
+programs for it in C.  Then, someone wrote a C compiler that ran on the
+Palm.  I was so excited that I could finally write code on the subway!
+Until the first program I wrote crashed my Palm.  I quickly realized that C
+was just too hard a language for writing Palm programs.  (It’s not so bad
+if you’re working on a desktop, and have an IDE, and an emulator to test
+on, but for on-Palm development, it really sucks.)  I also played around
+with an implementation of Forth for the Palm, but I couldn’t get enough of
+a library of utility words built up to do anything useful with it.  Later,
+I learned a language called Python, which was far easier to write programs
+in, both due to being an easier language syntactically, and due to the
+wealth of useful libraries it comes with.  After a while, someone ported
+Python to the Palm, and so I played around with that, but I found it, too,
+was lacking the libraries I needed for it to be useful to me.  Finally,
+someone posted on the Python tutor list about a program called Plua, which
+was an implementation of Lua for the Palm.  There are a lot of things I
+don’t like about Lua the language, but when creating a screen for a Palm
+app is as simple as:</p>
+<table class="codehilitetable"><tr>
+<td class="linenos"><div class="linenodiv"><pre> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13
+14
+15
+16</pre></div></td>
+<td class="code">
+<pre class="code literal-block"><span></span><span class="n">pclear</span><span class="p">()</span>
+<span class="n">ptitle</span><span class="p">(</span> <span class="s2">"</span><span class="s">PalmBlosxom"</span> <span class="p">)</span>
+<span class="n">pmenu</span><span class="p">(</span> <span class="p">{</span><span class="s2">"</span><span class="s">P:Server Prefs"</span><span class="p">}</span> <span class="p">)</span>
+
+<span class="n">m32</span><span class="o">=</span><span class="n">pcheckbox</span><span class="p">(</span><span class="s2">"</span><span class="s">pEdit32"</span><span class="p">)</span>
+<span class="n">ptab</span><span class="p">()</span>
+<span class="n">name</span> <span class="o">=</span> <span class="n">pfield</span><span class="p">(</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">24</span><span class="p">,</span> <span class="mi">24</span><span class="p">,</span> <span class="n">catName</span><span class="p">)</span>
+<span class="n">pnl</span><span class="p">()</span>
+<span class="n">pl</span> <span class="o">=</span> <span class="n">plist</span><span class="p">(</span> <span class="mi">10</span><span class="p">,</span> <span class="mf">31.5</span><span class="p">,</span> <span class="n">lst</span> <span class="p">)</span>
+<span class="n">pnl</span><span class="p">()</span>
+<span class="n">ptab</span><span class="p">()</span>
+<span class="n">i</span> <span class="o">=</span> <span class="n">pbutton</span><span class="p">(</span> <span class="s2">"</span><span class="s">Reload"</span> <span class="p">)</span>
+<span class="n">ptab</span><span class="p">()</span>
+<span class="n">d</span> <span class="o">=</span> <span class="n">pbutton</span><span class="p">(</span> <span class="s2">"</span><span class="s">Details"</span> <span class="p">)</span>
+<span class="n">ptab</span><span class="p">()</span>
+<span class="n">q</span> <span class="o">=</span> <span class="n">pbutton</span><span class="p">(</span> <span class="s2">"</span><span class="s">Quit"</span> <span class="p">)</span>
+</pre>
+</td>
+</tr></table>
+<p>I’ll put up with a lot of ugliness in the language.</p>
+<p>Of course, I made it sound like a much smoother progression than it
+actually was.  I took side trips into Basic, Smalltalk, Perl, Scheme, Java,
+Intercal, Visual Basic, and Ruby, but none of those were serious contenders
+for on-Palm programming, and Java is the only one I still use these days.
+But I remember enough of them to be the person to ask when someone at the
+office needs to debug a program written in one of them.</p>
+<p>Where was I?  Oh, yeah, Plua.  Plua makes it really easy for me to create
+programs for my Palm, and so makes it far more likely that I’ll actually
+complete whatever random project it is that requires a Palm program to be
+written.  In this case, it was a way for me to write weblog entries in the
+standard Palm MemoPad application (or, more accurately, in pEdit, a
+replacement which handles memos of up to 32kb, as opposed to Palm’s 4kb
+size restriction).  Since I was leveraging the standard MemoPad, my
+application was turning out to be much simpler than a full-fledged
+weblogging application, but it was still taking me a long time to write it
+in C++, partially because I needed (or more accurately wanted) to write a
+generic framework for use in other applications I might write, and
+partially because I don’t have a lot of spare time for programming.
+Switching to Plua let me write the application in a day or two, and I can
+easily change things around in it, or add features, without going through
+the hassle of a compliation and hotsync.</p>
+<p>The hardest piece to get working was the conduit.  Since my Palm doesn’t
+have a WiFi connection, it’s a bit of a pain to use programs which depend
+on network connections.  Conduits, on the other hand, get run every time I
+hotsync, which is usually once or twice per day.  I had been planning on
+writing the conduit in C++, which was going to be quite a pain for me,
+since I  didn’t know of any libraries that could handle ftp over secure
+sockets.  Fortunately, Rick Price asked me whether it would be possible to
+write a conduit in Python.  "Sure", I said, and then started thinking about
+how you would do it.  You could either wrap the C API up into a Python
+library, which would take a lot of work, or you could use Python’s COM
+support to talk to the COM API.  I figured that would probably be an easier
+way to go, and since I had some free time, I started experimenting.  It
+turns out that it was a little harder than I had anticipated, but it still
+wasn’t too bad, and I think I’ve finished the worst of it.  The Secure-FTP
+library was easy to find, and after some firewall config on my home machine
+works quite well.</p>
+</div>
+    </div>
+    </article><article class="h-entry post-text"><header><h1 class="p-name entry-title"><a href="random/biking/somestats.html" class="u-url">How I've been doing.</a></h1>
+        <div class="metadata">
+            <p class="byline author vcard"><span class="byline-name fn">Blake Winton</span></p>
+            <p class="dateline"><a href="random/biking/somestats.html" rel="bookmark"><time class="published dt-published" datetime="2004-10-06T16:17:00-04:00" itemprop="datePublished" title="2004-10-06 16:17">2004-10-06 16:17</time></a></p>
+                <p class="commentline">
+        
+    <a href="random/biking/somestats.html#disqus_thread" data-disqus-identifier="/blake/random/biking/somestats">Comments</a>
+
+
+        </p>
+</div>
+    </header><div class="p-summary entry-summary">
+    <p>I'm hoping to get a plugin written for the area over on the right there
+which will display some statistics about my last few bike rides.  Ever
+since I got my new bike computer (the Cateye Astrale 8), I've been keeping
+track of all the data it produces, which is to say trip time, trip
+distance, average speed for the trip, maximum speed for the trip, and the
+total distance odometer.  I haven't tried to graph any of it yet, but I'm
+sure that'll come soon enough.  In the meantime, it looks like I'm getting
+faster on average (from 19.2 km/h (12 mph) on my first trip to 21.2 km/h
+(13 mph) on my most recent trip).  It's around 17.16 km (10 .66 miles) to
+my office and back, and I've gone 175 km (108.75 miles) so far.  Of course,
+I've actually gone farther than that, since I biked to work before I got
+the computer, but I'm happy to ignore those trips for the purposes of
+tracking my distance.</p>
+
+<p>Does anyone have any guesses as to what the stats will be by the time it
+gets too cold for me to bike anymore?  Personally, I don't think that I'll
+get too much faster, either on my max speed, or on average.  My trip
+distance will probably increase by a little bit, since I've found some neat
+paths that are just a little out of my way, and I think I'ld like to take
+them.  And I'm hoping to more than double my total distance, which should
+be a no-brainer, since after two more weeks (or 10 trips to and from the
+office), I'll have doubled it, but I'm not sure if the weather will hold
+out that long.  It's been mightily chilly up here for the past few days.
+It was only 4°Celsius (39.2°F) when I rode to work this morning, and I
+could really feel the bite of the wind, even through my tiny cotton gloves.
+If it keeps up like that, I might have to buy a real pair of biking gloves,
+or stop biking for a while.  Though I've got to admit, it was a nice
+feeling to not be all sweaty when I got to the office.</p>
+    </div>
+    </article><article class="h-entry post-text"><header><h1 class="p-name entry-title"><a href="tech/installers.html" class="u-url">That wasn't as easy as I'ld hoped.</a></h1>
+        <div class="metadata">
+            <p class="byline author vcard"><span class="byline-name fn">Blake Winton</span></p>
+            <p class="dateline"><a href="tech/installers.html" rel="bookmark"><time class="published dt-published" datetime="2004-10-05T10:07:00-04:00" itemprop="datePublished" title="2004-10-05 10:07">2004-10-05 10:07</time></a></p>
+                <p class="commentline">
+        
+    <a href="tech/installers.html#disqus_thread" data-disqus-identifier="/blake/tech/installers">Comments</a>
+
+
+        </p>
+</div>
+    </header><div class="p-summary entry-summary">
+    <p>I've started writing an installer for my PalmBlosxom conduit, and
+associated files.  It's been both easier and harder than I had thought.  It
+was way easier to get the installer portion written so far, and I don't see
+any particular difficulties cropping up in that part of it.  Sure, there
+are still a bunch of things to do, like installing the Palm program for
+users who aren't named "bwinton", and learning the strange variant of
+Pascal that the installer uses to script things so that I can accomplish
+the previous task, but by and large that portion of it is done.  The
+uninstall portion of this grand experiment, on the other hand, has been a
+royal pain in the ass.  It was fairly easy when all I did was copy some
+<img src="http://bwinton.latte.ca/camera/weblog/InnoSetup.png" align="right"> files somewhere and I was done, but when I switched to
+registering the conduit with the HotSync application (so that it would run,
+instead of just sitting there), I started getting errors, and nothing I've
+attempted so far can get rid of them.  I guess I can sort of understand why
+it thinks it can't delete the file, but I swear to you, I've unregistered
+the dll it thinks it can't delete about four different ways, and
+furthermore, as soon as the uninstaller exits I can delete the files either
+from the command line, or from the Windows Explorer, without any problem.
+Heck, I can even run the installer again, and it will overwrite them
+without complaining.  I just can't figure out how to do it
+programmatically.  How annoying.</p>
+
+<p>So,if anyone out there has any experience with InnoSetup, and/or
+uninstalling Palm Conduits, I'ld appreciate it if you could <a href="mailto:bwinton%2Bblog@latte.ca">drop me a line</a>, and I'll explain
+in more detail what I'm trying to do, and how it's failing, or you could <a href="http://www.latte.ca/svn/PalmBlosxom/setup.py">check out the source to
+my setup program</a> (which generates the .iss file for InnoSetup), and
+hopefully point out my misunderstanding from it.</p>
+
+<p><img src="http://bwinton.latte.ca/camera/weblog/NSIS.png" align="right"><b>Update:</b> I think I'm going to switch to NSIS.  I tried
+the innosetup newsgroups, but they weren't as helpful as I would have
+hoped.  I'll continue to read them, in the hopes that someone will answer
+my question, but I think that I'm not going to get an answer, or at least
+not one that I like, so NSIS it is.</p>
+    </div>
+    </article><article class="h-entry post-text"><header><h1 class="p-name entry-title"><a href="tech/weblog/newcomputer.html" class="u-url">A New Start.</a></h1>
+        <div class="metadata">
+            <p class="byline author vcard"><span class="byline-name fn">Blake Winton</span></p>
+            <p class="dateline"><a href="tech/weblog/newcomputer.html" rel="bookmark"><time class="published dt-published" datetime="2004-09-30T14:26:00-04:00" itemprop="datePublished" title="2004-09-30 14:26">2004-09-30 14:26</time></a></p>
+                <p class="commentline">
+        
+    <a href="tech/weblog/newcomputer.html#disqus_thread" data-disqus-identifier="/blake/tech/weblog/newcomputer">Comments</a>
+
+
+        </p>
+</div>
+    </header><div class="p-summary entry-summary">
+    <p>I got a new computer at work on Monday, and so eagerly switched
+over all my data to it.  But I didn't install all the various programs
+that were on the old machine.  Partly because I had a ton of stuff
+installed, and my registry was a complete mess, and partly because I
+wasn't working on a lot of the tasks I used to work on, and so didn't
+need the tools installed anymore.  But one of the results of this is
+that my oh-so-clever palm-memo-to-weblog-entry conduit isn't
+installed, and indeed, the components it relies on also aren't
+installed, so while I have a perfect chance to write and test an
+installer, I haven't even started that yet, so all the weblog posts
+I'm writing there are likely going to be delayed by a few days or even
+up to a week.</p>
+
+<p>Boy was I ever right there.  It's taken almost three weeks to get
+that entry posted.  But now my conduit has an installer, and is
+packaged up into a dll, and registers itself and everything, so I
+should be able to send it off to other people with just a little more
+code in the installer.  I'm kind of pumped.  And apparently other
+people are interested in doing something similar, so my little bit of
+code might get released in a couple of other places too.  But for now,
+you can find the conduit, and the setup script which builds the dll
+and the installer <a href="http://www.latte.ca/svn/PalmBlosxom/">here</a>.  (The code is in
+the conduit directory, and the setup.py script is in the root.)</p>
+    </div>
+    </article><article class="h-entry post-text"><header><h1 class="p-name entry-title"><a href="random/biking/routes.html" class="u-url">How I got to work this week.</a></h1>
+        <div class="metadata">
+            <p class="byline author vcard"><span class="byline-name fn">Blake Winton</span></p>
+            <p class="dateline"><a href="random/biking/routes.html" rel="bookmark"><time class="published dt-published" datetime="2004-09-09T14:05:00-04:00" itemprop="datePublished" title="2004-09-09 14:05">2004-09-09 14:05</time></a></p>
+                <p class="commentline">
+        
+    <a href="random/biking/routes.html#disqus_thread" data-disqus-identifier="/blake/random/biking/routes">Comments</a>
+
+
+        </p>
+</div>
+    </header><div class="p-summary entry-summary">
+    <a href="http://bwinton.latte.ca/camera/weblog/bikeRouteLarge.png"><img src="http://bwinton.latte.ca/camera/weblog/bikeRouteSmall.png" align="right"></a>
+<p>For a while now, I've been meaning to bike to work.  It's
+healthier, less crowded, more relaxing, and costs less than taking the TTC.
+Okay, so the two middle reasons are kind of made up, but the first one has been
+getting more and more compelling, and just recently the last one has taken on a
+new urgency.  I calculated that I was spending $19 per week travelling to and
+from work, and since we had to scrimp on our last grocery trip, having an extra
+$20 in the fund would have made a fairly large difference.  So I started biking
+to work.  It was fairly easy on the way there, but much harder on the way back,
+and it wasn't made any easier by my working out just before the ride home, nor
+by the fact that it's mostly uphill.  The next couple of times I tried it,
+however, it was much easier, probably because I'm getting more used to it.  So,
+without further ado, here's the path I take to and mostly from work, with some
+annotations.</p>
+
+<p>
+<b>1.</b>  This is by far the easiest way for me to get started.  It isn't
+marked on the map, but there's a series of laneways there that take me
+right to the start of the Belt Line, an abandoned railway track that was
+turned into a bike/jogging/walking path quite a while ago.<br><b>2.</b>  Zoom!  This big curvy section is all downhill, and there is a
+total of one stop sign on it.  There is also a lot of traffic, and some
+speed bumps, so on my way to work I get to zip by a billion cars, and feel
+extra fast.  Of course, with every good comes a bad, and on the way back I
+nearly die trying to get up the same hill.  (I take the path just to the
+right on the return trip.)  The first time I rode up it, I stopped halfway
+up.  The next time, I geared down to 1-3 (where the first number means the
+easiest gear of three on my front wheel, and the second number means the
+third easist gear of seven on my back wheel).  The next time, I only geared
+down to 2-1.  And the last time, I was still at 3-4 when I hit the top of
+the hill.  I spend most of my time on flat roads switching between 3-5,
+3-6, and 3-7, so my eventual goal is to stay in that range on large hills.
+At which point I'll probably look into changing the ratios of my gears, so
+that I can get more speed on the flat and downhill portions of my
+trip.<br><b>3.</b>  For something on a signed bike lane, this is a remarkably hard
+street to cross, since I have to jog over half a block to get to the new
+bike lane.  The right turn at the light isn't so bad, but the left turn
+from the major road onto the side street can really suck rocks if traffic
+is moving.  I hope they improve it, but I can't really see a good way for
+them to, since that's just the way the road goes.  It's also a pain coming
+the other way, involving a left turn at a light onto a major street.<br><b>4.</b>  I always miss this on the way back, leading to discussion #3
+again.  (I actually did a little more hunting around, and I found out where
+that bike lane actually starts, and ends up, and I think I might take that
+route more often now.) <br><b>5.</b>  There's a light at John and Queen, but not at Beverly and Queen,
+so I always cut over a block here, because crossing major streets is a lot
+easier when the traffic stops for you.<br><b>6.</b>  I actually lock my bike up about ½ a block north of the door
+into my office, partially because it's right outside the back door to my
+office (which is exit only), and partially because it's less likely to be
+used by the bike couriers who are also tenants of this building.<br></p>
+
+<p>And that's my transportation.  I've skipped a couple of days for various
+reasons so far, and I expect I'll continue to skip some days, but I am
+getting a lot more exercise than I used to, which can't be bad.  I'm really
+pretty excited about it, which you could probably have guessed by my
+creating an entire new category just for this post.  Surely I wouldn't do
+that if there was only going to be one post here, would I?  On the down
+side, I now want a lot of new toys for my bike, like a bike computer to
+tell me how far and how fast I've gone, and clipless pedals, and maybe a
+more comfortable seat.<br clear="all"></p>
+    </div>
+    </article><article class="h-entry post-text"><header><h1 class="p-name entry-title"><a href="tech/weblog/clieentry2.html" class="u-url">Another Clié Weblog Entry.</a></h1>
+        <div class="metadata">
+            <p class="byline author vcard"><span class="byline-name fn">Blake Winton</span></p>
+            <p class="dateline"><a href="tech/weblog/clieentry2.html" rel="bookmark"><time class="published dt-published" datetime="2004-08-06T15:02:00-04:00" itemprop="datePublished" title="2004-08-06 15:02">2004-08-06 15:02</time></a></p>
+                <p class="commentline">
+        
+    <a href="tech/weblog/clieentry2.html#disqus_thread" data-disqus-identifier="/blake/tech/weblog/clieentry2">Comments</a>
+
+
+        </p>
+</div>
+    </header><div class="p-summary entry-summary">
+    #datetime 28/7/04 19:11
+<p>
+So the infrastructure has gotten much closer to being done, without being any
+closer to being done.  What I mean is that I built a Palm conduit in Python,
+using Palm's COM API, so I can take advantage of all the nice, high-level
+Python libraries for things like threading, and network access, and security,
+instead of having to locate and figure out how to use other people's, or worse,
+code them up myself!
+</p>
+<p>
+There are still a few problems with the framework, I can't seem to call
+anything with a Variant Out parameter, and I haven't tested writing records,
+but other than that, it's golden, and I expect those bugs will be fixed as soon
+as people start playing with it.  And none of the actual sync code is written,
+either, but that will be trivial, right?  Right.  Still, if you're reading
+this, then I must have gotten something working...
+</p>
+<p>
+<b>Update:</b> It is working!  It doesn't synchronize in any way, it just
+uploads the entries and hopes for the best, but I'll fix that later.  You can
+grab a copy of the conduit code <a href="http://www.latte.ca/svn/PalmBlosxom/conduit/">here</a>, and the Plua
+source for the app itself <a href="http://www.latte.ca/svn/PalmBlosxom/Lua/">here</a>.
+</p>
+<p>
+<b>Coming soon:</b> marking the memos which have been uploaded, so that we
+don't upload them again.  (I've got the code to ignore them working just fine,
+but I haven't delved into the black art of writing a record back to the Palm
+yet.)
+</p>
+    </div>
+    </article><article class="h-entry post-text"><header><h1 class="p-name entry-title"><a href="tech/weblog/clieentry.html" class="u-url">Test pEdit Weblog Entry.</a></h1>
+        <div class="metadata">
+            <p class="byline author vcard"><span class="byline-name fn">Blake Winton</span></p>
+            <p class="dateline"><a href="tech/weblog/clieentry.html" rel="bookmark"><time class="published dt-published" datetime="2004-08-06T14:50:00-04:00" itemprop="datePublished" title="2004-08-06 14:50">2004-08-06 14:50</time></a></p>
+                <p class="commentline">
+        
+    <a href="tech/weblog/clieentry.html#disqus_thread" data-disqus-identifier="/blake/tech/weblog/clieentry">Comments</a>
+
+
+        </p>
+</div>
+    </header><div class="p-summary entry-summary">
+    #datetime 4/5/03 15:38
+Someday, this entry will be coming to you from my Clié.  I have a dream, you see.  A dream that I can update my weblog whenever I get a chance, instead of only when I'm at my computer.  A dream that, just by putting memos in a specific category on my Clié, I can add new entries and update older entries with new information whenever I feel like it.
+    </div>
+    </article><article class="h-entry post-text"><header><h1 class="p-name entry-title"><a href="random/miso.html" class="u-url">Dammit!</a></h1>
+        <div class="metadata">
+            <p class="byline author vcard"><span class="byline-name fn">Blake Winton</span></p>
+            <p class="dateline"><a href="random/miso.html" rel="bookmark"><time class="published dt-published" datetime="2004-05-31T15:04:00-04:00" itemprop="datePublished" title="2004-05-31 15:04">2004-05-31 15:04</time></a></p>
+                <p class="commentline">
+        
+    <a href="random/miso.html#disqus_thread" data-disqus-identifier="/blake/random/miso">Comments</a>
+
+
+        </p>
+</div>
+    </header><div class="p-summary entry-summary">
+    <p>I've been keeping a small tupperware full of miso paste in the
+fridge at the office for the past few months.  It seemed like
+something that I could use to supplement my lunches, or as a nice
+alternative to coffee when I was in need of a hot liquid.  In
+related news, I'm feeling a little under the weather today due to
+being in the middle of a cold I got from my wife, or perhaps
+daughter, and since all I have for lunch is a baloney sandwich,
+and some salad, I thought that it would be the perfect thing to
+clear my sinuses, and give me a little boost of wellness.
+Hah.</p>
+
+<p>I'll be the first person to grant that miso paste looks a
+little like something that's gone off, and it's nice that people
+are clearing out the fridge, but man is that ever bad timing.
+Worse, since payday isn't until today, and there wasn't enough in
+the bank account for me to take out any spending money, so I
+can't even buy an overpriced chicken noodle soup from the food
+court.  So I ended up having a cup of coffee, but it just wasn't
+the same somehow.  At least I got in early, so I'll be able to go
+home in a couple of hours, and have some soup there.</p>
+
+<p>Hah!  And just as I finished writing my tale of woe, it
+started raining.  Man, what a day!</p>
+    </div>
+    </article><article class="h-entry post-text"><header><h1 class="p-name entry-title"><a href="tech/nomoretext.html" class="u-url">No More Text!</a></h1>
+        <div class="metadata">
+            <p class="byline author vcard"><span class="byline-name fn">Blake Winton</span></p>
+            <p class="dateline"><a href="tech/nomoretext.html" rel="bookmark"><time class="published dt-published" datetime="2004-03-17T16:34:00-05:00" itemprop="datePublished" title="2004-03-17 16:34">2004-03-17 16:34</time></a></p>
+                <p class="commentline">
+        
+    <a href="tech/nomoretext.html#disqus_thread" data-disqus-identifier="/blake/tech/nomoretext">Comments</a>
+
+
+        </p>
+</div>
+    </header><div class="p-summary entry-summary">
+    The idea of IDEs not being forced to rely on text files has been
+popping up in several of the <a href="http://www.cardboard.nu/archives/000250.html">weblogs</a> I <a href="http://blog.colorstudy.com/ianb/weblog/2004/03/09.html#P67">read</a>.
+While I think Alan has part of the reason correct (there's a lot of
+infrastructure dedicated to dealing with text files), I don't think he
+has it all.  There are definately some <a href="http://www.catb.org/~esr/writings/taoup/html/ch05s01.html">major
+advantages</a> to putting things in plain text files, which seem to be
+being ignored
+
+For instance, <a href="http://www.phantomfiber.com/">my company</a>
+has moved from a binary resource format to a <a href="http://www.ardiri.com/index.php?redir=palm&amp;cat=pilrc">text-based
+resource format</a> precisely because of the advantages it brings.
+(Well, okay, we never went with the binary format, but that's because
+the people making the decision saw the problems it had at previous
+places.)  Those advantages being:
+
+<ul>
+<li>No tool/vendor lock-in.</li>
+  <li>Easier to fix when something goes wrong.</li>
+  <li>Easier to see the differences when something changes.</li>
+</ul>
+
+I suppose these benefits could also be had by using a standardized
+text-based (or xml-based) representation of the image for loading and
+saving, along with smarter tools for editing, but I'm not sure that
+making the tools smarter is such a good idea in the first place.
+Should my source code control system really be forced to know about my
+programming language?  What if I change languages?
+    </div>
+    </article><article class="h-entry post-text"><header><h1 class="p-name entry-title"><a href="tech/progect/objectinternals.html" class="u-url">Rewriting Progect.</a></h1>
+        <div class="metadata">
+            <p class="byline author vcard"><span class="byline-name fn">Blake Winton</span></p>
+            <p class="dateline"><a href="tech/progect/objectinternals.html" rel="bookmark"><time class="published dt-published" datetime="2004-03-04T21:52:00-05:00" itemprop="datePublished" title="2004-03-04 21:52">2004-03-04 21:52</time></a></p>
+                <p class="commentline">
+        
+    <a href="tech/progect/objectinternals.html#disqus_thread" data-disqus-identifier="/blake/tech/progect/objectinternals">Comments</a>
+
+
+        </p>
+</div>
+    </header><div class="p-summary entry-summary">
+    In my copious free time, I've started helping Rick Price rewrite the
+internals of Progect (a project management application for the Palm)
+in a more object-oriented manner.  It's an interesting task, getting
+to redesign an application with a well defined set of features, and
+I'm glad to be able to help, even the little that I can.
+
+As the project progesses, and as I get the free time, I'll add more
+of my thoughts on the topic to this category, so that we will have
+a record of what the decisions and thought processess were that went
+in to the new design.
+    </div>
+    </article>
+</div>
+
+        <nav class="postindexpager"><ul class="pager">
+<li class="previous">
+                <a href="index-4.html" rel="prev">Newer posts</a>
+            </li>
+            <li class="next">
+                <a href="index-2.html" rel="next">Older posts</a>
+            </li>
+        </ul></nav><script>var disqus_shortname="latteblog";(function(){var a=document.createElement("script");a.async=true;a.src="https://"+disqus_shortname+".disqus.com/count.js";(document.getElementsByTagName("head")[0]||document.getElementsByTagName("body")[0]).appendChild(a)}());</script>
+</div>
+
+        </div>
+        <!--End of body content-->
+
+        <footer id="footer"><div style="margin-bottom: 12px">Contents © 2016         <a href="mailto:bwinton@latte.ca">Blake Winton</a>
+<a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/2.5/">
+<img alt="Creative Commons License BY-NC-SA" style="border-width: 0; vertical-align: bottom" src="https://licensebuttons.net/l/by-nc-sa/2.5/88x31.png"></a>
+</div>
+            
+        </footer>
+</div>
+</div>
+
+
+            <script src="../assets/js/jquery.min.js"></script><script src="../assets/js/bootstrap.min.js"></script><script src="../assets/js/moment-with-locales.min.js"></script><script src="../assets/js/fancydates.js"></script><script src="../assets/js/jquery.colorbox-min.js"></script><script>$('a.image-reference:not(.islink) img:not(.islink)').parent().colorbox({rel:"gal",maxWidth:"100%",maxHeight:"100%",scalePhotos:true});</script><!-- fancy dates --><script>
+    moment.locale("en");
+    fancydates(0, "YYYY-MM-DD HH:mm");
+    </script><!-- end fancy dates --><script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-5805429-2', 'auto');
+  ga('send', 'pageview');
+
+</script>
+</body>
+</html>

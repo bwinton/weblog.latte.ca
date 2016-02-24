@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet type="text/xsl" href="../assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Blog-O! (osx)</title><link>https://weblog.latte.ca/</link><description></description><atom:link type="application/rss+xml" href="https://weblog.latte.ca/tags/osx.xml" rel="self"></atom:link><language>en</language><lastBuildDate>Wed, 24 Feb 2016 17:07:35 GMT</lastBuildDate><generator>https://getnikola.com/</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Adventures in Mail Servers (or, how I wasted my Sunday afternoon)</title><link>https://weblog.latte.ca/blake/tech/thunderbird/configuringservers.html</link><dc:creator>Blake Winton</dc:creator><description>&lt;div&gt;&lt;p&gt;I think what I want is pretty simple, or at least, reasonably common.
+I’m just looking for a couple of programs.&lt;/p&gt;
+&lt;p&gt;An SMTP server which will accept mail for the accounts at latte.ca, and deliver
+it to a Maildir of my choosing, and let me send mail through it if, and only if,
+I’ve logged in with the password to that account.  (Being able to define a few
+aliases would also be nice.)&lt;/p&gt;
+&lt;p&gt;And an IMAP server which will expose the previously-mentioned Maildir, after
+I’ve logged in with the password to that account.&lt;/p&gt;
+&lt;p&gt;And yet, every time I try to set that up, something completely falls over for no
+particularly understandable reason, and I end up wasting an afternoon (or more)
+of my life.  I had hoped this time would be different, since I decided not to
+install and configure everything myself, but instead bought a copy of OS X Lion
+Server which was supposed to do all the hard work for me.  I’m not going to
+enumerate all the problems I ran into, but I will say that I still haven’t
+managed to get there.  I’m just done for tonight.&lt;/p&gt;
+&lt;p&gt;Anyways, if anyone reading this has a working setup that meets the requirements
+(and the added requirement of needing to use Dovecot and Postfix, since those
+are what’s installed), I would love to get a copy of their config files.  And in
+the meantime, I might seriously look into getting a refund for Lion Server,
+given how badly it’s failed me.  :P&lt;/p&gt;&lt;/div&gt;</description><category>dovecot</category><category>email</category><category>fml</category><category>osx</category><category>postbox</category><category>server</category><category>wtf</category><guid>https://weblog.latte.ca/blake/tech/thunderbird/configuringservers.html</guid><pubDate>Mon, 26 Mar 2012 01:52:11 GMT</pubDate></item><item><title>A handy zsh function (for OS X)</title><link>https://weblog.latte.ca/blake/tech/thunderbird/zsh.html</link><dc:creator>Blake Winton</dc:creator><description>&lt;div&gt;&lt;p&gt;A co-worker of mine was having problems remembering where the &lt;a href="http://mxr.mozilla.org/comm-central/source/client.mk"&gt;makefile&lt;/a&gt; puts the binary for
+&lt;a href="http://mozillamessaging.com/"&gt;Thunderbird&lt;/a&gt; when you build it yourself.
+Now, I type in the path far too often, so I know where it is (on my
+computer, anyways), but since I type it in far too often, I grabbed
+someone's &lt;a href="http://www.zsh.org/"&gt;zsh&lt;/a&gt; function that launched &lt;a href="http://www.mozilla.com/"&gt;Firefox&lt;/a&gt;, and modified it to launch Thunderbird from either
+the build directory or the source directory, but only on Mac OS X.&lt;/p&gt;
+&lt;p&gt;Anyways, here it is, I hope some of you find it useful.&lt;/p&gt;
+&lt;table class="codehilitetable"&gt;&lt;tr&gt;&lt;td class="linenos"&gt;&lt;div class="linenodiv"&gt;&lt;pre&gt; 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13&lt;/pre&gt;&lt;/div&gt;&lt;/td&gt;&lt;td class="code"&gt;&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;thunderbird&lt;span class="o"&gt;()&lt;/span&gt; &lt;span class="o"&gt;{&lt;/span&gt;
+  &lt;span class="nb"&gt;local&lt;/span&gt; -a currdir&lt;span class="p"&gt;;&lt;/span&gt;
+  &lt;span class="nv"&gt;currdir&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;$PWD:t&lt;span class="p"&gt;;&lt;/span&gt;
+  &lt;span class="k"&gt;for&lt;/span&gt; nm in LanikaiDebug ShredderDebug Lanikai Shredder&lt;span class="p"&gt;;&lt;/span&gt; &lt;span class="k"&gt;do&lt;/span&gt;
+    &lt;span class="k"&gt;if&lt;/span&gt; &lt;span class="o"&gt;[&lt;/span&gt; -d &lt;span class="s2"&gt;"./mozilla/dist/&lt;/span&gt;$&lt;span class="s2"&gt;nm.app"&lt;/span&gt; &lt;span class="o"&gt;]&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt; &lt;span class="k"&gt;then&lt;/span&gt;
+      ./mozilla/dist/$nm.app/Contents/MacOS/thunderbird-bin &lt;span class="nv"&gt;$*&lt;/span&gt;
+      break&lt;span class="p"&gt;;&lt;/span&gt;
+    &lt;span class="k"&gt;elif&lt;/span&gt; &lt;span class="o"&gt;[&lt;/span&gt; -d &lt;span class="s2"&gt;"../objdir-&lt;/span&gt;&lt;span class="nv"&gt;$c&lt;/span&gt;&lt;span class="s2"&gt;urrdir/mozilla/dist/&lt;/span&gt;$&lt;span class="s2"&gt;nm.app"&lt;/span&gt; &lt;span class="o"&gt;]&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt; &lt;span class="k"&gt;then&lt;/span&gt;
+      ../objdir-&lt;span class="nv"&gt;$c&lt;/span&gt;urrdir/mozilla/dist/$nm.app/Contents/MacOS/thunderbird-bin &lt;span class="nv"&gt;$*&lt;/span&gt;
+      break&lt;span class="p"&gt;;&lt;/span&gt;
+    &lt;span class="k"&gt;fi&lt;/span&gt;
+  &lt;span class="k"&gt;done&lt;/span&gt;
+&lt;span class="o"&gt;}&lt;/span&gt;
+&lt;/pre&gt;
+&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/div&gt;</description><category>mozilla</category><category>osx</category><category>thunderbird</category><category>zsh</category><guid>https://weblog.latte.ca/blake/tech/thunderbird/zsh.html</guid><pubDate>Mon, 19 Jul 2010 14:20:13 GMT</pubDate></item></channel></rss>

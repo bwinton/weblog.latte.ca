@@ -1,0 +1,233 @@
+<?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet type="text/xsl" href="../assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Blog-O! (work)</title><link>https://weblog.latte.ca/</link><description></description><atom:link type="application/rss+xml" href="https://weblog.latte.ca/tags/work.xml" rel="self"></atom:link><language>en</language><lastBuildDate>Wed, 24 Feb 2016 17:07:44 GMT</lastBuildDate><generator>https://getnikola.com/</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Some new toys</title><link>https://weblog.latte.ca/blake/employment/mozilla/somejetpacks.html</link><dc:creator>Blake Winton</dc:creator><description>&lt;div&gt;&lt;p&gt;There have been a couple of things I’ve noticed myself doing over and over
+again recently, and because I’m a developer whenever I do something over
+and over again, I try to find a way to automate it.&lt;/p&gt;
+&lt;p&gt;So I did some playing around with Mozilla’s &lt;a href="https://builder.mozillalabs.com/"&gt;Add-on Builder&lt;/a&gt; and came up with &lt;a href="http://bwinton.latte.ca/Work/jetpacks/"&gt;a couple of Jetpacks&lt;/a&gt; that solved my problems.  Maybe
+you’ll find them useful, too.&lt;/p&gt;&lt;/div&gt;</description><category>firefox</category><category>jetpacks</category><category>mozilla</category><category>work</category><guid>https://weblog.latte.ca/blake/employment/mozilla/somejetpacks.html</guid><pubDate>Mon, 06 Sep 2010 21:56:09 GMT</pubDate></item><item><title>More notes on Mercurial.</title><link>https://weblog.latte.ca/blake/tech/thunderbird/pbranch.html</link><dc:creator>Blake Winton</dc:creator><description>&lt;div&gt;&lt;p&gt;Recently, I made some changes to &lt;a href="http://weblog.latte.ca/blake/tech/thunderbird/mercurial"&gt;my work flow&lt;/a&gt; to get around
+some slight annoyances.  Specifically, I switched from using &lt;a href="http://mercurial.selenic.com/wiki/MqExtension"&gt;mq&lt;/a&gt; to using &lt;a href="http://arrenbrecht.ch/mercurial/pbranch/"&gt;pbranch&lt;/a&gt;.  The features that pbranch
+gives me that mq didn’t basically boil down to two main things;
+sharing, and tracking.&lt;/p&gt;
+&lt;p&gt;With pbranch, it’s way easier for me to share my changes, both with
+other people, and with myself in a virtual machine.  It &lt;em&gt;is&lt;/em&gt; possible
+to share the patch with mq, by cloning the patch repo if I remembered
+to run qinit -C, but with pbranch all I have to do is clone the main
+repo, and my changes are right there, waiting for me.&lt;/p&gt;
+&lt;p&gt;For tracking, when I’m nearing the end of a patch, and it mostly
+works, I get really nervous if I can’t check in my changes.  With mq,
+I set up an alias to let me commit the patch queue, so that I could go
+back, but it was really hard to tell what I had changed between any
+two commits, since it was showing me the diff of my diffs.  And so I
+didn’t use it as much as I would like to.  With pbranch, I just commit
+the code, like I want to, and it keeps track of what the patch should
+look like.&lt;/p&gt;
+&lt;p&gt;So, my day-to-day workflow now looks more like this:&lt;br&gt;
+If I’m working on a bug that I’ve already got a patch started for, I
+cd to the appropriate branch, type &lt;tt&gt;hg pgraph&lt;/tt&gt; to see where I
+am, and &lt;tt&gt;hq update branchname&lt;/tt&gt; to get to the pbranch I want to
+work on.  Then I make my changes, and when I’m happy with the results
+of &lt;tt&gt;hg diff&lt;/tt&gt;, I type &lt;tt&gt;hg commit&lt;/tt&gt; to put the changes into
+the pbranch.  After that, I use &lt;tt&gt;hg pdiff &amp;gt;
+../branch-name-bugnum-description.diff&lt;/tt&gt; to get a patch that I can
+upload to bugzilla.  At this point, I usually load the patch into Vim,
+and search for some of the mistakes I’ve made in the past.
+(&lt;tt&gt;/^+.*[[:space:]]+$&lt;/tt&gt;, and &lt;tt&gt;/dump&lt;/tt&gt; caught a lot of my
+initial mistakes.  Now I’ve moved on to things that are tougher to
+check for, like putting open-parens on a new line instead of on the
+previous line.)  I usually go through a couple of cycles of &lt;tt&gt;hg
+commit&lt;/tt&gt;/&lt;tt&gt;hg pdiff …&lt;/tt&gt; before I’m happy with the patch.  Once
+I am, I don’t have to type anything before I upload it, since it’s
+already committed.&lt;/p&gt;&lt;/div&gt;</description><category>hg</category><category>mercurial</category><category>mozilla</category><category>mq</category><category>pbranch</category><category>work</category><guid>https://weblog.latte.ca/blake/tech/thunderbird/pbranch.html</guid><pubDate>Mon, 21 Sep 2009 15:48:34 GMT</pubDate></item><item><title>My first couple of days at Mozilla Messaging.</title><link>https://weblog.latte.ca/blake/employment/mozilla/jobatmomo.html</link><dc:creator>Blake Winton</dc:creator><description>&lt;div&gt;&lt;p&gt;A few weeks ago I started a new full-time contract at &lt;a href="http://mozillamessaging.com/"&gt;Mozilla
+Messaging&lt;/a&gt; (a.k.a. the people who brought you
+Thunderbird).  I meant to post this on the Wednesday after I started, but
+didn’t get around to it until now.  So, here you go, my notes from just
+after I started a new job.&lt;/p&gt;
+&lt;p&gt;It has been a pretty crazy couple of days, both because I’m not that used
+to working for a full 8 hours on one thing, and because I’m at the point
+where there’s still so much to learn that I could spend all my time
+researching stuff, and never get anything done.&lt;/p&gt;
+&lt;p&gt;But even with all the stuff for me to learn, I feel like I’ve made a fair
+bit of progress.  There were a few bugs assigned to me, based on &lt;a href="http://hg.mozilla.org/comm-central/rev/98a7de404c08"&gt;a
+previous patch&lt;/a&gt;, as
+well as a couple of things left to do to get &lt;a href="https://bugzilla.mozilla.org/show_bug.cgi?id=45715"&gt;the feature&lt;/a&gt; working, so I jumped
+right in to those.  After I had new patches up for review on all of those
+bugs, I talked with &lt;a href="http://clarkbw.net/blog/"&gt;Bryan Clark&lt;/a&gt; about what bugs
+I should tackle next.  He and &lt;a href="http://ascher.ca/blog/"&gt;David Ascher&lt;/a&gt; both
+suggested that the new &lt;a href="https://bugzilla.mozilla.org/show_bug.cgi?id=autoconfig"&gt;automatic mail server config&lt;/a&gt; dialog could use a
+bit of love.&lt;/p&gt;
+&lt;p&gt;This morning, I did some investigation on group email addresses for &lt;a href="https://bugzilla.mozilla.org/show_bug.cgi?id=496440"&gt;one of
+the bugs&lt;/a&gt; I’m working
+on, and took a look at how the autoconfig dialog was put together so that I
+wouldn’t sound like I was completely lost in the meeting.  (XUL, CSS, and
+Javascript.  No surprises there.  :)  Then, after the &lt;a href="https://wiki.mozilla.org/Thunderbird/StatusMeetings/2009-06-09"&gt;Status
+Meeting&lt;/a&gt;,
+Bryan and I chatted a bit about what the various bugs were that he had
+assigned to me, and what sort of things I might look into to try and fix
+them.  A few hours later, I had a fix for &lt;a href="https://bugzilla.mozilla.org/show_bug.cgi?id=490105"&gt;one of them&lt;/a&gt;, and applied a similar
+fix to &lt;a href="https://bugzilla.mozilla.org/show_bug.cgi?id=490106"&gt;another&lt;/a&gt;.  (As
+an aside, you’ve got to love the 3 hour investigation which ends up being a
+9-character change.  At least while investigating the bug, I learned a lot
+about &lt;a href="https://developer.mozilla.org/en/XUL/hbox"&gt;hboxes&lt;/a&gt;, &lt;a href="https://developer.mozilla.org/en/XUL/vbox"&gt;vboxes&lt;/a&gt;, &lt;a href="https://developer.mozilla.org/en/XUL/Attribute/flex"&gt;flexes&lt;/a&gt;, &lt;a href="https://developer.mozilla.org/en/XUL/grid"&gt;grids&lt;/a&gt;, and &lt;a href="https://developer.mozilla.org/en/XUL/description"&gt;descriptions&lt;/a&gt;, which will hopefully
+come in handy in future bugs.  :)  Finally, I ended the day by reading a
+review of a patch I submitted on Monday morning, making some tweaks to my
+code, and resubmitting it.&lt;/p&gt;
+&lt;p&gt;The final thing that amazes me is that each day is taking up pretty much a
+full page of my log book, which is &lt;em&gt;way&lt;/em&gt; more than usual.  Most of the days
+last month got a line or two.  Really full days would maybe get half a
+page.  But yesterday and today were a solid page, chock full of
+information, each.  I wonder how long this trend will continue.  I hope it
+keeps on going like this for a long time.&lt;/p&gt;&lt;/div&gt;</description><category>mozilla</category><category>new_job</category><category>thunderbird</category><category>work</category><guid>https://weblog.latte.ca/blake/employment/mozilla/jobatmomo.html</guid><pubDate>Tue, 07 Jul 2009 04:04:20 GMT</pubDate></item><item><title>How I use Mercurial (and the MQ extension).</title><link>https://weblog.latte.ca/blake/tech/thunderbird/mercurial.html</link><dc:creator>Blake Winton</dc:creator><description>&lt;div&gt;&lt;p&gt;I started working for &lt;a href="http://www.mozillamessaging.com"&gt;Mozilla Messaging&lt;/a&gt; a
+while ago, and since &lt;a href="http://blog.codekills.net/"&gt;David Wolever&lt;/a&gt; &lt;a href="http://twitter.com/wolever/status/2394705659"&gt;asked
+me&lt;/a&gt; how I used Mercurial and the
+MQ extension, I thought I would put up some notes on how I’m currently using
+them in my day-to-day work.  Of course, the stuff I’m doing now is a little
+different than what I’ve done in any of my previous jobs, so I’m not sure how
+useful any of the following will be to anyone who isn’t contributing to an open
+source project.&lt;/p&gt;
+&lt;p&gt;First, let’s talk a little bit about how I have my Work directory set up.  The
+first thing I did when I started working on the Thunderbird source code was to
+pull down a clean copy of the source into a directory named “src-base”.  The
+purpose of that directory is to always contain a clean copy of the upstream
+source code so that when I want to update the various branches I have (five, at
+last count), I only need to download the changes from the Mozilla repo once,
+and I can then propagate them from src-base to the other branches.  I got the
+idea to do that from the Bazaar-NG developers, and I think it has helped to
+keep my bandwidth usage down.  It might cause a problem if I was sharing my
+branches, but since Thunderbird seems to revolve around submitting patches to
+bugzilla, it works out pretty well.&lt;/p&gt;
+&lt;p&gt;The next thing I did was to clone src-base into a directory named
+“add-reply-list-button” (because I was writing a patch to add a Reply-To-List
+button :), go into that directory, and type &lt;tt&gt;hg qinit -c&lt;/tt&gt; to create an
+mq repository, and put the mq repository itself under version control.  (I
+didn’t actually do that the first time, and was quite annoyed that I couldn’t
+revert changes I had made in my patch queue.)  The other part of that is that
+I’ve aliased &lt;tt&gt;mq&lt;/tt&gt; to &lt;tt&gt;hg -R $(hg root)/.hg/patches&lt;/tt&gt;.  This lets
+me type &lt;tt&gt;mq commit&lt;/tt&gt; to commit the changes to the patch.&lt;/p&gt;
+&lt;p&gt;So, now we’re at my day-to-day work.  If I’m working on a bug that I’ve already
+got a patch started for, I cd to the appropriate branch, type &lt;tt&gt;hg
+qseries&lt;/tt&gt; to see where I am, and &lt;tt&gt;hq qpush&lt;/tt&gt; or &lt;tt&gt;hg qpop&lt;/tt&gt; to
+get to the patch I want to work on.  Then I make my changes, and when I’m happy
+with the results of &lt;tt&gt;hg diff&lt;/tt&gt;, I type &lt;tt&gt;hg qrefresh&lt;/tt&gt; to put the
+changes into the patch.  After that, I use &lt;tt&gt;hg qdiff &amp;gt;
+../branch-name-bugnum-description.diff&lt;/tt&gt; to get a patch that I can upload to
+bugzilla.  At this point, I usually load the patch into Vim, and search for
+some of the mistakes I’ve made in the past.  (&lt;tt&gt;/^+.*[[:space:]]+$&lt;/tt&gt;, and
+&lt;tt&gt;/dump&lt;/tt&gt; caught a lot of my initial mistakes.  Now I’ve moved on to
+things that are tougher to check for, like putting open-parens on a new line
+instead of on the previous line.)  I usually go through a couple of cycles of
+&lt;tt&gt;hg qrefresh&lt;/tt&gt;/&lt;tt&gt;hg qdiff …&lt;/tt&gt; before I’m happy with the patch.  Once
+I am, I type &lt;tt&gt;mq commit -m "Updated patch to fix foo and bar."&lt;/tt&gt; to save
+the state of the patch, and then I upload it.&lt;/p&gt;&lt;/div&gt;</description><category>hg</category><category>mercurial</category><category>mozilla</category><category>mq</category><category>work</category><guid>https://weblog.latte.ca/blake/tech/thunderbird/mercurial.html</guid><pubDate>Wed, 01 Jul 2009 02:31:48 GMT</pubDate></item><item><title>Okay, this is cool.</title><link>https://weblog.latte.ca/blake/tech/freewifi.html</link><dc:creator>Blake Winton</dc:creator><description>&lt;div&gt;&lt;p&gt;I found myself downtown today, with nothing really to do between 3:30
+and 6:30.  I suppose I could have headed over to U of T, but it seemed
+like sort of a long way to go just to connect to the internet and come
+all the way back again.  So instead of making the trek, or wasting two
+tokens, I took advantage of the 2 hours of free WiFi that comes with
+my Starbucks card, and stayed near Yonge, drinking green tea with a
+little honey, and investigating a few bugs for work.  After it runs
+out (in another 31 minutes), I think I'm going to pack up, and walk
+north to my next appointment, grabbing some dinner on the way.  If I'm
+right, that should put me right where I need to be, right when I need
+to be there.&lt;/p&gt;
+&lt;p&gt;Ah, if only everything in my life could fall into place this easily.
+(The upgrade to Aquamacs 1.6 that I just did also worked out really
+well.  Maybe today is just my day for doing stuff!)&lt;/p&gt;&lt;/div&gt;</description><category>remote</category><category>starbucks</category><category>wifi</category><category>work</category><guid>https://weblog.latte.ca/blake/tech/freewifi.html</guid><pubDate>Tue, 13 Jan 2009 21:49:00 GMT</pubDate></item><item><title>Things on my mind.</title><link>https://weblog.latte.ca/blake/employment/thoughts.html</link><dc:creator>Blake Winton</dc:creator><description>&lt;div&gt;&lt;p&gt;I was chatting with a friend and former co-worker of mine today, and
+asked him why I was never a part of the group guiding where the
+company was going.  (Okay, I actually asked why I was never a part of
+the management, but in retrospect that was the wrong question, for
+reasons detailed below.  I should have asked the question I said
+above.)  His answer basically boiled down to “You never wanted to be.”
+One of the things he mentioned was that when I traded salary for extra
+vacation days (something I was fairly proud of thinking of, since it
+makes me an easier sell to the CFO, and the two are pretty much equal,
+if you’re allowed to cash out unused vacation days), it indicated that
+my priorities lay more with my family than with the company, with the
+unspoken implication that that attitude isn’t one that will lead to a
+position of power within the company.  That initial assumption led to
+a series of misunderstandings, and miscommunications, until I was
+effectively shut out of helping to guide the company.&lt;/p&gt;
+&lt;p&gt;I guess that’s fair enough, kinda, but it’s a shame that people think
+that having interests outside of the office means that I’m somehow
+less interested in the success of the company.  Particularly since I
+didn’t take the vacation days, and was always intending on cashing
+them out.  So, for my next job, I think I’m going to take that option
+off the table, since I didn’t use the vacation days anyways.  (I had
+27 days built up when I was laid off!)&lt;/p&gt;
+&lt;p&gt;I also asked him what I could do to get into management next time, but
+I’m not really sure that’s really where I want to be.  I know a few
+people who have moved into management, and then found it hard to get a
+job when they were laid off.  Along the same lines, I still believe
+I’m a far better architect and coder than manager, and so it’s sort of
+foolish for a company to hire me for my managerial skills when my
+coding skills are far superior.  And I really &lt;em&gt;really&lt;/em&gt; like
+programming.  &lt;strong&gt;Really&lt;/strong&gt;.  With the spare time I had after I was laid
+off, I wrote code for an iPhone game.  For fun I read up on
+programming languages I haven’t seen before, and solve &lt;a href="http://projecteuler.net/"&gt;Project
+Euler&lt;/a&gt; problems with them.  But I don’t
+know if there’s a way to parlay my architecture and coding prowess
+into the ability to help guide a company, since that seems to be the
+exclusive province of people who manage other people.  (Of course, my
+work on &lt;a href="http://www.basieproject.org"&gt;Basie&lt;/a&gt; last term also has me
+wondering if I’m actually a mediocre manager, or if I may be better at
+it than I always thought I was.)&lt;/p&gt;
+&lt;p&gt;I suppose there’s always one way to find out how good a manager/team
+lead I am, and I expect I’ll start moving that direction in my next
+job.  I can always write code on evenings and weekends, right?  Well,
+either way, it’s not something I’ll worry about until I get another
+job.  And certainly not something I should be worrying about this
+late at night.&lt;/p&gt;&lt;/div&gt;</description><category>career</category><category>coding</category><category>management</category><category>work</category><guid>https://weblog.latte.ca/blake/employment/thoughts.html</guid><pubDate>Sat, 10 Jan 2009 03:22:00 GMT</pubDate></item><item><title>How to get laid off.</title><link>https://weblog.latte.ca/blake/employment/newjob.html</link><dc:creator>Blake Winton</dc:creator><description>&lt;div&gt;&lt;p&gt;A few Fridays ago, I was laid off from my job.  After seven years I’m
+sort of out of practice at looking for a new job.  The economy is also
+kind of slow, and I know a few people who are going to graduate soon
+into this economy, and who might want to know what I did when I was
+laid off, and how I’ve found a new job.&lt;/p&gt;
+&lt;p&gt;So, Friday.  As a side note, if you’re ever in the position of letting
+go of employees, please don’t lay them off or fire them on a Friday.
+They can’t do anything but sit and brood over the weekend, which can
+really get them depressed.  On the other hand, I’ve been pretty upbeat
+about it because after seven years, I’m kind of ready for a change.
+It &lt;em&gt;was&lt;/em&gt; a big shock when I first learned about it, but I had made my
+peace with it after around 30 minutes or so.  An hour later, there was
+a meeting where the rest of the employees found out, and that was kind
+of tough to sit through, but afterwards it was like there was a big
+weight lifted from my shoulders, and my co-workers and I started to
+joke around about it.&lt;/p&gt;
+&lt;p&gt;That afternoon, and the next couple of days, I emailed my friends and
+asked whether they knew of any companies that were hiring.  From that
+I got six or seven leads, and three or four interviews, and finally
+decided to do some work and sign a three month contract, which will
+probably turn into a longer term contract.  I don’t expect it’ll turn
+into a full time job, but that works out fine for me, since I expect
+the market will have changed by the new year, and I’m hoping that a
+friend of mine will get the hiring freeze he’s currently in lifted by
+then, and hire me.&lt;/p&gt;
+&lt;p&gt;On the plus side, now that I’m working from home, I bought a new
+computer because I can deduct the price from my income as a business
+expense.  Similarly I can deduct part of the interest on my mortgage
+from my income.  And I’ll be making a fair bit more than I was getting
+as a full-time employee, because of the lack of benefits, my inside
+knowledge of the app, and finally because I have had only one raise in
+the last seven years.  (It was hard for me to ask for a raise, because
+I knew the company didn’t have a lot of money to give me a raise with,
+and because I owned some of the company, so I would rather have seen
+my shares increase in value than get extra cash in the short term.  Of
+course neither ended up happening, but who could have foreseen that?)&lt;/p&gt;
+&lt;p&gt;So yeah, there’s my tale of woe and hope.  It’s really not that bad,
+apart from the sadness of seeing something that you worked really hard
+for crash and burn.  But even in that sadness is the spark of
+excitement for something new and different.  If you haven’t gotten
+your first job yet, then I don’t know if this will help you all that
+much.  I guess the main thing to take away from it would be that you
+should cultivate contacts among your peers, profs, co-workers, and
+clients because they’re the ones who will find you the good jobs, in
+the end.&lt;/p&gt;&lt;/div&gt;</description><category>job</category><category>phantom</category><category>search</category><category>work</category><guid>https://weblog.latte.ca/blake/employment/newjob.html</guid><pubDate>Sun, 07 Dec 2008 18:21:07 GMT</pubDate></item><item><title>Now I feel like I’m behind the times.</title><link>https://weblog.latte.ca/blake/tech/seachange.html</link><dc:creator>Blake Winton</dc:creator><description>&lt;div&gt;&lt;p&gt;I was reading &lt;a href="http://blogs.mathworks.com/images/steve/92/handout_final_icip2006.pdf"&gt;a presentation&lt;/a&gt; about how to write better software for non-developers, and it said:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;I would refuse to work on any sort of collaborative software
+development project that doesn’t use version control.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;I totally agree.  Heck, I even use version control for my personal
+one-off projects.  But it got me wondering what people use at their
+jobs, so I asked my friends who were on instant messenger, as a straw
+poll.  The results were shockingly unanimous.  &lt;a href="http://subversion.tigris.org/"&gt;Subversion&lt;/a&gt;.  8 for 8.  I regret to say that I’m
+not using Subversion at my job, but that may change someday.  In the
+meantime, leave a comment, and tell me what you’re using at work or at
+home, either to make me feel better, or to rub my nose in it.&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;Update&lt;/em&gt;: One person uses Clear Case.  I’ve heard good things about
+Clear Case.&lt;/p&gt;&lt;/div&gt;</description><category>bzr</category><category>survey</category><category>svn</category><category>vss</category><category>work</category><guid>https://weblog.latte.ca/blake/tech/seachange.html</guid><pubDate>Fri, 15 Feb 2008 20:03:22 GMT</pubDate></item></channel></rss>

@@ -1,0 +1,214 @@
+<?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet type="text/xsl" href="../assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Blog-O! (bzr)</title><link>https://weblog.latte.ca/</link><description></description><atom:link type="application/rss+xml" href="https://weblog.latte.ca/tags/bzr.xml" rel="self"></atom:link><language>en</language><lastBuildDate>Wed, 24 Feb 2016 17:07:42 GMT</lastBuildDate><generator>https://getnikola.com/</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Bzr Looms kick ass!</title><link>https://weblog.latte.ca/blake/tech/bzr/looms.html</link><dc:creator>Blake Winton</dc:creator><description>&lt;div&gt;&lt;p&gt;On the Bazaar mailing list, &lt;a href="https://launchpad.net/bzr-loom/+announcement/218"&gt;Robert Collins wrote&lt;/a&gt;:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;I’m happy to announce bzr-loom.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;And I’m happy to use them!&lt;/p&gt;
+&lt;p&gt;My company uses vss for our version control, (I know.  That should be
+“for our ‘version’ ‘control’”,) and we had recently announced a code
+freeze for an impending release.  Thanks to bzr-loom, which I downloaded
+and installed on my birthday (the 5th), I could continue to push ahead
+with my work, and pop down and fix bugs in the frozen code when it
+became necessary, and never lose my history, and not have to deal with
+copying directories back and forth.  Heck, by adding a thread for each
+proposed future VSS checkin, I even had a reasonable history in VSS
+when it came time to check everything in.&lt;/p&gt;
+&lt;p&gt;Thank you, Robert, for making my job far more bearable.&lt;/p&gt;&lt;/div&gt;</description><category>bzr</category><category>code_freeze</category><category>loom</category><category>vss</category><guid>https://weblog.latte.ca/blake/tech/bzr/looms.html</guid><pubDate>Thu, 13 Mar 2008 19:24:54 GMT</pubDate></item><item><title>Now I feel like I’m behind the times.</title><link>https://weblog.latte.ca/blake/tech/seachange.html</link><dc:creator>Blake Winton</dc:creator><description>&lt;div&gt;&lt;p&gt;I was reading &lt;a href="http://blogs.mathworks.com/images/steve/92/handout_final_icip2006.pdf"&gt;a presentation&lt;/a&gt; about how to write better software for non-developers, and it said:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;I would refuse to work on any sort of collaborative software
+development project that doesn’t use version control.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;I totally agree.  Heck, I even use version control for my personal
+one-off projects.  But it got me wondering what people use at their
+jobs, so I asked my friends who were on instant messenger, as a straw
+poll.  The results were shockingly unanimous.  &lt;a href="http://subversion.tigris.org/"&gt;Subversion&lt;/a&gt;.  8 for 8.  I regret to say that I’m
+not using Subversion at my job, but that may change someday.  In the
+meantime, leave a comment, and tell me what you’re using at work or at
+home, either to make me feel better, or to rub my nose in it.&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;Update&lt;/em&gt;: One person uses Clear Case.  I’ve heard good things about
+Clear Case.&lt;/p&gt;&lt;/div&gt;</description><category>bzr</category><category>survey</category><category>svn</category><category>vss</category><category>work</category><guid>https://weblog.latte.ca/blake/tech/seachange.html</guid><pubDate>Fri, 15 Feb 2008 20:03:22 GMT</pubDate></item><item><title>Bazaar on the iPod Touch.</title><link>https://weblog.latte.ca/blake/tech/iTouch/bzr.html</link><dc:creator>Blake Winton</dc:creator><description>&lt;p&gt;Because I was curious, and because it has Python, I figured I'ld give it a
+try, and see what happened...&lt;br&gt;
+The results are:&lt;/p&gt;
+&lt;pre&gt;# ./bzr selftest
+testing: /private/var/root/bzr-1.0/bzr
+   /private/var/root/bzr-1.0/bzrlib (1.0.0 python2.5.1.final.0)
+
+bzr: ERROR: exceptions.ImportError: No module named pyexpat
+
+Traceback (most recent call last):
+  File "/private/var/root/bzr-1.0/bzrlib/commands.py", line 802, in run_bzr_catch_errors
+    return run_bzr(argv)
+  File "/private/var/root/bzr-1.0/bzrlib/commands.py", line 758, in run_bzr
+    ret = run(*run_argv)
+  File "/private/var/root/bzr-1.0/bzrlib/commands.py", line 492, in run_argv_aliases
+    return self.run(**all_cmd_args)
+  File "/private/var/root/bzr-1.0/bzrlib/builtins.py", line 2659, in run
+    coverage_dir=coverage,
+  File "/private/var/root/bzr-1.0/bzrlib/tests/__init__.py", line 2373, in selftest
+    suite = test_suite()
+  File "/private/var/root/bzr-1.0/bzrlib/tests/__init__.py", line 2531, in test_suite
+    suite.addTest(loader.loadTestsFromModuleNames(testmod_names))
+  File "/private/var/root/bzr-1.0/bzrlib/tests/TestUtil.py", line 89, in loadTestsFromModuleNames
+    _load_module_by_name(name)
+  File "/private/var/root/bzr-1.0/bzrlib/tests/TestUtil.py", line 96, in _load_module_by_name
+    module = __import__(mod_name)
+  File "/private/var/root/bzr-1.0/bzrlib/tests/test_bundle.py", line 32, in &amp;lt;module&amp;gt;
+    from bzrlib.bundle.bundle_data import BundleTree
+  File "/private/var/root/bzr-1.0/bzrlib/bundle/bundle_data.py", line 42, in &amp;lt;module&amp;gt;
+    from bzrlib.xml5 import serializer_v5
+  File "/private/var/root/bzr-1.0/bzrlib/xml5.py", line 26, in &amp;lt;module&amp;gt;
+    from bzrlib.xml_serializer import SubElement, Element, Serializer
+  File "/private/var/root/bzr-1.0/bzrlib/xml_serializer.py", line 47, in &amp;lt;module&amp;gt;
+    from xml.parsers.expat import ExpatError as ParseError
+  File "/usr/lib/python2.5/xml/parsers/expat.py", line 4, in &amp;lt;module&amp;gt;
+    from pyexpat import *
+ImportError: No module named pyexpat
+
+bzr 1.0.0 on python 2.5.1.final.0 (darwin)
+arguments: ['./bzr', 'selftest']
+encoding: 'ascii', fsenc: 'utf-8', lang: None
+plugins:
+  launchpad            /private/var/root/bzr-1.0/bzrlib/plugins/launchpad [unknown]
+  multiparent          /private/var/root/bzr-1.0/bzrlib/plugins/multiparent.pyc [unknown]
+*** Bazaar has encountered an internal error.
+    Please report a bug at https://bugs.launchpad.net/bzr/+filebug
+    including this traceback, and a description of what you
+    were doing when the error occurred.
+&lt;/pre&gt;
+
+&lt;p&gt;Doing a bit of googling led me &lt;a href="http://gegis.itsmart.fr/trac/browser/trunk/packaging/iphone/README.iPhone?rev=346"&gt;here&lt;/a&gt;
+(or rather, the &lt;a href="http://64.233.167.104/search?q=cache:VHKVDcZWQ4MJ:gegis.itsmart.fr/trac/browser/trunk/packaging/iphone/README.iPhone%3Frev%3D346+iphone+pyexpat+json&amp;amp;hl=en&amp;amp;ct=clnk&amp;amp;cd=1&amp;amp;gl=ca&amp;amp;client=firefox-a"&gt;google
+cache&lt;/a&gt; of that page).  which says: &lt;/p&gt;
+
+&lt;blockquote&gt;# 1/ The python installation from the installer ("unjailed iphone")
+does not come with the pyexpat module.&lt;/blockquote&gt;
+
+&lt;p&gt;So, that's a little surprising.&lt;/p&gt;
+
+&lt;p&gt;I tried to install easy_install, to try an "easy_install pyexpat", but
+because I'm missing a Makefile, that fails with the following:&lt;/p&gt;
+&lt;pre&gt;# python ez_setup.py
+Downloading http://pypi.python.org/packages/2.5/s/setuptools/setuptools-0.6c7-py2.5.egg
+Traceback (most recent call last):
+  File "ez_setup.py", line 229, in &amp;lt;module&amp;gt;
+    main(sys.argv[1:])
+  File "ez_setup.py", line 163, in main
+    from setuptools.command.easy_install import main
+  File "build/bdist.linux-i686/egg/setuptools/__init__.py", line 2, in &amp;lt;module&amp;gt;
+  File "build/bdist.linux-i686/egg/setuptools/extension.py", line 2, in &amp;lt;module&amp;gt;
+  File "build/bdist.linux-i686/egg/setuptools/dist.py", line 5, in &amp;lt;module&amp;gt;
+  File "build/bdist.linux-i686/egg/setuptools/command/__init__.py", line 13, in &amp;lt;module&amp;gt;
+  File "/usr/lib/python2.5/distutils/command/bdist.py", line 29, in &amp;lt;module&amp;gt;
+    class bdist (Command):
+  File "/usr/lib/python2.5/distutils/command/bdist.py", line 37, in bdist
+    "(default: %s)" % get_platform()),
+  File "/usr/lib/python2.5/distutils/util.py", line 78, in get_platform
+    cfgvars = get_config_vars()
+  File "/usr/lib/python2.5/distutils/sysconfig.py", line 493, in get_config_vars
+    func()
+  File "/usr/lib/python2.5/distutils/sysconfig.py", line 352, in _init_posix
+    raise DistutilsPlatformError(my_msg)
+distutils.errors.DistutilsPlatformError: invalid Python installation: unable to open /usr/lib/python2.5/config/Makefile (No such file or directory)
+&lt;/pre&gt;
+
+&lt;p&gt;And that was the end of that.  Interesting, though...&lt;/p&gt;
+
+&lt;p&gt;Oh, yeah, and I ended up going with the iPod Touch (hereafter
+referred to as the iTouch) to replace my Palm TX.  It's not the
+perfect device, as the above stack traces show, but it's pretty good,
+and a fair bit closer than the Palm TX was.&lt;/p&gt;</description><category>bzr</category><category>itouch</category><category>python</category><guid>https://weblog.latte.ca/blake/tech/iTouch/bzr.html</guid><pubDate>Fri, 28 Dec 2007 20:36:28 GMT</pubDate></item><item><title>Like a Thesis Defence &lt;small&gt;(or so I imagine)&lt;/small&gt;</title><link>https://weblog.latte.ca/blake/tech/bzr/thesis.html</link><dc:creator>Blake Winton</dc:creator><description>&lt;p&gt;I’ve recently started using &lt;a href="http://bazaar-vcs.org/"&gt;bzr&lt;/a&gt; as my go-to version control
+system, and as a newbie I’ve &lt;a href="http://weblog.latte.ca/blake/tech/bzr/BazaarNotes1.html"&gt;run
+into a couple of small things&lt;/a&gt; I’ld like changed.  Fortunately, bzr
+is written in &lt;a href="http://www.python.org/"&gt;Python&lt;/a&gt;, and comes
+with an extensive set of unit tests, so it was easy for me to jump
+right in and add the feature I wanted.  To be honest, I started off by
+writing it up as &lt;a href="https://bugs.launchpad.net/bzr/+bug/129299"&gt;a bug report&lt;/a&gt;,
+with a trivial patch (by which I mean one without any tests).  The
+comments on the bug led me to write up an actual mergable set of
+changes (which seems to be called a bundle by the bzr folks), and
+submit it for review.  What followed was a few &lt;a href="http://thread.gmane.org/gmane.comp.version-control.bazaar-ng.general/29306/focus=29306"&gt;back-and-forths&lt;/a&gt; where various people pointed out things I hadn’t
+done correctly, or hadn’t really understood, and I fixed them.  As a
+result, I think the code in &lt;a href="http://bundlebuggy.aaronbentley.com/request/%3C46C303B4.60109%40latte.ca%3E"&gt;the most recent bundle&lt;/a&gt; is pretty good, and is certainly far
+better than anything I would have produced on my own.&lt;/p&gt;</description><category>bazaar-ng</category><category>bzr</category><category>patch</category><category>path</category><category>submit</category><category>windows</category><guid>https://weblog.latte.ca/blake/tech/bzr/thesis.html</guid><pubDate>Wed, 15 Aug 2007 14:14:12 GMT</pubDate></item><item><title>Some notes on Bazaar</title><link>https://weblog.latte.ca/blake/tech/bzr/bazaarnotes1.html</link><dc:creator>Blake Winton</dc:creator><description>&lt;p&gt;This started off as a reply to some email on the Bazaar-NG list,
+but it sort of grew and grew, until there were a whole bunch of things
+in it, and I thought it would probably be better as a weblog entry, so
+that I could find it later.&lt;/p&gt;
+
+&lt;p&gt;On to the email...&lt;br&gt;
+Martin Pool wrote:&lt;br&gt;
+&amp;gt; If you have sftp access to your server, then just do&lt;br&gt;
+&amp;gt;   bzr init-repo sftp://user@host/~/myproject&lt;br&gt;
+&amp;gt;   bzr push sftp://user@host/~/myproject/mybranch&lt;br&gt;
+&amp;gt; then on the second machine (eg at work)&lt;br&gt;
+&amp;gt;   bzr init-repo ~/myproject&lt;br&gt;
+&amp;gt;   cd myproject&lt;br&gt;
+&amp;gt;   bzr branch sftp://user@host/~/myproject/mybranch&lt;br&gt;&lt;/p&gt;
+
+&lt;p&gt;As a related question, if I wanted other people to be able to download
+my branch over http, would it suffice to do something on the server
+like&lt;br&gt;&lt;br&gt;
+bzr init-repo ~/www/myproject&lt;br&gt;
+cd ~/www/myproject&lt;br&gt;
+bzr branch sftp://user@host/~/myproject/mybranch&lt;br&gt;&lt;br&gt;
+or would I need to push straight to ~/www/myproject/mybranch?
+&lt;/p&gt;
+
+&lt;p&gt;I'm of two minds here, and I'ld like to explain why, in case it's a
+common problem.  On the one hand, the repo I created by following the
+steps in the first part of Martin's message&lt;br&gt;
+&amp;gt;   bzr init-repo sftp://user@host/~/myproject&lt;br&gt;
+&amp;gt;   bzr push sftp://user@host/~/myproject/mybranch&lt;br&gt;
+should be just the same as any other repository, right?&lt;br&gt;&lt;br&gt;
+But, on the other hand, when I ssh to "user@host", and look in
+~/myproject, all I see is a .bzr directory.  None of the files I
+allegedly pushed.
+&lt;/p&gt;
+
+&lt;p&gt;A search for 'bzr push "no content"' and 'bzr push missing files'
+turns up nothing that makes much sense to me.  running 'bzr help push'
+finally shows me the following lines:&lt;br&gt;
+&amp;gt; The target branch will not have its working tree populated
+because&lt;br&gt;
+&amp;gt; this is both expensive, and is not supported on remote file
+systems.&lt;br&gt;
+which explains it at least a little.  So I started looking for a way
+to push and update, which quickly led me to the push-and-update
+plugin, but I'm now lost as to how to install it into my copy of bzr
+(the binary distribution, running under Windows XP.)  The plugins
+document that ships with bzr says "typically found in
+/usr/lib/python2.4/site-packages/bzrlib/plugins/", but I'm really
+fairly sure that's not where it's located on &lt;i&gt;my&lt;/i&gt; box...  &lt;a href="http://dpi.radiology.uiowa.edu/mifar/doc/bazaar-setup.php"&gt;another
+page&lt;/a&gt; says that it is "usually [...]
+C:\python2.4\site-packages\bzrlib\plugins under Windows", but again,
+that directory doesn't exist where I am.
+&lt;/p&gt;
+
+&lt;p&gt;Since I expect it'll make a difference to any answer I get, let me
+just say upfront that I've installed Bazaar (bzr) 0.18.0 into
+C:\Program Files\Bazaar\ using the Windows standalone installer.  The
+output of "bzr version" is:&lt;br&gt;
+"""&lt;br&gt;
+Bazaar (bzr) 0.18.0&lt;br&gt;
+Using Python interpreter: C:\Program Files\Bazaar\bzr.exe&lt;br&gt;
+Using Python standard library: C:\Program
+Files\Bazaar\lib\library.zip&lt;br&gt;
+Using bzrlib: C:\Program Files\Bazaar\lib\library.zip\bzrlib&lt;br&gt;
+Using Bazaar configuration: C:/Documents and
+Settings/blake/Application Data/bazaar/2.0&lt;br&gt;
+Using Bazaar log file: C:\Documents and Settings\blake\My
+Documents\.bzr.log&lt;br&gt;&lt;br&gt;
+Copyright 2005, 2006, 2007 Canonical Ltd.&lt;br&gt;
+http://bazaar-vcs.org/&lt;br&gt;&lt;br&gt;
+bzr comes with ABSOLUTELY NO WARRANTY.  bzr is free software, and you
+may use, modify and redistribute it under the terms of the GNU General
+Public License version 2 or later.&lt;br&gt;
+"""&lt;br&gt;&lt;br&gt;
+So, where should I put the plugins in this case?&lt;br&gt;&lt;/p&gt;
+
+&lt;p&gt;The answer, as given on irc, seems to be "put it somewhere else and
+set the BZR_PLUGIN_PATH env variable".  Works for me, although it
+would have been nice if the Windows standalone installer did that for
+me, by creating a Plugins directory under the install directory.  And
+as one final note, the BZR_PLUGIN_PATH, which it may contain spaces
+(i.e. "C:\Program Files\Bazaar\Plugins"), must not end in a trailing
+"\".&lt;/p&gt;</description><category>bazaar-ng</category><category>bzr</category><category>http</category><category>notes</category><category>plugins</category><category>push</category><category>sftp</category><category>windows</category><guid>https://weblog.latte.ca/blake/tech/bzr/bazaarnotes1.html</guid><pubDate>Mon, 30 Jul 2007 19:06:13 GMT</pubDate></item></channel></rss>

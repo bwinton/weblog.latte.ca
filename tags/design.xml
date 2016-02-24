@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet type="text/xsl" href="../assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Blog-O! (design)</title><link>https://weblog.latte.ca/</link><description></description><atom:link type="application/rss+xml" href="https://weblog.latte.ca/tags/design.xml" rel="self"></atom:link><language>en</language><lastBuildDate>Wed, 24 Feb 2016 17:07:44 GMT</lastBuildDate><generator>https://getnikola.com/</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Customization and choice.</title><link>https://weblog.latte.ca/blake/tech/thunderbird/makingchoices.html</link><dc:creator>Blake Winton</dc:creator><description>&lt;div&gt;&lt;p&gt;A friend of mine recently
+&lt;a href="https://twitter.com/eccentricflower/status/80817396696358913"&gt;said&lt;/a&gt;:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;EVERY behavior aspect of EVERY application should be user-settable if
+the user is prepared to drill down far enough. No exceptions.
+Even if the user will be shooting his own foot by messing with it.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;I, obviously, disagree with him, and wanted to explain why in a few more
+characters than Twitter would allow.&lt;/p&gt;
+&lt;p&gt;While giving the user complete control over every aspect of an application
+seems like a good idea, there are two slightly-hidden downsides to it.&lt;/p&gt;
+&lt;p&gt;First, every choice you give the user doubles the amount of testing you
+have to do.  (Okay, it doesn’t exactly double it, but it certainly adds a
+testing, maintenance, and support burden.)  Is it a responsible use of your
+time to implement these options if less than 1% of your users will ever
+change them (and risk shooting their own feet), or would it be better for
+everyone to implement a feature that more people would use?&lt;/p&gt;
+&lt;p&gt;Second, Emacs notwithstanding, you’ll never get to a great text editor by
+customizing a mail reader.  The whole Unix (and iOS, oddly) philosophy is
+to write each app to do one thing, and do it well.  Not to do a whole bunch
+of optional things.  And if you’re doing only one thing, presenting an
+option to the user to do it or not doesn’t make a lot of sense.&lt;/p&gt;
+&lt;p&gt;And finally, because I can’t count, if you offer people too much choice, it
+imposes a cognitive burden on them which can lead to their making no
+choices at all, or at least not making them any happier than when they had
+fewer choices.&lt;/p&gt;
+&lt;p&gt;To bring this back to the product I’m working on, we are going out of our
+way to make Thunderbird more usable and part of that is simplifying it by
+offering fewer, more meaningful choices.&lt;/p&gt;&lt;/div&gt;</description><category>choice</category><category>design</category><category>mozilla</category><category>ux</category><guid>https://weblog.latte.ca/blake/tech/thunderbird/makingchoices.html</guid><pubDate>Wed, 15 Jun 2011 14:13:58 GMT</pubDate></item><item><title>Down With Centering!</title><link>https://weblog.latte.ca/blake/tech/weblog/design.html</link><dc:creator>Blake Winton</dc:creator><description>&lt;p&gt;Recently, I've been reading &lt;a href="http://www.ratz.com/robin/books.html"&gt;a few books&lt;/a&gt; by Robin Williams (the
+author, not the actor) about designing for print, and for the web.
+One of the things she mentions is that centering looks a little bland,
+corporate, boring, and you should instead attempt to align things to
+the left or the right.  So I took a few minutes tonight to attempt to
+do that with the blog, aligning the stories on the right, mirroring
+the strong line of the sidebar, which has changed to left-alignment.
+I also changed the boxes to lines on the aligned side.  I'ld love to
+hear what you think, if you noticed at all.  (I'm leaving the colour
+scheme to Amy.  A large part of design is knowing your
+limitations.)&lt;/p&gt;</description><category>design</category><category>flush_left</category><category>flush_right</category><category>redo</category><category>strong_lines</category><guid>https://weblog.latte.ca/blake/tech/weblog/design.html</guid><pubDate>Thu, 05 Jul 2007 02:02:03 GMT</pubDate></item></channel></rss>

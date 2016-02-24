@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet type="text/xsl" href="../assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Blog-O! (svn)</title><link>https://weblog.latte.ca/</link><description></description><atom:link type="application/rss+xml" href="https://weblog.latte.ca/tags/svn.xml" rel="self"></atom:link><language>en</language><lastBuildDate>Wed, 24 Feb 2016 17:07:35 GMT</lastBuildDate><generator>https://getnikola.com/</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Now I feel like I’m behind the times.</title><link>https://weblog.latte.ca/blake/tech/seachange.html</link><dc:creator>Blake Winton</dc:creator><description>&lt;div&gt;&lt;p&gt;I was reading &lt;a href="http://blogs.mathworks.com/images/steve/92/handout_final_icip2006.pdf"&gt;a presentation&lt;/a&gt; about how to write better software for non-developers, and it said:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;I would refuse to work on any sort of collaborative software
+development project that doesn’t use version control.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;I totally agree.  Heck, I even use version control for my personal
+one-off projects.  But it got me wondering what people use at their
+jobs, so I asked my friends who were on instant messenger, as a straw
+poll.  The results were shockingly unanimous.  &lt;a href="http://subversion.tigris.org/"&gt;Subversion&lt;/a&gt;.  8 for 8.  I regret to say that I’m
+not using Subversion at my job, but that may change someday.  In the
+meantime, leave a comment, and tell me what you’re using at work or at
+home, either to make me feel better, or to rub my nose in it.&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;Update&lt;/em&gt;: One person uses Clear Case.  I’ve heard good things about
+Clear Case.&lt;/p&gt;&lt;/div&gt;</description><category>bzr</category><category>survey</category><category>svn</category><category>vss</category><category>work</category><guid>https://weblog.latte.ca/blake/tech/seachange.html</guid><pubDate>Fri, 15 Feb 2008 20:03:22 GMT</pubDate></item></channel></rss>

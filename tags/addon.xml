@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet type="text/xsl" href="../assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Blog-O! (addon)</title><link>https://weblog.latte.ca/</link><description></description><atom:link type="application/rss+xml" href="https://weblog.latte.ca/tags/addon.xml" rel="self"></atom:link><language>en</language><lastBuildDate>Wed, 24 Feb 2016 17:07:40 GMT</lastBuildDate><generator>https://getnikola.com/</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Hey!  Let’s Write a WebExtension!</title><link>https://weblog.latte.ca/blake/tech/firefox/webextensiontutorial.html</link><dc:creator>Blake Winton</dc:creator><description>&lt;div&gt;&lt;p&gt;&lt;small&gt;(This article is also posted on &lt;a href="https://hacks.mozilla.org/2015/09/lets_write_a_webextension/"&gt;Mozilla
+Hacks&lt;/a&gt;.)&lt;/small&gt;&lt;/p&gt;
+&lt;p&gt;You might have heard about Mozilla’s &lt;a href="https://wiki.mozilla.org/WebExtensions" title="Mozilla’s WebExtensions Wiki Page"&gt;WebExtensions&lt;/a&gt;, our
+implementation of a new browser extension API for writing
+multiprocess-compatible add-ons.  Maybe you’ve been wondering what it was about,
+and how you could use it. Well, I’m here to help!  I think &lt;a href="https://developer.mozilla.org/en-US/Add-ons/WebExtensions" title="MDN’s WebExtensions Documentation"&gt;MDN’s WebExtensions
+Docs&lt;/a&gt; have a pretty great definition:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;WebExtensions are a new way to write Firefox extensions.&lt;/p&gt;
+&lt;p&gt;The technology is developed for cross-browser compatibility: to a large extent
+the API is compatible with the &lt;a href="https://developer.chrome.com/extensions" title="Chrome’s Extension API"&gt;extension API&lt;/a&gt; supported by Google
+Chrome and Opera. Extensions written for these browsers will in most cases run
+in Firefox with just a few changes. The API is also fully compatible with
+&lt;a href="https://developer.mozilla.org/en-US/docs/Mozilla/Firefox/Multiprocess_Firefox" title="a.k.a. Electrolysis"&gt;multiprocess Firefox&lt;/a&gt;.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;The only thing I would add is that while Mozilla is implementing most of the API
+that Chrome and Opera support, we’re not restricting ourselves to only that API.
+Where it makes sense, we will be adding new functionality and talking with other
+browser makers about implementing it as well.  Finally, since the WebExtension
+API is still under development, it’s probably best if you use &lt;a href="https://nightly.mozilla.org/" title="Download Nightly Here"&gt;Firefox
+Nightly&lt;/a&gt; for this tutorial, so that you get the most up-to-date,
+standards-compliant behaviour.  But keep in mind, this is still experimental
+technology — things might break!&lt;/p&gt;
+&lt;h4&gt;Starting off&lt;/h4&gt;
+&lt;p&gt;Okay, let’s start with a reasonably simple add-on. We’ll add a button, and when
+you click it, it will open up &lt;a href="http://chilloutandwatchsomecatgifs.com/" title="Cat Gifs!"&gt;one of my favourite sites&lt;/a&gt; in a new
+tab.&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://weblog.latte.ca/blake/tech/firefox/webextensiontutorial.html"&gt;Read more…&lt;/a&gt; (9 min remaining to read)&lt;/p&gt;&lt;/div&gt;</description><category>addon</category><category>firefox</category><category>mozilla</category><category>webextension</category><guid>https://weblog.latte.ca/blake/tech/firefox/webextensiontutorial.html</guid><pubDate>Mon, 21 Sep 2015 18:52:00 GMT</pubDate></item></channel></rss>

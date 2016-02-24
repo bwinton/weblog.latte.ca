@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet type="text/xsl" href="../assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Blog-O! (javascript)</title><link>https://weblog.latte.ca/</link><description></description><atom:link type="application/rss+xml" href="https://weblog.latte.ca/tags/javascript.xml" rel="self"></atom:link><language>en</language><lastBuildDate>Wed, 24 Feb 2016 17:07:38 GMT</lastBuildDate><generator>https://getnikola.com/</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>More stuff on the iTouch.</title><link>https://weblog.latte.ca/blake/tech/iTouch/languages.html</link><dc:creator>Blake Winton</dc:creator><description>&lt;p&gt;Yeah, like I was done messing with my iTouch.  Whatever.&lt;/p&gt;
+
+&lt;p&gt;I've been playing around a lot with the iTouch, and developing
+quite a few programs for it.  The first one was by request, although
+I’m also finding it very useful.  (And apparently a &lt;a href="http://forums.macrumors.com/showthread.php?p=4754458"&gt;few other
+people&lt;/a&gt; are as well!  Cool!)  It’s called &lt;a href="http://www.csse.uwa.edu.au/~chris/iphone/WifiToggle/"&gt;WifiToggle&lt;/a&gt;, and it’s a small app that simply toggles on and off
+your Wifi connection, so as to save batteries.  The next thing I did
+was &lt;a href="http://iphone.latte.ca/info/Javascript.html"&gt;a port&lt;/a&gt;
+of the &lt;a href="http://www.mozilla.org/js/spidermonkey/"&gt;SpiderMonkey
+Javascript&lt;/a&gt; interpreter.  It works, and it wasn’t that hard to get
+compiled and installed, which is really pretty cool when you stop to
+think about it.&lt;/p&gt;
+
+&lt;p&gt;The final thing I got working just tonight (which I was playing
+around with mostly to take my mind off of stuff.  See tomorrow’s post
+for details), was &lt;a href="http://iphone.latte.ca/info/GambitScheme.html"&gt;a port&lt;/a&gt; of the
+&lt;a href="http://www.iro.umontreal.ca/~gambit/wiki/index.php/Main_Page"&gt;Gambit Scheme&lt;/a&gt; interpreter.  I know, Scheme is just like
+Javascript, only with an uglier syntax, but I still like it, and
+hopefully the lack of punctuation will make it easier to use on the
+iTouch.  Heh.&lt;/p&gt;
+
+&lt;p&gt;Anyways, if you own an iPhone or iTouch, and have jailbroken it, be
+sure to add &lt;a href="http://iphone.latte.ca/"&gt;http://iphone.latte.ca/&lt;/a&gt; to your list of Installer sources, and
+geek out!&lt;/p&gt;</description><category>itouch</category><category>javascript</category><category>languages</category><category>scheme</category><guid>https://weblog.latte.ca/blake/tech/iTouch/languages.html</guid><pubDate>Sat, 19 Jan 2008 02:06:51 GMT</pubDate></item><item><title>Does the Future Belong to Javascript?</title><link>https://weblog.latte.ca/blake/tech/javascript.html</link><dc:creator>Blake Winton</dc:creator><description>&lt;div style="width:6.25em; height:6.25em; float:right"&gt;
+  &lt;svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 100 100"&gt;&lt;text fill="red" x="50" y="97" text-anchor="middle" font-size="120"&gt;J&lt;/text&gt;&lt;/svg&gt;&lt;/div&gt;
+&lt;p&gt;This started off as a response to &lt;a href="http://pyre.third-bit.com/blog/archives/971.html"&gt;Greg's post&lt;/a&gt;,
+but grew too long, so I figured I'ld put it here instead.&lt;/p&gt;
+
+&lt;p&gt;The reaction I've seen from the developer community to Apple's "iPhone
+Development" announcement has been poor at best.  Everyone seems to think
+that it's a cop-out, and that they should have just said "We don't support
+third-party development, but you can use the web."  My favourite quote has
+to be from &lt;a href="http://daringfireball.net/2007/06/wwdc_2007_keynote"&gt;John Gruber&lt;/a&gt;:&lt;/p&gt;&lt;blockquote&gt;If all you have to offer is a shit sandwich,
+just say it. Don't tell us how lucky we are and that it's going to taste
+delicious.&lt;/blockquote&gt; Maybe it's because I'm an old fuddy-duddy, but I
+don't think the Web 2.0 development is really the wave of the future.  I
+think the future, like the past, will have desktop apps, client-server apps
+with both thick and thin clients, where the server may be a web server or
+may not, etc, etc...
+
+&lt;p&gt;And Javascript is still missing the extreme number of useful libraries
+that the other three languages have.  Like &lt;a href="http://ironfroggy-code.blogspot.com/2007/06/python-ironpython-apples-and-oranges.html"&gt;Calvin Spealman&lt;/a&gt; says:&lt;/p&gt;&lt;blockquote&gt;Does syntax alone make a language?
+Maybe one day it could, but those days died out. Python is far more than
+its clean, beautiful syntax. The libraries that come in the standard
+library provide even more value. As a foundation for all the software built
+on top, these packages are fundamental to the success of
+Python.&lt;/blockquote&gt;and I find that to be true over and over again.  Java
+the language kind of sucks.  But the huge number of libraries to do just
+about anything I want really rocks.  (And the IDEs are sweet too, which is
+a good thing, since trying to write Java without an IDE would give even a
+super-robot a serious case of carpal tunnel syndrome.)
+
+&lt;p&gt;Which is not to say that there won't be more and more libraries shipped
+with Javascript, but then again, since it's mainly a web-language, the
+browser makers will want to keep it light, and so the libraries won't be
+part of the language proper, as they are with Python or Java, and any
+"standard" library you see will be vendor-specific, just like it is today.
+(I already write some Javascript scripts for my day job, but I know that
+they're going to run on a Windows box.  I have no idea how to write the
+cross-platform equivalent of stuff like:
+&lt;/p&gt;&lt;pre&gt;&lt;code&gt;if ( FS.FileExists( flavour + "\\gamelist.txt" ) )&lt;/code&gt;&lt;/pre&gt;
+or:
+&lt;pre&gt;&lt;code&gt;WScript.Echo( "Unhandled folder: " + fname );&lt;/code&gt;&lt;/pre&gt;
+much less:
+&lt;pre&gt;&lt;code&gt;var WSHShell = WScript.CreateObject("WScript.Shell");
+var cmdline = "jar.exe xvf " + item + " META-INF/MANIFEST.MF";
+WSHShell.Run( cmdline, ActivateAndHide, true );&lt;/code&gt;&lt;/pre&gt;
+Any suggestions?
+
+&lt;p&gt;And while I'm here, that red "J" was the best thing I could come up with
+for a Javascript logo, after extensive web searching.  (There's a reason
+I'm a programmer, and not a graphics person.)  Anyone seen anything
+better?&lt;/p&gt;</description><category>greg_wilson</category><category>iphone</category><category>javascript</category><category>reply</category><category>svg</category><guid>https://weblog.latte.ca/blake/tech/javascript.html</guid><pubDate>Wed, 13 Jun 2007 17:32:00 GMT</pubDate></item></channel></rss>

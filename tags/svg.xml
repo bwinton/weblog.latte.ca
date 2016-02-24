@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet type="text/xsl" href="../assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Blog-O! (svg)</title><link>https://weblog.latte.ca/</link><description></description><atom:link type="application/rss+xml" href="https://weblog.latte.ca/tags/svg.xml" rel="self"></atom:link><language>en</language><lastBuildDate>Wed, 24 Feb 2016 17:07:35 GMT</lastBuildDate><generator>https://getnikola.com/</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Does the Future Belong to Javascript?</title><link>https://weblog.latte.ca/blake/tech/javascript.html</link><dc:creator>Blake Winton</dc:creator><description>&lt;div style="width:6.25em; height:6.25em; float:right"&gt;
+  &lt;svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 100 100"&gt;&lt;text fill="red" x="50" y="97" text-anchor="middle" font-size="120"&gt;J&lt;/text&gt;&lt;/svg&gt;&lt;/div&gt;
+&lt;p&gt;This started off as a response to &lt;a href="http://pyre.third-bit.com/blog/archives/971.html"&gt;Greg's post&lt;/a&gt;,
+but grew too long, so I figured I'ld put it here instead.&lt;/p&gt;
+
+&lt;p&gt;The reaction I've seen from the developer community to Apple's "iPhone
+Development" announcement has been poor at best.  Everyone seems to think
+that it's a cop-out, and that they should have just said "We don't support
+third-party development, but you can use the web."  My favourite quote has
+to be from &lt;a href="http://daringfireball.net/2007/06/wwdc_2007_keynote"&gt;John Gruber&lt;/a&gt;:&lt;/p&gt;&lt;blockquote&gt;If all you have to offer is a shit sandwich,
+just say it. Don't tell us how lucky we are and that it's going to taste
+delicious.&lt;/blockquote&gt; Maybe it's because I'm an old fuddy-duddy, but I
+don't think the Web 2.0 development is really the wave of the future.  I
+think the future, like the past, will have desktop apps, client-server apps
+with both thick and thin clients, where the server may be a web server or
+may not, etc, etc...
+
+&lt;p&gt;And Javascript is still missing the extreme number of useful libraries
+that the other three languages have.  Like &lt;a href="http://ironfroggy-code.blogspot.com/2007/06/python-ironpython-apples-and-oranges.html"&gt;Calvin Spealman&lt;/a&gt; says:&lt;/p&gt;&lt;blockquote&gt;Does syntax alone make a language?
+Maybe one day it could, but those days died out. Python is far more than
+its clean, beautiful syntax. The libraries that come in the standard
+library provide even more value. As a foundation for all the software built
+on top, these packages are fundamental to the success of
+Python.&lt;/blockquote&gt;and I find that to be true over and over again.  Java
+the language kind of sucks.  But the huge number of libraries to do just
+about anything I want really rocks.  (And the IDEs are sweet too, which is
+a good thing, since trying to write Java without an IDE would give even a
+super-robot a serious case of carpal tunnel syndrome.)
+
+&lt;p&gt;Which is not to say that there won't be more and more libraries shipped
+with Javascript, but then again, since it's mainly a web-language, the
+browser makers will want to keep it light, and so the libraries won't be
+part of the language proper, as they are with Python or Java, and any
+"standard" library you see will be vendor-specific, just like it is today.
+(I already write some Javascript scripts for my day job, but I know that
+they're going to run on a Windows box.  I have no idea how to write the
+cross-platform equivalent of stuff like:
+&lt;/p&gt;&lt;pre&gt;&lt;code&gt;if ( FS.FileExists( flavour + "\\gamelist.txt" ) )&lt;/code&gt;&lt;/pre&gt;
+or:
+&lt;pre&gt;&lt;code&gt;WScript.Echo( "Unhandled folder: " + fname );&lt;/code&gt;&lt;/pre&gt;
+much less:
+&lt;pre&gt;&lt;code&gt;var WSHShell = WScript.CreateObject("WScript.Shell");
+var cmdline = "jar.exe xvf " + item + " META-INF/MANIFEST.MF";
+WSHShell.Run( cmdline, ActivateAndHide, true );&lt;/code&gt;&lt;/pre&gt;
+Any suggestions?
+
+&lt;p&gt;And while I'm here, that red "J" was the best thing I could come up with
+for a Javascript logo, after extensive web searching.  (There's a reason
+I'm a programmer, and not a graphics person.)  Anyone seen anything
+better?&lt;/p&gt;</description><category>greg_wilson</category><category>iphone</category><category>javascript</category><category>reply</category><category>svg</category><guid>https://weblog.latte.ca/blake/tech/javascript.html</guid><pubDate>Wed, 13 Jun 2007 17:32:00 GMT</pubDate></item><item><title>Thoughts from a cyclist in the rain.</title><link>https://weblog.latte.ca/blake/random/biking/thoughts.html</link><dc:creator>Blake Winton</dc:creator><description>&lt;div style="width:6.53em; height:3.79em; float:right"&gt;
+  &lt;svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 653 379"&gt;&lt;defs&gt;&lt;lineargradient id="g1" x1="10%" y1="15%" x2="85%" y2="85%"&gt;&lt;stop stop-color="blue" offset="0%"&gt;&lt;/stop&gt;&lt;stop stop-color="green" offset="100%"&gt;&lt;/stop&gt;&lt;/lineargradient&gt;&lt;/defs&gt;&lt;path fill="url(#g1)" d="M182.766,143.177l35.788-98.732l-11.341-19.344l22.681-24.682h48.695l0.667,14.009h-42.691l-8.672,9.339
+	l10.006,18.01l-12.582,44.596h174.757l2.67-8.156c-14.046-1.828-38.271-10.48-44.058-15.507c-5.785-5.027-0.719-9.647,5.871-9.862
+	c34.492-1.467,85.734-4.356,95.47-4.398c9.733-0.043,10.729,4.852,4.215,11.98c-6.518,7.127-12.211,13.543-36.898,17.369
+	l-6.671,18.011l41.354,51.229c19.489-11.831,43.063-17.987,65.97-17.987c68.72,0,124.767,56.047,124.767,124.767
+	c0,68.719-56.047,124.766-124.767,124.766c-56.534,0-106.245-38.989-120.856-92.874l-37.997,6.828
+	c-1.626,4.479-5.419,7.914-9.947,10.603l6.778,32.146h8.672l0.666,8.672l-27.35,1.334v-9.339h6.672l-8.264-32.126
+	c-12.291-2.013-18.732-12.535-15.072-22.979l-124.131-140.39l-5.559,15.062c30.128,23.732,48.16,60.285,48.16,98.3
+	c0,68.719-56.047,124.766-124.766,124.766c-68.719,0-124.766-56.052-124.766-124.771c0-68.718,56.047-124.765,124.766-124.765
+	C144.985,129.05,165.455,133.923,182.766,143.177z"&gt;&lt;/path&gt;&lt;path fill="#FFFFFF" d="M427.353,260.018l85.419-13.942l-53.834-69.928C431.033,200.477,427.563,229.684,427.353,260.018z"&gt;&lt;/path&gt;&lt;path fill="#FFFFFF" d="M403.856,265.133c-0.14-3.031-0.625-7.904-0.625-11.316c0-34.604,11.192-68.229,41.574-96.178
+	l-31.642-37.883l-48.973,149.4L403.856,265.133z"&gt;&lt;/path&gt;&lt;path fill="#FFFFFF" d="M215.885,116.44l2.716-8.314l174.429-0.229l-46.401,140.667l-2-14.676h5.336l-0.667-9.339H325.95
+	l0.666,8.673h6.004l1.334,16.01C333.954,249.232,216.553,117.108,215.885,116.44z"&gt;&lt;/path&gt;&lt;path fill="#FFFFFF" d="M138.632,251.566c23.425-18.604,41.658-36.34,54.806-71.825c20.753,18.825,32.592,46.056,32.592,74.073
+	c0,55.645-45.383,101.026-101.026,101.026S23.977,309.459,23.977,253.814c0-55.644,45.383-101.025,101.026-101.025
+	c17.759,0,35.912,5.13,50.55,13.771c-9.908,31.311-19.547,47.458-50.033,71.999c-7.4,0.313-13.028,6.254-13.028,13.342
+	c0,7.349,5.993,13.342,13.341,13.342C133.181,265.241,138.632,259.248,138.632,251.566z"&gt;&lt;/path&gt;&lt;path fill="#FFFFFF" d="M430.933,281.48c11.428,42.58,52.075,73.362,97.063,73.362c55.645,0,101.028-45.384,101.028-101.028
+	c0-55.644-45.385-101.026-101.028-101.026c-17.759,0-38.308,4.19-53.298,12.967l54.834,72.804
+	c6.707,0.104,12.545,6.099,12.545,13.342c0,7.349-5.994,13.342-13.342,13.342c-2.033,0-4.169-0.521-5.974-1.37L430.933,281.48z"&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/div&gt;
+&lt;p&gt;After a certain point, you don't really get any wetter.&lt;br&gt;
+Even though it's really cold, and I'm totally soaking, it's not a bad ride.&lt;br&gt;
+Wow, it takes a long time to stop.  (I already knew this, and I'm going way slower than I normally would, but that doesn't make it any less true.)&lt;br&gt;
+I could probably do with a new pair of biking gloves.&lt;br&gt;
+The headband I stole from Amy is working wonderfully, though.&lt;br&gt;
+I hereby transfer all the karma I got from giving my tires to &lt;a href="http://www.bikepirates.com/"&gt;Bike Pirates&lt;/a&gt; to the nice person in the car (a Beemer, even!) who let me turn left into the cemetary front of them.&lt;br&gt;
+Although, thinking about it, I might not have that much karma left, since I'm biking on the sidewalk.  (Up Mount Pleasant beside the Cemetary.  In this weather, there's no way I would feel safe on the road, and there aren't any cross roads or pedestrians, so I'm probably way safer than I would normally be on the sidewalk.)  &lt;a href="http://www.michaelwalker.ca/"&gt;Mr. Walker&lt;/a&gt;, a bike lane down Mount Pleasant would be most appreciated.&lt;br&gt;&lt;/p&gt;</description><category>biking</category><category>rain</category><category>svg</category><guid>https://weblog.latte.ca/blake/random/biking/thoughts.html</guid><pubDate>Thu, 17 May 2007 00:53:49 GMT</pubDate></item><item><title>Just checking some inline SVG.</title><link>https://weblog.latte.ca/blake/tech/doesthisworkforyou.html</link><dc:creator>Blake Winton</dc:creator><description>&lt;div style="width:6.25em; height:6.25em; float:right"&gt;
+  &lt;svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 100 100"&gt;&lt;path d="M38,38c0-12,24-15,23-2c0,9-16,13-16,23v7h11v-4c0-9,17-12,17-27c-2-22-45-22-45,3zM45,70h11v11h-11z" fill="#371"&gt;&lt;/path&gt;&lt;circle cx="50" cy="50" r="45" fill="none" stroke="#371" stroke-width="10"&gt;&lt;/circle&gt;&lt;/svg&gt;&lt;/div&gt;
+&lt;p&gt;Please leave a comment to let me know if you see an image
+on the right there:&lt;/p&gt;
+&lt;p&gt;
+Thanks,&lt;br&gt;
+Blake.&lt;br clear="all"&gt;&lt;/p&gt;</description><category>svg</category><category>test</category><guid>https://weblog.latte.ca/blake/tech/doesthisworkforyou.html</guid><pubDate>Thu, 03 May 2007 15:46:00 GMT</pubDate></item></channel></rss>

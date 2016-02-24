@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet type="text/xsl" href="assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Blog-O!</title><link>https://weblog.latte.ca/</link><description>A weblog for latte.ca</description><atom:link type="application/rss+xml" href="https://weblog.latte.ca/rss.xml" rel="self"></atom:link><language>en</language><lastBuildDate>Wed, 24 Feb 2016 17:07:35 GMT</lastBuildDate><generator>https://getnikola.com/</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Looking Back: 2015</title><link>https://weblog.latte.ca/amy/yearInReview/2015.html</link><dc:creator>Amy Brown</dc:creator><description>&lt;div&gt;&lt;p&gt;I'm going to go out on a sturdy limb and say 2015 wasn't one of my best years. It wasn't an unqualified disaster, though. Let's start at the beginning.&lt;/p&gt;
+&lt;p&gt;The year started off phone-free, because I dropped my phone down a drain in December 2013. I stubbornly tried to manage without buying a new iPhone, but I finally gave up and blew the $600 or whatever on an unlocked replacement. I'm much more careful with my phone outside, now, so I guess I grew as a person.&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://weblog.latte.ca/amy/yearInReview/2015.html"&gt;Read more…&lt;/a&gt; (7 min remaining to read)&lt;/p&gt;&lt;/div&gt;</description><guid>https://weblog.latte.ca/amy/yearInReview/2015.html</guid><pubDate>Fri, 01 Jan 2016 16:28:18 GMT</pubDate></item><item><title>A Letter to My Mother on what would have been her 81st Birthday</title><link>https://weblog.latte.ca/amy/everythingelse/lettertomum.html</link><dc:creator>Amy Brown</dc:creator><description>&lt;div&gt;&lt;p&gt;Dear Mum,&lt;/p&gt;
+&lt;p&gt;Today would have been your birthday. It’s been three and a half months since you died, and I thought you might like an update.&lt;/p&gt;
+&lt;p&gt;I know that of all the places you’re likely to be (and I expect you’re probably not actually anywhere, although Shirley thinks you’re in the blue jays) the Internet is the least likely, so I’m not sure why I’m posting this online. Maybe, like everything else post-mortem, it’s for me, not for you --- on account of you’re dead.&lt;/p&gt;
+&lt;p&gt;I hope being dead is working out for you. Wouldn’t it be nice if there were really a heaven, and you could be with your dad and your sister again? Maybe even your handsome first husband, who you loved so much. (I didn’t find any pictures of him in your stuff --- but there were pictures of Dad’s first wife. You were way prettier.)&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://weblog.latte.ca/amy/everythingelse/lettertomum.html"&gt;Read more…&lt;/a&gt; (4 min remaining to read)&lt;/p&gt;&lt;/div&gt;</description><guid>https://weblog.latte.ca/amy/everythingelse/lettertomum.html</guid><pubDate>Mon, 16 Nov 2015 08:05:18 GMT</pubDate></item><item><title>Hey!  Let’s Write a WebExtension!</title><link>https://weblog.latte.ca/blake/tech/firefox/webextensiontutorial.html</link><dc:creator>Blake Winton</dc:creator><description>&lt;div&gt;&lt;p&gt;&lt;small&gt;(This article is also posted on &lt;a href="https://hacks.mozilla.org/2015/09/lets_write_a_webextension/"&gt;Mozilla
+Hacks&lt;/a&gt;.)&lt;/small&gt;&lt;/p&gt;
+&lt;p&gt;You might have heard about Mozilla’s &lt;a href="https://wiki.mozilla.org/WebExtensions" title="Mozilla’s WebExtensions Wiki Page"&gt;WebExtensions&lt;/a&gt;, our
+implementation of a new browser extension API for writing
+multiprocess-compatible add-ons.  Maybe you’ve been wondering what it was about,
+and how you could use it. Well, I’m here to help!  I think &lt;a href="https://developer.mozilla.org/en-US/Add-ons/WebExtensions" title="MDN’s WebExtensions Documentation"&gt;MDN’s WebExtensions
+Docs&lt;/a&gt; have a pretty great definition:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;WebExtensions are a new way to write Firefox extensions.&lt;/p&gt;
+&lt;p&gt;The technology is developed for cross-browser compatibility: to a large extent
+the API is compatible with the &lt;a href="https://developer.chrome.com/extensions" title="Chrome’s Extension API"&gt;extension API&lt;/a&gt; supported by Google
+Chrome and Opera. Extensions written for these browsers will in most cases run
+in Firefox with just a few changes. The API is also fully compatible with
+&lt;a href="https://developer.mozilla.org/en-US/docs/Mozilla/Firefox/Multiprocess_Firefox" title="a.k.a. Electrolysis"&gt;multiprocess Firefox&lt;/a&gt;.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;The only thing I would add is that while Mozilla is implementing most of the API
+that Chrome and Opera support, we’re not restricting ourselves to only that API.
+Where it makes sense, we will be adding new functionality and talking with other
+browser makers about implementing it as well.  Finally, since the WebExtension
+API is still under development, it’s probably best if you use &lt;a href="https://nightly.mozilla.org/" title="Download Nightly Here"&gt;Firefox
+Nightly&lt;/a&gt; for this tutorial, so that you get the most up-to-date,
+standards-compliant behaviour.  But keep in mind, this is still experimental
+technology — things might break!&lt;/p&gt;
+&lt;h4&gt;Starting off&lt;/h4&gt;
+&lt;p&gt;Okay, let’s start with a reasonably simple add-on. We’ll add a button, and when
+you click it, it will open up &lt;a href="http://chilloutandwatchsomecatgifs.com/" title="Cat Gifs!"&gt;one of my favourite sites&lt;/a&gt; in a new
+tab.&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://weblog.latte.ca/blake/tech/firefox/webextensiontutorial.html"&gt;Read more…&lt;/a&gt; (9 min remaining to read)&lt;/p&gt;&lt;/div&gt;</description><category>addon</category><category>firefox</category><category>mozilla</category><category>webextension</category><guid>https://weblog.latte.ca/blake/tech/firefox/webextensiontutorial.html</guid><pubDate>Mon, 21 Sep 2015 18:52:00 GMT</pubDate></item><item><title>A long time ago, on a computer far far away…</title><link>https://weblog.latte.ca/blake/employment/mozilla/sixyears.html</link><dc:creator>Blake Winton</dc:creator><description>&lt;div&gt;&lt;p&gt;Six years ago, I started contributing to Mozilla.&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://weblog.latte.ca/blake/employment/mozilla/sixyears.html"&gt;Read more…&lt;/a&gt; (4 min remaining to read)&lt;/p&gt;&lt;/div&gt;</description><category>anniversary</category><category>employment</category><category>mozilla</category><category>thunderbird</category><guid>https://weblog.latte.ca/blake/employment/mozilla/sixyears.html</guid><pubDate>Fri, 27 Feb 2015 19:04:00 GMT</pubDate></item><item><title>2014: Ups and Downs (more Downs than Usual)</title><link>https://weblog.latte.ca/amy/yearInReview/2014.html</link><dc:creator>Amy Brown</dc:creator><description>&lt;div&gt;&lt;p&gt;I can’t say 2014 was one of my best years ever. I tried to travel, and failed; the house ate all our money; my mom got sick. On the other hand, my mom got better (and we discovered how much fun it is when I visit her without the kids), and we got kittens.&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://weblog.latte.ca/amy/yearInReview/2014.html"&gt;Read more…&lt;/a&gt; (4 min remaining to read)&lt;/p&gt;&lt;/div&gt;</description><guid>https://weblog.latte.ca/amy/yearInReview/2014.html</guid><pubDate>Fri, 30 Jan 2015 19:30:02 GMT</pubDate></item><item><title>A Pocket of Calm</title><link>https://weblog.latte.ca/amy/stuff/lostphone.html</link><dc:creator>Amy Brown</dc:creator><description>&lt;div&gt;&lt;p&gt;We don’t get a fog a lot in Toronto, and on a foggy night about a month ago the Christmas lights were particularly lovely -- dreamy and soft. I was on the way home from a meeting and thought the lights on house on a corner were so pretty, I wanted to take a picture to show the girls. I paused at the curb opposite the house, and took my phone out of my pocket. I still had my mittens on, but I needed my fingers to use the phone, so I wedged the phone in my left hand, wedged between my fingers and the fleshy base of my thumb. I used my fingertips and thumb to remove the mitten from my right hand, and as I did so the phone slipped, or my grip relaxed. For the longest second ever recorded, my phone fell toward the storm drain I had just realized I was standing above. &lt;/p&gt;
+&lt;p&gt;&lt;a href="https://weblog.latte.ca/amy/stuff/lostphone.html"&gt;Read more…&lt;/a&gt; (4 min remaining to read)&lt;/p&gt;&lt;/div&gt;</description><guid>https://weblog.latte.ca/amy/stuff/lostphone.html</guid><pubDate>Thu, 15 Jan 2015 16:45:00 GMT</pubDate></item><item><title>ES6 Templates</title><link>https://weblog.latte.ca/blake/tech/firefox/templates.html</link><dc:creator>Blake Winton</dc:creator><description>&lt;div&gt;&lt;p&gt;One of my favourite upcoming features in ES6 is Template Strings.  I’ve used
+JQuery’s &lt;a href="http://ejohn.org/blog/javascript-micro-templating/"&gt;templates&lt;/a&gt; in
+&lt;a href="https://bugzilla.mozilla.org/show_bug.cgi?id=686347"&gt;some previous code&lt;/a&gt; I’ve
+worked on, and while it was very useful in finishing the feature on time, it’s
+aged now and relying on third-party libraries which we don’t have time to keep
+up to date isn’t the best idea and so we’re in the middle of &lt;a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1014609"&gt;some work to
+remove them&lt;/a&gt;.  So having
+said that, I’m quite happy to see something similar arriving in the base
+language, so that we can take advantage of it without having to add any extra
+code.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;As an aside, all the code below was tested in &lt;a href="http://getfirefox.com"&gt;Firefox
+34&lt;/a&gt;, using the
+&lt;a href="https://developer.mozilla.org/en-US/docs/Tools/Scratchpad"&gt;Scratchpad&lt;/a&gt;.  The
+comments are pasted in below the code when you select it and choose the
+&lt;code&gt;Execute » Display&lt;/code&gt; menu item or hit &lt;code&gt;Ctrl+L&lt;/code&gt; (&lt;code&gt;Cmd+L&lt;/code&gt; on Mac).  I
+&lt;a href="https://twitter.com/addyosmani/status/541978036904554496"&gt;hear&lt;/a&gt; they also
+&lt;a href="https://plus.google.com/+AddyOsmani/posts/BW5h61SoGf8"&gt;work in Chrome&lt;/a&gt;, but
+they didn’t seem to in the version I was running (39.0.2171.95), and I didn’t
+want to start messing with an &lt;code&gt;--es-staging&lt;/code&gt; flag.  If someone can confirm
+whether they work or not, I would certainly appreciate it!  :)&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;&lt;a href="https://weblog.latte.ca/blake/tech/firefox/templates.html"&gt;Read more…&lt;/a&gt; (5 min remaining to read)&lt;/p&gt;&lt;/div&gt;</description><category>es6</category><category>mozilla</category><category>templates</category><guid>https://weblog.latte.ca/blake/tech/firefox/templates.html</guid><pubDate>Mon, 12 Jan 2015 19:45:00 GMT</pubDate></item><item><title>New Year’s Resolutions…</title><link>https://weblog.latte.ca/blake/random/newyears2015.html</link><dc:creator>Blake Winton</dc:creator><description>&lt;div&gt;&lt;p&gt;Well, I managed to spend New Year’s Eve lying sick on the couch, and then went
+to bed semi-delirious from lack of sleep at 12:08, which kind of sucked, but I’m
+still hopeful that 2015 will be better than 2014 was.  I mean, it almost &lt;em&gt;has&lt;/em&gt;
+to be, right?&lt;/p&gt;
+&lt;p&gt;Anyways, my first, and so far only, resolution is to consume less and create
+more.  When I look back on the year, I find I have spent more of my free time
+than I’ld like passively consuming other people’s content instead of making new
+things of my own, and that kind of bothers me.  I’m very glad that a large part
+of my job involves making things, and that has definitely been rewarding, but
+there are also a lot of personal projects I want to start or finish or just push
+forward.  And it doesn’t have to be code.  I’ld like to write more blog posts,
+to explain the things I’m doing, and why they interest me enough to spend time
+on.&lt;/p&gt;&lt;/div&gt;</description><category>new years</category><category>resolutions</category><guid>https://weblog.latte.ca/blake/random/newyears2015.html</guid><pubDate>Thu, 01 Jan 2015 18:16:00 GMT</pubDate></item><item><title>Meet the new blog, same as the old blog.</title><link>https://weblog.latte.ca/blake/random/microblog/newblog.html</link><dc:creator>Blake Winton</dc:creator><description>&lt;div&gt;&lt;p&gt;One of the things I did over the holidays (so far) is upgrade the software that
+powers &lt;a href="http://weblog.latte.ca"&gt;the blog&lt;/a&gt;.&lt;/p&gt;&lt;p&gt;&lt;a href="https://weblog.latte.ca/blake/random/microblog/newblog.html"&gt;Read more…&lt;/a&gt; (1 min remaining to read)&lt;/p&gt;&lt;/div&gt;</description><category>blog</category><category>microblog</category><category>nikola</category><category>random</category><guid>https://weblog.latte.ca/blake/random/microblog/newblog.html</guid><pubDate>Sat, 27 Dec 2014 01:03:00 GMT</pubDate></item><item><title>Listening to things…</title><link>https://weblog.latte.ca/blake/random/microblog/listeningtothings.html</link><dc:creator>Blake Winton</dc:creator><description>&lt;div&gt;&lt;p&gt;In high school and university, I used to listen to a lot of music.  As I went
+about my day, there would continually be something on the cd player.  But
+these days I find myself listening to podcasts&lt;sup id="fnref:podcasts"&gt;&lt;a class="footnote-ref" href="https://weblog.latte.ca/blake/random/microblog/listeningtothings.html#fn:podcasts" rel="footnote"&gt;1&lt;/a&gt;&lt;/sup&gt; in my spare audio
+time instead, and that strikes me as interesting because without meaning to I
+seem to have moved from (largely) mass-produced, mass-marketed entertainment
+to (mostly) independent, informational&lt;sup id="fnref:informational"&gt;&lt;a class="footnote-ref" href="https://weblog.latte.ca/blake/random/microblog/listeningtothings.html#fn:informational" rel="footnote"&gt;2&lt;/a&gt;&lt;/sup&gt; entertainment.&lt;/p&gt;
+&lt;div class="footnote"&gt;
+&lt;hr&gt;&lt;ol&gt;&lt;li id="fn:podcasts"&gt;
+&lt;p&gt;The list, in alphabetical order, is: &lt;a href="https://overcast.fm/podcasts/show/2516/nGKpf2"&gt;Accidental Tech Podcast&lt;/a&gt; • &lt;a href="https://overcast.fm/podcasts/show/61666/EwNC1R"&gt;After Dark&lt;/a&gt; • &lt;a href="https://overcast.fm/podcasts/show/11651/e2mzzo"&gt;Bitsplitting&lt;/a&gt; • &lt;a href="https://overcast.fm/podcasts/show/8860/DSqCCw"&gt;Core Intuition&lt;/a&gt; • &lt;a href="https://overcast.fm/podcasts/show/67268/9juAiU"&gt;Edge Cases&lt;/a&gt; • &lt;a href="https://overcast.fm/podcasts/show/10994/okyG19"&gt;Fear the Boot&lt;/a&gt; • &lt;a href="https://overcast.fm/podcasts/show/112240/nKrozX"&gt;Isometric&lt;/a&gt; • &lt;a href="https://overcast.fm/podcasts/show/81318/X5vDYV"&gt;JavaScript Jabber&lt;/a&gt; • &lt;a href="https://overcast.fm/podcasts/show/115832/L7YHFg"&gt;LESS THAN LIVE with KATE OR DIE&lt;/a&gt; • &lt;a href="https://overcast.fm/podcasts/show/26408/7nZ07n"&gt;Lostcast&lt;/a&gt; • &lt;a href="https://overcast.fm/podcasts/show/104040/tiKzXE"&gt;No Such Thing As A Fish&lt;/a&gt; • &lt;a href="https://overcast.fm/podcasts/show/125398/wFBDkj"&gt;The Diecast&lt;/a&gt; • &lt;a href="https://overcast.fm/podcasts/show/11010/SVo0r8"&gt;The Dungeons &amp;amp; Dragons Podcast&lt;/a&gt; • &lt;a href="https://overcast.fm/podcasts/show/37062/40ldaa"&gt;The Incomparable&lt;/a&gt; • &lt;a href="https://overcast.fm/podcasts/show/1390/AgcE78"&gt;The Stack Exchange Podcast&lt;/a&gt; • &lt;a href="https://overcast.fm/podcasts/show/9214/j1Nbiy"&gt;The Web Ahead&lt;/a&gt; • &lt;a href="https://overcast.fm/podcasts/show/99714/bZtLy4"&gt;Total Party Kill&lt;/a&gt; • &lt;a href="https://overcast.fm/podcasts/show/120025/cprNQD"&gt;Webcomics Weekly&lt;/a&gt; &lt;a class="footnote-backref" href="https://weblog.latte.ca/blake/random/microblog/listeningtothings.html#fnref:podcasts" rev="footnote" title="Jump back to footnote 1 in the text"&gt;↩&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li id="fn:informational"&gt;
+&lt;p&gt;I’ll readily agree that most of the things I learn aren’t going to impact my life in any significant way.  I’m not going to read many comics, or play many role-playing games, or do, uh, whatever QI does, but they’re still fun to listen to.  :) &lt;a class="footnote-backref" href="https://weblog.latte.ca/blake/random/microblog/listeningtothings.html#fnref:informational" rev="footnote" title="Jump back to footnote 2 in the text"&gt;↩&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;&lt;/div&gt;&lt;/div&gt;</description><category>consumption</category><category>content</category><category>microblog</category><guid>https://weblog.latte.ca/blake/random/microblog/listeningtothings.html</guid><pubDate>Wed, 12 Nov 2014 21:19:41 GMT</pubDate></item></channel></rss>

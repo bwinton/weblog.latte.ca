@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet type="text/xsl" href="../assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Blog-O! (templates)</title><link>https://weblog.latte.ca/</link><description></description><atom:link type="application/rss+xml" href="https://weblog.latte.ca/tags/templates.xml" rel="self"></atom:link><language>en</language><lastBuildDate>Wed, 24 Feb 2016 17:07:35 GMT</lastBuildDate><generator>https://getnikola.com/</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>ES6 Templates</title><link>https://weblog.latte.ca/blake/tech/firefox/templates.html</link><dc:creator>Blake Winton</dc:creator><description>&lt;div&gt;&lt;p&gt;One of my favourite upcoming features in ES6 is Template Strings.  I’ve used
+JQuery’s &lt;a href="http://ejohn.org/blog/javascript-micro-templating/"&gt;templates&lt;/a&gt; in
+&lt;a href="https://bugzilla.mozilla.org/show_bug.cgi?id=686347"&gt;some previous code&lt;/a&gt; I’ve
+worked on, and while it was very useful in finishing the feature on time, it’s
+aged now and relying on third-party libraries which we don’t have time to keep
+up to date isn’t the best idea and so we’re in the middle of &lt;a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1014609"&gt;some work to
+remove them&lt;/a&gt;.  So having
+said that, I’m quite happy to see something similar arriving in the base
+language, so that we can take advantage of it without having to add any extra
+code.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;As an aside, all the code below was tested in &lt;a href="http://getfirefox.com"&gt;Firefox
+34&lt;/a&gt;, using the
+&lt;a href="https://developer.mozilla.org/en-US/docs/Tools/Scratchpad"&gt;Scratchpad&lt;/a&gt;.  The
+comments are pasted in below the code when you select it and choose the
+&lt;code&gt;Execute » Display&lt;/code&gt; menu item or hit &lt;code&gt;Ctrl+L&lt;/code&gt; (&lt;code&gt;Cmd+L&lt;/code&gt; on Mac).  I
+&lt;a href="https://twitter.com/addyosmani/status/541978036904554496"&gt;hear&lt;/a&gt; they also
+&lt;a href="https://plus.google.com/+AddyOsmani/posts/BW5h61SoGf8"&gt;work in Chrome&lt;/a&gt;, but
+they didn’t seem to in the version I was running (39.0.2171.95), and I didn’t
+want to start messing with an &lt;code&gt;--es-staging&lt;/code&gt; flag.  If someone can confirm
+whether they work or not, I would certainly appreciate it!  :)&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;&lt;a href="https://weblog.latte.ca/blake/tech/firefox/templates.html"&gt;Read more…&lt;/a&gt; (5 min remaining to read)&lt;/p&gt;&lt;/div&gt;</description><category>es6</category><category>mozilla</category><category>templates</category><guid>https://weblog.latte.ca/blake/tech/firefox/templates.html</guid><pubDate>Mon, 12 Jan 2015 19:45:00 GMT</pubDate></item></channel></rss>

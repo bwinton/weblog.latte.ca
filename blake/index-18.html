@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html prefix="og: http://ogp.me/ns# article: http://ogp.me/ns/article# " lang="en">
+<head>
+<meta charset="utf-8">
+<base href="https://weblog.latte.ca/blake/index-18.html">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Blake (old posts, page 18) | Blog-O!</title>
+<link href="../assets/css/bootstrap.min.css" rel="stylesheet" type="text/css">
+<link href="../assets/css/rst.css" rel="stylesheet" type="text/css">
+<link href="../assets/css/code.css" rel="stylesheet" type="text/css">
+<link href="../assets/css/colorbox.css" rel="stylesheet" type="text/css">
+<link href="../assets/css/theme.css" rel="stylesheet" type="text/css">
+<meta content="#5670d4" name="theme-color">
+<link rel="alternate" type="application/rss+xml" title="RSS" href="../rss.xml">
+<link rel="canonical" href="https://weblog.latte.ca/blake/index-18.html">
+<link rel="prev" href="index.html" type="text/html">
+<link rel="next" href="index-17.html" type="text/html">
+<!--[if lt IE 9]><script src="../assets/js/html5.js"></script><![endif]-->
+</head>
+<body>
+<a href="#content" class="sr-only sr-only-focusable">Skip to main content</a>
+
+<!-- Menubar -->
+
+<nav class="navbar navbar-inverse navbar-static-top"><div class="container">
+<!-- This keeps the margins nice -->
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-navbar" aria-controls="bs-navbar" aria-expanded="false">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="https://weblog.latte.ca/">
+
+                <span id="blog-title">Blog-O!</span>
+            </a>
+        </div>
+<!-- /.navbar-header -->
+        <div class="collapse navbar-collapse" id="bs-navbar" aria-expanded="false">
+            <ul class="nav navbar-nav">
+<li>
+<a href="../archive.html">Archive</a>
+                </li>
+<li>
+<a href="../tags/index.html">Tags</a>
+                </li>
+<li>
+<a href="../rss.xml">RSS feed</a>
+
+                
+            </li>
+</ul>
+<!-- Custom search --><form method="get" id="search" action="//duckduckgo.com/" class="navbar-form pull-right">
+<input type="hidden" name="sites" value="https://weblog.latte.ca/"><input type="hidden" name="k8" value="#444444"><input type="hidden" name="k9" value="#D51920"><input type="hidden" name="kt" value="h"><input type="text" name="q" maxlength="255" placeholder="Search…" style="margin-top: 4px;"><input type="submit" value="DuckDuckGo Search" style="visibility: hidden;">
+</form>
+<!-- End of custom search -->
+
+
+            <ul class="nav navbar-nav navbar-right"></ul>
+</div>
+<!-- /.navbar-collapse -->
+    </div>
+<!-- /.container -->
+</nav><!-- End of Menubar --><div class="container" id="content" role="main">
+    <div class="body-content">
+        <!--Body content-->
+        <div class="row">
+            
+            
+<div class="sectionindex">
+    <header><h2><a href="index.html">Blake (old posts, page 18)</a></h2>
+    </header><div class="postindex">
+    <article class="h-entry post-text"><header><h1 class="p-name entry-title"><a href="tech/firefox/angularpersonatool.html" class="u-url">Using Persona in Angular apps.</a></h1>
+        <div class="metadata">
+            <p class="byline author vcard"><span class="byline-name fn">Blake Winton</span></p>
+            <p class="dateline"><a href="tech/firefox/angularpersonatool.html" rel="bookmark"><time class="published dt-published" datetime="2013-06-28T15:16:50-04:00" itemprop="datePublished" title="2013-06-28 15:16">2013-06-28 15:16</time></a></p>
+                <p class="commentline">
+        
+    <a href="tech/firefox/angularpersonatool.html#disqus_thread" data-disqus-identifier="/blake/tech/firefox/angularpersonatool">Comments</a>
+
+
+        </p>
+</div>
+    </header><div class="p-summary entry-summary">
+    <div>
+<p>In my <a href="http://weblog.latte.ca/blake/tech/firefox/cssLines.html">previous blog post</a>, I mentioned a tool
+I’m writing to make it easy for designers to link mockups to live bugs.  But I
+didn’t mention that I had a reasonably-working version of the tool written in
+<a href="http://backbonejs.org/">Backbone</a> which I’ve decided to port to <a href="http://angularjs.org/">Angular</a>.  The reasons why are largely beside the point of this
+blog post, but I’ll try to sum them up by saying that I reached a point where
+Backbone seemed to be confusing me more than helping me, and Angular got a
+<em>lot</em> of good press at <a href="http://fluentconf.com/fluent2013">FluentConf</a> this
+year.</p>
+<p>So this morning’s task in <a href="https://github.com/bwinton/arewecreatingyet/commits/feature/angular">the re-write</a> was to
+re-hook up the <a href="https://login.persona.org/about">Persona</a> integration.  I had
+read recently that when you had a lot of dom-manipulation functions, you should
+probably put that code in a directive, and since I hadn’t written an Angular
+directive yet, I figured this would be a great time to learn how.  Writing <a href="https://github.com/bwinton/arewecreatingyet/blob/feature/angular/views/index.html#L30">the
+html</a>
+was pretty easy, of course, and most of the code from the existing
+implementation (which was largely based on the code from the <a href="https://github.com/jbuck/express-persona/blob/master/README.md">express-persona
+readme</a>) could
+be ported over fairly quickly.  The only tricky part I ran into was figuring
+out that I needed to include <a href="https://github.com/bwinton/angular-tools/blob/master/persona.js#L36"><code>restrict: 'E'</code></a> in the
+<a href="http://docs.angularjs.org/guide/directive#directivedefinitionobject">Directive Definition Object</a>.  After I
+was done, I noticed that there really wasn’t that much in the code that had
+anything to do with the tool I’m writing, and thus I pulled it out into a
+separate repo so that other people can use it.</p>
+<p>And with that, I announce <a href="https://github.com/bwinton/angular-tools/">Angular-Tools</a>, a repo containing one or more tools
+which you might find useful if you build Angular apps.  As always, pull
+requests and bug reports welcome!</p>
+</div>
+    </div>
+    </article><article class="h-entry post-text"><header><h1 class="p-name entry-title"><a href="tech/firefox/csslines.html" class="u-url">Drawing lines with CSS.</a></h1>
+        <div class="metadata">
+            <p class="byline author vcard"><span class="byline-name fn">Blake Winton</span></p>
+            <p class="dateline"><a href="tech/firefox/csslines.html" rel="bookmark"><time class="published dt-published" datetime="2013-06-14T14:57:43-04:00" itemprop="datePublished" title="2013-06-14 14:57">2013-06-14 14:57</time></a></p>
+                <p class="commentline">
+        
+    <a href="tech/firefox/csslines.html#disqus_thread" data-disqus-identifier="/blake/tech/firefox/csslines">Comments</a>
+
+
+        </p>
+</div>
+    </header><div class="p-summary entry-summary">
+    <div>
+<p>One of the things I’m working on as part of my job<sup id="fnref:1"><a class="footnote-ref" href="tech/firefox/csslines.html#fn:1" rel="footnote">1</a></sup> at Mozilla is <a href="https://github.com/bwinton/arewecreatingyet">a tool</a> to make it easy for designers to
+create mockups that are linked to live bugs, similar to the ones at <a href="http://areweprettyyet.com/4/mainWindow/#">Are We
+Pretty Yet</a>.  Now, I’ve got the
+background showing up, and the bugs overlayed on top of it, but as it stands,
+I’m requiring the designers to draw the lines connecting the bugs to the
+various areas in the mockup right on the mockup itself!  This is obviously a
+fairly terrible idea, since it makes it much harder than it should to move
+stuff around after the fact, and requires a ton of up-front planning when
+creating the initial image.  But what are my other options?</p>
+<p>I thought for a while about layering a canvas element over the mockup; it would
+let me draw whatever shapes I wanted to, but passing the click events through
+to the mockup seemed like it would be fairly annoying, and I don’t think the
+connecting lines should appear in front of the boxes showing the bug details,
+which adds another wrinkle.  Then, over lunch, I started to wonder what it
+would look like if a 1px by 1px black square got stretched and rotated with
+CSS…  So I took some time after lunch, and played around a little, and it seems
+like it just might work!  <a href="http://jsfiddle.net/aBjp7/8/">Give it a try</a>, let me
+know if you have any ideas to make it better, and feel free to take the idea
+anywhere you think it might be useful!</p>
+<p><strong>Update:</strong> In the comments, Andrew points out that I could use a 1px by 1px
+span instead, which would make it <em>much</em> easier to change the colour of the
+line, so I’ve linked to his jsfiddle instead.  :)</p>
+<div class="footnote">
+<hr>
+<ol>
+<li id="fn:1">
+<p>Sometimes I still can’t believe how lucky I am to get to do this stuff all day, and get paid for it! <a class="footnote-backref" href="tech/firefox/csslines.html#fnref:1" rev="footnote" title="Jump back to footnote 1 in the text">↩</a></p>
+</li>
+</ol>
+</div>
+</div>
+    </div>
+    </article><article class="h-entry post-text"><header><h1 class="p-name entry-title"><a href="employment/mozilla/tabsaver.html" class="u-url">Cleaning out your Firefox profile.</a></h1>
+        <div class="metadata">
+            <p class="byline author vcard"><span class="byline-name fn">Blake Winton</span></p>
+            <p class="dateline"><a href="employment/mozilla/tabsaver.html" rel="bookmark"><time class="published dt-published" datetime="2012-11-23T13:42:09-05:00" itemprop="datePublished" title="2012-11-23 13:42">2012-11-23 13:42</time></a></p>
+                <p class="commentline">
+        
+    <a href="employment/mozilla/tabsaver.html#disqus_thread" data-disqus-identifier="/blake/employment/mozilla/tabsaver">Comments</a>
+
+
+        </p>
+</div>
+    </header><div class="p-summary entry-summary">
+    <div>
+<p>For a while now, I’ve been having problems with my Firefox profile.  To be fair,
+it’s mostly because of random <a href="about:config">about:config</a> tweaks I’ve made, but
+still, not being able to test the <a href="https://blog.mozilla.org/blog/2012/11/20/firefox-introduces-new-social-api-and-previews-integration-with-facebook/">new SocialAPI</a> stuff was pretty annoying.  So I decided to try <a href="http://support.mozilla.org/en-US/kb/reset-firefox-easily-fix-most-problems">resetting my profile</a>,
+to clear out all the junk, and hopefully even make it a little faster.</p>
+<p>But, as the page I linked to just up there mentions, resetting your profile will
+lose your open tabs, windows and tab groups, which kinda sucks, because I have
+57 open tabs, in various groups, and I really don’t want to lose them!
+Fortunately, I’m a programmer, so I hacked on Firefox to get it to save and
+restore my tabs, and now I’m a happy camper!</p>
+<p>A couple of days later, one of my co-workers had some similar problems, and also
+wanted to re-set his profile to try and fix them.  I hadn’t saved the results of
+my hacking, so I had to re-create it for him from a combination of memory and
+the documentation.  The new code I came up with looked something like this:</p>
+<pre class="code literal-block"><span></span><span class="kd">var</span> <span class="nx">x</span> <span class="o">=</span> <span class="nx">gBrowser</span><span class="p">.</span><span class="nx">tabs</span>
+<span class="kd">var</span> <span class="nx">rv</span> <span class="o">=</span> <span class="s2">"var tabs = [\n"</span>
+<span class="k">for</span> <span class="p">(</span><span class="kd">var</span> <span class="nx">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="nx">i</span> <span class="o">&lt;</span> <span class="nx">x</span><span class="p">.</span><span class="nx">length</span><span class="p">;</span> <span class="nx">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+  <span class="nx">rv</span> <span class="o">+=</span> <span class="s1">'  "'</span> <span class="o">+</span> <span class="nx">x</span><span class="p">[</span><span class="nx">i</span><span class="p">].</span><span class="nx">linkedBrowser</span><span class="p">.</span><span class="nx">contentWindow</span><span class="p">.</span><span class="nx">location</span> <span class="o">+</span> <span class="s1">'",\n'</span><span class="p">;</span>
+<span class="p">}</span>
+<span class="nx">rv</span> <span class="o">+=</span> <span class="s1">'];\nfor (var i = 0; i &lt; tabs.length; i++ ) {\n'</span>
+<span class="nx">rv</span> <span class="o">+=</span> <span class="s1">'  gBrowser.addTab(tabs[i]);\n}\n'</span>
+</pre>
+
+
+<p>To run it, first open <a href="about:config">about:config</a>, and make sure the
+<code>devtools.chrome.enabled</code> preference is set to <code>true</code> (double-click it if it
+isn’t, and it should switch automatically), then go to the <code>Tools » Web
+Developer » Scratchpad</code> menu item, which should open up a small new window with
+some javascript comments in it.  While that window is focused, click on
+<code>Environment » Browser</code>, to make sure that you’re running the code in the
+browser’s chrome (instead of in the page’s content).  Paste the code in, and
+click <code>Execute » Display</code>.</p>
+<p>That should result in a bunch of code in grey surrounded by <code>/*</code> and <code>*/</code> that
+looks like:</p>
+<pre class="code literal-block"><span></span><span class="kd">var</span> <span class="nx">tabs</span> <span class="o">=</span> <span class="p">[</span>
+<span class="s2">"http://weblog.latte.ca/blake"</span><span class="p">,</span>
+<span class="s2">"http://breakingtheegg.tumblr.com/"</span><span class="p">,</span>
+<span class="p">];</span>
+<span class="k">for</span> <span class="p">(</span><span class="kd">var</span> <span class="nx">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="nx">i</span> <span class="o">&lt;</span> <span class="nx">tabs</span><span class="p">.</span><span class="nx">length</span><span class="p">;</span> <span class="nx">i</span><span class="o">++</span> <span class="p">)</span> <span class="p">{</span>
+  <span class="nx">gBrowser</span><span class="p">.</span><span class="nx">addTab</span><span class="p">(</span><span class="nx">tabs</span><span class="p">[</span><span class="nx">i</span><span class="p">]);</span>
+<span class="p">}</span>
+</pre>
+
+
+<p>Copy that out of the scratchpad into your favourite editor, remove the <code>/*</code> and
+<code>*/</code>, and run the profile reset.</p>
+<p>Once you’re done resetting your profile, you’ll need to change the
+<code>devtools.chrome.enabled</code> preference to <code>true</code> again, and then re-open the
+Scratchpad, paste the new code you saved back in to it, click on the
+<code>Execute » Run</code> menu item, and <strong>shazam</strong>!  All your tabs should be back
+(although they won’t be in their original tab groups.  If anyone needs me to
+figure out how to do that, just let me know, and I’ll give it a try).</p>
+</div>
+    </div>
+    </article><article class="h-entry post-text"><header><h1 class="p-name entry-title"><a href="employment/mozilla/volodeploy.html" class="u-url">Pushing code to a remote server the volo way.</a></h1>
+        <div class="metadata">
+            <p class="byline author vcard"><span class="byline-name fn">Blake Winton</span></p>
+            <p class="dateline"><a href="employment/mozilla/volodeploy.html" rel="bookmark"><time class="published dt-published" datetime="2012-07-22T14:04:39-04:00" itemprop="datePublished" title="2012-07-22 14:04">2012-07-22 14:04</time></a></p>
+                <p class="commentline">
+        
+    <a href="employment/mozilla/volodeploy.html#disqus_thread" data-disqus-identifier="/blake/employment/mozilla/volodeploy">Comments</a>
+
+
+        </p>
+</div>
+    </header><div class="p-summary entry-summary">
+    <div>
+<p>The <a href="https://github.com/bwinton/australis-customization/">side-project</a> I’m working
+on is coming along nicely, and so I figured it was time to let other people
+see it.  Now, I could just have everyone huddle around my screen, but since
+many of the people who would be interested aren’t in the same city (or even
+same timezone) as I am, that wouldn’t work out so well.  We tried screen-
+sharing, but a lot of what’s being worked on is animation, and the frame-rates
+of the screen-sharing application we were using weren’t up to the task.  To
+get around that, I could have recorded a video, but since a lot of the value
+of a prototype like this is being able to play around with it, that’s also not
+a great solution.  So, obviously, the best thing to do would be to put it on a
+publicly available server, and let people run it in their own web browser,
+whenever they wanted!</p>
+<p>Now, I’m running a server or two that I could put it up on, but since the
+project is related to Mozilla, and since Mozilla offers some personal webspace
+on <a href="http://people.mozilla.org/">one of their servers</a>, I figured I might as
+well put it up <a href="https://people.mozilla.com/~bwinton/australis/customization/mac/?scroll">there</a>.  :)</p>
+<p>So, to make it easy for me to remember to build and upload the code (and to
+prevent me from trying to figure out all the correct options to rsync every
+time I wanted to upload the code), I took a couple of minutes to <a href="https://github.com/bwinton/australis-customization/blob/master/australis/customization/mac/volofile#L23">add a
+command</a> to my volofile, which lets me merely type <code>volo deploy</code>, and have it
+optimize the code, and copy only the changed files to the remote server.</p>
+</div>
+    </div>
+    </article>
+</div>
+
+        <nav class="postindexpager"><ul class="pager">
+<li class="previous">
+                <a href="index.html" rel="prev">Newer posts</a>
+            </li>
+            <li class="next">
+                <a href="index-17.html" rel="next">Older posts</a>
+            </li>
+        </ul></nav><script>var disqus_shortname="latteblog";(function(){var a=document.createElement("script");a.async=true;a.src="https://"+disqus_shortname+".disqus.com/count.js";(document.getElementsByTagName("head")[0]||document.getElementsByTagName("body")[0]).appendChild(a)}());</script>
+</div>
+
+        </div>
+        <!--End of body content-->
+
+        <footer id="footer"><div style="margin-bottom: 12px">Contents © 2016         <a href="mailto:bwinton@latte.ca">Blake Winton</a>
+<a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/2.5/">
+<img alt="Creative Commons License BY-NC-SA" style="border-width: 0; vertical-align: bottom" src="https://licensebuttons.net/l/by-nc-sa/2.5/88x31.png"></a>
+</div>
+            
+        </footer>
+</div>
+</div>
+
+
+            <script src="../assets/js/jquery.min.js"></script><script src="../assets/js/bootstrap.min.js"></script><script src="../assets/js/moment-with-locales.min.js"></script><script src="../assets/js/fancydates.js"></script><script src="../assets/js/jquery.colorbox-min.js"></script><script>$('a.image-reference:not(.islink) img:not(.islink)').parent().colorbox({rel:"gal",maxWidth:"100%",maxHeight:"100%",scalePhotos:true});</script><!-- fancy dates --><script>
+    moment.locale("en");
+    fancydates(0, "YYYY-MM-DD HH:mm");
+    </script><!-- end fancy dates --><script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-5805429-2', 'auto');
+  ga('send', 'pageview');
+
+</script>
+</body>
+</html>

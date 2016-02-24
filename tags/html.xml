@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet type="text/xsl" href="../assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Blog-O! (html)</title><link>https://weblog.latte.ca/</link><description></description><atom:link type="application/rss+xml" href="https://weblog.latte.ca/tags/html.xml" rel="self"></atom:link><language>en</language><lastBuildDate>Wed, 24 Feb 2016 17:07:39 GMT</lastBuildDate><generator>https://getnikola.com/</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>X-Tag: or how to cut your html in half by adding 28 lines of Javascript…</title><link>https://weblog.latte.ca/blake/employment/mozilla/x-tags.html</link><dc:creator>Blake Winton</dc:creator><description>&lt;div&gt;&lt;p&gt;As a side-project, I’ve been working on a prototype which is heavily based on
+&lt;a href="https://people.mozilla.com/~bwinton/australis-customization/customizationMode-liveDemo-i02.html"&gt;a demo page&lt;/a&gt; from Stephen Horlander.  Now, that page is
+pretty amazing, but if you look at the source (using command-u or control-u in
+Firefox, and command-alt-u or control-alt-u in Chrome), you’ll see a lot of code
+that looks like this:&lt;/p&gt;
+&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="nt"&gt;&amp;lt;div&lt;/span&gt; &lt;span class="na"&gt;class=&lt;/span&gt;&lt;span class="s"&gt;"menuPanelButton subscribeButton"&lt;/span&gt;&lt;span class="nt"&gt;&amp;gt;&lt;/span&gt;
+  &lt;span class="nt"&gt;&amp;lt;div&lt;/span&gt; &lt;span class="na"&gt;class=&lt;/span&gt;&lt;span class="s"&gt;"button"&lt;/span&gt;&lt;span class="nt"&gt;&amp;gt;&amp;lt;/div&amp;gt;&lt;/span&gt;
+  &lt;span class="nt"&gt;&amp;lt;div&lt;/span&gt; &lt;span class="na"&gt;class=&lt;/span&gt;&lt;span class="s"&gt;"label"&lt;/span&gt;&lt;span class="nt"&gt;&amp;gt;&lt;/span&gt;Subscribe&lt;span class="nt"&gt;&amp;lt;/div&amp;gt;&lt;/span&gt;
+&lt;span class="nt"&gt;&amp;lt;/div&amp;gt;&lt;/span&gt;
+&lt;/pre&gt;
+
+
+&lt;p&gt;and:&lt;/p&gt;
+&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="nt"&gt;&amp;lt;div&lt;/span&gt; &lt;span class="na"&gt;class=&lt;/span&gt;&lt;span class="s"&gt;"customizeToolbarItem"&lt;/span&gt;&lt;span class="nt"&gt;&amp;gt;&lt;/span&gt;
+  &lt;span class="nt"&gt;&amp;lt;div&lt;/span&gt; &lt;span class="na"&gt;class=&lt;/span&gt;&lt;span class="s"&gt;"customizeToolbarItemIcon share"&lt;/span&gt;&lt;span class="nt"&gt;&amp;gt;&amp;lt;/div&amp;gt;&lt;/span&gt;
+  &lt;span class="nt"&gt;&amp;lt;div&lt;/span&gt; &lt;span class="na"&gt;class=&lt;/span&gt;&lt;span class="s"&gt;"customizeToolbarItemLabel"&lt;/span&gt;&lt;span class="nt"&gt;&amp;gt;&lt;/span&gt;Share&lt;span class="nt"&gt;&amp;lt;/div&amp;gt;&lt;/span&gt;
+&lt;span class="nt"&gt;&amp;lt;/div&amp;gt;&lt;/span&gt;
+&lt;/pre&gt;
+
+
+&lt;p&gt;Now, one or two of those would be fine, but when we get into more than that, the
+repetition really starts to bug me, and I think “Wouldn’t it be better if I
+could just write stuff like:&lt;/p&gt;
+&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="nt"&gt;&amp;lt;panel-button&lt;/span&gt; &lt;span class="na"&gt;type=&lt;/span&gt;&lt;span class="s"&gt;"subscribe"&lt;/span&gt;&lt;span class="nt"&gt;&amp;gt;&lt;/span&gt;Subscribe&lt;span class="nt"&gt;&amp;lt;/panel-button&amp;gt;&lt;/span&gt;
+…
+&lt;span class="nt"&gt;&amp;lt;toolbar-item&lt;/span&gt; &lt;span class="na"&gt;type=&lt;/span&gt;&lt;span class="s"&gt;"share"&lt;/span&gt;&lt;span class="nt"&gt;&amp;gt;&lt;/span&gt;Share&lt;span class="nt"&gt;&amp;lt;/toolbar-item&amp;gt;&lt;/span&gt;
+&lt;/pre&gt;
+
+
+&lt;p&gt;instead?”  And it turns out I can, using a new library called
+&lt;a href="http://mozilla.github.com/x-tag/"&gt;x-tag&lt;/a&gt;!  The first thing I need to do is
+register the new tags I’ll be using.  That’s done with code like this:&lt;/p&gt;
+&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="c1"&gt;// These first two lines are here because I’m using require.js, which I’ll&lt;/span&gt;
+&lt;span class="c1"&gt;// talk about in a future blog post…&lt;/span&gt;
+&lt;span class="nx"&gt;define&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="kd"&gt;function&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nx"&gt;require&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
+  &lt;span class="nx"&gt;require&lt;/span&gt;&lt;span class="p"&gt;([&lt;/span&gt;&lt;span class="s2"&gt;"jquery"&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s2"&gt;"x-tag"&lt;/span&gt;&lt;span class="p"&gt;],&lt;/span&gt; &lt;span class="kd"&gt;function&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nx"&gt;$&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="nx"&gt;xtag&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
+
+    &lt;span class="c1"&gt;// And this is the meat of the functionality.&lt;/span&gt;
+    &lt;span class="c1"&gt;// First, we’ll register the new "panel-button" tag.&lt;/span&gt;
+    &lt;span class="nx"&gt;xtag&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;register&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;"panel-button"&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
+      &lt;span class="nx"&gt;onCreate&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt; &lt;span class="kd"&gt;function&lt;/span&gt;&lt;span class="p"&gt;(){&lt;/span&gt;
+        &lt;span class="kd"&gt;var&lt;/span&gt; &lt;span class="nx"&gt;self&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="nx"&gt;$&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="k"&gt;this&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;
+        &lt;span class="c1"&gt;// When the tag is first seen, make the innerHTML be this stuff below.&lt;/span&gt;
+        &lt;span class="nx"&gt;self&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;html&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;"&amp;lt;div class='menuPanelButton "&lt;/span&gt; &lt;span class="o"&gt;+&lt;/span&gt; &lt;span class="nx"&gt;self&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;attr&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;"type"&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="o"&gt;+&lt;/span&gt; &lt;span class="s2"&gt;"'&amp;gt;"&lt;/span&gt; &lt;span class="o"&gt;+&lt;/span&gt;
+                    &lt;span class="s2"&gt;"&amp;lt;img src='images/button-"&lt;/span&gt; &lt;span class="o"&gt;+&lt;/span&gt; &lt;span class="nx"&gt;self&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;attr&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;"type"&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="o"&gt;+&lt;/span&gt; &lt;span class="s2"&gt;".png'"&lt;/span&gt; &lt;span class="o"&gt;+&lt;/span&gt;
+                    &lt;span class="s2"&gt;"     class='button'&amp;gt;"&lt;/span&gt; &lt;span class="o"&gt;+&lt;/span&gt;
+                    &lt;span class="s2"&gt;"&amp;lt;div class='label'&amp;gt;"&lt;/span&gt; &lt;span class="o"&gt;+&lt;/span&gt; &lt;span class="nx"&gt;self&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;text&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt; &lt;span class="o"&gt;+&lt;/span&gt; &lt;span class="s2"&gt;"&amp;lt;/div&amp;gt;"&lt;/span&gt; &lt;span class="o"&gt;+&lt;/span&gt; 
+                  &lt;span class="s2"&gt;"&amp;lt;/div&amp;gt;"&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;
+      &lt;span class="p"&gt;},&lt;/span&gt;
+    &lt;span class="p"&gt;});&lt;/span&gt;
+
+    &lt;span class="c1"&gt;// And then, we’ll register the new "toolbar-item" tag.&lt;/span&gt;
+    &lt;span class="nx"&gt;xtag&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;register&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;"toolbar-item"&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
+      &lt;span class="nx"&gt;onCreate&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt; &lt;span class="kd"&gt;function&lt;/span&gt;&lt;span class="p"&gt;(){&lt;/span&gt;
+        &lt;span class="kd"&gt;var&lt;/span&gt; &lt;span class="nx"&gt;self&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="nx"&gt;$&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="k"&gt;this&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;
+        &lt;span class="c1"&gt;// We could also replace this element with the html below, but I&lt;/span&gt;
+        &lt;span class="c1"&gt;// haven’t done that here because I haven’t needed to yet.&lt;/span&gt;
+        &lt;span class="nx"&gt;self&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;html&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;"&amp;lt;div class='customizeToolbarItem'&amp;gt;"&lt;/span&gt; &lt;span class="o"&gt;+&lt;/span&gt;
+                    &lt;span class="s2"&gt;"&amp;lt;div class='customizeToolbarItemIcon "&lt;/span&gt; &lt;span class="o"&gt;+&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nx"&gt;self&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;attr&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;"type"&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="o"&gt;||&lt;/span&gt; &lt;span class="s2"&gt;""&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="o"&gt;+&lt;/span&gt; &lt;span class="s2"&gt;"'&amp;gt;&amp;lt;/div&amp;gt;"&lt;/span&gt; &lt;span class="o"&gt;+&lt;/span&gt;
+                    &lt;span class="s2"&gt;"&amp;lt;div class='customizeToolbarItemLabel'&amp;gt;"&lt;/span&gt; &lt;span class="o"&gt;+&lt;/span&gt; &lt;span class="nx"&gt;self&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;text&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt; &lt;span class="o"&gt;+&lt;/span&gt; &lt;span class="s2"&gt;"&amp;lt;/div&amp;gt;"&lt;/span&gt; &lt;span class="o"&gt;+&lt;/span&gt;
+                  &lt;span class="s2"&gt;"&amp;lt;/div&amp;gt;"&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;
+      &lt;span class="p"&gt;},&lt;/span&gt;
+    &lt;span class="p"&gt;});&lt;/span&gt;
+
+  &lt;span class="p"&gt;});&lt;/span&gt;
+&lt;span class="p"&gt;});&lt;/span&gt;
+&lt;/pre&gt;
+
+
+&lt;p&gt;The second step is to replace all the old html with the new tags.  (I did
+that, too, of course.)  And there we go.  That’s it.  In the file I was
+modifying, the combination of that and moving the javascript out into a
+separate file took the html from 275 lines down to 146 lines, and let me more
+easily change the buttons around, and add new ones.  I call that a win, and
+from now on, whenever I see large blocks of repeated html, I’m going to be
+seriously tempted to switch them to an x-tag!&lt;/p&gt;
+&lt;p&gt;One caveat I will mention is that in my first attempt, I tried to use both the
+&lt;code&gt;content&lt;/code&gt; property, and the &lt;code&gt;onCreate&lt;/code&gt; method, and that totally didn’t work,
+since the content would be replaced by the value of the content property long
+before I had a chance to muck around with it in the onCreate.  So in the future,
+I think I’ll just jump straight into using the onCreate method, since it’s not
+that much harder.&lt;/p&gt;&lt;/div&gt;</description><category>html</category><category>mozilla</category><category>xtag</category><guid>https://weblog.latte.ca/blake/employment/mozilla/x-tags.html</guid><pubDate>Fri, 13 Jul 2012 01:39:32 GMT</pubDate></item></channel></rss>

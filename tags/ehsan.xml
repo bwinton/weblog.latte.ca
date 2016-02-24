@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet type="text/xsl" href="../assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Blog-O! (ehsan)</title><link>https://weblog.latte.ca/</link><description></description><atom:link type="application/rss+xml" href="https://weblog.latte.ca/tags/ehsan.xml" rel="self"></atom:link><language>en</language><lastBuildDate>Wed, 24 Feb 2016 17:07:41 GMT</lastBuildDate><generator>https://getnikola.com/</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Brokeback Mountain functionality on OS X.</title><link>https://weblog.latte.ca/blake/tech/thunderbird/quit.html</link><dc:creator>Blake Winton</dc:creator><description>&lt;div&gt;&lt;p&gt;&lt;a href="http://ehsanakhgari.org/blog"&gt;A co-worker&lt;/a&gt; of mine recently mentioned that
+he had a problem where he all-too-often accidentally quit his applications
+by hitting ⌘-q (command-q).  Since he has been having problems with
+Thunderbird that I can’t fix, I thought I might do a little digging and see
+if I could come up with some way of helping him.  And so here’s what I
+found:&lt;/p&gt;
+&lt;p&gt;In the System Preferences application, there’s a “Keyboard” section.&lt;/p&gt;
+&lt;p&gt;&lt;img alt="The Keyboard Preference Pane" src="https://weblog.latte.ca/images/blake/Quit/1-Keyboard.png" title="Keyboard"&gt;&lt;/p&gt;
+&lt;p&gt;One of the things you can choose in that section is “Keyboard Shortcuts”.&lt;/p&gt;
+&lt;p&gt;&lt;img alt="The Keyboard Shortcuts" src="https://weblog.latte.ca/images/blake/Quit/2-Shortcuts.png" title="Shortcuts"&gt;&lt;/p&gt;
+&lt;p&gt;Pick a relatively innocuous function, like turning Zoom on and off.&lt;/p&gt;
+&lt;p&gt;(Note: DO NOT choose Front Row for this!)&lt;/p&gt;
+&lt;p&gt;&lt;img alt="The Access Shortcuts" src="https://weblog.latte.ca/images/blake/Quit/3-Access.png" title="Access"&gt;&lt;/p&gt;
+&lt;p&gt;And assign that function to ⌘-q.&lt;/p&gt;
+&lt;p&gt;&lt;img alt="The New Shortcut" src="https://weblog.latte.ca/images/blake/Quit/4-%E2%8C%98Q.png" title="⌘Q"&gt;&lt;/p&gt;
+&lt;p&gt;Now, whenever you hit ⌘-q, it will do whatever you selected, instead of
+quitting the application.  Ta-da!&lt;/p&gt;&lt;/div&gt;</description><category>ehsan</category><category>mozilla</category><category>quit</category><guid>https://weblog.latte.ca/blake/tech/thunderbird/quit.html</guid><pubDate>Fri, 25 Mar 2011 21:48:05 GMT</pubDate></item></channel></rss>

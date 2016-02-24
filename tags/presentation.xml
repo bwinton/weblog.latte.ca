@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet type="text/xsl" href="../assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Blog-O! (presentation)</title><link>https://weblog.latte.ca/</link><description></description><atom:link type="application/rss+xml" href="https://weblog.latte.ca/tags/presentation.xml" rel="self"></atom:link><language>en</language><lastBuildDate>Wed, 24 Feb 2016 17:07:40 GMT</lastBuildDate><generator>https://getnikola.com/</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Some ideas for the next version of Basie.</title><link>https://weblog.latte.ca/blake/tech/basie/basieideas.html</link><dc:creator>Blake Winton</dc:creator><description>&lt;div&gt;&lt;p&gt;Yesterday I went to see a presentation by Kosta Zabashta about the
+work he did on Basie.  The presentation went fairly well, but while
+listening to it, I had a few ideas that I thought I should write down.&lt;/p&gt;
+&lt;p&gt;First, since the configurations for Exim and Postfix are so
+complicated and so different, it would be nice if we had a program
+that could figure out which one you’re running, and generate the lines
+to add to your config files to get it all set up.&lt;/p&gt;
+&lt;p&gt;Second, I think we probably don’t need to add that many boolean or set
+operators to the search functionality.  I seem to remember reading a
+paper a while ago where Google said that people only used 2 of the
+advanced search features, "s to make a phrase, and OR to choose
+between two different things.  Sure, some people used all the wacky
+operators, but it was a vanishingly small percentage.&lt;/p&gt;
+&lt;p&gt;Third, do we update the search index when items change, or are we
+constantly rebuilding it?  I would have thought that doing the dynamic
+updates would have run into many of the same issues as the Events app,
+but maybe there was a smarter way to do it that I’m overlooking.&lt;/p&gt;
+&lt;p&gt;Fourth, and finally, I wonder if there’s a way to use metadata about
+the objects we’re searching to influence rankings.  To take the Google
+approach, add the number of mail messages/commit logs/wiki
+pages/tickets that refer to an item as a factor in determining the
+ranking.  Or, push more recent things higher in the search results,
+since we know when things were added.  Do we actually want to do
+either of those?  Maybe, maybe not, but we’ve got a lot of data about
+each item, and it seems like using it might be, well, maybe more
+interesting than useful.  :)&lt;/p&gt;
+&lt;p&gt;So, there are my thoughts on stuff we might want to do for the next
+version of Basie.  I suppose the next step will be to get Greg to link
+to this, and get other people commenting.  (And now that I’ve written
+it all out, I suppose it might have been cleverer to post this to the
+Basie blog.  Ah well.  Live and learn.)&lt;/p&gt;&lt;/div&gt;</description><category>0.2</category><category>basie</category><category>ideas</category><category>presentation</category><guid>https://weblog.latte.ca/blake/tech/basie/basieideas.html</guid><pubDate>Thu, 04 Dec 2008 19:35:15 GMT</pubDate></item></channel></rss>

@@ -1,0 +1,654 @@
+<!DOCTYPE html>
+<html prefix="og: http://ogp.me/ns# article: http://ogp.me/ns/article# " lang="en">
+<head>
+<meta charset="utf-8">
+<base href="https://weblog.latte.ca/index-42.html">
+<meta name="description" content="A weblog for latte.ca">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Blog-O! (old posts, page 42) | Blog-O!</title>
+<link href="assets/css/bootstrap.min.css" rel="stylesheet" type="text/css">
+<link href="assets/css/rst.css" rel="stylesheet" type="text/css">
+<link href="assets/css/code.css" rel="stylesheet" type="text/css">
+<link href="assets/css/colorbox.css" rel="stylesheet" type="text/css">
+<link href="assets/css/theme.css" rel="stylesheet" type="text/css">
+<meta content="#5670d4" name="theme-color">
+<link rel="alternate" type="application/rss+xml" title="RSS" href="rss.xml">
+<link rel="canonical" href="https://weblog.latte.ca/index-42.html">
+<link rel="prev" href="index-43.html" type="text/html">
+<link rel="next" href="index-41.html" type="text/html">
+<!--[if lt IE 9]><script src="assets/js/html5.js"></script><![endif]-->
+</head>
+<body>
+<a href="#content" class="sr-only sr-only-focusable">Skip to main content</a>
+
+<!-- Menubar -->
+
+<nav class="navbar navbar-inverse navbar-static-top"><div class="container">
+<!-- This keeps the margins nice -->
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-navbar" aria-controls="bs-navbar" aria-expanded="false">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="https://weblog.latte.ca/">
+
+                <span id="blog-title">Blog-O!</span>
+            </a>
+        </div>
+<!-- /.navbar-header -->
+        <div class="collapse navbar-collapse" id="bs-navbar" aria-expanded="false">
+            <ul class="nav navbar-nav">
+<li>
+<a href="archive.html">Archive</a>
+                </li>
+<li>
+<a href="tags/index.html">Tags</a>
+                </li>
+<li>
+<a href="rss.xml">RSS feed</a>
+
+                
+            </li>
+</ul>
+<!-- Custom search --><form method="get" id="search" action="//duckduckgo.com/" class="navbar-form pull-right">
+<input type="hidden" name="sites" value="https://weblog.latte.ca/"><input type="hidden" name="k8" value="#444444"><input type="hidden" name="k9" value="#D51920"><input type="hidden" name="kt" value="h"><input type="text" name="q" maxlength="255" placeholder="Search…" style="margin-top: 4px;"><input type="submit" value="DuckDuckGo Search" style="visibility: hidden;">
+</form>
+<!-- End of custom search -->
+
+
+            <ul class="nav navbar-nav navbar-right"></ul>
+</div>
+<!-- /.navbar-collapse -->
+    </div>
+<!-- /.container -->
+</nav><!-- End of Menubar --><div class="container" id="content" role="main">
+    <div class="body-content">
+        <!--Body content-->
+        <div class="row">
+            
+            
+<div class="postindex">
+    <article class="h-entry post-text"><header><h1 class="p-name entry-title"><a href="blake/tech/markdown.html" class="u-url">How to add Markdown to your PyBlosxom Blog.</a></h1>
+        <div class="metadata">
+            <p class="byline author vcard"><span class="byline-name fn">Blake Winton</span></p>
+            <p class="dateline"><a href="blake/tech/markdown.html" rel="bookmark"><time class="published dt-published" datetime="2008-02-27T12:16:41-05:00" itemprop="datePublished" title="2008-02-27 12:16">2008-02-27 12:16</time></a></p>
+                <p class="commentline">
+        
+    <a href="blake/tech/markdown.html#disqus_thread" data-disqus-identifier="/blake/tech/markdown">Comments</a>
+
+
+        </p>
+</div>
+    </header><div class="p-summary entry-summary">
+    <div>
+<p>Hopefully this all just works.  Include A&amp;B, and 4 &lt; 5.</p>
+<h2>Headers</h2>
+<h3>Smaller headers</h3>
+<blockquote>
+<p>Blockquotes.</p>
+</blockquote>
+<ul>
+<li>Lists</li>
+<li>of </li>
+<li>
+<p>things</p>
+<p>Blocks of python code could be here.</p>
+</li>
+</ul>
+<hr>
+<p><em>etc</em>, <strong>etc</strong>.</p>
+<p>Okay, so now that I’ve determined that it works, here’s how I did it:
+I added a new entry parser, called pymarkdown.py, to my plugins
+directory.  The content of the code looks like this:</p>
+<pre class="code literal-block"><span></span><span class="n">FILE_EXT</span> <span class="o">=</span> <span class="s1">'md'</span>
+
+<span class="n">__version__</span> <span class="o">=</span> <span class="s1">'pymarkdown 0.1'</span>
+<span class="n">__author__</span> <span class="o">=</span> <span class="s1">'Blake Winton &lt;bwinton+python@latte.ca&gt;'</span>
+
+<span class="kn">import</span> <span class="nn">markdown</span>
+
+<span class="k">try</span><span class="p">:</span>
+    <span class="kn">from</span> <span class="nn">Pyblosxom</span> <span class="kn">import</span> <span class="n">tools</span>
+<span class="k">except</span> <span class="ne">ImportError</span><span class="p">:</span>
+    <span class="k">pass</span>
+
+<span class="k">def</span> <span class="nf">cb_entryparser</span><span class="p">(</span><span class="n">entryparsingdict</span><span class="p">):</span>
+       <span class="sd">"""</span>
+<span class="sd">       Register self as markdown file handler</span>
+<span class="sd">       """</span>
+       <span class="n">entryparsingdict</span><span class="p">[</span><span class="n">FILE_EXT</span><span class="p">]</span> <span class="o">=</span> <span class="n">parse</span>
+       <span class="k">return</span> <span class="n">entryparsingdict</span>
+
+<span class="k">def</span> <span class="nf">parse</span><span class="p">(</span><span class="n">filename</span><span class="p">,</span> <span class="n">request</span><span class="p">):</span>
+    <span class="sd">"""</span>
+<span class="sd">    We just read everything off the file here, using the filename as</span>
+<span class="sd">    title</span>
+<span class="sd">    """</span>
+    <span class="n">entrydata</span> <span class="o">=</span> <span class="p">{}</span>
+
+    <span class="n">f</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="n">filename</span><span class="p">,</span> <span class="s2">"r"</span><span class="p">)</span>
+    <span class="n">lines</span> <span class="o">=</span> <span class="n">f</span><span class="o">.</span><span class="n">readlines</span><span class="p">()</span>
+    <span class="n">f</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+
+    <span class="c1"># strip off the first line and use that as the title.</span>
+    <span class="n">title</span> <span class="o">=</span> <span class="n">lines</span><span class="o">.</span><span class="n">pop</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span><span class="o">.</span><span class="n">strip</span><span class="p">()</span>
+    <span class="n">entrydata</span><span class="p">[</span><span class="s1">'title'</span><span class="p">]</span> <span class="o">=</span> <span class="n">title</span>
+
+    <span class="c1"># absorb meta data lines which begin with a # and consist</span>
+    <span class="c1"># of a name and a value</span>
+    <span class="k">while</span> <span class="n">lines</span> <span class="ow">and</span> <span class="n">lines</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">startswith</span><span class="p">(</span><span class="s2">"#"</span><span class="p">):</span>
+        <span class="n">meta</span> <span class="o">=</span> <span class="n">lines</span><span class="o">.</span><span class="n">pop</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
+        <span class="n">meta</span> <span class="o">=</span> <span class="n">meta</span><span class="p">[</span><span class="mi">1</span><span class="p">:]</span><span class="o">.</span><span class="n">strip</span><span class="p">()</span>     <span class="c1"># remove the hash</span>
+        <span class="n">meta</span> <span class="o">=</span> <span class="n">meta</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s2">" "</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
+        <span class="n">entrydata</span><span class="p">[</span><span class="n">meta</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">strip</span><span class="p">()]</span> <span class="o">=</span> <span class="n">meta</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">strip</span><span class="p">()</span>
+
+    <span class="c1"># join the rest of the lines as the story</span>
+    <span class="n">story</span> <span class="o">=</span> <span class="s1">''</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">lines</span><span class="p">)</span>
+    <span class="n">story</span> <span class="o">=</span> <span class="n">markdown</span><span class="o">.</span><span class="n">markdown</span><span class="p">(</span> <span class="n">story</span> <span class="p">)</span>
+    <span class="n">entrydata</span><span class="p">[</span><span class="s1">'body'</span><span class="p">]</span> <span class="o">=</span> <span class="n">story</span>
+
+    <span class="k">return</span> <span class="n">entrydata</span>
+</pre>
+
+
+<p>And you’re done.</p>
+<p>I guess you might be wondering why I would bother doing that, since
+both Amy and I are obviously comfortable writing straight HTML.  Well,
+<a href="http://www.drproject.org/">DrProject</a> is switching from a
+custom-built Wiki-ish-syntax parser to a <a href="http://www.freewisdom.org/projects/python-markdown/">third-party</a> Markdown parser,
+and I figured this would give me a bit of a headstart on getting used
+to the new syntax, and also give me a bit of a playground for testing
+out new features that I might want to add.</p>
+</div>
+    </div>
+    </article><article class="h-entry post-text"><header><h1 class="p-name entry-title"><a href="amy/everythingelse/somuchsnow.html" class="u-url">So Much Snow</a></h1>
+        <div class="metadata">
+            <p class="byline author vcard"><span class="byline-name fn">Amy Brown</span></p>
+            <p class="dateline"><a href="amy/everythingelse/somuchsnow.html" rel="bookmark"><time class="published dt-published" datetime="2008-02-21T14:43:37-05:00" itemprop="datePublished" title="2008-02-21 14:43">2008-02-21 14:43</time></a></p>
+                <p class="commentline">
+        
+    <a href="amy/everythingelse/somuchsnow.html#disqus_thread" data-disqus-identifier="/amy/everythingelse/somuchsnow">Comments</a>
+
+
+        </p>
+</div>
+    </header><div class="p-summary entry-summary">
+    <p>
+This Tuesday we were treated to a most peculiar sight; our street,
+which usually has between six and ten cars parked on it, was empty
+of cars but full of two Bobcats and a huge yellow snow eating/spitting
+machine, and a steady succession of dump trucks being filled with snow.  We
+have had so much snow this winter (a storm every three days in
+February alone) that the city has given up trying to shovel it around and
+is <em>trucking it away</em> to who knows where?  And in order to
+get the job done they have resorted to the extreme measure of 
+towing people's cars around the corner, moving the snow, then
+towing the cars back (I think, or maybe they just leave the cars
+where they dropped them!).  It's costing millions and it's a little
+crazy, but I'm glad they did it because it was getting almost
+impossible to get over the huge snowbanks at every intersection,
+even with the awesome stroller.
+</p>
+<p>
+As far as I am concerned, spring cannot come too soon this year.
+Although I suspect we're in for a spell more winter yet.
+</p>
+    </div>
+    </article><article class="h-entry post-text"><header><h1 class="p-name entry-title"><a href="amy/everythingelse/twonicedays.html" class="u-url">Two Nice Days</a></h1>
+        <div class="metadata">
+            <p class="byline author vcard"><span class="byline-name fn">Amy Brown</span></p>
+            <p class="dateline"><a href="amy/everythingelse/twonicedays.html" rel="bookmark"><time class="published dt-published" datetime="2008-02-21T14:36:43-05:00" itemprop="datePublished" title="2008-02-21 14:36">2008-02-21 14:36</time></a></p>
+                <p class="commentline">
+        
+    <a href="amy/everythingelse/twonicedays.html#disqus_thread" data-disqus-identifier="/amy/everythingelse/twonicedays">Comments</a>
+
+
+        </p>
+</div>
+    </header><div class="p-summary entry-summary">
+    <p>
+Today has been nice, so far.  I managed to jettison my children —
+Cordelia to nursery school and Delphine to a friend's house — and
+then I went to Doug Miller Books and talked with Doug Miller himself
+about the sad state of kids' books, then up to Bean
+Sprout and chatted for a bit with the girl there about our sad little
+house and our big reno and our big debt.  Then I emerged into the
+sunshine and realized, not for the first time, that the thing which
+makes this stay-at-home mom thing so hard for me is how lonely
+it is.  I am not one of those solitary people, one of those people
+who needs time alone to recharge; I need people.  I would be happy
+if I had friends at my house <em>all the time</em>.  
+</p>
+<p>If you ask my friend
+Jeff from work he will tell you I spent half my time at the office 
+hanging out with him talking about movies and TV shows and life. 
+What he doesn't know is that I spent the other half online chatting
+with my brother and on my favourite message board.
+(Yeah, I didn't get much work done, although no-one seemed to mind.)
+One of my favourite times of my life was when I was in university,
+when there was always someone around to hang out with
+no matter what time of day,
+even if it was only some creepy Unix guy with a dirty beard.
+</p>
+<p>
+But here I am, here I have been for almost five years, with very
+little company.  Sometimes a friend comes over, and that's great,
+but mostly it's just me and the little ones, and they keep me busy
+and they're fun to be around (except when they're not) but they're
+no substitute for grown-up company.  And I realized today I think 
+that's one of the reasons I'm such a sucker for these ensemble
+dramas, like <em>Firefly</em> and <em>Torchwood</em>; because
+I miss that cameraderie and rapport and just plain companionship.
+</p>
+<p>
+So today was good, pathetically enough, because the sun was
+shining in that way that makes you think maybe, one day, spring
+will come, and because I had a little time to myself, unhurried,
+to get some jobs done, and because I got to hang out with Doug
+Miller and the Bean Sprout girl whose name I don't even know and
+have some company and talk about things I care about with people
+who know how I feel.  And I feel a little bit nourished, a little
+bit more filled up, a little bit less lonely.
+</p>
+<p>
+</p>
+<hr width="40%">
+<p>
+Lest you think I'm one of those horrible mothers who is only happy
+when she gets away from her children, let me tell you about Family
+Day.  Family Day is the contrived excuse for a February long weekend
+that the Ontario government has decreed.  I am all for a long weekend
+in winter — I have been saying we need one for years — but I think
+if you are the kind of person who spends long weekends with your
+family you will anyway, and if you aren't nothing Dalton McGuinty says
+is going to make you want to.  
+</p>
+<p>
+But we like to spend our free time together, so this first Family Day,
+after the girls and I had
+breakfast we gathered all the saved-up paper towel rolls and cereal 
+boxes and
+popsicle sticks and packing tape together and built a crazy castle
+with turrets and towers all akimbo, and then Delphine and Cordelia
+strapped on their smocks and I got out the poster paint and they 
+decorated the thing, which is now on display on our desk in the living
+room.  I figure we can keep decorating it for years, probably.
+</p>
+<p>
+That was all done and cleaned-up-after by ten thirty, so I kicked the
+family into action to help me vacuum (they pick up all the toys and
+small furniture off the floor and I vacuum).  Delphine went off to a friend's
+house for lunch, and while Cordelia was napping I read pages and pages
+of my book — chapters and chapters! — while Blake did I don't know
+what.  Something on the computer, I think.
+</p>
+<p>
+After Delphine came home and Cordelia woke up we all made calzone together,
+then the girls went to bed and Blake and I watched TV (guess what we watched?) 
+and it was pretty much my perfect day.  Playing and reading and cooking and
+a freshly vacuumed house?  Heaven.
+</p>
+    </div>
+    </article><article class="h-entry post-text"><header><h1 class="p-name entry-title"><a href="amy/whingeing/whinging.html" class="u-url">Whingeing</a></h1>
+        <div class="metadata">
+            <p class="byline author vcard"><span class="byline-name fn">Amy Brown</span></p>
+            <p class="dateline"><a href="amy/whingeing/whinging.html" rel="bookmark"><time class="published dt-published" datetime="2008-02-20T14:43:10-05:00" itemprop="datePublished" title="2008-02-20 14:43">2008-02-20 14:43</time></a></p>
+                <p class="commentline">
+        
+    <a href="amy/whingeing/whinging.html#disqus_thread" data-disqus-identifier="/amy/whingeing/whinging">Comments</a>
+
+
+        </p>
+</div>
+    </header><div class="p-summary entry-summary">
+    <p>
+Pronounced "windjing", it means "complaining persistently and in a 
+peevish or irritating way".  Since so much of my blogging (and indeed
+most people's) is devoted to general or specific pissing and moaning,
+I thought I'd better give it its own category.  Not so much to elevate
+the whiny posts, but to segregate them from the rest of the weblog,
+the parts which might give you the impression that I'm a normal
+well-adjusted person and not a neurotic whining freak.
+</p>
+<p>
+I had a teeny tiny breakdown this morning.  It started yesterday;
+I was reading a book and one of the characters was talking about
+lying awake all night with insomnia.  Luckily I have never had
+trouble sleeping, because the very thought of trying to deal with
+the children and get through a day without any sleep (or even without
+the seven hours which I absolutely need) got me into a bit of a
+panic.  Then I got to thinking about how one person raising a
+family, alone for most of the day, is completely abnormal from a
+biological point of view.  Humans are pack animals, we are supposed
+to live in extended family groups.  I should have grannies and
+aunties and big sisters and cousins around to help me with my
+kids while I help with theirs.  I shouldn't have to pull Cordelia
+out of her nap every single day to pick Delphine up from school,
+or drag Delphine away from her activities so we can get Cordelia
+from her school.
+</p>
+<p>
+So there was all that, and on top of it the children are fighting
+like ferrets in a sack all the time, or at least it seems like it,
+and furthermore Delphine has started to explore the exciting world
+of misbehaviour and deception — and I'm feeling singularly unqualified
+to deal with that — and I have a cough and a sinus infection
+and it's bloody cold outside — I am so sick of winter — and I'm tired 
+and all I want to do is 
+sit on the couch eating brownies and watching Jack Harkness kiss 
+people, which isn't going
+to happen until I have dragged my carcass through another sorry day
+of this madness.  The nice thing about working in an office is that
+you can phone it in for a day, or a week, or even a month or two and
+no-one seems to notice, but as a Mom you have to step up and cook and
+clean and pick up and drop off every single bloody blessed day with
+no reprieve.  Well, except after bedtime.  Thank god for bedtime.
+And thank god my kids are as good as they are, because as Blake's
+mother says, "You think this is bad, you should see regular children!"
+</p>
+<p>
+And that has been the whinge for today.  Thank you very much.
+</p>
+    </div>
+    </article><article class="h-entry post-text"><header><h1 class="p-name entry-title"><a href="amy/diversions/threeshows.html" class="u-url">Three Shows</a></h1>
+        <div class="metadata">
+            <p class="byline author vcard"><span class="byline-name fn">Amy Brown</span></p>
+            <p class="dateline"><a href="amy/diversions/threeshows.html" rel="bookmark"><time class="published dt-published" datetime="2008-02-19T15:10:03-05:00" itemprop="datePublished" title="2008-02-19 15:10">2008-02-19 15:10</time></a></p>
+                <p class="commentline">
+        
+    <a href="amy/diversions/threeshows.html#disqus_thread" data-disqus-identifier="/amy/diversions/threeshows">Comments</a>
+
+
+        </p>
+</div>
+    </header><div class="p-summary entry-summary">
+    <p>
+Three TV shows worth watching: 
+<a href="http://www.nbc.com/Chuck/">Chuck</a>, which looks like
+absolute cheesy crap but it has great characters, and it's funny,
+and hey, it has 
+<a href="http://www.nbc.com/Chuck/about/bios/baldwin.shtml">Jayne</a>!
+<a href="http://www.scifi.com/battlestar/">Battlestar Galactica</a>,
+which pretty much everyone knows about now.  Fantastic characters 
+(that's mainly what I look for in a TV show) and thought-provoking
+plot lines.  And last but not least, my current favourite,
+<a href="http://en.wikipedia.org/wiki/Torchwood">Torchwood</a>,
+the show that makes me wish Leontine still worked for the BBC so
+she could design a cool box for the DVD and then send it to me. 
+With the DVDs in it.
+Russell T. Davies is a brilliant writer who has created an ensemble
+of witty, subtle and interesting (oh, and gorgeous) characters and 
+put them in a universe
+which keeps throwing horrible things at them.  If you miss 
+<em>Buffy</em>, this is the show for you.
+</p>
+<p>
+Edited to add: (I mentioned this to Blake yesterday and he said I
+should post it.  I guess any vestigial signs of intelligence should
+be encouraged.)  <em>Torchwood</em> is the show <em>Angel</em> would 
+have been if it
+had been better written and David Boreanaz was a better actor: it's
+dark, sexy, adult, scary, with lots of great one-liners and sex.  Plenty
+of sex.
+</p>
+<p>
+Jeez.  Apparently I am not the first person to make that connection;
+<a href="http://blogs.guardian.co.uk/tv/2008/01/time_to_relight_torchwood.html">Russell
+T. Davies was</a>.  Well, he did borrow Spike, didn't he.
+</p>
+    </div>
+    </article><article class="h-entry post-text"><header><h1 class="p-name entry-title"><a href="delphine/independence.html" class="u-url">Miss Independent</a></h1>
+        <div class="metadata">
+            <p class="byline author vcard"><span class="byline-name fn">Amy Brown</span></p>
+            <p class="dateline"><a href="delphine/independence.html" rel="bookmark"><time class="published dt-published" datetime="2008-02-16T13:27:08-05:00" itemprop="datePublished" title="2008-02-16 13:27">2008-02-16 13:27</time></a></p>
+                <p class="commentline">
+        
+    <a href="delphine/independence.html#disqus_thread" data-disqus-identifier="/delphine/independence">Comments</a>
+
+
+        </p>
+</div>
+    </header><div class="p-summary entry-summary">
+    <p>
+Delphine is a few months shy of turning five, and she has become
+a tremendously capable and independent little thing,  to the point
+that I am having trouble figuring out where to set limits.
+</p>
+<p>
+I recently read a wonderful book called <em>Breaking the Good Mom
+Myth</em> by Alyson Schafer.  Schafer is an Adlerian psychotherapist,
+and the <a href="http://ourworld.compuserve.com/homepages/HStein/guid.htm">Adlerian
+philosphy</a> basically says, among other things, that you should throw
+as much responsibility on your child as they can handle.  This is
+something Blake and I have been doing all along, but the book features
+an inspiring list of things that kids should be able to do at each age.
+By the time she's eight she'll be running the whole household!
+</p>
+<p>
+Delphine's been dressing herself since she was two, and she can easily
+handle the putting on of winter gear that some kids older than her
+are still getting helped with.  (I was going to say they couldn't
+manage it, but I am sure they could if their parents would just leave
+them to it.)  But lately the independence has been getting out of hand.
+The other morning I came downstairs to see that Delphine had used a
+steak knife to slice a chunk, for breakfast, off an old moldy loaf 
+I had forgotten
+about.  Yesterday she used my facecloths to clean up after her friend
+peed on the bedroom floor.  It's like there's no challenge she can't
+face alone!
+</p>
+<p>
+Which is great, but we are going to have to draw some lines and make
+some rules.  The first rule has to be about knives, specifically don't
+touch them.  The second has to be something about cleaning up messes,
+I think.  Cleaning up messes is just very complicated, what with the
+different products and tools, not to mention the biohazard factor.  A
+grown-up has to be involved.  I am sure we will figure out the limits
+we need to set, but in the meantime it's pretty exciting to see her
+growing up.
+</p>
+    </div>
+    </article><article class="h-entry post-text"><header><h1 class="p-name entry-title"><a href="cordelia/nurseryschool.html" class="u-url">Cordelia's First Parent-Teacher Interview</a></h1>
+        <div class="metadata">
+            <p class="byline author vcard"><span class="byline-name fn">Amy Brown</span></p>
+            <p class="dateline"><a href="cordelia/nurseryschool.html" rel="bookmark"><time class="published dt-published" datetime="2008-02-16T12:14:28-05:00" itemprop="datePublished" title="2008-02-16 12:14">2008-02-16 12:14</time></a></p>
+                <p class="commentline">
+        
+    <a href="cordelia/nurseryschool.html#disqus_thread" data-disqus-identifier="/cordelia/nurseryschool">Comments</a>
+
+
+        </p>
+</div>
+    </header><div class="p-summary entry-summary">
+    <p>
+Due to various factors, it has come to pass that Cordelia has been 
+the subject of a parent-teacher interview several months
+before her older sister will be.  I was supposed to meet with 
+Cordelia's nursery school teachers back in December, but I barely
+had time to breathe let alone sit around talking about my kids
+(usually my favourite pastime).  So I finally managed to meet
+with Lakeisha and Simone a couple of weeks ago.
+</p>
+<p>
+My original thought was, this is going to be kind of pointless;
+Cordelia's two, she plays in water and makes pictures and builds
+towers out of blocks.  How much is there going to be to say?  But
+as it turns out I am really glad I went because hearing about
+how she behaves in school has given me a whole perspective on
+Cordelia.
+</p>
+<p>
+Apparently Cordelia is very focussed in class; she will work on
+something for ten or fifteen minutes.  If you know anything about
+two-year-olds you know how weird that is; usually they do stuff
+for a couple of minutes then move on to the next thing.  The "Your
+X-Year-Old" series of books has a little overhead diagram of a
+room with various activities set up, and then a map of a typical
+kid's path through that room, and the map for the two-year-old is
+like a bowl of spaghetti.  Not Cordelia.  I saw an example of that
+focus in action the other day at supper as she painstakingly shelled
+three snow pea pods.  (Ever since we gave them edamame my kids have had
+trouble knowing what peas need to be shelled.)  She apparently also
+comes back to things; the teachers know to leave her pictures or
+whatever out because she'll come back later to work on them.
+</p>
+<p>
+She has only been talking at school since after Christmas; she's been
+talking for us for ages, but she held back at school and now they're
+astounded at her voice.  Well, mostly the other children.  "She talks!"
+But what Lakeisha and Simone actually said — and if you know Cordelia
+in person you should make sure you're sitting down right now — is,
+"They're surprised when she talks because she's usually so quiet."
+Quiet!  Apparently the Cordelia at school is the quiet, studious 
+Cordelia.
+</p>
+<p>
+She's also observant; she was the first and only kid to notice a new
+science table the day I went to visit, and she examined everything on
+it with her (apparently) usual thoroughness.
+</p>
+<p>
+I am really pleased I went to the meeting and was able to hear about
+this other side of Cordelia.  I think the problem with having exactly
+two kids is that you end up forcing them into false dichotomies:
+Delphine is the quiet one, therefore Cordelia must be the loud one;
+Delphine is the studious one, therefore Cordelia must be the flippertigibbet.
+This was an excellent reminder that it is profoundly important to
+step back and see my children for who they really are, not just
+who they aren't because that's who their sister is.  Otherwise I risk
+missing the most wonderful and interesting parts of them.
+</p>
+<p>
+This has also made me really glad that I put Cordelia in nursery
+school, despite the gruelling mess it makes of my day twice a week.
+(I'm the mother, what the hell else am I doing anyway?)  It's such
+a great opportunity for her to blossom outside of the home and away
+from her sister and me.
+</p>
+<p>
+And finally, I am very excited about Delphine's parent-teacher interview.
+What surprises has my oldest been hiding?  What will I learn about her?
+I can't wait.
+</p>
+    </div>
+    </article><article class="h-entry post-text"><header><h1 class="p-name entry-title"><a href="blake/tech/seachange.html" class="u-url">Now I feel like I’m behind the times.</a></h1>
+        <div class="metadata">
+            <p class="byline author vcard"><span class="byline-name fn">Blake Winton</span></p>
+            <p class="dateline"><a href="blake/tech/seachange.html" rel="bookmark"><time class="published dt-published" datetime="2008-02-15T15:03:22-05:00" itemprop="datePublished" title="2008-02-15 15:03">2008-02-15 15:03</time></a></p>
+                <p class="commentline">
+        
+    <a href="blake/tech/seachange.html#disqus_thread" data-disqus-identifier="/blake/tech/seachange">Comments</a>
+
+
+        </p>
+</div>
+    </header><div class="p-summary entry-summary">
+    <div>
+<p>I was reading <a href="http://blogs.mathworks.com/images/steve/92/handout_final_icip2006.pdf">a presentation</a> about how to write better software for non-developers, and it said:</p>
+<blockquote>
+<p>I would refuse to work on any sort of collaborative software
+development project that doesn’t use version control.</p>
+</blockquote>
+<p>I totally agree.  Heck, I even use version control for my personal
+one-off projects.  But it got me wondering what people use at their
+jobs, so I asked my friends who were on instant messenger, as a straw
+poll.  The results were shockingly unanimous.  <a href="http://subversion.tigris.org/">Subversion</a>.  8 for 8.  I regret to say that I’m
+not using Subversion at my job, but that may change someday.  In the
+meantime, leave a comment, and tell me what you’re using at work or at
+home, either to make me feel better, or to rub my nose in it.</p>
+<p><em>Update</em>: One person uses Clear Case.  I’ve heard good things about
+Clear Case.</p>
+</div>
+    </div>
+    </article><article class="h-entry post-text"><header><h1 class="p-name entry-title"><a href="amy/diversions/ipodsad.html" class="u-url">My iPod is Trying To Kill Me</a></h1>
+        <div class="metadata">
+            <p class="byline author vcard"><span class="byline-name fn">Amy Brown</span></p>
+            <p class="dateline"><a href="amy/diversions/ipodsad.html" rel="bookmark"><time class="published dt-published" datetime="2008-02-14T14:03:06-05:00" itemprop="datePublished" title="2008-02-14 14:03">2008-02-14 14:03</time></a></p>
+                <p class="commentline">
+        
+    <a href="amy/diversions/ipodsad.html#disqus_thread" data-disqus-identifier="/amy/diversions/ipodsad">Comments</a>
+
+
+        </p>
+</div>
+    </header><div class="p-summary entry-summary">
+    <p>
+For some reason I am feeling a bit melancholy this afternoon,
+so I thought I would buck up and listen to some music and do
+some housework.
+</p>
+<p>
+First my iPod gave me "Why Worry" by Dire Straits, which is
+kind of a bummer song anyway, and which reminds me of my brother
+Dave (see above) who I miss these days.  Then came on "Song
+for a Winter's Night" by Sarah McLachlan, which for some reason
+always makes me really lonely for my mother, and I thought what
+the hell, no-one's around, why not shed a few tears.  Then
+that song ended and I thought good, that's enough gloom!  
+What's next?
+</p>
+<p>
+"Close Your Eyes", the Buffy and Angel theme from <em>Buffy
+The Vampire Slayer</em>.  Kill me now.  With a big sword.
+Even though you really love me.  It's for the good of the world.
+</p>
+    </div>
+    </article><article class="h-entry post-text"><header><h1 class="p-name entry-title"><a href="delphine/pictures/feb10.html" class="u-url">Almost current.</a></h1>
+        <div class="metadata">
+            <p class="byline author vcard"><span class="byline-name fn">Blake Winton</span></p>
+            <p class="dateline"><a href="delphine/pictures/feb10.html" rel="bookmark"><time class="published dt-published" datetime="2008-02-10T21:12:00-05:00" itemprop="datePublished" title="2008-02-10 21:12">2008-02-10 21:12</time></a></p>
+                <p class="commentline">
+        
+    <a href="delphine/pictures/feb10.html#disqus_thread" data-disqus-identifier="/delphine/pictures/feb10">Comments</a>
+
+
+        </p>
+</div>
+    </header><div class="p-summary entry-summary">
+    <p>There was a new version of Sketches in my update queue the last
+time I checked.  The main feature of this one is the ability to draw
+shapes, like arrows, ovals, and rectangles, as shown below.</p>
+
+<p align="center"><img src="images/delphine/2008-02-10/Sketches.jpg"><br clear="all"></p>
+    </div>
+    </article>
+</div>
+
+        <nav class="postindexpager"><ul class="pager">
+<li class="previous">
+                <a href="index-43.html" rel="prev">Newer posts</a>
+            </li>
+            <li class="next">
+                <a href="index-41.html" rel="next">Older posts</a>
+            </li>
+        </ul></nav><script>var disqus_shortname="latteblog";(function(){var a=document.createElement("script");a.async=true;a.src="https://"+disqus_shortname+".disqus.com/count.js";(document.getElementsByTagName("head")[0]||document.getElementsByTagName("body")[0]).appendChild(a)}());</script>
+</div>
+        <!--End of body content-->
+
+        <footer id="footer"><div style="margin-bottom: 12px">Contents © 2016         <a href="mailto:bwinton@latte.ca">Blake Winton</a>
+<a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/2.5/">
+<img alt="Creative Commons License BY-NC-SA" style="border-width: 0; vertical-align: bottom" src="https://licensebuttons.net/l/by-nc-sa/2.5/88x31.png"></a>
+</div>
+            
+        </footer>
+</div>
+</div>
+
+
+            <script src="assets/js/jquery.min.js"></script><script src="assets/js/bootstrap.min.js"></script><script src="assets/js/moment-with-locales.min.js"></script><script src="assets/js/fancydates.js"></script><script src="assets/js/jquery.colorbox-min.js"></script><script>$('a.image-reference:not(.islink) img:not(.islink)').parent().colorbox({rel:"gal",maxWidth:"100%",maxHeight:"100%",scalePhotos:true});</script><!-- fancy dates --><script>
+    moment.locale("en");
+    fancydates(0, "YYYY-MM-DD HH:mm");
+    </script><!-- end fancy dates --><script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-5805429-2', 'auto');
+  ga('send', 'pageview');
+
+</script>
+</body>
+</html>
