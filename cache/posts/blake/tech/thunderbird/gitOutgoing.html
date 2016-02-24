@@ -1,0 +1,37 @@
+<p>Much of the new work I’m doing these days is being stored in git
+repositories.  Now, I’m not the biggest fan of git, particularly its UI,
+but the advantages of <a href="https://github.com/">GitHub</a> and <a href="http://gitx.frim.nl/">GitX</a> are hard to ignore.  Despite that, I still really
+missed being able to type <code>hg out</code> to see which patches I would be pushing,
+so, after a short chat with (and demo from) <a href="http://blog.mozilla.com/bhearsum/">Ben</a>, I came up with the following:</p>
+<p>Somewhere in your path, add a file named <code>git-outgoing</code> which contains the
+following contents:</p>
+<pre class="code literal-block"><span></span># !/bin/sh
+# Uh, there shouldn’t be a space between the # and ! in the previous
+# line, but the highlighter I’m using seems to require it…
+git push --dry-run $1 2&gt;&amp;1 | awk &#39;/^ / {print $1}&#39; | xargs git log
+</pre>
+
+
+<p>(Make sure it’s executable by whomever needs to use it!)</p>
+<p>Then, in your git config, add the following section:</p>
+<pre class="code literal-block"><span></span><span class="k">[alias]</span>
+    <span class="na">out</span> <span class="o">=</span> <span class="s">outgoing</span>
+</pre>
+
+
+<p>And finally, you should be able to type <code>git out</code>, and see something like:</p>
+<pre class="code literal-block"><span></span>commit 7d4c9b89a4663a07bed030669bae2d3c73ec78dc
+Author: Blake Winton &lt;bwinton@latte.ca&gt;
+Date:   Thu Dec 8 12:22:41 2011 -0500
+
+    Blear 2
+
+commit a4e8c6627bc26d7371fb2614a1c47aaf694957bd
+Author: Blake Winton &lt;bwinton@latte.ca&gt;
+Date:   Thu Dec 8 12:18:04 2011 -0500
+
+    Bleah.
+</pre>
+
+
+<p>So, hopefully some of the rest of you will find this helpful, too, and if you know of a better way to do this, <em>please</em> let me know in the comments!</p>

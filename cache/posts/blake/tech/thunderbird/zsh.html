@@ -1,0 +1,34 @@
+<p>A co-worker of mine was having problems remembering where the <a href="http://mxr.mozilla.org/comm-central/source/client.mk">makefile</a> puts the binary for
+<a href="http://mozillamessaging.com/">Thunderbird</a> when you build it yourself.
+Now, I type in the path far too often, so I know where it is (on my
+computer, anyways), but since I type it in far too often, I grabbed
+someone's <a href="http://www.zsh.org/">zsh</a> function that launched <a href="http://www.mozilla.com/">Firefox</a>, and modified it to launch Thunderbird from either
+the build directory or the source directory, but only on Mac OS X.</p>
+<p>Anyways, here it is, I hope some of you find it useful.</p>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13</pre></div></td><td class="code"><pre class="code literal-block"><span></span>thunderbird<span class="o">()</span> <span class="o">{</span>
+  <span class="nb">local</span> -a currdir<span class="p">;</span>
+  <span class="nv">currdir</span><span class="o">=</span>$PWD:t<span class="p">;</span>
+  <span class="k">for</span> nm in LanikaiDebug ShredderDebug Lanikai Shredder<span class="p">;</span> <span class="k">do</span>
+    <span class="k">if</span> <span class="o">[</span> -d <span class="s2">&quot;./mozilla/dist/</span>$<span class="s2">nm.app&quot;</span> <span class="o">]</span><span class="p">;</span> <span class="k">then</span>
+      ./mozilla/dist/$nm.app/Contents/MacOS/thunderbird-bin <span class="nv">$*</span>
+      break<span class="p">;</span>
+    <span class="k">elif</span> <span class="o">[</span> -d <span class="s2">&quot;../objdir-</span><span class="nv">$c</span><span class="s2">urrdir/mozilla/dist/</span>$<span class="s2">nm.app&quot;</span> <span class="o">]</span><span class="p">;</span> <span class="k">then</span>
+      ../objdir-<span class="nv">$c</span>urrdir/mozilla/dist/$nm.app/Contents/MacOS/thunderbird-bin <span class="nv">$*</span>
+      break<span class="p">;</span>
+    <span class="k">fi</span>
+  <span class="k">done</span>
+<span class="o">}</span>
+</pre>
+</td></tr></table>

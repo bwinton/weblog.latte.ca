@@ -1,0 +1,9 @@
+<p>Yesterday afternoon, I watched <a href="https://air.mozilla.org/apps-templates-dev-ecosystem-tools/">a video</a> from <a href="https://twitter.com/jlongster">James Long</a> about <a href="https://github.com/mozilla/mortar">Mortar</a>, which is a template for making HTML 5 Open Web Apps.  Now, coincidentally, I’m starting a new project (in my spare time, obviously, since it’s a Sunday), and while it’s not an Open Web App, I saw no reason not to use the <a href="https://github.com/volojs/volo">same</a> <a href="http://requirejs.org/">tools</a> they were using.</p>
+<p>Of course, since nothing’s easy, I ran into a problem pretty quickly.  My problem was that every time I tried to <code>require("jquery-ui");</code>, I got an error of “ReferenceError: jQuery is not defined”.  There wasn’t a lot of information about how to fix it, so after most of an afternoon mucking around, I finally came up with something that seems to work, and thought I would post it.</p>
+<ol>
+<li>Go into your <code>www/js/lib</code> directory.</li>
+<li><code>curl -O https://ajax.googleapis.com/ajax/libs/jqueryui/1.8.18/jquery-ui.js</code></li>
+<li>Edit the jquery-ui.js file.  At the top add the line <code>define(["jquery"], function (jQuery) {</code>, and at the bottom, add the line <code>});</code>.</li>
+<li>That’s it.  From there you should be good to go!</li>
+</ol>
+<p>Now, I suspect there’s a better way to do this, and hopefully <a href="https://twitter.com/jrburke">James</a> or <a href="https://twitter.com/clarkbw">Bryan</a> will jump in the comments and tell me what it is, but for now, at least this works.</p>

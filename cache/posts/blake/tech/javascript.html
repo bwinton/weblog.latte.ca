@@ -1,0 +1,58 @@
+<div style="width:6.25em; height:6.25em; float:right">
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+    <text fill="red" x="50" y="97" text-anchor="middle" font-size="120">J</text>
+  </svg>
+</div>
+<p>This started off as a response to <a
+href="http://pyre.third-bit.com/blog/archives/971.html">Greg's post</a>,
+but grew too long, so I figured I'ld put it here instead.</p>
+
+<p>The reaction I've seen from the developer community to Apple's "iPhone
+Development" announcement has been poor at best.  Everyone seems to think
+that it's a cop-out, and that they should have just said "We don't support
+third-party development, but you can use the web."  My favourite quote has
+to be from <a href="http://daringfireball.net/2007/06/wwdc_2007_keynote"
+>John Gruber</a>:<blockquote>If all you have to offer is a shit sandwich,
+just say it. Don't tell us how lucky we are and that it's going to taste
+delicious.</blockquote> Maybe it's because I'm an old fuddy-duddy, but I
+don't think the Web 2.0 development is really the wave of the future.  I
+think the future, like the past, will have desktop apps, client-server apps
+with both thick and thin clients, where the server may be a web server or
+may not, etc, etc...</p>
+
+<p>And Javascript is still missing the extreme number of useful libraries
+that the other three languages have.  Like <a
+href="http://ironfroggy-code.blogspot.com/2007/06/python-ironpython-apples-and-oranges.html"
+>Calvin Spealman</a> says:<blockquote>Does syntax alone make a language?
+Maybe one day it could, but those days died out. Python is far more than
+its clean, beautiful syntax. The libraries that come in the standard
+library provide even more value. As a foundation for all the software built
+on top, these packages are fundamental to the success of
+Python.</blockquote>and I find that to be true over and over again.  Java
+the language kind of sucks.  But the huge number of libraries to do just
+about anything I want really rocks.  (And the IDEs are sweet too, which is
+a good thing, since trying to write Java without an IDE would give even a
+super-robot a serious case of carpal tunnel syndrome.)</p>
+
+<p>Which is not to say that there won't be more and more libraries shipped
+with Javascript, but then again, since it's mainly a web-language, the
+browser makers will want to keep it light, and so the libraries won't be
+part of the language proper, as they are with Python or Java, and any
+"standard" library you see will be vendor-specific, just like it is today.
+(I already write some Javascript scripts for my day job, but I know that
+they're going to run on a Windows box.  I have no idea how to write the
+cross-platform equivalent of stuff like:
+<pre><code>if ( FS.FileExists( flavour + "\\gamelist.txt" ) )</code></pre>
+or:
+<pre><code>WScript.Echo( "Unhandled folder: " + fname );</code></pre>
+much less:
+<pre><code>var WSHShell = WScript.CreateObject("WScript.Shell");
+var cmdline = "jar.exe xvf " + item + " META-INF/MANIFEST.MF";
+WSHShell.Run( cmdline, ActivateAndHide, true );</code></pre>
+Any suggestions?</p>
+
+<p>And while I'm here, that red "J" was the best thing I could come up with
+for a Javascript logo, after extensive web searching.  (There's a reason
+I'm a programmer, and not a graphics person.)  Anyone seen anything
+better?</p>
+

@@ -1,0 +1,34 @@
+<p>One of the things I wanted to add to <a href="http://www.csse.uwa.edu.au/~chris/iphone/WifiToggle/">WifiToggle</a> was having the
+icon show you whether your wifi was on or off, by having the switch be
+up or down (and the blue glow be on or off, since in Australia a down
+switch means that the light is on, whereas in Canada, it’s the
+opposite).  Sadly, it didn’t seem possible, since Springboard<sup id="fnref:sb"><a class="footnote-ref" href="#fn:sb" rel="footnote">1</a></sup>
+seems to cache your icon.png, and ignore any updates you do to it.
+And so that was where I left it for a long time…</p>
+<p>Recently, however, I was browsing through <a href="http://ericasadun.com/?p=176">AppFlow</a> and I noticed that the MobileCalendar
+application’s icon was different than the one in Springboard.
+Specifically, the one on AppFlow was blank, whereas the one in
+Springboard showed me the current day and date (i.e. "Saturday" and
+"1" for today).  How did it do that?  I grabbed the source, and
+grepped through it for the answer, which turned out to be a special
+key in the Info.plist:</p>
+<pre class="code literal-block"><span></span><span class="nt">&lt;key&gt;</span>SBIconClass<span class="nt">&lt;/key&gt;</span>
+<span class="nt">&lt;string&gt;</span>SBCalendarApplicationIcon<span class="nt">&lt;/string&gt;</span>
+</pre>
+
+
+<p>When I set WifiToggle’s SBIconClass key to be the same, I too had the
+day and date drawn on top of my icon!  Partial success!  So now I’m at
+the point of trying to figure out if I can use any class that
+implements the correct interface (I’m thinking specifically about
+adding a class to my application to handle the updates.)  Of course, I
+have no idea what that interface is, but hey, I’m way closer than I
+was this morning, so that’s got to count for something.</p>
+<div class="footnote">
+<hr />
+<ol>
+<li id="fn:sb">
+<p>The application launcher on the iTouch.&#160;<a class="footnote-backref" href="#fnref:sb" rev="footnote" title="Jump back to footnote 1 in the text">&#8617;</a></p>
+</li>
+</ol>
+</div>

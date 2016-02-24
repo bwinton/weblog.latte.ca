@@ -1,0 +1,51 @@
+<p>For a while now, I’ve been having problems with my Firefox profile.  To be fair,
+it’s mostly because of random <a href="about:config">about:config</a> tweaks I’ve made, but
+still, not being able to test the <a href="https://blog.mozilla.org/blog/2012/11/20/firefox-introduces-new-social-api-and-previews-integration-with-facebook/">new SocialAPI</a> stuff was pretty annoying.  So I decided to try <a href="http://support.mozilla.org/en-US/kb/reset-firefox-easily-fix-most-problems">resetting my profile</a>,
+to clear out all the junk, and hopefully even make it a little faster.</p>
+<p>But, as the page I linked to just up there mentions, resetting your profile will
+lose your open tabs, windows and tab groups, which kinda sucks, because I have
+57 open tabs, in various groups, and I really don’t want to lose them!
+Fortunately, I’m a programmer, so I hacked on Firefox to get it to save and
+restore my tabs, and now I’m a happy camper!</p>
+<p>A couple of days later, one of my co-workers had some similar problems, and also
+wanted to re-set his profile to try and fix them.  I hadn’t saved the results of
+my hacking, so I had to re-create it for him from a combination of memory and
+the documentation.  The new code I came up with looked something like this:</p>
+<pre class="code literal-block"><span></span><span class="kd">var</span> <span class="nx">x</span> <span class="o">=</span> <span class="nx">gBrowser</span><span class="p">.</span><span class="nx">tabs</span>
+<span class="kd">var</span> <span class="nx">rv</span> <span class="o">=</span> <span class="s2">&quot;var tabs = [\n&quot;</span>
+<span class="k">for</span> <span class="p">(</span><span class="kd">var</span> <span class="nx">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="nx">i</span> <span class="o">&lt;</span> <span class="nx">x</span><span class="p">.</span><span class="nx">length</span><span class="p">;</span> <span class="nx">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+  <span class="nx">rv</span> <span class="o">+=</span> <span class="s1">&#39;  &quot;&#39;</span> <span class="o">+</span> <span class="nx">x</span><span class="p">[</span><span class="nx">i</span><span class="p">].</span><span class="nx">linkedBrowser</span><span class="p">.</span><span class="nx">contentWindow</span><span class="p">.</span><span class="nx">location</span> <span class="o">+</span> <span class="s1">&#39;&quot;,\n&#39;</span><span class="p">;</span>
+<span class="p">}</span>
+<span class="nx">rv</span> <span class="o">+=</span> <span class="s1">&#39;];\nfor (var i = 0; i &lt; tabs.length; i++ ) {\n&#39;</span>
+<span class="nx">rv</span> <span class="o">+=</span> <span class="s1">&#39;  gBrowser.addTab(tabs[i]);\n}\n&#39;</span>
+</pre>
+
+
+<p>To run it, first open <a href="about:config">about:config</a>, and make sure the
+<code>devtools.chrome.enabled</code> preference is set to <code>true</code> (double-click it if it
+isn’t, and it should switch automatically), then go to the <code>Tools » Web
+Developer » Scratchpad</code> menu item, which should open up a small new window with
+some javascript comments in it.  While that window is focused, click on
+<code>Environment » Browser</code>, to make sure that you’re running the code in the
+browser’s chrome (instead of in the page’s content).  Paste the code in, and
+click <code>Execute » Display</code>.</p>
+<p>That should result in a bunch of code in grey surrounded by <code>/*</code> and <code>*/</code> that
+looks like:</p>
+<pre class="code literal-block"><span></span><span class="kd">var</span> <span class="nx">tabs</span> <span class="o">=</span> <span class="p">[</span>
+<span class="s2">&quot;http://weblog.latte.ca/blake&quot;</span><span class="p">,</span>
+<span class="s2">&quot;http://breakingtheegg.tumblr.com/&quot;</span><span class="p">,</span>
+<span class="p">];</span>
+<span class="k">for</span> <span class="p">(</span><span class="kd">var</span> <span class="nx">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="nx">i</span> <span class="o">&lt;</span> <span class="nx">tabs</span><span class="p">.</span><span class="nx">length</span><span class="p">;</span> <span class="nx">i</span><span class="o">++</span> <span class="p">)</span> <span class="p">{</span>
+  <span class="nx">gBrowser</span><span class="p">.</span><span class="nx">addTab</span><span class="p">(</span><span class="nx">tabs</span><span class="p">[</span><span class="nx">i</span><span class="p">]);</span>
+<span class="p">}</span>
+</pre>
+
+
+<p>Copy that out of the scratchpad into your favourite editor, remove the <code>/*</code> and
+<code>*/</code>, and run the profile reset.</p>
+<p>Once you’re done resetting your profile, you’ll need to change the
+<code>devtools.chrome.enabled</code> preference to <code>true</code> again, and then re-open the
+Scratchpad, paste the new code you saved back in to it, click on the
+<code>Execute » Run</code> menu item, and <strong>shazam</strong>!  All your tabs should be back
+(although they won’t be in their original tab groups.  If anyone needs me to
+figure out how to do that, just let me know, and I’ll give it a try).</p>

@@ -1,0 +1,43 @@
+<p>While I was at the Toronto iPhone Tech Talks, I attended the OpenGL ES
+sessions by <a href="http://twitter.com/funnest">Allan Schaffer</a>.  Seeing the
+“Shock” demo was really inspiring, and caused me to want to try my
+hand at some simple OpenGL Shader demos.</p>
+<p>The base XCode OpenGL ES Application template sets you up pretty
+nicely for some simple experimentation, the only things that gave me
+any trouble were:</p>
+<ol>
+<li>
+<p>remembering to set the identifier to ca.latte.whatever so that I
+could build, and</p>
+</li>
+<li>
+<p>remembering that the OpenGL ES 2.0 path only ran on the device, so
+of course none of the changes I was making were showing up on the
+simulator<sup id="fnref:1"><a class="footnote-ref" href="#fn:1" rel="footnote">1</a></sup>, and finally</p>
+</li>
+<li>
+<p>Figuring out that depth was position.w, and not position.z.  (Did I
+mention that I’m a bit of a newbie at this?)</p>
+</li>
+</ol>
+<p>Anyways, after it was all up and running, I made the x and w
+co-ordinates vary on a different period than the y co-ordinate, and
+now the square moves around in 3 dimensions in a pleasing (to me) way.</p>
+<p><img alt="A pretty square." src="/images/blake/iTouch/OpenGL/1-square.jpg" title="A square, that’s all." /></p>
+<p>Since this is intended for me to play around with shaders, I’m not
+going to bother updating the OpenGL ES 1.0 code path, but if you’ve
+got an iPhone 3GS, or a 3rd generation iTouch, feel free to grab the
+code at <a href="http://bitbucket.org/bwinton/opengl/">BitBucket</a>, and play
+around.  I'll be adding branches and tags and keeping it updated as I
+play with new stuff.</p>
+<div class="footnote">
+<hr />
+<ol>
+<li id="fn:1">
+<p><a href="http://twitter.com/runmad">Rune</a> let me know that Open GL ES
+2.0 is supported in the latest version of the simulator.  I guess I
+must have been testing with an earlier version of the SDK, or XCode,
+or something.&#160;<a class="footnote-backref" href="#fnref:1" rev="footnote" title="Jump back to footnote 1 in the text">&#8617;</a></p>
+</li>
+</ol>
+</div>

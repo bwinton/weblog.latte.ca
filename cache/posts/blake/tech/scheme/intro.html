@@ -1,0 +1,74 @@
+<p>(Posted to the LispMe@YahooGroups.com list)
+Hello.</p>
+<p>Let me start with a brief introduction.  My name is Blake Winton,
+and I’ve owned a PalmPilot since back when they were called PalmPilots
+and made by USRobotics.  I’ve been programming for them for years,
+mostly in C and C++, with brief excursions into Lua, Python, and
+Forth.  My day job consists mainly of Java (J2EE), with some Python
+when I get the chance, and some JavaScript when I shouldn’t be using
+Python.  On my off hours, I read a lot about other languages (recently
+Objective C, OCaml, and Ruby).  Now I want to learn Scheme, and
+thought that LispMe would be a good way to do it.  I’m finding some
+things are tripping me up, mainly due to my attempts to transfer my
+knowledge from other areas into LispMe.  (One piece I miss in
+particular are something like Python’s List Comprehensions, which I
+believe they sole from Haskell.)</p>
+<p>So, I’m going through SICP, but while I’m doing that, I thought I
+would try to do a "Real World" (tm) task, and write a program that
+drew the Serpinsky Triangle, using an iterative, random, approach,
+(Details available upon request,) and I’ve run into some small
+questions about best practices, or basically how to do some simple
+things.  In return for this help, I’ll create a sort of Tutorial
+document for LispMe that will be able to help other people get up to
+speed.  (If such a document already exists, please, someone, point me
+to it!)</p>
+<p>So, here’s what I’ve got so far.  It doesn’t work at all, but it’s
+starting to take shape.</p>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11</pre></div></td><td class="code"><pre class="code literal-block"><span></span><span class="c1">; Triangle</span>
+<span class="p">(</span><span class="k">define </span><span class="nv">points</span>
+  <span class="o">#</span><span class="p">((</span><span class="mi">80</span><span class="o">,</span><span class="mi">10</span><span class="p">)</span> <span class="p">(</span><span class="mi">10</span><span class="o">,</span><span class="mi">150</span><span class="p">)</span> <span class="p">(</span><span class="mi">150</span><span class="o">,</span><span class="mi">150</span><span class="p">)))</span>
+
+<span class="p">(</span><span class="k">define </span><span class="p">(</span><span class="nf">next-point</span> <span class="nv">p</span><span class="p">)</span> <span class="p">(</span>
+  <span class="p">(</span><span class="nb">vector-ref </span><span class="nv">points</span>
+    <span class="p">(</span><span class="nf">random</span> <span class="p">(</span><span class="nb">vector-length </span><span class="nv">points</span><span class="p">)))</span>
+  <span class="p">))</span>
+
+<span class="p">(</span><span class="k">define </span><span class="nv">current-point</span> <span class="o">&#39;</span><span class="p">(</span><span class="mi">80</span> <span class="mi">80</span><span class="p">)</span> <span class="p">)</span>
+<span class="p">(</span><span class="k">define </span><span class="p">(</span><span class="nf">halfway</span> <span class="nv">a</span> <span class="nv">b</span><span class="p">)</span> <span class="p">(</span><span class="nb">/ </span><span class="p">(</span><span class="nb">+ </span><span class="nv">a</span> <span class="nv">b</span><span class="p">)</span> <span class="mi">2</span><span class="p">))</span>
+</pre>
+</td></tr></table>
+
+<p>And we’re done.  Any comments on it, from spacing to indentation to
+whether I should use a vector or a list for the points themselves,
+would be greatly appreciated.  If it matters, I plan on extending the
+point to include red, green, and blue data as well, possibly with
+accessors, looking something like this:</p>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3
+4
+5
+6</pre></div></td><td class="code"><pre class="code literal-block"><span></span><span class="p">(</span><span class="k">define </span><span class="nv">current-point</span> <span class="o">&#39;</span><span class="p">(</span><span class="mi">80</span> <span class="mi">80</span> <span class="mi">255</span> <span class="mi">0</span> <span class="mi">0</span><span class="p">))</span>
+<span class="p">(</span><span class="k">define </span><span class="p">(</span><span class="nf">x</span> <span class="nv">pt</span><span class="p">)</span> <span class="p">(</span><span class="nb">car </span><span class="nv">pt</span><span class="p">))</span>
+<span class="p">(</span><span class="k">define </span><span class="p">(</span><span class="nf">y</span> <span class="nv">pt</span><span class="p">)</span> <span class="p">(</span><span class="nb">cadr </span><span class="nv">pt</span><span class="p">))</span>
+<span class="p">(</span><span class="k">define </span><span class="p">(</span><span class="nf">r</span> <span class="nv">pt</span><span class="p">)</span> <span class="p">(</span><span class="nb">caddr </span><span class="nv">pt</span><span class="p">))</span>
+<span class="p">(</span><span class="k">define </span><span class="p">(</span><span class="nf">g</span> <span class="nv">pt</span><span class="p">)</span> <span class="p">(</span><span class="nb">cadddr </span><span class="nv">pt</span><span class="p">))</span>
+<span class="p">(</span><span class="k">define </span><span class="p">(</span><span class="nf">b</span> <span class="nv">pt</span><span class="p">)</span> <span class="p">(</span><span class="nf">caddddr</span> <span class="nv">pt</span><span class="p">))</span>
+</pre>
+</td></tr></table>
+
+<p>Oh, and I suspect I’ll be blogging my progress at <a
+href="http://weblog.latte.ca/blake/tech/scheme/">http://weblog.latte.ca/blake/tech/scheme/</a>
+(Nothing exists there at the moment, though.  Give it time.)</p>
+<p>Thanks,<br />
+Blake.</p>

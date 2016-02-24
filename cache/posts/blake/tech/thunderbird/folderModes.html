@@ -1,0 +1,34 @@
+<p>Earlier today, I was asked by <a href="http://www.andreasn.se/blog/">Andreas Nilsson</a> to give him a hand with a <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=535021">folder pane header
+bug</a> he was trying to
+fix.  In the middle of digging around in the code, I thought “I should
+really write this down, so that I can understand it later.”, and so here it
+is.</p>
+<p>The main place we’ll need to change is in <a href="http://mxr.mozilla.org/comm-central/source/mail/base/content/folderPane.js#55">this object</a>.</p>
+<p>We start in the <a href="http://mxr.mozilla.org/comm-central/source/mail/base/content/folderPane.js#60"><tt>load</tt></a>
+method, which calls <a href="http://mxr.mozilla.org/comm-central/source/mail/base/content/folderPane.js#67"><tt>registerMode</tt></a>,
+to add the mode with its localized name.  There is also a <a href="http://mxr.mozilla.org/comm-central/source/mail/base/content/folderPane.js#984">default list of
+modes</a>,
+which will come into play later.</p>
+<p>When the user chooses to <a href="http://mxr.mozilla.org/comm-central/source/mail/base/content/folderPane.js#200">cycle the mode</a>,
+it calls the <a href="http://mxr.mozilla.org/comm-central/source/mail/base/content/folderPane.js#250">setter for <tt>mode</tt></a>,
+passing it the modename, which comes from the <tt>_modeNames</tt> list
+(which contains both the defaults and any newly-registered modes).  Then,
+in the setter, if the mode is a default mode, it will fail <a href="http://mxr.mozilla.org/comm-central/source/mail/base/content/folderPane.js#254">the if-test</a>,
+and get the localized name from the “bundle_messenger” string bundle.  If
+it’s a newly-registered mode, they will have passed in a localized name
+which we will have stored in <a href="http://mxr.mozilla.org/comm-central/source/mail/base/content/folderPane.js#178"><tt>this._modeDisplayNames</tt></a>,
+and so we will <a href="http://mxr.mozilla.org/comm-central/source/mail/base/content/folderPane.js#255">use that</a>.</p>
+<p>The point of the bug is to switch the label-and-two-buttons to a dropdown
+menu, so at this point I think we should start with an empty
+<tt>menulist</tt> in the XUL, and in the <tt>load</tt> method add
+<tt>menuitems</tt> corresponding to the values in the <tt>_modeNames</tt>
+array.  Then, in the <tt>registerMode</tt> and <a href="http://mxr.mozilla.org/comm-central/source/mail/base/content/folderPane.js#187"><tt>unregisterMode</tt></a>
+methods, we should add and remove new menuitems, which I’m hoping will just
+automatically show up in the dropdown.  Finally, we need to change the
+setter for <tt>mode</tt> to not calculate the new name, but just select the
+appropriate menuitem set the <tt>mode</tt> attribute on the
+<tt>_treeElement</tt>, and call <tt>_rebuild()</tt>.  At that point, I
+think we’re done, but only time will tell.</p>
+<p><small>Okay, so this was really posted on Dec 22<sup>nd</sup>, but I wanted
+to back-date it so as not to bump Amy’s “Welcome” post off the top a mere
+day after she posted it.</small></p>

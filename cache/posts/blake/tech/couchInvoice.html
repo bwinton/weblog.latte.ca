@@ -1,0 +1,544 @@
+<p>A while ago I (and the rest of the company I worked for) was laid off, so I
+was forcibly thrust into the world of consulting.  It’s been quite a
+change, keeping track of my hours and sending out invoices for the work I
+do.  And it’s that second point that I want to talk a little more about.</p>
+<p>Perhaps I’m too picky, but there seemed to be a fatal flaw with all the
+online invoicing tools I tried.  One didn’t allow enough clients for me on
+the free plan.  (Yes, I am that cheap, especially when I’ve just been laid
+off.)  Another would have allowed the client to dispute the invoice.  I
+mean, really.  This is the invoice.  You don’t get to dispute it.  Or at
+least, I don’t particularly want to make it easy for you.  So I ended up
+using an <a href="http://1timetracking.com/">online time tracker</a>, and left the
+invoice creation step until later.</p>
+<p>Well, later rolled around, and I really kinda wanted to get paid, so I
+downloaded a report of my hours <a href="http://1timetracking.com/#feature_tour">as a csv file</a>, and whipped up a quick Python
+script to parse it, and import it into a locally running copy of CouchDB.</p>
+<p>The python script looked like this:</p>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36</pre></div></td><td class="code"><pre class="code literal-block"><span></span><span class="kn">import</span> <span class="nn">couchdb.client</span>
+<span class="kn">import</span> <span class="nn">csv</span>
+<span class="kn">import</span> <span class="nn">path</span>
+
+<span class="n">server</span> <span class="o">=</span> <span class="n">couchdb</span><span class="o">.</span><span class="n">client</span><span class="o">.</span><span class="n">Server</span><span class="p">(</span><span class="s1">&#39;http://localhost:5984/&#39;</span><span class="p">)</span>
+<span class="k">if</span> <span class="s1">&#39;timelog&#39;</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">server</span><span class="p">:</span>
+    <span class="n">db</span> <span class="o">=</span> <span class="n">server</span><span class="o">.</span><span class="n">create</span><span class="p">(</span><span class="s1">&#39;timelog&#39;</span><span class="p">)</span>
+
+<span class="n">db</span> <span class="o">=</span> <span class="n">server</span><span class="p">[</span><span class="s1">&#39;timelog&#39;</span><span class="p">]</span>
+<span class="k">print</span> <span class="n">db</span>
+
+<span class="k">def</span> <span class="nf">cleanup</span><span class="p">():</span>
+    <span class="c1"># Clear out old rows.</span>
+    <span class="k">for</span> <span class="n">row</span> <span class="ow">in</span> <span class="n">db</span><span class="p">:</span>
+        <span class="k">if</span> <span class="ow">not</span> <span class="n">row</span><span class="o">.</span><span class="n">startswith</span><span class="p">(</span><span class="s2">&quot;_&quot;</span><span class="p">):</span>
+            <span class="k">del</span> <span class="n">db</span><span class="p">[</span><span class="n">row</span><span class="p">]</span>
+
+<span class="k">def</span> <span class="nf">input</span><span class="p">(</span> <span class="n">docName</span> <span class="p">):</span>
+    <span class="k">print</span> <span class="n">docName</span>
+    <span class="nb">input</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span> <span class="n">docName</span> <span class="p">)</span>
+    <span class="n">reader</span> <span class="o">=</span> <span class="n">csv</span><span class="o">.</span><span class="n">DictReader</span><span class="p">(</span> <span class="nb">input</span> <span class="p">)</span>
+    <span class="n">i</span> <span class="o">=</span> <span class="mi">1</span>
+    <span class="k">for</span> <span class="n">row</span> <span class="ow">in</span> <span class="n">reader</span><span class="p">:</span>
+        <span class="n">row</span><span class="p">[</span><span class="s1">&#39;Import Doc Name&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">docName</span>
+        <span class="n">row</span><span class="p">[</span><span class="s1">&#39;Import Doc Row&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">i</span>
+        <span class="k">if</span> <span class="s1">&#39;Client Name&#39;</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">row</span><span class="p">:</span>
+          <span class="n">row</span><span class="p">[</span><span class="s1">&#39;Client Name&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&quot;Client1&quot;</span>
+        <span class="n">key</span> <span class="o">=</span> <span class="s2">&quot;</span><span class="si">%s</span><span class="s2">_</span><span class="si">%03d</span><span class="s2">&quot;</span> <span class="o">%</span> <span class="p">(</span><span class="n">docName</span><span class="o">.</span><span class="n">name</span><span class="p">,</span> <span class="n">i</span><span class="p">)</span>
+        <span class="k">print</span> <span class="s2">&quot;  &quot;</span><span class="p">,</span> <span class="n">key</span>
+        <span class="n">db</span><span class="p">[</span><span class="n">key</span><span class="p">]</span> <span class="o">=</span> <span class="n">row</span>
+        <span class="n">i</span> <span class="o">+=</span> <span class="mi">1</span>
+
+<span class="n">cleanup</span><span class="p">()</span>
+<span class="n">base</span> <span class="o">=</span> <span class="n">path</span><span class="o">.</span><span class="n">path</span><span class="p">(</span><span class="s2">&quot;/Users/bwinton/Documents/Client1&quot;</span><span class="p">)</span>
+<span class="k">for</span> <span class="nb">file</span> <span class="ow">in</span> <span class="n">base</span><span class="o">.</span><span class="n">files</span><span class="p">(</span><span class="s2">&quot;*.csv&quot;</span><span class="p">):</span>
+    <span class="nb">input</span><span class="p">(</span> <span class="nb">file</span> <span class="p">)</span>
+</pre>
+</td></tr></table>
+
+<p>Pretty easy, eh?  After that, I had to create a couple of CouchDB views:</p>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53</pre></div></td><td class="code"><pre class="code literal-block"><span></span><span class="c1">// hoursPerDay</span>
+<span class="nx">map</span><span class="o">=</span><span class="kd">function</span><span class="p">(</span><span class="nx">doc</span><span class="p">)</span> <span class="p">{</span>
+  <span class="nx">key</span> <span class="o">=</span> <span class="p">[</span>
+    <span class="nx">doc</span><span class="p">[</span><span class="s1">&#39;Employee name&#39;</span><span class="p">],</span>
+    <span class="nx">doc</span><span class="p">[</span><span class="s1">&#39;Client Name&#39;</span><span class="p">],</span>
+    <span class="nx">doc</span><span class="p">[</span><span class="s1">&#39;Date of work&#39;</span><span class="p">],</span> 
+  <span class="p">];</span>
+  <span class="nx">emit</span><span class="p">(</span> <span class="nx">key</span><span class="p">,</span> <span class="nx">doc</span> <span class="p">);</span>
+<span class="p">};</span>
+<span class="nx">reduce</span><span class="o">=</span><span class="kd">function</span> <span class="p">(</span><span class="nx">tag</span><span class="p">,</span> <span class="nx">values</span><span class="p">)</span> <span class="p">{</span>
+  <span class="nx">sum</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span>
+  <span class="nx">temp</span> <span class="o">=</span> <span class="p">[]</span>
+  <span class="k">for</span><span class="p">(</span> <span class="kd">var</span> <span class="nx">i</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span> <span class="nx">i</span><span class="o">&lt;</span><span class="nx">values</span><span class="p">.</span><span class="nx">length</span><span class="p">;</span> <span class="nx">i</span><span class="o">++</span> <span class="p">)</span> <span class="p">{</span>
+    <span class="nx">sum</span> <span class="o">+=</span> <span class="nb">parseFloat</span><span class="p">(</span><span class="nx">values</span><span class="p">[</span><span class="nx">i</span><span class="p">][</span><span class="s1">&#39;Time in hours&#39;</span><span class="p">]);</span>
+    <span class="nx">temp</span><span class="p">[</span><span class="nx">i</span><span class="p">]</span> <span class="o">=</span> <span class="p">{</span>
+      <span class="s1">&#39;Order&#39;</span><span class="o">:</span><span class="nx">values</span><span class="p">[</span><span class="nx">i</span><span class="p">][</span><span class="s1">&#39;Import Doc Row&#39;</span><span class="p">],</span>
+      <span class="s1">&#39;Description&#39;</span><span class="o">:</span><span class="nx">values</span><span class="p">[</span><span class="nx">i</span><span class="p">][</span><span class="s1">&#39;Description&#39;</span><span class="p">],</span>
+      <span class="s1">&#39;Time&#39;</span><span class="o">:</span><span class="nx">values</span><span class="p">[</span><span class="nx">i</span><span class="p">][</span><span class="s1">&#39;Time in hours&#39;</span><span class="p">],</span>
+      <span class="s1">&#39;Type&#39;</span><span class="o">:</span><span class="nx">values</span><span class="p">[</span><span class="nx">i</span><span class="p">][</span><span class="s1">&#39;Activity Type&#39;</span><span class="p">],</span>
+    <span class="p">}</span>
+  <span class="p">}</span>
+  <span class="nx">temp</span> <span class="o">=</span> <span class="nx">temp</span><span class="p">.</span><span class="nx">sort</span><span class="p">(</span><span class="kd">function</span><span class="p">(</span><span class="nx">a</span><span class="p">,</span><span class="nx">b</span><span class="p">)</span> <span class="p">{</span>
+    <span class="nx">a</span> <span class="o">=</span> <span class="nb">parseFloat</span><span class="p">(</span><span class="nx">a</span><span class="p">[</span><span class="s1">&#39;Order&#39;</span><span class="p">])</span>
+    <span class="nx">b</span> <span class="o">=</span> <span class="nb">parseFloat</span><span class="p">(</span><span class="nx">b</span><span class="p">[</span><span class="s1">&#39;Order&#39;</span><span class="p">])</span>
+    <span class="k">return</span> <span class="nx">a</span> <span class="o">-</span> <span class="nx">b</span>
+  <span class="p">})</span>
+  <span class="k">return</span> <span class="p">[</span><span class="nx">sum</span><span class="p">,</span> <span class="nx">temp</span><span class="p">];</span>
+<span class="p">};</span>
+
+<span class="c1">// totalHours</span>
+<span class="c1">// This view is just to save me re-calculating this value every time</span>
+<span class="c1">// I call the page, because it should only change when we add a new</span>
+<span class="c1">// document.</span>
+<span class="nx">map</span><span class="o">=</span><span class="kd">function</span><span class="p">(</span><span class="nx">doc</span><span class="p">)</span> <span class="p">{</span>
+  <span class="nx">key</span> <span class="o">=</span> <span class="p">[</span>
+    <span class="nx">doc</span><span class="p">[</span><span class="s1">&#39;Employee name&#39;</span><span class="p">],</span>
+    <span class="nx">doc</span><span class="p">[</span><span class="s1">&#39;Client Name&#39;</span><span class="p">],</span>
+    <span class="nx">doc</span><span class="p">[</span><span class="s1">&#39;Date of work&#39;</span><span class="p">],</span> 
+  <span class="p">];</span>
+  <span class="nx">emit</span><span class="p">(</span> <span class="nx">key</span><span class="p">,</span> <span class="nb">parseFloat</span><span class="p">(</span><span class="nx">doc</span><span class="p">[</span><span class="s1">&#39;Time in hours&#39;</span><span class="p">])</span> <span class="p">);</span>
+<span class="p">};</span>
+<span class="nx">reduce</span><span class="o">=</span><span class="kd">function</span><span class="p">(</span><span class="nx">keys</span><span class="p">,</span> <span class="nx">values</span><span class="p">,</span> <span class="nx">rereduce</span><span class="p">)</span> <span class="p">{</span>
+  <span class="kd">function</span> <span class="nx">sum</span><span class="p">(</span> <span class="nx">values</span> <span class="p">)</span>
+  <span class="p">{</span>
+    <span class="nx">retval</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+    <span class="k">for</span> <span class="p">(</span><span class="nx">i</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span> <span class="nx">i</span><span class="o">&lt;</span><span class="nx">values</span><span class="p">.</span><span class="nx">length</span><span class="p">;</span> <span class="nx">i</span><span class="o">++</span><span class="p">)</span>
+    <span class="p">{</span>
+      <span class="nx">retval</span> <span class="o">+=</span> <span class="nx">values</span><span class="p">[</span><span class="nx">i</span><span class="p">];</span>
+    <span class="p">}</span>
+    <span class="k">return</span> <span class="nx">retval</span><span class="p">;</span>
+  <span class="p">}</span>
+  <span class="k">return</span> <span class="nx">sum</span><span class="p">(</span><span class="nx">values</span><span class="p">);</span>
+<span class="p">};</span>
+</pre>
+</td></tr></table>
+
+<p>it was a quick snippet of HTML:</p>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35</pre></div></td><td class="code"><pre class="code literal-block"><span></span><span class="p">&lt;</span><span class="nt">html</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">head</span><span class="p">&gt;&lt;</span><span class="nt">title</span><span class="p">&gt;</span>Time Log<span class="p">&lt;/</span><span class="nt">title</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">link</span> <span class="na">rel</span><span class="o">=</span><span class="s">&quot;stylesheet&quot;</span> <span class="na">href</span><span class="o">=</span><span class="s">&quot;style/blueprint.css&quot;</span> <span class="na">type</span><span class="o">=</span><span class="s">&quot;text/css&quot;</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">script</span><span class="p">&gt;</span>
+      <span class="c1">// Set up some variables.</span>
+      <span class="nx">months</span> <span class="o">=</span> <span class="p">[</span> <span class="s2">&quot;2009-02&quot;</span> <span class="p">]</span>
+      <span class="nx">users</span> <span class="o">=</span> <span class="p">{</span>
+        <span class="s2">&quot;Blake Winton&quot;</span><span class="o">:</span><span class="p">{</span>
+          <span class="nx">invoiceDates</span> <span class="o">:</span> <span class="p">[</span> <span class="s2">&quot;March 1st, 2009.&quot;</span><span class="p">],</span>
+          <span class="nx">address</span> <span class="o">:</span> <span class="p">[</span><span class="s2">&quot;16 Forman Avenue&quot;</span><span class="p">,</span>
+                     <span class="s2">&quot;Toronto, ON, M4S 2R2&quot;</span><span class="p">,</span>
+                     <span class="s2">&quot;bwinton@latte.ca&quot;</span><span class="p">]</span>
+        <span class="p">}};</span>
+    <span class="p">&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">script</span> <span class="na">src</span><span class="o">=</span><span class="s">&quot;script/bwTimesheet.js&quot;</span><span class="p">&gt;&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
+  <span class="p">&lt;/</span><span class="nt">head</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">body</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">p</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;prepend-1&quot;</span><span class="p">&gt;&lt;</span><span class="nt">b</span><span class="p">&gt;</span>Blake Winton<span class="p">&lt;/</span><span class="nt">b</span><span class="p">&gt;&lt;</span><span class="nt">br</span><span class="p">/&gt;</span>
+    16 Forman Avenue<span class="p">&lt;</span><span class="nt">br</span><span class="p">/&gt;</span>
+    Toronto, ON, M4S 2R2<span class="p">&lt;</span><span class="nt">br</span><span class="p">/&gt;</span>
+    bwinton@latte.ca<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">p</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;prepend-1&quot;</span><span class="p">&gt;&lt;</span><span class="nt">b</span><span class="p">&gt;</span>Invoice Number:<span class="p">&lt;/</span><span class="nt">b</span><span class="p">&gt;</span>
+      XX-<span class="p">&lt;</span><span class="nt">span</span> <span class="na">id</span><span class="o">=</span><span class="s">&quot;invoiceNum&quot;</span><span class="p">&gt;</span>000<span class="p">&lt;/</span><span class="nt">span</span><span class="p">&gt;&lt;</span><span class="nt">br</span><span class="p">/&gt;</span>
+    <span class="p">&lt;</span><span class="nt">b</span><span class="p">&gt;</span>Date:<span class="p">&lt;/</span><span class="nt">b</span><span class="p">&gt;</span> <span class="p">&lt;</span><span class="nt">span</span> <span class="na">id</span><span class="o">=</span><span class="s">&quot;invoiceDate&quot;</span><span class="p">&gt;</span>March 5th, 1973.<span class="p">&lt;/</span><span class="nt">span</span><span class="p">&gt;&lt;</span><span class="nt">br</span><span class="p">/&gt;&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+
+    <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;prepend-1 span-1&quot;</span><span class="p">&gt;&lt;</span><span class="nt">b</span><span class="p">&gt;</span>To:<span class="p">&lt;/</span><span class="nt">b</span><span class="p">&gt;&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;span-22 last&quot;</span><span class="p">&gt;</span>
+    Client Name<span class="p">&lt;</span><span class="nt">br</span><span class="p">/&gt;</span>
+    16 Client Address<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">p</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;span-24&quot;</span><span class="p">&gt;</span><span class="ni">&amp;nbsp;</span><span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;&lt;</span><span class="nt">span</span> <span class="na">id</span><span class="o">=</span><span class="s">&quot;timesheet&quot;</span><span class="p">&gt;</span>Timesheet loading...<span class="p">&lt;/</span><span class="nt">span</span><span class="p">&gt;</span>
+      <span class="p">&lt;</span><span class="nt">span</span> <span class="na">id</span><span class="o">=</span><span class="s">&quot;summary&quot;</span><span class="p">&gt;</span>Summary loading...<span class="p">&lt;/</span><span class="nt">span</span><span class="p">&gt;</span>
+    <span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+  <span class="p">&lt;/</span><span class="nt">body</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">html</span><span class="p">&gt;</span>
+</pre>
+</td></tr></table>
+
+<p>and Javascript:</p>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>  1
+  2
+  3
+  4
+  5
+  6
+  7
+  8
+  9
+ 10
+ 11
+ 12
+ 13
+ 14
+ 15
+ 16
+ 17
+ 18
+ 19
+ 20
+ 21
+ 22
+ 23
+ 24
+ 25
+ 26
+ 27
+ 28
+ 29
+ 30
+ 31
+ 32
+ 33
+ 34
+ 35
+ 36
+ 37
+ 38
+ 39
+ 40
+ 41
+ 42
+ 43
+ 44
+ 45
+ 46
+ 47
+ 48
+ 49
+ 50
+ 51
+ 52
+ 53
+ 54
+ 55
+ 56
+ 57
+ 58
+ 59
+ 60
+ 61
+ 62
+ 63
+ 64
+ 65
+ 66
+ 67
+ 68
+ 69
+ 70
+ 71
+ 72
+ 73
+ 74
+ 75
+ 76
+ 77
+ 78
+ 79
+ 80
+ 81
+ 82
+ 83
+ 84
+ 85
+ 86
+ 87
+ 88
+ 89
+ 90
+ 91
+ 92
+ 93
+ 94
+ 95
+ 96
+ 97
+ 98
+ 99
+100
+101
+102
+103
+104
+105
+106
+107
+108
+109
+110
+111
+112
+113
+114
+115
+116
+117
+118
+119
+120
+121
+122
+123
+124
+125
+126
+127
+128
+129
+130
+131</pre></div></td><td class="code"><pre class="code literal-block"><span></span><span class="c1">// Get a default month, if one wasn’t passed in.</span>
+<span class="nx">month</span> <span class="o">=</span> <span class="nx">$</span><span class="p">.</span><span class="nx">url</span><span class="p">.</span><span class="nx">param</span><span class="p">(</span><span class="s1">&#39;month&#39;</span><span class="p">)</span>
+<span class="k">if</span> <span class="p">(</span><span class="k">typeof</span><span class="p">(</span><span class="nx">month</span><span class="p">)</span> <span class="o">==</span> <span class="s1">&#39;undefined&#39;</span><span class="p">)</span>
+<span class="p">{</span>
+  <span class="nx">month</span> <span class="o">=</span> <span class="s2">&quot;0&quot;</span><span class="p">;</span>
+<span class="p">}</span>
+<span class="nx">month</span> <span class="o">=</span> <span class="nb">parseInt</span><span class="p">(</span><span class="nx">month</span><span class="p">)</span>
+<span class="k">if</span> <span class="p">(</span> <span class="nx">month</span> <span class="o">&lt;</span> <span class="mi">0</span> <span class="o">||</span> <span class="nx">month</span> <span class="o">&gt;=</span> <span class="nx">months</span><span class="p">.</span><span class="nx">length</span> <span class="p">)</span>
+<span class="p">{</span>
+  <span class="nx">month</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+<span class="p">}</span>
+<span class="nx">invoiceNumInt</span> <span class="o">=</span> <span class="nx">month</span><span class="o">+</span><span class="mi">1</span><span class="p">;</span>
+<span class="nx">month</span> <span class="o">=</span> <span class="nx">months</span><span class="p">[</span><span class="nx">month</span><span class="p">];</span>
+
+<span class="c1">// Get a default user, if one wasn’t passed in.</span>
+<span class="c1">// Yeah, I’ve defaulted it to me.  ;)</span>
+<span class="nx">user</span> <span class="o">=</span> <span class="nx">$</span><span class="p">.</span><span class="nx">url</span><span class="p">.</span><span class="nx">param</span><span class="p">(</span><span class="s1">&#39;user&#39;</span><span class="p">)</span>
+<span class="k">if</span> <span class="p">(</span><span class="k">typeof</span><span class="p">(</span><span class="nx">user</span><span class="p">)</span> <span class="o">==</span> <span class="s1">&#39;undefined&#39;</span><span class="p">)</span>
+<span class="p">{</span>
+  <span class="nx">user</span> <span class="o">=</span> <span class="s2">&quot;Blake Winton&quot;</span><span class="p">;</span>
+<span class="p">}</span>
+<span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="p">(</span><span class="nx">user</span> <span class="k">in</span> <span class="nx">users</span><span class="p">))</span>
+<span class="p">{</span>
+  <span class="nx">user</span> <span class="o">=</span> <span class="s2">&quot;Blake Winton&quot;</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="c1">// Figure out when to start and end the invoice.</span>
+<span class="nx">invoiceDates</span> <span class="o">=</span> <span class="nx">users</span><span class="p">[</span><span class="nx">user</span><span class="p">].</span><span class="nx">invoiceDates</span><span class="p">;</span>
+<span class="nx">invoiceDateStr</span> <span class="o">=</span> <span class="nx">invoiceDates</span><span class="p">[</span><span class="nx">invoiceNumInt</span><span class="o">-</span><span class="mi">1</span><span class="p">];</span>
+<span class="nx">start</span> <span class="o">=</span> <span class="p">[</span><span class="nx">user</span><span class="p">,</span> <span class="nx">client</span><span class="p">,</span> <span class="nx">month</span><span class="o">+</span><span class="s2">&quot;-01&quot;</span><span class="p">];</span>
+<span class="nx">end</span> <span class="o">=</span> <span class="p">[</span><span class="nx">user</span><span class="p">,</span> <span class="nx">client</span><span class="p">,</span> <span class="nx">month</span><span class="o">+</span><span class="s2">&quot;-31&quot;</span><span class="p">];</span>
+
+<span class="c1">// Why, oh why, doesn’t Javascript have printf?</span>
+<span class="kd">function</span> <span class="nx">zeroPad</span><span class="p">(</span><span class="nx">num</span><span class="p">,</span><span class="nx">count</span><span class="p">)</span>
+<span class="p">{</span>
+  <span class="kd">var</span> <span class="nx">numZeropad</span> <span class="o">=</span> <span class="nx">num</span> <span class="o">+</span> <span class="s1">&#39;&#39;</span><span class="p">;</span>
+  <span class="k">while</span><span class="p">(</span><span class="nx">numZeropad</span><span class="p">.</span><span class="nx">length</span> <span class="o">&lt;</span> <span class="nx">count</span><span class="p">)</span>
+  <span class="p">{</span>
+    <span class="nx">numZeropad</span> <span class="o">=</span> <span class="s2">&quot;0&quot;</span> <span class="o">+</span> <span class="nx">numZeropad</span><span class="p">;</span>
+  <span class="p">}</span>
+  <span class="k">return</span> <span class="nx">numZeropad</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="c1">// Update the header, with the address, invoice number, and date.</span>
+<span class="kd">function</span> <span class="nx">updateHeader</span><span class="p">()</span> <span class="p">{</span>
+  <span class="kd">var</span> <span class="nx">address</span> <span class="o">=</span> <span class="nx">$</span><span class="p">(</span><span class="s2">&quot;#address&quot;</span><span class="p">).</span><span class="nx">empty</span><span class="p">();</span>
+  <span class="nx">address</span><span class="p">.</span><span class="nx">append</span><span class="p">(</span> <span class="s2">&quot;&lt;b&gt;&quot;</span><span class="o">+</span><span class="nx">user</span><span class="o">+</span><span class="s2">&quot;&lt;/b&gt;&lt;br/&gt;&quot;</span> <span class="p">);</span>
+  <span class="k">for</span> <span class="p">(</span><span class="kd">var</span> <span class="nx">i</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span> <span class="nx">i</span><span class="o">&lt;</span><span class="nx">users</span><span class="p">[</span><span class="nx">user</span><span class="p">].</span><span class="nx">address</span><span class="p">.</span><span class="nx">length</span><span class="p">;</span> <span class="nx">i</span><span class="o">++</span><span class="p">)</span>
+  <span class="p">{</span>
+    <span class="kd">var</span> <span class="nx">line</span> <span class="o">=</span> <span class="nx">users</span><span class="p">[</span><span class="nx">user</span><span class="p">].</span><span class="nx">address</span><span class="p">[</span><span class="nx">i</span><span class="p">];</span>
+    <span class="nx">address</span><span class="p">.</span><span class="nx">append</span><span class="p">(</span> <span class="nx">line</span> <span class="o">+</span> <span class="s2">&quot;&lt;br/&gt;&quot;</span> <span class="p">);</span>
+  <span class="p">}</span>
+
+  <span class="kd">var</span> <span class="nx">invoiceNum</span> <span class="o">=</span> <span class="nx">$</span><span class="p">(</span><span class="s2">&quot;#invoiceNum&quot;</span><span class="p">).</span><span class="nx">empty</span><span class="p">();</span>
+  <span class="nx">invoiceNum</span><span class="p">.</span><span class="nx">append</span><span class="p">(</span> <span class="nx">zeroPad</span><span class="p">(</span> <span class="nx">invoiceNumInt</span><span class="p">,</span> <span class="mi">3</span> <span class="p">));</span>
+
+  <span class="kd">var</span> <span class="nx">invoiceDate</span> <span class="o">=</span> <span class="nx">$</span><span class="p">(</span><span class="s2">&quot;#invoiceDate&quot;</span><span class="p">).</span><span class="nx">empty</span><span class="p">();</span>
+  <span class="nx">invoiceDate</span><span class="p">.</span><span class="nx">append</span><span class="p">(</span> <span class="nx">invoiceDateStr</span> <span class="p">);</span>
+  <span class="nx">updateTimesheet</span><span class="p">();</span>
+<span class="p">}</span>
+
+<span class="c1">// Update the timesheet, with hours and descriptions.</span>
+<span class="kd">function</span> <span class="nx">updateTimesheet</span><span class="p">()</span> <span class="p">{</span>
+  <span class="kd">var</span> <span class="nx">timesheet</span> <span class="o">=</span> <span class="nx">$</span><span class="p">(</span><span class="s2">&quot;#timesheet&quot;</span><span class="p">).</span><span class="nx">empty</span><span class="p">();</span>
+  <span class="kd">var</span> <span class="nx">dbs</span> <span class="o">=</span> <span class="nx">$</span><span class="p">.</span><span class="nx">couch</span><span class="p">.</span><span class="nx">db</span><span class="p">(</span><span class="s2">&quot;timelog&quot;</span><span class="p">).</span><span class="nx">view</span><span class="p">(</span><span class="s2">&quot;invoice/hoursPerDay&quot;</span><span class="p">,{</span>
+    <span class="nx">group</span><span class="o">:</span> <span class="kc">true</span><span class="p">,</span>
+    <span class="nx">startkey</span><span class="o">:</span> <span class="nx">start</span><span class="p">,</span>
+    <span class="nx">endkey</span><span class="o">:</span> <span class="nx">end</span><span class="p">,</span>
+    <span class="nx">success</span><span class="o">:</span> <span class="kd">function</span><span class="p">(</span><span class="nx">r</span><span class="p">)</span> <span class="p">{</span>
+      <span class="nx">table</span> <span class="o">=</span> <span class="s2">&quot;&lt;div class=&#39;span-20 prepend-1 last&#39;&gt;&lt;table class=&#39;timelog&#39;&gt;&quot;</span><span class="p">;</span>
+      <span class="nx">rowNum</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+      <span class="nx">response</span> <span class="o">=</span> <span class="nx">r</span><span class="p">[</span><span class="s1">&#39;rows&#39;</span><span class="p">]</span>
+      <span class="k">for</span> <span class="p">(</span><span class="kd">var</span> <span class="nx">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="nx">i</span> <span class="o">&lt;</span> <span class="nx">response</span><span class="p">.</span><span class="nx">length</span><span class="p">;</span> <span class="nx">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+        <span class="kd">var</span> <span class="nx">record</span> <span class="o">=</span> <span class="nx">response</span><span class="p">[</span><span class="nx">i</span><span class="p">];</span>
+        <span class="kd">var</span> <span class="nx">date</span> <span class="o">=</span> <span class="nx">record</span><span class="p">[</span><span class="s1">&#39;key&#39;</span><span class="p">][</span><span class="mi">2</span><span class="p">];</span>
+        <span class="kd">var</span> <span class="nx">total</span> <span class="o">=</span> <span class="nx">record</span><span class="p">[</span><span class="s1">&#39;value&#39;</span><span class="p">][</span><span class="mi">0</span><span class="p">];</span>
+        <span class="kd">var</span> <span class="nx">entries</span> <span class="o">=</span> <span class="nx">record</span><span class="p">[</span><span class="s1">&#39;value&#39;</span><span class="p">][</span><span class="mi">1</span><span class="p">];</span>
+        <span class="nx">table</span> <span class="o">+=</span> <span class="s2">&quot;&lt;tr class=&#39;row&quot;</span><span class="o">+</span><span class="nx">rowNum</span><span class="o">+</span><span class="s2">&quot;&#39;&gt;&lt;td&gt;&quot;</span> <span class="o">+</span>
+        <span class="nx">date</span> <span class="o">+</span> <span class="s2">&quot;&lt;/td&gt;&lt;td&gt;&quot;</span> <span class="o">+</span>
+        <span class="nx">total</span> <span class="o">+</span> <span class="s2">&quot;h&lt;/td&gt;&quot;</span><span class="p">;</span>
+        <span class="k">for</span> <span class="p">(</span><span class="kd">var</span> <span class="nx">j</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span> <span class="nx">j</span> <span class="o">&lt;</span> <span class="nx">entries</span><span class="p">.</span><span class="nx">length</span><span class="p">;</span> <span class="nx">j</span><span class="o">++</span> <span class="p">)</span>
+        <span class="p">{</span>
+          <span class="k">if</span> <span class="p">(</span><span class="nx">j</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">)</span>
+          <span class="p">{</span>
+            <span class="nx">table</span> <span class="o">+=</span> <span class="s2">&quot;&lt;tr class=&#39;row&quot;</span><span class="o">+</span><span class="nx">rowNum</span><span class="o">+</span><span class="s2">&quot;&#39;&gt;&lt;td/&gt;&lt;td/&gt;&quot;</span><span class="p">;</span>
+          <span class="p">}</span>
+          <span class="nx">table</span> <span class="o">+=</span> <span class="s2">&quot;&lt;td&gt;&quot;</span> <span class="o">+</span> <span class="nx">entries</span><span class="p">[</span><span class="nx">j</span><span class="p">][</span><span class="s1">&#39;Time&#39;</span><span class="p">]</span> <span class="o">+</span> <span class="s2">&quot;h - &quot;</span> <span class="o">+</span>
+            <span class="nx">entries</span><span class="p">[</span><span class="nx">j</span><span class="p">][</span><span class="s1">&#39;Description&#39;</span><span class="p">]</span> <span class="o">+</span> <span class="s2">&quot;&lt;/td&gt;&lt;/tr&gt;&quot;</span><span class="p">;</span>
+          <span class="nx">rowNum</span> <span class="o">+=</span> <span class="mi">1</span><span class="p">;</span>
+          <span class="nx">rowNum</span> <span class="o">%=</span> <span class="mi">2</span><span class="p">;</span>
+        <span class="p">}</span>
+      <span class="p">}</span>
+      <span class="nx">table</span> <span class="o">+=</span> <span class="s2">&quot;&lt;/table&gt;&lt;/div&gt;&quot;</span><span class="p">;</span>
+      <span class="nx">timesheet</span><span class="p">.</span><span class="nx">append</span><span class="p">(</span> <span class="nx">table</span> <span class="p">);</span>
+      <span class="nx">updateSummary</span><span class="p">();</span>
+    <span class="p">}</span>
+  <span class="p">})</span>
+<span class="p">};</span>
+
+<span class="c1">// And finally, update the important stuff.</span>
+<span class="c1">// The total hours, rate, and amount owed.</span>
+<span class="kd">function</span> <span class="nx">updateSummary</span><span class="p">()</span> <span class="p">{</span>
+  <span class="kd">var</span> <span class="nx">dbs</span> <span class="o">=</span> <span class="nx">$</span><span class="p">.</span><span class="nx">couch</span><span class="p">.</span><span class="nx">db</span><span class="p">(</span><span class="s2">&quot;timelog&quot;</span><span class="p">).</span><span class="nx">view</span><span class="p">(</span><span class="s2">&quot;invoice/totalHours&quot;</span><span class="p">,{</span>
+    <span class="nx">startkey</span><span class="o">:</span> <span class="nx">start</span><span class="p">,</span>
+    <span class="nx">endkey</span><span class="o">:</span> <span class="nx">end</span><span class="p">,</span>
+    <span class="nx">success</span><span class="o">:</span> <span class="kd">function</span><span class="p">(</span><span class="nx">r</span><span class="p">)</span> <span class="p">{</span>
+      <span class="nx">summary</span> <span class="o">=</span> <span class="nx">$</span><span class="p">(</span><span class="s2">&quot;#summary&quot;</span><span class="p">).</span><span class="nx">empty</span><span class="p">();</span>
+      <span class="nx">content</span> <span class="o">=</span> <span class="s2">&quot;&lt;p class=&#39;span-20 prepend-1 last&#39;&gt;&quot;</span><span class="p">;</span>
+      <span class="k">if</span> <span class="p">(</span> <span class="nx">r</span><span class="p">[</span><span class="s1">&#39;rows&#39;</span><span class="p">].</span><span class="nx">length</span> <span class="o">==</span> <span class="mi">0</span> <span class="p">)</span>
+      <span class="p">{</span>
+        <span class="nx">content</span> <span class="o">+=</span> <span class="s2">&quot;No data available.&quot;</span><span class="p">;</span>
+      <span class="p">}</span>
+      <span class="k">else</span>
+      <span class="p">{</span>
+        <span class="nx">value</span> <span class="o">=</span> <span class="nx">r</span><span class="p">[</span><span class="s1">&#39;rows&#39;</span><span class="p">][</span><span class="mi">0</span><span class="p">][</span><span class="s1">&#39;value&#39;</span><span class="p">];</span>
+        <span class="nx">content</span> <span class="o">+=</span> <span class="s2">&quot;&lt;b&gt;Total hours:&lt;/b&gt; &quot;</span> <span class="o">+</span> <span class="nx">value</span> <span class="o">+</span> <span class="s2">&quot;&lt;br/&gt;&quot;</span> <span class="o">+</span>
+          <span class="s2">&quot;&lt;b&gt;Rate:&lt;/b&gt; $&quot;</span> <span class="o">+</span> <span class="nx">rate</span> <span class="o">+</span> <span class="nx">currency</span> <span class="o">+</span><span class="s2">&quot;/hour.&lt;br/&gt;&quot;</span> <span class="o">+</span>
+          <span class="s2">&quot;&lt;b&gt;Sub-total:&lt;/b&gt; $&quot;</span> <span class="o">+</span> <span class="p">(</span><span class="nx">value</span><span class="o">*</span><span class="nx">rate</span><span class="p">).</span><span class="nx">toFixed</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span> <span class="o">+</span> <span class="s2">&quot;&lt;br/&gt;&quot;</span> <span class="o">+</span>
+          <span class="s2">&quot;&lt;b&gt;Tax (GST @ 5%):&lt;/b&gt; $&quot;</span> <span class="o">+</span> <span class="p">(</span><span class="nx">value</span><span class="o">*</span><span class="mi">5</span><span class="p">).</span><span class="nx">toFixed</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span> <span class="o">+</span> <span class="s2">&quot;&lt;br/&gt;&quot;</span> <span class="o">+</span>
+          <span class="s2">&quot;&lt;b&gt;Total Payable:&lt;/b&gt; $&quot;</span> <span class="o">+</span> <span class="p">(</span><span class="nx">value</span><span class="o">*</span><span class="p">(</span><span class="nx">rate</span><span class="o">+</span><span class="mi">5</span><span class="p">)).</span><span class="nx">toFixed</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span> <span class="o">+</span> <span class="s2">&quot;&lt;br/&gt;&quot;</span>
+          <span class="p">}</span>
+          <span class="nx">content</span> <span class="o">+=</span> <span class="s2">&quot;&lt;/p&gt;&quot;</span><span class="p">;</span>
+          <span class="nx">summary</span><span class="p">.</span><span class="nx">append</span><span class="p">(</span> <span class="nx">content</span> <span class="p">);</span>
+    <span class="p">}</span>
+  <span class="p">});</span>
+<span class="p">};</span>
+
+<span class="c1">// When the document is ready, kick off the updates.</span>
+<span class="nx">$</span><span class="p">(</span><span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+  <span class="nx">updateHeader</span><span class="p">();</span>
+<span class="p">});</span>
+</pre>
+</td></tr></table>
+
+<p>And we’re done.  Not to sound too much like an infomercial, but with <a href="http://jquery.com/">JQuery</a>, <a href="http://www.blueprintcss.org/">Blueprint</a>, <a href="http://couchdb.apache.org/">CouchDB</a>, and <a href="http://www.python.org/">Python</a>, it took me
+only 255 lines of code to get a decent-enough-quality invoice that I could save
+it as a PDF, send to the client, and get paid.  In fact, the client liked it
+enough (or just wanted things to be standard enough) that they asked that the
+other consultant on the project use the same template, so I had to spend some
+time taking my original invoice script and editing it to support more than one
+user.  Either way, I would call it a success.</p>

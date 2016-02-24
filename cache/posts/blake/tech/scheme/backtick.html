@@ -1,0 +1,43 @@
+<p>As <a href="http://weblog.latte.ca/blake/tech/iTouch/languages.html">I mentioned</a> before, I’ve
+ported Gambit Scheme to my iTouch, and have been playing around with
+it a little.  It’s pretty nice all in all, but I recently ran into a
+small problem while I was trying to play around with macros.  The
+problem?  There’s no way to enter a backtick (`) on the iTouch!  That
+means that I don’t really have a way to write code like</p>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><pre class="code literal-block"><span></span><span class="o">`</span><span class="p">(</span> <span class="nv">a</span> <span class="nv">b</span> <span class="o">,</span><span class="p">(</span><span class="nb">+ </span><span class="mi">1</span> <span class="mi">2</span><span class="p">)</span> <span class="nv">d</span><span class="p">)</span>
+</pre>
+</td></tr></table>
+
+<p>which makes writing macros a lot more painful.  Fortunately, I got a
+lot of help from the people on <a href="irc://irc.freenode.net/gambit">IRC</a>
+and on the <a href="https://webmail.iro.umontreal.ca/pipermail/gambit-list/">Gambit mailing list</a>.
+Specifically, Marc Feeley, the author of Gambit, <a href="https://webmail.iro.umontreal.ca/pipermail/gambit-list/2008-February/002011.html">posted</a>
+a snippet of code that I could put into my .gambcini file that would
+add $ as a synonym for `.  The code looked like this:</p>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3
+4
+5
+6
+7</pre></div></td><td class="code"><pre class="code literal-block"><span></span><span class="p">(</span><span class="nf">begin</span>
+  <span class="p">(</span><span class="o">##</span><span class="nv">readtable-char-class-set!</span>
+    <span class="p">(</span><span class="nf">current-readtable</span><span class="p">)</span>
+    <span class="sc">#\$</span>  <span class="c1">;; the character to dispatch on</span>
+    <span class="no">#t</span>   <span class="c1">;; this character is a delimiter</span>
+    <span class="p">(</span><span class="k">lambda </span><span class="p">(</span><span class="nf">re</span> <span class="nv">c</span><span class="p">)</span> <span class="p">(</span><span class="o">##</span><span class="nv">read-quotation</span> <span class="nv">re</span> <span class="o">#</span><span class="err">\</span><span class="o">`</span><span class="p">)))</span>  <span class="c1">;; handler</span>
+  <span class="no">#f</span><span class="p">)</span>
+</pre>
+</td></tr></table>
+
+<p>and the example, which works, is:</p>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2</pre></div></td><td class="code"><pre class="code literal-block"><span></span><span class="nv">$</span><span class="p">(</span><span class="mi">1</span> <span class="o">,</span><span class="p">(</span><span class="nb">+ </span><span class="mi">2</span> <span class="mi">3</span><span class="p">)</span> <span class="mi">4</span><span class="p">)</span>
+<span class="nv">output:</span> <span class="p">(</span><span class="mi">1</span> <span class="mi">5</span> <span class="mi">4</span><span class="p">)</span>
+</pre>
+</td></tr></table>
+
+<p>If you’re trying to write that code on your iTouch, you might notice that it
+includes the forbidden `, and so you’re once again out of luck.  Except that
+in this case, you can replace #\` with #\u0060, which you can type in on the
+iTouch, and then it’ll all work.</p>

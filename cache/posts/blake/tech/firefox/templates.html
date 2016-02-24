@@ -1,0 +1,238 @@
+<p>One of my favourite upcoming features in ES6 is Template Strings.  I’ve used
+JQuery’s <a href="http://ejohn.org/blog/javascript-micro-templating/">templates</a> in
+<a href="https://bugzilla.mozilla.org/show_bug.cgi?id=686347">some previous code</a> I’ve
+worked on, and while it was very useful in finishing the feature on time, it’s
+aged now and relying on third-party libraries which we don’t have time to keep
+up to date isn’t the best idea and so we’re in the middle of <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1014609">some work to
+remove them</a>.  So having
+said that, I’m quite happy to see something similar arriving in the base
+language, so that we can take advantage of it without having to add any extra
+code.</p>
+<blockquote>
+<p>As an aside, all the code below was tested in <a href="http://getfirefox.com">Firefox
+34</a>, using the
+<a href="https://developer.mozilla.org/en-US/docs/Tools/Scratchpad">Scratchpad</a>.  The
+comments are pasted in below the code when you select it and choose the
+<code>Execute » Display</code> menu item or hit <code>Ctrl+L</code> (<code>Cmd+L</code> on Mac).  I
+<a href="https://twitter.com/addyosmani/status/541978036904554496">hear</a> they also
+<a href="https://plus.google.com/+AddyOsmani/posts/BW5h61SoGf8">work in Chrome</a>, but
+they didn’t seem to in the version I was running (39.0.2171.95), and I didn’t
+want to start messing with an <code>--es-staging</code> flag.  If someone can confirm
+whether they work or not, I would certainly appreciate it!  :)</p>
+</blockquote>
+<!-- TEASER_END -->
+
+<p>At their simplest, template strings are just like regular strings, only with
+backticks (<code>`</code>) instead of single (<code>'</code>) or double (<code>"</code>) quotes.</p>
+<pre class="code literal-block"><span></span><span class="kd">function</span> <span class="nx">test0</span><span class="p">()</span> <span class="p">{</span>
+  <span class="k">return</span> <span class="sb">`Just a normal-ish string.`</span>
+<span class="p">}</span>
+
+<span class="nx">test0</span><span class="p">();</span>
+
+<span class="cm">/*</span>
+<span class="cm">Just a normal-ish string.</span>
+<span class="cm">*/</span>
+</pre>
+
+
+<p>but if that were all they were, they wouldn’t be very useful, so obviously they
+can do more.  And the first extra thing they can do is capture the values of
+variables from the scope they’re defined in, and insert them into the string,
+like so:</p>
+<pre class="code literal-block"><span></span><span class="kd">function</span> <span class="nx">test1</span><span class="p">()</span> <span class="p">{</span>
+  <span class="kd">let</span> <span class="nx">x</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span>
+  <span class="kd">let</span> <span class="nx">y</span> <span class="o">=</span> <span class="s1">&#39;foo&#39;</span><span class="p">;</span>
+
+  <span class="k">return</span> <span class="sb">`x is </span><span class="si">${</span><span class="nx">x</span><span class="si">}</span><span class="sb">, and y is </span><span class="si">${</span><span class="nx">y</span><span class="si">}</span><span class="sb">.`</span>
+<span class="p">}</span>
+
+<span class="nx">test1</span><span class="p">();</span>
+
+<span class="cm">/*</span>
+<span class="cm">x is 1, and y is foo.</span>
+<span class="cm">*/</span>
+</pre>
+
+
+<p>Now, you may say “But Blake, I could have just put the values right in the
+string myself!”.  Well, in this case yes, you could, but those values don’t have
+to be statically defined in the function they’re used from…</p>
+<pre class="code literal-block"><span></span><span class="kd">function</span> <span class="nx">test2</span><span class="p">(</span><span class="nx">x</span><span class="p">,</span> <span class="nx">y</span><span class="p">)</span> <span class="p">{</span>
+  <span class="k">return</span> <span class="sb">`x is </span><span class="si">${</span><span class="nx">x</span><span class="si">}</span><span class="sb">, and y is </span><span class="si">${</span><span class="nx">y</span><span class="si">}</span><span class="sb">.`</span>
+<span class="p">}</span>
+
+<span class="nx">test2</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="s1">&#39;foo&#39;</span><span class="p">);</span>
+
+<span class="cm">/*</span>
+<span class="cm">x is 1, and y is foo.</span>
+<span class="cm">*/</span>
+</pre>
+
+
+<p>I’m sure you can imagine the values coming from the result of an XHR call, or
+some other asynchronous function.  But just to hammer the point home even
+further, the variables themselves don’t need to be in the function at all…</p>
+<pre class="code literal-block"><span></span><span class="kd">function</span> <span class="nx">test3</span><span class="p">(</span><span class="nx">x</span><span class="p">)</span> <span class="p">{</span>
+  <span class="k">return</span> <span class="kd">function</span> <span class="p">(</span><span class="nx">y</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">return</span> <span class="sb">`x is </span><span class="si">${</span><span class="nx">x</span><span class="si">}</span><span class="sb">, and y is </span><span class="si">${</span><span class="nx">y</span><span class="si">}</span><span class="sb">, and the sum is </span><span class="si">${</span><span class="nx">x</span> <span class="o">+</span> <span class="nx">y</span><span class="si">}</span><span class="sb">.`</span>
+  <span class="p">}</span>
+<span class="p">}</span>
+
+<span class="kd">let</span> <span class="nx">partial</span> <span class="o">=</span> <span class="nx">test3</span><span class="p">(</span><span class="mi">1</span><span class="p">);</span>
+<span class="nx">partial</span><span class="p">(</span><span class="mi">2</span><span class="p">);</span>
+
+<span class="cm">/*</span>
+<span class="cm">x is 1, and y is 2, and the sum is 3.</span>
+<span class="cm">*/</span>
+</pre>
+
+
+<p>Notice that we can also evaluate expressions in the template string.  That would
+be much harder to do with hard-coded values.</p>
+<p><a href="https://www.youtube.com/watch?v=ZTpXh33Mbeg">But wait, there’s more!</a></p>
+<p>It turns out we have control not only over what we inject into the string, but
+also what comes out of the injected string!  If we put the name of a function
+before the backtick, then it will get called when the string is created, and it
+can return <em>whatever</em> it wants.  Like, really, <strong><em>whatever</em></strong>!  :)</p>
+<pre class="code literal-block"><span></span><span class="kd">function</span> <span class="nx">test4</span><span class="p">()</span> <span class="p">{</span>
+  <span class="kd">function</span> <span class="nx">replace</span><span class="p">(</span><span class="nx">template</span><span class="p">,</span> <span class="nx">arg</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">return</span> <span class="k">new</span> <span class="nb">Date</span><span class="p">(</span><span class="nx">arg</span><span class="p">);</span>
+  <span class="p">}</span>
+  <span class="kd">let</span> <span class="nx">x</span> <span class="o">=</span> <span class="s2">&quot;2014-12-27T04:09:57.054Z&quot;</span><span class="p">;</span>
+
+  <span class="k">return</span> <span class="nx">replace</span><span class="sb">`This doesn’t matter we only use </span><span class="si">${</span><span class="nx">x</span><span class="si">}</span><span class="sb"> here.`</span><span class="p">.</span><span class="nx">getUTCDate</span><span class="p">();</span>
+<span class="p">}</span>
+
+<span class="nx">test4</span><span class="p">();</span>
+
+<span class="cm">/*</span>
+<span class="cm">27</span>
+<span class="cm">*/</span>
+</pre>
+
+
+<p>Have you ever called <code>.getUTCDate()</code> on a string before?  Me either!  Of course,
+you’re not limited to dates.  You could also return a model object that was
+populated from various pieces of data you passed in, if you felt like rolling
+framework-style.  For the rest of the examples, I think I’ll stick to returning
+strings, though, since more complicated structures just show up as <code>[object]</code>,
+which isn’t so helpful for demonstrating stuff.</p>
+<p>So, let’s see just what gets passed in to this function…</p>
+<pre class="code literal-block"><span></span><span class="kd">function</span> <span class="nx">test5</span><span class="p">()</span> <span class="p">{</span>
+  <span class="kd">function</span> <span class="nx">modify</span><span class="p">(</span><span class="nx">template</span><span class="p">,</span> <span class="p">...</span><span class="nx">args</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">return</span> <span class="s1">&#39;Nope!\n  template=&#39;</span> <span class="o">+</span> <span class="nx">JSON</span><span class="p">.</span><span class="nx">stringify</span><span class="p">(</span><span class="nx">template</span><span class="p">)</span> <span class="o">+</span>
+      <span class="s1">&#39;\n  args=&#39;</span> <span class="o">+</span> <span class="nx">JSON</span><span class="p">.</span><span class="nx">stringify</span><span class="p">(</span><span class="nx">args</span><span class="p">);</span>
+  <span class="p">}</span>
+  <span class="kd">let</span> <span class="nx">x</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span>
+  <span class="kd">let</span> <span class="nx">y</span> <span class="o">=</span> <span class="mi">3</span><span class="p">;</span>
+
+  <span class="k">return</span> <span class="nx">modify</span><span class="sb">`x is </span><span class="si">${</span><span class="nx">x</span><span class="si">}</span><span class="sb">, and y is </span><span class="si">${</span><span class="nx">y</span><span class="si">}</span><span class="sb">, and the sum is </span><span class="si">${</span><span class="nx">x</span> <span class="o">+</span> <span class="nx">y</span><span class="si">}</span><span class="sb">.`</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="nx">test5</span><span class="p">();</span>
+
+<span class="cm">/*</span>
+<span class="cm">Nope!</span>
+<span class="cm">  template=[&quot;x is &quot;,&quot;, and y is &quot;,&quot;, and the sum is &quot;,&quot;.&quot;]</span>
+<span class="cm">  args=[1,3,4]</span>
+<span class="cm">*/</span>
+</pre>
+
+
+<p>Well, that’s not so terrible.  The template string is broken up into the pieces
+between the arguments, and the arguments are pre-calculated before being passed
+in.  Hmm, I wonder what happens if you have two expressions right beside each
+other?</p>
+<pre class="code literal-block"><span></span><span class="kd">function</span> <span class="nx">test6</span><span class="p">()</span> <span class="p">{</span>
+  <span class="kd">function</span> <span class="nx">modify</span><span class="p">(</span><span class="nx">template</span><span class="p">,</span> <span class="p">...</span><span class="nx">args</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">return</span> <span class="s1">&#39;Nope!\n  template=&#39;</span> <span class="o">+</span> <span class="nx">JSON</span><span class="p">.</span><span class="nx">stringify</span><span class="p">(</span><span class="nx">template</span><span class="p">)</span> <span class="o">+</span>
+      <span class="s1">&#39;\n  args=&#39;</span> <span class="o">+</span> <span class="nx">JSON</span><span class="p">.</span><span class="nx">stringify</span><span class="p">(</span><span class="nx">args</span><span class="p">);</span>
+  <span class="p">}</span>
+  <span class="kd">let</span> <span class="nx">x</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span>
+  <span class="kd">let</span> <span class="nx">y</span> <span class="o">=</span> <span class="s1">&#39;foo&#39;</span><span class="p">;</span>
+
+  <span class="k">return</span> <span class="nx">modify</span><span class="sb">`Adjacent items give: </span><span class="si">${</span><span class="nx">x</span><span class="si">}${</span><span class="nx">y</span><span class="si">}</span><span class="sb">.`</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="nx">test6</span><span class="p">();</span>
+
+<span class="cm">/*</span>
+<span class="cm">Nope!</span>
+<span class="cm">  template=[&quot;Adjacent items give: &quot;,&quot;&quot;,&quot;.&quot;]</span>
+<span class="cm">  args=[1,&quot;foo&quot;]</span>
+<span class="cm">*/</span>
+</pre>
+
+
+<p>You get an empty string.  Seems reasonable.  Now, if you want to put the string
+back together, you’ll need to loop over each item in the template, and append
+the expression in the same position (if it exists!  If the template string ends
+with static content, then there will be no last expression).  Of course, while
+you’re doing that, you can process the arguments in any way you see fit, like,
+say, selectively escaping unsafe HTML characters…</p>
+<pre class="code literal-block"><span></span><span class="kd">function</span> <span class="nx">test7</span><span class="p">()</span> <span class="p">{</span>
+  <span class="kd">function</span> <span class="nx">escape</span><span class="p">(</span><span class="nx">data</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">return</span> <span class="nx">data</span><span class="p">.</span><span class="nx">replace</span><span class="p">(</span><span class="sr">/&amp;/g</span><span class="p">,</span> <span class="s1">&#39;&amp;amp;&#39;</span><span class="p">).</span><span class="nx">replace</span><span class="p">(</span><span class="sr">/&lt;/g</span><span class="p">,</span> <span class="s1">&#39;&amp;lt;&#39;</span><span class="p">).</span><span class="nx">replace</span><span class="p">(</span><span class="sr">/&gt;/g</span><span class="p">,</span> <span class="s1">&#39;&amp;gt;&#39;</span><span class="p">);</span>
+  <span class="p">}</span>
+  <span class="kd">function</span> <span class="nx">html</span><span class="p">(</span><span class="nx">template</span><span class="p">,</span> <span class="p">...</span><span class="nx">args</span><span class="p">)</span> <span class="p">{</span>
+    <span class="kd">let</span> <span class="nx">retval</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span><span class="p">;</span>
+    <span class="k">for</span> <span class="p">(</span><span class="kd">let</span> <span class="nx">i</span> <span class="k">in</span> <span class="nx">template</span><span class="p">)</span> <span class="p">{</span>
+      <span class="nx">retval</span> <span class="o">+=</span> <span class="nx">template</span><span class="p">[</span><span class="nx">i</span><span class="p">]</span> <span class="o">+</span> <span class="p">(</span><span class="nx">args</span><span class="p">[</span><span class="nx">i</span><span class="p">]</span> <span class="o">?</span> <span class="nx">escape</span><span class="p">(</span><span class="nx">args</span><span class="p">[</span><span class="nx">i</span><span class="p">])</span> <span class="o">:</span> <span class="s1">&#39;&#39;</span><span class="p">);</span>
+    <span class="p">}</span>
+    <span class="k">return</span> <span class="nx">retval</span><span class="p">;</span>
+  <span class="p">}</span>
+  <span class="kd">let</span> <span class="nx">x</span> <span class="o">=</span> <span class="s1">&#39;my &amp; name&#39;</span><span class="p">;</span>
+  <span class="kd">let</span> <span class="nx">y</span> <span class="o">=</span> <span class="s1">&#39;&lt;script&gt;&lt;!--&#39;</span><span class="p">;</span>
+
+  <span class="k">return</span> <span class="nx">html</span><span class="sb">`&lt;span&gt;x is </span><span class="si">${</span><span class="nx">x</span><span class="si">}</span><span class="sb">&lt;/span&gt;, and &lt;span&gt;y is </span><span class="si">${</span><span class="nx">y</span><span class="si">}</span><span class="sb">&lt;/span&gt;.`</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="nx">test7</span><span class="p">();</span>
+
+<span class="cm">/*</span>
+<span class="cm">&lt;span&gt;x is my &amp;amp; name&lt;/span&gt;, and &lt;span&gt;y is &amp;lt;script&amp;gt;&amp;lt;!--&lt;/span&gt;.</span>
+<span class="cm">*/</span>
+</pre>
+
+
+<p>Or better yet, automatically translating your strings into another language!</p>
+<pre class="code literal-block"><span></span><span class="kd">function</span> <span class="nx">test8</span><span class="p">()</span> <span class="p">{</span>
+  <span class="nx">locale</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="s1">&#39;my first string&#39;</span> <span class="o">:</span> <span class="kd">function</span> <span class="p">(</span><span class="nx">args</span><span class="p">)</span> <span class="p">{</span>
+      <span class="k">return</span> <span class="s1">&#39;mi primera cadena&#39;</span><span class="p">;</span>
+    <span class="p">},</span>
+    <span class="s1">&#39;My name is |, and I like |.&#39;</span> <span class="o">:</span> <span class="kd">function</span> <span class="p">(</span><span class="nx">args</span><span class="p">)</span> <span class="p">{</span>
+      <span class="nx">retval</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span><span class="p">;</span>
+      <span class="nx">translated</span> <span class="o">=</span> <span class="s1">&#39;Mi nombre es |, y me gusta |.&#39;</span><span class="p">.</span><span class="nx">split</span><span class="p">(</span><span class="s1">&#39;|&#39;</span><span class="p">);</span>
+      <span class="k">for</span> <span class="p">(</span><span class="kd">let</span> <span class="nx">i</span> <span class="k">in</span> <span class="nx">translated</span><span class="p">)</span> <span class="p">{</span>
+        <span class="nx">retval</span> <span class="o">+=</span> <span class="nx">translated</span><span class="p">[</span><span class="nx">i</span><span class="p">]</span> <span class="o">+</span> <span class="p">(</span><span class="nx">args</span><span class="p">[</span><span class="nx">i</span><span class="p">]</span> <span class="o">||</span> <span class="s1">&#39;&#39;</span><span class="p">);</span>
+      <span class="p">}</span>
+
+      <span class="k">return</span> <span class="nx">retval</span><span class="p">;</span>
+    <span class="p">}</span>
+  <span class="p">}</span>
+  <span class="kd">function</span> <span class="nx">_</span><span class="p">(</span><span class="nx">template</span><span class="p">,</span> <span class="p">...</span><span class="nx">args</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">return</span> <span class="nx">locale</span><span class="p">[</span><span class="nx">template</span><span class="p">.</span><span class="nx">join</span><span class="p">(</span><span class="s1">&#39;|&#39;</span><span class="p">)](</span><span class="nx">args</span><span class="p">);</span>
+  <span class="p">}</span>
+  <span class="kd">let</span> <span class="nx">x</span> <span class="o">=</span> <span class="s1">&#39;Blake&#39;</span><span class="p">;</span>
+  <span class="kd">let</span> <span class="nx">y</span> <span class="o">=</span> <span class="s1">&#39;JavaScript&#39;</span><span class="p">;</span>
+
+  <span class="k">return</span> <span class="nx">_</span><span class="sb">`My name is </span><span class="si">${</span><span class="nx">x</span><span class="si">}</span><span class="sb">, and I like </span><span class="si">${</span><span class="nx">y</span><span class="si">}</span><span class="sb">.`</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="nx">test8</span><span class="p">();</span>
+
+<span class="cm">/*</span>
+<span class="cm">Mi nombre es Blake, y me gusta JavaScript.</span>
+<span class="cm">*/</span>
+</pre>
+
+
+<p>(We have to pretend that the <code>locale</code> dictionary gets loaded from a more
+complicated sub-system, and yes, this totally fails to handle languages with a
+different word order, but I trust you get the idea behind it, and I can leave
+the hard work of actually implementing it to the reader.)</p>
+<p>Hopefully this brief set of examples has piqued your curiousity.  If you’ld like
+to read some more technical infomation about template strings, you should check
+out <a href="http://tc39wiki.calculist.org/es6/template-strings/">this wiki page</a>…</p>

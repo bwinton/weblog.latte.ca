@@ -1,0 +1,42 @@
+<p>On Friday and Saturday afternoon this week, I took some time out of my
+day to go down to the University of Toronto and participate in the <a
+href="https://www.drproject.org/">DrProject</a> <a
+href="https://www.drproject.org/DrProject/mail/5059" >Code Sprint</a>.  It
+was a lot of fun, and I managed to fix a couple of bugs, and get a better
+understanding of one of <a
+href="https://www.drproject.org/DrProject/browser/trunk/drproject?file=wiki"
+>the hairier parts</a> of DrProject.  At least I hope it’s one of the
+hairier parts of DrProject, since if the whole codebase is as ugly as the
+wiki parts, we’re in some serious trouble.  To be fair, it’s a
+not-entirely-deterministic parser for a not-entirely-deterministic
+language, so when something goes wrong, it’s kind of, uh, tricky to figure
+out what’s just happened.  For example, after parsing a link surrounded in
+square brackets, the following character seems to be <a
+href="https://www.drproject.org/DrProject/ticket/1075" >treated as
+text</a>.  Why?  Who knows.  As someone new to the wiki parser, I’ld love
+to have the code be simpler to understand, but I’m starting to suspect that
+the complexity is inherent in what it’s trying to do.</p>
+
+<p>The two bugfixes/feature additions I did, although they seem sort of unrelated, both work
+together to let people create a bibliography/set of footnotes to pages,
+which is something <a href="http://pyre.third-bit.com/blog/">Greg</a> said
+that he’s been wanting for a while, so that was kind of cool.  It’s nice to
+be able to go somewhere, be surrounded by smart people, and concentrate on
+making something better without interruptions.</p>
+
+<p>Speaking of the bugfixes, they were:
+  <ul>
+    <li><a href="https://www.drproject.org/DrProject/ticket/870" >adding
+support for dl/dt/dd</a> in the wiki syntax, which turned out to be
+surprisingly hard, since it seemed to be the first bit of syntax that
+wanted to either return more than one tag or insert a tag into the
+already-generated stream, so I had to figure out which option to go with,
+and how to get it working, and</li>
+    <li>coming up with and implementing a wiki syntax for <a
+href="https://www.drproject.org/DrProject/ticket/1038"
+>creating and referring to anchors</a> in a page, which I think I did a
+pretty decent job on.  The syntax uses [wiki:#foo] as an anchor, and
+[wiki:MyPage#foo] as a link to that anchor</li>
+  </ul>
+</p>
+

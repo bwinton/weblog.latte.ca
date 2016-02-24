@@ -1,0 +1,22 @@
+<p>So when I was writing the first iteration of the tiny web
+browser I looked around on the Internet for stories from other
+people who had done the same sort of thing, so that I could
+hopefully avoid some of the dumber mistakes people had made, and
+if I was very lucky, perhaps I might even pick up some tricks to
+make my implementation smaller or faster.  Sadly, though, I found
+nothing.  So I forged ahead with my design, and said that when I
+was done, I would put my experiences up so that other people
+didn't have to repeat my mistakes, and could possibly learn from
+what I did correctly.</p>
+
+<p>The first thing I think I did correctly was to break the
+stream up into elements, all of which had content to paint, and
+all of which had a bitfield of formatting flags.  In my gadget, I
+would figure out the bounds for any given element, splitting a
+long bit of content up into several lines each with their own
+bounds.  When the time came to paint the html, I would just loop
+through the elements, set the colour and font based on the format
+flags, and draw the string at the bounds.  This made the drawing
+extremely fast, which was a good thing.</p>
+(Next issue, Limitations...)
+

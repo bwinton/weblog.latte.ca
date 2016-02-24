@@ -1,0 +1,36 @@
+<p>A couple of days ago, I fixed a bug by deleting the class.  I don’t
+often get to do that, but this class was buggy, hard to use, and
+ill-considered in the first place.  I won’t post the code, but some
+sample output is:
+<pre><code>Fri Aug 27 00:00:00 EDT 1976
+Julian Day: 2443017
+Milliseconds since midnight: 43200000
+Thu Aug 26 20:00:00 EDT 1976</code></pre>
+Clearly that’s not right, since the top and bottom date should be the
+same.  So, what was wrong with it?  Well...
+<ul>
+<li>Julian dates use milliseconds since noon, not milliseconds since
+midnight.</li>
+<li>The milliseconds since noon should be 57600000, because we’re in
+EDT, which is 4 hours behind UTC.  (The cause of this particular
+bug.)</li>
+<li>The class was implemented as a subclass of
+<tt>java.util.GregorianCalendar</tt>.  A Calendar exists soley to link
+a <tt>java.util.Date</tt> and a <tt>java.util.TimeZone</tt>, but
+Julian dates are all relative to UTC, so should not be represented as
+a Calendar, much less a Gregorian Calendar.</li>
+</ul></p>
+<p>I managed to replace almost all the occurrances with
+<tt>java.util.Date</tt>s, except for a couple of places where I needed
+to group things by day in EST.  Those places I just created a new
+<tt>java.util.GregorianCalendar</tt>, and used it to figure out where
+to split my groups.  The algorithm to go from the Julian days and
+milliseconds since noon to a <tt>java.util.Date</tt>, and back again
+is fairly easily derivable from the formula:
+<pre><code>date = (julianDate - JULIAN_START) * MILLIS_PER_DAY + julianMillis - MILLIS_PER_DAY/2</code></pre>
+Solve for any one of the three lowercase variables, using a little
+truncating-division, or a little modulo arithmatic to get rid of
+unknown terms, and you’re good to go.  So please, if you’re dealing
+with dates or times, don’t make this mistake, at least not where I
+might run across it.</p>
+

@@ -1,0 +1,64 @@
+<p>I was recently modifying an add-on for the upcoming Thunderbird 3.3, and
+part of what I wanted to do was to run some javascript in a chrome context
+that added some DOM nodes to a document in a content context.  But when I
+ran the following code:</p>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3
+4
+5
+6
+7
+8
+9</pre></div></td><td class="code"><pre class="code literal-block"><span></span><span class="kd">let</span> <span class="nx">browser</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s1">&#39;tabmail&#39;</span><span class="p">).</span><span class="nx">getBrowserForSelectedTab</span><span class="p">();</span>
+<span class="kd">let</span> <span class="nx">doc</span> <span class="o">=</span> <span class="nx">browser</span><span class="p">.</span><span class="nx">contentDocument</span><span class="p">;</span>
+<span class="nx">dump</span><span class="p">(</span><span class="s2">&quot;\n\n\n\nXXXXXXXXXX\n&quot;</span><span class="p">);</span>
+<span class="nx">dump</span><span class="p">(</span><span class="s2">&quot;DOM Content loaded for &quot;</span> <span class="o">+</span> <span class="nx">doc</span><span class="p">.</span><span class="nx">location</span> <span class="o">+</span> <span class="s2">&quot;\n&quot;</span><span class="p">);</span>
+<span class="kd">var</span> <span class="nx">topBar</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">createElement</span><span class="p">(</span><span class="s2">&quot;div&quot;</span><span class="p">);</span>
+<span class="nx">topBar</span><span class="p">.</span><span class="nx">innerHTML</span> <span class="o">=</span> <span class="s2">&quot;We got it!!!!!&quot;</span><span class="p">;</span>
+<span class="nx">dump</span><span class="p">(</span><span class="s2">&quot;iB = &quot;</span><span class="o">+</span><span class="nx">doc</span><span class="p">.</span><span class="nx">body</span><span class="p">.</span><span class="nx">insertBefore</span><span class="o">+</span><span class="s2">&quot;\n&quot;</span><span class="p">);</span>
+<span class="nx">dump</span><span class="p">(</span><span class="s2">&quot;fC = &quot;</span><span class="o">+</span><span class="nx">doc</span><span class="p">.</span><span class="nx">body</span><span class="p">.</span><span class="nx">firstChild</span><span class="o">+</span><span class="s2">&quot;\n&quot;</span><span class="p">);</span>
+<span class="nx">doc</span><span class="p">.</span><span class="nx">body</span><span class="p">.</span><span class="nx">insertBefore</span><span class="p">(</span><span class="nx">topBar</span><span class="p">,</span> <span class="nx">doc</span><span class="p">.</span><span class="nx">body</span><span class="p">.</span><span class="nx">firstChild</span><span class="p">);</span>
+</pre>
+</td></tr></table>
+
+<p>I got the following error:</p>
+<pre class="code literal-block"><span></span><span class="n">WARNING</span><span class="o">:</span> <span class="n">NS_ENSURE_SUCCESS</span><span class="o">(</span><span class="n">rv</span><span class="o">,</span> <span class="n">rv</span><span class="o">)</span> <span class="n">failed</span> <span class="k">with</span> <span class="n">result</span> <span class="mh">0x80530009</span><span class="o">:</span> <span class="n">file</span> <span class="sr">/Volumes/Devel/thunderbird/src-central/mozilla/content/base/src/</span><span class="n">nsNodeUtils</span><span class="o">.</span><span class="na">h</span><span class="o">,</span> <span class="n">line</span> <span class="mi">304</span>
+<span class="n">WARNING</span><span class="o">:</span> <span class="n">NS_ENSURE_SUCCESS</span><span class="o">(</span><span class="n">rv</span><span class="o">,</span> <span class="n">rv</span><span class="o">)</span> <span class="n">failed</span> <span class="k">with</span> <span class="n">result</span> <span class="mh">0x80530009</span><span class="o">:</span> <span class="n">file</span> <span class="sr">/Volumes/Devel/thunderbird/src-central/mozilla/content/base/src/</span><span class="n">nsGenericElement</span><span class="o">.</span><span class="na">cpp</span><span class="o">,</span> <span class="n">line</span> <span class="mi">4077</span>
+<span class="o">--</span> <span class="n">Exception</span> <span class="n">object</span> <span class="o">--</span>
+<span class="o">[</span><span class="n">snip</span><span class="err">…</span><span class="o">]</span>
+<span class="o">+</span> <span class="n">message</span> <span class="o">(</span><span class="n">string</span><span class="o">)</span> <span class="s1">&#39;Operation is not supported&#39;</span>
+<span class="o">+</span> <span class="n">result</span> <span class="o">(</span><span class="n">number</span><span class="o">)</span> <span class="mi">2152923145</span>
+<span class="o">+</span> <span class="n">name</span> <span class="o">(</span><span class="n">string</span><span class="o">)</span> <span class="s1">&#39;NS_ERROR_DOM_NOT_SUPPORTED_ERR&#39;</span>
+</pre>
+
+
+<p>Poking around a little, it seemed like I had reasonable things for the
+<tt>insertBefore</tt> method, the <tt>firstChild</tt> attribute, and the
+<tt>topBar</tt> variable, and so since it was late, and I couldn't see what
+I had done wrong, I went to bed.</p>
+<p>That turned out to be a the best thing for me to do, because this morning
+<a href="http://blog.xulforum.org">Jonathan Protzenko</a> came to the rescue, saying
+(<a href="http://groups.google.com/group/mozilla.dev.extensions/browse_thread/thread/cd6f0f02b6bc60f4#">in response to a similar problem</a>
+with a Firefox 4.0 beta 7 extension):</p>
+<blockquote>
+<p>If you're modifying some content DOM from chrome code, you need to make
+sure the child you're appending was created using the unprivileged
+document, not the global document.</p>
+<pre class="code literal-block"><span></span>// This is chrome code, this is wrong because the span is now chrome
+// and you&#39;re trying to insert it into content
+myContentNode.appendChild(document.createElement(&quot;span&quot;))
+
+// This is right, appending a content node to another content node
+myContentNode.appendChild(myContentNode.ownerDocument.createElement(&quot;span&quot;))
+</pre>
+
+
+<p>I've hit this issue at least three times when upgrading stuff for Gecko
+2.0. Might be what you're looking for .</p>
+</blockquote>
+<p>And sure enough, when I changed <tt>var topBar =
+document.createElement("div");</tt> to <tt>var topBar =
+doc.createElement("div");</tt>
+, it all started working beautifully.</p>
+<p>Thank you, Jonathan!</p>

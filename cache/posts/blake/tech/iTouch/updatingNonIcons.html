@@ -1,0 +1,42 @@
+<p>Last night I was browsing the newest iTouch apps, and I saw one called
+<a href="http://www.iamas.ac.jp/%7Eaka/iphone/#LEDBanner.app">LEDBanner</a>.  It
+allowed you to scroll text across your screen as if your screen was a
+set of LEDs.  My only problem with it was that I couldn’t
+programmatically change the text.  Fortunately the source was
+available, and so, with only minor changes, I now have <a href="/static/blake/LEDBanner.zip">a
+version</a> which
+lets me change the text to whatever I want.</p>
+<p>For instance, the following scheme code:</p>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13
+14</pre></div></td><td class="code"><pre class="code literal-block"><span></span>#! /usr/bin/gsi
+(define (flmod x y) (fl- x (fl* (floor (fl/ x y)) y)))
+(define (%100 time) (flmod (floor (time-&gt;seconds time))
+(fixnum-&gt;flonum 100)))
+(define (f)
+  (begin
+    (with-output-to-file
+      (list
+        path: &quot;~/Library/Preferences/org.akamatsu.LEDBanner.msg&quot;
+        truncate: #t)
+      (lambda () (display (%100 (current-time)))))
+    (thread-sleep! 3)
+    (f)))
+(f)
+</pre>
+</td></tr></table>
+
+<p>changes the text every three seconds to the number of seconds, modulo
+100.  Which turns out to be a mostly-random number, as shown below.</p>
+<p><img alt="The number 8." src="/images/blake/led.png" title="Ocho!" /></p>

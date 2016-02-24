@@ -1,0 +1,32 @@
+The idea of IDEs not being forced to rely on text files has been
+popping up in several of the <a
+href="http://www.cardboard.nu/archives/000250.html">weblogs</a> I <a
+href="http://blog.colorstudy.com/ianb/weblog/2004/03/09.html#P67">read</a>.
+While I think Alan has part of the reason correct (there's a lot of
+infrastructure dedicated to dealing with text files), I don't think he
+has it all.  There are definately some <a
+href="http://www.catb.org/~esr/writings/taoup/html/ch05s01.html">major
+advantages</a> to putting things in plain text files, which seem to be
+being ignored
+
+For instance, <a href="http://www.phantomfiber.com/">my company</a>
+has moved from a binary resource format to a <a
+href="http://www.ardiri.com/index.php?redir=palm&amp;cat=pilrc">text-based
+resource format</a> precisely because of the advantages it brings.
+(Well, okay, we never went with the binary format, but that's because
+the people making the decision saw the problems it had at previous
+places.)  Those advantages being:
+
+<ul>
+  <li>No tool/vendor lock-in.</li>
+  <li>Easier to fix when something goes wrong.</li>
+  <li>Easier to see the differences when something changes.</li>
+</ul>
+
+I suppose these benefits could also be had by using a standardized
+text-based (or xml-based) representation of the image for loading and
+saving, along with smarter tools for editing, but I'm not sure that
+making the tools smarter is such a good idea in the first place.
+Should my source code control system really be forced to know about my
+programming language?  What if I change languages?
+

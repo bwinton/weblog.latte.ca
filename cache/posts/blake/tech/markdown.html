@@ -1,0 +1,78 @@
+<p>Hopefully this all just works.  Include A&amp;B, and 4 &lt; 5.</p>
+<h1>Headers</h1>
+<h2>Smaller headers</h2>
+<blockquote>
+<p>Blockquotes.</p>
+</blockquote>
+<ul>
+<li>Lists</li>
+<li>of </li>
+<li>
+<p>things</p>
+<p>Blocks of python code could be here.</p>
+</li>
+</ul>
+<hr />
+<p><em>etc</em>, <strong>etc</strong>.</p>
+<p>Okay, so now that I’ve determined that it works, here’s how I did it:
+I added a new entry parser, called pymarkdown.py, to my plugins
+directory.  The content of the code looks like this:</p>
+<pre class="code literal-block"><span></span><span class="n">FILE_EXT</span> <span class="o">=</span> <span class="s1">&#39;md&#39;</span>
+
+<span class="n">__version__</span> <span class="o">=</span> <span class="s1">&#39;pymarkdown 0.1&#39;</span>
+<span class="n">__author__</span> <span class="o">=</span> <span class="s1">&#39;Blake Winton &lt;bwinton+python@latte.ca&gt;&#39;</span>
+
+<span class="kn">import</span> <span class="nn">markdown</span>
+
+<span class="k">try</span><span class="p">:</span>
+    <span class="kn">from</span> <span class="nn">Pyblosxom</span> <span class="kn">import</span> <span class="n">tools</span>
+<span class="k">except</span> <span class="ne">ImportError</span><span class="p">:</span>
+    <span class="k">pass</span>
+
+<span class="k">def</span> <span class="nf">cb_entryparser</span><span class="p">(</span><span class="n">entryparsingdict</span><span class="p">):</span>
+       <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">       Register self as markdown file handler</span>
+<span class="sd">       &quot;&quot;&quot;</span>
+       <span class="n">entryparsingdict</span><span class="p">[</span><span class="n">FILE_EXT</span><span class="p">]</span> <span class="o">=</span> <span class="n">parse</span>
+       <span class="k">return</span> <span class="n">entryparsingdict</span>
+
+<span class="k">def</span> <span class="nf">parse</span><span class="p">(</span><span class="n">filename</span><span class="p">,</span> <span class="n">request</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    We just read everything off the file here, using the filename as</span>
+<span class="sd">    title</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">entrydata</span> <span class="o">=</span> <span class="p">{}</span>
+
+    <span class="n">f</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="n">filename</span><span class="p">,</span> <span class="s2">&quot;r&quot;</span><span class="p">)</span>
+    <span class="n">lines</span> <span class="o">=</span> <span class="n">f</span><span class="o">.</span><span class="n">readlines</span><span class="p">()</span>
+    <span class="n">f</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+
+    <span class="c1"># strip off the first line and use that as the title.</span>
+    <span class="n">title</span> <span class="o">=</span> <span class="n">lines</span><span class="o">.</span><span class="n">pop</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span><span class="o">.</span><span class="n">strip</span><span class="p">()</span>
+    <span class="n">entrydata</span><span class="p">[</span><span class="s1">&#39;title&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">title</span>
+
+    <span class="c1"># absorb meta data lines which begin with a # and consist</span>
+    <span class="c1"># of a name and a value</span>
+    <span class="k">while</span> <span class="n">lines</span> <span class="ow">and</span> <span class="n">lines</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">startswith</span><span class="p">(</span><span class="s2">&quot;#&quot;</span><span class="p">):</span>
+        <span class="n">meta</span> <span class="o">=</span> <span class="n">lines</span><span class="o">.</span><span class="n">pop</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
+        <span class="n">meta</span> <span class="o">=</span> <span class="n">meta</span><span class="p">[</span><span class="mi">1</span><span class="p">:]</span><span class="o">.</span><span class="n">strip</span><span class="p">()</span>     <span class="c1"># remove the hash</span>
+        <span class="n">meta</span> <span class="o">=</span> <span class="n">meta</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s2">&quot; &quot;</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
+        <span class="n">entrydata</span><span class="p">[</span><span class="n">meta</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">strip</span><span class="p">()]</span> <span class="o">=</span> <span class="n">meta</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">strip</span><span class="p">()</span>
+
+    <span class="c1"># join the rest of the lines as the story</span>
+    <span class="n">story</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">lines</span><span class="p">)</span>
+    <span class="n">story</span> <span class="o">=</span> <span class="n">markdown</span><span class="o">.</span><span class="n">markdown</span><span class="p">(</span> <span class="n">story</span> <span class="p">)</span>
+    <span class="n">entrydata</span><span class="p">[</span><span class="s1">&#39;body&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">story</span>
+
+    <span class="k">return</span> <span class="n">entrydata</span>
+</pre>
+
+
+<p>And you’re done.</p>
+<p>I guess you might be wondering why I would bother doing that, since
+both Amy and I are obviously comfortable writing straight HTML.  Well,
+<a href="http://www.drproject.org/">DrProject</a> is switching from a
+custom-built Wiki-ish-syntax parser to a <a href="http://www.freewisdom.org/projects/python-markdown/">third-party</a> Markdown parser,
+and I figured this would give me a bit of a headstart on getting used
+to the new syntax, and also give me a bit of a playground for testing
+out new features that I might want to add.</p>

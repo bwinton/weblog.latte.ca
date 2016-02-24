@@ -1,0 +1,40 @@
+<p>A few weeks ago I started a new full-time contract at <a href="http://mozillamessaging.com/">Mozilla
+Messaging</a> (a.k.a. the people who brought you
+Thunderbird).  I meant to post this on the Wednesday after I started, but
+didn’t get around to it until now.  So, here you go, my notes from just
+after I started a new job.</p>
+<p>It has been a pretty crazy couple of days, both because I’m not that used
+to working for a full 8 hours on one thing, and because I’m at the point
+where there’s still so much to learn that I could spend all my time
+researching stuff, and never get anything done.</p>
+<p>But even with all the stuff for me to learn, I feel like I’ve made a fair
+bit of progress.  There were a few bugs assigned to me, based on <a href="http://hg.mozilla.org/comm-central/rev/98a7de404c08">a
+previous patch</a>, as
+well as a couple of things left to do to get <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=45715">the feature</a> working, so I jumped
+right in to those.  After I had new patches up for review on all of those
+bugs, I talked with <a href="http://clarkbw.net/blog/">Bryan Clark</a> about what bugs
+I should tackle next.  He and <a href="http://ascher.ca/blog/">David Ascher</a> both
+suggested that the new <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=autoconfig">automatic mail server config</a> dialog could use a
+bit of love.</p>
+<p>This morning, I did some investigation on group email addresses for <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=496440">one of
+the bugs</a> I’m working
+on, and took a look at how the autoconfig dialog was put together so that I
+wouldn’t sound like I was completely lost in the meeting.  (XUL, CSS, and
+Javascript.  No surprises there.  :)  Then, after the <a href="https://wiki.mozilla.org/Thunderbird/StatusMeetings/2009-06-09">Status
+Meeting</a>,
+Bryan and I chatted a bit about what the various bugs were that he had
+assigned to me, and what sort of things I might look into to try and fix
+them.  A few hours later, I had a fix for <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=490105">one of them</a>, and applied a similar
+fix to <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=490106">another</a>.  (As
+an aside, you’ve got to love the 3 hour investigation which ends up being a
+9-character change.  At least while investigating the bug, I learned a lot
+about <a href="https://developer.mozilla.org/en/XUL/hbox">hboxes</a>, <a href="https://developer.mozilla.org/en/XUL/vbox">vboxes</a>, <a href="https://developer.mozilla.org/en/XUL/Attribute/flex">flexes</a>, <a href="https://developer.mozilla.org/en/XUL/grid">grids</a>, and <a href="https://developer.mozilla.org/en/XUL/description">descriptions</a>, which will hopefully
+come in handy in future bugs.  :)  Finally, I ended the day by reading a
+review of a patch I submitted on Monday morning, making some tweaks to my
+code, and resubmitting it.</p>
+<p>The final thing that amazes me is that each day is taking up pretty much a
+full page of my log book, which is <em>way</em> more than usual.  Most of the days
+last month got a line or two.  Really full days would maybe get half a
+page.  But yesterday and today were a solid page, chock full of
+information, each.  I wonder how long this trend will continue.  I hope it
+keeps on going like this for a long time.</p>

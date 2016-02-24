@@ -1,0 +1,68 @@
+<p>A few people recently asked me about building Thunderbird on the latest version
+of Mac OS X.  Since I have it working, and to give myself a place to point to
+the next time they ask, I figured it would be a good idea to blog about it.</p>
+<p>So, here’s my <code>.mozconfig</code>.</p>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29</pre></div></td><td class="code"><pre class="code literal-block"><span></span><span class="c1"># Debug .mozconfig</span>
+mk_add_options <span class="nv">MOZ_MAKE_FLAGS</span><span class="o">=</span>-j4
+mk_add_options <span class="nv">MOZ_OBJDIR</span><span class="o">=</span>@TOPSRCDIR@/../objdir-<span class="sb">`</span>basename <span class="se">\`</span>pwd<span class="se">\`</span><span class="sb">`</span>-<span class="sb">`</span>hg branch<span class="sb">`</span>
+<span class="c1"># mk_add_options AUTOCONF=autoconf213</span>
+ac_add_options --enable-application<span class="o">=</span>mail
+ac_add_options --enable-extensions<span class="o">=</span>default,inspector
+ac_add_options --enable-inspector-apis
+
+<span class="c1"># Compilation options</span>
+ac_add_options --disable-optimize
+ac_add_options --enable-debug
+ac_add_options --enable-tests
+ac_add_options --disable-jemalloc
+<span class="c1">#ac_add_options --enable-trace-malloc</span>
+ac_add_options --enable-chrome-format<span class="o">=</span>symlink
+
+ac_add_options --with-macos-sdk<span class="o">=</span>/Developer/SDKs/MacOSX10.7.sdk
+ac_add_options --enable-macos-target<span class="o">=</span>10.7
+
+<span class="c1"># For NSS symbols</span>
+<span class="nb">export</span> <span class="nv">MOZ_DEBUG_SYMBOLS</span><span class="o">=</span>1
+<span class="c1">#ac_add_options --enable-debug-symbols=&quot;-gdwarf-2&quot;</span>
+
+<span class="c1">#Use ccache</span>
+<span class="c1">#ac_add_options --with-ccache=/usr/local/bin/ccache</span>
+
+<span class="c1"># We don&#39;t have GCC anymore, since XCode 4.2, so use clang instead.</span>
+<span class="nv">CC</span><span class="o">=</span>clang
+<span class="nv">CXX</span><span class="o">=</span>clang++
+</pre>
+</td></tr></table>
+
+<p>There are probably a bunch of things I don’t really need in there, so if anyone
+wants to take it, and cut it down to the minimal set, I would definitely
+appreciate it.  But in the meantime, this works for me, and will probably work
+for you, too.</p>

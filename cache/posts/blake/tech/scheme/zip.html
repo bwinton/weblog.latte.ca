@@ -1,0 +1,47 @@
+<p>I mentioned in the previous entry that I was missing Python's List
+Comprehensions.  Well, I've gotten a little closer to having them.
+For some reason, LispMe doesn't come with a <tt>zip</tt> method,
+and you can only get <tt>map</tt> by importing a "<tt>Standard
+Library</tt>" memo.  So, I had to write my own version of zip, and
+here it is, for anyone else who might find it useful.</p>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3
+4</pre></div></td><td class="code"><pre class="code literal-block"><span></span><span class="p">(</span><span class="k">define </span><span class="p">(</span><span class="nf">zip</span> <span class="nv">s1</span> <span class="nv">s2</span><span class="p">)</span>
+  <span class="p">(</span><span class="k">if </span><span class="p">(</span><span class="k">or </span><span class="p">(</span><span class="nb">null? </span><span class="nv">s1</span><span class="p">)</span> <span class="p">(</span><span class="nb">null? </span><span class="nv">s2</span><span class="p">))</span> <span class="o">&#39;</span><span class="p">()</span>
+    <span class="p">(</span><span class="nb">cons </span><span class="p">(</span><span class="nb">list </span><span class="p">(</span><span class="nb">car </span><span class="nv">s1</span><span class="p">)</span> <span class="p">(</span><span class="nb">car </span><span class="nv">s2</span><span class="p">))</span>
+      <span class="p">(</span><span class="nf">z</span> <span class="p">(</span><span class="nb">cdr </span><span class="nv">s1</span><span class="p">)</span> <span class="p">(</span><span class="nb">cdr </span><span class="nv">s2</span><span class="p">)))))</span>
+</pre>
+</td></tr></table>
+
+<p>Along with my halfway function, redefined to be <tt>(define
+(halfway x) (/ (+ (car x) (cadr x)) 2))</tt>, I can now write
+<tt>(map halfway (zip current-point next-point))</tt> to get the
+point halfway between where I am, and where I am going to.</p>
+<p>I also came to another realization.  I was planning on defining a
+<tt>current-point</tt>, and using <tt>set!</tt> to update it
+to the new halfway point, but when I think about it, I don't really
+care what the current point is at any time other than processing, so
+there's no particular need to set it, and instead I should just pass
+it around as a parameter, making my iter function (and I just made up
+the name "iter function", based on the &lt;a href=
+"http://mitpress.mit.edu/sicp/full-text/book/book-Z-H-10.html#%_sec_1.1.7"</p>
+<blockquote>
+<p><tt>sqrt-iter</tt></a> function in "Structure and Interpretation
+of Computer Programs") look something like this:</p>
+</blockquote>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3
+4
+5
+6</pre></div></td><td class="code"><pre class="code literal-block"><span></span><span class="p">(</span><span class="k">define </span><span class="p">(</span><span class="nf">triangle-iter</span> <span class="nv">start</span> <span class="nv">num-iters</span><span class="p">)</span>
+  <span class="p">(</span><span class="k">if </span><span class="p">(</span><span class="nb">positive? </span><span class="nv">num-iters</span><span class="p">)</span>
+    <span class="p">(</span><span class="k">begin </span><span class="p">(</span><span class="nf">draw-point</span> <span class="nv">start</span><span class="p">)</span>
+    <span class="p">(</span><span class="nf">triangle-iter</span>
+      <span class="p">(</span><span class="nb">map </span><span class="nv">halfway</span> <span class="p">(</span><span class="nf">zip</span> <span class="nv">current-point</span> <span class="nv">next-point</span><span class="p">))</span>
+      <span class="p">(</span><span class="nb">- </span><span class="nv">num-iters</span> <span class="mi">1</span><span class="p">)))))</span>
+</pre>
+</td></tr></table>
+
+<p>Does that look appropriately Scheme-ish, do you think?</p>

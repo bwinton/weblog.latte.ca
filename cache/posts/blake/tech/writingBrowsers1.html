@@ -1,0 +1,20 @@
+<p>A while ago, I wrote an HtmlViewer component for the Palm.  It
+was hard, and I made a lot of assumptions on the basis that we
+would be getting our data from a server that we would also write,
+so it made more sense to have the server do anything that was
+necessary to the input stream to make it easier for the small
+device to display.  (Things such as figuring out the widths of
+table cells, and making sure that any start tag also contained an
+end tag.  You know, simple stuff.)  The problem came when we
+started using my HtmlViewer to display content that we got from a
+client.  The content was a complete mix of tags, and had no hope
+in hell of validating.  As well, the server guys were swamped
+with other requests, and didn't want to write the code it would
+take to fix the html up.  So my component broke.  Colin (a
+co-worker) suggested that we just modify what I had to do what we
+wanted.  After some discussion, I convinced him that it would be
+faster to re-write what was there so that it didn't make the same
+assumptions.</p>
+<br />
+(To be continued...)
+

@@ -1,0 +1,86 @@
+<p>I was reading <a href="http://oreilly.com/catalog/9780596808303">Making Software</a>
+by Andy Oram and Greg Wilson, and got to the chapter about An Automated
+Fault Prediction System.  It’s a pretty neat chapter, and it got me
+wondering which files in the <a href="http://mxr.mozilla.org/comm-central/">Thunderbird code base</a> had the most bugs.  Now, I don’t have
+all the info I need, but I figured an easy first pass would be to go
+through the commit logs, and for each commit that started with “bug ”, add
+one to the files changed in that commit.  Hmm, that sounded unintuitive.
+Let me just paste (<a href="/static/blake/test.py">and link</a>) the code:</p>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24</pre></div></td><td class="code"><pre class="code literal-block"><span></span><span class="kn">from</span> <span class="nn">mercurial</span> <span class="kn">import</span> <span class="n">ui</span><span class="p">,</span> <span class="n">hg</span>
+<span class="kn">import</span> <span class="nn">operator</span>
+<span class="kn">import</span> <span class="nn">re</span>
+
+<span class="n">ext</span> <span class="o">=</span> <span class="n">re</span><span class="o">.</span><span class="n">compile</span><span class="p">(</span><span class="s2">&quot;(\.c(pp)?|\.js|\.xml)$&quot;</span><span class="p">)</span>
+
+<span class="n">repo</span> <span class="o">=</span> <span class="n">hg</span><span class="o">.</span><span class="n">repository</span><span class="p">(</span><span class="n">ui</span><span class="o">.</span><span class="n">ui</span><span class="p">(),</span> <span class="s2">&quot;.&quot;</span><span class="p">)</span>
+<span class="n">changes</span> <span class="o">=</span> <span class="p">[</span><span class="n">repo</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">repo</span>
+                   <span class="k">if</span> <span class="n">repo</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">.</span><span class="n">description</span><span class="p">()</span><span class="o">.</span><span class="n">lower</span><span class="p">()</span><span class="o">.</span><span class="n">startswith</span><span class="p">(</span><span class="s2">&quot;bug &quot;</span><span class="p">)]</span>
+
+<span class="n">master</span> <span class="o">=</span> <span class="p">{}</span>
+
+<span class="k">for</span> <span class="n">change</span> <span class="ow">in</span> <span class="n">changes</span><span class="p">:</span>
+  <span class="n">files</span> <span class="o">=</span> <span class="p">[</span><span class="n">f</span> <span class="k">for</span> <span class="n">f</span> <span class="ow">in</span> <span class="n">change</span><span class="o">.</span><span class="n">files</span><span class="p">()</span> <span class="k">if</span> <span class="n">ext</span><span class="o">.</span><span class="n">search</span><span class="p">(</span><span class="n">f</span><span class="p">)]</span>
+  <span class="k">for</span> <span class="n">f</span> <span class="ow">in</span> <span class="n">files</span><span class="p">:</span>
+    <span class="n">master</span><span class="p">[</span><span class="n">f</span><span class="p">]</span> <span class="o">=</span> <span class="n">master</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">f</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span> <span class="o">+</span> <span class="mi">1</span>
+
+
+<span class="n">files</span> <span class="o">=</span> <span class="n">master</span><span class="o">.</span><span class="n">items</span><span class="p">()</span>
+<span class="n">files</span><span class="o">.</span><span class="n">sort</span><span class="p">()</span>
+<span class="n">counts</span> <span class="o">=</span> <span class="n">master</span><span class="o">.</span><span class="n">items</span><span class="p">()</span>
+<span class="n">counts</span><span class="o">.</span><span class="n">sort</span><span class="p">(</span><span class="n">key</span><span class="o">=</span><span class="n">operator</span><span class="o">.</span><span class="n">itemgetter</span><span class="p">(</span><span class="mi">1</span><span class="p">))</span>
+<span class="n">counts</span><span class="o">.</span><span class="n">reverse</span><span class="p">()</span>
+<span class="k">print</span> <span class="s2">&quot;</span><span class="se">\n</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">join</span><span class="p">([</span><span class="n">c</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">+</span> <span class="s2">&quot;:&quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">c</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span> <span class="k">for</span> <span class="n">c</span> <span class="ow">in</span> <span class="n">counts</span><span class="p">[:</span><span class="mi">10</span><span class="p">]])</span>
+</pre>
+</td></tr></table>
+
+<p>And so, without further ado, here are the files that have been changed the
+most in bug fixes, and the number of times they've been changed:</p>
+<ul>
+<li>mail/base/content/mailWindowOverlay.js:109</li>
+<li>suite/browser/browser-prefs.js:73</li>
+<li>suite/browser/navigator.js:70</li>
+<li>mail/base/content/msgMail3PaneWindow.js:69</li>
+<li>mail/app/profile/all-thunderbird.js:67</li>
+<li>suite/common/src/nsSessionStore.js:66</li>
+<li>mail/components/compose/content/MsgComposeCommands.js:60</li>
+<li>mailnews/imap/src/nsImapMailFolder.cpp:56</li>
+<li>suite/browser/tabbrowser.xml:53</li>
+<li>mail/base/content/msgHdrViewOverlay.js:52</li>
+</ul>
+<hr />
+<p><small>As a side note, for the <a href="http://mxr.mozilla.org/mozilla-central/">mozilla repo</a> it looks like this:</small></p>
+<ul>
+<li><small>js/src/jstracer.cpp:780</small></li>
+<li><small>browser/base/content/browser.js:654</small></li>
+<li><small>layout/base/nsCSSFrameConstructor.cpp:410</small></li>
+<li><small>layout/base/nsPresShell.cpp:400</small></li>
+<li><small>js/src/jsobj.cpp:399</small></li>
+<li><small>browser/base/content/tabbrowser.xml:397</small></li>
+<li><small>widget/src/windows/nsWindow.cpp:390</small></li>
+<li><small>toolkit/components/places/src/nsNavHistory.cpp:374</small></li>
+<li><small>js/src/jsinterp.cpp:345</small></li>
+<li><small>js/src/jsapi.cpp:343</small></li>
+</ul>

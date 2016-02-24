@@ -1,0 +1,29 @@
+<p>One of the big questions I had when I started writing patches was who I
+should ask to review them.  Now that I’ve been in the community for a
+while, I’ve got a much better sense of who I should be talking to for the
+type of things I’m likely to write, but there are still times when I want
+to make a change in a part of the code that I haven’t touched before, and
+I’m not sure who to ask.  In those cases, I usually fall back to a fairly
+simple (if non-obvious) set of steps to try and figure out who to pick.</p>
+<ol>
+<li>Get the list of files I’ve changed.</li>
+<li>Get the hg log for those files.</li>
+<li>Check through the log for “r=”, and “sr=”.</li>
+</ol>
+<p>Of course, that’s a fairly easy set of steps to automate, and so I present
+my first cut at <a href="https://github.com/bwinton/Mozilla-Tools/blob/master/getReviewer.py">the automated reviewer chooser</a>!</p>
+<p>Of course, there are a lot of things I’ld like to do with this, such as:</p>
+<ul>
+<li>Improving the documentation.</li>
+<li>Checking to see how well this script would have done on previous commits.</li>
+<li>Taking into account the length of the queues for the reviewers.</li>
+<li>Adding some sort of recent-ness calculations.</li>
+</ul>
+<p>But I think that this tool is useful enough in its current state that
+releasing it and getting feedback on what to actually work on would be a
+win.</p>
+<p>To use it, be in a mercurial source repo, and type <code>getReviewer.py</code> to get
+a list of suggested reviewers for the current differences, or
+<code>getReviewer.py temp.diff</code> or <code>getReviewer.py
+https://bugzilla.mozilla.org/attachment.cgi\?id\=536017</code> to specify a
+different set of changes.</p>

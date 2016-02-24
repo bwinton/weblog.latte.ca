@@ -1,0 +1,74 @@
+<p>People love <a href="https://blog.mozilla.org/ux/2012/06/firefox-heatmap-study-2012-results-are-in/">heatmaps</a>.</p>
+<p>They’re a great way to show how much various UI elements are used in relation
+to each other, and are much easier to read at a glance than a table of click-
+counts would be.  They can also reveal hidden patterns of usage based on the
+locations of elements, let us know if we’re focusing our efforts on the
+correct elements, and tell us how effective our communication about new
+features is.  Because they’re so useful, one of the things I am doing in my
+new role is setting up the framework to provide our UX team with automatically
+updating heatmaps for both Desktop and Android Firefox.
+<!-- TEASER_END --></p>
+<p>Unfortunately, we can’t just wave our wands and have a heatmap magically
+appear.  Creating them takes work, and one of the most tedious processes is
+figuring out where each element starts and stops.  Even worse, we need to
+repeat the process for each platform we’re planning on displaying. This is one
+of the primary reasons we haven’t run a heatmap study since 2012.</p>
+<p>In order to not spend all my time generating the heatmaps, I had to reduce the
+effort involved in producing these visualizations.</p>
+<p>Being a programmer, my first inclination was to <a href="https://github.com/bwinton/d3Experiments/blob/gh-pages/heatmap.scratchpad.js">write a
+program</a>
+to calculate them, and that sort of worked for the first version of the
+heatmap, but there were some difficulties.  To collect locations for all the
+elements, we had to display all the elements.</p>
+<p><img alt="Firefox in the process of being customized" src="https://raw.githubusercontent.com/bwinton/d3Experiments/gh-pages/images/Darwin/HeatmapCustomize.png" title="Firefox in the process of being customized." /></p>
+<p>Customize mode (as shown above) was an obvious choice since it shows
+everything you could click on almost by definition, but it led people to think
+that we weren’t showing which elements were being clicked the most, but
+instead which elements people customized the most.  So that was out.</p>
+<p>Next we tried putting everything in the toolbar, or the menu, but those were a
+little too cluttered even without leaving room for labels, and too wide (or
+too tall, in the case of the menu).</p>
+<p><img alt="A shockingly busy toolbar" src="https://raw.githubusercontent.com/bwinton/d3Experiments/gh-pages/images/Darwin/HeatmapToolbar.png" title="A shockingly busy toolbar." /></p>
+<p>Similarly, I couldn’t fit everything into the menu panel either.  The only
+solution was to resort to some <a href="http://flyingmeat.com/acorn/">Photoshop</a>-trickery
+to fit all the buttons in, but that ended up breaking the script I was using
+to locate the various elements in the UI.</p>
+<style>
+img[alt="A surprisingly tall menu panel"] {
+  width: 270px;
+  height: 915px;
+  margin-left: calc(50% - 135px);
+}
+</style>
+
+<p><img alt="A surprisingly tall menu panel" src="https://raw.githubusercontent.com/bwinton/d3Experiments/gh-pages/images/Darwin/HeatmapMenu.png" title="A surprisingly tall menu panel." /></p>
+<p>Since I couldn’t automatically figure out where everything was, I figured we
+might as well use a nicely-laid out, partially generated image, and calculate
+the positions (mostly-)manually.</p>
+<p><img alt="The current version of the heatmap (Note: This is not the real data.)" src="http://weblog.latte.ca/images/blake/SampleHeatmap.png" title="The current version of the heatmap. Note: This is not the real data." /></p>
+<p>I had foreseen the need for different positions for the widgets when the
+project started, and so I put <a href="https://github.com/bwinton/d3Experiments/blob/gh-pages/data/Darwin/widgets.csv">the widget
+locations</a>
+in their own file from the start.  This meant that I could update them without
+changing the code, which made it a little nicer to see what’s changed between
+versions, but still required me to reload the whole page every time I changed
+a position or size, which would just have taken way too long.  I needed
+something that could give me much more immediate feedback.</p>
+<p>Fortunately, I had recently finished watching a
+<a href="https://www.youtube.com/watch?v=PFxWmjiUWII&amp;index=1&amp;list=PLI_sHchSmdCDLfLl5uTnsaRB54tDlRubK">series</a>
+<a href="https://www.youtube.com/watch?v=sK6fLTJ9vf0&amp;index=1&amp;list=PLI_sHchSmdCC2Yg2IXzhGUc2V6dfZK_dV">of</a>
+<a href="https://www.youtube.com/watch?v=h60j8k3SOrA&amp;list=PLI_sHchSmdCBa3CrSwobdZWU-tV_ZeaCO&amp;index=1">videos</a>
+from <a href="http://enja.org/">Ian Johnson</a> (<a href="https://twitter.com/enjalot">@enjalot</a>
+on twitter) where he used a tool he made called
+<a href="http://tributary.io/">Tributary</a> to do some rapid prototyping of data
+visualization code.  It seemed like a good fit for the quick moving around of
+elements I was trying to do, and so I copied a bunch of the code and data in,
+and got to work moving things around.</p>
+<p>I did encounter a few problems: Tributary wasn’t functional in Firefox Nightly
+(but I could use Chrome as a workaround) and occasionally sometimes trying to
+move the cursor would change the value slider instead.  Even with these
+glitches it only took me an hour or two to get from set-up to having all the
+numbers for the final result!  And the best part is that since it's all open
+source, you can take a look at
+<a href="http://tributary.io/inlet/2ba87a4bc8d56f3b4cfc">the final result</a>, or
+<a href="https://github.com/bwinton/d3Experiments/tree/gh-pages">fork it yourself</a>!</p>

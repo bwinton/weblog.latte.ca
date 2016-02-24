@@ -1,0 +1,61 @@
+<p>Just because that would be too easy by itself, I'm going to follow
+<a
+href="http://www.third-bit.com/drproject/drproject-dev/wiki/DrProjectOnCygwin"
+>the instructions for Cygwin</a>, and we'll see what happens.</p>
+
+<p>Okay, it's going fairly well so far...<br/>
+And then I get to step 3:<br/>
+<pre>Download, compile, and install sqlite from sources. Use version 3.3.5.</pre>
+To compile it, I use "./configure", "make",
+"make install", but that gives me the following error:
+<pre><code>$ make install
+tclsh ./tclinstaller.tcl 3.3
+can't read "env(DESTDIR)": no such variable
+    while executing
+"set LIBDIR $env(DESTDIR)[lindex $auto_path 0]"
+    (file "./tclinstaller.tcl" line 10)
+make: *** [tcl_install] Error 1</code></pre></p>
+
+<p><a href="http://www.sqlite.org/cvstrac/wiki/wiki?p=HowToCompile">This
+page</a> tells me to remove each occurance of "$(DESTDIR)" from
+Makefile, so I did, and it still didn't work, so I tried commenting out
+"HAVE_TCL = 1" and then it all seemed to work just fine.</p>
+
+<p>Until I got to the line:
+<pre>chmod +x /lib/python2.4/site-packages/pysqlite-2.2.2-py2.4-cygwin-1.5.19-i686.egg/pysqlite2/_pysqlite.dll</pre>
+which failed, but it was easy enough to change it to:
+<pre>chmod +x /lib/python2.4/site-packages/pysqlite-2.2.2-py2.4-cygwin-1.5.19-i686.egg/pysqlite2/_sqlite.dll</pre>
+which worked.</p>
+
+
+<p>Running
+<pre>drproject-server --debug --port 8080 --auto-reload --create=/tmp/drproject</pre>
+gave me the error:
+<pre>drproject-server: error: --create option does not take a value</pre>
+
+So I tried
+<pre>drproject-server --debug --port 8080 --auto-reload --create</pre>
+which said:
+<pre>drproject-server: error: incorrect number of arguments</pre>
+
+So I finally tried
+<pre>drproject-server --debug --port 8080 --auto-reload --create /tmp/drproject</pre>
+and it seemed good.</p>
+
+<p>Finally, I ran
+<pre>drproject-server --debug --port 8080 --auto-reload /tmp/drproject</pre>
+And it was good...</p>
+
+<p>So I created a script called "drproject-server-profile", to profile
+it, containing the following lines
+<pre><code>
+#!/usr/bin/python
+# EASY-INSTALL-ENTRY-SCRIPT: 'DrProject==1.0dev-r2084','console_scripts','drproject-server'
+__requires__ = 'DrProject==1.0dev-r2084'
+import sys
+from pkg_resources import load_entry_point
+
+import profile
+profile.run("sys.exit(load_entry_point('DrProject==1.0dev-r2084', 'console_scripts', 'drproject-server')())", 'profile.tmp')</code></pre>
+and <a href="http://bwinton.latte.ca/profile.tmp">here</a> is the data!</p>
+

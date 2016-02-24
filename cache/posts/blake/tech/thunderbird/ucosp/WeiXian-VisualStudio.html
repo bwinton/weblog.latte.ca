@@ -1,0 +1,41 @@
+<p>For your reading pleasure this week, we have a guest post from <a href="mailto:wxwoo@uwaterloo.ca">Wei Xian
+Woo</a>.  Wei is a student working on
+<a href="http://www.mozillamessaging.com/">Thunderbird</a> as part of
+<a href="http://ucosp.wordpress.com/">UCOSP</a>, and has just had <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=408338">his first
+bug</a> marked as
+FIXED.  Anyways, that’s enough out of me.  Here’s Wei’s post:</p>
+<blockquote>
+<h3>Programming Thunderbird in Visual Studio.</h3>
+<p>During this term’s Undergraduate Capstone Open Source Projects (UCOSP)
+Code Sprint held at the University of Toronto in January, I wrote a
+simple Python script for the Thunderbird team to make setting up a
+Visual C++ project for Thunderbird slightly easier for those of us
+working on Windows. Blake suggested making this script public so others
+could benefit from it, so here it is! The script is generic enough to be
+used for any project, not just Thunderbird. Feel free to use it and make
+modifications as you see fit :)</p>
+<h3>Using the script to create a Visual C++ project for Thunderbird</h3>
+<p>Create an empty Visual C++ project in Visual Studio.</p>
+<p>From the command prompt launched by mozilla-build\start-msvc9.bat, do:</p>
+<pre class="code literal-block"><span></span>python /path/to/refreshvcproj.py
+--vcproj=/path/to/thunderbird.vcproj --dir=/path/to/gecko-sdk
+--dir=/path/to/mozilla/comm-central/mozilla/xpcom
+--dir=/path/to/mozilla/comm-central/mail
+</pre>
+
+
+<p>All files in the specified directories will be included in the project.
+I suggest including only the directories you will be working with.</p>
+<h3>Configuring the project for debugging:</h3>
+<p>Open the VC++ project file in Visual Studio, and then open the project's
+Properties.</p>
+<p>Go to: Configuration Properties -&gt; Debugging.</p>
+<p>Set Command to \path\to\objdir\mozilla\dist\bin\thunderbird.exe</p>
+<p>Set Environment to XPCOM_DEBUG_BREAK=warn</p>
+<h3>And… you’re done!</h3>
+<p>For better C++ IntelliSense, you might also want to consider getting
+Visual Assist X (an add-on for VS).</p>
+<h3>Happy coding!</h3>
+</blockquote>
+<p>And you can find the script <a href="/static/blake/refreshvcproj.py">over here</a>.</p>
+<p>Thanks, Wei!</p>

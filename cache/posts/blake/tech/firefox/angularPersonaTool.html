@@ -1,0 +1,26 @@
+<p>In my <a href="http://weblog.latte.ca/blake/tech/firefox/cssLines.html">previous blog post</a>, I mentioned a tool
+I’m writing to make it easy for designers to link mockups to live bugs.  But I
+didn’t mention that I had a reasonably-working version of the tool written in
+<a href="http://backbonejs.org/">Backbone</a> which I’ve decided to port to <a href="http://angularjs.org/">Angular</a>.  The reasons why are largely beside the point of this
+blog post, but I’ll try to sum them up by saying that I reached a point where
+Backbone seemed to be confusing me more than helping me, and Angular got a
+<em>lot</em> of good press at <a href="http://fluentconf.com/fluent2013">FluentConf</a> this
+year.</p>
+<p>So this morning’s task in <a href="https://github.com/bwinton/arewecreatingyet/commits/feature/angular">the re-write</a> was to
+re-hook up the <a href="https://login.persona.org/about">Persona</a> integration.  I had
+read recently that when you had a lot of dom-manipulation functions, you should
+probably put that code in a directive, and since I hadn’t written an Angular
+directive yet, I figured this would be a great time to learn how.  Writing <a href="https://github.com/bwinton/arewecreatingyet/blob/feature/angular/views/index.html#L30">the
+html</a>
+was pretty easy, of course, and most of the code from the existing
+implementation (which was largely based on the code from the <a href="https://github.com/jbuck/express-persona/blob/master/README.md">express-persona
+readme</a>) could
+be ported over fairly quickly.  The only tricky part I ran into was figuring
+out that I needed to include <a href="https://github.com/bwinton/angular-tools/blob/master/persona.js#L36"><code>restrict: 'E'</code></a> in the
+<a href="http://docs.angularjs.org/guide/directive#directivedefinitionobject">Directive Definition Object</a>.  After I
+was done, I noticed that there really wasn’t that much in the code that had
+anything to do with the tool I’m writing, and thus I pulled it out into a
+separate repo so that other people can use it.</p>
+<p>And with that, I announce <a href="https://github.com/bwinton/angular-tools/">Angular-Tools</a>, a repo containing one or more tools
+which you might find useful if you build Angular apps.  As always, pull
+requests and bug reports welcome!</p>

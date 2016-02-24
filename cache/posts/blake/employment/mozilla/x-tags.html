@@ -1,0 +1,82 @@
+<p>As a side-project, I’ve been working on a prototype which is heavily based on
+<a href="https://people.mozilla.com/~bwinton/australis-customization/customizationMode-liveDemo-i02.html">a demo page</a> from Stephen Horlander.  Now, that page is
+pretty amazing, but if you look at the source (using command-u or control-u in
+Firefox, and command-alt-u or control-alt-u in Chrome), you’ll see a lot of code
+that looks like this:</p>
+<pre class="code literal-block"><span></span><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;menuPanelButton subscribeButton&quot;</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;button&quot;</span><span class="nt">&gt;&lt;/div&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;label&quot;</span><span class="nt">&gt;</span>Subscribe<span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
+</pre>
+
+
+<p>and:</p>
+<pre class="code literal-block"><span></span><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;customizeToolbarItem&quot;</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;customizeToolbarItemIcon share&quot;</span><span class="nt">&gt;&lt;/div&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;customizeToolbarItemLabel&quot;</span><span class="nt">&gt;</span>Share<span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
+</pre>
+
+
+<p>Now, one or two of those would be fine, but when we get into more than that, the
+repetition really starts to bug me, and I think “Wouldn’t it be better if I
+could just write stuff like:</p>
+<pre class="code literal-block"><span></span><span class="nt">&lt;panel-button</span> <span class="na">type=</span><span class="s">&quot;subscribe&quot;</span><span class="nt">&gt;</span>Subscribe<span class="nt">&lt;/panel-button&gt;</span>
+…
+<span class="nt">&lt;toolbar-item</span> <span class="na">type=</span><span class="s">&quot;share&quot;</span><span class="nt">&gt;</span>Share<span class="nt">&lt;/toolbar-item&gt;</span>
+</pre>
+
+
+<p>instead?”  And it turns out I can, using a new library called
+<a href="http://mozilla.github.com/x-tag/">x-tag</a>!  The first thing I need to do is
+register the new tags I’ll be using.  That’s done with code like this:</p>
+<pre class="code literal-block"><span></span><span class="c1">// These first two lines are here because I’m using require.js, which I’ll</span>
+<span class="c1">// talk about in a future blog post…</span>
+<span class="nx">define</span><span class="p">(</span><span class="kd">function</span> <span class="p">(</span><span class="nx">require</span><span class="p">)</span> <span class="p">{</span>
+  <span class="nx">require</span><span class="p">([</span><span class="s2">&quot;jquery&quot;</span><span class="p">,</span> <span class="s2">&quot;x-tag&quot;</span><span class="p">],</span> <span class="kd">function</span><span class="p">(</span><span class="nx">$</span><span class="p">,</span> <span class="nx">xtag</span><span class="p">)</span> <span class="p">{</span>
+
+    <span class="c1">// And this is the meat of the functionality.</span>
+    <span class="c1">// First, we’ll register the new &quot;panel-button&quot; tag.</span>
+    <span class="nx">xtag</span><span class="p">.</span><span class="nx">register</span><span class="p">(</span><span class="s2">&quot;panel-button&quot;</span><span class="p">,</span> <span class="p">{</span>
+      <span class="nx">onCreate</span><span class="o">:</span> <span class="kd">function</span><span class="p">(){</span>
+        <span class="kd">var</span> <span class="nx">self</span> <span class="o">=</span> <span class="nx">$</span><span class="p">(</span><span class="k">this</span><span class="p">);</span>
+        <span class="c1">// When the tag is first seen, make the innerHTML be this stuff below.</span>
+        <span class="nx">self</span><span class="p">.</span><span class="nx">html</span><span class="p">(</span><span class="s2">&quot;&lt;div class=&#39;menuPanelButton &quot;</span> <span class="o">+</span> <span class="nx">self</span><span class="p">.</span><span class="nx">attr</span><span class="p">(</span><span class="s2">&quot;type&quot;</span><span class="p">)</span> <span class="o">+</span> <span class="s2">&quot;&#39;&gt;&quot;</span> <span class="o">+</span>
+                    <span class="s2">&quot;&lt;img src=&#39;images/button-&quot;</span> <span class="o">+</span> <span class="nx">self</span><span class="p">.</span><span class="nx">attr</span><span class="p">(</span><span class="s2">&quot;type&quot;</span><span class="p">)</span> <span class="o">+</span> <span class="s2">&quot;.png&#39;&quot;</span> <span class="o">+</span>
+                    <span class="s2">&quot;     class=&#39;button&#39;&gt;&quot;</span> <span class="o">+</span>
+                    <span class="s2">&quot;&lt;div class=&#39;label&#39;&gt;&quot;</span> <span class="o">+</span> <span class="nx">self</span><span class="p">.</span><span class="nx">text</span><span class="p">()</span> <span class="o">+</span> <span class="s2">&quot;&lt;/div&gt;&quot;</span> <span class="o">+</span> 
+                  <span class="s2">&quot;&lt;/div&gt;&quot;</span><span class="p">);</span>
+      <span class="p">},</span>
+    <span class="p">});</span>
+
+    <span class="c1">// And then, we’ll register the new &quot;toolbar-item&quot; tag.</span>
+    <span class="nx">xtag</span><span class="p">.</span><span class="nx">register</span><span class="p">(</span><span class="s2">&quot;toolbar-item&quot;</span><span class="p">,</span> <span class="p">{</span>
+      <span class="nx">onCreate</span><span class="o">:</span> <span class="kd">function</span><span class="p">(){</span>
+        <span class="kd">var</span> <span class="nx">self</span> <span class="o">=</span> <span class="nx">$</span><span class="p">(</span><span class="k">this</span><span class="p">);</span>
+        <span class="c1">// We could also replace this element with the html below, but I</span>
+        <span class="c1">// haven’t done that here because I haven’t needed to yet.</span>
+        <span class="nx">self</span><span class="p">.</span><span class="nx">html</span><span class="p">(</span><span class="s2">&quot;&lt;div class=&#39;customizeToolbarItem&#39;&gt;&quot;</span> <span class="o">+</span>
+                    <span class="s2">&quot;&lt;div class=&#39;customizeToolbarItemIcon &quot;</span> <span class="o">+</span> <span class="p">(</span><span class="nx">self</span><span class="p">.</span><span class="nx">attr</span><span class="p">(</span><span class="s2">&quot;type&quot;</span><span class="p">)</span> <span class="o">||</span> <span class="s2">&quot;&quot;</span><span class="p">)</span> <span class="o">+</span> <span class="s2">&quot;&#39;&gt;&lt;/div&gt;&quot;</span> <span class="o">+</span>
+                    <span class="s2">&quot;&lt;div class=&#39;customizeToolbarItemLabel&#39;&gt;&quot;</span> <span class="o">+</span> <span class="nx">self</span><span class="p">.</span><span class="nx">text</span><span class="p">()</span> <span class="o">+</span> <span class="s2">&quot;&lt;/div&gt;&quot;</span> <span class="o">+</span>
+                  <span class="s2">&quot;&lt;/div&gt;&quot;</span><span class="p">);</span>
+      <span class="p">},</span>
+    <span class="p">});</span>
+
+  <span class="p">});</span>
+<span class="p">});</span>
+</pre>
+
+
+<p>The second step is to replace all the old html with the new tags.  (I did
+that, too, of course.)  And there we go.  That’s it.  In the file I was
+modifying, the combination of that and moving the javascript out into a
+separate file took the html from 275 lines down to 146 lines, and let me more
+easily change the buttons around, and add new ones.  I call that a win, and
+from now on, whenever I see large blocks of repeated html, I’m going to be
+seriously tempted to switch them to an x-tag!</p>
+<p>One caveat I will mention is that in my first attempt, I tried to use both the
+<code>content</code> property, and the <code>onCreate</code> method, and that totally didn’t work,
+since the content would be replaced by the value of the content property long
+before I had a chance to muck around with it in the onCreate.  So in the future,
+I think I’ll just jump straight into using the onCreate method, since it’s not
+that much harder.</p>

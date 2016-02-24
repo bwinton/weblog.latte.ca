@@ -1,0 +1,57 @@
+<p>A while ago, I downloaded Aquamacs, an emacs port for OSX, and tried
+to switch to it as my default editor.  I mainly did it because I
+wanted an editor I could add functionality to, à la <a href="http://steve.yegge.googlepages.com/effective-emacs">Steve Yegge</a>.  I used it for a
+while, and got fairly proficient at it.  There were a lot of things
+about it I really liked, like the <a href="http://jblevins.org/projects/markdown-mode/">Markdown mode</a>, and the ability to edit
+files <a href="http://jeremy.zawodny.com/blog/archives/000983.html">on a remote host</a>, and the way I
+could write small functions in <a href="http://www.gnu.org/software/emacs/manual/html_mono/elisp.html">elisp</a> and use
+them to make me more productive.</p>
+<p>But while it worked, and worked well, I didn’t really write all that
+much extra elisp, and whenever I did, I didn’t really enjoy it.  So
+the other day, when I found myself <a href="http://weblog.jamisbuck.org/2005/4/10/text-editing-dilemma">reading a weblog</a> about the
+lack of a good graphical text editor on OSX, I found myself agreeing
+with him.  So when I read <a href="http://weblog.jamisbuck.org/2008/10/10/coming-home-to-vim">a later article</a> on how the
+author had finally switched back to vim, I thought that I might give
+vim another chance.</p>
+<p>Well, it turns out that vim is actually pretty close to a perfect text
+editor for me.  It’s got <a href="http://plasticboy.com/markdown-vim-mode/">Markdown support</a>, <a href="http://www.petersblog.org/node/466">remote file editing</a>, and not only can I write
+functions for it, I can <a href="http://www.vim.org/htmldoc/if_pyth.html">write them</a> in
+<a href="http://python.org/">Python</a>!  As an example, here’s Steve Yegge’s
+blog-check function in vim/python:</p>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13
+14
+15
+16
+17
+18</pre></div></td><td class="code"><pre class="code literal-block"><span></span><span class="k">function</span><span class="p">!</span> BlogCheck<span class="p">()</span>
+  <span class="k">python</span> <span class="o">&lt;&lt;</span> END
+<span class="p">:::</span><span class="n">python</span>
+<span class="kn">import</span> <span class="nn">re</span>
+<span class="kn">import</span> <span class="nn">vim</span>
+<span class="n">pattern</span> <span class="o">=</span> <span class="n">re</span><span class="o">.</span><span class="n">compile</span><span class="p">(</span> <span class="s2">r&quot;\s&quot;</span> <span class="p">)</span>
+<span class="n">count</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="k">for</span> <span class="n">line</span> <span class="ow">in</span> <span class="n">vim</span><span class="o">.</span><span class="n">current</span><span class="o">.</span><span class="n">buffer</span><span class="p">:</span>
+  <span class="n">line</span> <span class="o">=</span> <span class="n">pattern</span><span class="o">.</span><span class="n">sub</span><span class="p">(</span> <span class="s2">&quot;&quot;</span><span class="p">,</span> <span class="n">line</span> <span class="p">)</span>
+  <span class="n">count</span> <span class="o">+=</span> <span class="nb">len</span><span class="p">(</span><span class="n">line</span><span class="p">)</span>
+<span class="k">if</span> <span class="n">count</span> <span class="o">&lt;=</span> <span class="mi">5000</span><span class="p">:</span>
+  <span class="n">message</span> <span class="o">=</span> <span class="s2">&quot;Okay so far&quot;</span>
+<span class="k">else</span><span class="p">:</span>
+  <span class="n">message</span> <span class="o">=</span> <span class="s2">&quot;Dude, too long&quot;</span>
+<span class="k">print</span> <span class="s2">&quot;</span><span class="si">%s</span><span class="s2">:  </span><span class="si">%d</span><span class="s2"> chars, </span><span class="si">%d</span><span class="s2"> words&quot;</span> <span class="o">%</span> <span class="p">(</span><span class="n">message</span><span class="p">,</span> <span class="n">count</span><span class="p">,</span> <span class="n">count</span><span class="o">/</span><span class="mi">5</span><span class="p">)</span>
+<span class="p">:::</span><span class="n">vim</span>
+END
+<span class="k">endfunction</span>
+</pre>
+</td></tr></table>
