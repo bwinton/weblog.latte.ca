@@ -1,7 +1,8 @@
-.doit.db.db
+.doit.db
 
 bin
 cache
+dist
 include
 lib
 share
