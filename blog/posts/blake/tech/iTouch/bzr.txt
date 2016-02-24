@@ -1,0 +1,101 @@
+<!--
+.. title: Bazaar on the iPod Touch.
+.. date: 2007-12-28 15:36:28
+.. author: Blake Winton
+.. tags: bzr, itouch, python
+-->
+
+<p>Because I was curious, and because it has Python, I figured I'ld give it a
+try, and see what happened...<br/>
+The results are:</p>
+<pre># ./bzr selftest
+testing: /private/var/root/bzr-1.0/bzr
+   /private/var/root/bzr-1.0/bzrlib (1.0.0 python2.5.1.final.0)
+
+bzr: ERROR: exceptions.ImportError: No module named pyexpat
+
+Traceback (most recent call last):
+  File "/private/var/root/bzr-1.0/bzrlib/commands.py", line 802, in run_bzr_catch_errors
+    return run_bzr(argv)
+  File "/private/var/root/bzr-1.0/bzrlib/commands.py", line 758, in run_bzr
+    ret = run(*run_argv)
+  File "/private/var/root/bzr-1.0/bzrlib/commands.py", line 492, in run_argv_aliases
+    return self.run(**all_cmd_args)
+  File "/private/var/root/bzr-1.0/bzrlib/builtins.py", line 2659, in run
+    coverage_dir=coverage,
+  File "/private/var/root/bzr-1.0/bzrlib/tests/__init__.py", line 2373, in selftest
+    suite = test_suite()
+  File "/private/var/root/bzr-1.0/bzrlib/tests/__init__.py", line 2531, in test_suite
+    suite.addTest(loader.loadTestsFromModuleNames(testmod_names))
+  File "/private/var/root/bzr-1.0/bzrlib/tests/TestUtil.py", line 89, in loadTestsFromModuleNames
+    _load_module_by_name(name)
+  File "/private/var/root/bzr-1.0/bzrlib/tests/TestUtil.py", line 96, in _load_module_by_name
+    module = __import__(mod_name)
+  File "/private/var/root/bzr-1.0/bzrlib/tests/test_bundle.py", line 32, in &lt;module>
+    from bzrlib.bundle.bundle_data import BundleTree
+  File "/private/var/root/bzr-1.0/bzrlib/bundle/bundle_data.py", line 42, in &lt;module>
+    from bzrlib.xml5 import serializer_v5
+  File "/private/var/root/bzr-1.0/bzrlib/xml5.py", line 26, in &lt;module>
+    from bzrlib.xml_serializer import SubElement, Element, Serializer
+  File "/private/var/root/bzr-1.0/bzrlib/xml_serializer.py", line 47, in &lt;module>
+    from xml.parsers.expat import ExpatError as ParseError
+  File "/usr/lib/python2.5/xml/parsers/expat.py", line 4, in &lt;module>
+    from pyexpat import *
+ImportError: No module named pyexpat
+
+bzr 1.0.0 on python 2.5.1.final.0 (darwin)
+arguments: ['./bzr', 'selftest']
+encoding: 'ascii', fsenc: 'utf-8', lang: None
+plugins:
+  launchpad            /private/var/root/bzr-1.0/bzrlib/plugins/launchpad [unknown]
+  multiparent          /private/var/root/bzr-1.0/bzrlib/plugins/multiparent.pyc [unknown]
+*** Bazaar has encountered an internal error.
+    Please report a bug at https://bugs.launchpad.net/bzr/+filebug
+    including this traceback, and a description of what you
+    were doing when the error occurred.
+</pre>
+
+<p>Doing a bit of googling led me <a
+href="http://gegis.itsmart.fr/trac/browser/trunk/packaging/iphone/README.iPhone?rev=346">here</a>
+(or rather, the <a
+href="http://64.233.167.104/search?q=cache:VHKVDcZWQ4MJ:gegis.itsmart.fr/trac/browser/trunk/packaging/iphone/README.iPhone%3Frev%3D346+iphone+pyexpat+json&amp;hl=en&amp;ct=clnk&amp;cd=1&amp;gl=ca&amp;client=firefox-a">google
+cache</a> of that page).  which says: </p>
+
+<blockquote># 1/ The python installation from the installer ("unjailed iphone")
+does not come with the pyexpat module.</blockquote>
+
+<p>So, that's a little surprising.</p>
+
+<p>I tried to install easy_install, to try an "easy_install pyexpat", but
+because I'm missing a Makefile, that fails with the following:</p>
+<pre># python ez_setup.py
+Downloading http://pypi.python.org/packages/2.5/s/setuptools/setuptools-0.6c7-py2.5.egg
+Traceback (most recent call last):
+  File "ez_setup.py", line 229, in &lt;module>
+    main(sys.argv[1:])
+  File "ez_setup.py", line 163, in main
+    from setuptools.command.easy_install import main
+  File "build/bdist.linux-i686/egg/setuptools/__init__.py", line 2, in &lt;module>
+  File "build/bdist.linux-i686/egg/setuptools/extension.py", line 2, in &lt;module>
+  File "build/bdist.linux-i686/egg/setuptools/dist.py", line 5, in &lt;module>
+  File "build/bdist.linux-i686/egg/setuptools/command/__init__.py", line 13, in &lt;module>
+  File "/usr/lib/python2.5/distutils/command/bdist.py", line 29, in &lt;module>
+    class bdist (Command):
+  File "/usr/lib/python2.5/distutils/command/bdist.py", line 37, in bdist
+    "(default: %s)" % get_platform()),
+  File "/usr/lib/python2.5/distutils/util.py", line 78, in get_platform
+    cfgvars = get_config_vars()
+  File "/usr/lib/python2.5/distutils/sysconfig.py", line 493, in get_config_vars
+    func()
+  File "/usr/lib/python2.5/distutils/sysconfig.py", line 352, in _init_posix
+    raise DistutilsPlatformError(my_msg)
+distutils.errors.DistutilsPlatformError: invalid Python installation: unable to open /usr/lib/python2.5/config/Makefile (No such file or directory)
+</pre>
+
+<p>And that was the end of that.  Interesting, though...</p>
+
+<p>Oh, yeah, and I ended up going with the iPod Touch (hereafter
+referred to as the iTouch) to replace my Palm TX.  It's not the
+perfect device, as the above stack traces show, but it's pretty good,
+and a fair bit closer than the Palm TX was.</p>
+

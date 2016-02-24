@@ -1,0 +1,11 @@
+<!--
+.. title: This is my first post.
+.. date: 2006-08-04 13:49:00
+.. author: Amy Brown
+.. tags: data
+-->
+
+<p>
+This is my first post with PyBlosxom on OSX.
+</p>
+

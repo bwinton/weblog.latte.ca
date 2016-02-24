@@ -1,0 +1,36 @@
+<!--
+.. title: Another Clié Weblog Entry.
+.. date: 2004-08-06 15:02:00
+.. author: Blake Winton
+.. tags: weblog
+-->
+
+#datetime 28/7/04 19:11
+<p>
+So the infrastructure has gotten much closer to being done, without being any
+closer to being done.  What I mean is that I built a Palm conduit in Python,
+using Palm's COM API, so I can take advantage of all the nice, high-level
+Python libraries for things like threading, and network access, and security,
+instead of having to locate and figure out how to use other people's, or worse,
+code them up myself!
+</p><p>
+There are still a few problems with the framework, I can't seem to call
+anything with a Variant Out parameter, and I haven't tested writing records,
+but other than that, it's golden, and I expect those bugs will be fixed as soon
+as people start playing with it.  And none of the actual sync code is written,
+either, but that will be trivial, right?  Right.  Still, if you're reading
+this, then I must have gotten something working...
+</p><p>
+<b>Update:</b> It is working!  It doesn't synchronize in any way, it just
+uploads the entries and hopes for the best, but I'll fix that later.  You can
+grab a copy of the conduit code <a
+href="http://www.latte.ca/svn/PalmBlosxom/conduit/">here</a>, and the Plua
+source for the app itself <a
+href="http://www.latte.ca/svn/PalmBlosxom/Lua/">here</a>.
+</p><p>
+<b>Coming soon:</b> marking the memos which have been uploaded, so that we
+don't upload them again.  (I've got the code to ignore them working just fine,
+but I haven't delved into the black art of writing a record back to the Palm
+yet.)
+</p>
+

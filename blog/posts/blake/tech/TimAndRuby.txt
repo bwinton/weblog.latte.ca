@@ -1,0 +1,57 @@
+<!--
+.. title: Response to Tim Bray.
+.. date: 2006-09-06 13:51:00
+.. author: Blake Winton
+.. tags: tech
+-->
+
+<p>In a <a
+href="http://www.tbray.org/ongoing/When/200x/2006/09/05/What-Ruby-Needs"
+>recent weblog entry</a>, Tim Bray wrote about some things he thought
+Ruby lacked.  Since he doesn't have comments enabled, I thought I
+would share my opinions here, as a series of disjointed thoughts.</p>
+
+<p>He said "Ruby needs an IDE.  All programming languages need IDEs."
+Well, I completely agree with that, and for my serious Python
+programming (as opposed to noodling around in Python), I tend to use
+Eclipse, because it's there.  Perhaps Ruby could take the same
+approach...</p>
+
+<p>Of course, he also said a couple of things where I think he's a
+little off the mark.  For instance "I should never have to scroll
+much; IDEs go to a lot of trouble to make it trivial to jump from
+wherever to the source for the method being called, or its docs, or
+the next compile error or breakpoint, or variable declaration, or
+whatever. Scrolling back and forth in a source-code file is just
+stupid."  This I see more as a problem with his choice of editor, or
+perhaps his knowledge of its features.  I'm fairly sure both emacs and
+vi allow you to jump to the things he's asking for...</p>
+
+<p>"certain aspects of Unicode are, on the surface at least,
+objectively racist; for example, why does UTF-8 encoding of characters
+become progressively less efficient as you move from the languages of
+the Western hemisphere to those of the East?"  Hmm...  I don't know...
+My first guess would be because Western languages have approximately a
+10,000th the number of characters as Eastern languages.  My second
+guess would have something to do with Huffman coding and the
+prevalence of Western Language (mainly English) documents on the net,
+but I do recognize that this could be due to my only being able to
+read English.</p>
+
+<p>As for Integration, isn't that what Parrot, .NET, and the JVM are
+supposed to provide us?  If I'm wrong, and the language level is the
+appropriate level to solve this problem, then I sincerely hope that
+it's the Ruby and Python communities who get together to do
+something.</p>
+
+<p>And finally, he missed what I consider to be the most important
+part of an IDE.  (No, not Source Control Integration!)  An integrated
+debugger.  I had to go back to print statements to figure out what was
+happening in Demokritos recently, and it just sucked.  So I added in
+some pdb support, and while it was easy to add the breakpoints, using
+it also sucked.  Can we please show me the list of variables in a box
+at the top of my screen, and more than zero lines of context around
+the currently executing line?  Please?  It was so bad that I'm
+actually going to install Eclipse on my Mac Mini, just to avoid it in
+the future.</p>
+

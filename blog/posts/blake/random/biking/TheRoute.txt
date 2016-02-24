@@ -1,0 +1,49 @@
+<!--
+.. title: The Route.
+.. date: 2006-07-17 09:42:00
+.. author: Blake Winton
+.. tags: biking
+-->
+
+<p><a
+href="http://bwinton.latte.ca/camera/weblog/BikePics/BalmBeachRoute.jpg"><img
+src="http://bwinton.latte.ca/camera/weblog/BikePics/BalmBeachRouteSmall.jpg"
+align="right" /></a>A while ago, I mentioned that I was going to head up
+to Balm Beach on my bicycle.  Well, the date has been set, and it's
+this coming Saturday.  I've done a couple of successively longer rides
+after the 87km Musselman Lake ride, a 103km ride out to Holland
+Landing and back, and a 126km ride up to Keswick and back.  I've
+planned out a route (see right), and think it should be a long, but
+do-able ride.  It's a little bit longer than my longest ride (which
+was yesterday, up to Keswick and back), but I'm going to start earlier
+(8:00am from Steeles, instead of 9:00am from Finch), and I don't mind
+finishing later.  (I finished the Keswick ride, including taking the
+subway home from Finch, at 5:30pm, but these days, it's light out
+until almost 9:00pm.  I don't really want to be biking for 13 hours
+continuously, but it's good to know that the option is there, if I
+decide to stop for a really long lunch, or something.)</p>
+
+<p>The cue sheet looks something like this:</p>
+<table border="1"><tr><th>At</th><th>Dist</th><th>Turn</th><th>Location</th></tr>
+<tr><td>a</td><td>0 (or 2.1) km</td><td>R</td><td>Steeles</td></tr>
+<tr><td>b</td><td>1.1 (or 3.2) km</td><td>L</td><td>Henderson</td></tr>
+<tr><td>c</td><td>2.8  (or 4.9) km</td><td>R</td><td>John</td></tr>
+<tr><td>d</td><td>3.7 (or 5.8) km</td><td>L</td><td>Bayview</td></tr>
+<tr><td>e</td><td>16.4 (or 18.5) km</td><td>R</td><td>Stouffville</td></tr>
+<tr><td>f</td><td>18.6 (or 20.7) km</td><td>L</td><td>Leslie</td></tr>
+<tr><td>g</td><td>37.6 (or 39.7) km</td><td>L</td><td>Mount Albert Road</td></tr>
+<tr><td>h</td><td>41.6 (or 43.7) km</td><td>L</td><td>Yonge</td></tr>
+<tr><td>i</td><td>42.1 (or 44.2) km</td><td>QR</td><td>Holland Landing Road<br/>turns into Bridge Street</td></tr>
+<tr><td>j</td><td>48.2 (or 50.3) km</td><td>VL</td><td>Holland Line West</td></tr>
+<tr><td>k</td><td>48.9 (or 51.0) km</td><td>R</td><td>Barrie Street</td></tr>
+<tr><td>l</td><td>50.2 (or 52.3) km</td><td>L</td><td>8th Concession</td></tr>
+<tr><td>m</td><td>53.4 (or 55.5) km</td><td>R</td><td>10th Sideroad</td></tr>
+<tr><td>n</td><td>81.9 (or 84.0) km</td><td>L</td><td>Burton Ave</td></tr>
+<tr><td>o</td><td>??.? km</td><td>?</td><td>A trail, or Highway 40</td></tr>
+<tr><td>p</td><td>??.? km</td><td>R</td><td>North Simcoe Rail Trail</td></tr>
+<tr><td>q</td><td>??.? km</td><td>O</td><td>Balm Beach Road</td></tr>
+</table>
+<p>I'm not exactly sure what's going on at step "m", so I figure I'll
+wing it, depending on how the trail looks, or if there even is a trail
+there.<br clear="all"/></p>
+

@@ -1,0 +1,14 @@
+<!--
+.. title: Almost current.
+.. date: 2008-02-10 21:12:00
+.. author: Blake Winton
+.. tags: delphine, pictures, images, itouch
+-->
+
+<p>There was a new version of Sketches in my update queue the last
+time I checked.  The main feature of this one is the ability to draw
+shapes, like arrows, ovals, and rectangles, as shown below.</p>
+
+<p align="center"><img src="/images/delphine/2008-02-10/Sketches.jpg"
+/><br clear="all"/></p>
+

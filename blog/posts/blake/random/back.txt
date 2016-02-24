@@ -1,0 +1,23 @@
+<!--
+.. title: I’m Back!
+.. date: 2007-08-08 09:59:46
+.. author: Blake Winton
+.. tags: cottage
+-->
+
+<p>Ah, the city.  How I love it.  I’ve just gotten back from a trip to
+the cottage my parents’ rented, and while the house is sort of lonely
+with just me there, I’m really enjoying being able to flush the
+toilet, and have a long shower, and run the air conditioning, and all
+those other conveniences of modern life.  That’s not to say that I
+didn’t enjoy the cottage.  I think I had more fun there this year than
+I have since I was a kid, but it is still nice to be home.</p>
+
+<p>I think the main trick will be keeping on top of everything so that
+I’m not making a mad rush to get everything done on Sunday morning,
+before Amy and the kids get home.  It’ll be an extra-special trick,
+since Trevor’s on vacation this week, so I’ll be the lead server
+developer for the two products that we’re trying to release in the
+next week or so.  Ah, well.  It wouldn’t be fun without some stress,
+right?</p>
+

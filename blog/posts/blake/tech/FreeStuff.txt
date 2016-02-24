@@ -1,0 +1,55 @@
+<!--
+.. title: How to make money on the Interweeb.
+.. date: 2004-12-21 09:52:00
+.. author: Blake Winton
+.. tags: tech
+-->
+
+<p>I was listening to <a
+href="http://www.solomedia.org/podcast/2004/11/maximum-geek-episode-5.htm"
+>Maximum Geek 5</a> on the <a href="http://www.ttc.ca/">subway</a> this
+morning, and was struck with the need to comment on it.</p>
+
+<p>To start off with, damn Jeff and Josh (the two hosts) are some huge
+geeks!  (And this coming from someone who wrote <a
+href="http://palmblosxom.latte.ca">a Palm conduit</a> to post to his weblog.)
+What I mean is that listening to them takes me right back to my days in the
+<a href="http://www.csclub.uwaterloo.ca/">Computer Science Club</a>
+at the <a href="http://www.uwaterloo.ca/">University of Waterloo</a>,
+complete with interrupting each other in the middle of sentences and
+misquoting <a href="http://www.python.org/">Monty Python</a>.</p>
+
+<p>Second, Jeff Kirvin is perhaps the most naive, and I mean that in the
+nicest way, person I have ever heard speak.  While I'ld like to believe
+that people would pay for content that I could get for free, I just don't
+have that much faith in human nature, and sadly, my experience seems to
+bear out my conclusions.  I think that at this point in time on the
+Internet, paying for something is always harder than not paying for it, so
+you need to add some sort of value to the paying copy.</p>
+
+<p>Which means that the <a href="http://www.nytimes.com/">New York
+Times</a> has completely the wrong idea.  It's true that they've cut
+themselves off from the rest of the web, and are only harming themselves by
+doing so.  (They're a newspaper, why not make the current month
+pay-to-read, and open up the archives?  Surely their main selling point is
+commentary on what's currently going on!)  So, I have the following
+suggestion for <a href="http://www.solomedia.org/">Solo Media</a>:  Put up
+text-only versions of your serials.  By "text-only" I don't just mean
+versions without any formatting, because given the existance of
+alt.binaries.e-books, and the fact that the first few doc readers couldn't
+support formatting, having a non-formatted version is clearly not enough of
+a difference to get people to pay.  What I really mean "text-only" is that
+you should remove all the punctuation, and force capital letters into
+lowercase as well!  It's very rare that people <a
+href="http://www.google.com/">search</a> for a comma, or a semi-colon, and
+most-if-not-all of the search engines are case-insensitive these days, so
+lowercasing everything won't hurt your searchability.  It will allow people
+to quickly find which episode memorable text is located in (and
+approximately where in that episode it is), And it will even give people
+the flavour of the stuff you're writing, but it will also make it much
+harder to read, and probably hard enough that it won't be worth the time to
+try to fix it.</p>
+
+<p>So that's my idea for you guys.  Feel free to use it, and spread it
+around.  I hope you like it, and may you grow rich off of it.</p>
+

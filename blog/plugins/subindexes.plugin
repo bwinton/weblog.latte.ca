@@ -1,0 +1,10 @@
+[Core]
+Name = render_subindexes
+Module = subindexes
+
+[Documentation]
+Author = Blake Winton
+Version = 0.1
+Website = http://weblog.latte.ca/
+Description = Generates the index pages for each subdirectory in the blog.
+

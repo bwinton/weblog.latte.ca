@@ -1,0 +1,19 @@
+<!--
+.. title: Running Out Of Space…
+.. date: 2007-09-29 13:34:48
+.. author: Blake Winton
+.. tags: doh!, out_of_space, itunes, podcasts
+-->
+
+<p>If anyone out there has been trying to email <a
+href="http://arbrown.latte.ca/" >Amy</a> or I, we haven’t gotten it.
+While I was home alone with Delphine, I subscribed to a few podcasts
+in iTunes, so that we would have a ton of new music to listen to, but
+when I went back to work, I forgot to unsubscribe, and as a result
+filled up my entire hard drive with music and videos.  This caused a
+bunch of things to fail for various reasons, the most notable of which
+being that no-one has recieved any email for the past few days.  I can
+only hope that the various mail servers around the world will continue
+trying to send the messages, but if there’s something urgent that you
+really wanted a response to, you might consider re-sending it.</p>
+

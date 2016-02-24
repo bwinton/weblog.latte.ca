@@ -1,0 +1,20 @@
+<!--
+.. title: About Blog-o!
+.. date: 2004-01-15 14:10:00
+.. author: Amy Brown
+.. tags: data
+-->
+
+<p>
+Quick introduction.  Blog-o! is a weblog shared by Blake and Amy.  It's
+split up into categories, which are listed in a sidebar over on the
+right there.  If you click on one of the categories, you'll only see
+posts in that category, so if you only ever want to see what Amy has
+to say about Delphine, you could click on the "delphine" link under
+"amy", then bookmark that page and never have to read anything else.
+</p><p>
+Blog-o! is run using PyBlosxom, a Python blogging doo-dad.  For more
+information about that you'll have to talk to Blake (it's Amy writing
+here) or click on the graphic over on the right.  I don't know how
+it's supposed to be pronounced, but I advocate "pie-blossom".
+</p>

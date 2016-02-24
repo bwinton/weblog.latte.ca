@@ -1,0 +1,15 @@
+<!--
+.. title: Pictures
+.. date: 2004-01-17 00:15:00
+.. author: Amy Brown
+.. tags: delphine
+-->
+
+<p>
+There are about a thousand new pictures up in the
+<a href="http://baby.latte.ca/pics/index.html">Baby Picture
+Gallery</a>.  
+</p><p>
+Good night.
+</p>
+

@@ -1,0 +1,20 @@
+<!--
+.. title: Google Maps Pedometer!
+.. date: 2005-07-07 13:17:00
+.. author: Blake Winton
+.. tags: biking
+-->
+
+<p>I just heard of a new tool which lets you plot arbitrary points onto a
+Google Map.  So I plotted my commute (both <a
+href="http://www.sueandpaul.com/gmapPedometer/?centerX=-79.38549041748047&amp;centerY=43.68010130789654&amp;zl=3&amp;polyline=_yuiGtarcNYHvAbLAl@g@pFTfE%5ClF%3F%7CFhLaD%7CC%5DnFaBxIyBt@Wd@DbBtAdIpp@dl@aQ%7C@e@jAiBh@wFP_F%60AaBXd@%3FdAT%5EtAEhFfAtCCfEeFbAM%60@XxCq@d@a@n@pEnF%7DAnIgFrWiIds@aT%60Ae@rFaB%60AsAdn@%7DR_@mEvFgB%5D_Ea@sCYaDmAgJrCgApF_EpRaJ%3Fh@">there</a>,
+and <a
+href="http://www.sueandpaul.com/gmapPedometer/?centerX=-79.38394546508789&amp;centerY=43.66551229538057&amp;zl=3&amp;polyline=ipkiGjtocNR%60C_CfAxDzYiSbGsLpDn@rEuq@%7ESeA%7EAm%7C@zWeB%7DMwElAy@DmUbHc@@H_CK%7DC%7BCuYH%7B@lF%7BL%7EC_DZkAb@aRnCqKSaFL_Ad@%7D@%7CDyAoGef@qOfEcD_Ke@cDuB%3FyAf@md@gMsIoBeC%5EqFpBxEf_@UHXpBSL_@cCw@FESmGnBaDoVeUzG%7BAx@Od@YjFq@pAyAfF%5C%7CBkF%60EwBkC_@@Ir@%5D%5Bm@jBJv@y@%60@%7DAnBWdA@l@nAlAcAjCf@Zx@v@yEfCiCxCHfDdAdCd@h@r@jItA%7EC%7E@%7ECNzAExBGrFh@%7CCGnDYZR%7ECTzEyC%60RUV%7BDbRmADOUCgA%3FeCm@gLBgAb@gDIkBiAqJTE">back
+again</a>).  That's pretty much all I got, but it was so neat that I
+figured I should really share it.  If any of you plot your routes,
+please leave me a link in the comments.  (Uh, you can't actually link,
+so just leave the url.)  I should probably also note that I don't
+actually drive all over the road, or though people's houses like it
+says I do.  I just got tired of clicking every single change in
+direction, and so flattened out some curves.</p>
+

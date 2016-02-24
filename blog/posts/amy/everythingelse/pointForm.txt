@@ -1,0 +1,50 @@
+<!--
+.. title: My Life in Point Form
+.. date: 2006-01-20 10:37:00
+.. author: Amy Brown
+.. tags: everythingelse
+-->
+
+<p>
+This is a nice metaphor, actually: I feel like I only have
+time for myself in the form of short bulleted statements.
+</p>
+<ul>
+<li> I just called for an NDP sign for the balcony window.</li>
+<li> I am reading books about software project management but
+I am concerned that my lack of programming experience will hinder
+me.</li>
+<li> I am not losing weight as quickly as I would like, but</li>
+<li> I am also not eating as healthily or getting as much 
+exercise as I should.</li>
+<li> I made and then cancelled an appointment to get my hair
+cut very very short.</li>
+<li> Cordelia is crying and I am ignoring her because I want
+to post this. </li>
+<li>(Okay, I got her a soother.)</li>
+<li> It's warm enough (eleven degrees) that I have the windows open to air
+the place out.  It's JANUARY!</li>
+<li> My back is kind of sore and I have a chiropractor appointment
+     and a massage booked for next week.</li>
+<li> I am going to relearn how to skate so I can teach Delphine
+(she got bob-skates for Christmas) because I think all Canadian
+children should know how to skate.</li>
+<li> I am looking forward to getting back to yoga because it makes
+my back stronger, it's relaxing and it helps me go longer without
+taking a breath when I sing.</li>
+<li> I rejoined the choir -- I can still sing a high B-flat (or
+higher, but no-one writes higher than that for choirs).</li>
+<li> I watch a lot of TV: <em>The Daily Show</em>, <em>Miami Ink</em>, 
+<em>What Not To Wear</em>, <em>Everybody Hates Chris</em>, <em>Veronica
+Mars</em>, <em>Battlestar Galactica</em>, <em>The Hour</em> on CBC
+Newsworld, <em>Dead Like Me</em>, <em>American Idol</em>, and assorted
+emergency room and decorating reality shows.  I don't watch <em>Desperate
+Housewives</em>, <em>Lost</em>, <em>24</em>, or <em>The Bachelor</em>,
+so even though I watch a lot of TV I still can't talk about it
+with other people.</li>
+<li>I like having the window open and being able to hear the city.
+I feel more like I'm a part of it.  I will miss living on Yonge
+Street when we move.</li>
+<li> We probably won't move for another eighteen months or so.  </li>
+</ul>
+

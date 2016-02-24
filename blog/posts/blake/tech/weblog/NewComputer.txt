@@ -1,0 +1,32 @@
+<!--
+.. title: A New Start.
+.. date: 2004-09-30 14:26:00
+.. author: Blake Winton
+.. tags: weblog
+-->
+
+<p>I got a new computer at work on Monday, and so eagerly switched
+over all my data to it.  But I didn't install all the various programs
+that were on the old machine.  Partly because I had a ton of stuff
+installed, and my registry was a complete mess, and partly because I
+wasn't working on a lot of the tasks I used to work on, and so didn't
+need the tools installed anymore.  But one of the results of this is
+that my oh-so-clever palm-memo-to-weblog-entry conduit isn't
+installed, and indeed, the components it relies on also aren't
+installed, so while I have a perfect chance to write and test an
+installer, I haven't even started that yet, so all the weblog posts
+I'm writing there are likely going to be delayed by a few days or even
+up to a week.</p>
+
+<p>Boy was I ever right there.  It's taken almost three weeks to get
+that entry posted.  But now my conduit has an installer, and is
+packaged up into a dll, and registers itself and everything, so I
+should be able to send it off to other people with just a little more
+code in the installer.  I'm kind of pumped.  And apparently other
+people are interested in doing something similar, so my little bit of
+code might get released in a couple of other places too.  But for now,
+you can find the conduit, and the setup script which builds the dll
+and the installer <a
+href="http://www.latte.ca/svn/PalmBlosxom/">here</a>.  (The code is in
+the conduit directory, and the setup.py script is in the root.)</p>
+

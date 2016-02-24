@@ -1,0 +1,15 @@
+<!--
+.. title: More fridge stuff.
+.. date: 2008-01-25 21:02:30
+.. author: Blake Winton
+.. tags: delphine, pictures, images, itouch
+-->
+
+<p>The best thing about this is that I never have to take the pictures
+down because the magnets are running out of strength.  (Just a sun
+today, on the default Etch-a-Sketch background, instead of the note
+paper background of yesterday.)</p>
+
+<p align="center"><img src="/images/delphine/2008-01-25/Sketches.jpg"
+/><br clear="all"/></p>
+

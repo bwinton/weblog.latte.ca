@@ -1,0 +1,20 @@
+<!--
+.. title: TTC Madness
+.. date: 2008-04-28 14:15:26
+.. author: Amy Brown
+-->
+
+<p>
+I'm posting this here mainly so Dave can enjoy some 
+schadenfreude about our fair city and so Sascha
+and Leontine can see the messier side of Toronto.
+Oh politics, why must you be so hard?
+</p>
+<center>
+<object width="425" height="355">
+  <param name="movie" value="http://www.youtube.com/v/7IXpibN7Hug"></param>
+  <param name="wmode" value="transparent"></param>
+  <embed src="http://www.youtube.com/v/7IXpibN7Hug" type="application/x-shockwave-flash" wmode="transparent" width="425" height="355"></embed></object>
+
+</center>
+

@@ -1,0 +1,45 @@
+<!--
+.. title: That wasn't as easy as I'ld hoped.
+.. date: 2004-10-05 10:07:00
+.. author: Blake Winton
+.. tags: tech
+-->
+
+<p>I've started writing an installer for my PalmBlosxom conduit, and
+associated files.  It's been both easier and harder than I had thought.  It
+was way easier to get the installer portion written so far, and I don't see
+any particular difficulties cropping up in that part of it.  Sure, there
+are still a bunch of things to do, like installing the Palm program for
+users who aren't named "bwinton", and learning the strange variant of
+Pascal that the installer uses to script things so that I can accomplish
+the previous task, but by and large that portion of it is done.  The
+uninstall portion of this grand experiment, on the other hand, has been a
+royal pain in the ass.  It was fairly easy when all I did was copy some
+<img src="http://bwinton.latte.ca/camera/weblog/InnoSetup.png"
+align="right" /> files somewhere and I was done, but when I switched to
+registering the conduit with the HotSync application (so that it would run,
+instead of just sitting there), I started getting errors, and nothing I've
+attempted so far can get rid of them.  I guess I can sort of understand why
+it thinks it can't delete the file, but I swear to you, I've unregistered
+the dll it thinks it can't delete about four different ways, and
+furthermore, as soon as the uninstaller exits I can delete the files either
+from the command line, or from the Windows Explorer, without any problem.
+Heck, I can even run the installer again, and it will overwrite them
+without complaining.  I just can't figure out how to do it
+programmatically.  How annoying.</p>
+
+<p>So,if anyone out there has any experience with InnoSetup, and/or
+uninstalling Palm Conduits, I'ld appreciate it if you could <a
+href="mailto:bwinton%2Bblog@latte.ca">drop me a line</a>, and I'll explain
+in more detail what I'm trying to do, and how it's failing, or you could <a
+href="http://www.latte.ca/svn/PalmBlosxom/setup.py">check out the source to
+my setup program</a> (which generates the .iss file for InnoSetup), and
+hopefully point out my misunderstanding from it.</p>
+
+<p><img src="http://bwinton.latte.ca/camera/weblog/NSIS.png"
+align="right" /><b>Update:</b> I think I'm going to switch to NSIS.  I tried
+the innosetup newsgroups, but they weren't as helpful as I would have
+hoped.  I'll continue to read them, in the hopes that someone will answer
+my question, but I think that I'm not going to get an answer, or at least
+not one that I like, so NSIS it is.</p>
+

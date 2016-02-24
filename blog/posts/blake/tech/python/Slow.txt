@@ -1,0 +1,69 @@
+<!--
+.. title: Why is Python slow?
+.. date: 2004-12-23 10:44:00
+.. author: Blake Winton
+.. tags: python
+-->
+
+<p>I tried replying to <a
+href="http://peter.mapledesign.co.uk/weblog/archives/python_is_slow.html"
+>this post</a> from Peter Bowyer, but the comment submit form was behind an
+httpd-authenticated wall, so I figured I'ld post the reply here instead.
+</p><p>
+Have you tried posting to the Python Tutor list (tutor@python.org), and
+asking them why your code is so slow?  You'll probably get some interesting
+responses.
+A couple of things I've noticed off the top:
+You could replace this
+<code>x = 0<br />
+bins = []<br />
+for x in range(MAXSTEPS): bins.append(0)</code>
+with this
+<code>bins = [0 for x in xrange(MAXSTEPS)]</code>
+which should be faster for a couple of reasons.  First, list comprehensions
+are faster than repeated calls to append (I believe).  Second, xrange
+should be faster than range, because it just returns the numbers one at a
+time instead of creating the whole list at once.
+</p><p>
+Here's some code showing how much faster that one change is:
+<code>>>> t1="""x=0<br />
+... bins=[]<br />
+... for x in xrange(20): bins.append(0)"""<br />
+>>> t2 = """bins = [0 for x in xrange(20)]"""<br />
+>>> time1 = timeit.Timer(t1)<br />
+>>> time2 = timeit.Timer(t2)<br />
+>>> time1.timeit()<br />
+10.322476353976072<br />
+>>> time2.timeit()<br />
+7.6572002255583129</code>
+</p><p>
+As a side note, I ran:
+<code>>>> t3 = """bins = [0] * 300"""<br />
+>>> time1 = timeit.Timer(t1)<br />
+>>> time3.timeit()<br />
+3.0881361995940324</code>
+which takes half the time of t2 to do 15 times as many entries...
+Interesting.  I'll update this with the results of the other tests as they
+finish running...</p>
+
+<p>Okay, another thought.  You calculate the distance every time through
+the inner loop, which seems really slow.  Perhaps you could keep track of
+the distance, and update it in the call to walk?</p>
+
+<p>Update:<br />
+Here are the results from running all of them for 300 iterations.
+<code>>>> t1="""x=0<br />
+... bins=[]<br />
+... for x in xrange(300): bins.append(0)"""<br />
+>>> t2 = """bins = [0 for x in xrange(300)]"""<br />
+>>> t3 = """bins = [0] * 300"""<br />
+>>> time1 = timeit.Timer(t1)<br />
+>>> time2 = timeit.Timer(t2)<br />
+>>> time3 = timeit.Timer(t3)<br />
+>>> time1.timeit()<br />
+144.48788944637977<br />
+>>> time2.timeit()<br />
+105.76589055161526<br />
+>>> time3.timeit()<br />
+3.0881361995940324</code></p>
+

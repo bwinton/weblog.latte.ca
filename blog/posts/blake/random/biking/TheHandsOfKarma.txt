@@ -1,0 +1,39 @@
+<!--
+.. title: The Hands of Karma
+.. date: 2007-08-30 13:14:38
+.. author: Blake Winton
+.. tags: biking, nice, tools
+-->
+
+<p><a href="/images/blake/Karma.jpg"><img align="right"
+src="/images/blake/small/Karma.jpg"/></a>As I was riding to work
+today, just after crossing the railroad bridge, heading on to
+Summerhill, I noticed a man poking at his bicycle.  I stopped, and
+asked if he needed a hand, and sure enough, he did.  He seemed to have
+gotten his chain wedged around his <a
+href="http://sheldonbrown.com/gloss_bo-z.html#bottom" >Bottom
+bracket</a>, in such a way that the arms of the <a
+href="http://sheldonbrown.com/gloss_sp-ss.html#spider" >Spider</a>
+were attempting to push the top and bottom pieces of the chain
+<i>through</i> the <a
+href="http://www.sheldonbrown.com/gloss_ch.html#chainstay"
+>chainstay</a>.  That obviously wasn’t working, so I grabbed my
+multitool, and attempted to use the largest <a
+href="http://www.sheldonbrown.com/gloss_aa-l.html#allen">Allen key</a>
+to try to lever it out.  When that too failed, I pulled out the one
+tool in my collection I’ve never used: The <a
+href="http://en.wikipedia.org/wiki/Chain_tool">Chain Tool</a>.  After
+a few tries, I eventually got the chain apart, after which it was an
+not-so-easy matter of threading it out through the gap between the
+spider and the chainstay, re-threading it onto the <a
+href="http://www.sheldonbrown.com/gloss_ch.html#chainring">chainring</a>,
+and re-connecting it.  As a final gesture of goodwill/parting gift, I
+gave him my last 2007 <a
+href="http://www.toronto.ca/cycling/map/index.htm">Bike Map</a>.
+(Yeah, I know the link is to the 2006 page.  They really have to
+update that sometime...)  After all that, I got to the office 15
+minutes late.  (Well, 15 minutes later.  I didn’t have a meeting or
+anything, and our core hours don’t start until 10:00.)  But I’ve got
+to say, that was 15 minutes well spent, since it made the rest of my
+ride in seem extra-pleasant.<br clear="both"/></p>
+

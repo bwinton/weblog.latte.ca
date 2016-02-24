@@ -1,0 +1,19 @@
+<!--
+.. title: More pictures.
+.. date: 2003-01-31 12:51:00
+.. author: Blake Winton
+.. tags: camera
+-->
+
+I took a few more <a href="http://bwinton.latte.ca/camera/2003-01-25/"
+>pictures</a> last weekend, and finally got the time to put them up on
+the web.  Nothing too exciting, I don't think, but they turned out
+reasonably well.  When I convert them to their final web-based format
+I scale them down so that they're smaller than 800x700.  If that's
+still too large, or too slow, <a href="mailto:bwinton@latte.ca">let me
+know</a>, and I'll see about cutting it back further.  When I'm using
+my laptop (which runs at 1024x768 (Shut up, you!)) I get about 15
+pixels worth of scrollbar, but I don't know if that's because of my
+overly large IE title settings, or if the pictures are actually too
+large.
+

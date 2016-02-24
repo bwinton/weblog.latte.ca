@@ -1,0 +1,39 @@
+<!--
+.. title: The Things I See.
+.. date: 2005-08-18 09:58:00
+.. author: Blake Winton
+.. tags: biking
+-->
+
+<p><a
+href="http://bwinton.latte.ca/camera/weblog/BikePics/2000kmLarge.jpg"
+><img
+src="http://bwinton.latte.ca/camera/weblog/BikePics/2000kmSmall.jpg"
+align="right" /></a>Every now and then, I take some pictures of my
+ride.  Often it's when I'm about to reach a large round number on my
+odometer.  (Shut up, 2000 km <b>is</b> large.  Anyways, I'm going to
+follow <a
+href="http://crazybikerchick.blogspot.com/2005/06/powers-of-two-this-milestone-was.html"
+>Tanya's lead</a>, and use large numbers that are powers of 2, which
+will let me take another pic at 4096 km, instead of having to wait for
+5000.  But that's not why I'm doing it.  I'm doing it because I, too,
+am a huge geek.)</p>
+
+<p><a
+href="http://bwinton.latte.ca/camera/weblog/BikePics/bugheadLarge.jpg"
+><img
+src="http://bwinton.latte.ca/camera/weblog/BikePics/bugheadSmall.jpg"
+align="left" /></a>As I mentioned in <a
+href="http://www.haloscan.com/comments/crazybikerchick/112313761206831036/"
+>the comments</a> on another of <a
+href="http://crazybikerchick.blogspot.com/2005/08/stupid-cars-i-realize-im-getting-more.html"
+>Tanya's posts</a> I've been running into a lot of tiny bugs recently,
+and have started to bike with my mouth firmly shut on some portions of
+my ride, lest I fill up on bugs before eating dinner.</p>
+
+<p align="center"><br clear="left"/><a
+href="http://bwinton.latte.ca/camera/weblog/BikePics/bleahLarge.jpg"
+><img
+src="http://bwinton.latte.ca/camera/weblog/BikePics/bleahSmall.jpg"
+align="center" /></a><br clear="left"/>Bleah.</p>
+

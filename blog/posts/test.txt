@@ -1,0 +1,9 @@
+<!--
+.. title: Welcome to the weblog.
+.. date: 2003-01-01 21:12:00
+.. author: Amy Brown
+.. tags: data
+-->
+
+This is mainly here to test out the various features of the weblog.
+

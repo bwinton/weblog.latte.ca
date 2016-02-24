@@ -1,0 +1,57 @@
+<!--
+.. title: Three More Books
+.. date: 2005-11-18 13:09:00
+.. author: Amy Brown
+.. tags: _2005
+-->
+
+<h4><em>Anne of Avonlea</em> by Lucy Maud Montgomery</h4>
+<p>
+I wanted to know what happened next, so I read this book despite having
+heard, on numerous occasions, that the other Anne books aren't as good
+as <em>Anne of Green Gables</em>.  Well, they were right.  This is
+almost comical in it's not-as-goodness.  Lousy characterization,
+telling-not-showing, awkward dialogue.  I don't know what came over
+LMM, but it wasn't good.  I wonder if her other stuff is good, or
+if <em>Anne of Green Gables</em> was a freak occurrence.
+</p>
+
+<h4><em>Facts and Fallacies of Software Engineering</em> by Robert L. Glass</h4>
+<p>
+Why am I reading about Software Engineering?  Because I have decided when
+I grow up I would like to be a software manager.  Not a librarian or a
+teacher or an opera singer or a photographer, or any of the other interesting
+things which have come to mind in the last, oh, ten years.  No sir, I
+am plunging headlong back into software, with ambition, this time.  
+Ambition to become... <em>middle management</em>.
+</p><p>
+How do I know it will work out for me?  Because I am reading books like
+this.  For fun!  And it was fun, and interesting and edifying (since
+it is pretty much the first book I have read on the topic.)  Fortunately
+Glass is not skimpy with his references, so I have a whole list of other
+books to look up*.  Some of which I remember from the shelves of the
+Computer Science Club.  Oh, how far I have come to be back where I
+started.
+</p><p>
+* Most of which the Toronto Public Library doesn't own!  Argh!  Do they
+care nothing for software engineering?  I will have to see how well 
+their "buy this book for me" system works.  Also, if anyone has any 
+recommendations on the topic, I would be glad to hear them.
+</p>
+
+<h4><em>Trickle Treat</em> by Laurie Boucke</h4>
+<p>
+This is a book about how to potty train your baby from infancy.  The
+theory is sound and the author gives a pretty good description of how
+to implement it. However, as with so many other parenting books, it
+is bogged down the author's sense of superiority and her disdain for
+those who parent any other way than hers.  She even goes so far as 
+to imply (based on a single anecdote from a friend) that diapering
+your child and subsequently potty training in toddlerhood will 
+emotionally damage your child for life.  I am surprised the 
+attachment parenting folks haven't gotten ahold of this method, it's
+right up their alley.
+</p><p>
+Also the name makes me gag.
+</p>
+

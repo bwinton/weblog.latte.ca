@@ -1,0 +1,104 @@
+<!--
+.. title: More January Books
+.. date: 2006-01-27 16:14:00
+.. author: Amy Brown
+.. tags: _2006
+-->
+
+<p>
+<strong><em>Never Let Me Go</em> by Kazuo Ishiguro</strong> is a science fiction
+book by a non-science fiction author.  As such it's kind of implausible from an
+sf point of view because Ishiguro isn't trying to create a rigorous, believeable
+universe to satisfy nerds like me, he's creating an allegory to make a point.  So
+I guess it's not really science fiction; I'm not sure what you would call it.
+Anyway, it's very good and quite sad. And I guess it's not all that unbelieveable.
+It depends how pessimistic you are feeling.
+</p><p>
+<strong><em>Race Against Time</em> by Stephen Lewis</strong>
+</p><p>
+This is a collection of essays originally delivered as the 2005 Massey Lectures.
+Stephen Lewis is the United Nations' Special Envoy for HIV/AIDS in Africa and boy,
+is he pissed.  Basically we are all screwing over Africa because we can't be bothered
+to spend the few bucks it would take to treat and prevent AIDS and thereby rescue
+an entire continent from tragic poverty and remove from the world yet another
+hatching ground for un-parented proto-terrorists.  (He doesn't say that thing
+about terrorists, that's mine.)  
+</p><p>
+Africa is full of child-led and grandmother-led
+families and it's heartbreaking and sickening how we continue to turn our backs
+on it.  Africa is a magical land rich with resources and cultures and the rest of
+the world has metaphorically hit it over the head, stolen its lunch money, kicked
+it in the ribs and is now walking away.  Call your representatives and tell them
+it is time to look after Africa.
+</p><p>
+Also Stephen Lewis is smart and strong and noble and brave, even if I did make fun
+of his daughter-in-law here a while back.
+</p><p>
+<strong><em>American Backlash: The Untold Story of Social Change in The United States</em> by
+Michael Adams</strong>
+</p><p>
+Michael Adams is the head of a polling company which has done extensive 
+polling of Americans and discovered that the true divide in American
+values isn't between Republicans and Democrats but between politically
+engaged citizens and those who couldn't give a rat's ass.  And it's the
+values of the non-rat's-ass-givers which are leading the trajectory of
+social change in American from respect and independence to hedomism and
+individualism.  So he says.   He also talks about how the two parties can
+reach undecided voters, and why the Democrats are having their asses
+whupped so bad lately.
+</p><p>
+He makes some pretty compelling arguments, but
+now I am more interested to read <em>Fire and Ice</em>, which compares
+Canadian values to American values.
+</p><p>
+I think Jon Stewart should read this book, except he probably already has.
+Although maybe not, because I'm not sure this book has been published
+in the US.
+</p><p>
+<strong><em>How to Simply Cut Children's Hair: A Step-by-Step Guide to Cutting, Perming
+and Highlighting Children's Hair</em> by Laurie Punches</strong>
+</p><p>
+This book seemed pretty useful and I might get it out again once Delphine is old
+enough to sit still while I try and cut her hair.  And before she gets old enough
+that she is too cool to have a home haircut.  So that will be a, what, two week
+window?  The book blurb says "Exploration is part of the adventure" -- let me assure you
+that an eleven-year-old does not want you having any adventures with her hair.
+</p><p>
+Incidentally I should look up books on how to cut my own hair -- I am meeting
+more and more people who cut their own hair and I think I should try it.  Fifty
+bucks every six weeks is just too much money.
+</p><p>
+<strong><em>Leading a Software Development Team: A Developer's Guide to Successfully
+Leading People &amp; Projects</em> by Richard Whitehead</strong>
+</p><p>
+Like it says in the title, this book is written for developers so it sometimes
+left me wondering whether I can make it as a software manager.  Whitehead talks a
+lot about design and architecture, saying that it's important to take the time
+to come up with a good design before you begin coding. I understand that that is 
+important but
+I am not sure that I would be able to tell if my team had come up with a good
+design.  Actually, no,
+I think I would be able to tell if we had a lousy design, but I'm not sure
+I would be able to convince my team that I'm right.  Perhaps the only problem is
+one of confidence.
+</p><p>
+Anyway, because the book is written for developers it leaves one with the impression
+that the only good team lead or project manager is someone who started off coding;
+I don't think that's true but I need to read "A Non-Developer's Guide to Successfully
+Leading Software People and Projects" or some such book to get an idea of my 
+career trajectory.  I need to decide how much time to dedicate to being in
+development before I can move into project management -- none?  Five years?
+Ten?  Or maybe I will go through testing instead.
+</p><p>
+Did I really just say that?
+Am I insane?  How passionately did I swear that I would never ever do testing again?
+Can I really go back into a job I hated and love it and make a career out of it?
+Has my attitude improved that much?  I just don't know.
+</p><p>
+Still, this is a very good and useful book that covers many areas of project
+management, from technical issues to decision making to managing team members
+to dealing with lousy bosses.  Blake is going to read it too.  The only worrying
+thing is that the author photograph very flatteringly makes the author look
+about 32 so I'm not sure I trust him.
+</p>
+

@@ -1,0 +1,46 @@
+<!--
+.. title: Neil Gaiman in EffNews.
+.. date: 2003-01-21 12:08:00
+.. author: Blake Winton
+.. tags: tech
+-->
+
+After seeing the <a
+href="http://effbot.org/zone/effbot-exe-index.htm">EffNews</a> <a
+href="http://pythonowns.blogspot.com/2003_01_19_pythonowns_archive.html#87740023">plugin</a>
+for Andrew Kuchling's <a href="http://amk.ca/diary/">journal</a>,
+I was inspired to try creating one of my own, for Neil Gaiman's
+<a
+href="http://www.neilgaiman.com/journal/journal.asp">journal</a>.
+I think it went pretty well, although I'ld like to spend a little
+more time on it, to do something prettier with the dates.  Perhaps
+later.
+
+<code><pre>urls = ["http://www.neilgaiman.com/journal/journal.asp"]
+
+def simpleprovider(context, text):
+    context.push("channel", title="Neil Gaiman", link=urls[0])
+    header = '&lt;font Class="bold"&gt; Journal:&lt;font&gt;'
+    signature = '&lt;blockquote&gt;'
+    i = j = k = 0
+    j = text.find(header, j)
+    while 1:
+        i = text.find(signature, j)
+        if i &lt; 0:
+            break
+        j = text.find(signature, i+len(signature))
+        if j &lt; 0:
+            break
+
+        description = text[i:j]
+        context.push("item", link=urls[0], description=description)
+
+if __name__ == "__main__":
+    # test wrapper
+    import urllib
+    class context:
+        def push(self, tag, **kw):
+            print tag, kw
+    simpleprovider(context(), urllib.urlopen(urls[0]).read())
+</pre></code>
+

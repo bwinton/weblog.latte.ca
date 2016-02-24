@@ -1,0 +1,36 @@
+<!--
+.. title: How I've been doing.
+.. date: 2004-10-06 16:17:00
+.. author: Blake Winton
+.. tags: biking
+-->
+
+<p>I'm hoping to get a plugin written for the area over on the right there
+which will display some statistics about my last few bike rides.  Ever
+since I got my new bike computer (the Cateye Astrale 8), I've been keeping
+track of all the data it produces, which is to say trip time, trip
+distance, average speed for the trip, maximum speed for the trip, and the
+total distance odometer.  I haven't tried to graph any of it yet, but I'm
+sure that'll come soon enough.  In the meantime, it looks like I'm getting
+faster on average (from 19.2 km/h (12 mph) on my first trip to 21.2 km/h
+(13 mph) on my most recent trip).  It's around 17.16 km (10 .66 miles) to
+my office and back, and I've gone 175 km (108.75 miles) so far.  Of course,
+I've actually gone farther than that, since I biked to work before I got
+the computer, but I'm happy to ignore those trips for the purposes of
+tracking my distance.</p>
+
+<p>Does anyone have any guesses as to what the stats will be by the time it
+gets too cold for me to bike anymore?  Personally, I don't think that I'll
+get too much faster, either on my max speed, or on average.  My trip
+distance will probably increase by a little bit, since I've found some neat
+paths that are just a little out of my way, and I think I'ld like to take
+them.  And I'm hoping to more than double my total distance, which should
+be a no-brainer, since after two more weeks (or 10 trips to and from the
+office), I'll have doubled it, but I'm not sure if the weather will hold
+out that long.  It's been mightily chilly up here for the past few days.
+It was only 4°Celsius (39.2°F) when I rode to work this morning, and I
+could really feel the bite of the wind, even through my tiny cotton gloves.
+If it keeps up like that, I might have to buy a real pair of biking gloves,
+or stop biking for a while.  Though I've got to admit, it was a nice
+feeling to not be all sweaty when I got to the office.</p>
+

@@ -1,0 +1,35 @@
+<!--
+.. title: Some questions from a new Mac user.
+.. date: 2006-08-30 12:47:00
+.. author: Blake Winton
+.. tags: mac
+-->
+
+<p>Cc:-ed to the MacPython list, because they might know.</p>
+<p>Hello,</p>
+
+<p>I'm trying to get Subversion bindings for my installed version of
+MacPython (/Library/Frameworks/Python.framework/Versions/2.4/)  This
+seems to mean that I want to install Subversion, and if so, I would
+like to get it hooked up to Apache so that I can connect to
+http://svn.latte.ca/ (or whatever) on my work computer and access my
+home repository.</p>
+
+<p>Now, I can install the subversion python bindings using
+DarwinPorts, but that won't hook into the Framework version of Python,
+so I've downloaded the Subversion 1.3.2 sources, and I can build them,
+but they complain about my version of Apache.  Specifically, about
+apxs being too old.</p>
+
+<p>Do I really need to upgrade apache to Apache 2 to get this all
+working?</p>
+
+<p>Is there a good way of replacing the default Apache with Apache 2,
+or is that a really bad idea because the Software Update will get
+horribly confused?</p>
+
+<p>Is there another place I should be asking these questions?</p>
+
+<p>Thanks,<br />
+Blake.</p>
+

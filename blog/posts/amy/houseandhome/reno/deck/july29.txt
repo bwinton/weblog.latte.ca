@@ -1,0 +1,18 @@
+<!--
+.. title: Daily Deck Update 11
+.. date: 2007-07-29 18:56:11
+.. author: Blake Winton
+.. tags: reno, deck, garden, party
+-->
+
+<p>Okay, I think the deck is officially done, and so it’s party time!
+If you’re actually going to have a chance of making it here (sorry,
+Dave), please <a href="/amy/houseandhome/reno/deck/july29.html">leave
+a comment</a> or <a
+href="mailto:bwinton@latte.ca?Subject=Available%20Party%20Dates.">email
+me</a> with the dates that work well for you, and I’ll see what works
+out the best for the most people.</p>
+
+<p>The tricky part, I expect, will be restraining myself from writing
+a program to figure out the optimal solution.</p>
+

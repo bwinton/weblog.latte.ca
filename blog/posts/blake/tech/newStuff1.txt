@@ -1,0 +1,24 @@
+<!--
+.. title: Changes to Latte.ca
+.. date: 2003-01-20 15:24:00
+.. author: Blake Winton
+.. tags: tech
+-->
+
+I've been playing around with the webserver here at <a
+href="http://www.latte.ca/">Latte.ca</a>, to see if there was an
+easier weblogging tool that I could set up for people to use.
+One product that caught my eye was <a
+href="http://www.plone.org/">Plone</a>, so I tried to set it up
+<a href="http://weblog.latte.ca/">here</a>.  It turned out that
+it required me to set up <a href="http://zope.latte.ca">Zope</a>
+(A python-based web application server) first, so I did that too.
+But after using Plone for about 30 seconds, I'm not convinced
+that it's a good weblogging tool (mainly because it seems too
+powerful, and not easy enough to use).  I'm not going to
+uninstall it, but I think I'll stick with <a
+href="http://www.raelity.org/apps/blosxom/">Blosxom</a> for now.
+(Hey, maybe I'll install <a
+href="http://roughingit.subtlehints.net/pyblosxom">PyBlosxom</a>,
+and see if it integrates with Zope at all.)
+

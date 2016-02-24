@@ -1,0 +1,43 @@
+<!--
+.. title: Morning folks.
+.. date: 2003-07-30 11:28:00
+.. author: Scott “Woody” Wood
+.. tags: woody
+-->
+
+<p>Well, the header on this page says "Thoughts from the Brown-Winton
+household".  I suppose a loose interpretation of that would be that any and
+all info on this site is being broadcast from a server at said
+"Brown-Winton household".  With that in mind, lets consider me the roving
+reporter. . .  No, National Correspondant!  Much better.</p>
+
+<p>Woody here, coming to you live from Victoria, British Columbia.  Yah.
+Well, today I have a job interview.  This is a good thing.  This will bring
+me inside for the rainy winter, as I am currently a construction labourer.
+Winters on Salt Spring are very wet, and I have developed many bruises from
+working with hand tools on cold mornings.  Keyboards are much more
+forgiving.  Not to say you can't get bruised by a keyboard.  Call blake "My
+Bitch" before he's had his morning latte, and this point will be
+illustrated.</p>
+
+<p>So, with any luck, I will be doing QA for a company that writes
+interfaces between ECG machines and allows for a person at one location to
+bw monitored by a doctor at another location, while the data is being
+stored at another.  Sounds pretty cool.  I've been missing my geek fix, so,
+although I'd prefer to be doing admin on *nix systems, QA on VB will do. .
+.  Hush, you!</p>
+
+<p>Well, shower, off to print resume, off to get a Sally Bun (oh, you'll
+hear more about Sally Buns in the future), then interview, then hook up
+with an old buddy, then a we design contract meeting, then a squash game.
+Full day, eh?  And still, I take the time to keep you updated.  Damn,
+that's one fine fellow.</p>
+
+<p>One (or two) last thing(s) before I go.  First, I haven't had my coffee.
+This should explain my otherwise cryptic use of "paragraphs" in this post.
+I judt kind of start a new one when the urge strikes me (as opposed to
+Blake's keyboard).  Second, well, I always allow for another point when
+saying how many I'll have.  That leaves room in case anything comes to mind
+while prattling off the first. In this instance, there is no second, but if
+there had been, I'd have been set.</p>
+

@@ -1,0 +1,9 @@
+<!--
+.. title: Test pEdit Weblog Entry.
+.. date: 2004-08-06 14:50:00
+.. author: Blake Winton
+.. tags: weblog
+-->
+
+#datetime 4/5/03 15:38
+Someday, this entry will be coming to you from my Clié.  I have a dream, you see.  A dream that I can update my weblog whenever I get a chance, instead of only when I'm at my computer.  A dream that, just by putting memos in a specific category on my Clié, I can add new entries and update older entries with new information whenever I feel like it.

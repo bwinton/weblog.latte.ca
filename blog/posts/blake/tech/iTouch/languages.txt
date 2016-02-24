@@ -1,0 +1,38 @@
+<!--
+.. title: More stuff on the iTouch.
+.. date: 2008-01-18 21:06:51
+.. author: Blake Winton
+.. tags: itouch, languages, scheme, javascript
+-->
+
+<p>Yeah, like I was done messing with my iTouch.  Whatever.</p>
+
+<p>I've been playing around a lot with the iTouch, and developing
+quite a few programs for it.  The first one was by request, although
+I’m also finding it very useful.  (And apparently a <a
+href="http://forums.macrumors.com/showthread.php?p=4754458">few other
+people</a> are as well!  Cool!)  It’s called <a
+href="http://www.csse.uwa.edu.au/~chris/iphone/WifiToggle/"
+>WifiToggle</a>, and it’s a small app that simply toggles on and off
+your Wifi connection, so as to save batteries.  The next thing I did
+was <a href="http://iphone.latte.ca/info/Javascript.html">a port</a>
+of the <a href="http://www.mozilla.org/js/spidermonkey/">SpiderMonkey
+Javascript</a> interpreter.  It works, and it wasn’t that hard to get
+compiled and installed, which is really pretty cool when you stop to
+think about it.</p>
+
+<p>The final thing I got working just tonight (which I was playing
+around with mostly to take my mind off of stuff.  See tomorrow’s post
+for details), was <a
+href="http://iphone.latte.ca/info/GambitScheme.html">a port</a> of the
+<a href="http://www.iro.umontreal.ca/~gambit/wiki/index.php/Main_Page"
+>Gambit Scheme</a> interpreter.  I know, Scheme is just like
+Javascript, only with an uglier syntax, but I still like it, and
+hopefully the lack of punctuation will make it easier to use on the
+iTouch.  Heh.</p>
+
+<p>Anyways, if you own an iPhone or iTouch, and have jailbroken it, be
+sure to add <a href="http://iphone.latte.ca/"
+>http://iphone.latte.ca/</a> to your list of Installer sources, and
+geek out!</p>
+

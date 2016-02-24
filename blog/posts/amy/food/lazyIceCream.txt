@@ -1,0 +1,16 @@
+<!--
+.. title: Lazy Man's Homemade Ice Cream
+.. date: 2007-05-09 17:28:58
+.. author: Amy Brown
+.. tags: food
+-->
+
+<p>
+Put some frozen blueberries in a bowl.  (I like
+<a href="http://www.europesbest.com/">Europe's Best</a>
+if you can get them.)  Pour in just enough whipping
+cream to almost cover the berries.  Wait a few seconds
+and the berries will freeze the cream -- voila, quick 
+frosty goodness that's almost good for you!
+</p>
+

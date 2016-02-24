@@ -1,0 +1,20 @@
+<!--
+.. title: Another Long Silence.
+.. date: 2003-09-29 15:42:00
+.. author: Blake Winton
+.. tags: random
+-->
+
+<p>So.  I don't really have an excuse this time.  Nothing much has been
+going on.  Well, nothing other than the usual stuff.  I did replace the
+server, since it was starting to show its age, and it's taken me a little
+longer than I thought it might to get everything back up and running.  I
+have also been spending my time setting up secure IMAP so that I can check
+my home email from both home and work, and not miss stuff when I'm on one
+computer or the other.  Really, I'm not even sure why I'm writing, other
+than to get back in the habit.  I'm reading a lot of <a
+href="http://www.decafbad.com/comments/tech/dynamic_polling_freq_too">
+weblogs</a>, and even commenting in some of them.  I suppose that's the
+real reason I'm writing this.  To give the backlinks somewhere to point
+to.</p>
+

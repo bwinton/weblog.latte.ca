@@ -1,0 +1,9 @@
+<!--
+.. title: Me too.
+.. date: 2004-01-20 18:19:00
+.. author: Amy Brown
+.. tags: everythingelse
+-->
+
+I'm PalmOS too.  I guess we're a good match.
+
