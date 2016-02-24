@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
-<?xml-stylesheet type="text/xsl" href="../assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Blog-O! (making_software)</title><link>https://weblog.latte.ca/</link><description></description><atom:link type="application/rss+xml" href="https://weblog.latte.ca/tags/making_software.xml" rel="self"></atom:link><language>en</language><lastBuildDate>Wed, 24 Feb 2016 17:07:45 GMT</lastBuildDate><generator>https://getnikola.com/</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>What files have the most bugs?</title><link>https://weblog.latte.ca/blake/tech/thunderbird/wherearethebugs.html</link><dc:creator>Blake Winton</dc:creator><description>&lt;div&gt;&lt;p&gt;I was reading &lt;a href="http://oreilly.com/catalog/9780596808303"&gt;Making Software&lt;/a&gt;
+<?xml-stylesheet type="text/xsl" href="../assets/xml/rss.xsl" media="all"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title>Blog-O! (making_software)</title><link>http://bwinton.github.io/weblog.latte.ca/</link><description></description><atom:link href="http://bwinton.github.io/weblog.latte.ca/tags/making_software.xml" type="application/rss+xml" rel="self"></atom:link><language>en</language><lastBuildDate>Wed, 24 Feb 2016 17:16:14 GMT</lastBuildDate><generator>https://getnikola.com/</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>What files have the most bugs?</title><link>http://bwinton.github.io/weblog.latte.ca/blake/tech/thunderbird/wherearethebugs.html</link><dc:creator>Blake Winton</dc:creator><description>&lt;div&gt;&lt;p&gt;I was reading &lt;a href="http://oreilly.com/catalog/9780596808303"&gt;Making Software&lt;/a&gt;
 by Andy Oram and Greg Wilson, and got to the chapter about An Automated
 Fault Prediction System.  It’s a pretty neat chapter, and it got me
 wondering which files in the &lt;a href="http://mxr.mozilla.org/comm-central/"&gt;Thunderbird code base&lt;/a&gt; had the most bugs.  Now, I don’t have
 all the info I need, but I figured an easy first pass would be to go
 through the commit logs, and for each commit that started with “bug ”, add
 one to the files changed in that commit.  Hmm, that sounded unintuitive.
-Let me just paste (&lt;a href="https://weblog.latte.ca/static/blake/test.py"&gt;and link&lt;/a&gt;) the code:&lt;/p&gt;
+Let me just paste (&lt;a href="http://bwinton.github.io/weblog.latte.ca/static/blake/test.py"&gt;and link&lt;/a&gt;) the code:&lt;/p&gt;
 &lt;table class="codehilitetable"&gt;&lt;tr&gt;&lt;td class="linenos"&gt;&lt;div class="linenodiv"&gt;&lt;pre&gt; 1
  2
  3
@@ -78,4 +78,4 @@ most in bug fixes, and the number of times they've been changed:&lt;/p&gt;
 &lt;li&gt;&lt;small&gt;toolkit/components/places/src/nsNavHistory.cpp:374&lt;/small&gt;&lt;/li&gt;
 &lt;li&gt;&lt;small&gt;js/src/jsinterp.cpp:345&lt;/small&gt;&lt;/li&gt;
 &lt;li&gt;&lt;small&gt;js/src/jsapi.cpp:343&lt;/small&gt;&lt;/li&gt;
-&lt;/ul&gt;&lt;/div&gt;</description><category>making_software</category><category>mozilla</category><category>thunderbird</category><guid>https://weblog.latte.ca/blake/tech/thunderbird/wherearethebugs.html</guid><pubDate>Fri, 24 Dec 2010 19:59:24 GMT</pubDate></item></channel></rss>
+&lt;/ul&gt;&lt;/div&gt;</description><category>making_software</category><category>mozilla</category><category>thunderbird</category><guid>http://bwinton.github.io/weblog.latte.ca/blake/tech/thunderbird/wherearethebugs.html</guid><pubDate>Fri, 24 Dec 2010 19:59:24 GMT</pubDate></item></channel></rss>

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<?xml-stylesheet type="text/xsl" href="../assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Blog-O! (programming)</title><link>https://weblog.latte.ca/</link><description></description><atom:link type="application/rss+xml" href="https://weblog.latte.ca/tags/programming.xml" rel="self"></atom:link><language>en</language><lastBuildDate>Wed, 24 Feb 2016 17:07:39 GMT</lastBuildDate><generator>https://getnikola.com/</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Another reason to use Mercurial (or Git or Bazaar)</title><link>https://weblog.latte.ca/blake/tech/thunderbird/vms.html</link><dc:creator>Blake Winton</dc:creator><description>&lt;div&gt;&lt;p&gt;A lot of the code I write for &lt;a href="http://mozillamessaging.com/"&gt;Thunderbird&lt;/a&gt;
+<?xml-stylesheet type="text/xsl" href="../assets/xml/rss.xsl" media="all"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title>Blog-O! (programming)</title><link>http://bwinton.github.io/weblog.latte.ca/</link><description></description><atom:link href="http://bwinton.github.io/weblog.latte.ca/tags/programming.xml" type="application/rss+xml" rel="self"></atom:link><language>en</language><lastBuildDate>Wed, 24 Feb 2016 17:16:15 GMT</lastBuildDate><generator>https://getnikola.com/</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Another reason to use Mercurial (or Git or Bazaar)</title><link>http://bwinton.github.io/weblog.latte.ca/blake/tech/thunderbird/vms.html</link><dc:creator>Blake Winton</dc:creator><description>&lt;div&gt;&lt;p&gt;A lot of the code I write for &lt;a href="http://mozillamessaging.com/"&gt;Thunderbird&lt;/a&gt;
 has to work on &lt;a href="http://www.mozillamessaging.com/en-US/thunderbird/all.html"&gt;all&lt;/a&gt; the platforms
 it supports.  Since I don’t own a &lt;a href="http://www.ubuntu.com/"&gt;Linux&lt;/a&gt; or
 &lt;a href="http://www.microsoft.com/windows/windows-7"&gt;Windows&lt;/a&gt; box, and don’t really
@@ -28,12 +28,12 @@ of the time they mention being able to still commit your changes when
 you’re on an airplane, and sharing in-progress changes with other people,
 but for people like me who do mainly self-contained stuff and don’t fly
 anywhere, supporting multi-platforms with virtual machines and still being
-able to track my changes might just be the killer feature.&lt;/p&gt;&lt;/div&gt;</description><category>hg</category><category>programming</category><category>virtual_machines</category><guid>https://weblog.latte.ca/blake/tech/thunderbird/vms.html</guid><pubDate>Mon, 14 Sep 2009 16:12:48 GMT</pubDate></item><item><title>Other dynamically-changing stuff.</title><link>https://weblog.latte.ca/blake/tech/iTouch/updatingnonicons.html</link><dc:creator>Blake Winton</dc:creator><description>&lt;div&gt;&lt;p&gt;Last night I was browsing the newest iTouch apps, and I saw one called
+able to track my changes might just be the killer feature.&lt;/p&gt;&lt;/div&gt;</description><category>hg</category><category>programming</category><category>virtual_machines</category><guid>http://bwinton.github.io/weblog.latte.ca/blake/tech/thunderbird/vms.html</guid><pubDate>Mon, 14 Sep 2009 16:12:48 GMT</pubDate></item><item><title>Other dynamically-changing stuff.</title><link>http://bwinton.github.io/weblog.latte.ca/blake/tech/iTouch/updatingnonicons.html</link><dc:creator>Blake Winton</dc:creator><description>&lt;div&gt;&lt;p&gt;Last night I was browsing the newest iTouch apps, and I saw one called
 &lt;a href="http://www.iamas.ac.jp/%7Eaka/iphone/#LEDBanner.app"&gt;LEDBanner&lt;/a&gt;.  It
 allowed you to scroll text across your screen as if your screen was a
 set of LEDs.  My only problem with it was that I couldn’t
 programmatically change the text.  Fortunately the source was
-available, and so, with only minor changes, I now have &lt;a href="https://weblog.latte.ca/static/blake/LEDBanner.zip"&gt;a
+available, and so, with only minor changes, I now have &lt;a href="http://bwinton.github.io/weblog.latte.ca/static/blake/LEDBanner.zip"&gt;a
 version&lt;/a&gt; which
 lets me change the text to whatever I want.&lt;/p&gt;
 &lt;p&gt;For instance, the following scheme code:&lt;/p&gt;
@@ -67,11 +67,11 @@ lets me change the text to whatever I want.&lt;/p&gt;
 &lt;/pre&gt;
 &lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;p&gt;changes the text every three seconds to the number of seconds, modulo
 100.  Which turns out to be a mostly-random number, as shown below.&lt;/p&gt;
-&lt;p&gt;&lt;img alt="The number 8." src="https://weblog.latte.ca/images/blake/led.png" title="Ocho!"&gt;&lt;/p&gt;&lt;/div&gt;</description><category>itouch</category><category>ledbanner</category><category>programming</category><guid>https://weblog.latte.ca/blake/tech/iTouch/updatingnonicons.html</guid><pubDate>Tue, 04 Mar 2008 21:09:59 GMT</pubDate></item><item><title>How to dynamically change your icons.</title><link>https://weblog.latte.ca/blake/tech/iTouch/updatingicons.html</link><dc:creator>Blake Winton</dc:creator><description>&lt;div&gt;&lt;p&gt;One of the things I wanted to add to &lt;a href="http://www.csse.uwa.edu.au/~chris/iphone/WifiToggle/"&gt;WifiToggle&lt;/a&gt; was having the
+&lt;p&gt;&lt;img alt="The number 8." src="http://bwinton.github.io/weblog.latte.ca/images/blake/led.png" title="Ocho!"&gt;&lt;/p&gt;&lt;/div&gt;</description><category>itouch</category><category>ledbanner</category><category>programming</category><guid>http://bwinton.github.io/weblog.latte.ca/blake/tech/iTouch/updatingnonicons.html</guid><pubDate>Tue, 04 Mar 2008 21:09:59 GMT</pubDate></item><item><title>How to dynamically change your icons.</title><link>http://bwinton.github.io/weblog.latte.ca/blake/tech/iTouch/updatingicons.html</link><dc:creator>Blake Winton</dc:creator><description>&lt;div&gt;&lt;p&gt;One of the things I wanted to add to &lt;a href="http://www.csse.uwa.edu.au/~chris/iphone/WifiToggle/"&gt;WifiToggle&lt;/a&gt; was having the
 icon show you whether your wifi was on or off, by having the switch be
 up or down (and the blue glow be on or off, since in Australia a down
 switch means that the light is on, whereas in Canada, it’s the
-opposite).  Sadly, it didn’t seem possible, since Springboard&lt;sup id="fnref:sb"&gt;&lt;a class="footnote-ref" href="https://weblog.latte.ca/blake/tech/iTouch/updatingicons.html#fn:sb" rel="footnote"&gt;1&lt;/a&gt;&lt;/sup&gt;
+opposite).  Sadly, it didn’t seem possible, since Springboard&lt;sup id="fnref:sb"&gt;&lt;a class="footnote-ref" href="http://bwinton.github.io/weblog.latte.ca/blake/tech/iTouch/updatingicons.html#fn:sb" rel="footnote"&gt;1&lt;/a&gt;&lt;/sup&gt;
 seems to cache your icon.png, and ignore any updates you do to it.
 And so that was where I left it for a long time…&lt;/p&gt;
 &lt;p&gt;Recently, however, I was browsing through &lt;a href="http://ericasadun.com/?p=176"&gt;AppFlow&lt;/a&gt; and I noticed that the MobileCalendar
@@ -95,6 +95,6 @@ have no idea what that interface is, but hey, I’m way closer than I
 was this morning, so that’s got to count for something.&lt;/p&gt;
 &lt;div class="footnote"&gt;
 &lt;hr&gt;&lt;ol&gt;&lt;li id="fn:sb"&gt;
-&lt;p&gt;The application launcher on the iTouch. &lt;a class="footnote-backref" href="https://weblog.latte.ca/blake/tech/iTouch/updatingicons.html#fnref:sb" rev="footnote" title="Jump back to footnote 1 in the text"&gt;↩&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;The application launcher on the iTouch. &lt;a class="footnote-backref" href="http://bwinton.github.io/weblog.latte.ca/blake/tech/iTouch/updatingicons.html#fnref:sb" rev="footnote" title="Jump back to footnote 1 in the text"&gt;↩&lt;/a&gt;&lt;/p&gt;
 &lt;/li&gt;
-&lt;/ol&gt;&lt;/div&gt;&lt;/div&gt;</description><category>itouch</category><category>programming</category><category>wifitoggle</category><guid>https://weblog.latte.ca/blake/tech/iTouch/updatingicons.html</guid><pubDate>Sun, 02 Mar 2008 02:11:56 GMT</pubDate></item></channel></rss>
+&lt;/ol&gt;&lt;/div&gt;&lt;/div&gt;</description><category>itouch</category><category>programming</category><category>wifitoggle</category><guid>http://bwinton.github.io/weblog.latte.ca/blake/tech/iTouch/updatingicons.html</guid><pubDate>Sun, 02 Mar 2008 02:11:56 GMT</pubDate></item></channel></rss>

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<?xml-stylesheet type="text/xsl" href="../assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Blog-O! (Delphine Winton)</title><link>https://weblog.latte.ca/</link><description></description><atom:link type="application/rss+xml" href="https://weblog.latte.ca/authors/delphine-winton.xml" rel="self"></atom:link><language>en</language><lastBuildDate>Wed, 24 Feb 2016 17:07:39 GMT</lastBuildDate><generator>https://getnikola.com/</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Santa</title><link>https://weblog.latte.ca/delphine/santa2010.html</link><dc:creator>Delphine Winton</dc:creator><description>&lt;div&gt;&lt;p&gt;Dear Santa,&lt;/p&gt;
+<?xml-stylesheet type="text/xsl" href="../assets/xml/rss.xsl" media="all"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title>Blog-O! (Delphine Winton)</title><link>http://bwinton.github.io/weblog.latte.ca/</link><description></description><atom:link href="http://bwinton.github.io/weblog.latte.ca/authors/delphine-winton.xml" type="application/rss+xml" rel="self"></atom:link><language>en</language><lastBuildDate>Wed, 24 Feb 2016 17:16:16 GMT</lastBuildDate><generator>https://getnikola.com/</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Santa</title><link>http://bwinton.github.io/weblog.latte.ca/delphine/santa2010.html</link><dc:creator>Delphine Winton</dc:creator><description>&lt;div&gt;&lt;p&gt;Dear Santa,&lt;/p&gt;
 &lt;p&gt;In case you're real, this is my Christmas list. &lt;/p&gt;
 &lt;ul&gt;&lt;li&gt;I would like a name necklace—a coloured one. &lt;/li&gt;
 &lt;li&gt;I would like a cat buddy. (That's a stuffie.)&lt;/li&gt;
@@ -12,7 +12,7 @@
 &lt;li&gt;A craft set.&lt;/li&gt;
 &lt;/ul&gt;&lt;p&gt;Sincerely,&lt;br&gt;
 Delphine&lt;/p&gt;
-&lt;p&gt;[Typed by Amy.]&lt;/p&gt;&lt;/div&gt;</description><guid>https://weblog.latte.ca/delphine/santa2010.html</guid><pubDate>Mon, 29 Nov 2010 21:24:47 GMT</pubDate></item><item><title>My First Entry</title><link>https://weblog.latte.ca/delphine/myfirstentry.html</link><dc:creator>Delphine Winton</dc:creator><description>&lt;div&gt;&lt;p&gt;My name is Delphine.  There’s another Delphine in the school I go to.  I go
+&lt;p&gt;[Typed by Amy.]&lt;/p&gt;&lt;/div&gt;</description><guid>http://bwinton.github.io/weblog.latte.ca/delphine/santa2010.html</guid><pubDate>Mon, 29 Nov 2010 21:24:47 GMT</pubDate></item><item><title>My First Entry</title><link>http://bwinton.github.io/weblog.latte.ca/delphine/myfirstentry.html</link><dc:creator>Delphine Winton</dc:creator><description>&lt;div&gt;&lt;p&gt;My name is Delphine.  There’s another Delphine in the school I go to.  I go
 to a K-6 school in Toronto.  My friend at my school’s name is Darina.  She
 really likes bugs.  She’s going to dress up as a moth for Halloween.  I’m
 dressing up as an elf.&lt;/p&gt;
@@ -26,4 +26,4 @@ are Hebi-Chan and Columbus.  Here’s a joke: What do you call a locomotive
 with a cold?  An achoo-choo train!  One more: Where would you weigh a
 whale?  At the whale-weigh station!&lt;/p&gt;
 &lt;p&gt;Tomorrow is Monday.  I’m going to go to school.  I like art.  I do not like
-math.  The end.&lt;/p&gt;&lt;/div&gt;</description><category>delphine</category><category>first</category><guid>https://weblog.latte.ca/delphine/myfirstentry.html</guid><pubDate>Sun, 24 Oct 2010 14:43:47 GMT</pubDate></item></channel></rss>
+math.  The end.&lt;/p&gt;&lt;/div&gt;</description><category>delphine</category><category>first</category><guid>http://bwinton.github.io/weblog.latte.ca/delphine/myfirstentry.html</guid><pubDate>Sun, 24 Oct 2010 14:43:47 GMT</pubDate></item></channel></rss>

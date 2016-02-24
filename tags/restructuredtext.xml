@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<?xml-stylesheet type="text/xsl" href="../assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Blog-O! (restructuredtext)</title><link>https://weblog.latte.ca/</link><description></description><atom:link type="application/rss+xml" href="https://weblog.latte.ca/tags/restructuredtext.xml" rel="self"></atom:link><language>en</language><lastBuildDate>Wed, 24 Feb 2016 17:07:41 GMT</lastBuildDate><generator>https://getnikola.com/</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Blake and Delphine’s Excellent Week Together – Part 6…  Uh, 7?</title><link>https://weblog.latte.ca/blake/family/theweekofdelphine6.html</link><dc:creator>Blake Winton</dc:creator><description>&lt;p&gt;I have no idea what happened to last night’s update.  Well, that’s
+<?xml-stylesheet type="text/xsl" href="../assets/xml/rss.xsl" media="all"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title>Blog-O! (restructuredtext)</title><link>http://bwinton.github.io/weblog.latte.ca/</link><description></description><atom:link href="http://bwinton.github.io/weblog.latte.ca/tags/restructuredtext.xml" type="application/rss+xml" rel="self"></atom:link><language>en</language><lastBuildDate>Wed, 24 Feb 2016 17:16:17 GMT</lastBuildDate><generator>https://getnikola.com/</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Blake and Delphine’s Excellent Week Together – Part 6…  Uh, 7?</title><link>http://bwinton.github.io/weblog.latte.ca/blake/family/theweekofdelphine6.html</link><dc:creator>Blake Winton</dc:creator><description>&lt;p&gt;I have no idea what happened to last night’s update.  Well, that’s
 not entirely true.  I was at a FogBugz demo given by &lt;a href="http://www.joelonsoftware.com/"&gt;Joel Spolsky&lt;/a&gt;, and Delphine
 had a sleep-over at her Baba and Zaida’s, so I took the time to write
 &lt;a href="http://pyblosxom.sourceforge.net/2.0/plans/archiveaccess.html"&gt;a spec&lt;/a&gt;, and that led me to whip out a bunch of code.  The spec is
@@ -10,7 +10,7 @@ document I’ve been using the most), but my favourite Mac text editor
 I started writing &lt;a href="http://bzr.latte.ca/files/restwrangler/head"&gt;a plugin&lt;/a&gt; that
 would teach TextWrangler what the heck reStructuredText was.  (You can
 apparently get a tarball of the project from &lt;a href="http://bzr.latte.ca/tarball/restwrangler/3"&gt;this link&lt;/a&gt;, if
-you’re so inclined, or if you’re not, you could just try &lt;a href="https://weblog.latte.ca/static/blake/reST.dmg"&gt;the compiled plugin itself&lt;/a&gt;.  Just
+you’re so inclined, or if you’re not, you could just try &lt;a href="http://bwinton.github.io/weblog.latte.ca/static/blake/reST.dmg"&gt;the compiled plugin itself&lt;/a&gt;.  Just
 double-click the .dmg file, then double-click the .bblm file inside of
 it, and it’ll tell you what to do.  Or mail me, and I will.)&lt;/p&gt;
 
@@ -19,4 +19,4 @@ which was really nice.  Today was more of the same, except it was
 really hot out when Delphine got out of kindergarten, so instead of
 playing in the school playground, Delphine and I decided to go to &lt;a href="http://www.torontolife.com/guide/food/dairies/hollywood-gelato/"&gt;Hollywood Gelato&lt;/a&gt;, the local ice cream store.  Tasty.  Tomorrow
 Amy gets home, so it’s looking like it’ll be a pretty busy day as
-well.&lt;/p&gt;</description><category>blake</category><category>code</category><category>restructuredtext</category><category>specifications</category><category>textwrangler</category><guid>https://weblog.latte.ca/blake/family/theweekofdelphine6.html</guid><pubDate>Sat, 22 Sep 2007 00:47:12 GMT</pubDate></item></channel></rss>
+well.&lt;/p&gt;</description><category>blake</category><category>code</category><category>restructuredtext</category><category>specifications</category><category>textwrangler</category><guid>http://bwinton.github.io/weblog.latte.ca/blake/family/theweekofdelphine6.html</guid><pubDate>Sat, 22 Sep 2007 00:47:12 GMT</pubDate></item></channel></rss>

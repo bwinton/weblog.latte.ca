@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<?xml-stylesheet type="text/xsl" href="../assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Blog-O! (running)</title><link>https://weblog.latte.ca/</link><description></description><atom:link type="application/rss+xml" href="https://weblog.latte.ca/tags/running.xml" rel="self"></atom:link><language>en</language><lastBuildDate>Wed, 24 Feb 2016 17:07:38 GMT</lastBuildDate><generator>https://getnikola.com/</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>December Slump</title><link>https://weblog.latte.ca/amy/motion/decemberslump.html</link><dc:creator>Amy Brown</dc:creator><description>&lt;p&gt;
+<?xml-stylesheet type="text/xsl" href="../assets/xml/rss.xsl" media="all"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title>Blog-O! (running)</title><link>http://bwinton.github.io/weblog.latte.ca/</link><description></description><atom:link href="http://bwinton.github.io/weblog.latte.ca/tags/running.xml" type="application/rss+xml" rel="self"></atom:link><language>en</language><lastBuildDate>Wed, 24 Feb 2016 17:16:11 GMT</lastBuildDate><generator>https://getnikola.com/</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>December Slump</title><link>http://bwinton.github.io/weblog.latte.ca/amy/motion/decemberslump.html</link><dc:creator>Amy Brown</dc:creator><description>&lt;p&gt;
 Today I ran for the first time in a month and a half.
 I  signed up for the Resolution Run 5K on December
 31 in an attempt to motivate myself to keep running
@@ -35,7 +35,7 @@ Now that we are getting settled in and it's no
 longer imperative to spend every spare moment
 unpacking, I am going to try and go out for two 
 2Ks and one 5K every week.
-&lt;/p&gt;</description><category>running</category><guid>https://weblog.latte.ca/amy/motion/decemberslump.html</guid><pubDate>Wed, 27 Dec 2006 01:52:00 GMT</pubDate></item><item><title>5K Again!</title><link>https://weblog.latte.ca/amy/motion/tenandone.html</link><dc:creator>Amy Brown</dc:creator><description>&lt;p&gt;
+&lt;/p&gt;</description><category>running</category><guid>http://bwinton.github.io/weblog.latte.ca/amy/motion/decemberslump.html</guid><pubDate>Wed, 27 Dec 2006 01:52:00 GMT</pubDate></item><item><title>5K Again!</title><link>http://bwinton.github.io/weblog.latte.ca/amy/motion/tenandone.html</link><dc:creator>Amy Brown</dc:creator><description>&lt;p&gt;
 On Saturday I did a surprisingly easy 5K of ten and ones —
 surprising because I ran exactly  no times the week before.  I 
 guess some rest is what the doctor ordered.
@@ -52,7 +52,7 @@ different from running on asphalt.
 &lt;/p&gt;&lt;p&gt;
 When you run on a treadmill the best you can hope for is that
 the Seinfeld repeat is one you haven't seen lately.
-&lt;/p&gt;</description><category>running</category><guid>https://weblog.latte.ca/amy/motion/tenandone.html</guid><pubDate>Wed, 18 Oct 2006 18:31:00 GMT</pubDate></item><item><title>Eight And Ones, and Other Things</title><link>https://weblog.latte.ca/amy/motion/eightandone.html</link><dc:creator>Amy Brown</dc:creator><description>&lt;p&gt;
+&lt;/p&gt;</description><category>running</category><guid>http://bwinton.github.io/weblog.latte.ca/amy/motion/tenandone.html</guid><pubDate>Wed, 18 Oct 2006 18:31:00 GMT</pubDate></item><item><title>Eight And Ones, and Other Things</title><link>http://bwinton.github.io/weblog.latte.ca/amy/motion/eightandone.html</link><dc:creator>Amy Brown</dc:creator><description>&lt;p&gt;
 I just got back from a 2.3K run of eight and ones.  It was hard;
 I am still a little wheezy and having trouble catching my breath.
 But I am quite pleased with myself for doing it; it was already
@@ -73,7 +73,7 @@ to three runs a week.
 And hey, back in June when I started all this foolishness I
 wouldn't even have been able to &lt;em&gt;think&lt;/em&gt; of running for
 eight minutes without stopping.  So that's something.
-&lt;/p&gt;</description><category>running</category><guid>https://weblog.latte.ca/amy/motion/eightandone.html</guid><pubDate>Fri, 06 Oct 2006 01:15:00 GMT</pubDate></item><item><title>What's Next?</title><link>https://weblog.latte.ca/amy/motion/plan.html</link><dc:creator>Amy Brown</dc:creator><description>&lt;p&gt;
+&lt;/p&gt;</description><category>running</category><guid>http://bwinton.github.io/weblog.latte.ca/amy/motion/eightandone.html</guid><pubDate>Fri, 06 Oct 2006 01:15:00 GMT</pubDate></item><item><title>What's Next?</title><link>http://bwinton.github.io/weblog.latte.ca/amy/motion/plan.html</link><dc:creator>Amy Brown</dc:creator><description>&lt;p&gt;
 I feel strangely deflated now that my first run is behind me,
 although I have another month to go in my running clinic to give me
 something to work on.  (We are doing eight and ones next
@@ -99,7 +99,7 @@ do a couple more 10Ks, and do a half-marathon in '10... we'll see.
 &lt;/p&gt;&lt;p&gt;
 Of course this could be derailed by unforseen circumstances, but
 so could any plan; no reason not to make it!
-&lt;/p&gt;</description><category>running</category><guid>https://weblog.latte.ca/amy/motion/plan.html</guid><pubDate>Mon, 25 Sep 2006 01:11:00 GMT</pubDate></item><item><title>Done!</title><link>https://weblog.latte.ca/amy/motion/waterfront5k.html</link><dc:creator>Amy Brown</dc:creator><description>&lt;p&gt;
+&lt;/p&gt;</description><category>running</category><guid>http://bwinton.github.io/weblog.latte.ca/amy/motion/plan.html</guid><pubDate>Mon, 25 Sep 2006 01:11:00 GMT</pubDate></item><item><title>Done!</title><link>http://bwinton.github.io/weblog.latte.ca/amy/motion/waterfront5k.html</link><dc:creator>Amy Brown</dc:creator><description>&lt;p&gt;
 I did it, I finished my first run!  I did the Scotiabank Toronto
 Waterfront 5K in 42 minutes, doing
 intervals of two minutes of walking and five minutes of running.
@@ -114,7 +114,7 @@ amble, but I'm not sure I'd choose Lakeshore for it).  There
 was even a woman enjoying a nice, bracing cigarette before the
 race began!  But hey, it was a good start and I'm really glad I
 did it.
-&lt;/p&gt;</description><category>running</category><guid>https://weblog.latte.ca/amy/motion/waterfront5k.html</guid><pubDate>Mon, 25 Sep 2006 01:03:00 GMT</pubDate></item><item><title>More Five and One</title><link>https://weblog.latte.ca/amy/motion/fiveandoneredux.html</link><dc:creator>Amy Brown</dc:creator><description>&lt;p&gt;
+&lt;/p&gt;</description><category>running</category><guid>http://bwinton.github.io/weblog.latte.ca/amy/motion/waterfront5k.html</guid><pubDate>Mon, 25 Sep 2006 01:03:00 GMT</pubDate></item><item><title>More Five and One</title><link>http://bwinton.github.io/weblog.latte.ca/amy/motion/fiveandoneredux.html</link><dc:creator>Amy Brown</dc:creator><description>&lt;p&gt;
 Five and ones have been kicking my ass lately and I don't know
 why; the first couple of times were fine but ever since then
 I have had that cruddy bronchitis feeling in my chest every time
@@ -142,7 +142,7 @@ rest of the way.  Fortunately it &lt;em&gt;is&lt;/em&gt; a run/walk, so I will d
 five and twos and do my damnedest to keep up that pace for the
 full 5K.  And &lt;em&gt;next&lt;/em&gt; time I do a 5K I will do it at
 ten and ones, so there.
-&lt;/p&gt;</description><category>running</category><guid>https://weblog.latte.ca/amy/motion/fiveandoneredux.html</guid><pubDate>Fri, 22 Sep 2006 01:29:00 GMT</pubDate></item><item><title>Increasing Intervals</title><link>https://weblog.latte.ca/amy/motion/intervals.html</link><dc:creator>Amy Brown</dc:creator><description>&lt;p&gt;
+&lt;/p&gt;</description><category>running</category><guid>http://bwinton.github.io/weblog.latte.ca/amy/motion/fiveandoneredux.html</guid><pubDate>Fri, 22 Sep 2006 01:29:00 GMT</pubDate></item><item><title>Increasing Intervals</title><link>http://bwinton.github.io/weblog.latte.ca/amy/motion/intervals.html</link><dc:creator>Amy Brown</dc:creator><description>&lt;p&gt;
 This post started as a response to Jillian's comment in my last post;
 my response started getting really long so I figured I would post it
 instead.
@@ -205,7 +205,7 @@ know where that is!  Etobicoke?  Someplace I never go!  AND THEN
 BACK DOWNTOWN!
 &lt;/p&gt;&lt;p&gt;
 Marathons are long, dude.
-&lt;/p&gt;</description><category>running</category><guid>https://weblog.latte.ca/amy/motion/intervals.html</guid><pubDate>Wed, 13 Sep 2006 13:28:00 GMT</pubDate></item><item><title>Five And One; Two Weeks To Race Day</title><link>https://weblog.latte.ca/amy/motion/fiveandone.html</link><dc:creator>Amy Brown</dc:creator><description>&lt;p&gt;
+&lt;/p&gt;</description><category>running</category><guid>http://bwinton.github.io/weblog.latte.ca/amy/motion/intervals.html</guid><pubDate>Wed, 13 Sep 2006 13:28:00 GMT</pubDate></item><item><title>Five And One; Two Weeks To Race Day</title><link>http://bwinton.github.io/weblog.latte.ca/amy/motion/fiveandone.html</link><dc:creator>Amy Brown</dc:creator><description>&lt;p&gt;
 Still running...  I am up to five minutes of running and one minute
 of walking, and it's easier than I thought it would be.  My friend
 Michelle said that, physically, it never got harder for her than
@@ -241,7 +241,7 @@ walk if it's too hard."  Just because I am fat doesn't mean I am
 out of shape, lady, I walk more in a day than most of you do in
 a week;  I think everyone in the clinic drives there except me.
 Ah well, I didn't get into this to make friends.
-&lt;/p&gt;</description><category>running</category><guid>https://weblog.latte.ca/amy/motion/fiveandone.html</guid><pubDate>Mon, 11 Sep 2006 13:50:00 GMT</pubDate></item><item><title>Running With A Friend, and Some Other Things</title><link>https://weblog.latte.ca/amy/motion/threeandone.html</link><dc:creator>Amy Brown</dc:creator><description>&lt;p&gt;
+&lt;/p&gt;</description><category>running</category><guid>http://bwinton.github.io/weblog.latte.ca/amy/motion/fiveandone.html</guid><pubDate>Mon, 11 Sep 2006 13:50:00 GMT</pubDate></item><item><title>Running With A Friend, and Some Other Things</title><link>http://bwinton.github.io/weblog.latte.ca/amy/motion/threeandone.html</link><dc:creator>Amy Brown</dc:creator><description>&lt;p&gt;
 I went running last night with my friend Michelle, my real-life
 inspiration for all this perspiration.  It was the first time I
 have been running with someone else, apart from the clinic.  It
@@ -276,7 +276,7 @@ been.  I hit it off with another girl and we ran quite far behind
 everyone else.  She was embarrassed but I didn't care; better to
 run slow and keep running than to run fast, save face, and hurt
 yourself.
-&lt;/p&gt;</description><category>running</category><guid>https://weblog.latte.ca/amy/motion/threeandone.html</guid><pubDate>Fri, 18 Aug 2006 17:29:00 GMT</pubDate></item><item><title>Two and Ones</title><link>https://weblog.latte.ca/amy/motion/twoandone.html</link><dc:creator>Amy Brown</dc:creator><description>&lt;p&gt;
+&lt;/p&gt;</description><category>running</category><guid>http://bwinton.github.io/weblog.latte.ca/amy/motion/threeandone.html</guid><pubDate>Fri, 18 Aug 2006 17:29:00 GMT</pubDate></item><item><title>Two and Ones</title><link>http://bwinton.github.io/weblog.latte.ca/amy/motion/twoandone.html</link><dc:creator>Amy Brown</dc:creator><description>&lt;p&gt;
 I'm into two and ones, two minutes of running and one
 minute of walking.  I've been for two runs at that pace
 and they have been hard but not impossible.  I had to
@@ -319,4 +319,4 @@ of running three times a week wouldn't make that
 much difference.  But I haven't changed anything
 else, so that must be it.  (Unless I do have some
 wasting disease, which was my first thought.)
-&lt;/p&gt;</description><category>running</category><guid>https://weblog.latte.ca/amy/motion/twoandone.html</guid><pubDate>Fri, 04 Aug 2006 02:03:00 GMT</pubDate></item></channel></rss>
+&lt;/p&gt;</description><category>running</category><guid>http://bwinton.github.io/weblog.latte.ca/amy/motion/twoandone.html</guid><pubDate>Fri, 04 Aug 2006 02:03:00 GMT</pubDate></item></channel></rss>

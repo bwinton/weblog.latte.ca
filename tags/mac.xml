@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<?xml-stylesheet type="text/xsl" href="../assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Blog-O! (mac)</title><link>https://weblog.latte.ca/</link><description></description><atom:link type="application/rss+xml" href="https://weblog.latte.ca/tags/mac.xml" rel="self"></atom:link><language>en</language><lastBuildDate>Wed, 24 Feb 2016 17:07:38 GMT</lastBuildDate><generator>https://getnikola.com/</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Building Thunderbird on OS X Lion (10.7) and XCode 4.2</title><link>https://weblog.latte.ca/blake/tech/thunderbird/buildingonlion.html</link><dc:creator>Blake Winton</dc:creator><description>&lt;div&gt;&lt;p&gt;A few people recently asked me about building Thunderbird on the latest version
+<?xml-stylesheet type="text/xsl" href="../assets/xml/rss.xsl" media="all"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title>Blog-O! (mac)</title><link>http://bwinton.github.io/weblog.latte.ca/</link><description></description><atom:link href="http://bwinton.github.io/weblog.latte.ca/tags/mac.xml" type="application/rss+xml" rel="self"></atom:link><language>en</language><lastBuildDate>Wed, 24 Feb 2016 17:16:19 GMT</lastBuildDate><generator>https://getnikola.com/</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Building Thunderbird on OS X Lion (10.7) and XCode 4.2</title><link>http://bwinton.github.io/weblog.latte.ca/blake/tech/thunderbird/buildingonlion.html</link><dc:creator>Blake Winton</dc:creator><description>&lt;div&gt;&lt;p&gt;A few people recently asked me about building Thunderbird on the latest version
 of Mac OS X.  Since I have it working, and to give myself a place to point to
 the next time they ask, I figured it would be a good idea to blog about it.&lt;/p&gt;
 &lt;p&gt;So, here’s my &lt;code&gt;.mozconfig&lt;/code&gt;.&lt;/p&gt;
@@ -64,7 +64,7 @@ ac_add_options --enable-macos-target&lt;span class="o"&gt;=&lt;/span&gt;10.7
 &lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;p&gt;There are probably a bunch of things I don’t really need in there, so if anyone
 wants to take it, and cut it down to the minimal set, I would definitely
 appreciate it.  But in the meantime, this works for me, and will probably work
-for you, too.&lt;/p&gt;&lt;/div&gt;</description><category>mac</category><category>mozilla</category><category>thunderbird</category><guid>https://weblog.latte.ca/blake/tech/thunderbird/buildingonlion.html</guid><pubDate>Tue, 06 Mar 2012 15:34:10 GMT</pubDate></item><item><title>More questions from a new Mac user.</title><link>https://weblog.latte.ca/blake/tech/mac/questions1.html</link><dc:creator>Blake Winton</dc:creator><description>&lt;p&gt;Okay, y'all know by now that we've got a new Mac.  And in the grand
+for you, too.&lt;/p&gt;&lt;/div&gt;</description><category>mac</category><category>mozilla</category><category>thunderbird</category><guid>http://bwinton.github.io/weblog.latte.ca/blake/tech/thunderbird/buildingonlion.html</guid><pubDate>Tue, 06 Mar 2012 15:34:10 GMT</pubDate></item><item><title>More questions from a new Mac user.</title><link>http://bwinton.github.io/weblog.latte.ca/blake/tech/mac/questions1.html</link><dc:creator>Blake Winton</dc:creator><description>&lt;p&gt;Okay, y'all know by now that we've got a new Mac.  And in the grand
 tradition of new computers, I'm trying to burn up all the hard drive
 space with fun or useful utilities.  Since this is pretty much my
 first exposure to OSX, anything goes, since I probably haven't heard
@@ -85,7 +85,7 @@ in an editor.&lt;/li&gt;
 just one window, and&lt;/li&gt;
 &lt;li&gt;&lt;pre&gt;sudo defaults write /Library/Preferences/com.apple.loginwindow LoginwindowText -string "My Funny Message!!!"&lt;/pre&gt;
 to print a message on the login window.&lt;/li&gt;
-&lt;/ul&gt;</description><category>mac</category><guid>https://weblog.latte.ca/blake/tech/mac/questions1.html</guid><pubDate>Sat, 09 Sep 2006 00:39:00 GMT</pubDate></item><item><title>Some questions from a new Mac user.</title><link>https://weblog.latte.ca/blake/tech/mac/questions0.html</link><dc:creator>Blake Winton</dc:creator><description>&lt;p&gt;Cc:-ed to the MacPython list, because they might know.&lt;/p&gt;
+&lt;/ul&gt;</description><category>mac</category><guid>http://bwinton.github.io/weblog.latte.ca/blake/tech/mac/questions1.html</guid><pubDate>Sat, 09 Sep 2006 00:39:00 GMT</pubDate></item><item><title>Some questions from a new Mac user.</title><link>http://bwinton.github.io/weblog.latte.ca/blake/tech/mac/questions0.html</link><dc:creator>Blake Winton</dc:creator><description>&lt;p&gt;Cc:-ed to the MacPython list, because they might know.&lt;/p&gt;
 &lt;p&gt;Hello,&lt;/p&gt;
 
 &lt;p&gt;I'm trying to get Subversion bindings for my installed version of
@@ -111,7 +111,7 @@ horribly confused?&lt;/p&gt;
 &lt;p&gt;Is there another place I should be asking these questions?&lt;/p&gt;
 
 &lt;p&gt;Thanks,&lt;br&gt;
-Blake.&lt;/p&gt;</description><category>mac</category><guid>https://weblog.latte.ca/blake/tech/mac/questions0.html</guid><pubDate>Wed, 30 Aug 2006 16:47:00 GMT</pubDate></item><item><title>Snakes on an Apple!</title><link>https://weblog.latte.ca/blake/tech/mac/badpun.html</link><dc:creator>Blake Winton</dc:creator><description>&lt;div&gt;&lt;p&gt;As I &lt;a href="http://weblog.latte.ca/firstpost.html"&gt;mentioned
+Blake.&lt;/p&gt;</description><category>mac</category><guid>http://bwinton.github.io/weblog.latte.ca/blake/tech/mac/questions0.html</guid><pubDate>Wed, 30 Aug 2006 16:47:00 GMT</pubDate></item><item><title>Snakes on an Apple!</title><link>http://bwinton.github.io/weblog.latte.ca/blake/tech/mac/badpun.html</link><dc:creator>Blake Winton</dc:creator><description>&lt;div&gt;&lt;p&gt;As I &lt;a href="http://weblog.latte.ca/firstpost.html"&gt;mentioned
 before&lt;/a&gt;, we got a Mac Mini.  It's been a bit of a pain getting it all
 set up, but I think we're finally done.  The web server is moved over,
 along with all the websites.  The mail server is moved over, and I took
@@ -333,4 +333,4 @@ to write using &lt;tt&gt;sudo defaults write
 "parsed weather info here"&lt;/tt&gt;.&lt;/p&gt;
 &lt;p&gt;If any of you have any questions, I'ld love to answer them as best I
 can. Just comment, and I'll see what I can dig up.  By which I mean
-email Dethe, and ask him.  ;)&lt;/p&gt;&lt;/div&gt;</description><category>mac</category><guid>https://weblog.latte.ca/blake/tech/mac/badpun.html</guid><pubDate>Fri, 25 Aug 2006 02:23:00 GMT</pubDate></item></channel></rss>
+email Dethe, and ask him.  ;)&lt;/p&gt;&lt;/div&gt;</description><category>mac</category><guid>http://bwinton.github.io/weblog.latte.ca/blake/tech/mac/badpun.html</guid><pubDate>Fri, 25 Aug 2006 02:23:00 GMT</pubDate></item></channel></rss>

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<?xml-stylesheet type="text/xsl" href="../assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Blog-O! (conversations)</title><link>https://weblog.latte.ca/</link><description></description><atom:link type="application/rss+xml" href="https://weblog.latte.ca/tags/conversations.xml" rel="self"></atom:link><language>en</language><lastBuildDate>Wed, 24 Feb 2016 17:07:44 GMT</lastBuildDate><generator>https://getnikola.com/</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Conversations with Cordelia</title><link>https://weblog.latte.ca/cordelia/conversations/conversation00.html</link><dc:creator>Amy Brown</dc:creator><description>&lt;p&gt;
+<?xml-stylesheet type="text/xsl" href="../assets/xml/rss.xsl" media="all"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title>Blog-O! (conversations)</title><link>http://bwinton.github.io/weblog.latte.ca/</link><description></description><atom:link href="http://bwinton.github.io/weblog.latte.ca/tags/conversations.xml" type="application/rss+xml" rel="self"></atom:link><language>en</language><lastBuildDate>Wed, 24 Feb 2016 17:16:11 GMT</lastBuildDate><generator>https://getnikola.com/</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Conversations with Cordelia</title><link>http://bwinton.github.io/weblog.latte.ca/cordelia/conversations/conversation00.html</link><dc:creator>Amy Brown</dc:creator><description>&lt;p&gt;
 Cordelia is so funny and verbal that I think
 we almost take the cute things she says for
 granted, but I'm going to try and write some
@@ -28,7 +28,7 @@ bits!"
 &lt;/p&gt;
 &lt;p&gt;
 "And also your slippers."
-&lt;/p&gt;</description><category>conversations</category><guid>https://weblog.latte.ca/cordelia/conversations/conversation00.html</guid><pubDate>Wed, 30 Apr 2008 00:00:00 GMT</pubDate></item><item><title>Conversations with Kindergarteners</title><link>https://weblog.latte.ca/delphine/conversations/apples.html</link><dc:creator>Amy Brown</dc:creator><description>&lt;p&gt;
+&lt;/p&gt;</description><category>conversations</category><guid>http://bwinton.github.io/weblog.latte.ca/cordelia/conversations/conversation00.html</guid><pubDate>Wed, 30 Apr 2008 00:00:00 GMT</pubDate></item><item><title>Conversations with Kindergarteners</title><link>http://bwinton.github.io/weblog.latte.ca/delphine/conversations/apples.html</link><dc:creator>Amy Brown</dc:creator><description>&lt;p&gt;
 The other day I went with Delphine's class on a field trip
 to the Toronto Botanical Gardens.  I was put in charge of
 Delphine; Annie, with long blonde hair in a messy ponytail and
@@ -63,7 +63,7 @@ they didn't have any at the grocery store yesterday.
 Isn't that a weird conversation to have with four and five
 year-olds?  I guess that's when you get when you live in
 a neighbourhood of foodies.
-&lt;/p&gt;</description><category>conversations</category><category>delphine</category><category>food</category><guid>https://weblog.latte.ca/delphine/conversations/apples.html</guid><pubDate>Sun, 14 Oct 2007 19:43:31 GMT</pubDate></item><item><title>Whatever happened to...</title><link>https://weblog.latte.ca/delphine/conversations/dinosaurs.html</link><dc:creator>Amy Brown</dc:creator><description>&lt;p&gt;
+&lt;/p&gt;</description><category>conversations</category><category>delphine</category><category>food</category><guid>http://bwinton.github.io/weblog.latte.ca/delphine/conversations/apples.html</guid><pubDate>Sun, 14 Oct 2007 19:43:31 GMT</pubDate></item><item><title>Whatever happened to...</title><link>http://bwinton.github.io/weblog.latte.ca/delphine/conversations/dinosaurs.html</link><dc:creator>Amy Brown</dc:creator><description>&lt;p&gt;
 Delphine loves to know whether things are real or pretend,
 so after a lengthy discussion about ghosts (starting with
 "what do ghosts eat?") she changed the subject:
@@ -91,7 +91,7 @@ of them to put in museums."
 &lt;/p&gt;
 &lt;p&gt;
 Well, I can't say I'd thought of that.
-&lt;/p&gt;</description><category>conversations</category><category>delphine</category><guid>https://weblog.latte.ca/delphine/conversations/dinosaurs.html</guid><pubDate>Thu, 12 Jul 2007 21:43:04 GMT</pubDate></item><item><title>Conversations With Delphine, Part VII: Beer</title><link>https://weblog.latte.ca/delphine/conversations/conversations7.html</link><dc:creator>Amy Brown</dc:creator><description>&lt;p&gt;
+&lt;/p&gt;</description><category>conversations</category><category>delphine</category><guid>http://bwinton.github.io/weblog.latte.ca/delphine/conversations/dinosaurs.html</guid><pubDate>Thu, 12 Jul 2007 21:43:04 GMT</pubDate></item><item><title>Conversations With Delphine, Part VII: Beer</title><link>http://bwinton.github.io/weblog.latte.ca/delphine/conversations/conversations7.html</link><dc:creator>Amy Brown</dc:creator><description>&lt;p&gt;
 One the way home from daycare I stopped off at the LCBO 
 to buy beer because it was just that hot.  
 &lt;/p&gt;&lt;p&gt;
@@ -113,7 +113,7 @@ into the beer section.
 I am still young."
 &lt;/p&gt;&lt;p&gt;
 It's good to have something to look forward to.
-&lt;/p&gt;</description><category>conversations</category><guid>https://weblog.latte.ca/delphine/conversations/conversations7.html</guid><pubDate>Wed, 09 May 2007 21:28:58 GMT</pubDate></item><item><title>Conversations with Delphine, Part 6</title><link>https://weblog.latte.ca/delphine/conversations/conversations6.html</link><dc:creator>Amy Brown</dc:creator><description>&lt;p&gt;
+&lt;/p&gt;</description><category>conversations</category><guid>http://bwinton.github.io/weblog.latte.ca/delphine/conversations/conversations7.html</guid><pubDate>Wed, 09 May 2007 21:28:58 GMT</pubDate></item><item><title>Conversations with Delphine, Part 6</title><link>http://bwinton.github.io/weblog.latte.ca/delphine/conversations/conversations6.html</link><dc:creator>Amy Brown</dc:creator><description>&lt;p&gt;
 She doesn't say such curious things any more, because
 her language skills are better, but she's still pretty
 amusing.
@@ -135,7 +135,7 @@ After supper Blake arrived home, having biked.  It's
 warm today so he was pretty sweaty.  Delphine said
 "You're wet like water, Daddy!  We could swim in
 you!"
-&lt;/p&gt;</description><category>conversations</category><guid>https://weblog.latte.ca/delphine/conversations/conversations6.html</guid><pubDate>Wed, 09 May 2007 21:28:58 GMT</pubDate></item><item><title>Things Delphine Says</title><link>https://weblog.latte.ca/delphine/conversations/conversations14.html</link><dc:creator>Amy Brown</dc:creator><description>&lt;p&gt;
+&lt;/p&gt;</description><category>conversations</category><guid>http://bwinton.github.io/weblog.latte.ca/delphine/conversations/conversations6.html</guid><pubDate>Wed, 09 May 2007 21:28:58 GMT</pubDate></item><item><title>Things Delphine Says</title><link>http://bwinton.github.io/weblog.latte.ca/delphine/conversations/conversations14.html</link><dc:creator>Amy Brown</dc:creator><description>&lt;p&gt;
 Delphine, being only three and a half, still has lots of those
 little kid speech peculiarities which are so adorable that parents
 insist on talking about them for years, and even try and teach
@@ -174,7 +174,7 @@ how it went:
 "Knock knock!  Who's there?  Daddy!  Daddy who?  Daddy cup of hot
 chocolate!"  And she laughed and laughed, and Blake was bewildered.
 Still funny, but not in quite the same way.
-&lt;/p&gt;</description><category>conversations</category><guid>https://weblog.latte.ca/delphine/conversations/conversations14.html</guid><pubDate>Thu, 23 Nov 2006 18:30:00 GMT</pubDate></item><item><title>Conversations with Delphine, Telephone Edition.</title><link>https://weblog.latte.ca/delphine/conversations/conversations13.html</link><dc:creator>Amy Brown</dc:creator><description>&lt;p&gt;
+&lt;/p&gt;</description><category>conversations</category><guid>http://bwinton.github.io/weblog.latte.ca/delphine/conversations/conversations14.html</guid><pubDate>Thu, 23 Nov 2006 18:30:00 GMT</pubDate></item><item><title>Conversations with Delphine, Telephone Edition.</title><link>http://bwinton.github.io/weblog.latte.ca/delphine/conversations/conversations13.html</link><dc:creator>Amy Brown</dc:creator><description>&lt;p&gt;
 Yesterday I was talking to Auntie Morgan on the telephone.
 Delphine wanted to talk to her so I put her on.  They talked
 for a while and then Delphine told Morgan about her new
@@ -203,7 +203,7 @@ She's a charmer, that one.
 &lt;hr width="40%"&gt;&lt;p&gt;
 She just came running out of the bedroom, said "You're
 not my friend, Cordelia," and ran back in.
-&lt;/p&gt;</description><category>conversations</category><guid>https://weblog.latte.ca/delphine/conversations/conversations13.html</guid><pubDate>Tue, 26 Sep 2006 16:15:00 GMT</pubDate></item><item><title>Conversations With Delphine</title><link>https://weblog.latte.ca/delphine/conversations/conversations12.html</link><dc:creator>Amy Brown</dc:creator><description>&lt;p&gt;
+&lt;/p&gt;</description><category>conversations</category><guid>http://bwinton.github.io/weblog.latte.ca/delphine/conversations/conversations13.html</guid><pubDate>Tue, 26 Sep 2006 16:15:00 GMT</pubDate></item><item><title>Conversations With Delphine</title><link>http://bwinton.github.io/weblog.latte.ca/delphine/conversations/conversations12.html</link><dc:creator>Amy Brown</dc:creator><description>&lt;p&gt;
 Blake and I usually tidy up the living room every
 night after the girls are in bed, but last night we
 were just too tired and couldn't be bothered.  
@@ -216,7 +216,7 @@ to tidy up!"
 &lt;/p&gt;&lt;p&gt;
 I think 4:30 has just officially become "Tidy-Up 
 Time".  "You guys" indeed!
-&lt;/p&gt;</description><category>conversations</category><guid>https://weblog.latte.ca/delphine/conversations/conversations12.html</guid><pubDate>Wed, 30 Aug 2006 18:14:00 GMT</pubDate></item><item><title>Why?</title><link>https://weblog.latte.ca/delphine/conversations/why.html</link><dc:creator>Blake Winton</dc:creator><description>&lt;p&gt;Delphine (still) asks us why a lot.  Sadly, sometimes I don't have a
+&lt;/p&gt;</description><category>conversations</category><guid>http://bwinton.github.io/weblog.latte.ca/delphine/conversations/conversations12.html</guid><pubDate>Wed, 30 Aug 2006 18:14:00 GMT</pubDate></item><item><title>Why?</title><link>http://bwinton.github.io/weblog.latte.ca/delphine/conversations/why.html</link><dc:creator>Blake Winton</dc:creator><description>&lt;p&gt;Delphine (still) asks us why a lot.  Sadly, sometimes I don't have a
 good answer, which sort of led to the conversation we had this
 afternoon.&lt;br&gt;&lt;br&gt;
 [First scene.  Two cactuses are dancing.]&lt;br&gt;
@@ -231,7 +231,7 @@ Delphine: "He's dirty cause he was painting."&lt;br&gt;&lt;/p&gt;
 answer but some questions about why a thing is something have no good
 answer.  Can anyone tell me what the difference between the questions
 is, and how to explain it to a three-year-old without using words like
-"intrinsic", or "just because"?&lt;/p&gt;</description><category>conversations</category><guid>https://weblog.latte.ca/delphine/conversations/why.html</guid><pubDate>Sun, 20 Aug 2006 18:16:00 GMT</pubDate></item><item><title>The English Language is Putty In Her Hands</title><link>https://weblog.latte.ca/delphine/conversations/conversations11.html</link><dc:creator>Amy Brown</dc:creator><description>&lt;p&gt;
+"intrinsic", or "just because"?&lt;/p&gt;</description><category>conversations</category><guid>http://bwinton.github.io/weblog.latte.ca/delphine/conversations/why.html</guid><pubDate>Sun, 20 Aug 2006 18:16:00 GMT</pubDate></item><item><title>The English Language is Putty In Her Hands</title><link>http://bwinton.github.io/weblog.latte.ca/delphine/conversations/conversations11.html</link><dc:creator>Amy Brown</dc:creator><description>&lt;p&gt;
 Yesterday Delphine and Cordelia and I went out to run some errands.
 On the way home Delphine said, "Do you remember the Vikings?  In 
 Daddy's movie?"
@@ -244,4 +244,4 @@ Then she decided she was going to be a Viking, so she put on her
 imaginary
 Viking helmet and charged around happily shouting "Vike!  Vike!
 Vike!"
-&lt;/p&gt;</description><category>conversations</category><guid>https://weblog.latte.ca/delphine/conversations/conversations11.html</guid><pubDate>Wed, 16 Aug 2006 18:25:00 GMT</pubDate></item></channel></rss>
+&lt;/p&gt;</description><category>conversations</category><guid>http://bwinton.github.io/weblog.latte.ca/delphine/conversations/conversations11.html</guid><pubDate>Wed, 16 Aug 2006 18:25:00 GMT</pubDate></item></channel></rss>

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<?xml-stylesheet type="text/xsl" href="../assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Blog-O! (home)</title><link>https://weblog.latte.ca/</link><description></description><atom:link type="application/rss+xml" href="https://weblog.latte.ca/tags/home.xml" rel="self"></atom:link><language>en</language><lastBuildDate>Wed, 24 Feb 2016 17:07:42 GMT</lastBuildDate><generator>https://getnikola.com/</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Home alone</title><link>https://weblog.latte.ca/blake/family/homealone.html</link><dc:creator>Blake Winton</dc:creator><description>&lt;div&gt;&lt;p&gt;As Amy mentioned in the previous post, her father passed away.  So she’s
+<?xml-stylesheet type="text/xsl" href="../assets/xml/rss.xsl" media="all"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title>Blog-O! (home)</title><link>http://bwinton.github.io/weblog.latte.ca/</link><description></description><atom:link href="http://bwinton.github.io/weblog.latte.ca/tags/home.xml" type="application/rss+xml" rel="self"></atom:link><language>en</language><lastBuildDate>Wed, 24 Feb 2016 17:16:18 GMT</lastBuildDate><generator>https://getnikola.com/</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Home alone</title><link>http://bwinton.github.io/weblog.latte.ca/blake/family/homealone.html</link><dc:creator>Blake Winton</dc:creator><description>&lt;div&gt;&lt;p&gt;As Amy mentioned in the previous post, her father passed away.  So she’s
 gone out to Saskatchewan to spend some time with her mother.  This means
 that for the next seven days, I get to stay home and take care of the
 kids, making sure that they have food to eat, clothes to wear, and get
@@ -20,7 +20,7 @@ poured cereal for herself and Cordelia, and the two of them were done
 breakfast before I was dressed.  I know she’s five and all, but
 sometimes she’s so grown up it astonishes me.&lt;/p&gt;
 &lt;p&gt;Anyways, they’re currently out on an adventure with Zaida, so I’ld
-better get to folding the laundry, because it ain’t gonna fold itself.&lt;/p&gt;&lt;/div&gt;</description><category>cordelia</category><category>delphine</category><category>family</category><category>home</category><guid>https://weblog.latte.ca/blake/family/homealone.html</guid><pubDate>Thu, 18 Sep 2008 14:12:21 GMT</pubDate></item><item><title>Settling</title><link>https://weblog.latte.ca/amy/houseandhome/settling.html</link><dc:creator>Amy Brown</dc:creator><description>&lt;p&gt;
+better get to folding the laundry, because it ain’t gonna fold itself.&lt;/p&gt;&lt;/div&gt;</description><category>cordelia</category><category>delphine</category><category>family</category><category>home</category><guid>http://bwinton.github.io/weblog.latte.ca/blake/family/homealone.html</guid><pubDate>Thu, 18 Sep 2008 14:12:21 GMT</pubDate></item><item><title>Settling</title><link>http://bwinton.github.io/weblog.latte.ca/amy/houseandhome/settling.html</link><dc:creator>Amy Brown</dc:creator><description>&lt;p&gt;
 People keep asking me if we're getting settled in,
 and until today I was getting pretty tired of it,
 because I really didn't feel all that settled.
@@ -103,4 +103,4 @@ of light and air, a large, usable kitchen,
 and new wiring and light switches in sensible
 places, but it will still retain the patina of
 age that we love.
-&lt;/p&gt;</description><category>home</category><category>house</category><category>houseandhome</category><category>moving</category><category>status</category><category>unpacking</category><guid>https://weblog.latte.ca/amy/houseandhome/settling.html</guid><pubDate>Wed, 27 Dec 2006 03:25:00 GMT</pubDate></item></channel></rss>
+&lt;/p&gt;</description><category>home</category><category>house</category><category>houseandhome</category><category>moving</category><category>status</category><category>unpacking</category><guid>http://bwinton.github.io/weblog.latte.ca/amy/houseandhome/settling.html</guid><pubDate>Wed, 27 Dec 2006 03:25:00 GMT</pubDate></item></channel></rss>

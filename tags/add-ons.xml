@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<?xml-stylesheet type="text/xsl" href="../assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Blog-O! (add-ons)</title><link>https://weblog.latte.ca/</link><description></description><atom:link type="application/rss+xml" href="https://weblog.latte.ca/tags/add-ons.xml" rel="self"></atom:link><language>en</language><lastBuildDate>Wed, 24 Feb 2016 17:07:35 GMT</lastBuildDate><generator>https://getnikola.com/</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>A Proposal for Updates with Add-ons.</title><link>https://weblog.latte.ca/blake/tech/thunderbird/updates.html</link><dc:creator>Blake Winton</dc:creator><description>&lt;div&gt;&lt;p&gt;Add-ons are an important part of many Mozilla products, and many people
+<?xml-stylesheet type="text/xsl" href="../assets/xml/rss.xsl" media="all"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title>Blog-O! (add-ons)</title><link>http://bwinton.github.io/weblog.latte.ca/</link><description></description><atom:link href="http://bwinton.github.io/weblog.latte.ca/tags/add-ons.xml" type="application/rss+xml" rel="self"></atom:link><language>en</language><lastBuildDate>Wed, 24 Feb 2016 17:16:13 GMT</lastBuildDate><generator>https://getnikola.com/</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>A Proposal for Updates with Add-ons.</title><link>http://bwinton.github.io/weblog.latte.ca/blake/tech/thunderbird/updates.html</link><dc:creator>Blake Winton</dc:creator><description>&lt;div&gt;&lt;p&gt;Add-ons are an important part of many Mozilla products, and many people
 have noticed that they’ve taken a hit as we’ve switched to the Rapid
 Release process.  To help users have a little more control over how well
 their Firefox works, I would like to propose the following slight
@@ -9,13 +9,13 @@ modification to the automatic Update process:&lt;/p&gt;
 if there are compatible versions we haven’t downloaded yet.&lt;/p&gt;
 &lt;p&gt;If all the add-ons are compatible (or will be made so at the next
 download), we show the NoAddons dialog:&lt;/p&gt;
-&lt;p&gt;&lt;img alt="NoAddons dialog" src="https://weblog.latte.ca/images/blake/updates/NoAddons.png"&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="NoAddons dialog" src="http://bwinton.github.io/weblog.latte.ca/images/blake/updates/NoAddons.png"&gt;&lt;/p&gt;
 &lt;p&gt;It‘s the same as the current Firefox or Thunderbird update dialog, and as
 you would expect, the “Ask Later” and “Update Firefox” buttons do the same
 things that they do now.&lt;/p&gt;
 &lt;p&gt;On the other hand, if there &lt;em&gt;are&lt;/em&gt; in-compatible add-ons, we show the Addons
 dialog:&lt;/p&gt;
-&lt;p&gt;&lt;img alt="Addons dialog" src="https://weblog.latte.ca/images/blake/updates/Addons.png"&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="Addons dialog" src="http://bwinton.github.io/weblog.latte.ca/images/blake/updates/Addons.png"&gt;&lt;/p&gt;
 &lt;p&gt;As you can see, we let the user know which add-ons are incompatible, and
 give the user an extra button at the bottom to do something different.&lt;/p&gt;
 &lt;p&gt;The new “Update when my add-ons work” button (wording to be clarified
@@ -27,4 +27,4 @@ incompatible add-ons.&lt;/p&gt;
 &lt;p&gt;Showing the user which add-ons are incompatible will let them decide
 whether the add-ons are important enough to not upgrade, or whether they
 can live with the (hopefully short) period of reduced functionality.&lt;/p&gt;
-&lt;p&gt;As always, comments welcome, but keep them polite or they’ll be deleted.&lt;/p&gt;&lt;/div&gt;</description><category>add-ons</category><category>firefox</category><category>mozilla</category><category>thunderbird</category><category>update</category><guid>https://weblog.latte.ca/blake/tech/thunderbird/updates.html</guid><pubDate>Thu, 08 Sep 2011 18:49:44 GMT</pubDate></item></channel></rss>
+&lt;p&gt;As always, comments welcome, but keep them polite or they’ll be deleted.&lt;/p&gt;&lt;/div&gt;</description><category>add-ons</category><category>firefox</category><category>mozilla</category><category>thunderbird</category><category>update</category><guid>http://bwinton.github.io/weblog.latte.ca/blake/tech/thunderbird/updates.html</guid><pubDate>Thu, 08 Sep 2011 18:49:44 GMT</pubDate></item></channel></rss>

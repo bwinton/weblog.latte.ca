@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<?xml-stylesheet type="text/xsl" href="../assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Blog-O! (reading)</title><link>https://weblog.latte.ca/</link><description></description><atom:link type="application/rss+xml" href="https://weblog.latte.ca/tags/reading.xml" rel="self"></atom:link><language>en</language><lastBuildDate>Wed, 24 Feb 2016 17:07:38 GMT</lastBuildDate><generator>https://getnikola.com/</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>P-t-e-r-a-n-o-d-o-n spells Pteranodon!</title><link>https://weblog.latte.ca/delphine/earlyreading.html</link><dc:creator>Amy Brown</dc:creator><description>&lt;p&gt;
+<?xml-stylesheet type="text/xsl" href="../assets/xml/rss.xsl" media="all"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title>Blog-O! (reading)</title><link>http://bwinton.github.io/weblog.latte.ca/</link><description></description><atom:link href="http://bwinton.github.io/weblog.latte.ca/tags/reading.xml" type="application/rss+xml" rel="self"></atom:link><language>en</language><lastBuildDate>Wed, 24 Feb 2016 17:16:19 GMT</lastBuildDate><generator>https://getnikola.com/</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>P-t-e-r-a-n-o-d-o-n spells Pteranodon!</title><link>http://bwinton.github.io/weblog.latte.ca/delphine/earlyreading.html</link><dc:creator>Amy Brown</dc:creator><description>&lt;p&gt;
 The other day Delphine peered intently at the world map
 we got for my birthday for a while, and then announced
 "I read San!  S-a-n is San!"  That's the first word she
@@ -12,4 +12,4 @@ Then later she read the first syllable of "Doritos", which
 is now that I think about it, faux-Spanish.  I'm going to
 assume that's a coincience until I get more data.  Anyway
 the point is she's almost reading!  Hooray!
-&lt;/p&gt;</description><category>delphine</category><category>development</category><category>reading</category><guid>https://weblog.latte.ca/delphine/earlyreading.html</guid><pubDate>Sun, 14 Oct 2007 19:21:55 GMT</pubDate></item></channel></rss>
+&lt;/p&gt;</description><category>delphine</category><category>development</category><category>reading</category><guid>http://bwinton.github.io/weblog.latte.ca/delphine/earlyreading.html</guid><pubDate>Sun, 14 Oct 2007 19:21:55 GMT</pubDate></item></channel></rss>
