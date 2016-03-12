@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<?xml-stylesheet type="text/xsl" href="../assets/xml/rss.xsl" media="all"?><rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:dc="http://purl.org/dc/elements/1.1/" version="2.0"><channel><title>Blog-O! (_2006)</title><link>http://bwinton.github.io/weblog.latte.ca/</link><description></description><atom:link rel="self" href="http://bwinton.github.io/weblog.latte.ca/tags/_2006.xml" type="application/rss+xml"></atom:link><language>en</language><lastBuildDate>Wed, 24 Feb 2016 22:14:07 GMT</lastBuildDate><generator>https://getnikola.com/</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Books In August and September</title><link>http://bwinton.github.io/weblog.latte.ca/amy/books/_2006/sep11.html</link><dc:creator>Amy Brown</dc:creator><description>&lt;p&gt;
+<?xml-stylesheet type="text/xsl" href="../assets/xml/rss.xsl" media="all"?><rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/"><channel><title>Blog-O! (_2006)</title><link>https://bwinton.github.io/weblog.latte.ca/</link><description></description><atom:link type="application/rss+xml" href="https://bwinton.github.io/weblog.latte.ca/tags/_2006.xml" rel="self"></atom:link><language>en</language><lastBuildDate>Sat, 12 Mar 2016 18:09:31 GMT</lastBuildDate><generator>https://getnikola.com/</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Books In August and September</title><link>https://bwinton.github.io/weblog.latte.ca/amy/books/_2006/sep11.html</link><dc:creator>Amy Brown</dc:creator><description>&lt;p&gt;
 I feel like I haven't updated for ages, but it has only been 
 a couple of weeks.  But what did I read?  I was working on
 &lt;em&gt;A Son of the Circus&lt;/em&gt; by John Irving for a while,
@@ -33,7 +33,7 @@ what I liked about it.  So I just had to nod; "yeah, book
 sucks.  Right."
 &lt;/p&gt;&lt;p&gt;
 Must... get... smarter... 
-&lt;/p&gt;</description><category>_2006</category><guid>http://bwinton.github.io/weblog.latte.ca/amy/books/_2006/sep11.html</guid><pubDate>Mon, 11 Sep 2006 14:21:00 GMT</pubDate></item><item><title>Books in August</title><link>http://bwinton.github.io/weblog.latte.ca/amy/books/_2006/aug25.html</link><dc:creator>Amy Brown</dc:creator><description>&lt;p&gt;
+&lt;/p&gt;</description><category>_2006</category><guid>https://bwinton.github.io/weblog.latte.ca/amy/books/_2006/sep11.html</guid><pubDate>Mon, 11 Sep 2006 14:21:00 GMT</pubDate></item><item><title>Books in August</title><link>https://bwinton.github.io/weblog.latte.ca/amy/books/_2006/aug25.html</link><dc:creator>Amy Brown</dc:creator><description>&lt;p&gt;
 &lt;strong&gt;&lt;em&gt;The Highly Sensitive Child: Helping our children thrive
 when the world overwhelms them&lt;/em&gt; by Elaine Aron&lt;/strong&gt;.  After
 Delphine decided she hated music class because the leader was too
@@ -165,7 +165,7 @@ Thus I conjure up an image of myself poring through heaps
 of classics trying to figure out the hidden meaning, and triumphantly
 snapping each one closed and setting it aside as I "decode" it.
 "Figured out that one!  Next!"  Which I am sure is not the point.
-&lt;/p&gt;</description><category>_2006</category><guid>http://bwinton.github.io/weblog.latte.ca/amy/books/_2006/aug25.html</guid><pubDate>Fri, 25 Aug 2006 14:42:00 GMT</pubDate></item><item><title>Books in July and August</title><link>http://bwinton.github.io/weblog.latte.ca/amy/books/_2006/aug11.html</link><dc:creator>Amy Brown</dc:creator><description>&lt;p&gt;
+&lt;/p&gt;</description><category>_2006</category><guid>https://bwinton.github.io/weblog.latte.ca/amy/books/_2006/aug25.html</guid><pubDate>Fri, 25 Aug 2006 14:42:00 GMT</pubDate></item><item><title>Books in July and August</title><link>https://bwinton.github.io/weblog.latte.ca/amy/books/_2006/aug11.html</link><dc:creator>Amy Brown</dc:creator><description>&lt;p&gt;
 It has been way too long since I did this, and I have read about a
 thousand books.  I hope I don't miss any.
 &lt;/p&gt;&lt;p&gt;
@@ -452,7 +452,7 @@ requirements.'  All he had ever wanted, to keep him passably amused, was ten
 thousand people, four military bands, two hundred horses and a boxful of
 tipsy admirers.
 &lt;/blockquote&gt;
-</description><category>_2006</category><guid>http://bwinton.github.io/weblog.latte.ca/amy/books/_2006/aug11.html</guid><pubDate>Fri, 11 Aug 2006 18:58:00 GMT</pubDate></item><item><title>Books in June</title><link>http://bwinton.github.io/weblog.latte.ca/amy/books/_2006/jun21.html</link><dc:creator>Amy Brown</dc:creator><description>&lt;p&gt;
+</description><category>_2006</category><guid>https://bwinton.github.io/weblog.latte.ca/amy/books/_2006/aug11.html</guid><pubDate>Fri, 11 Aug 2006 18:58:00 GMT</pubDate></item><item><title>Books in June</title><link>https://bwinton.github.io/weblog.latte.ca/amy/books/_2006/jun21.html</link><dc:creator>Amy Brown</dc:creator><description>&lt;p&gt;
 &lt;strong&gt;&lt;em&gt;In Your Face: The Culture of Beauty and You&lt;/em&gt; 
 by Shari Graydon&lt;/strong&gt; is a beauty myth primer for teens,
 and as such didn't really tell me anything I didn't already
@@ -630,7 +630,7 @@ and &lt;em&gt;Ghost&lt;/em&gt;, she claims New Yorkers don't eat sushi
 and that you shouldn't wear high heels with jeans.  It
 boggles the mind, really, but I suppose that's what
 happens when you write a pop culture book.
-&lt;/p&gt;</description><category>_2006</category><guid>http://bwinton.github.io/weblog.latte.ca/amy/books/_2006/jun21.html</guid><pubDate>Wed, 21 Jun 2006 18:14:00 GMT</pubDate></item><item><title>Books in May</title><link>http://bwinton.github.io/weblog.latte.ca/amy/books/_2006/may25.html</link><dc:creator>Amy Brown</dc:creator><description>&lt;p&gt;
+&lt;/p&gt;</description><category>_2006</category><guid>https://bwinton.github.io/weblog.latte.ca/amy/books/_2006/jun21.html</guid><pubDate>Wed, 21 Jun 2006 18:14:00 GMT</pubDate></item><item><title>Books in May</title><link>https://bwinton.github.io/weblog.latte.ca/amy/books/_2006/may25.html</link><dc:creator>Amy Brown</dc:creator><description>&lt;p&gt;
 &lt;strong&gt;&lt;em&gt;How To Cut Your Own or Anybody Else's Hair&lt;/em&gt; by
     Bob Bent&lt;/strong&gt;.  This was indeed useful -- apparently the key to
     cutting your own hair is to cut a guide section in front
@@ -673,7 +673,7 @@ amusing).  Harford leans a little further to the right
 than I am used to, which got my back up a bit, but 
 his arguments are convincing, so in the end I'm sure
 it did me good.
-&lt;/p&gt;</description><category>_2006</category><guid>http://bwinton.github.io/weblog.latte.ca/amy/books/_2006/may25.html</guid><pubDate>Thu, 25 May 2006 18:14:00 GMT</pubDate></item><item><title>List of Books</title><link>http://bwinton.github.io/weblog.latte.ca/amy/books/_2006/apr26.html</link><dc:creator>Amy Brown</dc:creator><description>&lt;p&gt;
+&lt;/p&gt;</description><category>_2006</category><guid>https://bwinton.github.io/weblog.latte.ca/amy/books/_2006/may25.html</guid><pubDate>Thu, 25 May 2006 18:14:00 GMT</pubDate></item><item><title>List of Books</title><link>https://bwinton.github.io/weblog.latte.ca/amy/books/_2006/apr26.html</link><dc:creator>Amy Brown</dc:creator><description>&lt;p&gt;
 ...now with short reviews.
 &lt;/p&gt;
 &lt;ul&gt;&lt;li&gt;&lt;em&gt;Accomodating Brocolli in the Cemetary or Why Can't Anybody Spell?&lt;/em&gt;
@@ -731,7 +731,7 @@ it did me good.
     because I always say it with one in my head.  I'm not sure why.)
     Very fun book; I am happy Jennifer Weiner has written two more books
     I haven't read yet.&lt;/li&gt;
-&lt;/ul&gt;</description><category>_2006</category><guid>http://bwinton.github.io/weblog.latte.ca/amy/books/_2006/apr26.html</guid><pubDate>Wed, 26 Apr 2006 18:14:00 GMT</pubDate></item><item><title>End of March</title><link>http://bwinton.github.io/weblog.latte.ca/amy/books/_2006/mar31.html</link><dc:creator>Amy Brown</dc:creator><description>&lt;p&gt;
+&lt;/ul&gt;</description><category>_2006</category><guid>https://bwinton.github.io/weblog.latte.ca/amy/books/_2006/apr26.html</guid><pubDate>Wed, 26 Apr 2006 18:14:00 GMT</pubDate></item><item><title>End of March</title><link>https://bwinton.github.io/weblog.latte.ca/amy/books/_2006/mar31.html</link><dc:creator>Amy Brown</dc:creator><description>&lt;p&gt;
 Jeez, I just typed out the names of the books I read since my 
 last post, and it's clear I read too damn much.  Honestly, I don't
 know where I find the time, so don't ask me.
@@ -829,7 +829,7 @@ whole thing to get maximum utility out of it.  I managed to glean a
 full page of tips from it, but sadly there was no five thousand dollar
 credit card in the book, nor anyone to babysit for a week while I 
 shop.  I guess looking fabulous is going to have to wait.
-&lt;/p&gt;</description><category>_2006</category><guid>http://bwinton.github.io/weblog.latte.ca/amy/books/_2006/mar31.html</guid><pubDate>Sat, 01 Apr 2006 00:25:00 GMT</pubDate></item><item><title>March (of the) Books</title><link>http://bwinton.github.io/weblog.latte.ca/amy/books/_2006/mar10.html</link><dc:creator>Amy Brown</dc:creator><description>&lt;p&gt;
+&lt;/p&gt;</description><category>_2006</category><guid>https://bwinton.github.io/weblog.latte.ca/amy/books/_2006/mar31.html</guid><pubDate>Sat, 01 Apr 2006 00:25:00 GMT</pubDate></item><item><title>March (of the) Books</title><link>https://bwinton.github.io/weblog.latte.ca/amy/books/_2006/mar10.html</link><dc:creator>Amy Brown</dc:creator><description>&lt;p&gt;
 &lt;strong&gt;&lt;em&gt;Your Three-Year-Old: Friend or Enemy&lt;/em&gt; by 
 Louise Bates Ames and Frances Ilg&lt;/strong&gt; is useful, like
 the two-year-old version.  They're pretty old (this one
@@ -896,7 +896,7 @@ Kathryn to read since she is also a novice teacher dealing with
 lots of crap, but I am reluctant to because if she didn't like it
 I would be very sad.  So Kathryn, I recommend this book but if
 you don't like it please don't say anything!
-&lt;/p&gt;</description><category>_2006</category><guid>http://bwinton.github.io/weblog.latte.ca/amy/books/_2006/mar10.html</guid><pubDate>Fri, 10 Mar 2006 21:00:00 GMT</pubDate></item><item><title>February Books</title><link>http://bwinton.github.io/weblog.latte.ca/amy/books/_2006/february22.html</link><dc:creator>Amy Brown</dc:creator><description>&lt;p&gt;
+&lt;/p&gt;</description><category>_2006</category><guid>https://bwinton.github.io/weblog.latte.ca/amy/books/_2006/mar10.html</guid><pubDate>Fri, 10 Mar 2006 21:00:00 GMT</pubDate></item><item><title>February Books</title><link>https://bwinton.github.io/weblog.latte.ca/amy/books/_2006/february22.html</link><dc:creator>Amy Brown</dc:creator><description>&lt;p&gt;
 &lt;strong&gt;
 &lt;em&gt;Who Runs This Country, Anyway? A Guide to Canadian Government&lt;/em&gt;
     by Joanne Stanbridge&lt;/strong&gt; is a kids' book but since I knew
@@ -970,7 +970,7 @@ I had been thinking that I can't do stuff like that because I Have To
 Show Her Who Is Boss -- Ames says it's more important just to get through
 the day without a thousand battles than to make every interaction about
 who is boss.  So, very useful books.
-&lt;/p&gt;</description><category>_2006</category><guid>http://bwinton.github.io/weblog.latte.ca/amy/books/_2006/february22.html</guid><pubDate>Wed, 22 Feb 2006 16:23:00 GMT</pubDate></item><item><title>&lt;em&gt;Blessing of a Skinned Knee: Using Jewish Teachings to Raise Self-Reliant Children&lt;/em&gt; by Wendy Mogel</title><link>http://bwinton.github.io/weblog.latte.ca/amy/books/_2006/jan29.html</link><dc:creator>Amy Brown</dc:creator><description>&lt;p&gt;
+&lt;/p&gt;</description><category>_2006</category><guid>https://bwinton.github.io/weblog.latte.ca/amy/books/_2006/february22.html</guid><pubDate>Wed, 22 Feb 2006 16:23:00 GMT</pubDate></item><item><title>&lt;em&gt;Blessing of a Skinned Knee: Using Jewish Teachings to Raise Self-Reliant Children&lt;/em&gt; by Wendy Mogel</title><link>https://bwinton.github.io/weblog.latte.ca/amy/books/_2006/jan29.html</link><dc:creator>Amy Brown</dc:creator><description>&lt;p&gt;
 The sub-title says it all.  This is a book of value both to those
 both looking for advice on child-rearing and looking for guidance
 on how to live according to Jewish teachings.
@@ -999,4 +999,4 @@ out of the library again just for the bibliography (some of the
 books she references aren't applicable to my children just yet).
 You will also learn lots of useful Hebrew words like &lt;em&gt;yetzer
 hara&lt;/em&gt;.  (Maybe that's Yiddish?  She doesn't say.)
-&lt;/p&gt;</description><category>_2006</category><guid>http://bwinton.github.io/weblog.latte.ca/amy/books/_2006/jan29.html</guid><pubDate>Sun, 29 Jan 2006 19:05:00 GMT</pubDate></item></channel></rss>
+&lt;/p&gt;</description><category>_2006</category><guid>https://bwinton.github.io/weblog.latte.ca/amy/books/_2006/jan29.html</guid><pubDate>Sun, 29 Jan 2006 19:05:00 GMT</pubDate></item></channel></rss>

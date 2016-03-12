@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<?xml-stylesheet type="text/xsl" href="../assets/xml/rss.xsl" media="all"?><rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:dc="http://purl.org/dc/elements/1.1/" version="2.0"><channel><title>Blog-O! (development)</title><link>http://bwinton.github.io/weblog.latte.ca/</link><description></description><atom:link rel="self" href="http://bwinton.github.io/weblog.latte.ca/tags/development.xml" type="application/rss+xml"></atom:link><language>en</language><lastBuildDate>Wed, 24 Feb 2016 22:14:11 GMT</lastBuildDate><generator>https://getnikola.com/</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Cordelia is...</title><link>http://bwinton.github.io/weblog.latte.ca/amy/girls/cordeliais.html</link><dc:creator>Amy Brown</dc:creator><description>&lt;div&gt;&lt;p&gt;...independent!  We had Cordelia's parent-teacher "chat" today,
+<?xml-stylesheet type="text/xsl" href="../assets/xml/rss.xsl" media="all"?><rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/"><channel><title>Blog-O! (development)</title><link>https://bwinton.github.io/weblog.latte.ca/</link><description></description><atom:link type="application/rss+xml" href="https://bwinton.github.io/weblog.latte.ca/tags/development.xml" rel="self"></atom:link><language>en</language><lastBuildDate>Sat, 12 Mar 2016 18:09:28 GMT</lastBuildDate><generator>https://getnikola.com/</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Cordelia is...</title><link>https://bwinton.github.io/weblog.latte.ca/amy/girls/cordeliais.html</link><dc:creator>Amy Brown</dc:creator><description>&lt;div&gt;&lt;p&gt;...independent!  We had Cordelia's parent-teacher "chat" today,
 with her nursery school teachers.  I love talking about my 
 children, so I was very excited to be there, and of course Blake
 doesn't have a job so he came along 'coz he doesn't have anything
@@ -26,7 +26,7 @@ for her.&lt;/p&gt;
 &lt;p&gt;That's their only concern for kindergarten, that she
 won't be able to make connections with other kids and
 with the teacher.  Academically, in terms of colours,
-shapes, letters and numbers, she's just fine!&lt;/p&gt;&lt;/div&gt;</description><category>cordelia</category><category>development</category><category>school</category><guid>http://bwinton.github.io/weblog.latte.ca/amy/girls/cordeliais.html</guid><pubDate>Tue, 25 Nov 2008 13:35:08 GMT</pubDate></item><item><title>P-t-e-r-a-n-o-d-o-n spells Pteranodon!</title><link>http://bwinton.github.io/weblog.latte.ca/delphine/earlyreading.html</link><dc:creator>Amy Brown</dc:creator><description>&lt;p&gt;
+shapes, letters and numbers, she's just fine!&lt;/p&gt;&lt;/div&gt;</description><category>cordelia</category><category>development</category><category>school</category><guid>https://bwinton.github.io/weblog.latte.ca/amy/girls/cordeliais.html</guid><pubDate>Tue, 25 Nov 2008 13:35:08 GMT</pubDate></item><item><title>P-t-e-r-a-n-o-d-o-n spells Pteranodon!</title><link>https://bwinton.github.io/weblog.latte.ca/delphine/earlyreading.html</link><dc:creator>Amy Brown</dc:creator><description>&lt;p&gt;
 The other day Delphine peered intently at the world map
 we got for my birthday for a while, and then announced
 "I read San!  S-a-n is San!"  That's the first word she
@@ -39,7 +39,7 @@ Then later she read the first syllable of "Doritos", which
 is now that I think about it, faux-Spanish.  I'm going to
 assume that's a coincience until I get more data.  Anyway
 the point is she's almost reading!  Hooray!
-&lt;/p&gt;</description><category>delphine</category><category>development</category><category>reading</category><guid>http://bwinton.github.io/weblog.latte.ca/delphine/earlyreading.html</guid><pubDate>Sun, 14 Oct 2007 19:21:55 GMT</pubDate></item><item><title>Cordelia Is Two!</title><link>http://bwinton.github.io/weblog.latte.ca/cordelia/two.html</link><dc:creator>Amy Brown</dc:creator><description>&lt;p&gt;
+&lt;/p&gt;</description><category>delphine</category><category>development</category><category>reading</category><guid>https://bwinton.github.io/weblog.latte.ca/delphine/earlyreading.html</guid><pubDate>Sun, 14 Oct 2007 19:21:55 GMT</pubDate></item><item><title>Cordelia Is Two!</title><link>https://bwinton.github.io/weblog.latte.ca/cordelia/two.html</link><dc:creator>Amy Brown</dc:creator><description>&lt;p&gt;
 Cordelia turned two on Thursday, which was kind of sucky for
 her because it was her fourth day of nursery school and so she's
 still suffering from lots of separation anxiety.  I felt like
@@ -177,7 +177,7 @@ That would be awesome.
 Tomorrow is Monday, and October, and I have a million
 things to do so I had best get to bed so I am not tired
 and grumpy all day.
-&lt;/p&gt;</description><category>birthday</category><category>cordelia</category><category>development</category><guid>http://bwinton.github.io/weblog.latte.ca/cordelia/two.html</guid><pubDate>Mon, 01 Oct 2007 02:14:00 GMT</pubDate></item><item><title>Cordelia is Fifteen Months Old</title><link>http://bwinton.github.io/weblog.latte.ca/cordelia/fifteenmonths.html</link><dc:creator>Amy Brown</dc:creator><description>&lt;p&gt;
+&lt;/p&gt;</description><category>birthday</category><category>cordelia</category><category>development</category><guid>https://bwinton.github.io/weblog.latte.ca/cordelia/two.html</guid><pubDate>Mon, 01 Oct 2007 02:14:00 GMT</pubDate></item><item><title>Cordelia is Fifteen Months Old</title><link>https://bwinton.github.io/weblog.latte.ca/cordelia/fifteenmonths.html</link><dc:creator>Amy Brown</dc:creator><description>&lt;p&gt;
 Cordelia is my little monkey.  She is fearless and ambitious —
 this morning she was hauling the cat carrier around the house,
 dragging it behind her and bashing into every damn thing.  She
@@ -241,4 +241,4 @@ so I will be able to get stuff done much easier.
 &lt;/p&gt;&lt;p&gt;
 And in the meantime, she makes me laugh every single
 day.
-&lt;/p&gt;</description><category>development</category><category>house</category><category>sleep</category><guid>http://bwinton.github.io/weblog.latte.ca/cordelia/fifteenmonths.html</guid><pubDate>Sat, 30 Dec 2006 04:30:00 GMT</pubDate></item></channel></rss>
+&lt;/p&gt;</description><category>development</category><category>house</category><category>sleep</category><guid>https://bwinton.github.io/weblog.latte.ca/cordelia/fifteenmonths.html</guid><pubDate>Sat, 30 Dec 2006 04:30:00 GMT</pubDate></item></channel></rss>

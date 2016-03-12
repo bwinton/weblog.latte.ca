@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<?xml-stylesheet type="text/xsl" href="../assets/xml/rss.xsl" media="all"?><rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:dc="http://purl.org/dc/elements/1.1/" version="2.0"><channel><title>Blog-O! (family)</title><link>http://bwinton.github.io/weblog.latte.ca/</link><description></description><atom:link rel="self" href="http://bwinton.github.io/weblog.latte.ca/tags/family.xml" type="application/rss+xml"></atom:link><language>en</language><lastBuildDate>Wed, 24 Feb 2016 22:14:08 GMT</lastBuildDate><generator>https://getnikola.com/</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Home alone</title><link>http://bwinton.github.io/weblog.latte.ca/blake/family/homealone.html</link><dc:creator>Blake Winton</dc:creator><description>&lt;div&gt;&lt;p&gt;As Amy mentioned in the previous post, her father passed away.  So she’s
+<?xml-stylesheet type="text/xsl" href="../assets/xml/rss.xsl" media="all"?><rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/"><channel><title>Blog-O! (family)</title><link>https://bwinton.github.io/weblog.latte.ca/</link><description></description><atom:link type="application/rss+xml" href="https://bwinton.github.io/weblog.latte.ca/tags/family.xml" rel="self"></atom:link><language>en</language><lastBuildDate>Sat, 12 Mar 2016 18:09:32 GMT</lastBuildDate><generator>https://getnikola.com/</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Home alone</title><link>https://bwinton.github.io/weblog.latte.ca/blake/family/homealone.html</link><dc:creator>Blake Winton</dc:creator><description>&lt;div&gt;&lt;p&gt;As Amy mentioned in the previous post, her father passed away.  So she’s
 gone out to Saskatchewan to spend some time with her mother.  This means
 that for the next seven days, I get to stay home and take care of the
 kids, making sure that they have food to eat, clothes to wear, and get
@@ -20,7 +20,7 @@ poured cereal for herself and Cordelia, and the two of them were done
 breakfast before I was dressed.  I know she’s five and all, but
 sometimes she’s so grown up it astonishes me.&lt;/p&gt;
 &lt;p&gt;Anyways, they’re currently out on an adventure with Zaida, so I’ld
-better get to folding the laundry, because it ain’t gonna fold itself.&lt;/p&gt;&lt;/div&gt;</description><category>cordelia</category><category>delphine</category><category>family</category><category>home</category><guid>http://bwinton.github.io/weblog.latte.ca/blake/family/homealone.html</guid><pubDate>Thu, 18 Sep 2008 14:12:21 GMT</pubDate></item><item><title>Dead Dads Club</title><link>http://bwinton.github.io/weblog.latte.ca/amy/everythingelse/dad.html</link><dc:creator>Amy Brown</dc:creator><description>&lt;div&gt;&lt;p&gt;My dad died today at 4:15 am Saskatchewan time, which is
+better get to folding the laundry, because it ain’t gonna fold itself.&lt;/p&gt;&lt;/div&gt;</description><category>cordelia</category><category>delphine</category><category>family</category><category>home</category><guid>https://bwinton.github.io/weblog.latte.ca/blake/family/homealone.html</guid><pubDate>Thu, 18 Sep 2008 14:12:21 GMT</pubDate></item><item><title>Dead Dads Club</title><link>https://bwinton.github.io/weblog.latte.ca/amy/everythingelse/dad.html</link><dc:creator>Amy Brown</dc:creator><description>&lt;div&gt;&lt;p&gt;My dad died today at 4:15 am Saskatchewan time, which is
 6:15 am EST.  So fifteen minutes before I woke up this
 morning my dad was quietly dying two provinces away.&lt;/p&gt;
 &lt;p&gt;My mom called at 6:37 am to tell me.  I was only half-awake,
@@ -55,4 +55,4 @@ have any music, and I don't have a single Requiem on
 my ipod.  Not Mozart, not Faure, not even the fairly
 alarming Brahms we started practicing yesterday.  So
 I'm stuck listening to some random mass, which is nice
-but not the same.&lt;/p&gt;&lt;/div&gt;</description><category>family</category><guid>http://bwinton.github.io/weblog.latte.ca/amy/everythingelse/dad.html</guid><pubDate>Tue, 16 Sep 2008 13:51:27 GMT</pubDate></item></channel></rss>
+but not the same.&lt;/p&gt;&lt;/div&gt;</description><category>family</category><guid>https://bwinton.github.io/weblog.latte.ca/amy/everythingelse/dad.html</guid><pubDate>Tue, 16 Sep 2008 13:51:27 GMT</pubDate></item></channel></rss>

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<?xml-stylesheet type="text/xsl" href="../assets/xml/rss.xsl" media="all"?><rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:dc="http://purl.org/dc/elements/1.1/" version="2.0"><channel><title>Blog-O! (neildegrassetyson)</title><link>http://bwinton.github.io/weblog.latte.ca/</link><description></description><atom:link rel="self" href="http://bwinton.github.io/weblog.latte.ca/tags/neildegrassetyson.xml" type="application/rss+xml"></atom:link><language>en</language><lastBuildDate>Wed, 24 Feb 2016 22:14:06 GMT</lastBuildDate><generator>https://getnikola.com/</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>What angle would you cut a circle at to divide it into thirds?</title><link>http://bwinton.github.io/weblog.latte.ca/blake/random/thirdcircle.html</link><dc:creator>Blake Winton</dc:creator><description>&lt;div&gt;&lt;p&gt;&lt;img src="http://bwinton.github.io/weblog.latte.ca/images/blake/ThirdCircleProblem.png" align="right"&gt;
+<?xml-stylesheet type="text/xsl" href="../assets/xml/rss.xsl" media="all"?><rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/"><channel><title>Blog-O! (neildegrassetyson)</title><link>https://bwinton.github.io/weblog.latte.ca/</link><description></description><atom:link type="application/rss+xml" href="https://bwinton.github.io/weblog.latte.ca/tags/neildegrassetyson.xml" rel="self"></atom:link><language>en</language><lastBuildDate>Sat, 12 Mar 2016 18:09:30 GMT</lastBuildDate><generator>https://getnikola.com/</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>What angle would you cut a circle at to divide it into thirds?</title><link>https://bwinton.github.io/weblog.latte.ca/blake/random/thirdcircle.html</link><dc:creator>Blake Winton</dc:creator><description>&lt;div&gt;&lt;p&gt;&lt;img src="https://bwinton.github.io/weblog.latte.ca/images/blake/ThirdCircleProblem.png" align="right"&gt;
 The other day I was reading &lt;a href="https://twitter.com/neiltyson/status/162249772806316032"&gt;a
 tweet&lt;/a&gt; from Neil
 deGrasse Tyson, and it got me thinking…  If you were going to cut a circle into
@@ -8,7 +8,7 @@ three equal pieces using only two cuts, what would the angle to cut them be?
 Twitter&lt;/a&gt;, and eventually
 got a reply.  This is my attempt to reconstruct the reasoning behind the
 answer.&lt;/p&gt;
-&lt;p&gt;&lt;img src="http://bwinton.github.io/weblog.latte.ca/images/blake/ThirdCircleWorking.png" align="left"&gt;
+&lt;p&gt;&lt;img src="https://bwinton.github.io/weblog.latte.ca/images/blake/ThirdCircleWorking.png" align="left"&gt;
 The easiest way to figure this out, I believe, is to cut the circle in half,
 and then figure out what line divides the semicircle into a 2/3rds to 1/3rd
 ratio.  So let’s do that, and label the points A, B, C, and O (for the origin),
@@ -31,4 +31,4 @@ to get:&lt;br&gt;
 angle&lt;/a&gt;, so in theory, to get the
 angle BAD, I should divide that by two, but then I’ll just need to multiply it
 by two again to account for the other half of the circle, so let’s skip all
-that, and just call it 30.7º.&lt;/p&gt;&lt;/div&gt;</description><category>math</category><category>neildegrassetyson</category><guid>http://bwinton.github.io/weblog.latte.ca/blake/random/thirdcircle.html</guid><pubDate>Mon, 30 Jan 2012 03:29:18 GMT</pubDate></item></channel></rss>
+that, and just call it 30.7º.&lt;/p&gt;&lt;/div&gt;</description><category>math</category><category>neildegrassetyson</category><guid>https://bwinton.github.io/weblog.latte.ca/blake/random/thirdcircle.html</guid><pubDate>Mon, 30 Jan 2012 03:29:18 GMT</pubDate></item></channel></rss>

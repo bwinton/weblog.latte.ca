@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<?xml-stylesheet type="text/xsl" href="../assets/xml/rss.xsl" media="all"?><rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:dc="http://purl.org/dc/elements/1.1/" version="2.0"><channel><title>Blog-O! (3.0b3)</title><link>http://bwinton.github.io/weblog.latte.ca/</link><description></description><atom:link rel="self" href="http://bwinton.github.io/weblog.latte.ca/tags/30b3.xml" type="application/rss+xml"></atom:link><language>en</language><lastBuildDate>Wed, 24 Feb 2016 22:14:07 GMT</lastBuildDate><generator>https://getnikola.com/</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Thunderbird 3.0 beta 3 shipped!</title><link>http://bwinton.github.io/weblog.latte.ca/blake/tech/thunderbird/30b3.html</link><dc:creator>Blake Winton</dc:creator><description>&lt;div&gt;&lt;p&gt;&lt;a href="http://www.mozillamessaging.com/en-US/about/press/archive/2009-07-21-01"&gt;It’s true&lt;/a&gt;,
+<?xml-stylesheet type="text/xsl" href="../assets/xml/rss.xsl" media="all"?><rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/"><channel><title>Blog-O! (3.0b3)</title><link>https://bwinton.github.io/weblog.latte.ca/</link><description></description><atom:link type="application/rss+xml" href="https://bwinton.github.io/weblog.latte.ca/tags/30b3.xml" rel="self"></atom:link><language>en</language><lastBuildDate>Sat, 12 Mar 2016 18:09:33 GMT</lastBuildDate><generator>https://getnikola.com/</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Thunderbird 3.0 beta 3 shipped!</title><link>https://bwinton.github.io/weblog.latte.ca/blake/tech/thunderbird/30b3.html</link><dc:creator>Blake Winton</dc:creator><description>&lt;div&gt;&lt;p&gt;&lt;a href="http://www.mozillamessaging.com/en-US/about/press/archive/2009-07-21-01"&gt;It’s true&lt;/a&gt;,
 after a lot of hard work, and a few hard decisions, the first version of
 Thunderbird that has code of mine in it has shipped.  Dan Mosedale has
 &lt;a href="http://weblogs.mozillazine.org/dmose/archives/2009/07/thunderbird_30b3_shipped.html"&gt;some comments&lt;/a&gt;
@@ -7,7 +7,7 @@ on what’s changed.  If you like Thunderbird, please download it, give it a try
 and let me know what you think!&lt;/p&gt;
 &lt;p&gt;On a more personal note, the thing I did on this release that I’m the most
 proud of was to add a button that lets you reply to a mailing list.&lt;/p&gt;
-&lt;p&gt;&lt;img alt="Reply to a mailing list" src="http://bwinton.github.io/weblog.latte.ca/images/blake/ReplyToList3.0b3.png" title="The Reply-To-List Button."&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="Reply to a mailing list" src="https://bwinton.github.io/weblog.latte.ca/images/blake/ReplyToList3.0b3.png" title="The Reply-To-List Button."&gt;&lt;/p&gt;
 &lt;p&gt;I’m proud of it because it feels like a neat-but-still-usable UI, and because
 it is one more step on the road to getting people to change their mailing lists
 to &lt;a href="http://woozle.org/~neale/papers/reply-to-still-harmful.html"&gt;not munge the Reply-To header&lt;/a&gt;.  (With this
@@ -21,4 +21,4 @@ notification that told you how many messages had been processed; and fixing
 a some layout and logic bugs in the Autoconfig dialog (which you get to
 from “File » New » Mail Account (Quick Setup)…”).  Yeah, the Autoconfig
 dialog is still kind of ugly, but it’s better now than it used to be, and
-I’m working on making it prettier for beta 4.&lt;/p&gt;&lt;/div&gt;</description><category>3.0b3</category><category>mozilla</category><category>shipped</category><category>thunderbird</category><guid>http://bwinton.github.io/weblog.latte.ca/blake/tech/thunderbird/30b3.html</guid><pubDate>Wed, 22 Jul 2009 01:13:29 GMT</pubDate></item></channel></rss>
+I’m working on making it prettier for beta 4.&lt;/p&gt;&lt;/div&gt;</description><category>3.0b3</category><category>mozilla</category><category>shipped</category><category>thunderbird</category><guid>https://bwinton.github.io/weblog.latte.ca/blake/tech/thunderbird/30b3.html</guid><pubDate>Wed, 22 Jul 2009 01:13:29 GMT</pubDate></item></channel></rss>

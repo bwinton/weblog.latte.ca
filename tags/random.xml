@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
-<?xml-stylesheet type="text/xsl" href="../assets/xml/rss.xsl" media="all"?><rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:dc="http://purl.org/dc/elements/1.1/" version="2.0"><channel><title>Blog-O! (random)</title><link>http://bwinton.github.io/weblog.latte.ca/</link><description></description><atom:link rel="self" href="http://bwinton.github.io/weblog.latte.ca/tags/random.xml" type="application/rss+xml"></atom:link><language>en</language><lastBuildDate>Wed, 24 Feb 2016 22:14:08 GMT</lastBuildDate><generator>https://getnikola.com/</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Meet the new blog, same as the old blog.</title><link>http://bwinton.github.io/weblog.latte.ca/blake/random/microblog/newblog.html</link><dc:creator>Blake Winton</dc:creator><description>&lt;div&gt;&lt;p&gt;One of the things I did over the holidays (so far) is upgrade the software that
-powers &lt;a href="http://weblog.latte.ca"&gt;the blog&lt;/a&gt;.&lt;/p&gt;&lt;p&gt;&lt;a href="http://bwinton.github.io/weblog.latte.ca/blake/random/microblog/newblog.html"&gt;Read more…&lt;/a&gt; (1 min remaining to read)&lt;/p&gt;&lt;/div&gt;</description><category>blog</category><category>microblog</category><category>nikola</category><category>random</category><guid>http://bwinton.github.io/weblog.latte.ca/blake/random/microblog/newblog.html</guid><pubDate>Sat, 27 Dec 2014 01:03:00 GMT</pubDate></item><item><title>Woo!</title><link>http://bwinton.github.io/weblog.latte.ca/blake/random/daemon.html</link><dc:creator>Blake Winton</dc:creator><description>&lt;p&gt;It's 06/06/06, so I felt that I should really post something, but I
+<?xml-stylesheet type="text/xsl" href="../assets/xml/rss.xsl" media="all"?><rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/"><channel><title>Blog-O! (random)</title><link>https://bwinton.github.io/weblog.latte.ca/</link><description></description><atom:link type="application/rss+xml" href="https://bwinton.github.io/weblog.latte.ca/tags/random.xml" rel="self"></atom:link><language>en</language><lastBuildDate>Sat, 12 Mar 2016 18:09:26 GMT</lastBuildDate><generator>https://getnikola.com/</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Meet the new blog, same as the old blog.</title><link>https://bwinton.github.io/weblog.latte.ca/blake/random/microblog/newblog.html</link><dc:creator>Blake Winton</dc:creator><description>&lt;div&gt;&lt;p&gt;One of the things I did over the holidays (so far) is upgrade the software that
+powers &lt;a href="http://weblog.latte.ca"&gt;the blog&lt;/a&gt;.&lt;/p&gt;&lt;p&gt;&lt;a href="https://bwinton.github.io/weblog.latte.ca/blake/random/microblog/newblog.html"&gt;Read more…&lt;/a&gt; (1 min remaining to read)&lt;/p&gt;&lt;/div&gt;</description><category>blog</category><category>microblog</category><category>nikola</category><category>random</category><guid>https://bwinton.github.io/weblog.latte.ca/blake/random/microblog/newblog.html</guid><pubDate>Sat, 27 Dec 2014 01:03:00 GMT</pubDate></item><item><title>Woo!</title><link>https://bwinton.github.io/weblog.latte.ca/blake/random/daemon.html</link><dc:creator>Blake Winton</dc:creator><description>&lt;p&gt;It's 06/06/06, so I felt that I should really post something, but I
 don't have much to say, and I'm going to &lt;a href="http://www.mec.ca/"&gt;MEC&lt;/a&gt; for a Lunch-And-Learn, so this is going to be a really short
-entry.&lt;/p&gt;</description><category>random</category><guid>http://bwinton.github.io/weblog.latte.ca/blake/random/daemon.html</guid><pubDate>Wed, 09 May 2007 21:28:58 GMT</pubDate></item><item><title>Remind you of anyone?</title><link>http://bwinton.github.io/weblog.latte.ca/blake/random/familiar.html</link><dc:creator>Blake Winton</dc:creator><description>&lt;p&gt;&lt;a href="http://bwinton.latte.ca/camera/weblog/MorgDel-Large.jpg"&gt;&lt;img align="right" src="http://bwinton.latte.ca/camera/weblog/MorgDel-Small.jpg"&gt;&lt;/a&gt; I
+entry.&lt;/p&gt;</description><category>random</category><guid>https://bwinton.github.io/weblog.latte.ca/blake/random/daemon.html</guid><pubDate>Wed, 09 May 2007 21:28:58 GMT</pubDate></item><item><title>Remind you of anyone?</title><link>https://bwinton.github.io/weblog.latte.ca/blake/random/familiar.html</link><dc:creator>Blake Winton</dc:creator><description>&lt;p&gt;&lt;a href="http://bwinton.latte.ca/camera/weblog/MorgDel-Large.jpg"&gt;&lt;img align="right" src="http://bwinton.latte.ca/camera/weblog/MorgDel-Small.jpg"&gt;&lt;/a&gt; I
 was chatting with both &lt;a href="http://www.tantastik.org/"&gt;Tan&lt;/a&gt; and
 &lt;a href="http://book.amberdragon.ca/"&gt;Kate&lt;/a&gt; recently, and they each
 mentioned how much Delphine looked like me.  I completely agree, and
@@ -10,7 +10,7 @@ have the photo to prove it.&lt;/p&gt;
 
 &lt;p&gt;No, that's not actually my sister and my daughter.  That's my
 mother and I, circa 1976(-ish.  I'm guessing that I was three in the
-photo).&lt;br clear="both"&gt;&lt;/p&gt;</description><category>random</category><guid>http://bwinton.github.io/weblog.latte.ca/blake/random/familiar.html</guid><pubDate>Thu, 12 Jan 2006 15:04:00 GMT</pubDate></item><item><title>Strange Conversations in IM</title><link>http://bwinton.github.io/weblog.latte.ca/blake/random/strangeconversations.html</link><dc:creator>Blake Winton</dc:creator><description>&lt;pre&gt;[14:50] Skiff: о
+photo).&lt;br clear="both"&gt;&lt;/p&gt;</description><category>random</category><guid>https://bwinton.github.io/weblog.latte.ca/blake/random/familiar.html</guid><pubDate>Thu, 12 Jan 2006 15:04:00 GMT</pubDate></item><item><title>Strange Conversations in IM</title><link>https://bwinton.github.io/weblog.latte.ca/blake/random/strangeconversations.html</link><dc:creator>Blake Winton</dc:creator><description>&lt;pre&gt;[14:50] Skiff: о
 [14:50] Skiff: привет
 [14:51] Skiff: сообщения дошли?
 [14:51] Coder: I'm afraid I don't speak Russian.  Perhaps you were looking for someone else? 
@@ -24,9 +24,9 @@ photo).&lt;br clear="both"&gt;&lt;/p&gt;</description><category>random</category
 [14:54] Skiff: thx :)
 &lt;/pre&gt;
 &lt;p&gt;Well, that was odd.  Can anyone translate the stuff at the top, and
-leave a comment letting me know what it says?&lt;/p&gt;</description><category>random</category><guid>http://bwinton.github.io/weblog.latte.ca/blake/random/strangeconversations.html</guid><pubDate>Wed, 07 Dec 2005 20:01:00 GMT</pubDate></item><item><title>An Eye</title><link>http://bwinton.github.io/weblog.latte.ca/blake/random/annai.html</link><dc:creator>Blake Winton</dc:creator><description>&lt;p&gt;&lt;a href="http://www.burstofbeaden.com/annai_hi.mov"&gt;This&lt;/a&gt;
+leave a comment letting me know what it says?&lt;/p&gt;</description><category>random</category><guid>https://bwinton.github.io/weblog.latte.ca/blake/random/strangeconversations.html</guid><pubDate>Wed, 07 Dec 2005 20:01:00 GMT</pubDate></item><item><title>An Eye</title><link>https://bwinton.github.io/weblog.latte.ca/blake/random/annai.html</link><dc:creator>Blake Winton</dc:creator><description>&lt;p&gt;&lt;a href="http://www.burstofbeaden.com/annai_hi.mov"&gt;This&lt;/a&gt;
 is cute.  Really cute.  I'll have to play it for Delphine when I
-get home.&lt;/p&gt;</description><category>random</category><guid>http://bwinton.github.io/weblog.latte.ca/blake/random/annai.html</guid><pubDate>Thu, 03 Nov 2005 20:59:00 GMT</pubDate></item><item><title>Parental Observations.</title><link>http://bwinton.github.io/weblog.latte.ca/blake/random/earlyandlate.html</link><dc:creator>Blake Winton</dc:creator><description>&lt;p&gt;On Sunday, Amy, Delphine, and I went to meet some friends from New
+get home.&lt;/p&gt;</description><category>random</category><guid>https://bwinton.github.io/weblog.latte.ca/blake/random/annai.html</guid><pubDate>Thu, 03 Nov 2005 20:59:00 GMT</pubDate></item><item><title>Parental Observations.</title><link>https://bwinton.github.io/weblog.latte.ca/blake/random/earlyandlate.html</link><dc:creator>Blake Winton</dc:creator><description>&lt;p&gt;On Sunday, Amy, Delphine, and I went to meet some friends from New
 York at the Distillery District.  Sadly, we just missed the bus at
 King and Yonge which would have taken us there, which got me to
 thinking.  Normally I'm an extremely punctual person.  In fact, I
@@ -45,7 +45,7 @@ I am, and so I cut my travelling time closer, and then sometimes miss
 connections.&lt;/p&gt;
 
 &lt;p&gt;Just something to keep in mind if you're ever meeting me
-somewhere.&lt;/p&gt;</description><category>random</category><guid>http://bwinton.github.io/weblog.latte.ca/blake/random/earlyandlate.html</guid><pubDate>Wed, 06 Jul 2005 17:03:00 GMT</pubDate></item><item><title>Daycare Rock Star</title><link>http://bwinton.github.io/weblog.latte.ca/blake/random/daycarerockstar.html</link><dc:creator>Blake Winton</dc:creator><description>&lt;p&gt;
+somewhere.&lt;/p&gt;</description><category>random</category><guid>https://bwinton.github.io/weblog.latte.ca/blake/random/earlyandlate.html</guid><pubDate>Wed, 06 Jul 2005 17:03:00 GMT</pubDate></item><item><title>Daycare Rock Star</title><link>https://bwinton.github.io/weblog.latte.ca/blake/random/daycarerockstar.html</link><dc:creator>Blake Winton</dc:creator><description>&lt;p&gt;
 I go with Blake to drop off Delphine at daycare every morning, and one
 morning one of the other toddlers, Claire-Marie, came running to him
 and gave him a hug around the knees.  She's just huggy like that.
@@ -53,7 +53,7 @@ Then Antonio and Beniam decided
 they wanted a piece of the hugging action, so they came over too, and
 now every morning when the kids see Blake they all swarm him.  He's like
 a rock star.
-&lt;/p&gt;</description><category>random</category><guid>http://bwinton.github.io/weblog.latte.ca/blake/random/daycarerockstar.html</guid><pubDate>Fri, 27 May 2005 17:33:00 GMT</pubDate></item><item><title>I'm sure it'll get better.</title><link>http://bwinton.github.io/weblog.latte.ca/blake/random/worstdayever.html</link><dc:creator>Blake Winton</dc:creator><description>&lt;p&gt;Wow!  This has started off as the worst day I've had in a very long time.
+&lt;/p&gt;</description><category>random</category><guid>https://bwinton.github.io/weblog.latte.ca/blake/random/daycarerockstar.html</guid><pubDate>Fri, 27 May 2005 17:33:00 GMT</pubDate></item><item><title>I'm sure it'll get better.</title><link>https://bwinton.github.io/weblog.latte.ca/blake/random/worstdayever.html</link><dc:creator>Blake Winton</dc:creator><description>&lt;p&gt;Wow!  This has started off as the worst day I've had in a very long time.
 On my ride to work, someone walking past me snagged my headphone cord with
 their purse, and yanked the cord out of both my ears, and my Clie.  Damn
 did it ever hurt, and apparently broke my right headphone, since now no
@@ -65,7 +65,7 @@ crunchy gruel it's ended up as, and on my way back to my desk, I spilled
 the cup of coffee I was carrying.&lt;/p&gt;
 
 &lt;p&gt;I'm sure it'll get better as the day goes on, but at this point, I'm
-just afraid of what'll happen next.&lt;/p&gt;</description><category>random</category><guid>http://bwinton.github.io/weblog.latte.ca/blake/random/worstdayever.html</guid><pubDate>Wed, 12 Jan 2005 13:45:00 GMT</pubDate></item><item><title>Dammit!</title><link>http://bwinton.github.io/weblog.latte.ca/blake/random/miso.html</link><dc:creator>Blake Winton</dc:creator><description>&lt;p&gt;I've been keeping a small tupperware full of miso paste in the
+just afraid of what'll happen next.&lt;/p&gt;</description><category>random</category><guid>https://bwinton.github.io/weblog.latte.ca/blake/random/worstdayever.html</guid><pubDate>Wed, 12 Jan 2005 13:45:00 GMT</pubDate></item><item><title>Dammit!</title><link>https://bwinton.github.io/weblog.latte.ca/blake/random/miso.html</link><dc:creator>Blake Winton</dc:creator><description>&lt;p&gt;I've been keeping a small tupperware full of miso paste in the
 fridge at the office for the past few months.  It seemed like
 something that I could use to supplement my lunches, or as a nice
 alternative to coffee when I was in need of a hot liquid.  In
@@ -87,11 +87,11 @@ the same somehow.  At least I got in early, so I'll be able to go
 home in a couple of hours, and have some soup there.&lt;/p&gt;
 
 &lt;p&gt;Hah!  And just as I finished writing my tale of woe, it
-started raining.  Man, what a day!&lt;/p&gt;</description><category>random</category><guid>http://bwinton.github.io/weblog.latte.ca/blake/random/miso.html</guid><pubDate>Mon, 31 May 2004 19:04:00 GMT</pubDate></item><item><title>Isn't this what weblogs are for?</title><link>http://bwinton.github.io/weblog.latte.ca/blake/random/isntthis.html</link><dc:creator>Blake Winton</dc:creator><description>&lt;p&gt;&lt;/p&gt;&lt;center&gt;&lt;a href="http://bbspot.com/News/2003/01/os_quiz.php"&gt;&lt;img src="http://www.bbspot.com/Images/News_Features/2003/01/os_quiz/palm.jpg" width="300" height="90" alt="You are Palm OS. Punctual,
+started raining.  Man, what a day!&lt;/p&gt;</description><category>random</category><guid>https://bwinton.github.io/weblog.latte.ca/blake/random/miso.html</guid><pubDate>Mon, 31 May 2004 19:04:00 GMT</pubDate></item><item><title>Isn't this what weblogs are for?</title><link>https://bwinton.github.io/weblog.latte.ca/blake/random/isntthis.html</link><dc:creator>Blake Winton</dc:creator><description>&lt;p&gt;&lt;/p&gt;&lt;center&gt;&lt;a href="http://bbspot.com/News/2003/01/os_quiz.php"&gt;&lt;img src="http://www.bbspot.com/Images/News_Features/2003/01/os_quiz/palm.jpg" width="300" height="90" alt="You are Palm OS. Punctual,
 straightforward and very useful.  Your mother wants you to do more
 with your life like your cousin Wince, but you're happy with who you
 are."&gt;&lt;br&gt;Which OS are You?&lt;/a&gt;&lt;/center&gt;
 
 &lt;p&gt;Found by &lt;a href="http://www.livejournal.com/users/dagbrown/"&gt;dagbrown&lt;/a&gt;.&lt;/p&gt;
 
-&lt;div class="media"&gt;[Listening to:  Break &amp;amp; Enter  -  Prodigy  -  (8:24)]&lt;/div&gt;</description><category>random</category><guid>http://bwinton.github.io/weblog.latte.ca/blake/random/isntthis.html</guid><pubDate>Tue, 20 Jan 2004 22:15:00 GMT</pubDate></item></channel></rss>
+&lt;div class="media"&gt;[Listening to:  Break &amp;amp; Enter  -  Prodigy  -  (8:24)]&lt;/div&gt;</description><category>random</category><guid>https://bwinton.github.io/weblog.latte.ca/blake/random/isntthis.html</guid><pubDate>Tue, 20 Jan 2004 22:15:00 GMT</pubDate></item></channel></rss>

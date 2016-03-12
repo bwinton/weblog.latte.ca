@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<?xml-stylesheet type="text/xsl" href="../assets/xml/rss.xsl" media="all"?><rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:dc="http://purl.org/dc/elements/1.1/" version="2.0"><channel><title>Blog-O! (advice)</title><link>http://bwinton.github.io/weblog.latte.ca/</link><description></description><atom:link rel="self" href="http://bwinton.github.io/weblog.latte.ca/tags/advice.xml" type="application/rss+xml"></atom:link><language>en</language><lastBuildDate>Wed, 24 Feb 2016 22:14:13 GMT</lastBuildDate><generator>https://getnikola.com/</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Toys for Babies</title><link>http://bwinton.github.io/weblog.latte.ca/amy/unsolicited%20advice/babytoys.html</link><dc:creator>Amy Brown</dc:creator><description>&lt;p&gt;
+<?xml-stylesheet type="text/xsl" href="../assets/xml/rss.xsl" media="all"?><rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/"><channel><title>Blog-O! (advice)</title><link>https://bwinton.github.io/weblog.latte.ca/</link><description></description><atom:link type="application/rss+xml" href="https://bwinton.github.io/weblog.latte.ca/tags/advice.xml" rel="self"></atom:link><language>en</language><lastBuildDate>Sat, 12 Mar 2016 18:09:29 GMT</lastBuildDate><generator>https://getnikola.com/</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Toys for Babies</title><link>https://bwinton.github.io/weblog.latte.ca/amy/unsolicited%20advice/babytoys.html</link><dc:creator>Amy Brown</dc:creator><description>&lt;p&gt;
 There will come a day, probably when your baby is around five
 or six months, that she will no longer be amused by brightly
 coloured or pastel coloured, hard or squishy baby toys.  No
@@ -90,7 +90,7 @@ provided it's reasonably clean, and that it's not going to
 break up into chokeable or sharp pieces. Use your
 common sense, and you and your baby will be quietly
 amused for, well, minutes.
-&lt;/p&gt;</description><category>advice</category><category>unsolicited</category><guid>http://bwinton.github.io/weblog.latte.ca/amy/unsolicited%20advice/babytoys.html</guid><pubDate>Wed, 09 May 2007 21:28:58 GMT</pubDate></item><item><title>A Useful Link</title><link>http://bwinton.github.io/weblog.latte.ca/amy/unsolicited%20advice/cspc.html</link><dc:creator>Amy Brown</dc:creator><description>&lt;p&gt;
+&lt;/p&gt;</description><category>advice</category><category>unsolicited</category><guid>https://bwinton.github.io/weblog.latte.ca/amy/unsolicited%20advice/babytoys.html</guid><pubDate>Wed, 09 May 2007 21:28:58 GMT</pubDate></item><item><title>A Useful Link</title><link>https://bwinton.github.io/weblog.latte.ca/amy/unsolicited%20advice/cspc.html</link><dc:creator>Amy Brown</dc:creator><description>&lt;p&gt;
 It's not a bad idea to go to the 
 &lt;a href="http://www.cpsc.gov/cpsclist.asp"&gt;CSPC&lt;/a&gt; website and sign
 up for their email notifications of product recalls.  Right now I
@@ -114,7 +114,7 @@ alcohol.  Whoever thought it was a good idea to sell ALCOHOL
 to put on RASHES deserves some kind of Stupid award, which they
 can share with me for buying it without reading the ingredients
 list.  I am going to see if I can return it for a refund tomorrow.
-&lt;/p&gt;</description><category>advice</category><category>unsolicited</category><guid>http://bwinton.github.io/weblog.latte.ca/amy/unsolicited%20advice/cspc.html</guid><pubDate>Fri, 24 Mar 2006 02:26:00 GMT</pubDate></item><item><title>Miscellaneous Things</title><link>http://bwinton.github.io/weblog.latte.ca/amy/unsolicited%20advice/misc.html</link><dc:creator>Amy Brown</dc:creator><description>&lt;p&gt;
+&lt;/p&gt;</description><category>advice</category><category>unsolicited</category><guid>https://bwinton.github.io/weblog.latte.ca/amy/unsolicited%20advice/cspc.html</guid><pubDate>Fri, 24 Mar 2006 02:26:00 GMT</pubDate></item><item><title>Miscellaneous Things</title><link>https://bwinton.github.io/weblog.latte.ca/amy/unsolicited%20advice/misc.html</link><dc:creator>Amy Brown</dc:creator><description>&lt;p&gt;
 First I want to say that the idea of this unsolicited 
 advice is to publish things that I have learned through
 my own experience that I did not read about elsewhere,
@@ -224,7 +224,7 @@ though I know, logically, that one day she will be a
 pleasant and helpful three-year-old.  I just can't
 see how it will happen, because I haven't seen it 
 happen before.
-&lt;/p&gt;</description><category>advice</category><category>unsolicited</category><guid>http://bwinton.github.io/weblog.latte.ca/amy/unsolicited%20advice/misc.html</guid><pubDate>Wed, 22 Mar 2006 16:16:00 GMT</pubDate></item><item><title>Some More Advice</title><link>http://bwinton.github.io/weblog.latte.ca/amy/unsolicited%20advice/more.html</link><dc:creator>Amy Brown</dc:creator><description>&lt;p&gt;
+&lt;/p&gt;</description><category>advice</category><category>unsolicited</category><guid>https://bwinton.github.io/weblog.latte.ca/amy/unsolicited%20advice/misc.html</guid><pubDate>Wed, 22 Mar 2006 16:16:00 GMT</pubDate></item><item><title>Some More Advice</title><link>https://bwinton.github.io/weblog.latte.ca/amy/unsolicited%20advice/more.html</link><dc:creator>Amy Brown</dc:creator><description>&lt;p&gt;
 First I need to add a couple of things about the high chair.
 You probably already have a thousand thin flannel receiving
 blankets -- if you don't now is a good time to go get some,
@@ -348,7 +348,7 @@ happy kid now.  So don't put too much stock in the crying -- it's
 upsetting to you, the parent, because it's meant to be, but it
 doesn't always mean something is horribly wrong that you can
 fix.
-&lt;/p&gt;</description><category>advice</category><category>unsolicited</category><guid>http://bwinton.github.io/weblog.latte.ca/amy/unsolicited%20advice/more.html</guid><pubDate>Fri, 24 Feb 2006 21:49:00 GMT</pubDate></item><item><title>Unsolicited Advice</title><link>http://bwinton.github.io/weblog.latte.ca/amy/unsolicited%20advice/newbaby.html</link><dc:creator>Amy Brown</dc:creator><description>&lt;p&gt;
+&lt;/p&gt;</description><category>advice</category><category>unsolicited</category><guid>https://bwinton.github.io/weblog.latte.ca/amy/unsolicited%20advice/more.html</guid><pubDate>Fri, 24 Feb 2006 21:49:00 GMT</pubDate></item><item><title>Unsolicited Advice</title><link>https://bwinton.github.io/weblog.latte.ca/amy/unsolicited%20advice/newbaby.html</link><dc:creator>Amy Brown</dc:creator><description>&lt;p&gt;
 I have this friend who just had a baby, and I am about busting
 with advice that she does not want.  But!  There is so much I
 have learned about babies!  I want to share!
@@ -388,4 +388,4 @@ know.
 &lt;/p&gt;&lt;p&gt;
 Okay, that's all for now because Cordelia is howling (in her
 high chair -- it doesn't work miracles!).
-&lt;/p&gt;</description><category>advice</category><category>unsolicited</category><guid>http://bwinton.github.io/weblog.latte.ca/amy/unsolicited%20advice/newbaby.html</guid><pubDate>Mon, 20 Feb 2006 21:51:00 GMT</pubDate></item></channel></rss>
+&lt;/p&gt;</description><category>advice</category><category>unsolicited</category><guid>https://bwinton.github.io/weblog.latte.ca/amy/unsolicited%20advice/newbaby.html</guid><pubDate>Mon, 20 Feb 2006 21:51:00 GMT</pubDate></item></channel></rss>

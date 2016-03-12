@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<?xml-stylesheet type="text/xsl" href="../assets/xml/rss.xsl" media="all"?><rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:dc="http://purl.org/dc/elements/1.1/" version="2.0"><channel><title>Blog-O! (birthday)</title><link>http://bwinton.github.io/weblog.latte.ca/</link><description></description><atom:link rel="self" href="http://bwinton.github.io/weblog.latte.ca/tags/birthday.xml" type="application/rss+xml"></atom:link><language>en</language><lastBuildDate>Wed, 24 Feb 2016 22:14:06 GMT</lastBuildDate><generator>https://getnikola.com/</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Big Birthday Excitement</title><link>http://bwinton.github.io/weblog.latte.ca/amy/everythingelse/birthday33.html</link><dc:creator>Amy Brown</dc:creator><description>&lt;div&gt;&lt;p&gt;Yesterday was my thirty-third birthday.  Thirty-three
+<?xml-stylesheet type="text/xsl" href="../assets/xml/rss.xsl" media="all"?><rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/"><channel><title>Blog-O! (birthday)</title><link>https://bwinton.github.io/weblog.latte.ca/</link><description></description><atom:link type="application/rss+xml" href="https://bwinton.github.io/weblog.latte.ca/tags/birthday.xml" rel="self"></atom:link><language>en</language><lastBuildDate>Sat, 12 Mar 2016 18:09:28 GMT</lastBuildDate><generator>https://getnikola.com/</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Big Birthday Excitement</title><link>https://bwinton.github.io/weblog.latte.ca/amy/everythingelse/birthday33.html</link><dc:creator>Amy Brown</dc:creator><description>&lt;div&gt;&lt;p&gt;Yesterday was my thirty-third birthday.  Thirty-three
 isn't a very interesting number, but it's one of the 
 ones you have to get through on the way to ooooold.  &lt;/p&gt;
 &lt;p&gt;Blake's first present to me was to tell the girls
@@ -72,7 +72,7 @@ got back she was riding all by herself.  I could
 hardly believe my eyes!  This summer has been
 great for her; she learned to climb a tree, she is
 reading (not entire books but words and phrases), and
-now riding a bike.  Wow!&lt;/p&gt;&lt;/div&gt;</description><category>biking</category><category>birthday</category><category>delphine</category><guid>http://bwinton.github.io/weblog.latte.ca/amy/everythingelse/birthday33.html</guid><pubDate>Sun, 03 Aug 2008 00:06:36 GMT</pubDate></item><item><title>Cordelia Is Two!</title><link>http://bwinton.github.io/weblog.latte.ca/cordelia/two.html</link><dc:creator>Amy Brown</dc:creator><description>&lt;p&gt;
+now riding a bike.  Wow!&lt;/p&gt;&lt;/div&gt;</description><category>biking</category><category>birthday</category><category>delphine</category><guid>https://bwinton.github.io/weblog.latte.ca/amy/everythingelse/birthday33.html</guid><pubDate>Sun, 03 Aug 2008 00:06:36 GMT</pubDate></item><item><title>Cordelia Is Two!</title><link>https://bwinton.github.io/weblog.latte.ca/cordelia/two.html</link><dc:creator>Amy Brown</dc:creator><description>&lt;p&gt;
 Cordelia turned two on Thursday, which was kind of sucky for
 her because it was her fourth day of nursery school and so she's
 still suffering from lots of separation anxiety.  I felt like
@@ -210,4 +210,4 @@ That would be awesome.
 Tomorrow is Monday, and October, and I have a million
 things to do so I had best get to bed so I am not tired
 and grumpy all day.
-&lt;/p&gt;</description><category>birthday</category><category>cordelia</category><category>development</category><guid>http://bwinton.github.io/weblog.latte.ca/cordelia/two.html</guid><pubDate>Mon, 01 Oct 2007 02:14:00 GMT</pubDate></item></channel></rss>
+&lt;/p&gt;</description><category>birthday</category><category>cordelia</category><category>development</category><guid>https://bwinton.github.io/weblog.latte.ca/cordelia/two.html</guid><pubDate>Mon, 01 Oct 2007 02:14:00 GMT</pubDate></item></channel></rss>

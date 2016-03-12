@@ -1,4 +1,4 @@
-Sitemap: http://bwinton.github.io/weblog.latte.ca/sitemapindex.xml
+Sitemap: https://bwinton.github.io/weblog.latte.ca/sitemapindex.xml
 
 User-Agent: *
 Host: bwinton.github.io

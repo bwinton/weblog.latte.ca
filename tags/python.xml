@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<?xml-stylesheet type="text/xsl" href="../assets/xml/rss.xsl" media="all"?><rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:dc="http://purl.org/dc/elements/1.1/" version="2.0"><channel><title>Blog-O! (python)</title><link>http://bwinton.github.io/weblog.latte.ca/</link><description></description><atom:link rel="self" href="http://bwinton.github.io/weblog.latte.ca/tags/python.xml" type="application/rss+xml"></atom:link><language>en</language><lastBuildDate>Wed, 24 Feb 2016 22:14:12 GMT</lastBuildDate><generator>https://getnikola.com/</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Home again…</title><link>http://bwinton.github.io/weblog.latte.ca/blake/tech/vim.html</link><dc:creator>Blake Winton</dc:creator><description>&lt;div&gt;&lt;p&gt;A while ago, I downloaded Aquamacs, an emacs port for OSX, and tried
+<?xml-stylesheet type="text/xsl" href="../assets/xml/rss.xsl" media="all"?><rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/"><channel><title>Blog-O! (python)</title><link>https://bwinton.github.io/weblog.latte.ca/</link><description></description><atom:link type="application/rss+xml" href="https://bwinton.github.io/weblog.latte.ca/tags/python.xml" rel="self"></atom:link><language>en</language><lastBuildDate>Sat, 12 Mar 2016 18:09:34 GMT</lastBuildDate><generator>https://getnikola.com/</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Home again…</title><link>https://bwinton.github.io/weblog.latte.ca/blake/tech/vim.html</link><dc:creator>Blake Winton</dc:creator><description>&lt;div&gt;&lt;p&gt;A while ago, I downloaded Aquamacs, an emacs port for OSX, and tried
 to switch to it as my default editor.  I mainly did it because I
 wanted an editor I could add functionality to, à la &lt;a href="http://steve.yegge.googlepages.com/effective-emacs"&gt;Steve Yegge&lt;/a&gt;.  I used it for a
 while, and got fairly proficient at it.  There were a lot of things
@@ -55,7 +55,7 @@ blog-check function in vim/python:&lt;/p&gt;
 END
 &lt;span class="k"&gt;endfunction&lt;/span&gt;
 &lt;/pre&gt;
-&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/div&gt;</description><category>editors</category><category>emacs</category><category>lisp</category><category>python</category><category>switching</category><category>vim</category><guid>http://bwinton.github.io/weblog.latte.ca/blake/tech/vim.html</guid><pubDate>Mon, 02 Feb 2009 20:48:35 GMT</pubDate></item><item><title>How to start developing Basie</title><link>http://bwinton.github.io/weblog.latte.ca/blake/tech/basie/startingdevelopment.html</link><dc:creator>Blake Winton</dc:creator><description>&lt;div&gt;&lt;p&gt;So, first off, I think Python developers these days need to use stuff
+&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/div&gt;</description><category>editors</category><category>emacs</category><category>lisp</category><category>python</category><category>switching</category><category>vim</category><guid>https://bwinton.github.io/weblog.latte.ca/blake/tech/vim.html</guid><pubDate>Mon, 02 Feb 2009 20:48:35 GMT</pubDate></item><item><title>How to start developing Basie</title><link>https://bwinton.github.io/weblog.latte.ca/blake/tech/basie/startingdevelopment.html</link><dc:creator>Blake Winton</dc:creator><description>&lt;div&gt;&lt;p&gt;So, first off, I think Python developers these days need to use stuff
 like virtualenv and zc.buildout in order to develop in a sane manner.
 Yeah, this is the first project I’m using them on, but do what I say,
 not what I do.&lt;/p&gt;
@@ -229,7 +229,7 @@ django runserver
 
 &lt;p&gt;And when you’re done,
     deactivate&lt;/p&gt;
-&lt;p&gt;Any comments on things that don’t work would be highly appreciated.&lt;/p&gt;&lt;/div&gt;</description><category>basie</category><category>django</category><category>drproject</category><category>python</category><guid>http://bwinton.github.io/weblog.latte.ca/blake/tech/basie/startingdevelopment.html</guid><pubDate>Wed, 27 Aug 2008 21:03:24 GMT</pubDate></item><item><title>How to add Markdown to your PyBlosxom Blog.</title><link>http://bwinton.github.io/weblog.latte.ca/blake/tech/markdown.html</link><dc:creator>Blake Winton</dc:creator><description>&lt;div&gt;&lt;p&gt;Hopefully this all just works.  Include A&amp;amp;B, and 4 &amp;lt; 5.&lt;/p&gt;
+&lt;p&gt;Any comments on things that don’t work would be highly appreciated.&lt;/p&gt;&lt;/div&gt;</description><category>basie</category><category>django</category><category>drproject</category><category>python</category><guid>https://bwinton.github.io/weblog.latte.ca/blake/tech/basie/startingdevelopment.html</guid><pubDate>Wed, 27 Aug 2008 21:03:24 GMT</pubDate></item><item><title>How to add Markdown to your PyBlosxom Blog.</title><link>https://bwinton.github.io/weblog.latte.ca/blake/tech/markdown.html</link><dc:creator>Blake Winton</dc:creator><description>&lt;div&gt;&lt;p&gt;Hopefully this all just works.  Include A&amp;amp;B, and 4 &amp;lt; 5.&lt;/p&gt;
 &lt;h2&gt;Headers&lt;/h2&gt;
 &lt;h3&gt;Smaller headers&lt;/h3&gt;
 &lt;blockquote&gt;
@@ -303,7 +303,7 @@ both Amy and I are obviously comfortable writing straight HTML.  Well,
 custom-built Wiki-ish-syntax parser to a &lt;a href="http://www.freewisdom.org/projects/python-markdown/"&gt;third-party&lt;/a&gt; Markdown parser,
 and I figured this would give me a bit of a headstart on getting used
 to the new syntax, and also give me a bit of a playground for testing
-out new features that I might want to add.&lt;/p&gt;&lt;/div&gt;</description><category>drproject</category><category>markdown</category><category>pyblosxom</category><category>python</category><guid>http://bwinton.github.io/weblog.latte.ca/blake/tech/markdown.html</guid><pubDate>Wed, 27 Feb 2008 17:16:41 GMT</pubDate></item><item><title>Bazaar on the iPod Touch.</title><link>http://bwinton.github.io/weblog.latte.ca/blake/tech/iTouch/bzr.html</link><dc:creator>Blake Winton</dc:creator><description>&lt;p&gt;Because I was curious, and because it has Python, I figured I'ld give it a
+out new features that I might want to add.&lt;/p&gt;&lt;/div&gt;</description><category>drproject</category><category>markdown</category><category>pyblosxom</category><category>python</category><guid>https://bwinton.github.io/weblog.latte.ca/blake/tech/markdown.html</guid><pubDate>Wed, 27 Feb 2008 17:16:41 GMT</pubDate></item><item><title>Bazaar on the iPod Touch.</title><link>https://bwinton.github.io/weblog.latte.ca/blake/tech/iTouch/bzr.html</link><dc:creator>Blake Winton</dc:creator><description>&lt;p&gt;Because I was curious, and because it has Python, I figured I'ld give it a
 try, and see what happened...&lt;br&gt;
 The results are:&lt;/p&gt;
 &lt;pre&gt;# ./bzr selftest
@@ -393,7 +393,7 @@ distutils.errors.DistutilsPlatformError: invalid Python installation: unable to 
 &lt;p&gt;Oh, yeah, and I ended up going with the iPod Touch (hereafter
 referred to as the iTouch) to replace my Palm TX.  It's not the
 perfect device, as the above stack traces show, but it's pretty good,
-and a fair bit closer than the Palm TX was.&lt;/p&gt;</description><category>bzr</category><category>itouch</category><category>python</category><guid>http://bwinton.github.io/weblog.latte.ca/blake/tech/iTouch/bzr.html</guid><pubDate>Fri, 28 Dec 2007 20:36:28 GMT</pubDate></item><item><title>Learning Python</title><link>http://bwinton.github.io/weblog.latte.ca/blake/tech/python/learningpython.html</link><dc:creator>Blake Winton</dc:creator><description>I'ld like to apologize right now for the length of this post, but
+and a fair bit closer than the Palm TX was.&lt;/p&gt;</description><category>bzr</category><category>itouch</category><category>python</category><guid>https://bwinton.github.io/weblog.latte.ca/blake/tech/iTouch/bzr.html</guid><pubDate>Fri, 28 Dec 2007 20:36:28 GMT</pubDate></item><item><title>Learning Python</title><link>https://bwinton.github.io/weblog.latte.ca/blake/tech/python/learningpython.html</link><dc:creator>Blake Winton</dc:creator><description>I'ld like to apologize right now for the length of this post, but
 there's something about someone learning a new tool that immediately
 helps them do something that I really enjoy.
 
@@ -1190,7 +1190,7 @@ downloading and installing and testing a million graphical things, if
 they even exist.
 
 Amy:	Scripting is the shit.
-&lt;/pre&gt;</description><category>python</category><guid>http://bwinton.github.io/weblog.latte.ca/blake/tech/python/learningpython.html</guid><pubDate>Thu, 10 Mar 2005 22:14:00 GMT</pubDate></item><item><title>Why is Python slow?</title><link>http://bwinton.github.io/weblog.latte.ca/blake/tech/python/slow.html</link><dc:creator>Blake Winton</dc:creator><description>&lt;p&gt;I tried replying to &lt;a href="http://peter.mapledesign.co.uk/weblog/archives/python_is_slow.html"&gt;this post&lt;/a&gt; from Peter Bowyer, but the comment submit form was behind an
+&lt;/pre&gt;</description><category>python</category><guid>https://bwinton.github.io/weblog.latte.ca/blake/tech/python/learningpython.html</guid><pubDate>Thu, 10 Mar 2005 22:14:00 GMT</pubDate></item><item><title>Why is Python slow?</title><link>https://bwinton.github.io/weblog.latte.ca/blake/tech/python/slow.html</link><dc:creator>Blake Winton</dc:creator><description>&lt;p&gt;I tried replying to &lt;a href="http://peter.mapledesign.co.uk/weblog/archives/python_is_slow.html"&gt;this post&lt;/a&gt; from Peter Bowyer, but the comment submit form was behind an
 httpd-authenticated wall, so I figured I'ld post the reply here instead.
 &lt;/p&gt;&lt;p&gt;
 Have you tried posting to the Python Tutor list (tutor@python.org), and
@@ -1248,4 +1248,4 @@ Here are the results from running all of them for 300 iterations.
 &amp;gt;&amp;gt;&amp;gt; time2.timeit()&lt;br&gt;
 105.76589055161526&lt;br&gt;
 &amp;gt;&amp;gt;&amp;gt; time3.timeit()&lt;br&gt;
-3.0881361995940324&lt;/code&gt;&lt;/p&gt;</description><category>python</category><guid>http://bwinton.github.io/weblog.latte.ca/blake/tech/python/slow.html</guid><pubDate>Thu, 23 Dec 2004 15:44:00 GMT</pubDate></item></channel></rss>
+3.0881361995940324&lt;/code&gt;&lt;/p&gt;</description><category>python</category><guid>https://bwinton.github.io/weblog.latte.ca/blake/tech/python/slow.html</guid><pubDate>Thu, 23 Dec 2004 15:44:00 GMT</pubDate></item></channel></rss>
