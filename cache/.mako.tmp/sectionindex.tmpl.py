@@ -5,7 +5,7 @@ STOP_RENDERING = runtime.STOP_RENDERING
 __M_dict_builtin = dict
 __M_locals_builtin = locals
 _magic_number = 10
-_modified_time = 1457901246.0889804
+_modified_time = 1470264600.5516064
 _enable_loop = True
 _template_filename = '/home/travis/virtualenv/python3.4.2/lib/python3.4/site-packages/nikola/data/themes/base/templates/sectionindex.tmpl'
 _template_uri = 'sectionindex.tmpl'
@@ -28,15 +28,15 @@ def render_body(context,**pageargs):
     __M_caller = context.caller_stack._push_frame()
     try:
         __M_locals = __M_dict_builtin(pageargs=pageargs)
-        def extra_head():
-            return render_extra_head(context._locals(__M_locals))
+        generate_atom = context.get('generate_atom', UNDEFINED)
         posts = context.get('posts', UNDEFINED)
-        parent = context.get('parent', UNDEFINED)
-        _link = context.get('_link', UNDEFINED)
         def content():
             return render_content(context._locals(__M_locals))
+        def extra_head():
+            return render_extra_head(context._locals(__M_locals))
         title = context.get('title', UNDEFINED)
-        generate_atom = context.get('generate_atom', UNDEFINED)
+        _link = context.get('_link', UNDEFINED)
+        parent = context.get('parent', UNDEFINED)
         messages = context.get('messages', UNDEFINED)
         __M_writer = context.writer()
         __M_writer('\n\n')
@@ -58,13 +58,13 @@ def render_body(context,**pageargs):
 def render_content(context,**pageargs):
     __M_caller = context.caller_stack._push_frame()
     try:
-        parent = context.get('parent', UNDEFINED)
+        generate_atom = context.get('generate_atom', UNDEFINED)
         posts = context.get('posts', UNDEFINED)
-        _link = context.get('_link', UNDEFINED)
         def content():
             return render_content(context)
         title = context.get('title', UNDEFINED)
-        generate_atom = context.get('generate_atom', UNDEFINED)
+        _link = context.get('_link', UNDEFINED)
+        parent = context.get('parent', UNDEFINED)
         messages = context.get('messages', UNDEFINED)
         __M_writer = context.writer()
         __M_writer('\n<div class="sectionindex">\n    <header>\n        <h2><a href="')
@@ -90,11 +90,11 @@ def render_extra_head(context,**pageargs):
     __M_caller = context.caller_stack._push_frame()
     try:
         parent = context.get('parent', UNDEFINED)
-        def extra_head():
-            return render_extra_head(context)
         generate_atom = context.get('generate_atom', UNDEFINED)
         posts = context.get('posts', UNDEFINED)
         _link = context.get('_link', UNDEFINED)
+        def extra_head():
+            return render_extra_head(context)
         __M_writer = context.writer()
         __M_writer('\n    ')
         __M_writer(str(parent.extra_head()))
@@ -112,6 +112,6 @@ def render_extra_head(context,**pageargs):
 
 """
 __M_BEGIN_METADATA
-{"line_map": {"70": 11, "71": 14, "72": 14, "73": 14, "74": 14, "75": 15, "76": 16, "77": 16, "78": 16, "79": 16, "80": 16, "81": 18, "82": 19, "83": 19, "89": 4, "27": 0, "99": 4, "100": 5, "101": 5, "102": 6, "103": 7, "104": 7, "105": 7, "42": 2, "107": 7, "47": 9, "113": 107, "52": 21, "58": 11, "106": 7}, "filename": "/home/travis/virtualenv/python3.4.2/lib/python3.4/site-packages/nikola/data/themes/base/templates/sectionindex.tmpl", "uri": "sectionindex.tmpl", "source_encoding": "utf-8"}
+{"uri": "sectionindex.tmpl", "source_encoding": "utf-8", "line_map": {"70": 11, "71": 14, "72": 14, "73": 14, "74": 14, "75": 15, "76": 16, "77": 16, "78": 16, "79": 16, "80": 16, "81": 18, "82": 19, "83": 19, "89": 4, "27": 0, "99": 4, "100": 5, "101": 5, "102": 6, "103": 7, "104": 7, "105": 7, "42": 2, "107": 7, "47": 9, "113": 107, "52": 21, "58": 11, "106": 7}, "filename": "/home/travis/virtualenv/python3.4.2/lib/python3.4/site-packages/nikola/data/themes/base/templates/sectionindex.tmpl"}
 __M_END_METADATA
 """
