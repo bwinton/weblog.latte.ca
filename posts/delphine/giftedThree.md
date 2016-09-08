@@ -1,6 +1,12 @@
-Update on Gifted 3: An Unschooling Experiment
+<!--
+.. title: Update on Gifted 3: An Unschooling Experiment
+.. date: 2016-09-08 11:48:18
+.. author: Amy Brown
+-->
 
 In the first two installments of this very slow-moving series, Delphine was <a href="https://weblog.latte.ca/delphine/gifted.html">assessed as gifted</a> and we <a href="https://weblog.latte.ca/delphine/giftedtwo.html">decided to check out our local gifted program</a>. I posted that second post over three years ago; as you might imagine, many things have happened since then.
+
+<!-- TEASER_END -->
 
 We did decide to enroll Delphine in the school board's gifted program. They offered her a place in a brand new gifted class at a school which had not had a gifted program before. Since the alternatives were (a) too far away, or (b) at a very rich school in a very rich neighbourhood, I accepted the placement in the new program sight-unseen. 
 
