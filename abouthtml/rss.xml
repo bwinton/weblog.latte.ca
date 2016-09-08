@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet type="text/xsl" href="../assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Blog-O!</title><link>https://bwinton.github.io/weblog.latte.ca/</link><description></description><atom:link type="application/rss+xml" href="https://bwinton.github.io/weblog.latte.ca/abouthtml/rss.xml" rel="self"></atom:link><language>en</language><lastBuildDate>Thu, 08 Sep 2016 15:39:48 GMT</lastBuildDate><generator>https://getnikola.com/</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>About Blog-o!</title><link>https://bwinton.github.io/weblog.latte.ca/about.html</link><dc:creator>Amy Brown</dc:creator><description>&lt;p&gt;
+Quick introduction.  Blog-o! is a weblog shared by Blake and Amy.  It's
+split up into categories, which are listed in a sidebar over on the
+right there.  If you click on one of the categories, you'll only see
+posts in that category, so if you only ever want to see what Amy has
+to say about Delphine, you could click on the "delphine" link under
+"amy", then bookmark that page and never have to read anything else.
+&lt;/p&gt;&lt;p&gt;
+Blog-o! is run using PyBlosxom, a Python blogging doo-dad.  For more
+information about that you'll have to talk to Blake (it's Amy writing
+here) or click on the graphic over on the right.  I don't know how
+it's supposed to be pronounced, but I advocate "pie-blossom".
+&lt;/p&gt;</description><category>data</category><guid>https://bwinton.github.io/weblog.latte.ca/about.html</guid><pubDate>Thu, 15 Jan 2004 19:10:00 GMT</pubDate></item></channel></rss>

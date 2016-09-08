@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet type="text/xsl" href="../assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Blog-O!</title><link>https://bwinton.github.io/weblog.latte.ca/</link><description></description><atom:link type="application/rss+xml" href="https://bwinton.github.io/weblog.latte.ca/blake/rss.xml" rel="self"></atom:link><language>en</language><lastBuildDate>Thu, 08 Sep 2016 15:39:41 GMT</lastBuildDate><generator>https://getnikola.com/</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Hey!  Let’s Write a WebExtension!</title><link>https://bwinton.github.io/weblog.latte.ca/blake/tech/firefox/webextensiontutorial.html</link><dc:creator>Blake Winton</dc:creator><description>&lt;div&gt;&lt;p&gt;&lt;small&gt;(This article is also posted on &lt;a href="https://hacks.mozilla.org/2015/09/lets_write_a_webextension/"&gt;Mozilla
+Hacks&lt;/a&gt;.)&lt;/small&gt;&lt;/p&gt;
+&lt;p&gt;You might have heard about Mozilla’s &lt;a href="https://wiki.mozilla.org/WebExtensions" title="Mozilla’s WebExtensions Wiki Page"&gt;WebExtensions&lt;/a&gt;, our
+implementation of a new browser extension API for writing
+multiprocess-compatible add-ons.  Maybe you’ve been wondering what it was about,
+and how you could use it. Well, I’m here to help!  I think &lt;a href="https://developer.mozilla.org/en-US/Add-ons/WebExtensions" title="MDN’s WebExtensions Documentation"&gt;MDN’s WebExtensions
+Docs&lt;/a&gt; have a pretty great definition:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;WebExtensions are a new way to write Firefox extensions.&lt;/p&gt;
+&lt;p&gt;The technology is developed for cross-browser compatibility: to a large extent
+the API is compatible with the &lt;a href="https://developer.chrome.com/extensions" title="Chrome’s Extension API"&gt;extension API&lt;/a&gt; supported by Google
+Chrome and Opera. Extensions written for these browsers will in most cases run
+in Firefox with just a few changes. The API is also fully compatible with
+&lt;a href="https://developer.mozilla.org/en-US/docs/Mozilla/Firefox/Multiprocess_Firefox" title="a.k.a. Electrolysis"&gt;multiprocess Firefox&lt;/a&gt;.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;The only thing I would add is that while Mozilla is implementing most of the API
+that Chrome and Opera support, we’re not restricting ourselves to only that API.
+Where it makes sense, we will be adding new functionality and talking with other
+browser makers about implementing it as well.  Finally, since the WebExtension
+API is still under development, it’s probably best if you use &lt;a href="https://nightly.mozilla.org/" title="Download Nightly Here"&gt;Firefox
+Nightly&lt;/a&gt; for this tutorial, so that you get the most up-to-date,
+standards-compliant behaviour.  But keep in mind, this is still experimental
+technology — things might break!&lt;/p&gt;
+&lt;h4&gt;Starting off&lt;/h4&gt;
+&lt;p&gt;Okay, let’s start with a reasonably simple add-on. We’ll add a button, and when
+you click it, it will open up &lt;a href="http://chilloutandwatchsomecatgifs.com/" title="Cat Gifs!"&gt;one of my favourite sites&lt;/a&gt; in a new
+tab.&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://bwinton.github.io/weblog.latte.ca/blake/tech/firefox/webextensiontutorial.html"&gt;Read more…&lt;/a&gt; (9 min remaining to read)&lt;/p&gt;&lt;/div&gt;</description><category>addon</category><category>firefox</category><category>mozilla</category><category>webextension</category><guid>https://bwinton.github.io/weblog.latte.ca/blake/tech/firefox/webextensiontutorial.html</guid><pubDate>Mon, 21 Sep 2015 18:52:00 GMT</pubDate></item><item><title>A long time ago, on a computer far far away…</title><link>https://bwinton.github.io/weblog.latte.ca/blake/employment/mozilla/sixyears.html</link><dc:creator>Blake Winton</dc:creator><description>&lt;div&gt;&lt;p&gt;Six years ago, I started contributing to Mozilla.&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://bwinton.github.io/weblog.latte.ca/blake/employment/mozilla/sixyears.html"&gt;Read more…&lt;/a&gt; (4 min remaining to read)&lt;/p&gt;&lt;/div&gt;</description><category>anniversary</category><category>employment</category><category>mozilla</category><category>thunderbird</category><guid>https://bwinton.github.io/weblog.latte.ca/blake/employment/mozilla/sixyears.html</guid><pubDate>Fri, 27 Feb 2015 19:04:00 GMT</pubDate></item><item><title>ES6 Templates</title><link>https://bwinton.github.io/weblog.latte.ca/blake/tech/firefox/templates.html</link><dc:creator>Blake Winton</dc:creator><description>&lt;div&gt;&lt;p&gt;One of my favourite upcoming features in ES6 is Template Strings.  I’ve used
+JQuery’s &lt;a href="http://ejohn.org/blog/javascript-micro-templating/"&gt;templates&lt;/a&gt; in
+&lt;a href="https://bugzilla.mozilla.org/show_bug.cgi?id=686347"&gt;some previous code&lt;/a&gt; I’ve
+worked on, and while it was very useful in finishing the feature on time, it’s
+aged now and relying on third-party libraries which we don’t have time to keep
+up to date isn’t the best idea and so we’re in the middle of &lt;a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1014609"&gt;some work to
+remove them&lt;/a&gt;.  So having
+said that, I’m quite happy to see something similar arriving in the base
+language, so that we can take advantage of it without having to add any extra
+code.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;As an aside, all the code below was tested in &lt;a href="http://getfirefox.com"&gt;Firefox
+34&lt;/a&gt;, using the
+&lt;a href="https://developer.mozilla.org/en-US/docs/Tools/Scratchpad"&gt;Scratchpad&lt;/a&gt;.  The
+comments are pasted in below the code when you select it and choose the
+&lt;code&gt;Execute » Display&lt;/code&gt; menu item or hit &lt;code&gt;Ctrl+L&lt;/code&gt; (&lt;code&gt;Cmd+L&lt;/code&gt; on Mac).  I
+&lt;a href="https://twitter.com/addyosmani/status/541978036904554496"&gt;hear&lt;/a&gt; they also
+&lt;a href="https://plus.google.com/+AddyOsmani/posts/BW5h61SoGf8"&gt;work in Chrome&lt;/a&gt;, but
+they didn’t seem to in the version I was running (39.0.2171.95), and I didn’t
+want to start messing with an &lt;code&gt;--es-staging&lt;/code&gt; flag.  If someone can confirm
+whether they work or not, I would certainly appreciate it!  :)&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;&lt;a href="https://bwinton.github.io/weblog.latte.ca/blake/tech/firefox/templates.html"&gt;Read more…&lt;/a&gt; (5 min remaining to read)&lt;/p&gt;&lt;/div&gt;</description><category>es6</category><category>mozilla</category><category>templates</category><guid>https://bwinton.github.io/weblog.latte.ca/blake/tech/firefox/templates.html</guid><pubDate>Mon, 12 Jan 2015 19:45:00 GMT</pubDate></item><item><title>New Year’s Resolutions…</title><link>https://bwinton.github.io/weblog.latte.ca/blake/random/newyears2015.html</link><dc:creator>Blake Winton</dc:creator><description>&lt;div&gt;&lt;p&gt;Well, I managed to spend New Year’s Eve lying sick on the couch, and then went
+to bed semi-delirious from lack of sleep at 12:08, which kind of sucked, but I’m
+still hopeful that 2015 will be better than 2014 was.  I mean, it almost &lt;em&gt;has&lt;/em&gt;
+to be, right?&lt;/p&gt;
+&lt;p&gt;Anyways, my first, and so far only, resolution is to consume less and create
+more.  When I look back on the year, I find I have spent more of my free time
+than I’ld like passively consuming other people’s content instead of making new
+things of my own, and that kind of bothers me.  I’m very glad that a large part
+of my job involves making things, and that has definitely been rewarding, but
+there are also a lot of personal projects I want to start or finish or just push
+forward.  And it doesn’t have to be code.  I’ld like to write more blog posts,
+to explain the things I’m doing, and why they interest me enough to spend time
+on.&lt;/p&gt;&lt;/div&gt;</description><category>new years</category><category>resolutions</category><guid>https://bwinton.github.io/weblog.latte.ca/blake/random/newyears2015.html</guid><pubDate>Thu, 01 Jan 2015 18:16:00 GMT</pubDate></item><item><title>Meet the new blog, same as the old blog.</title><link>https://bwinton.github.io/weblog.latte.ca/blake/random/microblog/newblog.html</link><dc:creator>Blake Winton</dc:creator><description>&lt;div&gt;&lt;p&gt;One of the things I did over the holidays (so far) is upgrade the software that
+powers &lt;a href="http://weblog.latte.ca"&gt;the blog&lt;/a&gt;.&lt;/p&gt;&lt;p&gt;&lt;a href="https://bwinton.github.io/weblog.latte.ca/blake/random/microblog/newblog.html"&gt;Read more…&lt;/a&gt; (1 min remaining to read)&lt;/p&gt;&lt;/div&gt;</description><category>blog</category><category>microblog</category><category>nikola</category><category>random</category><guid>https://bwinton.github.io/weblog.latte.ca/blake/random/microblog/newblog.html</guid><pubDate>Sat, 27 Dec 2014 01:03:00 GMT</pubDate></item><item><title>Listening to things…</title><link>https://bwinton.github.io/weblog.latte.ca/blake/random/microblog/listeningtothings.html</link><dc:creator>Blake Winton</dc:creator><description>&lt;div&gt;&lt;p&gt;In high school and university, I used to listen to a lot of music.  As I went
+about my day, there would continually be something on the cd player.  But
+these days I find myself listening to podcasts&lt;sup id="fnref:podcasts"&gt;&lt;a class="footnote-ref" href="https://bwinton.github.io/weblog.latte.ca/blake/random/microblog/listeningtothings.html#fn:podcasts" rel="footnote"&gt;1&lt;/a&gt;&lt;/sup&gt; in my spare audio
+time instead, and that strikes me as interesting because without meaning to I
+seem to have moved from (largely) mass-produced, mass-marketed entertainment
+to (mostly) independent, informational&lt;sup id="fnref:informational"&gt;&lt;a class="footnote-ref" href="https://bwinton.github.io/weblog.latte.ca/blake/random/microblog/listeningtothings.html#fn:informational" rel="footnote"&gt;2&lt;/a&gt;&lt;/sup&gt; entertainment.&lt;/p&gt;
+&lt;div class="footnote"&gt;
+&lt;hr&gt;&lt;ol&gt;&lt;li id="fn:podcasts"&gt;
+&lt;p&gt;The list, in alphabetical order, is: &lt;a href="https://overcast.fm/podcasts/show/2516/nGKpf2"&gt;Accidental Tech Podcast&lt;/a&gt; • &lt;a href="https://overcast.fm/podcasts/show/61666/EwNC1R"&gt;After Dark&lt;/a&gt; • &lt;a href="https://overcast.fm/podcasts/show/11651/e2mzzo"&gt;Bitsplitting&lt;/a&gt; • &lt;a href="https://overcast.fm/podcasts/show/8860/DSqCCw"&gt;Core Intuition&lt;/a&gt; • &lt;a href="https://overcast.fm/podcasts/show/67268/9juAiU"&gt;Edge Cases&lt;/a&gt; • &lt;a href="https://overcast.fm/podcasts/show/10994/okyG19"&gt;Fear the Boot&lt;/a&gt; • &lt;a href="https://overcast.fm/podcasts/show/112240/nKrozX"&gt;Isometric&lt;/a&gt; • &lt;a href="https://overcast.fm/podcasts/show/81318/X5vDYV"&gt;JavaScript Jabber&lt;/a&gt; • &lt;a href="https://overcast.fm/podcasts/show/115832/L7YHFg"&gt;LESS THAN LIVE with KATE OR DIE&lt;/a&gt; • &lt;a href="https://overcast.fm/podcasts/show/26408/7nZ07n"&gt;Lostcast&lt;/a&gt; • &lt;a href="https://overcast.fm/podcasts/show/104040/tiKzXE"&gt;No Such Thing As A Fish&lt;/a&gt; • &lt;a href="https://overcast.fm/podcasts/show/125398/wFBDkj"&gt;The Diecast&lt;/a&gt; • &lt;a href="https://overcast.fm/podcasts/show/11010/SVo0r8"&gt;The Dungeons &amp;amp; Dragons Podcast&lt;/a&gt; • &lt;a href="https://overcast.fm/podcasts/show/37062/40ldaa"&gt;The Incomparable&lt;/a&gt; • &lt;a href="https://overcast.fm/podcasts/show/1390/AgcE78"&gt;The Stack Exchange Podcast&lt;/a&gt; • &lt;a href="https://overcast.fm/podcasts/show/9214/j1Nbiy"&gt;The Web Ahead&lt;/a&gt; • &lt;a href="https://overcast.fm/podcasts/show/99714/bZtLy4"&gt;Total Party Kill&lt;/a&gt; • &lt;a href="https://overcast.fm/podcasts/show/120025/cprNQD"&gt;Webcomics Weekly&lt;/a&gt; &lt;a class="footnote-backref" href="https://bwinton.github.io/weblog.latte.ca/blake/random/microblog/listeningtothings.html#fnref:podcasts" rev="footnote" title="Jump back to footnote 1 in the text"&gt;↩&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li id="fn:informational"&gt;
+&lt;p&gt;I’ll readily agree that most of the things I learn aren’t going to impact my life in any significant way.  I’m not going to read many comics, or play many role-playing games, or do, uh, whatever QI does, but they’re still fun to listen to.  :) &lt;a class="footnote-backref" href="https://bwinton.github.io/weblog.latte.ca/blake/random/microblog/listeningtothings.html#fnref:informational" rev="footnote" title="Jump back to footnote 2 in the text"&gt;↩&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;&lt;/div&gt;&lt;/div&gt;</description><category>consumption</category><category>content</category><category>microblog</category><guid>https://bwinton.github.io/weblog.latte.ca/blake/random/microblog/listeningtothings.html</guid><pubDate>Wed, 12 Nov 2014 21:19:41 GMT</pubDate></item><item><title>Minecraft and orcs.</title><link>https://bwinton.github.io/weblog.latte.ca/blake/random/microblog/environmentalminecraft.html</link><dc:creator>Blake Winton</dc:creator><description>&lt;div&gt;&lt;p&gt;&lt;img src="https://dl.dropboxusercontent.com/u/2301433/Weblog/GlassEllipsoid.png" align="left"&gt;I’ve been playing a bunch of Minecraft on a survival-mode server
+recently, and it occurred to me that when I’m playing, I basically act like an
+orc — cutting down all the trees, digging up all the stone, killing all the
+animals — all so that I can build whatever fancy strikes my mind.&lt;/p&gt;
+&lt;p&gt;In my normal life, I bike (or take public transit) for all my trips; I recycle
+cans, bottles, cardboard boxes; I compost vegetables in my back yard, and
+other organic waste through the city’s compost program; I keep the house
+fairly cool in winter, and we barely ran our (window) air conditioner at all
+this summer.  But as soon as I log on to the server all the normal behaviour
+is right out the window.&lt;/p&gt;
+&lt;p&gt;Maybe when I build a house of my own, I’ll try to only use sustainable
+materials, and see how it is to live in a Minecraft world…&lt;/p&gt;
+&lt;p&gt;&lt;br clear="all"&gt;&lt;/p&gt;&lt;/div&gt;</description><category>environment</category><category>microblog</category><category>minecraft</category><category>orcs</category><guid>https://bwinton.github.io/weblog.latte.ca/blake/random/microblog/environmentalminecraft.html</guid><pubDate>Sat, 08 Nov 2014 23:14:08 GMT</pubDate></item><item><title>New kinds of thoughts.</title><link>https://bwinton.github.io/weblog.latte.ca/blake/random/microblog/newthoughts.html</link><dc:creator>Blake Winton</dc:creator><description>&lt;div&gt;&lt;p&gt;&lt;img src="https://dl.dropboxusercontent.com/u/2301433/Weblog/WindowDoor.jpg" align="right"&gt;Earlier in my life, I would have looked at the new window in the
+door, and thought “Nice!  They must have put that in so that people wouldn’t
+slam the door into other people when they opened it.”  But now I find myself
+thinking “Nice! They probably put that in so that people wouldn’t slam the door
+into other people when they opened it, but it also has the beneficial effect of
+letting &lt;span title="women"&gt;people&lt;/span&gt; know if there’s someone lurking in the
+stairwell before they open the door.”  I’m not completely sure what’s changed in
+my life (other than I’m exposing myself to more varied viewpoints than I did
+when I was younger), but it seems like a positive thing from where I’m standing.&lt;/p&gt;
+&lt;p&gt;(There are a bunch of things I’ve been thinking recently, and they don’t tend to
+fit in 140 characters, so I’m going to try and post more of them here)&lt;/p&gt;
+&lt;p&gt;&lt;br clear="all"&gt;&lt;/p&gt;&lt;/div&gt;</description><category>microblog</category><category>observations</category><guid>https://bwinton.github.io/weblog.latte.ca/blake/random/microblog/newthoughts.html</guid><pubDate>Wed, 29 Oct 2014 21:36:18 GMT</pubDate></item><item><title>Figuring out where things are in an image.</title><link>https://bwinton.github.io/weblog.latte.ca/blake/tech/firefox/heatmap1.html</link><dc:creator>Blake Winton</dc:creator><description>&lt;div&gt;&lt;p&gt;People love &lt;a href="https://blog.mozilla.org/ux/2012/06/firefox-heatmap-study-2012-results-are-in/"&gt;heatmaps&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;They’re a great way to show how much various UI elements are used in relation
+to each other, and are much easier to read at a glance than a table of click-
+counts would be.  They can also reveal hidden patterns of usage based on the
+locations of elements, let us know if we’re focusing our efforts on the
+correct elements, and tell us how effective our communication about new
+features is.  Because they’re so useful, one of the things I am doing in my
+new role is setting up the framework to provide our UX team with automatically
+updating heatmaps for both Desktop and Android Firefox.
+&lt;/p&gt;&lt;p&gt;&lt;a href="https://bwinton.github.io/weblog.latte.ca/blake/tech/firefox/heatmap1.html"&gt;Read more…&lt;/a&gt; (4 min remaining to read)&lt;/p&gt;&lt;/div&gt;</description><category>heatmap</category><category>mozilla</category><category>tributary</category><guid>https://bwinton.github.io/weblog.latte.ca/blake/tech/firefox/heatmap1.html</guid><pubDate>Mon, 07 Jul 2014 15:53:31 GMT</pubDate></item><item><title>Angular JS Directives &lt;small&gt;by Alex Vanston&lt;/small&gt;.</title><link>https://bwinton.github.io/weblog.latte.ca/blake/tech/angularjsdirectives.html</link><dc:creator>Blake Winton</dc:creator><description>&lt;div&gt;&lt;p&gt;I’ve recently been playing a lot of &lt;a href="http://www.fezgame.com/"&gt;Fez&lt;/a&gt;, a 2-D
+(kinda) platforming/puzzle video game.  Many of the puzzles use a series of
+symbols in squares as a &lt;a href="http://evilwallpaper.co.uk/fez/"&gt;code language&lt;/a&gt;.  I
+really liked the way the language looked, and so I decided to write a small
+single page app in Angular to transliterate English into the Fezish alphabet.
+The first implementation was written as a filter, and it seemed to work okay,
+but emitting a bunch of HTML and then forcing the user of the filter to use a
+sanitizer to get it to render &lt;em&gt;as&lt;/em&gt; HTML was kinda strange. That very same day,
+in an odd twist of fate, I got some email from &lt;a href="http://www.packtpub.com/"&gt;Packt
+Publishing&lt;/a&gt; asking if I would be interested in
+featuring their &lt;a href="http://bit.ly/13VlkXc"&gt;new Angular JS book&lt;/a&gt; on my blog.  Long
+story short, I agreed to post a review of it here in exchange for a free copy
+of the eBook.  So on to the review…&lt;/p&gt;
+&lt;p&gt;The first thing that struck me about Angular JS Directives was the writing.
+I’ve read a lot of extremely dry technical books which were hard to get
+through, and I’m happy to say that this is &lt;em&gt;not&lt;/em&gt; one of them.  I found the
+writing both engaging and amusing.  There are a few times where the author
+even pokes fun at himself for repeating the same points, which was wonderful
+to see.  The examples were clear to read, and ably demonstrated the points
+that the accompanying text was making.  The overall flow of the book mostly
+made sense, with simpler concepts leading to more complicated concepts.  My
+only suggestion is that the chapter on Testing could have been introduced
+sooner, and then used in the rest of the examples to prove things were working
+the way that the author claimed.&lt;/p&gt;
+&lt;p&gt;I don’t like to only say positive things about something I’m reviewing, both
+because I believe that there’s always something that could be done better, and
+because I don’t want to look like a corporate shill.  At least not for $17.
+;)  So, on to the bad things I’ve run into.  It took me a lot longer to read
+than I would have hoped.  This was partially because of a bunch of work stuff
+taking up all my spare time, but also because after every few pages I wanted
+to go back and re-write large parts of the projects I’ve done.  :)  My other
+concern is that $17 for 87 pages of content might not not be worth it to you.
+I found the content very useful, and I’ve certainly gotten $17 worth of
+knowledge out of it, but at my previous job, where I didn’t use any JavaScript
+much less Angular, it wouldn’t have been money well spent.&lt;/p&gt;
+&lt;p&gt;Having said all that, after the fourth chapter, I re-wrote the Fezish Filter
+as a Directive, and the code became far cleaner.  And now that I’m done
+reading the ninth chapter, I think I might spend the rest of this weekend
+adding some unit and end-to-end tests.  So in the end, would I recommend &lt;a href="http://bit.ly/13VlkXc"&gt;this
+book&lt;/a&gt;? Yes.  Yes I would.&lt;/p&gt;
+&lt;p&gt;(Monday October 14th edit: I’ve also just been informed that Packt is running a
+&lt;a href="http://bit.ly/1bqvB29"&gt;Columbus Day sale&lt;/a&gt;, and if you use the discount code
+"&lt;strong&gt;COL50&lt;/strong&gt;" in the next four days, you’ll get 50% off this, and any other eBook
+or video, so if you’re thinking of buying it, today would be a great day to do
+so!)&lt;/p&gt;&lt;/div&gt;</description><guid>https://bwinton.github.io/weblog.latte.ca/blake/tech/angularjsdirectives.html</guid><pubDate>Sat, 12 Oct 2013 21:07:52 GMT</pubDate></item></channel></rss>
