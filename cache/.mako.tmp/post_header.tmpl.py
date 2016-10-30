@@ -5,7 +5,7 @@ STOP_RENDERING = runtime.STOP_RENDERING
 __M_dict_builtin = dict
 __M_locals_builtin = locals
 _magic_number = 10
-_modified_time = 1477792624.1254475
+_modified_time = 1477793469.439743
 _enable_loop = True
 _template_filename = 'themes/latte/templates/post_header.tmpl'
 _template_uri = 'post_header.tmpl'
@@ -45,9 +45,9 @@ def render_body(context,**pageargs):
 def render_html_sourcelink(context):
     __M_caller = context.caller_stack._push_frame()
     try:
-        show_sourcelink = context.get('show_sourcelink', UNDEFINED)
-        messages = context.get('messages', UNDEFINED)
         post = context.get('post', UNDEFINED)
+        messages = context.get('messages', UNDEFINED)
+        show_sourcelink = context.get('show_sourcelink', UNDEFINED)
         __M_writer = context.writer()
         __M_writer('\n')
         if show_sourcelink:
@@ -66,15 +66,15 @@ def render_html_post_header(context):
     try:
         def html_translations(post):
             return render_html_translations(context,post)
+        date_format = context.get('date_format', UNDEFINED)
+        comments = _mako_get_namespace(context, 'comments')
+        messages = context.get('messages', UNDEFINED)
+        site_has_comments = context.get('site_has_comments', UNDEFINED)
+        post = context.get('post', UNDEFINED)
         def html_title():
             return render_html_title(context)
-        site_has_comments = context.get('site_has_comments', UNDEFINED)
-        messages = context.get('messages', UNDEFINED)
-        post = context.get('post', UNDEFINED)
-        comments = _mako_get_namespace(context, 'comments')
         def html_sourcelink():
             return render_html_sourcelink(context)
-        date_format = context.get('date_format', UNDEFINED)
         __M_writer = context.writer()
         __M_writer('\n    <header>\n        ')
         __M_writer(str(html_title()))
@@ -135,10 +135,10 @@ def render_html_title(context):
 def render_html_translations(context,post):
     __M_caller = context.caller_stack._push_frame()
     try:
+        len = context.get('len', UNDEFINED)
         lang = context.get('lang', UNDEFINED)
         translations = context.get('translations', UNDEFINED)
         messages = context.get('messages', UNDEFINED)
-        len = context.get('len', UNDEFINED)
         __M_writer = context.writer()
         __M_writer('\n')
         if len(translations) > 1:
@@ -162,6 +162,6 @@ def render_html_translations(context,post):
 
 """
 __M_BEGIN_METADATA
-{"uri": "post_header.tmpl", "line_map": {"128": 7, "129": 7, "135": 11, "151": 17, "143": 11, "144": 12, "145": 13, "146": 14, "147": 14, "148": 15, "149": 16, "150": 17, "23": 3, "152": 17, "153": 17, "26": 2, "155": 17, "156": 17, "29": 0, "34": 2, "35": 3, "36": 9, "37": 22, "38": 28, "39": 49, "154": 17, "45": 24, "157": 20, "163": 157, "52": 24, "53": 25, "54": 26, "55": 26, "56": 26, "57": 26, "58": 26, "64": 30, "79": 30, "80": 32, "81": 32, "82": 34, "83": 34, "84": 35, "85": 35, "86": 35, "87": 35, "88": 35, "89": 35, "90": 35, "91": 35, "92": 36, "93": 37, "94": 37, "95": 37, "96": 39, "97": 39, "98": 39, "99": 40, "100": 41, "101": 41, "102": 41, "103": 41, "104": 41, "105": 43, "106": 44, "107": 44, "108": 44, "109": 46, "110": 47, "111": 47, "117": 5, "123": 5, "124": 6, "125": 7, "126": 7, "127": 7}, "source_encoding": "utf-8", "filename": "themes/latte/templates/post_header.tmpl"}
+{"uri": "post_header.tmpl", "filename": "themes/latte/templates/post_header.tmpl", "line_map": {"128": 7, "129": 7, "135": 11, "151": 17, "143": 11, "144": 12, "145": 13, "146": 14, "147": 14, "148": 15, "149": 16, "150": 17, "23": 3, "152": 17, "153": 17, "26": 2, "155": 17, "156": 17, "29": 0, "34": 2, "35": 3, "36": 9, "37": 22, "38": 28, "39": 49, "154": 17, "45": 24, "157": 20, "163": 157, "52": 24, "53": 25, "54": 26, "55": 26, "56": 26, "57": 26, "58": 26, "64": 30, "79": 30, "80": 32, "81": 32, "82": 34, "83": 34, "84": 35, "85": 35, "86": 35, "87": 35, "88": 35, "89": 35, "90": 35, "91": 35, "92": 36, "93": 37, "94": 37, "95": 37, "96": 39, "97": 39, "98": 39, "99": 40, "100": 41, "101": 41, "102": 41, "103": 41, "104": 41, "105": 43, "106": 44, "107": 44, "108": 44, "109": 46, "110": 47, "111": 47, "117": 5, "123": 5, "124": 6, "125": 7, "126": 7, "127": 7}, "source_encoding": "utf-8"}
 __M_END_METADATA
 """
