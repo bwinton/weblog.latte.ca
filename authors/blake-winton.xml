@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<?xml-stylesheet type="text/xsl" href="../assets/xml/rss.xsl" media="all"?><rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/"><channel><title>Blog-O! (Blake Winton)</title><link>https://bwinton.github.io/weblog.latte.ca/</link><description></description><atom:link type="application/rss+xml" href="https://bwinton.github.io/weblog.latte.ca/authors/blake-winton.xml" rel="self"></atom:link><language>en</language><lastBuildDate>Sat, 12 Mar 2016 18:09:33 GMT</lastBuildDate><generator>https://getnikola.com/</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Hey!  Let’s Write a WebExtension!</title><link>https://bwinton.github.io/weblog.latte.ca/blake/tech/firefox/webextensiontutorial.html</link><dc:creator>Blake Winton</dc:creator><description>&lt;div&gt;&lt;p&gt;&lt;small&gt;(This article is also posted on &lt;a href="https://hacks.mozilla.org/2015/09/lets_write_a_webextension/"&gt;Mozilla
+<?xml-stylesheet type="text/xsl" href="../assets/xml/rss.xsl" media="all"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Blog-O! (Blake Winton)</title><link>https://bwinton.github.io/weblog.latte.ca/</link><description></description><atom:link href="https://bwinton.github.io/weblog.latte.ca/authors/blake-winton.xml" type="application/rss+xml" rel="self"></atom:link><language>en</language><lastBuildDate>Sun, 30 Oct 2016 01:56:50 GMT</lastBuildDate><generator>https://getnikola.com/</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>My problems with the new MacBooks.</title><link>https://bwinton.github.io/weblog.latte.ca/blake/tech/mac/disappointment.html</link><dc:creator>Blake Winton</dc:creator><description>&lt;div&gt;&lt;p&gt;I was listening to &lt;a href="http://atp.fm/episodes/193"&gt;episode 193&lt;/a&gt; of the &lt;a href="http://atp.fm/"&gt;Accidental Tech Podcast&lt;/a&gt;, and one of the hosts didn’t seem like he understood why I (and apparently many other people on Twitter&lt;sup id="fnref-0"&gt;&lt;a class="footnote-ref" href="https://bwinton.github.io/weblog.latte.ca/blake/tech/mac/disappointment.html#fn-0"&gt;1&lt;/a&gt;&lt;/sup&gt;) were uninterested or annoyed or disappointed with the new MacBook Pros.  So, being a random white dude on the Internet, I hoped that I could leave a comment explaining the various reasons, in case he was interested…  🙂&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://bwinton.github.io/weblog.latte.ca/blake/tech/mac/disappointment.html"&gt;Read more…&lt;/a&gt; (4 min remaining to read)&lt;/p&gt;&lt;/div&gt;</description><category>apple</category><category>macbook</category><guid>https://bwinton.github.io/weblog.latte.ca/blake/tech/mac/disappointment.html</guid><pubDate>Sun, 30 Oct 2016 01:39:00 GMT</pubDate></item><item><title>Hey!  Let’s Write a WebExtension!</title><link>https://bwinton.github.io/weblog.latte.ca/blake/tech/firefox/webextensiontutorial.html</link><dc:creator>Blake Winton</dc:creator><description>&lt;div&gt;&lt;p&gt;&lt;small&gt;(This article is also posted on &lt;a href="https://hacks.mozilla.org/2015/09/lets_write_a_webextension/"&gt;Mozilla
 Hacks&lt;/a&gt;.)&lt;/small&gt;&lt;/p&gt;
 &lt;p&gt;You might have heard about Mozilla’s &lt;a href="https://wiki.mozilla.org/WebExtensions" title="Mozilla’s WebExtensions Wiki Page"&gt;WebExtensions&lt;/a&gt;, our
 implementation of a new browser extension API for writing
@@ -107,48 +108,4 @@ correct elements, and tell us how effective our communication about new
 features is.  Because they’re so useful, one of the things I am doing in my
 new role is setting up the framework to provide our UX team with automatically
 updating heatmaps for both Desktop and Android Firefox.
-&lt;/p&gt;&lt;p&gt;&lt;a href="https://bwinton.github.io/weblog.latte.ca/blake/tech/firefox/heatmap1.html"&gt;Read more…&lt;/a&gt; (4 min remaining to read)&lt;/p&gt;&lt;/div&gt;</description><category>heatmap</category><category>mozilla</category><category>tributary</category><guid>https://bwinton.github.io/weblog.latte.ca/blake/tech/firefox/heatmap1.html</guid><pubDate>Mon, 07 Jul 2014 15:53:31 GMT</pubDate></item><item><title>Angular JS Directives &lt;small&gt;by Alex Vanston&lt;/small&gt;.</title><link>https://bwinton.github.io/weblog.latte.ca/blake/tech/angularjsdirectives.html</link><dc:creator>Blake Winton</dc:creator><description>&lt;div&gt;&lt;p&gt;I’ve recently been playing a lot of &lt;a href="http://www.fezgame.com/"&gt;Fez&lt;/a&gt;, a 2-D
-(kinda) platforming/puzzle video game.  Many of the puzzles use a series of
-symbols in squares as a &lt;a href="http://evilwallpaper.co.uk/fez/"&gt;code language&lt;/a&gt;.  I
-really liked the way the language looked, and so I decided to write a small
-single page app in Angular to transliterate English into the Fezish alphabet.
-The first implementation was written as a filter, and it seemed to work okay,
-but emitting a bunch of HTML and then forcing the user of the filter to use a
-sanitizer to get it to render &lt;em&gt;as&lt;/em&gt; HTML was kinda strange. That very same day,
-in an odd twist of fate, I got some email from &lt;a href="http://www.packtpub.com/"&gt;Packt
-Publishing&lt;/a&gt; asking if I would be interested in
-featuring their &lt;a href="http://bit.ly/13VlkXc"&gt;new Angular JS book&lt;/a&gt; on my blog.  Long
-story short, I agreed to post a review of it here in exchange for a free copy
-of the eBook.  So on to the review…&lt;/p&gt;
-&lt;p&gt;The first thing that struck me about Angular JS Directives was the writing.
-I’ve read a lot of extremely dry technical books which were hard to get
-through, and I’m happy to say that this is &lt;em&gt;not&lt;/em&gt; one of them.  I found the
-writing both engaging and amusing.  There are a few times where the author
-even pokes fun at himself for repeating the same points, which was wonderful
-to see.  The examples were clear to read, and ably demonstrated the points
-that the accompanying text was making.  The overall flow of the book mostly
-made sense, with simpler concepts leading to more complicated concepts.  My
-only suggestion is that the chapter on Testing could have been introduced
-sooner, and then used in the rest of the examples to prove things were working
-the way that the author claimed.&lt;/p&gt;
-&lt;p&gt;I don’t like to only say positive things about something I’m reviewing, both
-because I believe that there’s always something that could be done better, and
-because I don’t want to look like a corporate shill.  At least not for $17.
-;)  So, on to the bad things I’ve run into.  It took me a lot longer to read
-than I would have hoped.  This was partially because of a bunch of work stuff
-taking up all my spare time, but also because after every few pages I wanted
-to go back and re-write large parts of the projects I’ve done.  :)  My other
-concern is that $17 for 87 pages of content might not not be worth it to you.
-I found the content very useful, and I’ve certainly gotten $17 worth of
-knowledge out of it, but at my previous job, where I didn’t use any JavaScript
-much less Angular, it wouldn’t have been money well spent.&lt;/p&gt;
-&lt;p&gt;Having said all that, after the fourth chapter, I re-wrote the Fezish Filter
-as a Directive, and the code became far cleaner.  And now that I’m done
-reading the ninth chapter, I think I might spend the rest of this weekend
-adding some unit and end-to-end tests.  So in the end, would I recommend &lt;a href="http://bit.ly/13VlkXc"&gt;this
-book&lt;/a&gt;? Yes.  Yes I would.&lt;/p&gt;
-&lt;p&gt;(Monday October 14th edit: I’ve also just been informed that Packt is running a
-&lt;a href="http://bit.ly/1bqvB29"&gt;Columbus Day sale&lt;/a&gt;, and if you use the discount code
-"&lt;strong&gt;COL50&lt;/strong&gt;" in the next four days, you’ll get 50% off this, and any other eBook
-or video, so if you’re thinking of buying it, today would be a great day to do
-so!)&lt;/p&gt;&lt;/div&gt;</description><guid>https://bwinton.github.io/weblog.latte.ca/blake/tech/angularjsdirectives.html</guid><pubDate>Sat, 12 Oct 2013 21:07:52 GMT</pubDate></item></channel></rss>
+&lt;/p&gt;&lt;p&gt;&lt;a href="https://bwinton.github.io/weblog.latte.ca/blake/tech/firefox/heatmap1.html"&gt;Read more…&lt;/a&gt; (4 min remaining to read)&lt;/p&gt;&lt;/div&gt;</description><category>heatmap</category><category>mozilla</category><category>tributary</category><guid>https://bwinton.github.io/weblog.latte.ca/blake/tech/firefox/heatmap1.html</guid><pubDate>Mon, 07 Jul 2014 15:53:31 GMT</pubDate></item></channel></rss>
