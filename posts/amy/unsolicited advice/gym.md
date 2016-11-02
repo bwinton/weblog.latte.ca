@@ -86,5 +86,3 @@ So in conclusion, this is how I work out every day:
 - &hellip; but don't stress if life gets in the way occasionally
 
 Of course, this is not medical advice. It's just my experience and lessons I've learned along the way. I hope it's helpful for you. Exercise is definitely worth it.
-
-- 
