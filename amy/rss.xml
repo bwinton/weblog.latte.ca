@@ -1,5 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
-<?xml-stylesheet type="text/xsl" href="../assets/xml/rss.xsl" media="all"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Blog-O!</title><link>https://bwinton.github.io/weblog.latte.ca/</link><description></description><atom:link href="https://bwinton.github.io/weblog.latte.ca/amy/rss.xml" type="application/rss+xml" rel="self"></atom:link><language>en</language><lastBuildDate>Sun, 30 Oct 2016 01:56:47 GMT</lastBuildDate><generator>https://getnikola.com/</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Forty-One: An Appraisal</title><link>https://bwinton.github.io/weblog.latte.ca/amy/everythingelse/birthday41.html</link><dc:creator>Amy Brown</dc:creator><description>&lt;div&gt;&lt;p&gt;This Monday I turned 41 years old. It came as a bit of a surprise. All my life I've felt a particular age, usually not my actual age,  and it's always been younger, as if I got 
+<?xml-stylesheet type="text/xsl" href="../assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:dc="http://purl.org/dc/elements/1.1/"><channel><title>Blog-O!</title><link>https://bwinton.github.io/weblog.latte.ca/</link><description></description><atom:link type="application/rss+xml" href="https://bwinton.github.io/weblog.latte.ca/amy/rss.xml" rel="self"></atom:link><language>en</language><lastBuildDate>Wed, 02 Nov 2016 16:43:01 GMT</lastBuildDate><generator>https://getnikola.com/</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>How to Go to the Gym Every Day (Kind Of)</title><link>https://bwinton.github.io/weblog.latte.ca/amy/unsolicited%20advice/gym.html</link><dc:creator>Amy Brown</dc:creator><description>&lt;div&gt;&lt;p&gt;I work out every day. Hah, no I don't. I do work out most days, though.  I didn't used to be a workout-every-day person. I got to this point through years of incremental changes and adjustments in my habits and attitudes. &lt;/p&gt;
+&lt;p&gt;People are impressed that I work out. They say, "I'm so impressed that you work out so often!" They say, "That's great, that you go to the gym every day!" It's one of the few things that I get randomly acclaimed for. (Of course, that says less about the magnitude of the accomplishment and more about what we value as a society.)&lt;/p&gt;
+&lt;p&gt;But valued or not, exercise is profoundly important. If there is such a thing as a panacea, it's not aspirin or vitamin D or fish oil, it's exercise. It's good for your body, it's good for your brain, and it's good for your mood. Apart from the actual doing of it, there is no downside to exercise.&lt;/p&gt;
+&lt;p&gt;That's the trick, though, isn't it? The actual doing. The taking time out of your day, the sweating, the special clothes. It's a bit of a drag.&lt;/p&gt;
+&lt;p&gt;If you want to enjoy the benefits of exercise, you need to minimize the drag. This is how I manage it.&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://bwinton.github.io/weblog.latte.ca/amy/unsolicited%20advice/gym.html"&gt;Read more…&lt;/a&gt; (4 min remaining to read)&lt;/p&gt;&lt;/div&gt;</description><guid>https://bwinton.github.io/weblog.latte.ca/amy/unsolicited%20advice/gym.html</guid><pubDate>Wed, 02 Nov 2016 13:28:18 GMT</pubDate></item><item><title>Forty-One: An Appraisal</title><link>https://bwinton.github.io/weblog.latte.ca/amy/everythingelse/birthday41.html</link><dc:creator>Amy Brown</dc:creator><description>&lt;div&gt;&lt;p&gt;This Monday I turned 41 years old. It came as a bit of a surprise. All my life I've felt a particular age, usually not my actual age,  and it's always been younger, as if I got 
 stuck. For example, I felt 34 for at least three years after I stopped being 34, and I think the one before that was 27. 
 This is the first time I've gotten ahead of myself: I feel like I'm about 44, and I keep being surprised that I'm only 41. &lt;/p&gt;
 &lt;p&gt;It has been a rocky year. My last birthday was marked by picking up my family from the airport in Saskatoon, and picking up my mother's ashes from the crematorium on the way out of town. Then we stopped for burgers at A&amp;amp;W. &lt;/p&gt;
@@ -223,70 +228,4 @@ open but empty, like the eyes of an Egyptian statue. He was still beautiful.&lt;
 &lt;p&gt;The vet let me have another moment alone with him; I kissed him on the head and
 told him again that I loved him, then started to go out the door. I was about
 to close it behind me but changed my mind and went back in for one more stroke,
-one more kiss, one more look at my beautiful grey boy.&lt;/p&gt;&lt;/div&gt;</description><guid>https://bwinton.github.io/weblog.latte.ca/amy/everythingelse/thomas_fin.html</guid><pubDate>Mon, 18 Nov 2013 03:28:10 GMT</pubDate></item><item><title>Two Things About Time</title><link>https://bwinton.github.io/weblog.latte.ca/amy/time/makingtime.html</link><dc:creator>Amy Brown</dc:creator><description>&lt;div&gt;&lt;p&gt;I've finally admitted that most of my non-kid-related posts to this blog are
-about my struggle to use my time wisely, so I created a "time" category.
-However, I'm not going to move all my old "time" blog posts into it. I just
-don't have the time.&lt;/p&gt;
-&lt;p&gt;However, this post is a pleasant change from my usual moaning about not having
-enough time. I have actually learned two things about
-time.&lt;/p&gt;
-&lt;h4&gt;Slack&lt;/h4&gt;
-&lt;p&gt;A few years ago I read a review of Tom DeMarco's &lt;a href="https://www.goodreads.com/book/show/123715.Slack"&gt;Slack&lt;/a&gt;. I'm not sure
-what the book is actually about (and I don't want to look it up right now lest
-I lose track of my thought) but what I took away from the review is that piling
-your employees with the absolute maximum amount of work they can handle is not
-effective.  People and systems need enough available slack to deal with crises
-as they arise. (Also people, especially people doing creative work, do some of
-their best work when they have a chance to be idle, to chat with coworkers, to
-just think. I'm pretty sure that I learned that since, though.)&lt;/p&gt;
-&lt;p&gt;At the time I thought the slack theory sounded very credible, mostly because it
-validated my own work-related misery and exhaustion at the time. (In retrospect
-that's laughable; I hadn't had kids yet and had &lt;em&gt;no idea&lt;/em&gt; what being too busy
-meant; I was miserable and exhausted at work for other reasons.) But it wasn't
-until a couple of weeks ago that it occurred to me that the principal of
-incorporating slack applies to individuals as much as it does to companies.
-When your everyday life is crammed to the brim, you have no recourse when a
-family member gets sick, a neighbour adopts a baby or a friend loses a parent;
-you have to either abandon something important or let someone down.&lt;/p&gt;
-&lt;p&gt;At the moment my schedule is crammed full; between household maintenance and
-childcare and child management and choir and school choir and friends and
-working out and, of course, work, I have no slack. And there's 
-nothing I want to give up. &lt;/p&gt;
-&lt;p&gt;However, I'm trying to let things fall away and not replace them. I have stuck
-to my resolution to not take up the eco-committee chair position at school; I
-have stubbornly refused to take on any other major school volunteer jobs;
-I have even declined to arrange social events.&lt;/p&gt;
-&lt;p&gt;My plan, and I think it's rather clever, is to fill my slack time with a
-space-holder hobby:
-something worth doing but which I don't mind setting aside if I'm needed
-for something more important. I have a needlework project which my father
-started as he was beginning to sink into dementia; he abandoned it 
-when he was moved into the nursing home, and I brought it home
-with this summer. I want to finish it but I don't mind
-how long it takes. That will be my time-space-holder. Just as soon as I find
-some time to hold.&lt;/p&gt;
-&lt;hr width="40%"&gt;&lt;h4&gt;Time Panic&lt;/h4&gt;
-&lt;p&gt;In the October 5 issue of New Scientist Debora MacKenzie reviews three books
-about pursuing happiness. Part of her review is about how scarcity inspires
-obsession:&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;...the brain focuses ferociously on what it feels is lacking. This reflex
-evolved to help us find what we need. The team's real insight is that it
-applies to all scarcities, not just of money, but of time and even social
-contact. We "tunnel" in on the scarcity and ignore anything outside.&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;All that scarcity messes with how we manage the resource in question. &lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;The future looks less menacing than the scarcity we
-face now. So we borrow money, then borrow more, disregarding future costs as
-interest mounts, until we are deeply in debt.&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;This is exactly what I do when I feel overwhelmed with things to do. Instead of
-taking the time to figure out how to best spend my time, I panic and
-either avoid everything or just do the first thing I put my hands on, which is
-sometimes helpful, and often not. At the end of the day I'm exhausted,
-anxious, and no further ahead.&lt;/p&gt;
-&lt;p&gt;Uuh, I'm not sure what the takeaway is from this particular clue, apart from
-that I need to notice when I'm flailing and take a deep breath. It might seem
-like I don't have time to take a deep breath, but really I don't have time not
-to.&lt;/p&gt;&lt;/div&gt;</description><guid>https://bwinton.github.io/weblog.latte.ca/amy/time/makingtime.html</guid><pubDate>Wed, 16 Oct 2013 02:47:19 GMT</pubDate></item></channel></rss>
+one more kiss, one more look at my beautiful grey boy.&lt;/p&gt;&lt;/div&gt;</description><guid>https://bwinton.github.io/weblog.latte.ca/amy/everythingelse/thomas_fin.html</guid><pubDate>Mon, 18 Nov 2013 03:28:10 GMT</pubDate></item></channel></rss>
