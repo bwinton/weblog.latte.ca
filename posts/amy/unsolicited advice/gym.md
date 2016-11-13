@@ -1,5 +1,5 @@
 <!--
-.. title: How to Go to the Gym Every Day (Kind Of)
+.. title: How to Work Out Every Day (Kind Of)
 .. date: 2016-11-02 09:28:18
 .. author: Amy Brown
 -->
