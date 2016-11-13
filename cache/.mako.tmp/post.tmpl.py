@@ -5,7 +5,7 @@ STOP_RENDERING = runtime.STOP_RENDERING
 __M_dict_builtin = dict
 __M_locals_builtin = locals
 _magic_number = 10
-_modified_time = 1479051155.020078
+_modified_time = 1479051342.2204692
 _enable_loop = True
 _template_filename = 'themes/latte/templates/post.tmpl'
 _template_uri = 'post.tmpl'
@@ -20,11 +20,11 @@ def _mako_get_namespace(context, name):
         _mako_generate_namespaces(context)
         return context.namespaces[(__name__, name)]
 def _mako_generate_namespaces(context):
-    ns = runtime.TemplateNamespace('comments', context._clean_inheritance_tokens(), templateuri='comments_helper.tmpl', callables=None,  calling_uri=_template_uri)
-    context.namespaces[(__name__, 'comments')] = ns
-
     ns = runtime.TemplateNamespace('helper', context._clean_inheritance_tokens(), templateuri='post_helper.tmpl', callables=None,  calling_uri=_template_uri)
     context.namespaces[(__name__, 'helper')] = ns
+
+    ns = runtime.TemplateNamespace('comments', context._clean_inheritance_tokens(), templateuri='comments_helper.tmpl', callables=None,  calling_uri=_template_uri)
+    context.namespaces[(__name__, 'comments')] = ns
 
     ns = runtime.TemplateNamespace('pheader', context._clean_inheritance_tokens(), templateuri='post_header.tmpl', callables=None,  calling_uri=_template_uri)
     context.namespaces[(__name__, 'pheader')] = ns
@@ -36,18 +36,18 @@ def render_body(context,**pageargs):
     __M_caller = context.caller_stack._push_frame()
     try:
         __M_locals = __M_dict_builtin(pageargs=pageargs)
-        pheader = _mako_get_namespace(context, 'pheader')
+        show_sourcelink = context.get('show_sourcelink', UNDEFINED)
+        helper = _mako_get_namespace(context, 'helper')
+        parent = context.get('parent', UNDEFINED)
         site_has_comments = context.get('site_has_comments', UNDEFINED)
         messages = context.get('messages', UNDEFINED)
-        parent = context.get('parent', UNDEFINED)
-        show_sourcelink = context.get('show_sourcelink', UNDEFINED)
-        comments = _mako_get_namespace(context, 'comments')
-        def content():
-            return render_content(context._locals(__M_locals))
-        post = context.get('post', UNDEFINED)
-        helper = _mako_get_namespace(context, 'helper')
         def extra_head():
             return render_extra_head(context._locals(__M_locals))
+        pheader = _mako_get_namespace(context, 'pheader')
+        post = context.get('post', UNDEFINED)
+        def content():
+            return render_content(context._locals(__M_locals))
+        comments = _mako_get_namespace(context, 'comments')
         def sourcelink():
             return render_sourcelink(context._locals(__M_locals))
         __M_writer = context.writer()
@@ -78,10 +78,10 @@ def render_body(context,**pageargs):
 def render_extra_head(context,**pageargs):
     __M_caller = context.caller_stack._push_frame()
     try:
-        parent = context.get('parent', UNDEFINED)
         def extra_head():
             return render_extra_head(context)
         helper = _mako_get_namespace(context, 'helper')
+        parent = context.get('parent', UNDEFINED)
         post = context.get('post', UNDEFINED)
         __M_writer = context.writer()
         __M_writer('\n    ')
@@ -125,14 +125,14 @@ def render_extra_head(context,**pageargs):
 def render_content(context,**pageargs):
     __M_caller = context.caller_stack._push_frame()
     try:
-        site_has_comments = context.get('site_has_comments', UNDEFINED)
-        messages = context.get('messages', UNDEFINED)
-        pheader = _mako_get_namespace(context, 'pheader')
         helper = _mako_get_namespace(context, 'helper')
-        comments = _mako_get_namespace(context, 'comments')
+        pheader = _mako_get_namespace(context, 'pheader')
         def content():
             return render_content(context)
         post = context.get('post', UNDEFINED)
+        comments = _mako_get_namespace(context, 'comments')
+        site_has_comments = context.get('site_has_comments', UNDEFINED)
+        messages = context.get('messages', UNDEFINED)
         __M_writer = context.writer()
         __M_writer('\n<article class="post-')
         __M_writer(str(post.meta('type')))
@@ -164,11 +164,11 @@ def render_content(context,**pageargs):
 def render_sourcelink(context,**pageargs):
     __M_caller = context.caller_stack._push_frame()
     try:
-        show_sourcelink = context.get('show_sourcelink', UNDEFINED)
         messages = context.get('messages', UNDEFINED)
-        post = context.get('post', UNDEFINED)
         def sourcelink():
             return render_sourcelink(context)
+        post = context.get('post', UNDEFINED)
+        show_sourcelink = context.get('show_sourcelink', UNDEFINED)
         __M_writer = context.writer()
         __M_writer('\n')
         if show_sourcelink:
@@ -184,6 +184,6 @@ def render_sourcelink(context,**pageargs):
 
 """
 __M_BEGIN_METADATA
-{"source_encoding": "utf-8", "uri": "post.tmpl", "filename": "themes/latte/templates/post.tmpl", "line_map": {"137": 27, "138": 28, "139": 28, "140": 29, "141": 29, "142": 31, "143": 31, "144": 35, "145": 35, "146": 36, "147": 36, "148": 39, "149": 40, "150": 41, "23": 4, "152": 42, "153": 42, "26": 2, "155": 45, "156": 45, "29": 3, "158": 47, "35": 0, "164": 50, "154": 45, "173": 50, "174": 51, "157": 47, "176": 53, "177": 53, "178": 53, "179": 53, "54": 2, "55": 3, "56": 4, "57": 5, "151": 41, "62": 25, "175": 52, "67": 48, "185": 179, "72": 56, "78": 7, "87": 7, "88": 8, "89": 8, "90": 9, "91": 10, "92": 10, "93": 10, "94": 12, "95": 13, "96": 13, "97": 13, "98": 15, "99": 15, "100": 15, "101": 16, "102": 17, "103": 17, "104": 17, "105": 17, "106": 17, "107": 19, "108": 20, "109": 20, "110": 20, "111": 20, "112": 20, "113": 22, "114": 22, "115": 22, "116": 23, "117": 23, "118": 24, "119": 24, "125": 27}}
+{"line_map": {"137": 27, "138": 28, "139": 28, "140": 29, "141": 29, "142": 31, "143": 31, "144": 35, "145": 35, "146": 36, "147": 36, "148": 39, "149": 40, "150": 41, "23": 2, "152": 42, "153": 42, "26": 4, "155": 45, "156": 45, "29": 3, "158": 47, "35": 0, "164": 50, "154": 45, "173": 50, "174": 51, "157": 47, "176": 53, "177": 53, "178": 53, "179": 53, "54": 2, "55": 3, "56": 4, "57": 5, "151": 41, "62": 25, "175": 52, "67": 48, "185": 179, "72": 56, "78": 7, "87": 7, "88": 8, "89": 8, "90": 9, "91": 10, "92": 10, "93": 10, "94": 12, "95": 13, "96": 13, "97": 13, "98": 15, "99": 15, "100": 15, "101": 16, "102": 17, "103": 17, "104": 17, "105": 17, "106": 17, "107": 19, "108": 20, "109": 20, "110": 20, "111": 20, "112": 20, "113": 22, "114": 22, "115": 22, "116": 23, "117": 23, "118": 24, "119": 24, "125": 27}, "uri": "post.tmpl", "filename": "themes/latte/templates/post.tmpl", "source_encoding": "utf-8"}
 __M_END_METADATA
 """
