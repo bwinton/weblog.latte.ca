@@ -8,6 +8,8 @@ In December 2015, I stopped reading Twitter. It was the school Christmas break, 
 
 Then I just... didn't get back on again. 
 
+<!-- TEASER_END -->
+
 When I stopped using Twitter my mother was five months dead. I was freshly grieving, feeling the weight of being her executor (and the stress of a flood in her unsold house, thousands of kilometers away). I was sad, anxious, and raw.
 
 Twitter was also sad and anxious and raw. Twitter always is. Every grievance, every injustice, every hurt is posted there. A boy is shot by police, a coffee is made incorrectly, a woman is abused at work, a new dress rips, children are kidnapped by religious militants, it rains on someone's birthday. 
