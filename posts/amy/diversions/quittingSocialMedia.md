@@ -1,4 +1,8 @@
-# I Gave Up Social Media
+<!--
+.. title: I Gave Up Social Media
+.. date: 2016-11-13 10:28:18
+.. author: Amy Brown
+-->
 
 In December 2015, I stopped reading Twitter. It was the school Christmas break, the girls were home and I wasn't working so I wasn't on my computer much, and I was too busy to read Twitter on my phone.
 
