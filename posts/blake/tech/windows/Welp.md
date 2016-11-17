@@ -7,6 +7,8 @@
 
 As I mentioned in a [previous post][disappointment], I wasn’t really excited by the new MacBooks that were announced this year.  And the more I read the less compelling they seemed…  As I talked with my co-workers, I heard some really good reviews of a couple of models of Windows computers, and since 90% of Firefox’s users are using Windows it’s probably not such a bad idea if I use it, too, both to help me understand the problems they’re running into, and to make sure that the code I’m writing will work for them.
 
+<!-- TEASER_END -->
+
 So on Friday I bit the bullet and ordered a Dell [XPS 15][dell] (with Touch screen, 32Gb RAM, and a 1Tb SSD) for my latest laptop refresh.  I _think_ that the recent updates to the [Windows Subsystem for Linux][windows] will let me do all the same Unix-y stuff I’ve been doing on the Mac, and if I use the same keyboard and trackpad, I’m not sure I’ll notice much of a difference, to be honest.
 
 ![Dude.  I’m getting a Dell.](/images/blake/Dell.jpg)
