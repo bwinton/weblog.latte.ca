@@ -5,12 +5,12 @@ STOP_RENDERING = runtime.STOP_RENDERING
 __M_dict_builtin = dict
 __M_locals_builtin = locals
 _magic_number = 10
-_modified_time = 1479403432.9861379
+_modified_time = 1480358805.222274
 _enable_loop = True
 _template_filename = 'themes/latte/templates/post_header.tmpl'
 _template_uri = 'post_header.tmpl'
 _source_encoding = 'utf-8'
-_exports = ['html_sourcelink', 'html_translations', 'html_post_header', 'html_title']
+_exports = ['html_sourcelink', 'html_title', 'html_translations', 'html_post_header']
 
 
 def _mako_get_namespace(context, name):
@@ -20,11 +20,11 @@ def _mako_get_namespace(context, name):
         _mako_generate_namespaces(context)
         return context.namespaces[(__name__, name)]
 def _mako_generate_namespaces(context):
-    ns = runtime.TemplateNamespace('helper', context._clean_inheritance_tokens(), templateuri='post_helper.tmpl', callables=None,  calling_uri=_template_uri)
-    context.namespaces[(__name__, 'helper')] = ns
-
     ns = runtime.TemplateNamespace('comments', context._clean_inheritance_tokens(), templateuri='comments_helper.tmpl', callables=None,  calling_uri=_template_uri)
     context.namespaces[(__name__, 'comments')] = ns
+
+    ns = runtime.TemplateNamespace('helper', context._clean_inheritance_tokens(), templateuri='post_helper.tmpl', callables=None,  calling_uri=_template_uri)
+    context.namespaces[(__name__, 'helper')] = ns
 
 def render_body(context,**pageargs):
     __M_caller = context.caller_stack._push_frame()
@@ -45,8 +45,8 @@ def render_body(context,**pageargs):
 def render_html_sourcelink(context):
     __M_caller = context.caller_stack._push_frame()
     try:
-        post = context.get('post', UNDEFINED)
         messages = context.get('messages', UNDEFINED)
+        post = context.get('post', UNDEFINED)
         show_sourcelink = context.get('show_sourcelink', UNDEFINED)
         __M_writer = context.writer()
         __M_writer('\n')
@@ -61,13 +61,31 @@ def render_html_sourcelink(context):
         context.caller_stack._pop_frame()
 
 
+def render_html_title(context):
+    __M_caller = context.caller_stack._push_frame()
+    try:
+        title = context.get('title', UNDEFINED)
+        post = context.get('post', UNDEFINED)
+        __M_writer = context.writer()
+        __M_writer('\n')
+        if title and not post.meta('hidetitle'):
+            __M_writer('    <h1 class="p-name entry-title" itemprop="headline name"><a href="')
+            __M_writer(str(post.permalink()))
+            __M_writer('" class="u-url">')
+            __M_writer(filters.html_escape(str(title)))
+            __M_writer('</a></h1>\n')
+        return ''
+    finally:
+        context.caller_stack._pop_frame()
+
+
 def render_html_translations(context,post):
     __M_caller = context.caller_stack._push_frame()
     try:
         len = context.get('len', UNDEFINED)
+        translations = context.get('translations', UNDEFINED)
         messages = context.get('messages', UNDEFINED)
         lang = context.get('lang', UNDEFINED)
-        translations = context.get('translations', UNDEFINED)
         __M_writer = context.writer()
         __M_writer('\n')
         if len(translations) > 1:
@@ -92,15 +110,15 @@ def render_html_translations(context,post):
 def render_html_post_header(context):
     __M_caller = context.caller_stack._push_frame()
     try:
+        post = context.get('post', UNDEFINED)
         site_has_comments = context.get('site_has_comments', UNDEFINED)
-        comments = _mako_get_namespace(context, 'comments')
-        def html_title():
-            return render_html_title(context)
-        messages = context.get('messages', UNDEFINED)
-        date_format = context.get('date_format', UNDEFINED)
         def html_translations(post):
             return render_html_translations(context,post)
-        post = context.get('post', UNDEFINED)
+        def html_title():
+            return render_html_title(context)
+        date_format = context.get('date_format', UNDEFINED)
+        comments = _mako_get_namespace(context, 'comments')
+        messages = context.get('messages', UNDEFINED)
         def html_sourcelink():
             return render_html_sourcelink(context)
         __M_writer = context.writer()
@@ -142,26 +160,8 @@ def render_html_post_header(context):
         context.caller_stack._pop_frame()
 
 
-def render_html_title(context):
-    __M_caller = context.caller_stack._push_frame()
-    try:
-        title = context.get('title', UNDEFINED)
-        post = context.get('post', UNDEFINED)
-        __M_writer = context.writer()
-        __M_writer('\n')
-        if title and not post.meta('hidetitle'):
-            __M_writer('    <h1 class="p-name entry-title" itemprop="headline name"><a href="')
-            __M_writer(str(post.permalink()))
-            __M_writer('" class="u-url">')
-            __M_writer(filters.html_escape(str(title)))
-            __M_writer('</a></h1>\n')
-        return ''
-    finally:
-        context.caller_stack._pop_frame()
-
-
 """
 __M_BEGIN_METADATA
-{"filename": "themes/latte/templates/post_header.tmpl", "uri": "post_header.tmpl", "source_encoding": "utf-8", "line_map": {"128": 41, "129": 41, "130": 41, "131": 41, "132": 41, "133": 43, "134": 44, "135": 44, "136": 44, "137": 46, "138": 47, "139": 47, "145": 5, "154": 7, "23": 2, "152": 6, "153": 7, "26": 3, "155": 7, "156": 7, "29": 0, "34": 2, "35": 3, "36": 9, "37": 22, "38": 28, "39": 49, "45": 24, "157": 7, "163": 157, "52": 24, "53": 25, "54": 26, "55": 26, "56": 26, "57": 26, "58": 26, "151": 5, "64": 11, "72": 11, "73": 12, "74": 13, "75": 14, "76": 14, "77": 15, "78": 16, "79": 17, "80": 17, "81": 17, "82": 17, "83": 17, "84": 17, "85": 17, "86": 20, "92": 30, "107": 30, "108": 32, "109": 32, "110": 34, "111": 34, "112": 35, "113": 35, "114": 35, "115": 35, "116": 35, "117": 35, "118": 35, "119": 35, "120": 36, "121": 37, "122": 37, "123": 37, "124": 39, "125": 39, "126": 39, "127": 40}}
+{"uri": "post_header.tmpl", "filename": "themes/latte/templates/post_header.tmpl", "source_encoding": "utf-8", "line_map": {"128": 34, "129": 34, "130": 35, "131": 35, "132": 35, "133": 35, "134": 35, "135": 35, "136": 35, "137": 35, "138": 36, "139": 37, "140": 37, "141": 37, "142": 39, "143": 39, "144": 39, "145": 40, "146": 41, "147": 41, "148": 41, "149": 41, "150": 41, "23": 3, "152": 44, "153": 44, "26": 2, "155": 46, "156": 47, "29": 0, "34": 2, "35": 3, "36": 9, "37": 22, "38": 28, "39": 49, "45": 24, "157": 47, "52": 24, "53": 25, "54": 26, "55": 26, "56": 26, "57": 26, "58": 26, "151": 43, "64": 5, "70": 5, "71": 6, "72": 7, "73": 7, "74": 7, "75": 7, "76": 7, "82": 11, "163": 157, "90": 11, "91": 12, "92": 13, "93": 14, "94": 14, "95": 15, "96": 16, "97": 17, "98": 17, "99": 17, "100": 17, "101": 17, "102": 17, "103": 17, "104": 20, "110": 30, "154": 44, "125": 30, "126": 32, "127": 32}}
 __M_END_METADATA
 """
