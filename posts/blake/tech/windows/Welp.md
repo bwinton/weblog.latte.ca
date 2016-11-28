@@ -59,7 +59,7 @@ And things I just don’t know about:
 * [iTunes][itunes]<br>
     I don’t think [WinAmp][winamp] or iTunes for Windows are really what I’m looking for here.  I might switch to a combination of [Spotify][spotify] and my iPhone. 
 * [Anvil][anvil]<br>
-    Do I still need to run folders as websites?  Maybe not so much these days, since I’m using [webpack][webpack]a lot more, and it comes with a dev server. 
+    Do I still need to run folders as websites?  Maybe not so much these days, since I’m using [webpack][webpack] a lot more, and it comes with a dev server. 
 * [Quicksilver][quicksilver]<br>
     I think I could probably use the Cortana search menu for most of what I use Quicksilver for…
 * [aText][atext]<br>
