@@ -5,7 +5,7 @@ STOP_RENDERING = runtime.STOP_RENDERING
 __M_dict_builtin = dict
 __M_locals_builtin = locals
 _magic_number = 10
-_modified_time = 1480801443.1335566
+_modified_time = 1480801792.7672539
 _enable_loop = True
 _template_filename = '/home/travis/virtualenv/python3.4.2/lib/python3.4/site-packages/nikola/data/themes/bootstrap3/templates/authors.tmpl'
 _template_uri = 'authors.tmpl'
@@ -28,9 +28,9 @@ def render_body(context,**pageargs):
     __M_caller = context.caller_stack._push_frame()
     try:
         __M_locals = __M_dict_builtin(pageargs=pageargs)
-        messages = context.get('messages', UNDEFINED)
         hidden_authors = context.get('hidden_authors', UNDEFINED)
         items = context.get('items', UNDEFINED)
+        messages = context.get('messages', UNDEFINED)
         def content():
             return render_content(context._locals(__M_locals))
         __M_writer = context.writer()
@@ -48,9 +48,9 @@ def render_body(context,**pageargs):
 def render_content(context,**pageargs):
     __M_caller = context.caller_stack._push_frame()
     try:
-        messages = context.get('messages', UNDEFINED)
         hidden_authors = context.get('hidden_authors', UNDEFINED)
         items = context.get('items', UNDEFINED)
+        messages = context.get('messages', UNDEFINED)
         def content():
             return render_content(context)
         __M_writer = context.writer()
@@ -76,6 +76,6 @@ def render_content(context,**pageargs):
 
 """
 __M_BEGIN_METADATA
-{"source_encoding": "utf-8", "filename": "/home/travis/virtualenv/python3.4.2/lib/python3.4/site-packages/nikola/data/themes/bootstrap3/templates/authors.tmpl", "line_map": {"64": 10, "65": 11, "66": 12, "27": 0, "68": 12, "37": 2, "70": 12, "71": 15, "42": 17, "77": 71, "48": 4, "67": 12, "69": 12, "57": 4, "58": 5, "59": 6, "60": 6, "61": 6, "62": 8, "63": 9}, "uri": "authors.tmpl"}
+{"line_map": {"64": 10, "65": 11, "66": 12, "27": 0, "68": 12, "37": 2, "70": 12, "71": 15, "42": 17, "77": 71, "48": 4, "67": 12, "69": 12, "57": 4, "58": 5, "59": 6, "60": 6, "61": 6, "62": 8, "63": 9}, "filename": "/home/travis/virtualenv/python3.4.2/lib/python3.4/site-packages/nikola/data/themes/bootstrap3/templates/authors.tmpl", "source_encoding": "utf-8", "uri": "authors.tmpl"}
 __M_END_METADATA
 """
