@@ -12,6 +12,7 @@ to have a summary post, with links to all the other ones.
 
 Post 0 (The one that kinda kicked it all off): [My problems with the new MacBooks.](https://weblog.latte.ca/blake/tech/mac/disappointment.html)<br>
 Post 1: [Welp, I did it.](https://weblog.latte.ca/blake/tech/windows/Welp.html)<br>
-Post 2: [It’s here!](https://weblog.latte.ca/blake/tech/windows/weekone.html)
+Post 2: [It’s here!](https://weblog.latte.ca/blake/tech/windows/weekone.html)<br>
+Post 3: [A few weeks in…](https://weblog.latte.ca/blake/tech/windows/monthone.html)
 
 And thatʼs all for now.  Iʼll keep this list updated as I add more posts.
