@@ -5,7 +5,7 @@ STOP_RENDERING = runtime.STOP_RENDERING
 __M_dict_builtin = dict
 __M_locals_builtin = locals
 _magic_number = 10
-_modified_time = 1480801792.5635333
+_modified_time = 1482106354.5471761
 _enable_loop = True
 _template_filename = '/home/travis/virtualenv/python3.4.2/lib/python3.4/site-packages/nikola/data/themes/base/templates/sectionindex.tmpl'
 _template_uri = 'sectionindex.tmpl'
@@ -28,16 +28,16 @@ def render_body(context,**pageargs):
     __M_caller = context.caller_stack._push_frame()
     try:
         __M_locals = __M_dict_builtin(pageargs=pageargs)
-        posts = context.get('posts', UNDEFINED)
+        title = context.get('title', UNDEFINED)
+        generate_atom = context.get('generate_atom', UNDEFINED)
         def extra_head():
             return render_extra_head(context._locals(__M_locals))
-        parent = context.get('parent', UNDEFINED)
         _link = context.get('_link', UNDEFINED)
-        generate_atom = context.get('generate_atom', UNDEFINED)
-        messages = context.get('messages', UNDEFINED)
-        title = context.get('title', UNDEFINED)
         def content():
             return render_content(context._locals(__M_locals))
+        posts = context.get('posts', UNDEFINED)
+        parent = context.get('parent', UNDEFINED)
+        messages = context.get('messages', UNDEFINED)
         __M_writer = context.writer()
         __M_writer('\n\n')
         if 'parent' not in context._data or not hasattr(context._data['parent'], 'extra_head'):
@@ -58,12 +58,12 @@ def render_body(context,**pageargs):
 def render_extra_head(context,**pageargs):
     __M_caller = context.caller_stack._push_frame()
     try:
-        generate_atom = context.get('generate_atom', UNDEFINED)
         def extra_head():
             return render_extra_head(context)
         _link = context.get('_link', UNDEFINED)
-        parent = context.get('parent', UNDEFINED)
         posts = context.get('posts', UNDEFINED)
+        parent = context.get('parent', UNDEFINED)
+        generate_atom = context.get('generate_atom', UNDEFINED)
         __M_writer = context.writer()
         __M_writer('\n    ')
         __M_writer(str(parent.extra_head()))
@@ -82,14 +82,14 @@ def render_extra_head(context,**pageargs):
 def render_content(context,**pageargs):
     __M_caller = context.caller_stack._push_frame()
     try:
+        title = context.get('title', UNDEFINED)
         generate_atom = context.get('generate_atom', UNDEFINED)
+        _link = context.get('_link', UNDEFINED)
         def content():
             return render_content(context)
-        parent = context.get('parent', UNDEFINED)
-        _link = context.get('_link', UNDEFINED)
-        messages = context.get('messages', UNDEFINED)
-        title = context.get('title', UNDEFINED)
         posts = context.get('posts', UNDEFINED)
+        parent = context.get('parent', UNDEFINED)
+        messages = context.get('messages', UNDEFINED)
         __M_writer = context.writer()
         __M_writer('\n<div class="sectionindex">\n    <header>\n        <h2><a href="')
         __M_writer(str(_link('section_index', posts[0].section_slug())))
@@ -112,6 +112,6 @@ def render_content(context,**pageargs):
 
 """
 __M_BEGIN_METADATA
-{"line_map": {"68": 4, "69": 5, "70": 5, "71": 6, "72": 7, "73": 7, "74": 7, "75": 7, "76": 7, "82": 11, "27": 0, "94": 11, "95": 14, "96": 14, "97": 14, "98": 14, "99": 15, "100": 16, "101": 16, "102": 16, "103": 16, "104": 16, "105": 18, "42": 2, "107": 19, "47": 9, "113": 107, "52": 21, "58": 4, "106": 19}, "filename": "/home/travis/virtualenv/python3.4.2/lib/python3.4/site-packages/nikola/data/themes/base/templates/sectionindex.tmpl", "source_encoding": "utf-8", "uri": "sectionindex.tmpl"}
+{"filename": "/home/travis/virtualenv/python3.4.2/lib/python3.4/site-packages/nikola/data/themes/base/templates/sectionindex.tmpl", "line_map": {"68": 4, "69": 5, "70": 5, "71": 6, "72": 7, "73": 7, "74": 7, "75": 7, "76": 7, "82": 11, "27": 0, "94": 11, "95": 14, "96": 14, "97": 14, "98": 14, "99": 15, "100": 16, "101": 16, "102": 16, "103": 16, "104": 16, "105": 18, "42": 2, "107": 19, "47": 9, "113": 107, "52": 21, "58": 4, "106": 19}, "source_encoding": "utf-8", "uri": "sectionindex.tmpl"}
 __M_END_METADATA
 """
