@@ -5,7 +5,7 @@ STOP_RENDERING = runtime.STOP_RENDERING
 __M_dict_builtin = dict
 __M_locals_builtin = locals
 _magic_number = 10
-_modified_time = 1482106354.2607188
+_modified_time = 1482537057.9130485
 _enable_loop = True
 _template_filename = 'themes/latte/templates/index.tmpl'
 _template_uri = 'index.tmpl'
@@ -20,11 +20,11 @@ def _mako_get_namespace(context, name):
         _mako_generate_namespaces(context)
         return context.namespaces[(__name__, name)]
 def _mako_generate_namespaces(context):
-    ns = runtime.TemplateNamespace('comments', context._clean_inheritance_tokens(), templateuri='comments_helper.tmpl', callables=None,  calling_uri=_template_uri)
-    context.namespaces[(__name__, 'comments')] = ns
-
     ns = runtime.TemplateNamespace('helper', context._clean_inheritance_tokens(), templateuri='index_helper.tmpl', callables=None,  calling_uri=_template_uri)
     context.namespaces[(__name__, 'helper')] = ns
+
+    ns = runtime.TemplateNamespace('comments', context._clean_inheritance_tokens(), templateuri='comments_helper.tmpl', callables=None,  calling_uri=_template_uri)
+    context.namespaces[(__name__, 'comments')] = ns
 
 def _mako_inherit(template, context):
     _mako_generate_namespaces(context)
@@ -35,8 +35,8 @@ def render_body(context,**pageargs):
         __M_locals = __M_dict_builtin(pageargs=pageargs)
         site_has_comments = context.get('site_has_comments', UNDEFINED)
         comments = _mako_get_namespace(context, 'comments')
-        date_format = context.get('date_format', UNDEFINED)
         helper = _mako_get_namespace(context, 'helper')
+        date_format = context.get('date_format', UNDEFINED)
         index_teasers = context.get('index_teasers', UNDEFINED)
         def content():
             return render_content(context._locals(__M_locals))
@@ -60,8 +60,8 @@ def render_content(context,**pageargs):
     try:
         site_has_comments = context.get('site_has_comments', UNDEFINED)
         comments = _mako_get_namespace(context, 'comments')
-        date_format = context.get('date_format', UNDEFINED)
         helper = _mako_get_namespace(context, 'helper')
+        date_format = context.get('date_format', UNDEFINED)
         index_teasers = context.get('index_teasers', UNDEFINED)
         def content():
             return render_content(context)
@@ -114,6 +114,6 @@ def render_content(context,**pageargs):
 
 """
 __M_BEGIN_METADATA
-{"filename": "themes/latte/templates/index.tmpl", "line_map": {"23": 3, "26": 2, "32": 0, "45": 2, "46": 3, "47": 4, "52": 34, "58": 6, "70": 6, "71": 8, "72": 9, "73": 9, "74": 9, "75": 11, "76": 11, "77": 11, "78": 11, "79": 13, "80": 13, "81": 14, "82": 14, "83": 14, "84": 14, "85": 14, "86": 14, "87": 14, "88": 14, "89": 15, "90": 16, "91": 16, "92": 16, "93": 18, "94": 20, "95": 21, "96": 22, "97": 22, "98": 23, "99": 24, "100": 25, "101": 25, "102": 27, "103": 30, "104": 31, "105": 31, "106": 32, "107": 32, "108": 33, "109": 33, "115": 109}, "source_encoding": "utf-8", "uri": "index.tmpl"}
+{"source_encoding": "utf-8", "filename": "themes/latte/templates/index.tmpl", "uri": "index.tmpl", "line_map": {"23": 2, "26": 3, "32": 0, "45": 2, "46": 3, "47": 4, "52": 34, "58": 6, "70": 6, "71": 8, "72": 9, "73": 9, "74": 9, "75": 11, "76": 11, "77": 11, "78": 11, "79": 13, "80": 13, "81": 14, "82": 14, "83": 14, "84": 14, "85": 14, "86": 14, "87": 14, "88": 14, "89": 15, "90": 16, "91": 16, "92": 16, "93": 18, "94": 20, "95": 21, "96": 22, "97": 22, "98": 23, "99": 24, "100": 25, "101": 25, "102": 27, "103": 30, "104": 31, "105": 31, "106": 32, "107": 32, "108": 33, "109": 33, "115": 109}}
 __M_END_METADATA
 """
