@@ -14,7 +14,7 @@ These are the challenges I set myself for 2016, and what I learned from them.
 
 <!-- TEASER_END -->
 
-#### January: A daily food journal
+### January: A daily food journal
 
 In 2015 I read *The Diet Fix* by Dr Yoni Freedhoff, and I was pursuaded that I could lose some weight if I put my mind to following his advice. One of the cornerstones of Dr Freedhoff's advice is to track (like, weigh, measure, and write down) everything you eat. I used the January challenge to do that.
 
@@ -22,13 +22,13 @@ The challenge went quite well; I succeeded for 25 days out of 31. However, the e
 
 Monthly challenges can be useful for figuring out what you *don't* want to do.
 
-#### February: Cut out sugar
+### February: Cut out sugar
 
 I know my body doesn't need sugar. I know eating sugar does all kinds of stupid things to my body.  I have tried to cut out sugar before and seldom made it for more than a day, let alone a month. But I tried it again in February (the shortest month).
 
 Something about this challenge worked for me &mdash; I was successful for 18 days out of 29.  (Maybe more; I forgot to log four days). I didn't feel terrifically better, though, so I was happy to put this habit behind me at the end of the month. (I do love sugar.) But I will definitely do this challenge again. Maybe next February!
 
-#### March: Write every day
+### March: Write every day
 
 Sometime in 2015 I decided to not beat myself up about not writing: it was something I thought I "should" do but never did, and that made me feel guilty and sad. It was good to lift that dead weight and allow myself to not write.
 
@@ -37,7 +37,7 @@ Then in 2016 I realized I *did* want to write &mdash; that writing is important 
 This challenge was moderately successful. 
 I succeeded on 18 days out of 31, which isn't stellar, but I learned a few things, like that it's easier to write when the children are at school. (I didn't write much on weekends or over March break.)
 
-#### April: Stay on top of housework
+### April: Stay on top of housework
 
 April's challenge was two-pronged: to fold and put away clean laundry every day, and to prep fruit and veg every week.
 
@@ -51,7 +51,7 @@ I bailed on this challenge around the 18th because I was very busy with work and
 
 The fruit and veg thing? I'm still working on that.
 
-#### May: Look after myself
+### May: Look after myself
 
 May's challenge was multifaceted, with a self-care focus: 
 
@@ -67,7 +67,7 @@ It was a weird and oversized challenge, but none of those things seemed big enou
 
 I ended up giving myself 15 checks out of the 27 days I kept track. (I don't know what happened to those other four days.) In retrospect this challenge had far too many moving parts, some of which were ill-defined (What is "minimal sugar"? What is "junk"?), and no particular plan for how to succeed. Good intentions, poor execution.
 
-#### June: No complaining
+### June: No complaining
 
 One of my aims for 2016 was to get a grip on the anxiety and unhappiness which troubled me in 2015. Part of that, for me, is not dwelling on unpleasant thoughts. Also, sometimes I find myself getting caught up in recreational complaining, but that's not the kind of person I want to be. 
 
@@ -78,7 +78,7 @@ We spent two weeks of June on holiday in England, which could have been a blessi
 As a result, I did well with this challenge; I certainly kept it in mind through the month. However, I didn't track it, so I don't have hard numbers.
 (One of the habits it has taken me almost a year to acquire is that of taking stock at the end of the day, and noting whether I met my challenge.)
 
-#### July: Write every day
+### July: Write every day
 
 Here we are again, writing every day. 
 One of the lessons I learned all-too-recently is that 
@@ -97,7 +97,7 @@ what sticks phase of my writing practice, so what the hell.
 
 And I met the challenge 24 days out of 31.
 
-#### August: Take care of my body
+### August: Take care of my body
 
 August's challenge was another multi-pronged one: fiber, fruit and veg, and no food after 8:00 pm. 
 
@@ -111,11 +111,11 @@ August is peak fruit month in Ontario
 (unless you love apples) so I wanted to take advantage of the 
 peaches, cherries, and other treats &mdash; as well as, you know, get nutrients and stuff. I set myself a goal of eating (don't laugh) four kinds of fruit or veg every day. My plan was to set out four fruits every morning so they would be easy to grab, to eat two fruits before lunchtime and one veg with lunch, and to write down all the fruit and veg I ate.
 
-And finally, I was having some acid reflux which is such a gross, old-person-sounding condition I'm not even going to talk about it, except to say that I find it helpful if I don't eat for three hours before bedtime. (It turns out everything I eat after 8:00 pm is unalloyed junk anyway, so this is a win all 'round.)
+And finally, I was having trouble with acid reflux, which is such a gross, old-person-sounding condition I'm not even going to talk about it, except to say that I find it helpful if I don't eat for three hours before bedtime. (It turns out everything I eat after 8:00 pm is unalloyed junk anyway, so this is a win all 'round.)
 
 Like all my multi-pronged challenges, this was hard to keep track of. Looking back I don't know how often I succeeded at which of these tasks.
 
-#### September: Manage my time
+### September: Manage my time
 
 September, the Other New Year, follows two months of unscheduled summer bliss. 
 When my kids are off school, I'm off work, 
@@ -127,7 +127,7 @@ I created a weekday routine which made time for going to the gym, writing, worki
 
 This was a successful challenge: I only missed two days, apart from an eight-day stretch where I didn't note whether I was successful or not. (!)
 
-#### October: 16:8 Intermittent Fasting
+### October: 16:8 Intermittent Fasting
 
 Ever since I read about [intermittent fasting \[paywall\]](https://www.newscientist.com/article/mg21628912-400-deprive-yourself-the-real-benefits-of-fasting/) in New Scientist in 2012 I've thought about giving it a try. 
 The variation called 16:8 intermittent fasting involves 
@@ -139,7 +139,7 @@ This challenge was an experiment: I wanted to see how fasting felt, whether it c
 
 I met this challenge 22 days out of 31. I realized pretty soon that it was no fun on the weekend, when the kids are home and we have pancakes and stuff, but it's pretty straightforward on weekdays. And lunch tastes really good when you've waited sixteen hours for it!
 
-#### November: Yes to gym, no to Starbucks
+### November: Yes to gym, no to Starbucks
 
 More healthy living in November, and another multi-faceted challenge: to go to the gym every day, 
 waking up early if necessary; to avoid going to Starbucks; and to try 5:2 intermittent fasting.
@@ -159,7 +159,7 @@ But the intermittent fasting was a disaster. I didn't make it past 2:00 pm on th
 
 A few days into the month I got sick with a rotten cold and a good dollop of anxiety, so I quit that part of the challenge &mdash; 5:2 intermittent fasting is not for me!
 
-#### December: Write every day
+### December: Write every day
 
 Another writing challenge! Like the other March and July writing challenges, this one is quite amorphous: I just want to write something, anything, every day. This blog post counts! 
 
