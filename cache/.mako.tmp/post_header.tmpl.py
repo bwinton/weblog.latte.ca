@@ -5,12 +5,12 @@ STOP_RENDERING = runtime.STOP_RENDERING
 __M_dict_builtin = dict
 __M_locals_builtin = locals
 _magic_number = 10
-_modified_time = 1482546476.7697499
+_modified_time = 1482550121.6483233
 _enable_loop = True
 _template_filename = 'themes/latte/templates/post_header.tmpl'
 _template_uri = 'post_header.tmpl'
 _source_encoding = 'utf-8'
-_exports = ['html_title', 'html_sourcelink', 'html_post_header', 'html_translations']
+_exports = ['html_title', 'html_post_header', 'html_translations', 'html_sourcelink']
 
 
 def _mako_get_namespace(context, name):
@@ -60,38 +60,19 @@ def render_html_title(context):
         context.caller_stack._pop_frame()
 
 
-def render_html_sourcelink(context):
-    __M_caller = context.caller_stack._push_frame()
-    try:
-        post = context.get('post', UNDEFINED)
-        show_sourcelink = context.get('show_sourcelink', UNDEFINED)
-        messages = context.get('messages', UNDEFINED)
-        __M_writer = context.writer()
-        __M_writer('\n')
-        if show_sourcelink:
-            __M_writer('        <p class="sourceline"><a href="')
-            __M_writer(str(post.source_link()))
-            __M_writer('" id="sourcelink">')
-            __M_writer(str(messages("Source")))
-            __M_writer('</a></p>\n')
-        return ''
-    finally:
-        context.caller_stack._pop_frame()
-
-
 def render_html_post_header(context):
     __M_caller = context.caller_stack._push_frame()
     try:
-        def html_translations(post):
-            return render_html_translations(context,post)
-        comments = _mako_get_namespace(context, 'comments')
         def html_title():
             return render_html_title(context)
-        site_has_comments = context.get('site_has_comments', UNDEFINED)
-        post = context.get('post', UNDEFINED)
-        date_format = context.get('date_format', UNDEFINED)
         def html_sourcelink():
             return render_html_sourcelink(context)
+        date_format = context.get('date_format', UNDEFINED)
+        def html_translations(post):
+            return render_html_translations(context,post)
+        post = context.get('post', UNDEFINED)
+        comments = _mako_get_namespace(context, 'comments')
+        site_has_comments = context.get('site_has_comments', UNDEFINED)
         messages = context.get('messages', UNDEFINED)
         __M_writer = context.writer()
         __M_writer('\n    <header>\n        ')
@@ -135,10 +116,10 @@ def render_html_post_header(context):
 def render_html_translations(context,post):
     __M_caller = context.caller_stack._push_frame()
     try:
-        len = context.get('len', UNDEFINED)
-        translations = context.get('translations', UNDEFINED)
-        messages = context.get('messages', UNDEFINED)
         lang = context.get('lang', UNDEFINED)
+        translations = context.get('translations', UNDEFINED)
+        len = context.get('len', UNDEFINED)
+        messages = context.get('messages', UNDEFINED)
         __M_writer = context.writer()
         __M_writer('\n')
         if len(translations) > 1:
@@ -160,8 +141,27 @@ def render_html_translations(context,post):
         context.caller_stack._pop_frame()
 
 
+def render_html_sourcelink(context):
+    __M_caller = context.caller_stack._push_frame()
+    try:
+        show_sourcelink = context.get('show_sourcelink', UNDEFINED)
+        post = context.get('post', UNDEFINED)
+        messages = context.get('messages', UNDEFINED)
+        __M_writer = context.writer()
+        __M_writer('\n')
+        if show_sourcelink:
+            __M_writer('        <p class="sourceline"><a href="')
+            __M_writer(str(post.source_link()))
+            __M_writer('" id="sourcelink">')
+            __M_writer(str(messages("Source")))
+            __M_writer('</a></p>\n')
+        return ''
+    finally:
+        context.caller_stack._pop_frame()
+
+
 """
 __M_BEGIN_METADATA
-{"line_map": {"128": 47, "129": 47, "135": 11, "151": 17, "143": 11, "144": 12, "145": 13, "146": 14, "147": 14, "148": 15, "149": 16, "150": 17, "23": 2, "152": 17, "153": 17, "26": 3, "155": 17, "156": 17, "29": 0, "34": 2, "35": 3, "36": 9, "37": 22, "38": 28, "39": 49, "154": 17, "45": 5, "157": 20, "51": 5, "52": 6, "53": 7, "54": 7, "55": 7, "56": 7, "57": 7, "63": 24, "70": 24, "71": 25, "72": 26, "73": 26, "74": 26, "75": 26, "76": 26, "82": 30, "163": 157, "97": 30, "98": 32, "99": 32, "100": 34, "101": 34, "102": 35, "103": 35, "104": 35, "105": 35, "106": 35, "107": 35, "108": 35, "109": 35, "110": 36, "111": 37, "112": 37, "113": 37, "114": 39, "115": 39, "116": 39, "117": 40, "118": 41, "119": 41, "120": 41, "121": 41, "122": 41, "123": 43, "124": 44, "125": 44, "126": 44, "127": 46}, "filename": "themes/latte/templates/post_header.tmpl", "uri": "post_header.tmpl", "source_encoding": "utf-8"}
+{"uri": "post_header.tmpl", "source_encoding": "utf-8", "line_map": {"128": 14, "129": 15, "130": 16, "131": 17, "132": 17, "133": 17, "134": 17, "135": 17, "136": 17, "137": 17, "138": 20, "151": 24, "144": 24, "154": 26, "23": 2, "152": 25, "153": 26, "26": 3, "155": 26, "156": 26, "29": 0, "34": 2, "35": 3, "36": 9, "37": 22, "38": 28, "39": 49, "45": 5, "157": 26, "51": 5, "52": 6, "53": 7, "54": 7, "55": 7, "56": 7, "57": 7, "163": 157, "63": 30, "78": 30, "79": 32, "80": 32, "81": 34, "82": 34, "83": 35, "84": 35, "85": 35, "86": 35, "87": 35, "88": 35, "89": 35, "90": 35, "91": 36, "92": 37, "93": 37, "94": 37, "95": 39, "96": 39, "97": 39, "98": 40, "99": 41, "100": 41, "101": 41, "102": 41, "103": 41, "104": 43, "105": 44, "106": 44, "107": 44, "108": 46, "109": 47, "110": 47, "116": 11, "124": 11, "125": 12, "126": 13, "127": 14}, "filename": "themes/latte/templates/post_header.tmpl"}
 __M_END_METADATA
 """
