@@ -144,7 +144,7 @@ I met this challenge 22 days out of 31. I realized pretty soon that it was no fu
 More healthy living in November, and another multi-faceted challenge: to go to the gym every day, 
 waking up early if necessary; to avoid going to Starbucks; and to try 5:2 intermittent fasting.
 
-I go to the gym most days, but when I go after the girls leave for school at 8:45, I'm not done working out and showering until 10:30 or 11:00. If I go before everyone is awake, I can be showered and at my desk at 9:30.  My goal was go to go the gym every day, early on weekdays.
+I go to the gym most days, but when I go after the girls leave for school at 8:45, I'm not done working out and showering until 10:30 or 11:00. If I go before everyone is awake, I can be showered and at my desk at 9:30.  My goal was to go to the gym every day, early on weekdays.
 
 I had gotten into the habit of going for a latte at Starbucks almost every time I left the house, and I wanted to break that habit.
 
