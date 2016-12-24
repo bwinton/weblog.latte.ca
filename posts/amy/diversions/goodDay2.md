@@ -2,6 +2,7 @@
 .. title: Awesome First Day of March Break
 .. date: 2009-03-15 22:01:19
 .. author: Amy Brown
+.. tags: recipe, fread pudding, food
 -->
 
 Today started early for me - I was awake at around 6:30.  Awake
