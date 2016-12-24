@@ -5,12 +5,12 @@ STOP_RENDERING = runtime.STOP_RENDERING
 __M_dict_builtin = dict
 __M_locals_builtin = locals
 _magic_number = 10
-_modified_time = 1482550121.5967336
+_modified_time = 1482613975.510134
 _enable_loop = True
 _template_filename = 'themes/latte/templates/post.tmpl'
 _template_uri = 'post.tmpl'
 _source_encoding = 'utf-8'
-_exports = ['content', 'extra_head', 'sourcelink']
+_exports = ['sourcelink', 'content', 'extra_head']
 
 
 def _mako_get_namespace(context, name):
@@ -20,11 +20,11 @@ def _mako_get_namespace(context, name):
         _mako_generate_namespaces(context)
         return context.namespaces[(__name__, name)]
 def _mako_generate_namespaces(context):
-    ns = runtime.TemplateNamespace('helper', context._clean_inheritance_tokens(), templateuri='post_helper.tmpl', callables=None,  calling_uri=_template_uri)
-    context.namespaces[(__name__, 'helper')] = ns
-
     ns = runtime.TemplateNamespace('pheader', context._clean_inheritance_tokens(), templateuri='post_header.tmpl', callables=None,  calling_uri=_template_uri)
     context.namespaces[(__name__, 'pheader')] = ns
+
+    ns = runtime.TemplateNamespace('helper', context._clean_inheritance_tokens(), templateuri='post_helper.tmpl', callables=None,  calling_uri=_template_uri)
+    context.namespaces[(__name__, 'helper')] = ns
 
     ns = runtime.TemplateNamespace('comments', context._clean_inheritance_tokens(), templateuri='comments_helper.tmpl', callables=None,  calling_uri=_template_uri)
     context.namespaces[(__name__, 'comments')] = ns
@@ -36,20 +36,20 @@ def render_body(context,**pageargs):
     __M_caller = context.caller_stack._push_frame()
     try:
         __M_locals = __M_dict_builtin(pageargs=pageargs)
+        def extra_head():
+            return render_extra_head(context._locals(__M_locals))
         parent = context.get('parent', UNDEFINED)
-        helper = _mako_get_namespace(context, 'helper')
-        post = context.get('post', UNDEFINED)
+        messages = context.get('messages', UNDEFINED)
+        comments = _mako_get_namespace(context, 'comments')
+        pheader = _mako_get_namespace(context, 'pheader')
         def content():
             return render_content(context._locals(__M_locals))
         show_sourcelink = context.get('show_sourcelink', UNDEFINED)
-        pheader = _mako_get_namespace(context, 'pheader')
-        comments = _mako_get_namespace(context, 'comments')
+        helper = _mako_get_namespace(context, 'helper')
+        site_has_comments = context.get('site_has_comments', UNDEFINED)
         def sourcelink():
             return render_sourcelink(context._locals(__M_locals))
-        site_has_comments = context.get('site_has_comments', UNDEFINED)
-        def extra_head():
-            return render_extra_head(context._locals(__M_locals))
-        messages = context.get('messages', UNDEFINED)
+        post = context.get('post', UNDEFINED)
         __M_writer = context.writer()
         __M_writer('\n')
         __M_writer('\n')
@@ -75,17 +75,38 @@ def render_body(context,**pageargs):
         context.caller_stack._pop_frame()
 
 
+def render_sourcelink(context,**pageargs):
+    __M_caller = context.caller_stack._push_frame()
+    try:
+        show_sourcelink = context.get('show_sourcelink', UNDEFINED)
+        def sourcelink():
+            return render_sourcelink(context)
+        messages = context.get('messages', UNDEFINED)
+        post = context.get('post', UNDEFINED)
+        __M_writer = context.writer()
+        __M_writer('\n')
+        if show_sourcelink:
+            __M_writer('    <li>\n    <a href="')
+            __M_writer(str(post.source_link()))
+            __M_writer('" id="sourcelink">')
+            __M_writer(str(messages("Source")))
+            __M_writer('</a>\n    </li>\n')
+        return ''
+    finally:
+        context.caller_stack._pop_frame()
+
+
 def render_content(context,**pageargs):
     __M_caller = context.caller_stack._push_frame()
     try:
+        helper = _mako_get_namespace(context, 'helper')
+        messages = context.get('messages', UNDEFINED)
+        comments = _mako_get_namespace(context, 'comments')
+        site_has_comments = context.get('site_has_comments', UNDEFINED)
+        pheader = _mako_get_namespace(context, 'pheader')
         def content():
             return render_content(context)
-        pheader = _mako_get_namespace(context, 'pheader')
-        comments = _mako_get_namespace(context, 'comments')
-        helper = _mako_get_namespace(context, 'helper')
-        site_has_comments = context.get('site_has_comments', UNDEFINED)
         post = context.get('post', UNDEFINED)
-        messages = context.get('messages', UNDEFINED)
         __M_writer = context.writer()
         __M_writer('\n<article class="post-')
         __M_writer(str(post.meta('type')))
@@ -117,11 +138,11 @@ def render_content(context,**pageargs):
 def render_extra_head(context,**pageargs):
     __M_caller = context.caller_stack._push_frame()
     try:
-        parent = context.get('parent', UNDEFINED)
+        post = context.get('post', UNDEFINED)
         helper = _mako_get_namespace(context, 'helper')
+        parent = context.get('parent', UNDEFINED)
         def extra_head():
             return render_extra_head(context)
-        post = context.get('post', UNDEFINED)
         __M_writer = context.writer()
         __M_writer('\n    ')
         __M_writer(str(parent.extra_head()))
@@ -161,29 +182,8 @@ def render_extra_head(context,**pageargs):
         context.caller_stack._pop_frame()
 
 
-def render_sourcelink(context,**pageargs):
-    __M_caller = context.caller_stack._push_frame()
-    try:
-        messages = context.get('messages', UNDEFINED)
-        show_sourcelink = context.get('show_sourcelink', UNDEFINED)
-        post = context.get('post', UNDEFINED)
-        def sourcelink():
-            return render_sourcelink(context)
-        __M_writer = context.writer()
-        __M_writer('\n')
-        if show_sourcelink:
-            __M_writer('    <li>\n    <a href="')
-            __M_writer(str(post.source_link()))
-            __M_writer('" id="sourcelink">')
-            __M_writer(str(messages("Source")))
-            __M_writer('</a>\n    </li>\n')
-        return ''
-    finally:
-        context.caller_stack._pop_frame()
-
-
 """
 __M_BEGIN_METADATA
-{"uri": "post.tmpl", "source_encoding": "utf-8", "line_map": {"128": 8, "129": 9, "130": 10, "131": 10, "132": 10, "133": 12, "134": 13, "135": 13, "136": 13, "137": 15, "138": 15, "139": 15, "140": 16, "141": 17, "142": 17, "143": 17, "144": 17, "145": 17, "146": 19, "147": 20, "148": 20, "149": 20, "150": 20, "23": 2, "152": 22, "153": 22, "26": 3, "155": 23, "156": 23, "29": 4, "158": 24, "35": 0, "164": 50, "154": 22, "173": 50, "174": 51, "157": 24, "176": 53, "177": 53, "178": 53, "179": 53, "54": 2, "55": 3, "56": 4, "57": 5, "151": 20, "62": 25, "175": 52, "67": 48, "72": 56, "78": 27, "185": 179, "90": 27, "91": 28, "92": 28, "93": 29, "94": 29, "95": 31, "96": 31, "97": 35, "98": 35, "99": 36, "100": 36, "101": 39, "102": 40, "103": 41, "104": 41, "105": 42, "106": 42, "107": 45, "108": 45, "109": 45, "110": 47, "111": 47, "117": 7, "126": 7, "127": 8}, "filename": "themes/latte/templates/post.tmpl"}
+{"uri": "post.tmpl", "line_map": {"128": 45, "129": 45, "130": 45, "131": 47, "132": 47, "172": 20, "138": 7, "151": 10, "175": 22, "147": 7, "148": 8, "149": 8, "150": 9, "23": 3, "152": 10, "153": 10, "26": 2, "155": 13, "156": 13, "29": 4, "158": 15, "159": 15, "160": 15, "161": 16, "162": 17, "35": 0, "164": 17, "165": 17, "166": 17, "167": 19, "168": 20, "169": 20, "170": 20, "171": 20, "154": 12, "173": 22, "174": 22, "157": 13, "176": 23, "177": 23, "178": 24, "179": 24, "54": 2, "55": 3, "56": 4, "57": 5, "62": 25, "67": 48, "185": 179, "72": 56, "78": 50, "163": 17, "87": 50, "88": 51, "89": 52, "90": 53, "91": 53, "92": 53, "93": 53, "99": 27, "111": 27, "112": 28, "113": 28, "114": 29, "115": 29, "116": 31, "117": 31, "118": 35, "119": 35, "120": 36, "121": 36, "122": 39, "123": 40, "124": 41, "125": 41, "126": 42, "127": 42}, "filename": "themes/latte/templates/post.tmpl", "source_encoding": "utf-8"}
 __M_END_METADATA
 """
