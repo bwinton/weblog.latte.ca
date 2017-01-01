@@ -5,7 +5,7 @@ STOP_RENDERING = runtime.STOP_RENDERING
 __M_dict_builtin = dict
 __M_locals_builtin = locals
 _magic_number = 10
-_modified_time = 1483242968.4185965
+_modified_time = 1483244301.2121665
 _enable_loop = True
 _template_filename = 'themes/latte/templates/index.tmpl'
 _template_uri = 'index.tmpl'
@@ -33,14 +33,14 @@ def render_body(context,**pageargs):
     __M_caller = context.caller_stack._push_frame()
     try:
         __M_locals = __M_dict_builtin(pageargs=pageargs)
-        date_format = context.get('date_format', UNDEFINED)
-        helper = _mako_get_namespace(context, 'helper')
         index_teasers = context.get('index_teasers', UNDEFINED)
-        site_has_comments = context.get('site_has_comments', UNDEFINED)
+        date_format = context.get('date_format', UNDEFINED)
+        posts = context.get('posts', UNDEFINED)
         def content():
             return render_content(context._locals(__M_locals))
+        site_has_comments = context.get('site_has_comments', UNDEFINED)
+        helper = _mako_get_namespace(context, 'helper')
         comments = _mako_get_namespace(context, 'comments')
-        posts = context.get('posts', UNDEFINED)
         __M_writer = context.writer()
         __M_writer('\n')
         __M_writer('\n')
@@ -58,14 +58,14 @@ def render_body(context,**pageargs):
 def render_content(context,**pageargs):
     __M_caller = context.caller_stack._push_frame()
     try:
-        date_format = context.get('date_format', UNDEFINED)
-        helper = _mako_get_namespace(context, 'helper')
         index_teasers = context.get('index_teasers', UNDEFINED)
-        site_has_comments = context.get('site_has_comments', UNDEFINED)
+        date_format = context.get('date_format', UNDEFINED)
+        posts = context.get('posts', UNDEFINED)
         def content():
             return render_content(context)
+        site_has_comments = context.get('site_has_comments', UNDEFINED)
+        helper = _mako_get_namespace(context, 'helper')
         comments = _mako_get_namespace(context, 'comments')
-        posts = context.get('posts', UNDEFINED)
         __M_writer = context.writer()
         __M_writer('\n<div class="postindex">\n')
         for post in posts:
@@ -114,6 +114,6 @@ def render_content(context,**pageargs):
 
 """
 __M_BEGIN_METADATA
-{"source_encoding": "utf-8", "uri": "index.tmpl", "line_map": {"23": 2, "26": 3, "32": 0, "45": 2, "46": 3, "47": 4, "52": 34, "58": 6, "70": 6, "71": 8, "72": 9, "73": 9, "74": 9, "75": 11, "76": 11, "77": 11, "78": 11, "79": 13, "80": 13, "81": 14, "82": 14, "83": 14, "84": 14, "85": 14, "86": 14, "87": 14, "88": 14, "89": 15, "90": 16, "91": 16, "92": 16, "93": 18, "94": 20, "95": 21, "96": 22, "97": 22, "98": 23, "99": 24, "100": 25, "101": 25, "102": 27, "103": 30, "104": 31, "105": 31, "106": 32, "107": 32, "108": 33, "109": 33, "115": 109}, "filename": "themes/latte/templates/index.tmpl"}
+{"uri": "index.tmpl", "line_map": {"23": 2, "26": 3, "32": 0, "45": 2, "46": 3, "47": 4, "52": 34, "58": 6, "70": 6, "71": 8, "72": 9, "73": 9, "74": 9, "75": 11, "76": 11, "77": 11, "78": 11, "79": 13, "80": 13, "81": 14, "82": 14, "83": 14, "84": 14, "85": 14, "86": 14, "87": 14, "88": 14, "89": 15, "90": 16, "91": 16, "92": 16, "93": 18, "94": 20, "95": 21, "96": 22, "97": 22, "98": 23, "99": 24, "100": 25, "101": 25, "102": 27, "103": 30, "104": 31, "105": 31, "106": 32, "107": 32, "108": 33, "109": 33, "115": 109}, "source_encoding": "utf-8", "filename": "themes/latte/templates/index.tmpl"}
 __M_END_METADATA
 """
