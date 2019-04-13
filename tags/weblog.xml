@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<?xml-stylesheet type="text/xsl" href="../assets/xml/rss.xsl" media="all"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Blog-O! (weblog)</title><link>https://bwinton.github.io/weblog.latte.ca/</link><description></description><atom:link href="https://bwinton.github.io/weblog.latte.ca/tags/weblog.xml" type="application/rss+xml" rel="self"></atom:link><language>en</language><lastBuildDate>Sun, 30 Oct 2016 01:56:54 GMT</lastBuildDate><generator>https://getnikola.com/</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Fixing the blog for iPhones.</title><link>https://bwinton.github.io/weblog.latte.ca/blake/tech/weblog/itouch.html</link><dc:creator>Blake Winton</dc:creator><description>&lt;p&gt;A while ago, I had bought an iPod Touch, and started messing around
+<?xml-stylesheet type="text/xsl" href="../assets/xml/rss.xsl" media="all"?><rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/"><channel><title>Blog-O! (Posts about weblog)</title><link>https://bwinton.github.io/weblog.latte.ca/</link><description></description><atom:link rel="self" href="https://bwinton.github.io/weblog.latte.ca/tags/weblog.xml" type="application/rss+xml"></atom:link><language>en</language><lastBuildDate>Sat, 13 Apr 2019 21:03:17 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Fixing the blog for iPhones.</title><link>https://bwinton.github.io/weblog.latte.ca/blake/tech/weblog/itouch/</link><dc:creator>Blake Winton</dc:creator><description>&lt;p&gt;A while ago, I had bought an iPod Touch, and started messing around
 with the CSS on this weblog, to try and get it looking a little nicer
 on the small screen.  Sadly, it never quite worked, and because of a
 bug in my selector (“min-device-width” should have been
@@ -8,7 +8,7 @@ today, I grabbed a copy of the latest version of Safari, and fixed the
 bug!  So now iPhones and iTouches will both get a pretty version of
 the site, and Safari 3.1 looks beautiful again.  Even more beautiful,
 now that SVG is supported.  (&lt;a href="https://bwinton.github.io/weblog.latte.ca/blake/tech/doesThisWorkForYou"&gt;Give it a try&lt;/a&gt;, and let me know if you can see the
-green ? in a circle.)&lt;/p&gt;</description><category>css</category><category>itouch</category><category>weblog</category><guid>https://bwinton.github.io/weblog.latte.ca/blake/tech/weblog/itouch.html</guid><pubDate>Wed, 26 Mar 2008 15:53:08 GMT</pubDate></item><item><title>What I’ve done here: or, yet another way to blog from your Palm.</title><link>https://bwinton.github.io/weblog.latte.ca/blake/tech/weblog/whativedone.html</link><dc:creator>Blake Winton</dc:creator><description>&lt;div&gt;&lt;p&gt;I thought I’ld take a few minutes to talk about just what it is that’s
+green ? in a circle.)&lt;/p&gt;</description><category>css</category><category>itouch</category><category>weblog</category><guid>https://bwinton.github.io/weblog.latte.ca/blake/tech/weblog/itouch/</guid><pubDate>Wed, 26 Mar 2008 15:53:08 GMT</pubDate></item><item><title>What I’ve done here: or, yet another way to blog from your Palm.</title><link>https://bwinton.github.io/weblog.latte.ca/blake/tech/weblog/whativedone/</link><dc:creator>Blake Winton</dc:creator><description>&lt;div&gt;&lt;p&gt;I thought I’ld take a few minutes to talk about just what it is that’s
 allowing me to write an entry while I’m walking down the street on my way
 to the gym.  (And on my way home from the gym, and on the subway to work
 the next day, because while I’m connected, I’m not necessarily fast at
@@ -50,23 +50,25 @@ app is as simple as:&lt;/p&gt;
 14
 15
 16&lt;/pre&gt;&lt;/div&gt;&lt;/td&gt;&lt;td class="code"&gt;&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="n"&gt;pclear&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
-&lt;span class="n"&gt;ptitle&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt; &lt;span class="s2"&gt;"&lt;/span&gt;&lt;span class="s"&gt;PalmBlosxom"&lt;/span&gt; &lt;span class="p"&gt;)&lt;/span&gt;
-&lt;span class="n"&gt;pmenu&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;&lt;span class="s2"&gt;"&lt;/span&gt;&lt;span class="s"&gt;P:Server Prefs"&lt;/span&gt;&lt;span class="p"&gt;}&lt;/span&gt; &lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="n"&gt;ptitle&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt; &lt;span class="s2"&gt;"PalmBlosxom"&lt;/span&gt; &lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="n"&gt;pmenu&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;&lt;span class="s2"&gt;"P:Server Prefs"&lt;/span&gt;&lt;span class="p"&gt;}&lt;/span&gt; &lt;span class="p"&gt;)&lt;/span&gt;
 
-&lt;span class="n"&gt;m32&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="n"&gt;pcheckbox&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;"&lt;/span&gt;&lt;span class="s"&gt;pEdit32"&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="n"&gt;m32&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="n"&gt;pcheckbox&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;"pEdit32"&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
 &lt;span class="n"&gt;ptab&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
 &lt;span class="n"&gt;name&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;pfield&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt; &lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;24&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;24&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;catName&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
 &lt;span class="n"&gt;pnl&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
 &lt;span class="n"&gt;pl&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;plist&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt; &lt;span class="mi"&gt;10&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mf"&gt;31.5&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;lst&lt;/span&gt; &lt;span class="p"&gt;)&lt;/span&gt;
 &lt;span class="n"&gt;pnl&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
 &lt;span class="n"&gt;ptab&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
-&lt;span class="n"&gt;i&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;pbutton&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt; &lt;span class="s2"&gt;"&lt;/span&gt;&lt;span class="s"&gt;Reload"&lt;/span&gt; &lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="n"&gt;i&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;pbutton&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt; &lt;span class="s2"&gt;"Reload"&lt;/span&gt; &lt;span class="p"&gt;)&lt;/span&gt;
 &lt;span class="n"&gt;ptab&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
-&lt;span class="n"&gt;d&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;pbutton&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt; &lt;span class="s2"&gt;"&lt;/span&gt;&lt;span class="s"&gt;Details"&lt;/span&gt; &lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="n"&gt;d&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;pbutton&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt; &lt;span class="s2"&gt;"Details"&lt;/span&gt; &lt;span class="p"&gt;)&lt;/span&gt;
 &lt;span class="n"&gt;ptab&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
-&lt;span class="n"&gt;q&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;pbutton&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt; &lt;span class="s2"&gt;"&lt;/span&gt;&lt;span class="s"&gt;Quit"&lt;/span&gt; &lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="n"&gt;q&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;pbutton&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt; &lt;span class="s2"&gt;"Quit"&lt;/span&gt; &lt;span class="p"&gt;)&lt;/span&gt;
 &lt;/pre&gt;
-&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;p&gt;I’ll put up with a lot of ugliness in the language.&lt;/p&gt;
+&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+
+&lt;p&gt;I’ll put up with a lot of ugliness in the language.&lt;/p&gt;
 &lt;p&gt;Of course, I made it sound like a much smoother progression than it
 actually was.  I took side trips into Basic, Smalltalk, Perl, Scheme, Java,
 Intercal, Visual Basic, and Ruby, but none of those were serious contenders
@@ -103,7 +105,7 @@ way to go, and since I had some free time, I started experimenting.  It
 turns out that it was a little harder than I had anticipated, but it still
 wasn’t too bad, and I think I’ve finished the worst of it.  The Secure-FTP
 library was easy to find, and after some firewall config on my home machine
-works quite well.&lt;/p&gt;&lt;/div&gt;</description><category>weblog</category><guid>https://bwinton.github.io/weblog.latte.ca/blake/tech/weblog/whativedone.html</guid><pubDate>Wed, 06 Oct 2004 20:20:00 GMT</pubDate></item><item><title>A New Start.</title><link>https://bwinton.github.io/weblog.latte.ca/blake/tech/weblog/newcomputer.html</link><dc:creator>Blake Winton</dc:creator><description>&lt;p&gt;I got a new computer at work on Monday, and so eagerly switched
+works quite well.&lt;/p&gt;&lt;/div&gt;</description><category>weblog</category><guid>https://bwinton.github.io/weblog.latte.ca/blake/tech/weblog/whativedone/</guid><pubDate>Wed, 06 Oct 2004 20:20:00 GMT</pubDate></item><item><title>A New Start.</title><link>https://bwinton.github.io/weblog.latte.ca/blake/tech/weblog/newcomputer/</link><dc:creator>Blake Winton</dc:creator><description>&lt;p&gt;I got a new computer at work on Monday, and so eagerly switched
 over all my data to it.  But I didn't install all the various programs
 that were on the old machine.  Partly because I had a ton of stuff
 installed, and my registry was a complete mess, and partly because I
@@ -125,7 +127,7 @@ people are interested in doing something similar, so my little bit of
 code might get released in a couple of other places too.  But for now,
 you can find the conduit, and the setup script which builds the dll
 and the installer &lt;a href="http://www.latte.ca/svn/PalmBlosxom/"&gt;here&lt;/a&gt;.  (The code is in
-the conduit directory, and the setup.py script is in the root.)&lt;/p&gt;</description><category>weblog</category><guid>https://bwinton.github.io/weblog.latte.ca/blake/tech/weblog/newcomputer.html</guid><pubDate>Thu, 30 Sep 2004 18:26:00 GMT</pubDate></item><item><title>Another Clié Weblog Entry.</title><link>https://bwinton.github.io/weblog.latte.ca/blake/tech/weblog/clieentry2.html</link><dc:creator>Blake Winton</dc:creator><description>#datetime 28/7/04 19:11
+the conduit directory, and the setup.py script is in the root.)&lt;/p&gt;</description><category>weblog</category><guid>https://bwinton.github.io/weblog.latte.ca/blake/tech/weblog/newcomputer/</guid><pubDate>Thu, 30 Sep 2004 18:26:00 GMT</pubDate></item><item><title>Another Clié Weblog Entry.</title><link>https://bwinton.github.io/weblog.latte.ca/blake/tech/weblog/clieentry2/</link><dc:creator>Blake Winton</dc:creator><description>#datetime 28/7/04 19:11
 &lt;p&gt;
 So the infrastructure has gotten much closer to being done, without being any
 closer to being done.  What I mean is that I built a Palm conduit in Python,
@@ -150,5 +152,5 @@ source for the app itself &lt;a href="http://www.latte.ca/svn/PalmBlosxom/Lua/"&
 don't upload them again.  (I've got the code to ignore them working just fine,
 but I haven't delved into the black art of writing a record back to the Palm
 yet.)
-&lt;/p&gt;</description><category>weblog</category><guid>https://bwinton.github.io/weblog.latte.ca/blake/tech/weblog/clieentry2.html</guid><pubDate>Fri, 06 Aug 2004 19:02:00 GMT</pubDate></item><item><title>Test pEdit Weblog Entry.</title><link>https://bwinton.github.io/weblog.latte.ca/blake/tech/weblog/clieentry.html</link><dc:creator>Blake Winton</dc:creator><description>#datetime 4/5/03 15:38
-Someday, this entry will be coming to you from my Clié.  I have a dream, you see.  A dream that I can update my weblog whenever I get a chance, instead of only when I'm at my computer.  A dream that, just by putting memos in a specific category on my Clié, I can add new entries and update older entries with new information whenever I feel like it.</description><category>weblog</category><guid>https://bwinton.github.io/weblog.latte.ca/blake/tech/weblog/clieentry.html</guid><pubDate>Fri, 06 Aug 2004 18:50:00 GMT</pubDate></item></channel></rss>
+&lt;/p&gt;</description><category>weblog</category><guid>https://bwinton.github.io/weblog.latte.ca/blake/tech/weblog/clieentry2/</guid><pubDate>Fri, 06 Aug 2004 19:02:00 GMT</pubDate></item><item><title>Test pEdit Weblog Entry.</title><link>https://bwinton.github.io/weblog.latte.ca/blake/tech/weblog/clieentry/</link><dc:creator>Blake Winton</dc:creator><description>#datetime 4/5/03 15:38
+Someday, this entry will be coming to you from my Clié.  I have a dream, you see.  A dream that I can update my weblog whenever I get a chance, instead of only when I'm at my computer.  A dream that, just by putting memos in a specific category on my Clié, I can add new entries and update older entries with new information whenever I feel like it.</description><category>weblog</category><guid>https://bwinton.github.io/weblog.latte.ca/blake/tech/weblog/clieentry/</guid><pubDate>Fri, 06 Aug 2004 18:50:00 GMT</pubDate></item></channel></rss>

@@ -19,9 +19,9 @@ $ /usr/local/bin/arm-apple-darwin-gcc euler.c euler_.c -Iinclude -Llib -lgambc -
 
 <p>It's freaking huge!</p>
 <pre class="code literal-block"><span></span>$ ls -alh euler
--rwxr-xr-x   <span class="m">1</span> bwinton  bwinton  4M Jan <span class="m">23</span> 14:22 euler
+-rwxr-xr-x   <span class="m">1</span> bwinton  bwinton  4M Jan <span class="m">23</span> <span class="m">14</span>:22 euler
 $ ls -alh /WifiToggle
--rwxr-xr-x   <span class="m">1</span> bwinton  bwinton  17K Jan <span class="m">16</span> 14:07 /WifiToggle
+-rwxr-xr-x   <span class="m">1</span> bwinton  bwinton  17K Jan <span class="m">16</span> <span class="m">14</span>:07 /WifiToggle
 </pre>
 
 
@@ -29,17 +29,17 @@ $ ls -alh /WifiToggle
 0.1643 seconds for the compiled version, as opposed to 0.1803 seconds for the interpreter. </p>
 <p>But on my Mac:</p>
 <pre class="code literal-block"><span></span>$ more m1.c
-power_of_2 <span class="o">(</span>int x<span class="o">)</span> <span class="o">{</span> <span class="k">return</span> 1<span class="s">&lt;&lt;x; }</span>
-<span class="s">$ more m2.scm</span>
-<span class="s">(c-declare &quot;ex</span>tern int power_of_2 <span class="o">()</span><span class="p">;</span><span class="s2">&quot;)</span>
-<span class="s2">(define pow2 (c-lambda (int) int &quot;</span>power_of_2<span class="s2">&quot;))</span>
-<span class="s2">(define (twice x) (cons x x))</span>
-$<span class="s2"> more m3.scm</span>
-<span class="s2">(write (map twice (map pow2 &#39;(1 2 3 4)))) (newline)</span>
-$<span class="s2"> gsc/gsc -:=. -link -flat -o foo.o1.c m2 m3</span>
-$<span class="s2"> /usr/local/bin/arm-apple-darwin-gcc -Iinclude -bundle -D___DYNAMIC m1.c m2.c m3.c foo.o1.c -o foo.o1</span>
-$<span class="s2"> ls -alh foo.o1</span>
-<span class="s2">-rwxr-xr-x   1 bwinton  bwinton    13K Jan 23 14:45 foo.o1</span>
+power_of_2 <span class="o">(</span>int x<span class="o">)</span> <span class="o">{</span> <span class="k">return</span> <span class="m">1</span><span class="p">&amp;</span>lt<span class="p">;&amp;</span>lt<span class="p">;</span>x<span class="p">;</span> <span class="o">}</span>
+$ more m2.scm
+<span class="o">(</span>c-declare <span class="s2">&quot;extern int power_of_2 ();&quot;</span><span class="o">)</span>
+<span class="o">(</span>define pow2 <span class="o">(</span>c-lambda <span class="o">(</span>int<span class="o">)</span> int <span class="s2">&quot;power_of_2&quot;</span><span class="o">))</span>
+<span class="o">(</span>define <span class="o">(</span>twice x<span class="o">)</span> <span class="o">(</span>cons x x<span class="o">))</span>
+$ more m3.scm
+<span class="o">(</span>write <span class="o">(</span>map twice <span class="o">(</span>map pow2 <span class="err">&#39;</span><span class="o">(</span><span class="m">1</span> <span class="m">2</span> <span class="m">3</span> <span class="m">4</span><span class="o">))))</span> <span class="o">(</span>newline<span class="o">)</span>
+$ gsc/gsc -:<span class="o">=</span>. -link -flat -o foo.o1.c m2 m3
+$ /usr/local/bin/arm-apple-darwin-gcc -Iinclude -bundle -D___DYNAMIC m1.c m2.c m3.c foo.o1.c -o foo.o1
+$ ls -alh foo.o1
+-rwxr-xr-x   <span class="m">1</span> bwinton  bwinton    13K Jan <span class="m">23</span> <span class="m">14</span>:45 foo.o1
 </pre>
 
 
@@ -50,11 +50,11 @@ $<span class="s2"> ls -alh foo.o1</span>
 # gsi
 Gambit v4.1.2
 
-&gt; (load &quot;foo&quot;)
+&amp;gt; (load &quot;foo&quot;)
 ((2 . 2) (4 . 4) (8 . 8) (16 . 16))
 &quot;/private/var/root/foo.o1&quot;
-&gt; (twice 5)
+&amp;gt; (twice 5)
 (5 . 5)
-&gt; (pow2 10)
+&amp;gt; (pow2 10)
 1024
 </pre>

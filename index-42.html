@@ -6,11 +6,14 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Blog-O! (old posts, page 42) | Blog-O!</title>
 <link href="assets/css/bootstrap.min.css" rel="stylesheet" type="text/css">
+<link href="assets/css/baguetteBox.min.css" rel="stylesheet" type="text/css">
 <link href="assets/css/rst.css" rel="stylesheet" type="text/css">
 <link href="assets/css/code.css" rel="stylesheet" type="text/css">
-<link href="assets/css/colorbox.css" rel="stylesheet" type="text/css">
 <link href="assets/css/theme.css" rel="stylesheet" type="text/css">
-<meta content="#5670d4" name="theme-color">
+<link href="assets/css/bootblog.css" rel="stylesheet" type="text/css">
+<link href="https://fonts.googleapis.com/css?family=Playfair+Display:700,900" rel="stylesheet">
+<meta name="theme-color" content="#5670d4">
+<meta name="generator" content="Nikola (getnikola.com)">
 <link rel="alternate" type="application/rss+xml" title="RSS" href="rss.xml">
 <link rel="canonical" href="https://bwinton.github.io/weblog.latte.ca/index-42.html">
 <link rel="prev" href="index-43.html" type="text/html">
@@ -20,68 +23,81 @@
 <body>
 <a href="#content" class="sr-only sr-only-focusable">Skip to main content</a>
 
-<!-- Menubar -->
-
-<nav class="navbar navbar-inverse navbar-static-top"><div class="container">
-<!-- This keeps the margins nice -->
-        <div class="navbar-header">
-            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-navbar" aria-controls="bs-navbar" aria-expanded="false">
-            <span class="sr-only">Toggle navigation</span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
+<!-- Header and menu bar -->
+<div class="container">
+      <header class="blog-header py-3"><div class="row nbb-header align-items-center">
+          <div class="col-md-3 col-xs-2 col-sm-2" style="width: auto;">
+            <button class="navbar-toggler navbar-light bg-light nbb-navbar-toggler" type="button" data-toggle="collapse" data-target=".bs-nav-collapsible" aria-controls="bs-navbar" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
             </button>
-            <a class="navbar-brand" href="https://bwinton.github.io/weblog.latte.ca/">
-
-                <span id="blog-title">Blog-O!</span>
-            </a>
-        </div>
-<!-- /.navbar-header -->
-        <div class="collapse navbar-collapse" id="bs-navbar" aria-expanded="false">
-            <ul class="nav navbar-nav">
-<li>
-<a href="archive.html">Archive</a>
-                </li>
-<li>
-<a href="tags/index.html">Tags</a>
-                </li>
-<li>
-<a href="rss.xml">RSS feed</a>
-
+            <div class="collapse bs-nav-collapsible bootblog4-search-form-holder">
                 
-            </li>
-</ul>
-<!-- Custom search --><form method="get" id="search" action="//duckduckgo.com/" class="navbar-form pull-right">
+<!-- Custom search -->
+<form method="get" id="search" action="//duckduckgo.com/" class="navbar-form pull-right">
 <input type="hidden" name="sites" value="https://bwinton.github.io/weblog.latte.ca/"><input type="hidden" name="k8" value="#444444"><input type="hidden" name="k9" value="#D51920"><input type="hidden" name="kt" value="h"><input type="text" name="q" maxlength="255" placeholder="Search…" style="margin-top: 4px;"><input type="submit" value="DuckDuckGo Search" style="visibility: hidden;">
 </form>
 <!-- End of custom search -->
 
+            </div>
+        </div>
+          <div class="col-md-6 col-xs-10 col-sm-10 bootblog4-brand" style="width: auto;">
+            <a class="navbar-brand blog-header-logo text-dark" href="https://bwinton.github.io/weblog.latte.ca/">
 
-            <ul class="nav navbar-nav navbar-right"></ul>
+            <span id="blog-title">Blog-O!</span>
+        </a>
+          </div>
+            <div class="col-md-3 justify-content-end align-items-center bs-nav-collapsible collapse flex-collapse bootblog4-right-nav">
+            <nav class="navbar navbar-light bg-white"><ul class="navbar-nav bootblog4-right-nav"></ul></nav>
+</div>
+    </div>
+</header><nav class="navbar navbar-expand-md navbar-light bg-white static-top"><div class="collapse navbar-collapse bs-nav-collapsible" id="bs-navbar">
+            <ul class="navbar-nav nav-fill d-flex w-100">
+<li class="nav-item">
+<a href="archive.html" class="nav-link">Archive</a>
+                </li>
+<li class="nav-item">
+<a href="tags/index.html" class="nav-link">Tags</a>
+                </li>
+<li class="nav-item">
+<a href="rss.xml" class="nav-link">RSS feed</a>
+
+                
+            </li>
+</ul>
 </div>
 <!-- /.navbar-collapse -->
-    </div>
-<!-- /.container -->
-</nav><!-- End of Menubar --><div class="container" id="content" role="main">
+</nav>
+</div>
+
+<div class="container" id="content" role="main">
     <div class="body-content">
         <!--Body content-->
-        <div class="row">
-            
-            
-<div class="postindex">
-    <article class="h-entry post-text"><header><h1 class="p-name entry-title"><a href="blake/tech/markdown.html" class="u-url">How to add Markdown to your PyBlosxom Blog.</a></h1>
-        <div class="metadata">
-            <p class="byline author vcard"><span class="byline-name fn">Blake Winton</span></p>
-            <p class="dateline"><a href="blake/tech/markdown.html" rel="bookmark"><time class="published dt-published" datetime="2008-02-27T12:16:41-05:00" itemprop="datePublished" title="2008-02-27 12:16">2008-02-27 12:16</time></a></p>
-                <p class="commentline">
         
-    <a href="blake/tech/markdown.html#disqus_thread" data-disqus-identifier="/blake/tech/markdown">Comments</a>
+        
+    
+        
+
+    
+        
+    <div class="postindex">
+            <article class="h-entry post-text" itemscope="itemscope" itemtype="http://schema.org/Article"><header><h1 class="p-name entry-title"><a href="blake/tech/markdown/" class="u-url">How to add Markdown to your PyBlosxom Blog.</a></h1>
+                <div class="metadata">
+                    <p class="byline author vcard"><span class="byline-name fn" itemprop="author">
+                        <a href="authors/blake-winton/">Blake Winton</a>
+                    </span></p>
+            <p class="dateline">
+            <a href="blake/tech/markdown/" rel="bookmark">
+            <time class="published dt-published" datetime="2008-02-27T12:16:41-05:00" itemprop="datePublished" title="2008-02-27 12:16">2008-02-27 12:16</time></a>
+            </p>
+                        <p class="commentline">
+        
+    <a href="blake/tech/markdown/#disqus_thread" data-disqus-identifier="cache/posts/blake/tech/markdown.html">Comments</a>
 
 
-        </p>
+                </p>
 </div>
-    </header><div class="p-summary entry-summary">
-    <div>
+            </header><div class="p-summary entry-summary">
+                    <div>
 <p>Hopefully this all just works.  Include A&amp;B, and 4 &lt; 5.</p>
 <h2>Headers</h2>
 <h3>Smaller headers</h3>
@@ -104,7 +120,7 @@ directory.  The content of the code looks like this:</p>
 <pre class="code literal-block"><span></span><span class="n">FILE_EXT</span> <span class="o">=</span> <span class="s1">'md'</span>
 
 <span class="n">__version__</span> <span class="o">=</span> <span class="s1">'pymarkdown 0.1'</span>
-<span class="n">__author__</span> <span class="o">=</span> <span class="s1">'Blake Winton &lt;bwinton+python@latte.ca&gt;'</span>
+<span class="n">__author__</span> <span class="o">=</span> <span class="s1">'Blake Winton &amp;lt;bwinton+python@latte.ca&amp;gt;'</span>
 
 <span class="kn">import</span> <span class="nn">markdown</span>
 
@@ -161,20 +177,25 @@ and I figured this would give me a bit of a headstart on getting used
 to the new syntax, and also give me a bit of a playground for testing
 out new features that I might want to add.</p>
 </div>
-    </div>
-    </article><article class="h-entry post-text"><header><h1 class="p-name entry-title"><a href="amy/everythingelse/somuchsnow.html" class="u-url">So Much Snow</a></h1>
-        <div class="metadata">
-            <p class="byline author vcard"><span class="byline-name fn">Amy Brown</span></p>
-            <p class="dateline"><a href="amy/everythingelse/somuchsnow.html" rel="bookmark"><time class="published dt-published" datetime="2008-02-21T14:43:37-05:00" itemprop="datePublished" title="2008-02-21 14:43">2008-02-21 14:43</time></a></p>
-                <p class="commentline">
+                </div>
+            </article><article class="h-entry post-text" itemscope="itemscope" itemtype="http://schema.org/Article"><header><h1 class="p-name entry-title"><a href="amy/everythingelse/somuchsnow/" class="u-url">So Much Snow</a></h1>
+                <div class="metadata">
+                    <p class="byline author vcard"><span class="byline-name fn" itemprop="author">
+                        <a href="authors/amy-brown/">Amy Brown</a>
+                    </span></p>
+            <p class="dateline">
+            <a href="amy/everythingelse/somuchsnow/" rel="bookmark">
+            <time class="published dt-published" datetime="2008-02-21T14:43:37-05:00" itemprop="datePublished" title="2008-02-21 14:43">2008-02-21 14:43</time></a>
+            </p>
+                        <p class="commentline">
         
-    <a href="amy/everythingelse/somuchsnow.html#disqus_thread" data-disqus-identifier="/amy/everythingelse/somuchsnow">Comments</a>
+    <a href="amy/everythingelse/somuchsnow/#disqus_thread" data-disqus-identifier="cache/posts/amy/everythingelse/soMuchSnow.html">Comments</a>
 
 
-        </p>
+                </p>
 </div>
-    </header><div class="p-summary entry-summary">
-    <p>
+            </header><div class="p-summary entry-summary">
+                    <p>
 This Tuesday we were treated to a most peculiar sight; our street,
 which usually has between six and ten cars parked on it, was empty
 of cars but full of two Bobcats and a huge yellow snow eating/spitting
@@ -194,20 +215,25 @@ even with the awesome stroller.
 As far as I am concerned, spring cannot come too soon this year.
 Although I suspect we're in for a spell more winter yet.
 </p>
-    </div>
-    </article><article class="h-entry post-text"><header><h1 class="p-name entry-title"><a href="amy/everythingelse/twonicedays.html" class="u-url">Two Nice Days</a></h1>
-        <div class="metadata">
-            <p class="byline author vcard"><span class="byline-name fn">Amy Brown</span></p>
-            <p class="dateline"><a href="amy/everythingelse/twonicedays.html" rel="bookmark"><time class="published dt-published" datetime="2008-02-21T14:36:43-05:00" itemprop="datePublished" title="2008-02-21 14:36">2008-02-21 14:36</time></a></p>
-                <p class="commentline">
+                </div>
+            </article><article class="h-entry post-text" itemscope="itemscope" itemtype="http://schema.org/Article"><header><h1 class="p-name entry-title"><a href="amy/everythingelse/twonicedays/" class="u-url">Two Nice Days</a></h1>
+                <div class="metadata">
+                    <p class="byline author vcard"><span class="byline-name fn" itemprop="author">
+                        <a href="authors/amy-brown/">Amy Brown</a>
+                    </span></p>
+            <p class="dateline">
+            <a href="amy/everythingelse/twonicedays/" rel="bookmark">
+            <time class="published dt-published" datetime="2008-02-21T14:36:43-05:00" itemprop="datePublished" title="2008-02-21 14:36">2008-02-21 14:36</time></a>
+            </p>
+                        <p class="commentline">
         
-    <a href="amy/everythingelse/twonicedays.html#disqus_thread" data-disqus-identifier="/amy/everythingelse/twonicedays">Comments</a>
+    <a href="amy/everythingelse/twonicedays/#disqus_thread" data-disqus-identifier="cache/posts/amy/everythingelse/twoNiceDays.html">Comments</a>
 
 
-        </p>
+                </p>
 </div>
-    </header><div class="p-summary entry-summary">
-    <p>
+            </header><div class="p-summary entry-summary">
+                    <p>
 Today has been nice, so far.  I managed to jettison my children —
 Cordelia to nursery school and Delphine to a friend's house — and
 then I went to Doug Miller Books and talked with Doug Miller himself
@@ -289,20 +315,25 @@ then the girls went to bed and Blake and I watched TV (guess what we watched?)
 and it was pretty much my perfect day.  Playing and reading and cooking and
 a freshly vacuumed house?  Heaven.
 </p>
-    </div>
-    </article><article class="h-entry post-text"><header><h1 class="p-name entry-title"><a href="amy/whingeing/whinging.html" class="u-url">Whingeing</a></h1>
-        <div class="metadata">
-            <p class="byline author vcard"><span class="byline-name fn">Amy Brown</span></p>
-            <p class="dateline"><a href="amy/whingeing/whinging.html" rel="bookmark"><time class="published dt-published" datetime="2008-02-20T14:43:10-05:00" itemprop="datePublished" title="2008-02-20 14:43">2008-02-20 14:43</time></a></p>
-                <p class="commentline">
+                </div>
+            </article><article class="h-entry post-text" itemscope="itemscope" itemtype="http://schema.org/Article"><header><h1 class="p-name entry-title"><a href="amy/whingeing/whinging/" class="u-url">Whingeing</a></h1>
+                <div class="metadata">
+                    <p class="byline author vcard"><span class="byline-name fn" itemprop="author">
+                        <a href="authors/amy-brown/">Amy Brown</a>
+                    </span></p>
+            <p class="dateline">
+            <a href="amy/whingeing/whinging/" rel="bookmark">
+            <time class="published dt-published" datetime="2008-02-20T14:43:10-05:00" itemprop="datePublished" title="2008-02-20 14:43">2008-02-20 14:43</time></a>
+            </p>
+                        <p class="commentline">
         
-    <a href="amy/whingeing/whinging.html#disqus_thread" data-disqus-identifier="/amy/whingeing/whinging">Comments</a>
+    <a href="amy/whingeing/whinging/#disqus_thread" data-disqus-identifier="cache/posts/amy/whingeing/whinging.html">Comments</a>
 
 
-        </p>
+                </p>
 </div>
-    </header><div class="p-summary entry-summary">
-    <p>
+            </header><div class="p-summary entry-summary">
+                    <p>
 Pronounced "windjing", it means "complaining persistently and in a 
 peevish or irritating way".  Since so much of my blogging (and indeed
 most people's) is devoted to general or specific pissing and moaning,
@@ -350,20 +381,25 @@ mother says, "You think this is bad, you should see regular children!"
 <p>
 And that has been the whinge for today.  Thank you very much.
 </p>
-    </div>
-    </article><article class="h-entry post-text"><header><h1 class="p-name entry-title"><a href="amy/diversions/threeshows.html" class="u-url">Three Shows</a></h1>
-        <div class="metadata">
-            <p class="byline author vcard"><span class="byline-name fn">Amy Brown</span></p>
-            <p class="dateline"><a href="amy/diversions/threeshows.html" rel="bookmark"><time class="published dt-published" datetime="2008-02-19T15:10:03-05:00" itemprop="datePublished" title="2008-02-19 15:10">2008-02-19 15:10</time></a></p>
-                <p class="commentline">
+                </div>
+            </article><article class="h-entry post-text" itemscope="itemscope" itemtype="http://schema.org/Article"><header><h1 class="p-name entry-title"><a href="amy/diversions/threeshows/" class="u-url">Three Shows</a></h1>
+                <div class="metadata">
+                    <p class="byline author vcard"><span class="byline-name fn" itemprop="author">
+                        <a href="authors/amy-brown/">Amy Brown</a>
+                    </span></p>
+            <p class="dateline">
+            <a href="amy/diversions/threeshows/" rel="bookmark">
+            <time class="published dt-published" datetime="2008-02-19T15:10:03-05:00" itemprop="datePublished" title="2008-02-19 15:10">2008-02-19 15:10</time></a>
+            </p>
+                        <p class="commentline">
         
-    <a href="amy/diversions/threeshows.html#disqus_thread" data-disqus-identifier="/amy/diversions/threeshows">Comments</a>
+    <a href="amy/diversions/threeshows/#disqus_thread" data-disqus-identifier="cache/posts/amy/diversions/threeShows.html">Comments</a>
 
 
-        </p>
+                </p>
 </div>
-    </header><div class="p-summary entry-summary">
-    <p>
+            </header><div class="p-summary entry-summary">
+                    <p>
 Three TV shows worth watching: 
 <a href="http://www.nbc.com/Chuck/">Chuck</a>, which looks like
 absolute cheesy crap but it has great characters, and it's funny,
@@ -397,20 +433,25 @@ Jeez.  Apparently I am not the first person to make that connection;
 <a href="http://blogs.guardian.co.uk/tv/2008/01/time_to_relight_torchwood.html">Russell
 T. Davies was</a>.  Well, he did borrow Spike, didn't he.
 </p>
-    </div>
-    </article><article class="h-entry post-text"><header><h1 class="p-name entry-title"><a href="delphine/independence.html" class="u-url">Miss Independent</a></h1>
-        <div class="metadata">
-            <p class="byline author vcard"><span class="byline-name fn">Amy Brown</span></p>
-            <p class="dateline"><a href="delphine/independence.html" rel="bookmark"><time class="published dt-published" datetime="2008-02-16T13:27:08-05:00" itemprop="datePublished" title="2008-02-16 13:27">2008-02-16 13:27</time></a></p>
-                <p class="commentline">
+                </div>
+            </article><article class="h-entry post-text" itemscope="itemscope" itemtype="http://schema.org/Article"><header><h1 class="p-name entry-title"><a href="delphine/independence/" class="u-url">Miss Independent</a></h1>
+                <div class="metadata">
+                    <p class="byline author vcard"><span class="byline-name fn" itemprop="author">
+                        <a href="authors/amy-brown/">Amy Brown</a>
+                    </span></p>
+            <p class="dateline">
+            <a href="delphine/independence/" rel="bookmark">
+            <time class="published dt-published" datetime="2008-02-16T13:27:08-05:00" itemprop="datePublished" title="2008-02-16 13:27">2008-02-16 13:27</time></a>
+            </p>
+                        <p class="commentline">
         
-    <a href="delphine/independence.html#disqus_thread" data-disqus-identifier="/delphine/independence">Comments</a>
+    <a href="delphine/independence/#disqus_thread" data-disqus-identifier="cache/posts/delphine/independence.html">Comments</a>
 
 
-        </p>
+                </p>
 </div>
-    </header><div class="p-summary entry-summary">
-    <p>
+            </header><div class="p-summary entry-summary">
+                    <p>
 Delphine is a few months shy of turning five, and she has become
 a tremendously capable and independent little thing,  to the point
 that I am having trouble figuring out where to set limits.
@@ -448,20 +489,25 @@ grown-up has to be involved.  I am sure we will figure out the limits
 we need to set, but in the meantime it's pretty exciting to see her
 growing up.
 </p>
-    </div>
-    </article><article class="h-entry post-text"><header><h1 class="p-name entry-title"><a href="cordelia/nurseryschool.html" class="u-url">Cordelia's First Parent-Teacher Interview</a></h1>
-        <div class="metadata">
-            <p class="byline author vcard"><span class="byline-name fn">Amy Brown</span></p>
-            <p class="dateline"><a href="cordelia/nurseryschool.html" rel="bookmark"><time class="published dt-published" datetime="2008-02-16T12:14:28-05:00" itemprop="datePublished" title="2008-02-16 12:14">2008-02-16 12:14</time></a></p>
-                <p class="commentline">
+                </div>
+            </article><article class="h-entry post-text" itemscope="itemscope" itemtype="http://schema.org/Article"><header><h1 class="p-name entry-title"><a href="cordelia/nurseryschool/" class="u-url">Cordelia's First Parent-Teacher Interview</a></h1>
+                <div class="metadata">
+                    <p class="byline author vcard"><span class="byline-name fn" itemprop="author">
+                        <a href="authors/amy-brown/">Amy Brown</a>
+                    </span></p>
+            <p class="dateline">
+            <a href="cordelia/nurseryschool/" rel="bookmark">
+            <time class="published dt-published" datetime="2008-02-16T12:14:28-05:00" itemprop="datePublished" title="2008-02-16 12:14">2008-02-16 12:14</time></a>
+            </p>
+                        <p class="commentline">
         
-    <a href="cordelia/nurseryschool.html#disqus_thread" data-disqus-identifier="/cordelia/nurseryschool">Comments</a>
+    <a href="cordelia/nurseryschool/#disqus_thread" data-disqus-identifier="cache/posts/cordelia/nurserySchool.html">Comments</a>
 
 
-        </p>
+                </p>
 </div>
-    </header><div class="p-summary entry-summary">
-    <p>
+            </header><div class="p-summary entry-summary">
+                    <p>
 Due to various factors, it has come to pass that Cordelia has been 
 the subject of a parent-teacher interview several months
 before her older sister will be.  I was supposed to meet with 
@@ -531,20 +577,25 @@ And finally, I am very excited about Delphine's parent-teacher interview.
 What surprises has my oldest been hiding?  What will I learn about her?
 I can't wait.
 </p>
-    </div>
-    </article><article class="h-entry post-text"><header><h1 class="p-name entry-title"><a href="blake/tech/seachange.html" class="u-url">Now I feel like I’m behind the times.</a></h1>
-        <div class="metadata">
-            <p class="byline author vcard"><span class="byline-name fn">Blake Winton</span></p>
-            <p class="dateline"><a href="blake/tech/seachange.html" rel="bookmark"><time class="published dt-published" datetime="2008-02-15T15:03:22-05:00" itemprop="datePublished" title="2008-02-15 15:03">2008-02-15 15:03</time></a></p>
-                <p class="commentline">
+                </div>
+            </article><article class="h-entry post-text" itemscope="itemscope" itemtype="http://schema.org/Article"><header><h1 class="p-name entry-title"><a href="blake/tech/seachange/" class="u-url">Now I feel like I’m behind the times.</a></h1>
+                <div class="metadata">
+                    <p class="byline author vcard"><span class="byline-name fn" itemprop="author">
+                        <a href="authors/blake-winton/">Blake Winton</a>
+                    </span></p>
+            <p class="dateline">
+            <a href="blake/tech/seachange/" rel="bookmark">
+            <time class="published dt-published" datetime="2008-02-15T15:03:22-05:00" itemprop="datePublished" title="2008-02-15 15:03">2008-02-15 15:03</time></a>
+            </p>
+                        <p class="commentline">
         
-    <a href="blake/tech/seachange.html#disqus_thread" data-disqus-identifier="/blake/tech/seachange">Comments</a>
+    <a href="blake/tech/seachange/#disqus_thread" data-disqus-identifier="cache/posts/blake/tech/seaChange.html">Comments</a>
 
 
-        </p>
+                </p>
 </div>
-    </header><div class="p-summary entry-summary">
-    <div>
+            </header><div class="p-summary entry-summary">
+                    <div>
 <p>I was reading <a href="http://blogs.mathworks.com/images/steve/92/handout_final_icip2006.pdf">a presentation</a> about how to write better software for non-developers, and it said:</p>
 <blockquote>
 <p>I would refuse to work on any sort of collaborative software
@@ -560,20 +611,25 @@ home, either to make me feel better, or to rub my nose in it.</p>
 <p><em>Update</em>: One person uses Clear Case.  I’ve heard good things about
 Clear Case.</p>
 </div>
-    </div>
-    </article><article class="h-entry post-text"><header><h1 class="p-name entry-title"><a href="amy/diversions/ipodsad.html" class="u-url">My iPod is Trying To Kill Me</a></h1>
-        <div class="metadata">
-            <p class="byline author vcard"><span class="byline-name fn">Amy Brown</span></p>
-            <p class="dateline"><a href="amy/diversions/ipodsad.html" rel="bookmark"><time class="published dt-published" datetime="2008-02-14T14:03:06-05:00" itemprop="datePublished" title="2008-02-14 14:03">2008-02-14 14:03</time></a></p>
-                <p class="commentline">
+                </div>
+            </article><article class="h-entry post-text" itemscope="itemscope" itemtype="http://schema.org/Article"><header><h1 class="p-name entry-title"><a href="amy/diversions/ipodsad/" class="u-url">My iPod is Trying To Kill Me</a></h1>
+                <div class="metadata">
+                    <p class="byline author vcard"><span class="byline-name fn" itemprop="author">
+                        <a href="authors/amy-brown/">Amy Brown</a>
+                    </span></p>
+            <p class="dateline">
+            <a href="amy/diversions/ipodsad/" rel="bookmark">
+            <time class="published dt-published" datetime="2008-02-14T14:03:06-05:00" itemprop="datePublished" title="2008-02-14 14:03">2008-02-14 14:03</time></a>
+            </p>
+                        <p class="commentline">
         
-    <a href="amy/diversions/ipodsad.html#disqus_thread" data-disqus-identifier="/amy/diversions/ipodsad">Comments</a>
+    <a href="amy/diversions/ipodsad/#disqus_thread" data-disqus-identifier="cache/posts/amy/diversions/ipodSad.html">Comments</a>
 
 
-        </p>
+                </p>
 </div>
-    </header><div class="p-summary entry-summary">
-    <p>
+            </header><div class="p-summary entry-summary">
+                    <p>
 For some reason I am feeling a bit melancholy this afternoon,
 so I thought I would buck up and listen to some music and do
 some housework.
@@ -593,40 +649,38 @@ What's next?
 The Vampire Slayer</em>.  Kill me now.  With a big sword.
 Even though you really love me.  It's for the good of the world.
 </p>
-    </div>
-    </article><article class="h-entry post-text"><header><h1 class="p-name entry-title"><a href="delphine/pictures/feb10.html" class="u-url">Almost current.</a></h1>
-        <div class="metadata">
-            <p class="byline author vcard"><span class="byline-name fn">Blake Winton</span></p>
-            <p class="dateline"><a href="delphine/pictures/feb10.html" rel="bookmark"><time class="published dt-published" datetime="2008-02-10T21:12:00-05:00" itemprop="datePublished" title="2008-02-10 21:12">2008-02-10 21:12</time></a></p>
-                <p class="commentline">
+                </div>
+            </article><article class="h-entry post-text" itemscope="itemscope" itemtype="http://schema.org/Article"><header><h1 class="p-name entry-title"><a href="delphine/pictures/feb10/" class="u-url">Almost current.</a></h1>
+                <div class="metadata">
+                    <p class="byline author vcard"><span class="byline-name fn" itemprop="author">
+                        <a href="authors/blake-winton/">Blake Winton</a>
+                    </span></p>
+            <p class="dateline">
+            <a href="delphine/pictures/feb10/" rel="bookmark">
+            <time class="published dt-published" datetime="2008-02-10T21:12:00-05:00" itemprop="datePublished" title="2008-02-10 21:12">2008-02-10 21:12</time></a>
+            </p>
+                        <p class="commentline">
         
-    <a href="delphine/pictures/feb10.html#disqus_thread" data-disqus-identifier="/delphine/pictures/feb10">Comments</a>
+    <a href="delphine/pictures/feb10/#disqus_thread" data-disqus-identifier="cache/posts/delphine/pictures/Feb10.html">Comments</a>
 
 
-        </p>
+                </p>
 </div>
-    </header><div class="p-summary entry-summary">
-    <p>There was a new version of Sketches in my update queue the last
+            </header><div class="p-summary entry-summary">
+                    <p>There was a new version of Sketches in my update queue the last
 time I checked.  The main feature of this one is the ability to draw
 shapes, like arrows, ovals, and rectangles, as shown below.</p>
 
 <p align="center"><img src="images/delphine/2008-02-10/Sketches.jpg"><br clear="all"></p>
-    </div>
-    </article>
+                </div>
+            </article>
 </div>
-
-        <nav class="postindexpager"><ul class="pager">
-<li class="previous">
-                <a href="index-43.html" rel="prev">Newer posts</a>
-            </li>
-            <li class="next">
-                <a href="index-41.html" rel="next">Older posts</a>
-            </li>
-        </ul></nav><script>var disqus_shortname="latteblog";(function(){var a=document.createElement("script");a.async=true;a.src="https://"+disqus_shortname+".disqus.com/count.js";(document.getElementsByTagName("head")[0]||document.getElementsByTagName("body")[0]).appendChild(a)}());</script>
-</div>
-        <!--End of body content-->
-
-        <footer id="footer"><div style="margin-bottom: 12px">Contents © 2017         <a href="mailto:bwinton@latte.ca">Blake Winton</a>
+    
+        <ul class="pager postindexpager clearfix">
+<li class="previous"><a href="index-43.html" rel="prev">Newer posts</a></li>
+            <li class="next"><a href="index-41.html" rel="next">Older posts</a></li>
+        </ul>
+<script>var disqus_shortname="latteblog";(function(){var a=document.createElement("script");a.async=true;a.src="https://"+disqus_shortname+".disqus.com/count.js";(document.getElementsByTagName("head")[0]||document.getElementsByTagName("body")[0]).appendChild(a)}());</script><!--End of body content--><footer id="footer"><div style="margin-bottom: 12px">Contents © 2019         <a href="mailto:bwinton@latte.ca">Blake Winton</a>
 <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/2.5/">
 <img alt="Creative Commons License BY-NC-SA" style="border-width: 0; vertical-align: bottom" src="https://licensebuttons.net/l/by-nc-sa/2.5/88x31.png"></a>
 </div>
@@ -636,10 +690,13 @@ shapes, like arrows, ovals, and rectangles, as shown below.</p>
 </div>
 
 
-            <script src="assets/js/jquery.min.js"></script><script src="assets/js/bootstrap.min.js"></script><script src="assets/js/moment-with-locales.min.js"></script><script src="assets/js/fancydates.js"></script><script src="assets/js/jquery.colorbox-min.js"></script><script>$('a.image-reference:not(.islink) img:not(.islink)').parent().colorbox({rel:"gal",maxWidth:"100%",maxHeight:"100%",scalePhotos:true});</script><!-- fancy dates --><script>
-    moment.locale("en");
-    fancydates(0, "YYYY-MM-DD HH:mm");
-    </script><!-- end fancy dates --><script>
+            <script src="assets/js/jquery.min.js"></script><script src="assets/js/popper.min.js"></script><script src="assets/js/bootstrap.min.js"></script><script src="assets/js/baguetteBox.min.js"></script><script>
+    baguetteBox.run('div#content', {
+        ignoreClass: 'islink',
+        captions: function(element) {
+            return element.getElementsByTagName('img')[0].alt;
+    }});
+    </script><script>
   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
   m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)

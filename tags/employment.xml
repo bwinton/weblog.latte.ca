@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
-<?xml-stylesheet type="text/xsl" href="../assets/xml/rss.xsl" media="all"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Blog-O! (employment)</title><link>https://bwinton.github.io/weblog.latte.ca/</link><description></description><atom:link href="https://bwinton.github.io/weblog.latte.ca/tags/employment.xml" type="application/rss+xml" rel="self"></atom:link><language>en</language><lastBuildDate>Sun, 30 Oct 2016 01:56:55 GMT</lastBuildDate><generator>https://getnikola.com/</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>A long time ago, on a computer far far away…</title><link>https://bwinton.github.io/weblog.latte.ca/blake/employment/mozilla/sixyears.html</link><dc:creator>Blake Winton</dc:creator><description>&lt;div&gt;&lt;p&gt;Six years ago, I started contributing to Mozilla.&lt;/p&gt;
-&lt;p&gt;&lt;a href="https://bwinton.github.io/weblog.latte.ca/blake/employment/mozilla/sixyears.html"&gt;Read more…&lt;/a&gt; (4 min remaining to read)&lt;/p&gt;&lt;/div&gt;</description><category>anniversary</category><category>employment</category><category>mozilla</category><category>thunderbird</category><guid>https://bwinton.github.io/weblog.latte.ca/blake/employment/mozilla/sixyears.html</guid><pubDate>Fri, 27 Feb 2015 19:04:00 GMT</pubDate></item><item><title>Some VSS to Subversion notes.</title><link>https://bwinton.github.io/weblog.latte.ca/blake/employment/newtools.html</link><dc:creator>Blake Winton</dc:creator><description>&lt;p&gt;From various places around the net.  (Hint: Google "vss to subversion".)
-&lt;/p&gt;&lt;ul&gt;&lt;li&gt;&lt;a href="http://tortoisesvn.sourceforge.net/docs/release/TortoiseSVN_en/ch05s18.html"&gt;Lock-modify-unlock for Svn.&lt;/a&gt;  Not that that's what I think we should 
+<?xml-stylesheet type="text/xsl" href="../assets/xml/rss.xsl" media="all"?><rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/"><channel><title>Blog-O! (Posts about employment)</title><link>https://bwinton.github.io/weblog.latte.ca/</link><description></description><atom:link rel="self" href="https://bwinton.github.io/weblog.latte.ca/tags/employment.xml" type="application/rss+xml"></atom:link><language>en</language><lastBuildDate>Sat, 13 Apr 2019 21:03:16 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>A long time ago, on a computer far far away…</title><link>https://bwinton.github.io/weblog.latte.ca/blake/employment/mozilla/sixyears/</link><dc:creator>Blake Winton</dc:creator><description>&lt;div&gt;&lt;p&gt;Six years ago, I started contributing to Mozilla.&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://bwinton.github.io/weblog.latte.ca/blake/employment/mozilla/sixyears/"&gt;Read more…&lt;/a&gt; (4 min remaining to read)&lt;/p&gt;&lt;/div&gt;</description><category>anniversary</category><category>employment</category><category>mozilla</category><category>thunderbird</category><guid>https://bwinton.github.io/weblog.latte.ca/blake/employment/mozilla/sixyears/</guid><pubDate>Fri, 27 Feb 2015 19:04:00 GMT</pubDate></item><item><title>Some VSS to Subversion notes.</title><link>https://bwinton.github.io/weblog.latte.ca/blake/employment/newtools/</link><dc:creator>Blake Winton</dc:creator><description>&lt;p&gt;From various places around the net.  (Hint: Google "vss to subversion".)
+&lt;/p&gt;&lt;ul&gt;
+  &lt;li&gt;&lt;a href="http://tortoisesvn.sourceforge.net/docs/release/TortoiseSVN_en/ch05s18.html"&gt;Lock-modify-unlock for Svn.&lt;/a&gt;  Not that that's what I think we should 
     bd doing, but if I've got to sell it, and that's a sticking point, at least
     I have an answer now.&lt;/li&gt;
   &lt;li&gt;Subversion is said to be much faster.  "Our CC.NET build went from 3
@@ -27,7 +28,7 @@
 And there you go.  Management has been feeling the pain recently, and the Server 
 Team Lead seems onboard with the idea, so we might actually make the change.  
 Exciting times.
-</description><category>employment</category><guid>https://bwinton.github.io/weblog.latte.ca/blake/employment/newtools.html</guid><pubDate>Sun, 17 Sep 2006 00:00:00 GMT</pubDate></item><item><title>The times, they are a' changin...</title><link>https://bwinton.github.io/weblog.latte.ca/blake/employment/changes.html</link><dc:creator>Blake Winton</dc:creator><description>&lt;p&gt;So my role at the company is changing slightly.  Due to a manpower
+</description><category>employment</category><guid>https://bwinton.github.io/weblog.latte.ca/blake/employment/newtools/</guid><pubDate>Sun, 17 Sep 2006 00:00:00 GMT</pubDate></item><item><title>The times, they are a' changin...</title><link>https://bwinton.github.io/weblog.latte.ca/blake/employment/changes/</link><dc:creator>Blake Winton</dc:creator><description>&lt;p&gt;So my role at the company is changing slightly.  Due to a manpower
 shortage, I'll be back doing some server development.  Fortunately, I
 sort of know my way around the modules this time, and so I don't
 expect many surprises to crop up.  So, to make my life both simpler
@@ -37,7 +38,8 @@ trial run.  It hasn't been too bad so far, but I'm still kind of
 getting it set up to do the things I need it to.&lt;/p&gt;
 
 &lt;p&gt;My three main motivations for using Eclipse on this project are:
-&lt;/p&gt;&lt;ol&gt;&lt;li&gt;I need to look at C++ code at the same time as Java code, since
+&lt;/p&gt;&lt;ol&gt;
+  &lt;li&gt;I need to look at C++ code at the same time as Java code, since
       that's the only documentation we have for this project.&lt;/li&gt;
   &lt;li&gt;The savings of an IDEA license are not inconsiderable.&lt;/li&gt;
   &lt;li&gt;The co-worker who is working on it with me prefers Eclipse&lt;/li&gt;
@@ -45,7 +47,7 @@ getting it set up to do the things I need it to.&lt;/p&gt;
 Are they great reasons to switch?  Maybe, maybe not, but they're good
 enough reasons to give it a try for a while.  It helps that I have
 been using an older version of Eclipse for my Python development, so
-I'm a little familiar with it.</description><category>employment</category><guid>https://bwinton.github.io/weblog.latte.ca/blake/employment/changes.html</guid><pubDate>Wed, 16 Nov 2005 20:37:00 GMT</pubDate></item><item><title>Looking for work?</title><link>https://bwinton.github.io/weblog.latte.ca/blake/employment/hiring.html</link><dc:creator>Blake Winton</dc:creator><description>&lt;p&gt;While I'm here posting up a storm, I should mention that &lt;a href="http://www.phantomfiber.com"&gt;my company&lt;/a&gt; could really use
+I'm a little familiar with it.</description><category>employment</category><guid>https://bwinton.github.io/weblog.latte.ca/blake/employment/changes/</guid><pubDate>Wed, 16 Nov 2005 20:37:00 GMT</pubDate></item><item><title>Looking for work?</title><link>https://bwinton.github.io/weblog.latte.ca/blake/employment/hiring/</link><dc:creator>Blake Winton</dc:creator><description>&lt;p&gt;While I'm here posting up a storm, I should mention that &lt;a href="http://www.phantomfiber.com"&gt;my company&lt;/a&gt; could really use
 some good Java and C++ people, hopefully senior enough to be team
 leads on some upcoming projects, but I hear that we could use people
 of any and all skill levels.  Well, perhaps not the most junior,
@@ -53,7 +55,7 @@ unless they're really smart, and self-starters.  If you are looking
 for a job, or know anyone who is, please &lt;a href="http://www.phantomfiber.com/careers.htm"&gt;contact us&lt;/a&gt;.&lt;/p&gt;
 
 &lt;p&gt;Oh, and if you wanted to know what it was like working here, feel free
-to &lt;a href="mailto:blake@phantomfiber.com"&gt;email me&lt;/a&gt;.&lt;/p&gt;</description><category>employment</category><guid>https://bwinton.github.io/weblog.latte.ca/blake/employment/hiring.html</guid><pubDate>Fri, 15 Jul 2005 13:11:00 GMT</pubDate></item><item><title>Busy busy busy.</title><link>https://bwinton.github.io/weblog.latte.ca/blake/employment/busy.html</link><dc:creator>Blake Winton</dc:creator><description>So &lt;a href="http://www.phantomfiber.com/"&gt;my company&lt;/a&gt; &lt;a href="http://www.phantomfiber.com/"&gt;&lt;img src="http://bwinton.latte.ca/camera/weblog/PhantomP.png" align="right"&gt;&lt;/a&gt; is on the virge of getting a bunch of new work,
+to &lt;a href="mailto:blake@phantomfiber.com"&gt;email me&lt;/a&gt;.&lt;/p&gt;</description><category>employment</category><guid>https://bwinton.github.io/weblog.latte.ca/blake/employment/hiring/</guid><pubDate>Fri, 15 Jul 2005 13:11:00 GMT</pubDate></item><item><title>Busy busy busy.</title><link>https://bwinton.github.io/weblog.latte.ca/blake/employment/busy/</link><dc:creator>Blake Winton</dc:creator><description>So &lt;a href="http://www.phantomfiber.com/"&gt;my company&lt;/a&gt; &lt;a href="http://www.phantomfiber.com/"&gt;&lt;img src="http://bwinton.latte.ca/camera/weblog/PhantomP.png" align="right"&gt;&lt;/a&gt; is on the virge of getting a bunch of new work,
 which means that I might be back on client development.  But not
 quite yet, since there is a bunch of framework-ish stuff that I
 can do before that.  A couple of new games, with the necessary
@@ -64,12 +66,12 @@ since we renamed it from "PhantomGaming" to "PgCasino",
 necessating wide-sweeping changes in many source files, as well
 as different settings in the project files.  But it compiles now,
 so in theory, on Monday, I can start implementing the new games.
-Should be fun.</description><category>employment</category><guid>https://bwinton.github.io/weblog.latte.ca/blake/employment/busy.html</guid><pubDate>Fri, 07 Feb 2003 22:22:00 GMT</pubDate></item><item><title>Tool of The Man.</title><link>https://bwinton.github.io/weblog.latte.ca/blake/employment/tooloftheman.html</link><dc:creator>Blake Winton</dc:creator><description>&lt;p&gt;I notice that &lt;a href="http://crazedmonkey.com/blog/2003/01/22#w0096"&gt;Ian
+Should be fun.</description><category>employment</category><guid>https://bwinton.github.io/weblog.latte.ca/blake/employment/busy/</guid><pubDate>Fri, 07 Feb 2003 22:22:00 GMT</pubDate></item><item><title>Tool of The Man.</title><link>https://bwinton.github.io/weblog.latte.ca/blake/employment/tooloftheman/</link><dc:creator>Blake Winton</dc:creator><description>&lt;p&gt;I notice that &lt;a href="http://crazedmonkey.com/blog/2003/01/22#w0096"&gt;Ian
 Stevens&lt;/a&gt; mentioned an application that the company he works at
 recently released.&lt;br&gt;Damn, what a sell-out!  I can't wait to
 see what his next announcement will be.&lt;/p&gt;
 &lt;p&gt;&lt;small&gt;Disclaimer: I work with Ian, and he knows that I don't
-actually think he's a sell-out.&lt;/small&gt;&lt;/p&gt;</description><category>employment</category><guid>https://bwinton.github.io/weblog.latte.ca/blake/employment/tooloftheman.html</guid><pubDate>Thu, 23 Jan 2003 20:24:00 GMT</pubDate></item><item><title>Released!</title><link>https://bwinton.github.io/weblog.latte.ca/blake/employment/released.html</link><dc:creator>Blake Winton</dc:creator><description>&lt;p&gt;So &lt;a href="http://www.phantomfiber.com"&gt;the company I work
+actually think he's a sell-out.&lt;/small&gt;&lt;/p&gt;</description><category>employment</category><guid>https://bwinton.github.io/weblog.latte.ca/blake/employment/tooloftheman/</guid><pubDate>Thu, 23 Jan 2003 20:24:00 GMT</pubDate></item><item><title>Released!</title><link>https://bwinton.github.io/weblog.latte.ca/blake/employment/released/</link><dc:creator>Blake Winton</dc:creator><description>&lt;p&gt;So &lt;a href="http://www.phantomfiber.com"&gt;the company I work
 for&lt;/a&gt; has just released our &lt;a href="http://www.covers.com/covers/mobile/mobile.asp"&gt;first
 product&lt;/a&gt;.  It took a lot of time and effort to get there, but
 I think we did something good.  The main part I've been working
@@ -80,4 +82,4 @@ really designed to be used in an application, with Models, and
 Views, and asynchronous network calls.  I'm trying to use it in a
 dll with no UI, no application, and synchronous messages.  It's a
 bit of a mis-fit, but it mostly works.
-&lt;/p&gt;</description><category>employment</category><guid>https://bwinton.github.io/weblog.latte.ca/blake/employment/released.html</guid><pubDate>Thu, 16 Jan 2003 19:40:00 GMT</pubDate></item></channel></rss>
+&lt;/p&gt;</description><category>employment</category><guid>https://bwinton.github.io/weblog.latte.ca/blake/employment/released/</guid><pubDate>Thu, 16 Jan 2003 19:40:00 GMT</pubDate></item></channel></rss>

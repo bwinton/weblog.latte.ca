@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<?xml-stylesheet type="text/xsl" href="../assets/xml/rss.xsl" media="all"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Blog-O! (bzr)</title><link>https://bwinton.github.io/weblog.latte.ca/</link><description></description><atom:link href="https://bwinton.github.io/weblog.latte.ca/tags/bzr.xml" type="application/rss+xml" rel="self"></atom:link><language>en</language><lastBuildDate>Sun, 30 Oct 2016 01:56:49 GMT</lastBuildDate><generator>https://getnikola.com/</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Bzr Looms kick ass!</title><link>https://bwinton.github.io/weblog.latte.ca/blake/tech/bzr/looms.html</link><dc:creator>Blake Winton</dc:creator><description>&lt;div&gt;&lt;p&gt;On the Bazaar mailing list, &lt;a href="https://launchpad.net/bzr-loom/+announcement/218"&gt;Robert Collins wrote&lt;/a&gt;:&lt;/p&gt;
+<?xml-stylesheet type="text/xsl" href="../assets/xml/rss.xsl" media="all"?><rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/"><channel><title>Blog-O! (Posts about bzr)</title><link>https://bwinton.github.io/weblog.latte.ca/</link><description></description><atom:link rel="self" href="https://bwinton.github.io/weblog.latte.ca/tags/bzr.xml" type="application/rss+xml"></atom:link><language>en</language><lastBuildDate>Sat, 13 Apr 2019 21:03:23 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Bzr Looms kick ass!</title><link>https://bwinton.github.io/weblog.latte.ca/blake/tech/bzr/looms/</link><dc:creator>Blake Winton</dc:creator><description>&lt;div&gt;&lt;p&gt;On the Bazaar mailing list, &lt;a href="https://launchpad.net/bzr-loom/+announcement/218"&gt;Robert Collins wrote&lt;/a&gt;:&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;I’m happy to announce bzr-loom.&lt;/p&gt;
 &lt;/blockquote&gt;
@@ -13,7 +13,7 @@ became necessary, and never lose my history, and not have to deal with
 copying directories back and forth.  Heck, by adding a thread for each
 proposed future VSS checkin, I even had a reasonable history in VSS
 when it came time to check everything in.&lt;/p&gt;
-&lt;p&gt;Thank you, Robert, for making my job far more bearable.&lt;/p&gt;&lt;/div&gt;</description><category>bzr</category><category>code_freeze</category><category>loom</category><category>vss</category><guid>https://bwinton.github.io/weblog.latte.ca/blake/tech/bzr/looms.html</guid><pubDate>Thu, 13 Mar 2008 19:24:54 GMT</pubDate></item><item><title>Now I feel like I’m behind the times.</title><link>https://bwinton.github.io/weblog.latte.ca/blake/tech/seachange.html</link><dc:creator>Blake Winton</dc:creator><description>&lt;div&gt;&lt;p&gt;I was reading &lt;a href="http://blogs.mathworks.com/images/steve/92/handout_final_icip2006.pdf"&gt;a presentation&lt;/a&gt; about how to write better software for non-developers, and it said:&lt;/p&gt;
+&lt;p&gt;Thank you, Robert, for making my job far more bearable.&lt;/p&gt;&lt;/div&gt;</description><category>bzr</category><category>code_freeze</category><category>loom</category><category>vss</category><guid>https://bwinton.github.io/weblog.latte.ca/blake/tech/bzr/looms/</guid><pubDate>Thu, 13 Mar 2008 19:24:54 GMT</pubDate></item><item><title>Now I feel like I’m behind the times.</title><link>https://bwinton.github.io/weblog.latte.ca/blake/tech/seachange/</link><dc:creator>Blake Winton</dc:creator><description>&lt;div&gt;&lt;p&gt;I was reading &lt;a href="http://blogs.mathworks.com/images/steve/92/handout_final_icip2006.pdf"&gt;a presentation&lt;/a&gt; about how to write better software for non-developers, and it said:&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;I would refuse to work on any sort of collaborative software
 development project that doesn’t use version control.&lt;/p&gt;
@@ -26,7 +26,7 @@ not using Subversion at my job, but that may change someday.  In the
 meantime, leave a comment, and tell me what you’re using at work or at
 home, either to make me feel better, or to rub my nose in it.&lt;/p&gt;
 &lt;p&gt;&lt;em&gt;Update&lt;/em&gt;: One person uses Clear Case.  I’ve heard good things about
-Clear Case.&lt;/p&gt;&lt;/div&gt;</description><category>bzr</category><category>survey</category><category>svn</category><category>vss</category><category>work</category><guid>https://bwinton.github.io/weblog.latte.ca/blake/tech/seachange.html</guid><pubDate>Fri, 15 Feb 2008 20:03:22 GMT</pubDate></item><item><title>Bazaar on the iPod Touch.</title><link>https://bwinton.github.io/weblog.latte.ca/blake/tech/iTouch/bzr.html</link><dc:creator>Blake Winton</dc:creator><description>&lt;p&gt;Because I was curious, and because it has Python, I figured I'ld give it a
+Clear Case.&lt;/p&gt;&lt;/div&gt;</description><category>bzr</category><category>survey</category><category>svn</category><category>vss</category><category>work</category><guid>https://bwinton.github.io/weblog.latte.ca/blake/tech/seachange/</guid><pubDate>Fri, 15 Feb 2008 20:03:22 GMT</pubDate></item><item><title>Bazaar on the iPod Touch.</title><link>https://bwinton.github.io/weblog.latte.ca/blake/tech/iTouch/bzr/</link><dc:creator>Blake Winton</dc:creator><description>&lt;p&gt;Because I was curious, and because it has Python, I figured I'ld give it a
 try, and see what happened...&lt;br&gt;
 The results are:&lt;/p&gt;
 &lt;pre&gt;# ./bzr selftest
@@ -116,7 +116,7 @@ distutils.errors.DistutilsPlatformError: invalid Python installation: unable to 
 &lt;p&gt;Oh, yeah, and I ended up going with the iPod Touch (hereafter
 referred to as the iTouch) to replace my Palm TX.  It's not the
 perfect device, as the above stack traces show, but it's pretty good,
-and a fair bit closer than the Palm TX was.&lt;/p&gt;</description><category>bzr</category><category>itouch</category><category>python</category><guid>https://bwinton.github.io/weblog.latte.ca/blake/tech/iTouch/bzr.html</guid><pubDate>Fri, 28 Dec 2007 20:36:28 GMT</pubDate></item><item><title>Like a Thesis Defence &lt;small&gt;(or so I imagine)&lt;/small&gt;</title><link>https://bwinton.github.io/weblog.latte.ca/blake/tech/bzr/thesis.html</link><dc:creator>Blake Winton</dc:creator><description>&lt;p&gt;I’ve recently started using &lt;a href="http://bazaar-vcs.org/"&gt;bzr&lt;/a&gt; as my go-to version control
+and a fair bit closer than the Palm TX was.&lt;/p&gt;</description><category>bzr</category><category>itouch</category><category>python</category><guid>https://bwinton.github.io/weblog.latte.ca/blake/tech/iTouch/bzr/</guid><pubDate>Fri, 28 Dec 2007 20:36:28 GMT</pubDate></item><item><title>Like a Thesis Defence &lt;small&gt;(or so I imagine)&lt;/small&gt;</title><link>https://bwinton.github.io/weblog.latte.ca/blake/tech/bzr/thesis/</link><dc:creator>Blake Winton</dc:creator><description>&lt;p&gt;I’ve recently started using &lt;a href="http://bazaar-vcs.org/"&gt;bzr&lt;/a&gt; as my go-to version control
 system, and as a newbie I’ve &lt;a href="http://weblog.latte.ca/blake/tech/bzr/BazaarNotes1.html"&gt;run
 into a couple of small things&lt;/a&gt; I’ld like changed.  Fortunately, bzr
 is written in &lt;a href="http://www.python.org/"&gt;Python&lt;/a&gt;, and comes
@@ -129,7 +129,7 @@ changes (which seems to be called a bundle by the bzr folks), and
 submit it for review.  What followed was a few &lt;a href="http://thread.gmane.org/gmane.comp.version-control.bazaar-ng.general/29306/focus=29306"&gt;back-and-forths&lt;/a&gt; where various people pointed out things I hadn’t
 done correctly, or hadn’t really understood, and I fixed them.  As a
 result, I think the code in &lt;a href="http://bundlebuggy.aaronbentley.com/request/%3C46C303B4.60109%40latte.ca%3E"&gt;the most recent bundle&lt;/a&gt; is pretty good, and is certainly far
-better than anything I would have produced on my own.&lt;/p&gt;</description><category>bazaar-ng</category><category>bzr</category><category>patch</category><category>path</category><category>submit</category><category>windows</category><guid>https://bwinton.github.io/weblog.latte.ca/blake/tech/bzr/thesis.html</guid><pubDate>Wed, 15 Aug 2007 14:14:12 GMT</pubDate></item><item><title>Some notes on Bazaar</title><link>https://bwinton.github.io/weblog.latte.ca/blake/tech/bzr/bazaarnotes1.html</link><dc:creator>Blake Winton</dc:creator><description>&lt;p&gt;This started off as a reply to some email on the Bazaar-NG list,
+better than anything I would have produced on my own.&lt;/p&gt;</description><category>bazaar-ng</category><category>bzr</category><category>patch</category><category>path</category><category>submit</category><category>windows</category><guid>https://bwinton.github.io/weblog.latte.ca/blake/tech/bzr/thesis/</guid><pubDate>Wed, 15 Aug 2007 14:14:12 GMT</pubDate></item><item><title>Some notes on Bazaar</title><link>https://bwinton.github.io/weblog.latte.ca/blake/tech/bzr/bazaarnotes1/</link><dc:creator>Blake Winton</dc:creator><description>&lt;p&gt;This started off as a reply to some email on the Bazaar-NG list,
 but it sort of grew and grew, until there were a whole bunch of things
 in it, and I thought it would probably be better as a weblog entry, so
 that I could find it later.&lt;/p&gt;
@@ -142,14 +142,17 @@ Martin Pool wrote:&lt;br&gt;
 &amp;gt; then on the second machine (eg at work)&lt;br&gt;
 &amp;gt;   bzr init-repo ~/myproject&lt;br&gt;
 &amp;gt;   cd myproject&lt;br&gt;
-&amp;gt;   bzr branch sftp://user@host/~/myproject/mybranch&lt;br&gt;&lt;/p&gt;
+&amp;gt;   bzr branch sftp://user@host/~/myproject/mybranch&lt;br&gt;
+&lt;/p&gt;
 
 &lt;p&gt;As a related question, if I wanted other people to be able to download
 my branch over http, would it suffice to do something on the server
-like&lt;br&gt;&lt;br&gt;
+like&lt;br&gt;
+&lt;br&gt;
 bzr init-repo ~/www/myproject&lt;br&gt;
 cd ~/www/myproject&lt;br&gt;
-bzr branch sftp://user@host/~/myproject/mybranch&lt;br&gt;&lt;br&gt;
+bzr branch sftp://user@host/~/myproject/mybranch&lt;br&gt;
+&lt;br&gt;
 or would I need to push straight to ~/www/myproject/mybranch?
 &lt;/p&gt;
 
@@ -158,7 +161,8 @@ common problem.  On the one hand, the repo I created by following the
 steps in the first part of Martin's message&lt;br&gt;
 &amp;gt;   bzr init-repo sftp://user@host/~/myproject&lt;br&gt;
 &amp;gt;   bzr push sftp://user@host/~/myproject/mybranch&lt;br&gt;
-should be just the same as any other repository, right?&lt;br&gt;&lt;br&gt;
+should be just the same as any other repository, right?&lt;br&gt;
+&lt;br&gt;
 But, on the other hand, when I ssh to "user@host", and look in
 ~/myproject, all I see is a .bzr directory.  None of the files I
 allegedly pushed.
@@ -196,14 +200,18 @@ Using bzrlib: C:\Program Files\Bazaar\lib\library.zip\bzrlib&lt;br&gt;
 Using Bazaar configuration: C:/Documents and
 Settings/blake/Application Data/bazaar/2.0&lt;br&gt;
 Using Bazaar log file: C:\Documents and Settings\blake\My
-Documents\.bzr.log&lt;br&gt;&lt;br&gt;
+Documents\.bzr.log&lt;br&gt;
+&lt;br&gt;
 Copyright 2005, 2006, 2007 Canonical Ltd.&lt;br&gt;
-http://bazaar-vcs.org/&lt;br&gt;&lt;br&gt;
+http://bazaar-vcs.org/&lt;br&gt;
+&lt;br&gt;
 bzr comes with ABSOLUTELY NO WARRANTY.  bzr is free software, and you
 may use, modify and redistribute it under the terms of the GNU General
 Public License version 2 or later.&lt;br&gt;
-"""&lt;br&gt;&lt;br&gt;
-So, where should I put the plugins in this case?&lt;br&gt;&lt;/p&gt;
+"""&lt;br&gt;
+&lt;br&gt;
+So, where should I put the plugins in this case?&lt;br&gt;
+&lt;/p&gt;
 
 &lt;p&gt;The answer, as given on irc, seems to be "put it somewhere else and
 set the BZR_PLUGIN_PATH env variable".  Works for me, although it
@@ -211,4 +219,4 @@ would have been nice if the Windows standalone installer did that for
 me, by creating a Plugins directory under the install directory.  And
 as one final note, the BZR_PLUGIN_PATH, which it may contain spaces
 (i.e. "C:\Program Files\Bazaar\Plugins"), must not end in a trailing
-"\".&lt;/p&gt;</description><category>bazaar-ng</category><category>bzr</category><category>http</category><category>notes</category><category>plugins</category><category>push</category><category>sftp</category><category>windows</category><guid>https://bwinton.github.io/weblog.latte.ca/blake/tech/bzr/bazaarnotes1.html</guid><pubDate>Mon, 30 Jul 2007 19:06:13 GMT</pubDate></item></channel></rss>
+"\".&lt;/p&gt;</description><category>bazaar-ng</category><category>bzr</category><category>http</category><category>notes</category><category>plugins</category><category>push</category><category>sftp</category><category>windows</category><guid>https://bwinton.github.io/weblog.latte.ca/blake/tech/bzr/bazaarnotes1/</guid><pubDate>Mon, 30 Jul 2007 19:06:13 GMT</pubDate></item></channel></rss>

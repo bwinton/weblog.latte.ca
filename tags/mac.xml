@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<?xml-stylesheet type="text/xsl" href="../assets/xml/rss.xsl" media="all"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Blog-O! (mac)</title><link>https://bwinton.github.io/weblog.latte.ca/</link><description></description><atom:link href="https://bwinton.github.io/weblog.latte.ca/tags/mac.xml" type="application/rss+xml" rel="self"></atom:link><language>en</language><lastBuildDate>Sun, 30 Oct 2016 01:57:00 GMT</lastBuildDate><generator>https://getnikola.com/</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Building Thunderbird on OS X Lion (10.7) and XCode 4.2</title><link>https://bwinton.github.io/weblog.latte.ca/blake/tech/thunderbird/buildingonlion.html</link><dc:creator>Blake Winton</dc:creator><description>&lt;div&gt;&lt;p&gt;A few people recently asked me about building Thunderbird on the latest version
+<?xml-stylesheet type="text/xsl" href="../assets/xml/rss.xsl" media="all"?><rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/"><channel><title>Blog-O! (Posts about mac)</title><link>https://bwinton.github.io/weblog.latte.ca/</link><description></description><atom:link rel="self" href="https://bwinton.github.io/weblog.latte.ca/tags/mac.xml" type="application/rss+xml"></atom:link><language>en</language><lastBuildDate>Sat, 13 Apr 2019 21:03:18 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Building Thunderbird on OS X Lion (10.7) and XCode 4.2</title><link>https://bwinton.github.io/weblog.latte.ca/blake/tech/thunderbird/buildingonlion/</link><dc:creator>Blake Winton</dc:creator><description>&lt;div&gt;&lt;p&gt;A few people recently asked me about building Thunderbird on the latest version
 of Mac OS X.  Since I have it working, and to give myself a place to point to
 the next time they ask, I figured it would be a good idea to blog about it.&lt;/p&gt;
 &lt;p&gt;So, here’s my &lt;code&gt;.mozconfig&lt;/code&gt;.&lt;/p&gt;
@@ -48,10 +48,10 @@ ac_add_options --disable-jemalloc
 ac_add_options --enable-chrome-format&lt;span class="o"&gt;=&lt;/span&gt;symlink
 
 ac_add_options --with-macos-sdk&lt;span class="o"&gt;=&lt;/span&gt;/Developer/SDKs/MacOSX10.7.sdk
-ac_add_options --enable-macos-target&lt;span class="o"&gt;=&lt;/span&gt;10.7
+ac_add_options --enable-macos-target&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="m"&gt;10&lt;/span&gt;.7
 
 &lt;span class="c1"&gt;# For NSS symbols&lt;/span&gt;
-&lt;span class="nb"&gt;export&lt;/span&gt; &lt;span class="nv"&gt;MOZ_DEBUG_SYMBOLS&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;1
+&lt;span class="nb"&gt;export&lt;/span&gt; &lt;span class="nv"&gt;MOZ_DEBUG_SYMBOLS&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="m"&gt;1&lt;/span&gt;
 &lt;span class="c1"&gt;#ac_add_options --enable-debug-symbols="-gdwarf-2"&lt;/span&gt;
 
 &lt;span class="c1"&gt;#Use ccache&lt;/span&gt;
@@ -61,10 +61,12 @@ ac_add_options --enable-macos-target&lt;span class="o"&gt;=&lt;/span&gt;10.7
 &lt;span class="nv"&gt;CC&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;clang
 &lt;span class="nv"&gt;CXX&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;clang++
 &lt;/pre&gt;
-&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;p&gt;There are probably a bunch of things I don’t really need in there, so if anyone
+&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+
+&lt;p&gt;There are probably a bunch of things I don’t really need in there, so if anyone
 wants to take it, and cut it down to the minimal set, I would definitely
 appreciate it.  But in the meantime, this works for me, and will probably work
-for you, too.&lt;/p&gt;&lt;/div&gt;</description><category>mac</category><category>mozilla</category><category>thunderbird</category><guid>https://bwinton.github.io/weblog.latte.ca/blake/tech/thunderbird/buildingonlion.html</guid><pubDate>Tue, 06 Mar 2012 15:34:10 GMT</pubDate></item><item><title>More questions from a new Mac user.</title><link>https://bwinton.github.io/weblog.latte.ca/blake/tech/mac/questions1.html</link><dc:creator>Blake Winton</dc:creator><description>&lt;p&gt;Okay, y'all know by now that we've got a new Mac.  And in the grand
+for you, too.&lt;/p&gt;&lt;/div&gt;</description><category>mac</category><category>mozilla</category><category>thunderbird</category><guid>https://bwinton.github.io/weblog.latte.ca/blake/tech/thunderbird/buildingonlion/</guid><pubDate>Tue, 06 Mar 2012 15:34:10 GMT</pubDate></item><item><title>More questions from a new Mac user.</title><link>https://bwinton.github.io/weblog.latte.ca/blake/tech/mac/questions1/</link><dc:creator>Blake Winton</dc:creator><description>&lt;p&gt;Okay, y'all know by now that we've got a new Mac.  And in the grand
 tradition of new computers, I'm trying to burn up all the hard drive
 space with fun or useful utilities.  Since this is pretty much my
 first exposure to OSX, anything goes, since I probably haven't heard
@@ -80,12 +82,14 @@ is surprisingly my editor of choice.  (Well, except for this post.)  I
 was sure I'ld stick with vim, being old-skool like that, but I find I
 want to save my Terminal window for running things, and edit my source
 in an editor.&lt;/li&gt;
-&lt;/ul&gt;&lt;p&gt;Oh, and the two neat new tricks I've learned so far are:
+&lt;/ul&gt;
+
+&lt;p&gt;Oh, and the two neat new tricks I've learned so far are:
 &lt;/p&gt;&lt;ul&gt;&lt;li&gt;Command-Shift-4, then the spacebar to take a screenshot of
 just one window, and&lt;/li&gt;
 &lt;li&gt;&lt;pre&gt;sudo defaults write /Library/Preferences/com.apple.loginwindow LoginwindowText -string "My Funny Message!!!"&lt;/pre&gt;
 to print a message on the login window.&lt;/li&gt;
-&lt;/ul&gt;</description><category>mac</category><guid>https://bwinton.github.io/weblog.latte.ca/blake/tech/mac/questions1.html</guid><pubDate>Sat, 09 Sep 2006 00:39:00 GMT</pubDate></item><item><title>Some questions from a new Mac user.</title><link>https://bwinton.github.io/weblog.latte.ca/blake/tech/mac/questions0.html</link><dc:creator>Blake Winton</dc:creator><description>&lt;p&gt;Cc:-ed to the MacPython list, because they might know.&lt;/p&gt;
+&lt;/ul&gt;</description><category>mac</category><guid>https://bwinton.github.io/weblog.latte.ca/blake/tech/mac/questions1/</guid><pubDate>Sat, 09 Sep 2006 00:39:00 GMT</pubDate></item><item><title>Some questions from a new Mac user.</title><link>https://bwinton.github.io/weblog.latte.ca/blake/tech/mac/questions0/</link><dc:creator>Blake Winton</dc:creator><description>&lt;p&gt;Cc:-ed to the MacPython list, because they might know.&lt;/p&gt;
 &lt;p&gt;Hello,&lt;/p&gt;
 
 &lt;p&gt;I'm trying to get Subversion bindings for my installed version of
@@ -111,7 +115,7 @@ horribly confused?&lt;/p&gt;
 &lt;p&gt;Is there another place I should be asking these questions?&lt;/p&gt;
 
 &lt;p&gt;Thanks,&lt;br&gt;
-Blake.&lt;/p&gt;</description><category>mac</category><guid>https://bwinton.github.io/weblog.latte.ca/blake/tech/mac/questions0.html</guid><pubDate>Wed, 30 Aug 2006 16:47:00 GMT</pubDate></item><item><title>Snakes on an Apple!</title><link>https://bwinton.github.io/weblog.latte.ca/blake/tech/mac/badpun.html</link><dc:creator>Blake Winton</dc:creator><description>&lt;div&gt;&lt;p&gt;As I &lt;a href="http://weblog.latte.ca/firstpost.html"&gt;mentioned
+Blake.&lt;/p&gt;</description><category>mac</category><guid>https://bwinton.github.io/weblog.latte.ca/blake/tech/mac/questions0/</guid><pubDate>Wed, 30 Aug 2006 16:47:00 GMT</pubDate></item><item><title>Snakes on an Apple!</title><link>https://bwinton.github.io/weblog.latte.ca/blake/tech/mac/badpun/</link><dc:creator>Blake Winton</dc:creator><description>&lt;div&gt;&lt;p&gt;As I &lt;a href="http://weblog.latte.ca/firstpost.html"&gt;mentioned
 before&lt;/a&gt;, we got a Mac Mini.  It's been a bit of a pain getting it all
 set up, but I think we're finally done.  The web server is moved over,
 along with all the websites.  The mail server is moved over, and I took
@@ -233,8 +237,8 @@ finally got something which would do what I wanted.  First, the code:&lt;/p&gt;
         &lt;span class="n"&gt;y&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;urllib&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;urlopen&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt; &lt;span class="nb"&gt;str&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="bp"&gt;self&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;wUrl&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="p"&gt;)&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;read&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
         &lt;span class="n"&gt;b&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;BeautifulSoup&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt; &lt;span class="n"&gt;y&lt;/span&gt; &lt;span class="p"&gt;)&lt;/span&gt;
         &lt;span class="bp"&gt;self&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;view&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;mainFrame&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;loadHTMLString_baseURL_&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;
-            &lt;span class="sd"&gt;"""&amp;lt;html&amp;gt;&amp;lt;head&amp;gt;&amp;lt;title&amp;gt;test&amp;lt;title&amp;gt;%s&amp;lt;head&amp;gt;&lt;/span&gt;
-&lt;span class="sd"&gt;            &amp;lt;body&amp;gt;%s&amp;lt;body&amp;gt;&amp;lt;html&amp;gt;"""&lt;/span&gt; &lt;span class="o"&gt;%&lt;/span&gt;
+            &lt;span class="sd"&gt;"""&amp;amp;lt;html&amp;amp;gt;&amp;amp;lt;head&amp;amp;gt;&amp;amp;lt;title&amp;amp;gt;test&amp;amp;lt;title&amp;amp;gt;%s&amp;amp;lt;head&amp;amp;gt;&lt;/span&gt;
+&lt;span class="sd"&gt;            &amp;amp;lt;body&amp;amp;gt;%s&amp;amp;lt;body&amp;amp;gt;&amp;amp;lt;html&amp;amp;gt;"""&lt;/span&gt; &lt;span class="o"&gt;%&lt;/span&gt;
             &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;""&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;join&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt; &lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="nb"&gt;str&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;x&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="k"&gt;for&lt;/span&gt; &lt;span class="n"&gt;x&lt;/span&gt; &lt;span class="ow"&gt;in&lt;/span&gt; &lt;span class="n"&gt;b&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;head&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;findAll&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt; &lt;span class="s1"&gt;'style'&lt;/span&gt; &lt;span class="p"&gt;)]),&lt;/span&gt; &lt;span class="n"&gt;b&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;body&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;div&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;div&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;div&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;div&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;div&lt;/span&gt;&lt;span class="p"&gt;),&lt;/span&gt;
             &lt;span class="bp"&gt;self&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;wUrl&lt;/span&gt; &lt;span class="p"&gt;)&lt;/span&gt;
 
@@ -260,7 +264,7 @@ finally got something which would do what I wanted.  First, the code:&lt;/p&gt;
     &lt;span class="n"&gt;AppHelper&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;runEventLoop&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;installInterrupt&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="bp"&gt;True&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
 
 
-&lt;span class="k"&gt;if&lt;/span&gt; &lt;span class="n"&gt;__name__&lt;/span&gt; &lt;span class="o"&gt;==&lt;/span&gt; &lt;span class="s2"&gt;"__main__"&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+&lt;span class="k"&gt;if&lt;/span&gt; &lt;span class="vm"&gt;__name__&lt;/span&gt; &lt;span class="o"&gt;==&lt;/span&gt; &lt;span class="s2"&gt;"__main__"&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
     &lt;span class="k"&gt;while&lt;/span&gt; &lt;span class="bp"&gt;True&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
         &lt;span class="k"&gt;if&lt;/span&gt; &lt;span class="n"&gt;os&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;stat&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt; &lt;span class="s2"&gt;"/dev/console"&lt;/span&gt; &lt;span class="p"&gt;)[&lt;/span&gt;&lt;span class="n"&gt;stat&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;ST_UID&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt; &lt;span class="o"&gt;==&lt;/span&gt; &lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
             &lt;span class="c1"&gt;# If the console is owned by root, start the app.&lt;/span&gt;
@@ -269,7 +273,9 @@ finally got something which would do what I wanted.  First, the code:&lt;/p&gt;
             &lt;span class="c1"&gt;# Otherwise, sleep until it is.&lt;/span&gt;
             &lt;span class="n"&gt;time&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;sleep&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt; &lt;span class="mi"&gt;10&lt;/span&gt; &lt;span class="p"&gt;)&lt;/span&gt;
 &lt;/pre&gt;
-&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;p&gt;&lt;br&gt;
+&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+
+&lt;p&gt;&lt;br&gt;
 And next, the launchd plist file that keeps it running:&lt;/p&gt;
 &lt;table class="codehilitetable"&gt;&lt;tr&gt;&lt;td class="linenos"&gt;&lt;div class="linenodiv"&gt;&lt;pre&gt; 1
  2
@@ -298,39 +304,41 @@ And next, the launchd plist file that keeps it running:&lt;/p&gt;
 25
 26
 27
-28&lt;/pre&gt;&lt;/div&gt;&lt;/td&gt;&lt;td class="code"&gt;&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="cp"&gt;&amp;lt;?xml version="1.0" encoding="UTF-8"?&amp;gt;&lt;/span&gt;
-&lt;span class="cp"&gt;&amp;lt;!DOCTYPE plist PUBLIC "-//Apple Computer//DTD PLIST 1.0//EN"&lt;/span&gt;
-&lt;span class="cp"&gt;"http://www.apple.&lt;/span&gt;
-&lt;span class="cp"&gt;com/DTDs/PropertyList-1.0.dtd"&amp;gt;&lt;/span&gt;
-&lt;span class="nt"&gt;&amp;lt;plist&lt;/span&gt; &lt;span class="na"&gt;version=&lt;/span&gt;&lt;span class="s"&gt;"1.0"&lt;/span&gt;&lt;span class="nt"&gt;&amp;gt;&lt;/span&gt;
-&lt;span class="nt"&gt;&amp;lt;dict&amp;gt;&lt;/span&gt;  
-    &lt;span class="nt"&gt;&amp;lt;key&amp;gt;&lt;/span&gt;Label&lt;span class="nt"&gt;&amp;lt;/key&amp;gt;&lt;/span&gt;
-    &lt;span class="nt"&gt;&amp;lt;string&amp;gt;&lt;/span&gt;ca.latte.update.login.weather&lt;span class="nt"&gt;&amp;lt;/string&amp;gt;&lt;/span&gt;
-    &lt;span class="nt"&gt;&amp;lt;key&amp;gt;&lt;/span&gt;ProgramArguments&lt;span class="nt"&gt;&amp;lt;/key&amp;gt;&lt;/span&gt;
-    &lt;span class="nt"&gt;&amp;lt;array&amp;gt;&lt;/span&gt; 
-        &lt;span class="nt"&gt;&amp;lt;string&amp;gt;&lt;/span&gt;/path/to/test.py&lt;span class="nt"&gt;&amp;lt;/string&amp;gt;&lt;/span&gt;
-    &lt;span class="nt"&gt;&amp;lt;/array&amp;gt;&lt;/span&gt;
-    &lt;span class="nt"&gt;&amp;lt;key&amp;gt;&lt;/span&gt;ServiceDescription&lt;span class="nt"&gt;&amp;lt;/key&amp;gt;&lt;/span&gt;
-    &lt;span class="nt"&gt;&amp;lt;string&amp;gt;&lt;/span&gt;A program to pop up the weather in a box&lt;span class="nt"&gt;&amp;lt;/string&amp;gt;&lt;/span&gt;
-    &lt;span class="nt"&gt;&amp;lt;key&amp;gt;&lt;/span&gt;LowPriorityIO&lt;span class="nt"&gt;&amp;lt;/key&amp;gt;&lt;/span&gt;
-    &lt;span class="nt"&gt;&amp;lt;true/&amp;gt;&lt;/span&gt;
-    &lt;span class="nt"&gt;&amp;lt;key&amp;gt;&lt;/span&gt;RunAtLoad&lt;span class="nt"&gt;&amp;lt;/key&amp;gt;&lt;/span&gt;
-    &lt;span class="nt"&gt;&amp;lt;true/&amp;gt;&lt;/span&gt;
-    &lt;span class="nt"&gt;&amp;lt;key&amp;gt;&lt;/span&gt;OnDemand&lt;span class="nt"&gt;&amp;lt;/key&amp;gt;&lt;/span&gt;
-    &lt;span class="nt"&gt;&amp;lt;false/&amp;gt;&lt;/span&gt;
-    &lt;span class="nt"&gt;&amp;lt;key&amp;gt;&lt;/span&gt;Nice&lt;span class="nt"&gt;&amp;lt;/key&amp;gt;&lt;/span&gt;
-    &lt;span class="nt"&gt;&amp;lt;integer&amp;gt;&lt;/span&gt;1&lt;span class="nt"&gt;&amp;lt;/integer&amp;gt;&lt;/span&gt;
-    &lt;span class="nt"&gt;&amp;lt;key&amp;gt;&lt;/span&gt;StandardOutPath&lt;span class="nt"&gt;&amp;lt;/key&amp;gt;&lt;/span&gt;
-    &lt;span class="nt"&gt;&amp;lt;string&amp;gt;&lt;/span&gt;/path/to/loginWeather.out&lt;span class="nt"&gt;&amp;lt;/string&amp;gt;&lt;/span&gt;
-    &lt;span class="nt"&gt;&amp;lt;key&amp;gt;&lt;/span&gt;StandardErrorPath&lt;span class="nt"&gt;&amp;lt;/key&amp;gt;&lt;/span&gt;
-    &lt;span class="nt"&gt;&amp;lt;string&amp;gt;&lt;/span&gt;/path/to/loginWeather.err&lt;span class="nt"&gt;&amp;lt;/string&amp;gt;&lt;/span&gt;
-&lt;span class="nt"&gt;&amp;lt;/dict&amp;gt;&lt;/span&gt;
-&lt;span class="nt"&gt;&amp;lt;/plist&amp;gt;&lt;/span&gt;
+28&lt;/pre&gt;&lt;/div&gt;&lt;/td&gt;&lt;td class="code"&gt;&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="ni"&gt;&amp;amp;lt;&lt;/span&gt;?xml version="1.0" encoding="UTF-8"?&lt;span class="ni"&gt;&amp;amp;gt;&lt;/span&gt;
+&lt;span class="ni"&gt;&amp;amp;lt;&lt;/span&gt;!DOCTYPE plist PUBLIC "-//Apple Computer//DTD PLIST 1.0//EN"
+"http://www.apple.
+com/DTDs/PropertyList-1.0.dtd"&lt;span class="ni"&gt;&amp;amp;gt;&lt;/span&gt;
+&lt;span class="ni"&gt;&amp;amp;lt;&lt;/span&gt;plist version="1.0"&lt;span class="ni"&gt;&amp;amp;gt;&lt;/span&gt;
+&lt;span class="ni"&gt;&amp;amp;lt;&lt;/span&gt;dict&lt;span class="ni"&gt;&amp;amp;gt;&lt;/span&gt;  
+    &lt;span class="ni"&gt;&amp;amp;lt;&lt;/span&gt;key&lt;span class="ni"&gt;&amp;amp;gt;&lt;/span&gt;Label&lt;span class="ni"&gt;&amp;amp;lt;&lt;/span&gt;/key&lt;span class="ni"&gt;&amp;amp;gt;&lt;/span&gt;
+    &lt;span class="ni"&gt;&amp;amp;lt;&lt;/span&gt;string&lt;span class="ni"&gt;&amp;amp;gt;&lt;/span&gt;ca.latte.update.login.weather&lt;span class="ni"&gt;&amp;amp;lt;&lt;/span&gt;/string&lt;span class="ni"&gt;&amp;amp;gt;&lt;/span&gt;
+    &lt;span class="ni"&gt;&amp;amp;lt;&lt;/span&gt;key&lt;span class="ni"&gt;&amp;amp;gt;&lt;/span&gt;ProgramArguments&lt;span class="ni"&gt;&amp;amp;lt;&lt;/span&gt;/key&lt;span class="ni"&gt;&amp;amp;gt;&lt;/span&gt;
+    &lt;span class="ni"&gt;&amp;amp;lt;&lt;/span&gt;array&lt;span class="ni"&gt;&amp;amp;gt;&lt;/span&gt; 
+        &lt;span class="ni"&gt;&amp;amp;lt;&lt;/span&gt;string&lt;span class="ni"&gt;&amp;amp;gt;&lt;/span&gt;/path/to/test.py&lt;span class="ni"&gt;&amp;amp;lt;&lt;/span&gt;/string&lt;span class="ni"&gt;&amp;amp;gt;&lt;/span&gt;
+    &lt;span class="ni"&gt;&amp;amp;lt;&lt;/span&gt;/array&lt;span class="ni"&gt;&amp;amp;gt;&lt;/span&gt;
+    &lt;span class="ni"&gt;&amp;amp;lt;&lt;/span&gt;key&lt;span class="ni"&gt;&amp;amp;gt;&lt;/span&gt;ServiceDescription&lt;span class="ni"&gt;&amp;amp;lt;&lt;/span&gt;/key&lt;span class="ni"&gt;&amp;amp;gt;&lt;/span&gt;
+    &lt;span class="ni"&gt;&amp;amp;lt;&lt;/span&gt;string&lt;span class="ni"&gt;&amp;amp;gt;&lt;/span&gt;A program to pop up the weather in a box&lt;span class="ni"&gt;&amp;amp;lt;&lt;/span&gt;/string&lt;span class="ni"&gt;&amp;amp;gt;&lt;/span&gt;
+    &lt;span class="ni"&gt;&amp;amp;lt;&lt;/span&gt;key&lt;span class="ni"&gt;&amp;amp;gt;&lt;/span&gt;LowPriorityIO&lt;span class="ni"&gt;&amp;amp;lt;&lt;/span&gt;/key&lt;span class="ni"&gt;&amp;amp;gt;&lt;/span&gt;
+    &lt;span class="ni"&gt;&amp;amp;lt;&lt;/span&gt;true/&lt;span class="ni"&gt;&amp;amp;gt;&lt;/span&gt;
+    &lt;span class="ni"&gt;&amp;amp;lt;&lt;/span&gt;key&lt;span class="ni"&gt;&amp;amp;gt;&lt;/span&gt;RunAtLoad&lt;span class="ni"&gt;&amp;amp;lt;&lt;/span&gt;/key&lt;span class="ni"&gt;&amp;amp;gt;&lt;/span&gt;
+    &lt;span class="ni"&gt;&amp;amp;lt;&lt;/span&gt;true/&lt;span class="ni"&gt;&amp;amp;gt;&lt;/span&gt;
+    &lt;span class="ni"&gt;&amp;amp;lt;&lt;/span&gt;key&lt;span class="ni"&gt;&amp;amp;gt;&lt;/span&gt;OnDemand&lt;span class="ni"&gt;&amp;amp;lt;&lt;/span&gt;/key&lt;span class="ni"&gt;&amp;amp;gt;&lt;/span&gt;
+    &lt;span class="ni"&gt;&amp;amp;lt;&lt;/span&gt;false/&lt;span class="ni"&gt;&amp;amp;gt;&lt;/span&gt;
+    &lt;span class="ni"&gt;&amp;amp;lt;&lt;/span&gt;key&lt;span class="ni"&gt;&amp;amp;gt;&lt;/span&gt;Nice&lt;span class="ni"&gt;&amp;amp;lt;&lt;/span&gt;/key&lt;span class="ni"&gt;&amp;amp;gt;&lt;/span&gt;
+    &lt;span class="ni"&gt;&amp;amp;lt;&lt;/span&gt;integer&lt;span class="ni"&gt;&amp;amp;gt;&lt;/span&gt;1&lt;span class="ni"&gt;&amp;amp;lt;&lt;/span&gt;/integer&lt;span class="ni"&gt;&amp;amp;gt;&lt;/span&gt;
+    &lt;span class="ni"&gt;&amp;amp;lt;&lt;/span&gt;key&lt;span class="ni"&gt;&amp;amp;gt;&lt;/span&gt;StandardOutPath&lt;span class="ni"&gt;&amp;amp;lt;&lt;/span&gt;/key&lt;span class="ni"&gt;&amp;amp;gt;&lt;/span&gt;
+    &lt;span class="ni"&gt;&amp;amp;lt;&lt;/span&gt;string&lt;span class="ni"&gt;&amp;amp;gt;&lt;/span&gt;/path/to/loginWeather.out&lt;span class="ni"&gt;&amp;amp;lt;&lt;/span&gt;/string&lt;span class="ni"&gt;&amp;amp;gt;&lt;/span&gt;
+    &lt;span class="ni"&gt;&amp;amp;lt;&lt;/span&gt;key&lt;span class="ni"&gt;&amp;amp;gt;&lt;/span&gt;StandardErrorPath&lt;span class="ni"&gt;&amp;amp;lt;&lt;/span&gt;/key&lt;span class="ni"&gt;&amp;amp;gt;&lt;/span&gt;
+    &lt;span class="ni"&gt;&amp;amp;lt;&lt;/span&gt;string&lt;span class="ni"&gt;&amp;amp;gt;&lt;/span&gt;/path/to/loginWeather.err&lt;span class="ni"&gt;&amp;amp;lt;&lt;/span&gt;/string&lt;span class="ni"&gt;&amp;amp;gt;&lt;/span&gt;
+&lt;span class="ni"&gt;&amp;amp;lt;&lt;/span&gt;/dict&lt;span class="ni"&gt;&amp;amp;gt;&lt;/span&gt;
+&lt;span class="ni"&gt;&amp;amp;lt;&lt;/span&gt;/plist&lt;span class="ni"&gt;&amp;amp;gt;&lt;/span&gt;
 &lt;/pre&gt;
-&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;p&gt;And there you have it.  Way cooler than my previous attempt, which tried
+&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+
+&lt;p&gt;And there you have it.  Way cooler than my previous attempt, which tried
 to write using &lt;tt&gt;sudo defaults write
 /Library/Preferences/com.apple.loginwindow LoginwindowText -string
 "parsed weather info here"&lt;/tt&gt;.&lt;/p&gt;
 &lt;p&gt;If any of you have any questions, I'ld love to answer them as best I
 can. Just comment, and I'll see what I can dig up.  By which I mean
-email Dethe, and ask him.  ;)&lt;/p&gt;&lt;/div&gt;</description><category>mac</category><guid>https://bwinton.github.io/weblog.latte.ca/blake/tech/mac/badpun.html</guid><pubDate>Fri, 25 Aug 2006 02:23:00 GMT</pubDate></item></channel></rss>
+email Dethe, and ask him.  ;)&lt;/p&gt;&lt;/div&gt;</description><category>mac</category><guid>https://bwinton.github.io/weblog.latte.ca/blake/tech/mac/badpun/</guid><pubDate>Fri, 25 Aug 2006 02:23:00 GMT</pubDate></item></channel></rss>

@@ -1,6 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
-<?xml-stylesheet type="text/xsl" href="../assets/xml/rss.xsl" media="all"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Blog-O! (reply)</title><link>https://bwinton.github.io/weblog.latte.ca/</link><description></description><atom:link href="https://bwinton.github.io/weblog.latte.ca/tags/reply.xml" type="application/rss+xml" rel="self"></atom:link><language>en</language><lastBuildDate>Sun, 30 Oct 2016 01:56:58 GMT</lastBuildDate><generator>https://getnikola.com/</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Does the Future Belong to Javascript?</title><link>https://bwinton.github.io/weblog.latte.ca/blake/tech/javascript.html</link><dc:creator>Blake Winton</dc:creator><description>&lt;div style="width:6.25em; height:6.25em; float:right"&gt;
-  &lt;svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 100 100"&gt;&lt;text fill="red" x="50" y="97" text-anchor="middle" font-size="120"&gt;J&lt;/text&gt;&lt;/svg&gt;&lt;/div&gt;
+<?xml-stylesheet type="text/xsl" href="../assets/xml/rss.xsl" media="all"?><rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/"><channel><title>Blog-O! (Posts about reply)</title><link>https://bwinton.github.io/weblog.latte.ca/</link><description></description><atom:link rel="self" href="https://bwinton.github.io/weblog.latte.ca/tags/reply.xml" type="application/rss+xml"></atom:link><language>en</language><lastBuildDate>Sat, 13 Apr 2019 21:03:22 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Does the Future Belong to Javascript?</title><link>https://bwinton.github.io/weblog.latte.ca/blake/tech/javascript/</link><dc:creator>Blake Winton</dc:creator><description>&lt;div style="width:6.25em; height:6.25em; float:right"&gt;
+  &lt;svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 100 100"&gt;
+    &lt;text fill="red" x="50" y="97" text-anchor="middle" font-size="120"&gt;J&lt;/text&gt;
+  &lt;/svg&gt;
+&lt;/div&gt;
 &lt;p&gt;This started off as a response to &lt;a href="http://pyre.third-bit.com/blog/archives/971.html"&gt;Greg's post&lt;/a&gt;,
 but grew too long, so I figured I'ld put it here instead.&lt;/p&gt;
 
@@ -48,4 +51,4 @@ Any suggestions?
 &lt;p&gt;And while I'm here, that red "J" was the best thing I could come up with
 for a Javascript logo, after extensive web searching.  (There's a reason
 I'm a programmer, and not a graphics person.)  Anyone seen anything
-better?&lt;/p&gt;</description><category>greg_wilson</category><category>iphone</category><category>javascript</category><category>reply</category><category>svg</category><guid>https://bwinton.github.io/weblog.latte.ca/blake/tech/javascript.html</guid><pubDate>Wed, 13 Jun 2007 17:32:00 GMT</pubDate></item></channel></rss>
+better?&lt;/p&gt;</description><category>greg_wilson</category><category>iphone</category><category>javascript</category><category>reply</category><category>svg</category><guid>https://bwinton.github.io/weblog.latte.ca/blake/tech/javascript/</guid><pubDate>Wed, 13 Jun 2007 17:32:00 GMT</pubDate></item></channel></rss>

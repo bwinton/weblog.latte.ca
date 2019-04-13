@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<?xml-stylesheet type="text/xsl" href="../assets/xml/rss.xsl" media="all"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Blog-O! (switching)</title><link>https://bwinton.github.io/weblog.latte.ca/</link><description></description><atom:link href="https://bwinton.github.io/weblog.latte.ca/tags/switching.xml" type="application/rss+xml" rel="self"></atom:link><language>en</language><lastBuildDate>Sun, 30 Oct 2016 01:57:00 GMT</lastBuildDate><generator>https://getnikola.com/</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Home again…</title><link>https://bwinton.github.io/weblog.latte.ca/blake/tech/vim.html</link><dc:creator>Blake Winton</dc:creator><description>&lt;div&gt;&lt;p&gt;A while ago, I downloaded Aquamacs, an emacs port for OSX, and tried
+<?xml-stylesheet type="text/xsl" href="../assets/xml/rss.xsl" media="all"?><rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/"><channel><title>Blog-O! (Posts about switching)</title><link>https://bwinton.github.io/weblog.latte.ca/</link><description></description><atom:link rel="self" href="https://bwinton.github.io/weblog.latte.ca/tags/switching.xml" type="application/rss+xml"></atom:link><language>en</language><lastBuildDate>Sat, 13 Apr 2019 21:03:19 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Home again…</title><link>https://bwinton.github.io/weblog.latte.ca/blake/tech/vim/</link><dc:creator>Blake Winton</dc:creator><description>&lt;div&gt;&lt;p&gt;A while ago, I downloaded Aquamacs, an emacs port for OSX, and tried
 to switch to it as my default editor.  I mainly did it because I
 wanted an editor I could add functionality to, à la &lt;a href="http://steve.yegge.googlepages.com/effective-emacs"&gt;Steve Yegge&lt;/a&gt;.  I used it for a
 while, and got fairly proficient at it.  There were a lot of things
@@ -37,22 +37,22 @@ blog-check function in vim/python:&lt;/p&gt;
 16
 17
 18&lt;/pre&gt;&lt;/div&gt;&lt;/td&gt;&lt;td class="code"&gt;&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="k"&gt;function&lt;/span&gt;&lt;span class="p"&gt;!&lt;/span&gt; BlogCheck&lt;span class="p"&gt;()&lt;/span&gt;
-  &lt;span class="k"&gt;python&lt;/span&gt; &lt;span class="o"&gt;&amp;lt;&amp;lt;&lt;/span&gt; END
-&lt;span class="p"&gt;:::&lt;/span&gt;&lt;span class="n"&gt;python&lt;/span&gt;
-&lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="nn"&gt;re&lt;/span&gt;
-&lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="nn"&gt;vim&lt;/span&gt;
-&lt;span class="n"&gt;pattern&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;re&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;compile&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt; &lt;span class="s2"&gt;r"\s"&lt;/span&gt; &lt;span class="p"&gt;)&lt;/span&gt;
-&lt;span class="n"&gt;count&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="mi"&gt;0&lt;/span&gt;
-&lt;span class="k"&gt;for&lt;/span&gt; &lt;span class="n"&gt;line&lt;/span&gt; &lt;span class="ow"&gt;in&lt;/span&gt; &lt;span class="n"&gt;vim&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;current&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;buffer&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
-  &lt;span class="n"&gt;line&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;pattern&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;sub&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt; &lt;span class="s2"&gt;""&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;line&lt;/span&gt; &lt;span class="p"&gt;)&lt;/span&gt;
-  &lt;span class="n"&gt;count&lt;/span&gt; &lt;span class="o"&gt;+=&lt;/span&gt; &lt;span class="nb"&gt;len&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;line&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
-&lt;span class="k"&gt;if&lt;/span&gt; &lt;span class="n"&gt;count&lt;/span&gt; &lt;span class="o"&gt;&amp;lt;=&lt;/span&gt; &lt;span class="mi"&gt;5000&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
-  &lt;span class="n"&gt;message&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s2"&gt;"Okay so far"&lt;/span&gt;
-&lt;span class="k"&gt;else&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
-  &lt;span class="n"&gt;message&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s2"&gt;"Dude, too long"&lt;/span&gt;
-&lt;span class="k"&gt;print&lt;/span&gt; &lt;span class="s2"&gt;"&lt;/span&gt;&lt;span class="si"&gt;%s&lt;/span&gt;&lt;span class="s2"&gt;:  &lt;/span&gt;&lt;span class="si"&gt;%d&lt;/span&gt;&lt;span class="s2"&gt; chars, &lt;/span&gt;&lt;span class="si"&gt;%d&lt;/span&gt;&lt;span class="s2"&gt; words"&lt;/span&gt; &lt;span class="o"&gt;%&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;message&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;count&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;count&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="mi"&gt;5&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
-&lt;span class="p"&gt;:::&lt;/span&gt;&lt;span class="n"&gt;vim&lt;/span&gt;
+  &lt;span class="k"&gt;python&lt;/span&gt; &lt;span class="o"&gt;&amp;amp;&lt;/span&gt;&lt;span class="n"&gt;lt&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;&lt;span class="o"&gt;&amp;amp;&lt;/span&gt;&lt;span class="n"&gt;lt&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt; &lt;span class="n"&gt;END&lt;/span&gt;
+&lt;span class="p"&gt;:&lt;/span&gt;::python
+import &lt;span class="k"&gt;re&lt;/span&gt;
+import &lt;span class="k"&gt;vim&lt;/span&gt;
+pattern &lt;span class="p"&gt;=&lt;/span&gt; &lt;span class="k"&gt;re&lt;/span&gt;.&lt;span class="k"&gt;compile&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt; &lt;span class="k"&gt;r&lt;/span&gt;&lt;span class="s2"&gt;"\s"&lt;/span&gt; &lt;span class="p"&gt;)&lt;/span&gt;
+count &lt;span class="p"&gt;=&lt;/span&gt; &lt;span class="m"&gt;0&lt;/span&gt;
+&lt;span class="k"&gt;for&lt;/span&gt; line &lt;span class="k"&gt;in&lt;/span&gt; &lt;span class="k"&gt;vim&lt;/span&gt;.current.buffer:
+  line &lt;span class="p"&gt;=&lt;/span&gt; pattern.sub&lt;span class="p"&gt;(&lt;/span&gt; &lt;span class="s2"&gt;""&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; line &lt;span class="p"&gt;)&lt;/span&gt;
+  count &lt;span class="p"&gt;+=&lt;/span&gt; len&lt;span class="p"&gt;(&lt;/span&gt;line&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="k"&gt;if&lt;/span&gt; count &amp;amp;&lt;span class="k"&gt;lt&lt;/span&gt;;&lt;span class="p"&gt;=&lt;/span&gt; &lt;span class="m"&gt;5000&lt;/span&gt;:
+  message &lt;span class="p"&gt;=&lt;/span&gt; &lt;span class="s2"&gt;"Okay so far"&lt;/span&gt;
+&lt;span class="k"&gt;else&lt;/span&gt;:
+  message &lt;span class="p"&gt;=&lt;/span&gt; &lt;span class="s2"&gt;"Dude, too long"&lt;/span&gt;
+print &lt;span class="s2"&gt;"%s:  %d chars, %d words"&lt;/span&gt; % &lt;span class="p"&gt;(&lt;/span&gt;message&lt;span class="p"&gt;,&lt;/span&gt; count&lt;span class="p"&gt;,&lt;/span&gt; count/&lt;span class="m"&gt;5&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="p"&gt;:&lt;/span&gt;::&lt;span class="k"&gt;vim&lt;/span&gt;
 END
 &lt;span class="k"&gt;endfunction&lt;/span&gt;
 &lt;/pre&gt;
-&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/div&gt;</description><category>editors</category><category>emacs</category><category>lisp</category><category>python</category><category>switching</category><category>vim</category><guid>https://bwinton.github.io/weblog.latte.ca/blake/tech/vim.html</guid><pubDate>Mon, 02 Feb 2009 20:48:35 GMT</pubDate></item></channel></rss>
+&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/div&gt;</description><category>editors</category><category>emacs</category><category>lisp</category><category>python</category><category>switching</category><category>vim</category><guid>https://bwinton.github.io/weblog.latte.ca/blake/tech/vim/</guid><pubDate>Mon, 02 Feb 2009 20:48:35 GMT</pubDate></item></channel></rss>

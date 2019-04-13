@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<?xml-stylesheet type="text/xsl" href="../assets/xml/rss.xsl" media="all"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Blog-O! (Scott “Woody” Wood)</title><link>https://bwinton.github.io/weblog.latte.ca/</link><description></description><atom:link href="https://bwinton.github.io/weblog.latte.ca/authors/scott-woody-wood.xml" type="application/rss+xml" rel="self"></atom:link><language>en</language><lastBuildDate>Sun, 30 Oct 2016 01:56:50 GMT</lastBuildDate><generator>https://getnikola.com/</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Morning folks.</title><link>https://bwinton.github.io/weblog.latte.ca/woody/interview.html</link><dc:creator>Scott “Woody” Wood</dc:creator><description>&lt;p&gt;Well, the header on this page says "Thoughts from the Brown-Winton
+<?xml-stylesheet type="text/xsl" href="../assets/xml/rss.xsl" media="all"?><rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/"><channel><title>Blog-O! (Posts by Scott “Woody” Wood)</title><link>https://bwinton.github.io/weblog.latte.ca/</link><description></description><atom:link rel="self" href="https://bwinton.github.io/weblog.latte.ca/authors/scott-woody-wood.xml" type="application/rss+xml"></atom:link><language>en</language><lastBuildDate>Sat, 13 Apr 2019 21:03:26 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Morning folks.</title><link>https://bwinton.github.io/weblog.latte.ca/woody/interview/</link><dc:creator>Scott “Woody” Wood</dc:creator><description>&lt;p&gt;Well, the header on this page says "Thoughts from the Brown-Winton
 household".  I suppose a loose interpretation of that would be that any and
 all info on this site is being broadcast from a server at said
 "Brown-Winton household".  With that in mind, lets consider me the roving
@@ -33,13 +33,13 @@ I judt kind of start a new one when the urge strikes me (as opposed to
 Blake's keyboard).  Second, well, I always allow for another point when
 saying how many I'll have.  That leaves room in case anything comes to mind
 while prattling off the first. In this instance, there is no second, but if
-there had been, I'd have been set.&lt;/p&gt;</description><category>woody</category><guid>https://bwinton.github.io/weblog.latte.ca/woody/interview.html</guid><pubDate>Wed, 30 Jul 2003 15:28:00 GMT</pubDate></item><item><title>Even shorter update</title><link>https://bwinton.github.io/weblog.latte.ca/woody/working2.html</link><dc:creator>Scott “Woody” Wood</dc:creator><description>&lt;p&gt;I had my days mixed up last week.  All day Tuesday, I thought it was
+there had been, I'd have been set.&lt;/p&gt;</description><category>woody</category><guid>https://bwinton.github.io/weblog.latte.ca/woody/interview/</guid><pubDate>Wed, 30 Jul 2003 15:28:00 GMT</pubDate></item><item><title>Even shorter update</title><link>https://bwinton.github.io/weblog.latte.ca/woody/working2/</link><dc:creator>Scott “Woody” Wood</dc:creator><description>&lt;p&gt;I had my days mixed up last week.  All day Tuesday, I thought it was
 Wednesday.  All day Wednesday, I thought it was Thursday.  Needless to say,
 my meeting was supposed to be Thursday night and Friday was my first day of
 work.  Good thing, too.  I got a free day out of the deal.  Also, now that
 I have a 9-5, Monday to Friday job, I might even be able to keep track of
 what day of the week it is!
-&lt;/p&gt;</description><category>woody</category><guid>https://bwinton.github.io/weblog.latte.ca/woody/working2.html</guid><pubDate>Sun, 23 Feb 2003 20:37:00 GMT</pubDate></item><item><title>Short update folks from our BC office today, folks.</title><link>https://bwinton.github.io/weblog.latte.ca/woody/working.html</link><dc:creator>Scott “Woody” Wood</dc:creator><description>&lt;p&gt;I got a job.  I start tomorrow.  Network and Systems administration for
+&lt;/p&gt;</description><category>woody</category><guid>https://bwinton.github.io/weblog.latte.ca/woody/working2/</guid><pubDate>Sun, 23 Feb 2003 20:37:00 GMT</pubDate></item><item><title>Short update folks from our BC office today, folks.</title><link>https://bwinton.github.io/weblog.latte.ca/woody/working/</link><dc:creator>Scott “Woody” Wood</dc:creator><description>&lt;p&gt;I got a job.  I start tomorrow.  Network and Systems administration for
 a small software development shop.  Sound familiar anyone?  Funny enough,
 much like my interview with my previous employer, I was welcomed to the
 interview for this job by a big dog.  I like that.&lt;/p&gt;
@@ -51,4 +51,4 @@ been there for a day and a half, they called the other guy and told him not
 to bother coming in.  The position has been filled.  Woah.&lt;/p&gt;
 
 &lt;p&gt;Anyway, I have a web design contract I have to round out for a client
-by 7 this eve, so I think I should step off and be productive.&lt;/p&gt;</description><category>woody</category><guid>https://bwinton.github.io/weblog.latte.ca/woody/working.html</guid><pubDate>Wed, 19 Feb 2003 21:08:00 GMT</pubDate></item></channel></rss>
+by 7 this eve, so I think I should step off and be productive.&lt;/p&gt;</description><category>woody</category><guid>https://bwinton.github.io/weblog.latte.ca/woody/working/</guid><pubDate>Wed, 19 Feb 2003 21:08:00 GMT</pubDate></item></channel></rss>

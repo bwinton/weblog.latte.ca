@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<?xml-stylesheet type="text/xsl" href="../assets/xml/rss.xsl" media="all"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Blog-O! (future)</title><link>https://bwinton.github.io/weblog.latte.ca/</link><description></description><atom:link href="https://bwinton.github.io/weblog.latte.ca/tags/future.xml" type="application/rss+xml" rel="self"></atom:link><language>en</language><lastBuildDate>Sun, 30 Oct 2016 01:56:59 GMT</lastBuildDate><generator>https://getnikola.com/</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Thunderbird’s UI Directions.</title><link>https://bwinton.github.io/weblog.latte.ca/blake/tech/thunderbird/uifutures.html</link><dc:creator>Blake Winton</dc:creator><description>&lt;div&gt;&lt;p&gt;&lt;link rel="stylesheet" type="text/css" href="https://bwinton.github.io/weblog.latte.ca/blake/tech/thunderbird/bugzilla.css"&gt;&lt;script type="text/javascript" src="https://bwinton.github.io/weblog.latte.ca/blake/tech/thunderbird/bugzilla.js"&gt;&lt;/script&gt;&lt;/p&gt;
+<?xml-stylesheet type="text/xsl" href="../assets/xml/rss.xsl" media="all"?><rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/"><channel><title>Blog-O! (Posts about future)</title><link>https://bwinton.github.io/weblog.latte.ca/</link><description></description><atom:link rel="self" href="https://bwinton.github.io/weblog.latte.ca/tags/future.xml" type="application/rss+xml"></atom:link><language>en</language><lastBuildDate>Sat, 13 Apr 2019 21:03:26 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Thunderbird’s UI Directions.</title><link>https://bwinton.github.io/weblog.latte.ca/blake/tech/thunderbird/uifutures/</link><dc:creator>Blake Winton</dc:creator><description>&lt;div&gt;&lt;p&gt;&lt;link rel="stylesheet" type="text/css" href="https://bwinton.github.io/weblog.latte.ca/blake/tech/thunderbird/uifutures/bugzilla.css"&gt;
+&lt;script type="text/javascript" src="https://bwinton.github.io/weblog.latte.ca/blake/tech/thunderbird/uifutures/bugzilla.js"&gt;&lt;/script&gt;&lt;/p&gt;
 &lt;p&gt;On a &lt;a href="http://breakingtheegg.tumblr.com/post/10525122364/cooking-up-some-tabs-on-top-for-thunderbird"&gt;previous post&lt;/a&gt; in a different blog, some commenters were asking us if we were
 considering doing things that we have planned to do for a while now, and
 that led me to realize that I haven’t been communicating the future of
@@ -23,7 +24,8 @@ Thunderbird is to let you focus on the content that’s important to you, and
 not be distracted by things you don’t care about.  Hopefully most of the
 changes I talk about here will help that, and as a side benefit also help
 to give us a more unique style.&lt;/p&gt;
-&lt;ul&gt;&lt;li&gt;
+&lt;ul&gt;
+&lt;li&gt;
 &lt;p&gt;A simple thing that will make the product nicer to use is just to line
   things up.  We’re all over the place, and it should be fairly simple to
   make this better.  There are a couple of bugs that are related to this,
@@ -104,6 +106,7 @@ to give us a more unique style.&lt;/p&gt;
   3, and 4, and 5…  (No bug for this one either, again, because removals
   are sensitive things.)&lt;/p&gt;
 &lt;/li&gt;
-&lt;/ul&gt;&lt;p&gt;See &lt;a href="https://bwinton.github.io/weblog.latte.ca/blake/tech/thunderbird/uifutures.html" class="all-bugs"&gt;all the bugs&lt;/a&gt; in one big list.&lt;/p&gt;
+&lt;/ul&gt;
+&lt;p&gt;See &lt;a href="https://bwinton.github.io/weblog.latte.ca/blake/tech/thunderbird/uifutures/" class="all-bugs"&gt;all the bugs&lt;/a&gt; in one big list.&lt;/p&gt;
 &lt;p&gt;&lt;small&gt;Many thank-yous to &lt;a href="http://blog.mozilla.com/faaborg/"&gt;Alex Faaborg&lt;/a&gt;, and &lt;a href="http://www.areweprettyyet.com/"&gt;areweprettyyet&lt;/a&gt; for the code to link the bugs, and the
-basis of the styling to make them stand out.&lt;/small&gt;&lt;/p&gt;&lt;/div&gt;</description><category>future</category><category>mozilla</category><category>thunderbird</category><category>ui</category><guid>https://bwinton.github.io/weblog.latte.ca/blake/tech/thunderbird/uifutures.html</guid><pubDate>Tue, 27 Sep 2011 15:02:38 GMT</pubDate></item></channel></rss>
+basis of the styling to make them stand out.&lt;/small&gt;&lt;/p&gt;&lt;/div&gt;</description><category>future</category><category>mozilla</category><category>thunderbird</category><category>ui</category><guid>https://bwinton.github.io/weblog.latte.ca/blake/tech/thunderbird/uifutures/</guid><pubDate>Tue, 27 Sep 2011 15:02:38 GMT</pubDate></item></channel></rss>

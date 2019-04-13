@@ -1,20 +1,22 @@
 <?xml version="1.0" encoding="utf-8"?>
-<?xml-stylesheet type="text/xsl" href="../assets/xml/rss.xsl" media="all"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Blog-O! (cake)</title><link>https://bwinton.github.io/weblog.latte.ca/</link><description></description><atom:link href="https://bwinton.github.io/weblog.latte.ca/tags/cake.xml" type="application/rss+xml" rel="self"></atom:link><language>en</language><lastBuildDate>Sun, 30 Oct 2016 01:56:59 GMT</lastBuildDate><generator>https://getnikola.com/</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>The Tour de Dufflet</title><link>https://bwinton.github.io/weblog.latte.ca/blake/random/biking/tourdedufflet2008.html</link><dc:creator>Blake Winton</dc:creator><description>&lt;div&gt;&lt;p&gt;This year, &lt;a href="http://arbrown.latte.ca/"&gt;Amy&lt;/a&gt; and
+<?xml-stylesheet type="text/xsl" href="../assets/xml/rss.xsl" media="all"?><rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/"><channel><title>Blog-O! (Posts about cake)</title><link>https://bwinton.github.io/weblog.latte.ca/</link><description></description><atom:link rel="self" href="https://bwinton.github.io/weblog.latte.ca/tags/cake.xml" type="application/rss+xml"></atom:link><language>en</language><lastBuildDate>Sat, 13 Apr 2019 21:03:20 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>The Tour de Dufflet</title><link>https://bwinton.github.io/weblog.latte.ca/blake/random/biking/tourdedufflet2008/</link><dc:creator>Blake Winton</dc:creator><description>&lt;div&gt;&lt;p&gt;This year, &lt;a href="http://arbrown.latte.ca/"&gt;Amy&lt;/a&gt; and
 &lt;a href="http://bwinton.latte.ca"&gt;I&lt;/a&gt; decided to try the &lt;a href="http://tourdedufflet.blogspot.com/"&gt;Tour de
 Dufflet&lt;/a&gt;.  Okay, so it was more like
 &lt;em&gt;I&lt;/em&gt; decided to try the Tour de Dufflet, and convinced Amy to come along
 with me, but that’s the same, right?  I took a few
-notes&lt;sup id="fnref:route1"&gt;&lt;a class="footnote-ref" href="https://bwinton.github.io/weblog.latte.ca/blake/random/biking/tourdedufflet2008.html#fn:route1" rel="footnote"&gt;1&lt;/a&gt;&lt;/sup&gt;&lt;sup id="fnref:route2"&gt;&lt;a class="footnote-ref" href="https://bwinton.github.io/weblog.latte.ca/blake/random/biking/tourdedufflet2008.html#fn:route2" rel="footnote"&gt;2&lt;/a&gt;&lt;/sup&gt;&lt;sup id="fnref:route3"&gt;&lt;a class="footnote-ref" href="https://bwinton.github.io/weblog.latte.ca/blake/random/biking/tourdedufflet2008.html#fn:route3" rel="footnote"&gt;3&lt;/a&gt;&lt;/sup&gt;&lt;sup id="fnref:route4"&gt;&lt;a class="footnote-ref" href="https://bwinton.github.io/weblog.latte.ca/blake/random/biking/tourdedufflet2008.html#fn:route4" rel="footnote"&gt;4&lt;/a&gt;&lt;/sup&gt;&lt;sup id="fnref:route5"&gt;&lt;a class="footnote-ref" href="https://bwinton.github.io/weblog.latte.ca/blake/random/biking/tourdedufflet2008.html#fn:route5" rel="footnote"&gt;5&lt;/a&gt;&lt;/sup&gt; on which routes would
+notes&lt;sup id="fnref:route1"&gt;&lt;a class="footnote-ref" href="https://bwinton.github.io/weblog.latte.ca/blake/random/biking/tourdedufflet2008/#fn:route1" rel="footnote"&gt;1&lt;/a&gt;&lt;/sup&gt;&lt;sup id="fnref:route2"&gt;&lt;a class="footnote-ref" href="https://bwinton.github.io/weblog.latte.ca/blake/random/biking/tourdedufflet2008/#fn:route2" rel="footnote"&gt;2&lt;/a&gt;&lt;/sup&gt;&lt;sup id="fnref:route3"&gt;&lt;a class="footnote-ref" href="https://bwinton.github.io/weblog.latte.ca/blake/random/biking/tourdedufflet2008/#fn:route3" rel="footnote"&gt;3&lt;/a&gt;&lt;/sup&gt;&lt;sup id="fnref:route4"&gt;&lt;a class="footnote-ref" href="https://bwinton.github.io/weblog.latte.ca/blake/random/biking/tourdedufflet2008/#fn:route4" rel="footnote"&gt;4&lt;/a&gt;&lt;/sup&gt;&lt;sup id="fnref:route5"&gt;&lt;a class="footnote-ref" href="https://bwinton.github.io/weblog.latte.ca/blake/random/biking/tourdedufflet2008/#fn:route5" rel="footnote"&gt;5&lt;/a&gt;&lt;/sup&gt; on which routes would
 be less likely to have a lot of traffic on them, and after my parents
 picked up Delphine and Cordelia, we set out.  46 km and 4 hours later,
 we arrived home, tired, sore, and full.  I think it was mostly a
 success, although Amy was certainly done having fun by the time we were
 on the third leg.  The stats were as follows:&lt;/p&gt;
-&lt;ul&gt;&lt;li&gt;Average speed: 15.0 km/h&lt;/li&gt;
+&lt;ul&gt;
+&lt;li&gt;Average speed: 15.0 km/h&lt;/li&gt;
 &lt;li&gt;Total distance: 46.18 km&lt;/li&gt;
 &lt;li&gt;Biking time: 3:04:32&lt;/li&gt;
 &lt;li&gt;Total time (including eating cake): around 4 hours.&lt;/li&gt;
-&lt;/ul&gt;&lt;p&gt;I’ve got to say, I’m really pretty impressed with how well Amy did.  To
+&lt;/ul&gt;
+&lt;p&gt;I’ve got to say, I’m really pretty impressed with how well Amy did.  To
 go from virtually no bicycling to a 46 km trek (and a 46 km trek with a
 self-admitted speed freak) is something that a lot of people would skip
 out on, or avoid, but she went for it, and went faster than I hoped she
@@ -24,19 +26,22 @@ throughout the year, she might just go for it, to see if it’s gotten any
 easier.  (I’m hoping to do it next year, as you might have guessed from
 the url of the post.)&lt;/p&gt;
 &lt;div class="footnote"&gt;
-&lt;hr&gt;&lt;ol&gt;&lt;li id="fn:route1"&gt;
-&lt;p&gt;The notes went as follows: “Forman -&amp;gt; Eglinton -&amp;gt; Mt. Pleasant -&amp;gt; Sheldrake -&amp;gt; Yonge”, &lt;a class="footnote-backref" href="https://bwinton.github.io/weblog.latte.ca/blake/random/biking/tourdedufflet2008.html#fnref:route1" rev="footnote" title="Jump back to footnote 1 in the text"&gt;↩&lt;/a&gt;&lt;/p&gt;
+&lt;hr&gt;
+&lt;ol&gt;
+&lt;li id="fn:route1"&gt;
+&lt;p&gt;The notes went as follows: “Forman -&amp;gt; Eglinton -&amp;gt; Mt. Pleasant -&amp;gt; Sheldrake -&amp;gt; Yonge”, &lt;a class="footnote-backref" href="https://bwinton.github.io/weblog.latte.ca/blake/random/biking/tourdedufflet2008/#fnref:route1" rev="footnote" title="Jump back to footnote 1 in the text"&gt;↩&lt;/a&gt;&lt;/p&gt;
 &lt;/li&gt;
 &lt;li id="fn:route2"&gt;
-&lt;p&gt;“Craighurst -&amp;gt; Rosewell -&amp;gt; Default -&amp;gt; Bloor -&amp;gt; Manning -&amp;gt; Queen” &lt;a class="footnote-backref" href="https://bwinton.github.io/weblog.latte.ca/blake/random/biking/tourdedufflet2008.html#fnref:route2" rev="footnote" title="Jump back to footnote 2 in the text"&gt;↩&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;“Craighurst -&amp;gt; Rosewell -&amp;gt; Default -&amp;gt; Bloor -&amp;gt; Manning -&amp;gt; Queen” &lt;a class="footnote-backref" href="https://bwinton.github.io/weblog.latte.ca/blake/random/biking/tourdedufflet2008/#fnref:route2" rev="footnote" title="Jump back to footnote 2 in the text"&gt;↩&lt;/a&gt;&lt;/p&gt;
 &lt;/li&gt;
 &lt;li id="fn:route3"&gt;
-&lt;p&gt;“??? (Ended up being Strachan) -&amp;gt; Martin Goodman Trail -&amp;gt; Woodbine” &lt;a class="footnote-backref" href="https://bwinton.github.io/weblog.latte.ca/blake/random/biking/tourdedufflet2008.html#fnref:route3" rev="footnote" title="Jump back to footnote 3 in the text"&gt;↩&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;“??? (Ended up being Strachan) -&amp;gt; Martin Goodman Trail -&amp;gt; Woodbine” &lt;a class="footnote-backref" href="https://bwinton.github.io/weblog.latte.ca/blake/random/biking/tourdedufflet2008/#fnref:route3" rev="footnote" title="Jump back to footnote 3 in the text"&gt;↩&lt;/a&gt;&lt;/p&gt;
 &lt;/li&gt;
 &lt;li id="fn:route4"&gt;
-&lt;p&gt;“Dundas -&amp;gt; Greenwood -&amp;gt; Strathmore -&amp;gt; Donlands -&amp;gt; Mt. Pleasant -&amp;gt; Laird -&amp;gt; Broadway -&amp;gt; Yonge” &lt;a class="footnote-backref" href="https://bwinton.github.io/weblog.latte.ca/blake/random/biking/tourdedufflet2008.html#fnref:route4" rev="footnote" title="Jump back to footnote 4 in the text"&gt;↩&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;“Dundas -&amp;gt; Greenwood -&amp;gt; Strathmore -&amp;gt; Donlands -&amp;gt; Mt. Pleasant -&amp;gt; Laird -&amp;gt; Broadway -&amp;gt; Yonge” &lt;a class="footnote-backref" href="https://bwinton.github.io/weblog.latte.ca/blake/random/biking/tourdedufflet2008/#fnref:route4" rev="footnote" title="Jump back to footnote 4 in the text"&gt;↩&lt;/a&gt;&lt;/p&gt;
 &lt;/li&gt;
 &lt;li id="fn:route5"&gt;
-&lt;p&gt;and finally “Yonge -&amp;gt; Broadway -&amp;gt; Redpath -&amp;gt; Soudan -&amp;gt; Forman” to get home again. &lt;a class="footnote-backref" href="https://bwinton.github.io/weblog.latte.ca/blake/random/biking/tourdedufflet2008.html#fnref:route5" rev="footnote" title="Jump back to footnote 5 in the text"&gt;↩&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;and finally “Yonge -&amp;gt; Broadway -&amp;gt; Redpath -&amp;gt; Soudan -&amp;gt; Forman” to get home again. &lt;a class="footnote-backref" href="https://bwinton.github.io/weblog.latte.ca/blake/random/biking/tourdedufflet2008/#fnref:route5" rev="footnote" title="Jump back to footnote 5 in the text"&gt;↩&lt;/a&gt;&lt;/p&gt;
 &lt;/li&gt;
-&lt;/ol&gt;&lt;/div&gt;&lt;/div&gt;</description><category>bike</category><category>cake</category><category>tour</category><guid>https://bwinton.github.io/weblog.latte.ca/blake/random/biking/tourdedufflet2008.html</guid><pubDate>Mon, 23 Jun 2008 23:42:05 GMT</pubDate></item></channel></rss>
+&lt;/ol&gt;
+&lt;/div&gt;&lt;/div&gt;</description><category>bike</category><category>cake</category><category>tour</category><guid>https://bwinton.github.io/weblog.latte.ca/blake/random/biking/tourdedufflet2008/</guid><pubDate>Mon, 23 Jun 2008 23:42:05 GMT</pubDate></item></channel></rss>

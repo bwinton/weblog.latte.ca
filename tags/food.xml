@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<?xml-stylesheet type="text/xsl" href="../assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:dc="http://purl.org/dc/elements/1.1/"><channel><title>Blog-O! (food)</title><link>https://bwinton.github.io/weblog.latte.ca/</link><description></description><atom:link type="application/rss+xml" href="https://bwinton.github.io/weblog.latte.ca/tags/food.xml" rel="self"></atom:link><language>en</language><lastBuildDate>Sat, 24 Dec 2016 21:12:51 GMT</lastBuildDate><generator>https://getnikola.com/</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Awesome First Day of March Break</title><link>https://bwinton.github.io/weblog.latte.ca/amy/diversions/goodday2.html</link><dc:creator>Amy Brown</dc:creator><description>&lt;div&gt;&lt;p&gt;Today started early for me - I was awake at around 6:30.  Awake
+<?xml-stylesheet type="text/xsl" href="../assets/xml/rss.xsl" media="all"?><rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/"><channel><title>Blog-O! (Posts about food)</title><link>https://bwinton.github.io/weblog.latte.ca/</link><description></description><atom:link rel="self" href="https://bwinton.github.io/weblog.latte.ca/tags/food.xml" type="application/rss+xml"></atom:link><language>en</language><lastBuildDate>Sat, 13 Apr 2019 21:03:17 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Awesome First Day of March Break</title><link>https://bwinton.github.io/weblog.latte.ca/amy/diversions/goodday2/</link><dc:creator>Amy Brown</dc:creator><description>&lt;div&gt;&lt;p&gt;Today started early for me - I was awake at around 6:30.  Awake
 of my own voilition!  No-one jumped on me.  I
 lay in bed, too hot because we haven't adjusted our bedding
 to account for spring (why is it that even though the thermostat
@@ -87,7 +87,7 @@ on the cryptic with Baba.)&lt;/p&gt;
 &lt;p&gt;It was one of those lovely, chilled out, sunny, fun days with
 lots of good friends (good, smart friends!) and family, cute kids and
 yummy food.  Food and company - I think those are my favourite
-things. At least for today.&lt;/p&gt;&lt;/div&gt;</description><category>food</category><category>fread pudding</category><category>recipe</category><guid>https://bwinton.github.io/weblog.latte.ca/amy/diversions/goodday2.html</guid><pubDate>Mon, 16 Mar 2009 02:01:19 GMT</pubDate></item><item><title>Conversations with Kindergarteners</title><link>https://bwinton.github.io/weblog.latte.ca/delphine/conversations/apples.html</link><dc:creator>Amy Brown</dc:creator><description>&lt;p&gt;
+things. At least for today.&lt;/p&gt;&lt;/div&gt;</description><category>food</category><category>fread pudding</category><category>recipe</category><guid>https://bwinton.github.io/weblog.latte.ca/amy/diversions/goodday2/</guid><pubDate>Mon, 16 Mar 2009 02:01:19 GMT</pubDate></item><item><title>Conversations with Kindergarteners</title><link>https://bwinton.github.io/weblog.latte.ca/delphine/conversations/apples/</link><dc:creator>Amy Brown</dc:creator><description>&lt;p&gt;
 The other day I went with Delphine's class on a field trip
 to the Toronto Botanical Gardens.  I was put in charge of
 Delphine; Annie, with long blonde hair in a messy ponytail and
@@ -122,14 +122,7 @@ they didn't have any at the grocery store yesterday.
 Isn't that a weird conversation to have with four and five
 year-olds?  I guess that's when you get when you live in
 a neighbourhood of foodies.
-&lt;/p&gt;</description><category>conversations</category><category>delphine</category><category>food</category><guid>https://bwinton.github.io/weblog.latte.ca/delphine/conversations/apples.html</guid><pubDate>Sun, 14 Oct 2007 19:43:31 GMT</pubDate></item><item><title>Lazy Man's Homemade Ice Cream</title><link>https://bwinton.github.io/weblog.latte.ca/amy/food/lazyicecream.html</link><dc:creator>Amy Brown</dc:creator><description>&lt;p&gt;
-Put some frozen blueberries in a bowl.  (I like
-&lt;a href="http://www.europesbest.com/"&gt;Europe's Best&lt;/a&gt;
-if you can get them.)  Pour in just enough whipping
-cream to almost cover the berries.  Wait a few seconds
-and the berries will freeze the cream -- voila, quick 
-frosty goodness that's almost good for you!
-&lt;/p&gt;</description><category>food</category><guid>https://bwinton.github.io/weblog.latte.ca/amy/food/lazyicecream.html</guid><pubDate>Wed, 09 May 2007 21:28:58 GMT</pubDate></item><item><title>God's Own Chocolate Cake</title><link>https://bwinton.github.io/weblog.latte.ca/amy/food/chocolatecake.html</link><dc:creator>Amy Brown</dc:creator><description>&lt;p&gt;
+&lt;/p&gt;</description><category>conversations</category><category>delphine</category><category>food</category><guid>https://bwinton.github.io/weblog.latte.ca/delphine/conversations/apples/</guid><pubDate>Sun, 14 Oct 2007 19:43:31 GMT</pubDate></item><item><title>God's Own Chocolate Cake</title><link>https://bwinton.github.io/weblog.latte.ca/amy/food/chocolatecake/</link><dc:creator>Amy Brown</dc:creator><description>&lt;p&gt;
 This is the world's best chocolate cake recipe -- it's
 really easy, it always
 comes out moist and rich and delicious, and best of all it
@@ -165,7 +158,8 @@ Cool.
 &lt;/p&gt;&lt;p&gt;
 If desired (!), frost cake.
 &lt;/p&gt;
-&lt;hr width="40%"&gt;&lt;h4&gt;Cocoa Butter Frosting&lt;br&gt;
+&lt;hr width="40%"&gt;
+&lt;h4&gt;Cocoa Butter Frosting&lt;br&gt;
 from the Betty Crocker Cookbook, 1969 Edition&lt;/h4&gt;
 &lt;p&gt;
 Here's a frosting recipe I've used, with similarly
@@ -183,7 +177,14 @@ smooth and of spreading consistency.
 &lt;/p&gt;&lt;p&gt;
 Fills and frosts two 8- or 9-inch layers or frosts
 a 13x9 inch cake.
-&lt;/p&gt;</description><category>food</category><guid>https://bwinton.github.io/weblog.latte.ca/amy/food/chocolatecake.html</guid><pubDate>Wed, 09 May 2007 21:28:58 GMT</pubDate></item><item><title>How To Feed Your Baby (When You Can Barely Feed Yourself): Six Month Edition</title><link>https://bwinton.github.io/weblog.latte.ca/amy/unsolicited%20advice/food/howtofeedyourbaby.html</link><dc:creator>Amy Brown</dc:creator><description>&lt;p&gt;
+&lt;/p&gt;</description><category>food</category><guid>https://bwinton.github.io/weblog.latte.ca/amy/food/chocolatecake/</guid><pubDate>Wed, 09 May 2007 21:28:58 GMT</pubDate></item><item><title>Lazy Man's Homemade Ice Cream</title><link>https://bwinton.github.io/weblog.latte.ca/amy/food/lazyicecream/</link><dc:creator>Amy Brown</dc:creator><description>&lt;p&gt;
+Put some frozen blueberries in a bowl.  (I like
+&lt;a href="http://www.europesbest.com/"&gt;Europe's Best&lt;/a&gt;
+if you can get them.)  Pour in just enough whipping
+cream to almost cover the berries.  Wait a few seconds
+and the berries will freeze the cream -- voila, quick 
+frosty goodness that's almost good for you!
+&lt;/p&gt;</description><category>food</category><guid>https://bwinton.github.io/weblog.latte.ca/amy/food/lazyicecream/</guid><pubDate>Wed, 09 May 2007 21:28:58 GMT</pubDate></item><item><title>How To Feed Your Baby (When You Can Barely Feed Yourself): Six Month Edition</title><link>https://bwinton.github.io/weblog.latte.ca/amy/unsolicited%20advice/food/howtofeedyourbaby/</link><dc:creator>Amy Brown</dc:creator><description>&lt;p&gt;
 Once upon a time, a long time ago, when Delphine was still
 a baby, some friends wondered how a person who can barely
 manage to feed themselves without a takeout menu
@@ -295,7 +296,8 @@ own hands.
 How to make homemade baby food?  This is the
 easiest way: 
 &lt;/p&gt;
-&lt;ol&gt;&lt;li&gt;open a bag of frozen peas&lt;/li&gt;
+&lt;ol&gt;
+&lt;li&gt;open a bag of frozen peas&lt;/li&gt;
 &lt;li&gt;dump some in the beaker that came with your
 hand blender (You do have a hand blender, don't
 you?  How do you make milkshakes?)&lt;/li&gt;
@@ -306,7 +308,8 @@ you?  How do you make milkshakes?)&lt;/li&gt;
     a little bit soft&lt;/li&gt;
 &lt;li&gt;drain off the water&lt;/li&gt;
 &lt;li&gt;blend the peas into mush&lt;/li&gt;
-&lt;/ol&gt;&lt;p&gt;
+&lt;/ol&gt;
+&lt;p&gt;
 Put some in a bowl, wait until it cools, serve.
 Put the rest into those little one-cup or half-cup
 Gladware containers and freeze.  (Everyone says to
@@ -329,14 +332,16 @@ pan on the stove, if you have a clean pan and your
 stove works.
 &lt;/p&gt;&lt;p&gt;
 Get someone else to clean up, you have done enough.
-&lt;/p&gt;</description><category>food</category><guid>https://bwinton.github.io/weblog.latte.ca/amy/unsolicited%20advice/food/howtofeedyourbaby.html</guid><pubDate>Wed, 12 Jul 2006 02:04:00 GMT</pubDate></item><item><title>New Food Chart</title><link>https://bwinton.github.io/weblog.latte.ca/amy/unsolicited%20advice/food/chart.html</link><dc:creator>Amy Brown</dc:creator><description>Here's a chart I made up for myself, based mainly on
+&lt;/p&gt;</description><category>food</category><guid>https://bwinton.github.io/weblog.latte.ca/amy/unsolicited%20advice/food/howtofeedyourbaby/</guid><pubDate>Wed, 12 Jul 2006 02:04:00 GMT</pubDate></item><item><title>New Food Chart</title><link>https://bwinton.github.io/weblog.latte.ca/amy/unsolicited%20advice/food/chart/</link><dc:creator>Amy Brown</dc:creator><description>Here's a chart I made up for myself, based mainly on
 information from the book &lt;em&gt;Better Baby Food&lt;/em&gt;.
 I stuck it up on my bulletin board in the kitchen and
 I have been using it as a checklist to figure out what
 Cordelia has tried so far, and what she's ready for
 next.
 
-&lt;table cellpadding="4"&gt;&lt;tr&gt;&lt;td valign="top"&gt;
+&lt;table cellpadding="4"&gt;
+&lt;tr&gt;
+&lt;td valign="top"&gt;
  &lt;strong&gt;6 months&lt;/strong&gt;
 &lt;/td&gt;
 &lt;td&gt;
@@ -347,7 +352,8 @@ next.
  sweet potato&lt;br&gt;
  peaches&lt;br&gt;
  squash&lt;br&gt;
- potato&lt;br&gt;&lt;/td&gt;
+ potato&lt;br&gt;
+&lt;/td&gt;
 &lt;td valign="top"&gt;
  apples&lt;br&gt;
  bananas&lt;br&gt;
@@ -356,8 +362,10 @@ next.
  plums&lt;br&gt;
  avocadoes&lt;br&gt;
  peas&lt;br&gt;
- broccoli&lt;br&gt;&lt;/td&gt;
-&lt;/tr&gt;&lt;tr&gt;&lt;td valign="top"&gt;
+ broccoli&lt;br&gt;
+&lt;/td&gt;
+&lt;/tr&gt;&lt;tr&gt;
+&lt;td valign="top"&gt;
  &lt;strong&gt;7 months&lt;/strong&gt;
 &lt;/td&gt;
 &lt;td valign="top"&gt;
@@ -378,14 +386,17 @@ next.
  lentils&lt;br&gt;
  chickpeas&lt;br&gt;
  toast&lt;br&gt;
- crackers&lt;br&gt;&lt;/td&gt;
-&lt;/tr&gt;&lt;tr&gt;&lt;td valign="top"&gt;
+ crackers&lt;br&gt;
+&lt;/td&gt;
+&lt;/tr&gt;&lt;tr&gt;
+&lt;td valign="top"&gt;
  &lt;strong&gt;9 months&lt;/strong&gt;
 &lt;/td&gt;
 &lt;td&gt;
  milk
 &lt;/td&gt;
-&lt;/tr&gt;&lt;tr&gt;&lt;td valign="top"&gt;
+&lt;/tr&gt;&lt;tr&gt;
+&lt;td valign="top"&gt;
  &lt;strong&gt;1 year&lt;/strong&gt;
 &lt;/td&gt;
 &lt;td&gt;
@@ -394,7 +405,8 @@ next.
  egg white&lt;br&gt;
  honey
 &lt;/td&gt;
-&lt;/tr&gt;&lt;/table&gt;</description><category>food</category><guid>https://bwinton.github.io/weblog.latte.ca/amy/unsolicited%20advice/food/chart.html</guid><pubDate>Wed, 12 Jul 2006 02:04:00 GMT</pubDate></item><item><title>Three Food Things</title><link>https://bwinton.github.io/weblog.latte.ca/amy/food/threethings.html</link><dc:creator>Amy Brown</dc:creator><description>&lt;p&gt;
+&lt;/tr&gt;
+&lt;/table&gt;</description><category>food</category><guid>https://bwinton.github.io/weblog.latte.ca/amy/unsolicited%20advice/food/chart/</guid><pubDate>Wed, 12 Jul 2006 02:04:00 GMT</pubDate></item><item><title>Three Food Things</title><link>https://bwinton.github.io/weblog.latte.ca/amy/food/threethings/</link><dc:creator>Amy Brown</dc:creator><description>&lt;p&gt;
 &lt;strong&gt;1. Square Meatballs.&lt;/strong&gt;
 &lt;/p&gt;&lt;p&gt;
 I got this from &lt;em&gt;Better Baby Food&lt;/em&gt;, which is my favourite cookbook
@@ -448,7 +460,7 @@ balls rolled in cinnamon.  After I had done a few I thought they looked
 like truffles, and my mind wandered to truffles coated in cocoa.  "Hm."
 I thought.  "I wonder..."  So I tried it, and they're really tasty.
 Dessert charoset!
-&lt;/p&gt;</description><category>food</category><guid>https://bwinton.github.io/weblog.latte.ca/amy/food/threethings.html</guid><pubDate>Fri, 14 Apr 2006 19:17:00 GMT</pubDate></item><item><title>Holiday Eating</title><link>https://bwinton.github.io/weblog.latte.ca/amy/food/040411.html</link><dc:creator>Amy Brown</dc:creator><description>&lt;p&gt;
+&lt;/p&gt;</description><category>food</category><guid>https://bwinton.github.io/weblog.latte.ca/amy/food/threethings/</guid><pubDate>Fri, 14 Apr 2006 19:17:00 GMT</pubDate></item><item><title>Holiday Eating</title><link>https://bwinton.github.io/weblog.latte.ca/amy/food/040411/</link><dc:creator>Amy Brown</dc:creator><description>&lt;p&gt;
 Today we had Morgan and Erik over for a Passover/Easter feast.  Morgan
 made saucy chicken and chopped liver, and I made fruit kugel and 
 Passover brownies and roasted asparagus.  (The asparagus was an afterthought
@@ -467,7 +479,7 @@ used were new to us.
 &lt;/p&gt;&lt;p&gt;
 We all ate and ate until we couldn't move, and then squeezed in a little
 more, and now I'm &lt;em&gt;so&lt;/em&gt; tired.  It was good; I love holiday food.
-&lt;/p&gt;</description><category>food</category><guid>https://bwinton.github.io/weblog.latte.ca/amy/food/040411.html</guid><pubDate>Mon, 12 Apr 2004 01:29:00 GMT</pubDate></item><item><title>Two-thousand Calories</title><link>https://bwinton.github.io/weblog.latte.ca/amy/food/040323.html</link><dc:creator>Amy Brown</dc:creator><description>&lt;p&gt;
+&lt;/p&gt;</description><category>food</category><guid>https://bwinton.github.io/weblog.latte.ca/amy/food/040411/</guid><pubDate>Mon, 12 Apr 2004 01:29:00 GMT</pubDate></item><item><title>Two-thousand Calories</title><link>https://bwinton.github.io/weblog.latte.ca/amy/food/040323/</link><dc:creator>Amy Brown</dc:creator><description>&lt;p&gt;
 A while ago I said I was going to cut down to 2000 calories a
 day, but I've been having a hard time doing so.  It seems so lame, 
 when you consider that there are so many people on 1200 and 1600 cpd
@@ -540,7 +552,7 @@ and I've lost twice that!  Before, I felt like me, and now, I feel like
 me.  I guess it's good that I don't invest my weight with so much meaning,
 but the flip side of that coin is that when I lose weight I don't get
 the big irrational ego boost.  Humph.
-&lt;/p&gt;</description><category>food</category><guid>https://bwinton.github.io/weblog.latte.ca/amy/food/040323.html</guid><pubDate>Thu, 25 Mar 2004 03:45:00 GMT</pubDate></item><item><title>28 Year Checkup</title><link>https://bwinton.github.io/weblog.latte.ca/amy/food/040309.html</link><dc:creator>Amy Brown</dc:creator><description>&lt;p&gt;
+&lt;/p&gt;</description><category>food</category><guid>https://bwinton.github.io/weblog.latte.ca/amy/food/040323/</guid><pubDate>Thu, 25 Mar 2004 03:45:00 GMT</pubDate></item><item><title>28 Year Checkup</title><link>https://bwinton.github.io/weblog.latte.ca/amy/food/040309/</link><dc:creator>Amy Brown</dc:creator><description>&lt;p&gt;
 I went to the doctor today for my annual physical.  I always enjoy
 physicals because I'm generally healthy, and when else do I get to spend
 forty five minutes talking with someone all about me! me! me!?
@@ -580,4 +592,4 @@ to be in good nutritional shape to make another beautiful
 healthy baby.  I think it will be easier now that spring is
 coming; fruit and salads always seem more palatable in warm
 weather.  In winter I just want large piles of meat and potatoes.
-&lt;/p&gt;</description><category>food</category><guid>https://bwinton.github.io/weblog.latte.ca/amy/food/040309.html</guid><pubDate>Tue, 09 Mar 2004 16:22:00 GMT</pubDate></item></channel></rss>
+&lt;/p&gt;</description><category>food</category><guid>https://bwinton.github.io/weblog.latte.ca/amy/food/040309/</guid><pubDate>Tue, 09 Mar 2004 16:22:00 GMT</pubDate></item></channel></rss>

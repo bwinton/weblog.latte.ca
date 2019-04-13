@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
-<?xml-stylesheet type="text/xsl" href="../assets/xml/rss.xsl" media="all"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Blog-O! (games)</title><link>https://bwinton.github.io/weblog.latte.ca/</link><description></description><atom:link href="https://bwinton.github.io/weblog.latte.ca/tags/games.xml" type="application/rss+xml" rel="self"></atom:link><language>en</language><lastBuildDate>Sun, 30 Oct 2016 01:56:55 GMT</lastBuildDate><generator>https://getnikola.com/</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>More iPhone games…</title><link>https://bwinton.github.io/weblog.latte.ca/blake/tech/iTouch/moregames.html</link><dc:creator>Blake Winton</dc:creator><description>&lt;div&gt;&lt;p&gt;Okay, one game in particular this time.  One of my favourites from
+<?xml-stylesheet type="text/xsl" href="../assets/xml/rss.xsl" media="all"?><rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/"><channel><title>Blog-O! (Posts about games)</title><link>https://bwinton.github.io/weblog.latte.ca/</link><description></description><atom:link rel="self" href="https://bwinton.github.io/weblog.latte.ca/tags/games.xml" type="application/rss+xml"></atom:link><language>en</language><lastBuildDate>Sat, 13 Apr 2019 21:03:24 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>More iPhone games…</title><link>https://bwinton.github.io/weblog.latte.ca/blake/tech/iTouch/moregames/</link><dc:creator>Blake Winton</dc:creator><description>&lt;div&gt;&lt;p&gt;Okay, one game in particular this time.  One of my favourites from
 back in my Palm days.&lt;/p&gt;
-&lt;p&gt;&lt;a href="http://itunes.apple.com/WebObjects/MZStore.woa/wa/viewSoftware?id=297288395&amp;amp;mt=8"&gt;Bike Or Die 2&lt;/a&gt;.&lt;br&gt;&lt;img alt="I can totally land this!" src="https://bwinton.github.io/weblog.latte.ca/images/blake/iTouch/BikeOrDie.png"&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href="http://itunes.apple.com/WebObjects/MZStore.woa/wa/viewSoftware?id=297288395&amp;amp;mt=8"&gt;Bike Or Die 2&lt;/a&gt;.&lt;br&gt;
+&lt;img alt="I can totally land this!" src="https://bwinton.github.io/weblog.latte.ca/images/blake/iTouch/BikeOrDie.png"&gt;&lt;/p&gt;
 &lt;p&gt;It’s awesome.  It’s harder than I remember the Palm version being, but
 that's probably as much because I'm out of practice as anything else.
 After a couple of weeks of playing the beta version, I’m now at the
@@ -22,30 +23,43 @@ introductory period is over.  (I suggested he sell it for $7.99-$9.99,
 but he’s apparently a nicer person than I am.)&lt;/p&gt;
 &lt;p&gt;(No, he’s not paying me for this.  Heck, I didn’t even get an iTunes
 gift certificate for all my hard work finding bugs.  I just really
-like the game.)&lt;/p&gt;&lt;/div&gt;</description><category>bikeordie</category><category>games</category><category>itouch</category><guid>https://bwinton.github.io/weblog.latte.ca/blake/tech/iTouch/moregames.html</guid><pubDate>Wed, 19 Nov 2008 18:47:34 GMT</pubDate></item><item><title>iPhone games…</title><link>https://bwinton.github.io/weblog.latte.ca/blake/tech/iTouch/games.html</link><dc:creator>Blake Winton</dc:creator><description>&lt;div&gt;&lt;p&gt;A co-worker recently got a new iPhone, and I since he didn’t have many
+like the game.)&lt;/p&gt;&lt;/div&gt;</description><category>bikeordie</category><category>games</category><category>itouch</category><guid>https://bwinton.github.io/weblog.latte.ca/blake/tech/iTouch/moregames/</guid><pubDate>Wed, 19 Nov 2008 18:47:34 GMT</pubDate></item><item><title>iPhone games…</title><link>https://bwinton.github.io/weblog.latte.ca/blake/tech/iTouch/games/</link><dc:creator>Blake Winton</dc:creator><description>&lt;div&gt;&lt;p&gt;A co-worker recently got a new iPhone, and I since he didn’t have many
 apps on it yet, I thought I’ld send him a list of the stuff I had
 bought/downloaded and enjoyed.  So, without any further ado, here are
-a few of my favourites, all available on the AppStore.&lt;sup id="fnref:appstore"&gt;&lt;a class="footnote-ref" href="https://bwinton.github.io/weblog.latte.ca/blake/tech/iTouch/games.html#fn:appstore" rel="footnote"&gt;1&lt;/a&gt;&lt;/sup&gt;&lt;/p&gt;
-&lt;p&gt;&lt;a href="http://phobos.apple.com/WebObjects/MZStore.woa/wa/viewSoftware?id=288337432&amp;amp;mt=8"&gt;Toy Bot Diaries&lt;/a&gt;.  (The link is to the free version, but I bought the &lt;a href="http://phobos.apple.com/WebObjects/MZStore.woa/wa/viewSoftware?id=287747021&amp;amp;mt=8"&gt;full version&lt;/a&gt;.)&lt;br&gt;&lt;img alt="Wheeee!" src="https://bwinton.github.io/weblog.latte.ca/images/blake/iTouch/ToyBot.png"&gt;&lt;/p&gt;
+a few of my favourites, all available on the AppStore.&lt;sup id="fnref:appstore"&gt;&lt;a class="footnote-ref" href="https://bwinton.github.io/weblog.latte.ca/blake/tech/iTouch/games/#fn:appstore" rel="footnote"&gt;1&lt;/a&gt;&lt;/sup&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href="http://phobos.apple.com/WebObjects/MZStore.woa/wa/viewSoftware?id=288337432&amp;amp;mt=8"&gt;Toy Bot Diaries&lt;/a&gt;.  (The link is to the free version, but I bought the &lt;a href="http://phobos.apple.com/WebObjects/MZStore.woa/wa/viewSoftware?id=287747021&amp;amp;mt=8"&gt;full version&lt;/a&gt;.)&lt;br&gt;
+&lt;img alt="Wheeee!" src="https://bwinton.github.io/weblog.latte.ca/images/blake/iTouch/ToyBot.png"&gt;&lt;/p&gt;
 &lt;p&gt;&lt;a href="http://phobos.apple.com/WebObjects/MZStore.woa/wa/viewSoftware?id=290775344&amp;amp;mt=8"&gt;Galcon&lt;/a&gt;.
-(The link is to the free version, but I bought the &lt;a href="http://phobos.apple.com/WebObjects/MZStore.woa/wa/viewSoftware?id=285820845&amp;amp;mt=8"&gt;full version&lt;/a&gt;.)&lt;br&gt;&lt;img alt="Whoa!" src="https://bwinton.github.io/weblog.latte.ca/images/blake/iTouch/Galcon.png"&gt;&lt;/p&gt;
+(The link is to the free version, but I bought the &lt;a href="http://phobos.apple.com/WebObjects/MZStore.woa/wa/viewSoftware?id=285820845&amp;amp;mt=8"&gt;full version&lt;/a&gt;.)&lt;br&gt;
+&lt;img alt="Whoa!" src="https://bwinton.github.io/weblog.latte.ca/images/blake/iTouch/Galcon.png"&gt;&lt;/p&gt;
 &lt;p&gt;&lt;a href="http://phobos.apple.com/WebObjects/MZStore.woa/wa/viewSoftware?id=290807369&amp;amp;mt=8"&gt;Line Rider&lt;/a&gt;.  ($2.99, but c’mon, it’s Line Rider.  How can you &lt;u&gt;not&lt;/u&gt; get
-it?  ;)&lt;br&gt;&lt;img alt="Aaaaaah!" src="https://bwinton.github.io/weblog.latte.ca/images/blake/iTouch/LineRider.png"&gt;&lt;/p&gt;
+it?  ;)&lt;br&gt;
+&lt;img alt="Aaaaaah!" src="https://bwinton.github.io/weblog.latte.ca/images/blake/iTouch/LineRider.png"&gt;&lt;/p&gt;
 &lt;p&gt;&lt;a href="http://phobos.apple.com/WebObjects/MZStore.woa/wa/viewSoftware?id=284540316&amp;amp;mt=8"&gt;Twitterrific&lt;/a&gt;.
 (Free, but only useful if you’re on Twitter.  Which I am.  As
-&lt;a href="http://www.twitter.com/bwinton/"&gt;bwinton&lt;/a&gt;.)&lt;br&gt;&lt;img alt="Chat!" src="https://bwinton.github.io/weblog.latte.ca/images/blake/iTouch/Twitterrific.png"&gt;&lt;/p&gt;
-&lt;p&gt;&lt;a href="http://phobos.apple.com/WebObjects/MZStore.woa/wa/viewSoftware?id=285921640&amp;amp;mt=8"&gt;TimmyMe&lt;/a&gt;.  (Free, finds the closest Tim Hortons to you.)&lt;br&gt;&lt;img alt="Caffeine!" src="https://bwinton.github.io/weblog.latte.ca/images/blake/iTouch/TimmyMe.png"&gt;&lt;/p&gt;
+&lt;a href="http://www.twitter.com/bwinton/"&gt;bwinton&lt;/a&gt;.)&lt;br&gt;
+&lt;img alt="Chat!" src="https://bwinton.github.io/weblog.latte.ca/images/blake/iTouch/Twitterrific.png"&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href="http://phobos.apple.com/WebObjects/MZStore.woa/wa/viewSoftware?id=285921640&amp;amp;mt=8"&gt;TimmyMe&lt;/a&gt;.  (Free, finds the closest Tim Hortons to you.)&lt;br&gt;
+&lt;img alt="Caffeine!" src="https://bwinton.github.io/weblog.latte.ca/images/blake/iTouch/TimmyMe.png"&gt;&lt;/p&gt;
 &lt;p&gt;&lt;a href="http://phobos.apple.com/WebObjects/MZStore.woa/wa/viewSoftware?id=284972147&amp;amp;mt=8"&gt;Tap Tap Revenge&lt;/a&gt;.  (Free, like Dance Dance Revolution, but for your fingers.  I
-actually don’t play this much, but it’s free.)&lt;br&gt;&lt;img alt="Ba dum dum dum!" src="https://bwinton.github.io/weblog.latte.ca/images/blake/iTouch/TapTap.png"&gt;&lt;/p&gt;
+actually don’t play this much, but it’s free.)&lt;br&gt;
+&lt;img alt="Ba dum dum dum!" src="https://bwinton.github.io/weblog.latte.ca/images/blake/iTouch/TapTap.png"&gt;&lt;/p&gt;
 &lt;p&gt;&lt;a href="http://phobos.apple.com/WebObjects/MZStore.woa/wa/viewSoftware?id=285800495&amp;amp;mt=8"&gt;PapiJump&lt;/a&gt;.  (Free.  By the guy who made the world’s most addictive Palm game,
-&lt;a href="http://www.sfcave.com/palm.php"&gt;SFCave&lt;/a&gt;.)&lt;br&gt;&lt;img alt="Boing!" src="https://bwinton.github.io/weblog.latte.ca/images/blake/iTouch/PapiJump.png"&gt;&lt;/p&gt;
+&lt;a href="http://www.sfcave.com/palm.php"&gt;SFCave&lt;/a&gt;.)&lt;br&gt;
+&lt;img alt="Boing!" src="https://bwinton.github.io/weblog.latte.ca/images/blake/iTouch/PapiJump.png"&gt;&lt;/p&gt;
 &lt;p&gt;&lt;a href="http://phobos.apple.com/WebObjects/MZStore.woa/wa/viewSoftware?id=284940503&amp;amp;mt=8"&gt;Labyrinth&lt;/a&gt;.
-(The link is to the free version.  I didn’t buy the &lt;a href="http://phobos.apple.com/WebObjects/MZStore.woa/wa/viewSoftware?id=284571899&amp;amp;mt=8"&gt;full version&lt;/a&gt; of this.)&lt;br&gt;&lt;img alt="Easy now!" src="https://bwinton.github.io/weblog.latte.ca/images/blake/iTouch/Labyrinth.png"&gt;&lt;/p&gt;
-&lt;p&gt;&lt;a href="http://phobos.apple.com/WebObjects/MZStore.woa/wa/viewSoftware?id=284596345&amp;amp;mt=8"&gt;Cube Runner&lt;/a&gt;.  (Free.  I got this after watching someone play it on the subway.)&lt;br&gt;&lt;img alt="Whoo-ha!" src="https://bwinton.github.io/weblog.latte.ca/images/blake/iTouch/CubeRunner.png"&gt;&lt;/p&gt;
-&lt;p&gt;&lt;a href="http://phobos.apple.com/WebObjects/MZStore.woa/wa/viewSoftware?id=281736535&amp;amp;mt=8"&gt;Enigmo&lt;/a&gt;.  ($4.99, but really impressive.  Really, really impressive.)&lt;br&gt;&lt;img alt="Ahhhh!" src="https://bwinton.github.io/weblog.latte.ca/images/blake/iTouch/Enigmo.png"&gt;&lt;/p&gt;
+(The link is to the free version.  I didn’t buy the &lt;a href="http://phobos.apple.com/WebObjects/MZStore.woa/wa/viewSoftware?id=284571899&amp;amp;mt=8"&gt;full version&lt;/a&gt; of this.)&lt;br&gt;
+&lt;img alt="Easy now!" src="https://bwinton.github.io/weblog.latte.ca/images/blake/iTouch/Labyrinth.png"&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href="http://phobos.apple.com/WebObjects/MZStore.woa/wa/viewSoftware?id=284596345&amp;amp;mt=8"&gt;Cube Runner&lt;/a&gt;.  (Free.  I got this after watching someone play it on the subway.)&lt;br&gt;
+&lt;img alt="Whoo-ha!" src="https://bwinton.github.io/weblog.latte.ca/images/blake/iTouch/CubeRunner.png"&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href="http://phobos.apple.com/WebObjects/MZStore.woa/wa/viewSoftware?id=281736535&amp;amp;mt=8"&gt;Enigmo&lt;/a&gt;.  ($4.99, but really impressive.  Really, really impressive.)&lt;br&gt;
+&lt;img alt="Ahhhh!" src="https://bwinton.github.io/weblog.latte.ca/images/blake/iTouch/Enigmo.png"&gt;&lt;/p&gt;
 &lt;p&gt;That’s about it…&lt;/p&gt;
 &lt;div class="footnote"&gt;
-&lt;hr&gt;&lt;ol&gt;&lt;li id="fn:appstore"&gt;
-&lt;p&gt;As opposed to Jailbreak apps, which I’ve got a few of.  They tend to be more productivity/programming apps, which I didn’t think he’ld be interested in. &lt;a class="footnote-backref" href="https://bwinton.github.io/weblog.latte.ca/blake/tech/iTouch/games.html#fnref:appstore" rev="footnote" title="Jump back to footnote 1 in the text"&gt;↩&lt;/a&gt;&lt;/p&gt;
+&lt;hr&gt;
+&lt;ol&gt;
+&lt;li id="fn:appstore"&gt;
+&lt;p&gt;As opposed to Jailbreak apps, which I’ve got a few of.  They tend to be more productivity/programming apps, which I didn’t think he’ld be interested in. &lt;a class="footnote-backref" href="https://bwinton.github.io/weblog.latte.ca/blake/tech/iTouch/games/#fnref:appstore" rev="footnote" title="Jump back to footnote 1 in the text"&gt;↩&lt;/a&gt;&lt;/p&gt;
 &lt;/li&gt;
-&lt;/ol&gt;&lt;/div&gt;&lt;/div&gt;</description><category>games</category><category>itouch</category><guid>https://bwinton.github.io/weblog.latte.ca/blake/tech/iTouch/games.html</guid><pubDate>Wed, 24 Sep 2008 17:58:51 GMT</pubDate></item></channel></rss>
+&lt;/ol&gt;
+&lt;/div&gt;&lt;/div&gt;</description><category>games</category><category>itouch</category><guid>https://bwinton.github.io/weblog.latte.ca/blake/tech/iTouch/games/</guid><pubDate>Wed, 24 Sep 2008 17:58:51 GMT</pubDate></item></channel></rss>

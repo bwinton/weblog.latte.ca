@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<?xml-stylesheet type="text/xsl" href="../assets/xml/rss.xsl" media="all"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Blog-O! (outgoing)</title><link>https://bwinton.github.io/weblog.latte.ca/</link><description></description><atom:link href="https://bwinton.github.io/weblog.latte.ca/tags/outgoing.xml" type="application/rss+xml" rel="self"></atom:link><language>en</language><lastBuildDate>Sun, 30 Oct 2016 01:57:00 GMT</lastBuildDate><generator>https://getnikola.com/</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>What the heck am I pushing, anyways?</title><link>https://bwinton.github.io/weblog.latte.ca/blake/tech/thunderbird/gitoutgoing.html</link><dc:creator>Blake Winton</dc:creator><description>&lt;div&gt;&lt;p&gt;Much of the new work I’m doing these days is being stored in git
+<?xml-stylesheet type="text/xsl" href="../assets/xml/rss.xsl" media="all"?><rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/"><channel><title>Blog-O! (Posts about outgoing)</title><link>https://bwinton.github.io/weblog.latte.ca/</link><description></description><atom:link rel="self" href="https://bwinton.github.io/weblog.latte.ca/tags/outgoing.xml" type="application/rss+xml"></atom:link><language>en</language><lastBuildDate>Sat, 13 Apr 2019 21:03:16 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>What the heck am I pushing, anyways?</title><link>https://bwinton.github.io/weblog.latte.ca/blake/tech/thunderbird/gitoutgoing/</link><dc:creator>Blake Winton</dc:creator><description>&lt;div&gt;&lt;p&gt;Much of the new work I’m doing these days is being stored in git
 repositories.  Now, I’m not the biggest fan of git, particularly its UI,
 but the advantages of &lt;a href="https://github.com/"&gt;GitHub&lt;/a&gt; and &lt;a href="http://gitx.frim.nl/"&gt;GitX&lt;/a&gt; are hard to ignore.  Despite that, I still really
 missed being able to type &lt;code&gt;hg out&lt;/code&gt; to see which patches I would be pushing,
@@ -9,7 +9,7 @@ following contents:&lt;/p&gt;
 &lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;# !/bin/sh
 # Uh, there shouldn’t be a space between the # and ! in the previous
 # line, but the highlighter I’m using seems to require it…
-git push --dry-run $1 2&amp;gt;&amp;amp;1 | awk '/^ / {print $1}' | xargs git log
+git push --dry-run $1 2&amp;amp;gt;&amp;amp;amp;1 | awk '/^ / {print $1}' | xargs git log
 &lt;/pre&gt;
 
 
@@ -21,18 +21,18 @@ git push --dry-run $1 2&amp;gt;&amp;amp;1 | awk '/^ / {print $1}' | xargs git lo
 
 
 &lt;p&gt;And finally, you should be able to type &lt;code&gt;git out&lt;/code&gt;, and see something like:&lt;/p&gt;
-&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;commit 7d4c9b89a4663a07bed030669bae2d3c73ec78dc
-Author: Blake Winton &amp;lt;bwinton@latte.ca&amp;gt;
-Date:   Thu Dec 8 12:22:41 2011 -0500
+&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="nt"&gt;commit&lt;/span&gt; &lt;span class="nt"&gt;7d4c9b89a4663a07bed030669bae2d3c73ec78dc&lt;/span&gt;
+&lt;span class="nt"&gt;Author&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt; &lt;span class="nt"&gt;Blake&lt;/span&gt; &lt;span class="nt"&gt;Winton&lt;/span&gt; &lt;span class="o"&gt;&amp;amp;&lt;/span&gt;&lt;span class="nt"&gt;lt&lt;/span&gt;&lt;span class="o"&gt;;&lt;/span&gt;&lt;span class="nt"&gt;bwinton&lt;/span&gt;&lt;span class="p"&gt;@&lt;/span&gt;&lt;span class="k"&gt;latte&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nc"&gt;ca&lt;/span&gt;&lt;span class="o"&gt;&amp;amp;&lt;/span&gt;&lt;span class="nt"&gt;gt&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+&lt;span class="nt"&gt;Date&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt;   &lt;span class="nt"&gt;Thu&lt;/span&gt; &lt;span class="nt"&gt;Dec&lt;/span&gt; &lt;span class="nt"&gt;8&lt;/span&gt; &lt;span class="nt"&gt;12&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="nd"&gt;22&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="nd"&gt;41&lt;/span&gt; &lt;span class="nt"&gt;2011&lt;/span&gt; &lt;span class="nt"&gt;-0500&lt;/span&gt;
 
-    Blear 2
+    &lt;span class="nt"&gt;Blear&lt;/span&gt; &lt;span class="nt"&gt;2&lt;/span&gt;
 
-commit a4e8c6627bc26d7371fb2614a1c47aaf694957bd
-Author: Blake Winton &amp;lt;bwinton@latte.ca&amp;gt;
-Date:   Thu Dec 8 12:18:04 2011 -0500
+&lt;span class="nt"&gt;commit&lt;/span&gt; &lt;span class="nt"&gt;a4e8c6627bc26d7371fb2614a1c47aaf694957bd&lt;/span&gt;
+&lt;span class="nt"&gt;Author&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt; &lt;span class="nt"&gt;Blake&lt;/span&gt; &lt;span class="nt"&gt;Winton&lt;/span&gt; &lt;span class="o"&gt;&amp;amp;&lt;/span&gt;&lt;span class="nt"&gt;lt&lt;/span&gt;&lt;span class="o"&gt;;&lt;/span&gt;&lt;span class="nt"&gt;bwinton&lt;/span&gt;&lt;span class="p"&gt;@&lt;/span&gt;&lt;span class="k"&gt;latte&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nc"&gt;ca&lt;/span&gt;&lt;span class="o"&gt;&amp;amp;&lt;/span&gt;&lt;span class="nt"&gt;gt&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+&lt;span class="nt"&gt;Date&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt;   &lt;span class="nt"&gt;Thu&lt;/span&gt; &lt;span class="nt"&gt;Dec&lt;/span&gt; &lt;span class="nt"&gt;8&lt;/span&gt; &lt;span class="nt"&gt;12&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="nd"&gt;18&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="nd"&gt;04&lt;/span&gt; &lt;span class="nt"&gt;2011&lt;/span&gt; &lt;span class="nt"&gt;-0500&lt;/span&gt;
 
-    Bleah.
+    &lt;span class="nt"&gt;Bleah&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;
 &lt;/pre&gt;
 
 
-&lt;p&gt;So, hopefully some of the rest of you will find this helpful, too, and if you know of a better way to do this, &lt;em&gt;please&lt;/em&gt; let me know in the comments!&lt;/p&gt;&lt;/div&gt;</description><category>git</category><category>mozilla</category><category>outgoing</category><guid>https://bwinton.github.io/weblog.latte.ca/blake/tech/thunderbird/gitoutgoing.html</guid><pubDate>Thu, 08 Dec 2011 18:04:17 GMT</pubDate></item></channel></rss>
+&lt;p&gt;So, hopefully some of the rest of you will find this helpful, too, and if you know of a better way to do this, &lt;em&gt;please&lt;/em&gt; let me know in the comments!&lt;/p&gt;&lt;/div&gt;</description><category>git</category><category>mozilla</category><category>outgoing</category><guid>https://bwinton.github.io/weblog.latte.ca/blake/tech/thunderbird/gitoutgoing/</guid><pubDate>Thu, 08 Dec 2011 18:04:17 GMT</pubDate></item></channel></rss>

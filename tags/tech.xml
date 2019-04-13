@@ -1,10 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
-<?xml-stylesheet type="text/xsl" href="../assets/xml/rss.xsl" media="all"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Blog-O! (tech)</title><link>https://bwinton.github.io/weblog.latte.ca/</link><description></description><atom:link href="https://bwinton.github.io/weblog.latte.ca/tags/tech.xml" type="application/rss+xml" rel="self"></atom:link><language>en</language><lastBuildDate>Sun, 30 Oct 2016 01:56:48 GMT</lastBuildDate><generator>https://getnikola.com/</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>DemoCamp 5!</title><link>https://bwinton.github.io/weblog.latte.ca/blake/tech/democamp5.html</link><dc:creator>Blake Winton</dc:creator><description>&lt;p&gt;I took a few notes at &lt;a href="http://barcamp.org/TorCampDemoCamp5"&gt;DemoCamp 5&lt;/a&gt; last night, and thought I'ld throw them up on the
+<?xml-stylesheet type="text/xsl" href="../assets/xml/rss.xsl" media="all"?><rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/"><channel><title>Blog-O! (Posts about tech)</title><link>https://bwinton.github.io/weblog.latte.ca/</link><description></description><atom:link rel="self" href="https://bwinton.github.io/weblog.latte.ca/tags/tech.xml" type="application/rss+xml"></atom:link><language>en</language><lastBuildDate>Sat, 13 Apr 2019 21:03:16 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>DemoCamp 5!</title><link>https://bwinton.github.io/weblog.latte.ca/blake/tech/democamp5/</link><dc:creator>Blake Winton</dc:creator><description>&lt;p&gt;I took a few notes at &lt;a href="http://barcamp.org/TorCampDemoCamp5"&gt;DemoCamp 5&lt;/a&gt; last night, and thought I'ld throw them up on the
 web, in case anyone found them useful.&lt;/p&gt;
 
 &lt;p&gt;First, some notes on giving a good demo.&lt;br&gt;
 In no particular order:
-&lt;/p&gt;&lt;ul&gt;&lt;li&gt;Set your screensaver's timeout to something long, so that you
+&lt;/p&gt;&lt;ul&gt;
+  &lt;li&gt;Set your screensaver's timeout to something long, so that you
     aren't continually hitting the spacebar/moving the mouse.&lt;/li&gt;
   &lt;li&gt;Repeat the questions, so that people in the back can hear what
     was being asked.&lt;/li&gt;
@@ -16,7 +17,9 @@ In no particular order:
   &lt;li&gt;When the demo's run out of time, don't try to fit in just one
     more thing...  Unless you have someone who can continue typing
     while you're answering questions.  ;)&lt;/li&gt;
-&lt;/ul&gt;&lt;p&gt;The next thing that struck me as sort of odd was that all the
+&lt;/ul&gt;
+
+&lt;p&gt;The next thing that struck me as sort of odd was that all the
 presentations were web-based.  Isn't anyone working on a regular
 desktop program anymore?&lt;/p&gt;
 
@@ -56,7 +59,7 @@ a few years...  Wait, 7 years?  How did that happen?  Anyways, now
 that I've been in the workforce, I'm thinking that I would like to go
 back and try to get my Masters, or even my PhD in Computer Science.
 At U of T, this time, since I far prefer living in Toronto to living
-in Waterloo.&lt;/p&gt;</description><category>tech</category><guid>https://bwinton.github.io/weblog.latte.ca/blake/tech/democamp5.html</guid><pubDate>Wed, 09 May 2007 21:28:58 GMT</pubDate></item><item><title>Response to Tim Bray.</title><link>https://bwinton.github.io/weblog.latte.ca/blake/tech/timandruby.html</link><dc:creator>Blake Winton</dc:creator><description>&lt;p&gt;In a &lt;a href="http://www.tbray.org/ongoing/When/200x/2006/09/05/What-Ruby-Needs"&gt;recent weblog entry&lt;/a&gt;, Tim Bray wrote about some things he thought
+in Waterloo.&lt;/p&gt;</description><category>tech</category><guid>https://bwinton.github.io/weblog.latte.ca/blake/tech/democamp5/</guid><pubDate>Wed, 09 May 2007 21:28:58 GMT</pubDate></item><item><title>Response to Tim Bray.</title><link>https://bwinton.github.io/weblog.latte.ca/blake/tech/timandruby/</link><dc:creator>Blake Winton</dc:creator><description>&lt;p&gt;In a &lt;a href="http://www.tbray.org/ongoing/When/200x/2006/09/05/What-Ruby-Needs"&gt;recent weblog entry&lt;/a&gt;, Tim Bray wrote about some things he thought
 Ruby lacked.  Since he doesn't have comments enabled, I thought I
 would share my opinions here, as a series of disjointed thoughts.&lt;/p&gt;
 
@@ -102,7 +105,7 @@ it also sucked.  Can we please show me the list of variables in a box
 at the top of my screen, and more than zero lines of context around
 the currently executing line?  Please?  It was so bad that I'm
 actually going to install Eclipse on my Mac Mini, just to avoid it in
-the future.&lt;/p&gt;</description><category>tech</category><guid>https://bwinton.github.io/weblog.latte.ca/blake/tech/timandruby.html</guid><pubDate>Wed, 06 Sep 2006 17:51:00 GMT</pubDate></item><item><title>How to make money on the Interweeb.</title><link>https://bwinton.github.io/weblog.latte.ca/blake/tech/freestuff.html</link><dc:creator>Blake Winton</dc:creator><description>&lt;p&gt;I was listening to &lt;a href="http://www.solomedia.org/podcast/2004/11/maximum-geek-episode-5.htm"&gt;Maximum Geek 5&lt;/a&gt; on the &lt;a href="http://www.ttc.ca/"&gt;subway&lt;/a&gt; this
+the future.&lt;/p&gt;</description><category>tech</category><guid>https://bwinton.github.io/weblog.latte.ca/blake/tech/timandruby/</guid><pubDate>Wed, 06 Sep 2006 17:51:00 GMT</pubDate></item><item><title>How to make money on the Interweeb.</title><link>https://bwinton.github.io/weblog.latte.ca/blake/tech/freestuff/</link><dc:creator>Blake Winton</dc:creator><description>&lt;p&gt;I was listening to &lt;a href="http://www.solomedia.org/podcast/2004/11/maximum-geek-episode-5.htm"&gt;Maximum Geek 5&lt;/a&gt; on the &lt;a href="http://www.ttc.ca/"&gt;subway&lt;/a&gt; this
 morning, and was struck with the need to comment on it.&lt;/p&gt;
 
 &lt;p&gt;To start off with, damn Jeff and Josh (the two hosts) are some huge
@@ -144,7 +147,7 @@ harder to read, and probably hard enough that it won't be worth the time to
 try to fix it.&lt;/p&gt;
 
 &lt;p&gt;So that's my idea for you guys.  Feel free to use it, and spread it
-around.  I hope you like it, and may you grow rich off of it.&lt;/p&gt;</description><category>tech</category><guid>https://bwinton.github.io/weblog.latte.ca/blake/tech/freestuff.html</guid><pubDate>Tue, 21 Dec 2004 14:52:00 GMT</pubDate></item><item><title>That wasn't as easy as I'ld hoped.</title><link>https://bwinton.github.io/weblog.latte.ca/blake/tech/installers.html</link><dc:creator>Blake Winton</dc:creator><description>&lt;p&gt;I've started writing an installer for my PalmBlosxom conduit, and
+around.  I hope you like it, and may you grow rich off of it.&lt;/p&gt;</description><category>tech</category><guid>https://bwinton.github.io/weblog.latte.ca/blake/tech/freestuff/</guid><pubDate>Tue, 21 Dec 2004 14:52:00 GMT</pubDate></item><item><title>That wasn't as easy as I'ld hoped.</title><link>https://bwinton.github.io/weblog.latte.ca/blake/tech/installers/</link><dc:creator>Blake Winton</dc:creator><description>&lt;p&gt;I've started writing an installer for my PalmBlosxom conduit, and
 associated files.  It's been both easier and harder than I had thought.  It
 was way easier to get the installer portion written so far, and I don't see
 any particular difficulties cropping up in that part of it.  Sure, there
@@ -176,7 +179,7 @@ hopefully point out my misunderstanding from it.&lt;/p&gt;
 the innosetup newsgroups, but they weren't as helpful as I would have
 hoped.  I'll continue to read them, in the hopes that someone will answer
 my question, but I think that I'm not going to get an answer, or at least
-not one that I like, so NSIS it is.&lt;/p&gt;</description><category>tech</category><guid>https://bwinton.github.io/weblog.latte.ca/blake/tech/installers.html</guid><pubDate>Tue, 05 Oct 2004 14:07:00 GMT</pubDate></item><item><title>No More Text!</title><link>https://bwinton.github.io/weblog.latte.ca/blake/tech/nomoretext.html</link><dc:creator>Blake Winton</dc:creator><description>The idea of IDEs not being forced to rely on text files has been
+not one that I like, so NSIS it is.&lt;/p&gt;</description><category>tech</category><guid>https://bwinton.github.io/weblog.latte.ca/blake/tech/installers/</guid><pubDate>Tue, 05 Oct 2004 14:07:00 GMT</pubDate></item><item><title>No More Text!</title><link>https://bwinton.github.io/weblog.latte.ca/blake/tech/nomoretext/</link><dc:creator>Blake Winton</dc:creator><description>The idea of IDEs not being forced to rely on text files has been
 popping up in several of the &lt;a href="http://www.cardboard.nu/archives/000250.html"&gt;weblogs&lt;/a&gt; I &lt;a href="http://blog.colorstudy.com/ianb/weblog/2004/03/09.html#P67"&gt;read&lt;/a&gt;.
 While I think Alan has part of the reason correct (there's a lot of
 infrastructure dedicated to dealing with text files), I don't think he
@@ -191,7 +194,8 @@ resource format&lt;/a&gt; precisely because of the advantages it brings.
 the people making the decision saw the problems it had at previous
 places.)  Those advantages being:
 
-&lt;ul&gt;&lt;li&gt;No tool/vendor lock-in.&lt;/li&gt;
+&lt;ul&gt;
+  &lt;li&gt;No tool/vendor lock-in.&lt;/li&gt;
   &lt;li&gt;Easier to fix when something goes wrong.&lt;/li&gt;
   &lt;li&gt;Easier to see the differences when something changes.&lt;/li&gt;
 &lt;/ul&gt;
@@ -201,13 +205,13 @@ text-based (or xml-based) representation of the image for loading and
 saving, along with smarter tools for editing, but I'm not sure that
 making the tools smarter is such a good idea in the first place.
 Should my source code control system really be forced to know about my
-programming language?  What if I change languages?</description><category>tech</category><guid>https://bwinton.github.io/weblog.latte.ca/blake/tech/nomoretext.html</guid><pubDate>Wed, 17 Mar 2004 21:34:00 GMT</pubDate></item><item><title>More New Stuff.</title><link>https://bwinton.github.io/weblog.latte.ca/blake/tech/newstuff2.html</link><dc:creator>Blake Winton</dc:creator><description>So, I've just added the capability to update the weblog over the web.
+programming language?  What if I change languages?</description><category>tech</category><guid>https://bwinton.github.io/weblog.latte.ca/blake/tech/nomoretext/</guid><pubDate>Wed, 17 Mar 2004 21:34:00 GMT</pubDate></item><item><title>More New Stuff.</title><link>https://bwinton.github.io/weblog.latte.ca/blake/tech/newstuff2/</link><dc:creator>Blake Winton</dc:creator><description>So, I've just added the capability to update the weblog over the web.
 Should be a nice feature for those sad days when the SSH daemon dies
 unexpectedly.  And it works fairly well too.  I wonder how well it
 deals with updates?  Oh, and I should also make it output the text in
 a nicer format, but that's all stuff for later.  I've also got the
 XML-RPC interface working, so I can use desktop tools from work to
-post and modify entries.</description><category>tech</category><guid>https://bwinton.github.io/weblog.latte.ca/blake/tech/newstuff2.html</guid><pubDate>Fri, 31 Jan 2003 18:16:00 GMT</pubDate></item><item><title>Neil Gaiman in EffNews.</title><link>https://bwinton.github.io/weblog.latte.ca/blake/tech/effnews1.html</link><dc:creator>Blake Winton</dc:creator><description>After seeing the &lt;a href="http://effbot.org/zone/effbot-exe-index.htm"&gt;EffNews&lt;/a&gt; &lt;a href="http://pythonowns.blogspot.com/2003_01_19_pythonowns_archive.html#87740023"&gt;plugin&lt;/a&gt;
+post and modify entries.</description><category>tech</category><guid>https://bwinton.github.io/weblog.latte.ca/blake/tech/newstuff2/</guid><pubDate>Fri, 31 Jan 2003 18:16:00 GMT</pubDate></item><item><title>Neil Gaiman in EffNews.</title><link>https://bwinton.github.io/weblog.latte.ca/blake/tech/effnews1/</link><dc:creator>Blake Winton</dc:creator><description>After seeing the &lt;a href="http://effbot.org/zone/effbot-exe-index.htm"&gt;EffNews&lt;/a&gt; &lt;a href="http://pythonowns.blogspot.com/2003_01_19_pythonowns_archive.html#87740023"&gt;plugin&lt;/a&gt;
 for Andrew Kuchling's &lt;a href="http://amk.ca/diary/"&gt;journal&lt;/a&gt;,
 I was inspired to try creating one of my own, for Neil Gaiman's
 &lt;a href="http://www.neilgaiman.com/journal/journal.asp"&gt;journal&lt;/a&gt;.
@@ -241,20 +245,20 @@ if __name__ == "__main__":
         def push(self, tag, **kw):
             print tag, kw
     simpleprovider(context(), urllib.urlopen(urls[0]).read())
-&lt;/pre&gt;&lt;/code&gt;</description><category>tech</category><guid>https://bwinton.github.io/weblog.latte.ca/blake/tech/effnews1.html</guid><pubDate>Tue, 21 Jan 2003 17:08:00 GMT</pubDate></item><item><title>Hacked, part 2</title><link>https://bwinton.github.io/weblog.latte.ca/blake/tech/hacked2.html</link><dc:creator>Blake Winton</dc:creator><description>&lt;p&gt;Well, mail works now, as does web and even the cute little
+&lt;/pre&gt;&lt;/code&gt;</description><category>tech</category><guid>https://bwinton.github.io/weblog.latte.ca/blake/tech/effnews1/</guid><pubDate>Tue, 21 Jan 2003 17:08:00 GMT</pubDate></item><item><title>Hacked, part 2</title><link>https://bwinton.github.io/weblog.latte.ca/blake/tech/hacked2/</link><dc:creator>Blake Winton</dc:creator><description>&lt;p&gt;Well, mail works now, as does web and even the cute little
 weblog script, but logging on an X session at the console fails
 pretty heinously.  (Specifically, rxvt fails complaining that it
 couldn't open the pseudo-tty, or could not obtain control of tty,
 depending on what random bit I flipped before I tried to launch
 it.)  Plain old xterm seems to work just fine, though.  More
 debugging later, I guess.  For now, I'm just going to go to sleep.
-&lt;/p&gt;</description><category>tech</category><guid>https://bwinton.github.io/weblog.latte.ca/blake/tech/hacked2.html</guid><pubDate>Tue, 21 Jan 2003 04:39:00 GMT</pubDate></item><item><title>More changes to Latte.ca</title><link>https://bwinton.github.io/weblog.latte.ca/blake/tech/hacked1.html</link><dc:creator>Blake Winton</dc:creator><description>&lt;p&gt;Apparently we've been hacked.  Craptastic.  I've changed all the
+&lt;/p&gt;</description><category>tech</category><guid>https://bwinton.github.io/weblog.latte.ca/blake/tech/hacked2/</guid><pubDate>Tue, 21 Jan 2003 04:39:00 GMT</pubDate></item><item><title>More changes to Latte.ca</title><link>https://bwinton.github.io/weblog.latte.ca/blake/tech/hacked1/</link><dc:creator>Blake Winton</dc:creator><description>&lt;p&gt;Apparently we've been hacked.  Craptastic.  I've changed all the
 files I think they affected, but I also removed a bunch of files
 that I didn't know I needed.  Oh well, everything should get back
 to normal any time now.
 &lt;/p&gt;
 &lt;p&gt;Oh, yeah, and mail doesn't work.  I'll see if I can fix that tonight.
-&lt;/p&gt;</description><category>tech</category><guid>https://bwinton.github.io/weblog.latte.ca/blake/tech/hacked1.html</guid><pubDate>Tue, 21 Jan 2003 00:02:00 GMT</pubDate></item><item><title>Changes to Latte.ca</title><link>https://bwinton.github.io/weblog.latte.ca/blake/tech/newstuff1.html</link><dc:creator>Blake Winton</dc:creator><description>I've been playing around with the webserver here at &lt;a href="http://www.latte.ca/"&gt;Latte.ca&lt;/a&gt;, to see if there was an
+&lt;/p&gt;</description><category>tech</category><guid>https://bwinton.github.io/weblog.latte.ca/blake/tech/hacked1/</guid><pubDate>Tue, 21 Jan 2003 00:02:00 GMT</pubDate></item><item><title>Changes to Latte.ca</title><link>https://bwinton.github.io/weblog.latte.ca/blake/tech/newstuff1/</link><dc:creator>Blake Winton</dc:creator><description>I've been playing around with the webserver here at &lt;a href="http://www.latte.ca/"&gt;Latte.ca&lt;/a&gt;, to see if there was an
 easier weblogging tool that I could set up for people to use.
 One product that caught my eye was &lt;a href="http://www.plone.org/"&gt;Plone&lt;/a&gt;, so I tried to set it up
 &lt;a href="http://weblog.latte.ca/"&gt;here&lt;/a&gt;.  It turned out that
@@ -265,4 +269,4 @@ that it's a good weblogging tool (mainly because it seems too
 powerful, and not easy enough to use).  I'm not going to
 uninstall it, but I think I'll stick with &lt;a href="http://www.raelity.org/apps/blosxom/"&gt;Blosxom&lt;/a&gt; for now.
 (Hey, maybe I'll install &lt;a href="http://roughingit.subtlehints.net/pyblosxom"&gt;PyBlosxom&lt;/a&gt;,
-and see if it integrates with Zope at all.)</description><category>tech</category><guid>https://bwinton.github.io/weblog.latte.ca/blake/tech/newstuff1.html</guid><pubDate>Mon, 20 Jan 2003 20:24:00 GMT</pubDate></item></channel></rss>
+and see if it integrates with Zope at all.)</description><category>tech</category><guid>https://bwinton.github.io/weblog.latte.ca/blake/tech/newstuff1/</guid><pubDate>Mon, 20 Jan 2003 20:24:00 GMT</pubDate></item></channel></rss>

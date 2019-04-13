@@ -1,30 +1,30 @@
 <?xml version="1.0" encoding="utf-8"?>
-<?xml-stylesheet type="text/xsl" href="../assets/xml/rss.xsl" media="all"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Blog-O! (html)</title><link>https://bwinton.github.io/weblog.latte.ca/</link><description></description><atom:link href="https://bwinton.github.io/weblog.latte.ca/tags/html.xml" type="application/rss+xml" rel="self"></atom:link><language>en</language><lastBuildDate>Sun, 30 Oct 2016 01:56:53 GMT</lastBuildDate><generator>https://getnikola.com/</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>X-Tag: or how to cut your html in half by adding 28 lines of Javascript…</title><link>https://bwinton.github.io/weblog.latte.ca/blake/employment/mozilla/x-tags.html</link><dc:creator>Blake Winton</dc:creator><description>&lt;div&gt;&lt;p&gt;As a side-project, I’ve been working on a prototype which is heavily based on
+<?xml-stylesheet type="text/xsl" href="../assets/xml/rss.xsl" media="all"?><rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/"><channel><title>Blog-O! (Posts about html)</title><link>https://bwinton.github.io/weblog.latte.ca/</link><description></description><atom:link rel="self" href="https://bwinton.github.io/weblog.latte.ca/tags/html.xml" type="application/rss+xml"></atom:link><language>en</language><lastBuildDate>Sat, 13 Apr 2019 21:03:23 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>X-Tag: or how to cut your html in half by adding 28 lines of Javascript…</title><link>https://bwinton.github.io/weblog.latte.ca/blake/employment/mozilla/x-tags/</link><dc:creator>Blake Winton</dc:creator><description>&lt;div&gt;&lt;p&gt;As a side-project, I’ve been working on a prototype which is heavily based on
 &lt;a href="https://people.mozilla.com/~bwinton/australis-customization/customizationMode-liveDemo-i02.html"&gt;a demo page&lt;/a&gt; from Stephen Horlander.  Now, that page is
 pretty amazing, but if you look at the source (using command-u or control-u in
 Firefox, and command-alt-u or control-alt-u in Chrome), you’ll see a lot of code
 that looks like this:&lt;/p&gt;
-&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="nt"&gt;&amp;lt;div&lt;/span&gt; &lt;span class="na"&gt;class=&lt;/span&gt;&lt;span class="s"&gt;"menuPanelButton subscribeButton"&lt;/span&gt;&lt;span class="nt"&gt;&amp;gt;&lt;/span&gt;
-  &lt;span class="nt"&gt;&amp;lt;div&lt;/span&gt; &lt;span class="na"&gt;class=&lt;/span&gt;&lt;span class="s"&gt;"button"&lt;/span&gt;&lt;span class="nt"&gt;&amp;gt;&amp;lt;/div&amp;gt;&lt;/span&gt;
-  &lt;span class="nt"&gt;&amp;lt;div&lt;/span&gt; &lt;span class="na"&gt;class=&lt;/span&gt;&lt;span class="s"&gt;"label"&lt;/span&gt;&lt;span class="nt"&gt;&amp;gt;&lt;/span&gt;Subscribe&lt;span class="nt"&gt;&amp;lt;/div&amp;gt;&lt;/span&gt;
-&lt;span class="nt"&gt;&amp;lt;/div&amp;gt;&lt;/span&gt;
+&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;&amp;amp;lt;div class="menuPanelButton subscribeButton"&amp;amp;gt;
+  &amp;amp;lt;div class="button"&amp;amp;gt;&amp;amp;lt;/div&amp;amp;gt;
+  &amp;amp;lt;div class="label"&amp;amp;gt;Subscribe&amp;amp;lt;/div&amp;amp;gt;
+&amp;amp;lt;/div&amp;amp;gt;
 &lt;/pre&gt;
 
 
 &lt;p&gt;and:&lt;/p&gt;
-&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="nt"&gt;&amp;lt;div&lt;/span&gt; &lt;span class="na"&gt;class=&lt;/span&gt;&lt;span class="s"&gt;"customizeToolbarItem"&lt;/span&gt;&lt;span class="nt"&gt;&amp;gt;&lt;/span&gt;
-  &lt;span class="nt"&gt;&amp;lt;div&lt;/span&gt; &lt;span class="na"&gt;class=&lt;/span&gt;&lt;span class="s"&gt;"customizeToolbarItemIcon share"&lt;/span&gt;&lt;span class="nt"&gt;&amp;gt;&amp;lt;/div&amp;gt;&lt;/span&gt;
-  &lt;span class="nt"&gt;&amp;lt;div&lt;/span&gt; &lt;span class="na"&gt;class=&lt;/span&gt;&lt;span class="s"&gt;"customizeToolbarItemLabel"&lt;/span&gt;&lt;span class="nt"&gt;&amp;gt;&lt;/span&gt;Share&lt;span class="nt"&gt;&amp;lt;/div&amp;gt;&lt;/span&gt;
-&lt;span class="nt"&gt;&amp;lt;/div&amp;gt;&lt;/span&gt;
+&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;&amp;amp;lt;div class="customizeToolbarItem"&amp;amp;gt;
+  &amp;amp;lt;div class="customizeToolbarItemIcon share"&amp;amp;gt;&amp;amp;lt;/div&amp;amp;gt;
+  &amp;amp;lt;div class="customizeToolbarItemLabel"&amp;amp;gt;Share&amp;amp;lt;/div&amp;amp;gt;
+&amp;amp;lt;/div&amp;amp;gt;
 &lt;/pre&gt;
 
 
 &lt;p&gt;Now, one or two of those would be fine, but when we get into more than that, the
 repetition really starts to bug me, and I think “Wouldn’t it be better if I
 could just write stuff like:&lt;/p&gt;
-&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="nt"&gt;&amp;lt;panel-button&lt;/span&gt; &lt;span class="na"&gt;type=&lt;/span&gt;&lt;span class="s"&gt;"subscribe"&lt;/span&gt;&lt;span class="nt"&gt;&amp;gt;&lt;/span&gt;Subscribe&lt;span class="nt"&gt;&amp;lt;/panel-button&amp;gt;&lt;/span&gt;
+&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;&amp;amp;lt;panel-button type="subscribe"&amp;amp;gt;Subscribe&amp;amp;lt;/panel-button&amp;amp;gt;
 …
-&lt;span class="nt"&gt;&amp;lt;toolbar-item&lt;/span&gt; &lt;span class="na"&gt;type=&lt;/span&gt;&lt;span class="s"&gt;"share"&lt;/span&gt;&lt;span class="nt"&gt;&amp;gt;&lt;/span&gt;Share&lt;span class="nt"&gt;&amp;lt;/toolbar-item&amp;gt;&lt;/span&gt;
+&amp;amp;lt;toolbar-item type="share"&amp;amp;gt;Share&amp;amp;lt;/toolbar-item&amp;amp;gt;
 &lt;/pre&gt;
 
 
@@ -42,11 +42,11 @@ register the new tags I’ll be using.  That’s done with code like this:&lt;/p
       &lt;span class="nx"&gt;onCreate&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt; &lt;span class="kd"&gt;function&lt;/span&gt;&lt;span class="p"&gt;(){&lt;/span&gt;
         &lt;span class="kd"&gt;var&lt;/span&gt; &lt;span class="nx"&gt;self&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="nx"&gt;$&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="k"&gt;this&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;
         &lt;span class="c1"&gt;// When the tag is first seen, make the innerHTML be this stuff below.&lt;/span&gt;
-        &lt;span class="nx"&gt;self&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;html&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;"&amp;lt;div class='menuPanelButton "&lt;/span&gt; &lt;span class="o"&gt;+&lt;/span&gt; &lt;span class="nx"&gt;self&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;attr&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;"type"&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="o"&gt;+&lt;/span&gt; &lt;span class="s2"&gt;"'&amp;gt;"&lt;/span&gt; &lt;span class="o"&gt;+&lt;/span&gt;
-                    &lt;span class="s2"&gt;"&amp;lt;img src='images/button-"&lt;/span&gt; &lt;span class="o"&gt;+&lt;/span&gt; &lt;span class="nx"&gt;self&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;attr&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;"type"&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="o"&gt;+&lt;/span&gt; &lt;span class="s2"&gt;".png'"&lt;/span&gt; &lt;span class="o"&gt;+&lt;/span&gt;
-                    &lt;span class="s2"&gt;"     class='button'&amp;gt;"&lt;/span&gt; &lt;span class="o"&gt;+&lt;/span&gt;
-                    &lt;span class="s2"&gt;"&amp;lt;div class='label'&amp;gt;"&lt;/span&gt; &lt;span class="o"&gt;+&lt;/span&gt; &lt;span class="nx"&gt;self&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;text&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt; &lt;span class="o"&gt;+&lt;/span&gt; &lt;span class="s2"&gt;"&amp;lt;/div&amp;gt;"&lt;/span&gt; &lt;span class="o"&gt;+&lt;/span&gt; 
-                  &lt;span class="s2"&gt;"&amp;lt;/div&amp;gt;"&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;
+        &lt;span class="nx"&gt;self&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;html&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;"&amp;amp;lt;div class='menuPanelButton "&lt;/span&gt; &lt;span class="o"&gt;+&lt;/span&gt; &lt;span class="nx"&gt;self&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;attr&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;"type"&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="o"&gt;+&lt;/span&gt; &lt;span class="s2"&gt;"'&amp;amp;gt;"&lt;/span&gt; &lt;span class="o"&gt;+&lt;/span&gt;
+                    &lt;span class="s2"&gt;"&amp;amp;lt;img src='images/button-"&lt;/span&gt; &lt;span class="o"&gt;+&lt;/span&gt; &lt;span class="nx"&gt;self&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;attr&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;"type"&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="o"&gt;+&lt;/span&gt; &lt;span class="s2"&gt;".png'"&lt;/span&gt; &lt;span class="o"&gt;+&lt;/span&gt;
+                    &lt;span class="s2"&gt;"     class='button'&amp;amp;gt;"&lt;/span&gt; &lt;span class="o"&gt;+&lt;/span&gt;
+                    &lt;span class="s2"&gt;"&amp;amp;lt;div class='label'&amp;amp;gt;"&lt;/span&gt; &lt;span class="o"&gt;+&lt;/span&gt; &lt;span class="nx"&gt;self&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;text&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt; &lt;span class="o"&gt;+&lt;/span&gt; &lt;span class="s2"&gt;"&amp;amp;lt;/div&amp;amp;gt;"&lt;/span&gt; &lt;span class="o"&gt;+&lt;/span&gt; 
+                  &lt;span class="s2"&gt;"&amp;amp;lt;/div&amp;amp;gt;"&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;
       &lt;span class="p"&gt;},&lt;/span&gt;
     &lt;span class="p"&gt;});&lt;/span&gt;
 
@@ -56,10 +56,10 @@ register the new tags I’ll be using.  That’s done with code like this:&lt;/p
         &lt;span class="kd"&gt;var&lt;/span&gt; &lt;span class="nx"&gt;self&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="nx"&gt;$&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="k"&gt;this&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;
         &lt;span class="c1"&gt;// We could also replace this element with the html below, but I&lt;/span&gt;
         &lt;span class="c1"&gt;// haven’t done that here because I haven’t needed to yet.&lt;/span&gt;
-        &lt;span class="nx"&gt;self&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;html&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;"&amp;lt;div class='customizeToolbarItem'&amp;gt;"&lt;/span&gt; &lt;span class="o"&gt;+&lt;/span&gt;
-                    &lt;span class="s2"&gt;"&amp;lt;div class='customizeToolbarItemIcon "&lt;/span&gt; &lt;span class="o"&gt;+&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nx"&gt;self&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;attr&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;"type"&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="o"&gt;||&lt;/span&gt; &lt;span class="s2"&gt;""&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="o"&gt;+&lt;/span&gt; &lt;span class="s2"&gt;"'&amp;gt;&amp;lt;/div&amp;gt;"&lt;/span&gt; &lt;span class="o"&gt;+&lt;/span&gt;
-                    &lt;span class="s2"&gt;"&amp;lt;div class='customizeToolbarItemLabel'&amp;gt;"&lt;/span&gt; &lt;span class="o"&gt;+&lt;/span&gt; &lt;span class="nx"&gt;self&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;text&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt; &lt;span class="o"&gt;+&lt;/span&gt; &lt;span class="s2"&gt;"&amp;lt;/div&amp;gt;"&lt;/span&gt; &lt;span class="o"&gt;+&lt;/span&gt;
-                  &lt;span class="s2"&gt;"&amp;lt;/div&amp;gt;"&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;
+        &lt;span class="nx"&gt;self&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;html&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;"&amp;amp;lt;div class='customizeToolbarItem'&amp;amp;gt;"&lt;/span&gt; &lt;span class="o"&gt;+&lt;/span&gt;
+                    &lt;span class="s2"&gt;"&amp;amp;lt;div class='customizeToolbarItemIcon "&lt;/span&gt; &lt;span class="o"&gt;+&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nx"&gt;self&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;attr&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;"type"&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="o"&gt;||&lt;/span&gt; &lt;span class="s2"&gt;""&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="o"&gt;+&lt;/span&gt; &lt;span class="s2"&gt;"'&amp;amp;gt;&amp;amp;lt;/div&amp;amp;gt;"&lt;/span&gt; &lt;span class="o"&gt;+&lt;/span&gt;
+                    &lt;span class="s2"&gt;"&amp;amp;lt;div class='customizeToolbarItemLabel'&amp;amp;gt;"&lt;/span&gt; &lt;span class="o"&gt;+&lt;/span&gt; &lt;span class="nx"&gt;self&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;text&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt; &lt;span class="o"&gt;+&lt;/span&gt; &lt;span class="s2"&gt;"&amp;amp;lt;/div&amp;amp;gt;"&lt;/span&gt; &lt;span class="o"&gt;+&lt;/span&gt;
+                  &lt;span class="s2"&gt;"&amp;amp;lt;/div&amp;amp;gt;"&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;
       &lt;span class="p"&gt;},&lt;/span&gt;
     &lt;span class="p"&gt;});&lt;/span&gt;
 
@@ -80,4 +80,4 @@ seriously tempted to switch them to an x-tag!&lt;/p&gt;
 since the content would be replaced by the value of the content property long
 before I had a chance to muck around with it in the onCreate.  So in the future,
 I think I’ll just jump straight into using the onCreate method, since it’s not
-that much harder.&lt;/p&gt;&lt;/div&gt;</description><category>html</category><category>mozilla</category><category>xtag</category><guid>https://bwinton.github.io/weblog.latte.ca/blake/employment/mozilla/x-tags.html</guid><pubDate>Fri, 13 Jul 2012 01:39:32 GMT</pubDate></item></channel></rss>
+that much harder.&lt;/p&gt;&lt;/div&gt;</description><category>html</category><category>mozilla</category><category>xtag</category><guid>https://bwinton.github.io/weblog.latte.ca/blake/employment/mozilla/x-tags/</guid><pubDate>Fri, 13 Jul 2012 01:39:32 GMT</pubDate></item></channel></rss>

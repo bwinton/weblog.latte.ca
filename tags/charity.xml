@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<?xml-stylesheet type="text/xsl" href="../assets/xml/rss.xsl" media="all"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Blog-O! (charity)</title><link>https://bwinton.github.io/weblog.latte.ca/</link><description></description><atom:link href="https://bwinton.github.io/weblog.latte.ca/tags/charity.xml" type="application/rss+xml" rel="self"></atom:link><language>en</language><lastBuildDate>Sun, 30 Oct 2016 01:56:55 GMT</lastBuildDate><generator>https://getnikola.com/</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Assaulted Women Need Your Help</title><link>https://bwinton.github.io/weblog.latte.ca/charity/awhl.html</link><dc:creator>Amy Brown</dc:creator><description>&lt;p&gt;
+<?xml-stylesheet type="text/xsl" href="../assets/xml/rss.xsl" media="all"?><rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/"><channel><title>Blog-O! (Posts about charity)</title><link>https://bwinton.github.io/weblog.latte.ca/</link><description></description><atom:link rel="self" href="https://bwinton.github.io/weblog.latte.ca/tags/charity.xml" type="application/rss+xml"></atom:link><language>en</language><lastBuildDate>Sat, 13 Apr 2019 21:03:27 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Assaulted Women Need Your Help</title><link>https://bwinton.github.io/weblog.latte.ca/charity/awhl/</link><dc:creator>Amy Brown</dc:creator><description>&lt;p&gt;
 The short-term goal of all this running foolishness is
 to run the 5K event in the Toronto
 Waterfront Marathon on September 24th, in aid of the
@@ -26,8 +26,10 @@ So if you want to pledge some money for a good cause,
 or just to express your astonishment that I am actually
 running anywhere for any reason, 
 &lt;a href="https://www.icanpledge.com/cyberpledge/pledge.asp?member_id=6347&amp;amp;org_id=130&amp;amp;fund_id=74"&gt;here's my online pledge page&lt;/a&gt;.  Thank you!
-&lt;/p&gt;</description><category>charity</category><guid>https://bwinton.github.io/weblog.latte.ca/charity/awhl.html</guid><pubDate>Sun, 20 Aug 2006 02:25:00 GMT</pubDate></item><item><title>The AIDS Walk for Life.</title><link>https://bwinton.github.io/weblog.latte.ca/charity/walk2006.html</link><dc:creator>Amy Brown</dc:creator><description>&lt;p&gt;This year, my mother is walking in The Toronto AIDS Walk for Life,
-on Sunday September 17, and asked me to post this.&lt;br&gt;&lt;/p&gt;&lt;blockquote&gt;ACT is an essential &amp;amp; vital organization - I am proud to
+&lt;/p&gt;</description><category>charity</category><guid>https://bwinton.github.io/weblog.latte.ca/charity/awhl/</guid><pubDate>Sun, 20 Aug 2006 02:25:00 GMT</pubDate></item><item><title>The AIDS Walk for Life.</title><link>https://bwinton.github.io/weblog.latte.ca/charity/walk2006/</link><dc:creator>Amy Brown</dc:creator><description>&lt;p&gt;This year, my mother is walking in The Toronto AIDS Walk for Life,
+on Sunday September 17, and asked me to post this.&lt;br&gt;
+
+&lt;/p&gt;&lt;blockquote&gt;ACT is an essential &amp;amp; vital organization - I am proud to
 work here &amp;amp; I am proud of the work that we do: providing support, HIV
 prevention &amp;amp; education services for people living with &amp;amp; at risk for
 HIV/AIDS.
@@ -37,4 +39,4 @@ Please pledge what you can &amp;amp; thank you for your support.&lt;/blockquote&
 &lt;a href="https://secure.e2rm.com/registrant/PersonalPage.aspx?EID=6468&amp;amp;RegistrationID=200718"&gt;Secure on-line donations&lt;/a&gt; can be made with VISA, MasterCard, and
 American Express. An electronic tax receipt will be sent to you
 immediately by email.
-</description><category>charity</category><guid>https://bwinton.github.io/weblog.latte.ca/charity/walk2006.html</guid><pubDate>Thu, 20 Jul 2006 18:14:00 GMT</pubDate></item></channel></rss>
+</description><category>charity</category><guid>https://bwinton.github.io/weblog.latte.ca/charity/walk2006/</guid><pubDate>Thu, 20 Jul 2006 18:14:00 GMT</pubDate></item></channel></rss>

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<?xml-stylesheet type="text/xsl" href="../assets/xml/rss.xsl" media="all"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Blog-O! (thunderbird)</title><link>https://bwinton.github.io/weblog.latte.ca/</link><description></description><atom:link href="https://bwinton.github.io/weblog.latte.ca/tags/thunderbird.xml" type="application/rss+xml" rel="self"></atom:link><language>en</language><lastBuildDate>Sun, 30 Oct 2016 01:56:50 GMT</lastBuildDate><generator>https://getnikola.com/</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>A long time ago, on a computer far far away…</title><link>https://bwinton.github.io/weblog.latte.ca/blake/employment/mozilla/sixyears.html</link><dc:creator>Blake Winton</dc:creator><description>&lt;div&gt;&lt;p&gt;Six years ago, I started contributing to Mozilla.&lt;/p&gt;
-&lt;p&gt;&lt;a href="https://bwinton.github.io/weblog.latte.ca/blake/employment/mozilla/sixyears.html"&gt;Read more…&lt;/a&gt; (4 min remaining to read)&lt;/p&gt;&lt;/div&gt;</description><category>anniversary</category><category>employment</category><category>mozilla</category><category>thunderbird</category><guid>https://bwinton.github.io/weblog.latte.ca/blake/employment/mozilla/sixyears.html</guid><pubDate>Fri, 27 Feb 2015 19:04:00 GMT</pubDate></item><item><title>Building Thunderbird on OS X Lion (10.7) and XCode 4.2</title><link>https://bwinton.github.io/weblog.latte.ca/blake/tech/thunderbird/buildingonlion.html</link><dc:creator>Blake Winton</dc:creator><description>&lt;div&gt;&lt;p&gt;A few people recently asked me about building Thunderbird on the latest version
+<?xml-stylesheet type="text/xsl" href="../assets/xml/rss.xsl" media="all"?><rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/"><channel><title>Blog-O! (Posts about thunderbird)</title><link>https://bwinton.github.io/weblog.latte.ca/</link><description></description><atom:link rel="self" href="https://bwinton.github.io/weblog.latte.ca/tags/thunderbird.xml" type="application/rss+xml"></atom:link><language>en</language><lastBuildDate>Sat, 13 Apr 2019 21:03:19 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>A long time ago, on a computer far far away…</title><link>https://bwinton.github.io/weblog.latte.ca/blake/employment/mozilla/sixyears/</link><dc:creator>Blake Winton</dc:creator><description>&lt;div&gt;&lt;p&gt;Six years ago, I started contributing to Mozilla.&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://bwinton.github.io/weblog.latte.ca/blake/employment/mozilla/sixyears/"&gt;Read more…&lt;/a&gt; (4 min remaining to read)&lt;/p&gt;&lt;/div&gt;</description><category>anniversary</category><category>employment</category><category>mozilla</category><category>thunderbird</category><guid>https://bwinton.github.io/weblog.latte.ca/blake/employment/mozilla/sixyears/</guid><pubDate>Fri, 27 Feb 2015 19:04:00 GMT</pubDate></item><item><title>Building Thunderbird on OS X Lion (10.7) and XCode 4.2</title><link>https://bwinton.github.io/weblog.latte.ca/blake/tech/thunderbird/buildingonlion/</link><dc:creator>Blake Winton</dc:creator><description>&lt;div&gt;&lt;p&gt;A few people recently asked me about building Thunderbird on the latest version
 of Mac OS X.  Since I have it working, and to give myself a place to point to
 the next time they ask, I figured it would be a good idea to blog about it.&lt;/p&gt;
 &lt;p&gt;So, here’s my &lt;code&gt;.mozconfig&lt;/code&gt;.&lt;/p&gt;
@@ -49,10 +49,10 @@ ac_add_options --disable-jemalloc
 ac_add_options --enable-chrome-format&lt;span class="o"&gt;=&lt;/span&gt;symlink
 
 ac_add_options --with-macos-sdk&lt;span class="o"&gt;=&lt;/span&gt;/Developer/SDKs/MacOSX10.7.sdk
-ac_add_options --enable-macos-target&lt;span class="o"&gt;=&lt;/span&gt;10.7
+ac_add_options --enable-macos-target&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="m"&gt;10&lt;/span&gt;.7
 
 &lt;span class="c1"&gt;# For NSS symbols&lt;/span&gt;
-&lt;span class="nb"&gt;export&lt;/span&gt; &lt;span class="nv"&gt;MOZ_DEBUG_SYMBOLS&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;1
+&lt;span class="nb"&gt;export&lt;/span&gt; &lt;span class="nv"&gt;MOZ_DEBUG_SYMBOLS&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="m"&gt;1&lt;/span&gt;
 &lt;span class="c1"&gt;#ac_add_options --enable-debug-symbols="-gdwarf-2"&lt;/span&gt;
 
 &lt;span class="c1"&gt;#Use ccache&lt;/span&gt;
@@ -62,10 +62,13 @@ ac_add_options --enable-macos-target&lt;span class="o"&gt;=&lt;/span&gt;10.7
 &lt;span class="nv"&gt;CC&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;clang
 &lt;span class="nv"&gt;CXX&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;clang++
 &lt;/pre&gt;
-&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;p&gt;There are probably a bunch of things I don’t really need in there, so if anyone
+&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+
+&lt;p&gt;There are probably a bunch of things I don’t really need in there, so if anyone
 wants to take it, and cut it down to the minimal set, I would definitely
 appreciate it.  But in the meantime, this works for me, and will probably work
-for you, too.&lt;/p&gt;&lt;/div&gt;</description><category>mac</category><category>mozilla</category><category>thunderbird</category><guid>https://bwinton.github.io/weblog.latte.ca/blake/tech/thunderbird/buildingonlion.html</guid><pubDate>Tue, 06 Mar 2012 15:34:10 GMT</pubDate></item><item><title>Thunderbird’s UI Directions.</title><link>https://bwinton.github.io/weblog.latte.ca/blake/tech/thunderbird/uifutures.html</link><dc:creator>Blake Winton</dc:creator><description>&lt;div&gt;&lt;p&gt;&lt;link rel="stylesheet" type="text/css" href="https://bwinton.github.io/weblog.latte.ca/blake/tech/thunderbird/bugzilla.css"&gt;&lt;script type="text/javascript" src="https://bwinton.github.io/weblog.latte.ca/blake/tech/thunderbird/bugzilla.js"&gt;&lt;/script&gt;&lt;/p&gt;
+for you, too.&lt;/p&gt;&lt;/div&gt;</description><category>mac</category><category>mozilla</category><category>thunderbird</category><guid>https://bwinton.github.io/weblog.latte.ca/blake/tech/thunderbird/buildingonlion/</guid><pubDate>Tue, 06 Mar 2012 15:34:10 GMT</pubDate></item><item><title>Thunderbird’s UI Directions.</title><link>https://bwinton.github.io/weblog.latte.ca/blake/tech/thunderbird/uifutures/</link><dc:creator>Blake Winton</dc:creator><description>&lt;div&gt;&lt;p&gt;&lt;link rel="stylesheet" type="text/css" href="https://bwinton.github.io/weblog.latte.ca/blake/tech/thunderbird/uifutures/bugzilla.css"&gt;
+&lt;script type="text/javascript" src="https://bwinton.github.io/weblog.latte.ca/blake/tech/thunderbird/uifutures/bugzilla.js"&gt;&lt;/script&gt;&lt;/p&gt;
 &lt;p&gt;On a &lt;a href="http://breakingtheegg.tumblr.com/post/10525122364/cooking-up-some-tabs-on-top-for-thunderbird"&gt;previous post&lt;/a&gt; in a different blog, some commenters were asking us if we were
 considering doing things that we have planned to do for a while now, and
 that led me to realize that I haven’t been communicating the future of
@@ -89,7 +92,8 @@ Thunderbird is to let you focus on the content that’s important to you, and
 not be distracted by things you don’t care about.  Hopefully most of the
 changes I talk about here will help that, and as a side benefit also help
 to give us a more unique style.&lt;/p&gt;
-&lt;ul&gt;&lt;li&gt;
+&lt;ul&gt;
+&lt;li&gt;
 &lt;p&gt;A simple thing that will make the product nicer to use is just to line
   things up.  We’re all over the place, and it should be fairly simple to
   make this better.  There are a couple of bugs that are related to this,
@@ -170,9 +174,10 @@ to give us a more unique style.&lt;/p&gt;
   3, and 4, and 5…  (No bug for this one either, again, because removals
   are sensitive things.)&lt;/p&gt;
 &lt;/li&gt;
-&lt;/ul&gt;&lt;p&gt;See &lt;a href="https://bwinton.github.io/weblog.latte.ca/blake/tech/thunderbird/uifutures.html" class="all-bugs"&gt;all the bugs&lt;/a&gt; in one big list.&lt;/p&gt;
+&lt;/ul&gt;
+&lt;p&gt;See &lt;a href="https://bwinton.github.io/weblog.latte.ca/blake/tech/thunderbird/uifutures/" class="all-bugs"&gt;all the bugs&lt;/a&gt; in one big list.&lt;/p&gt;
 &lt;p&gt;&lt;small&gt;Many thank-yous to &lt;a href="http://blog.mozilla.com/faaborg/"&gt;Alex Faaborg&lt;/a&gt;, and &lt;a href="http://www.areweprettyyet.com/"&gt;areweprettyyet&lt;/a&gt; for the code to link the bugs, and the
-basis of the styling to make them stand out.&lt;/small&gt;&lt;/p&gt;&lt;/div&gt;</description><category>future</category><category>mozilla</category><category>thunderbird</category><category>ui</category><guid>https://bwinton.github.io/weblog.latte.ca/blake/tech/thunderbird/uifutures.html</guid><pubDate>Tue, 27 Sep 2011 15:02:38 GMT</pubDate></item><item><title>A Proposal for Updates with Add-ons.</title><link>https://bwinton.github.io/weblog.latte.ca/blake/tech/thunderbird/updates.html</link><dc:creator>Blake Winton</dc:creator><description>&lt;div&gt;&lt;p&gt;Add-ons are an important part of many Mozilla products, and many people
+basis of the styling to make them stand out.&lt;/small&gt;&lt;/p&gt;&lt;/div&gt;</description><category>future</category><category>mozilla</category><category>thunderbird</category><category>ui</category><guid>https://bwinton.github.io/weblog.latte.ca/blake/tech/thunderbird/uifutures/</guid><pubDate>Tue, 27 Sep 2011 15:02:38 GMT</pubDate></item><item><title>A Proposal for Updates with Add-ons.</title><link>https://bwinton.github.io/weblog.latte.ca/blake/tech/thunderbird/updates/</link><dc:creator>Blake Winton</dc:creator><description>&lt;div&gt;&lt;p&gt;Add-ons are an important part of many Mozilla products, and many people
 have noticed that they’ve taken a hit as we’ve switched to the Rapid
 Release process.  To help users have a little more control over how well
 their Firefox works, I would like to propose the following slight
@@ -200,31 +205,35 @@ incompatible add-ons.&lt;/p&gt;
 &lt;p&gt;Showing the user which add-ons are incompatible will let them decide
 whether the add-ons are important enough to not upgrade, or whether they
 can live with the (hopefully short) period of reduced functionality.&lt;/p&gt;
-&lt;p&gt;As always, comments welcome, but keep them polite or they’ll be deleted.&lt;/p&gt;&lt;/div&gt;</description><category>add-ons</category><category>firefox</category><category>mozilla</category><category>thunderbird</category><category>update</category><guid>https://bwinton.github.io/weblog.latte.ca/blake/tech/thunderbird/updates.html</guid><pubDate>Thu, 08 Sep 2011 18:49:44 GMT</pubDate></item><item><title>Who should review my change?</title><link>https://bwinton.github.io/weblog.latte.ca/blake/tech/thunderbird/reviewerchooser.html</link><dc:creator>Blake Winton</dc:creator><description>&lt;div&gt;&lt;p&gt;One of the big questions I had when I started writing patches was who I
+&lt;p&gt;As always, comments welcome, but keep them polite or they’ll be deleted.&lt;/p&gt;&lt;/div&gt;</description><category>add-ons</category><category>firefox</category><category>mozilla</category><category>thunderbird</category><category>update</category><guid>https://bwinton.github.io/weblog.latte.ca/blake/tech/thunderbird/updates/</guid><pubDate>Thu, 08 Sep 2011 18:49:44 GMT</pubDate></item><item><title>Who should review my change?</title><link>https://bwinton.github.io/weblog.latte.ca/blake/tech/thunderbird/reviewerchooser/</link><dc:creator>Blake Winton</dc:creator><description>&lt;div&gt;&lt;p&gt;One of the big questions I had when I started writing patches was who I
 should ask to review them.  Now that I’ve been in the community for a
 while, I’ve got a much better sense of who I should be talking to for the
 type of things I’m likely to write, but there are still times when I want
 to make a change in a part of the code that I haven’t touched before, and
 I’m not sure who to ask.  In those cases, I usually fall back to a fairly
 simple (if non-obvious) set of steps to try and figure out who to pick.&lt;/p&gt;
-&lt;ol&gt;&lt;li&gt;Get the list of files I’ve changed.&lt;/li&gt;
+&lt;ol&gt;
+&lt;li&gt;Get the list of files I’ve changed.&lt;/li&gt;
 &lt;li&gt;Get the hg log for those files.&lt;/li&gt;
 &lt;li&gt;Check through the log for “r=”, and “sr=”.&lt;/li&gt;
-&lt;/ol&gt;&lt;p&gt;Of course, that’s a fairly easy set of steps to automate, and so I present
+&lt;/ol&gt;
+&lt;p&gt;Of course, that’s a fairly easy set of steps to automate, and so I present
 my first cut at &lt;a href="https://github.com/bwinton/Mozilla-Tools/blob/master/getReviewer.py"&gt;the automated reviewer chooser&lt;/a&gt;!&lt;/p&gt;
 &lt;p&gt;Of course, there are a lot of things I’ld like to do with this, such as:&lt;/p&gt;
-&lt;ul&gt;&lt;li&gt;Improving the documentation.&lt;/li&gt;
+&lt;ul&gt;
+&lt;li&gt;Improving the documentation.&lt;/li&gt;
 &lt;li&gt;Checking to see how well this script would have done on previous commits.&lt;/li&gt;
 &lt;li&gt;Taking into account the length of the queues for the reviewers.&lt;/li&gt;
 &lt;li&gt;Adding some sort of recent-ness calculations.&lt;/li&gt;
-&lt;/ul&gt;&lt;p&gt;But I think that this tool is useful enough in its current state that
+&lt;/ul&gt;
+&lt;p&gt;But I think that this tool is useful enough in its current state that
 releasing it and getting feedback on what to actually work on would be a
 win.&lt;/p&gt;
 &lt;p&gt;To use it, be in a mercurial source repo, and type &lt;code&gt;getReviewer.py&lt;/code&gt; to get
 a list of suggested reviewers for the current differences, or
 &lt;code&gt;getReviewer.py temp.diff&lt;/code&gt; or &lt;code&gt;getReviewer.py
 https://bugzilla.mozilla.org/attachment.cgi\?id\=536017&lt;/code&gt; to specify a
-different set of changes.&lt;/p&gt;&lt;/div&gt;</description><category>mozilla</category><category>review</category><category>thunderbird</category><guid>https://bwinton.github.io/weblog.latte.ca/blake/tech/thunderbird/reviewerchooser.html</guid><pubDate>Thu, 02 Jun 2011 00:13:37 GMT</pubDate></item><item><title>New GetAnAccount UI.</title><link>https://bwinton.github.io/weblog.latte.ca/blake/tech/thunderbird/getanaccountuiupdate.html</link><dc:creator>Blake Winton</dc:creator><description>&lt;div&gt;&lt;p&gt;Since &lt;a href="http://mozillalabs.com/messaging/2010/12/14/get-an-account/"&gt;we released&lt;/a&gt; the
+different set of changes.&lt;/p&gt;&lt;/div&gt;</description><category>mozilla</category><category>review</category><category>thunderbird</category><guid>https://bwinton.github.io/weblog.latte.ca/blake/tech/thunderbird/reviewerchooser/</guid><pubDate>Thu, 02 Jun 2011 00:13:37 GMT</pubDate></item><item><title>New GetAnAccount UI.</title><link>https://bwinton.github.io/weblog.latte.ca/blake/tech/thunderbird/getanaccountuiupdate/</link><dc:creator>Blake Winton</dc:creator><description>&lt;div&gt;&lt;p&gt;Since &lt;a href="http://mozillalabs.com/messaging/2010/12/14/get-an-account/"&gt;we released&lt;/a&gt; the
 &lt;a href="https://addons.mozilla.org/en-US/thunderbird/addon/get-an-account/"&gt;GetAnAccount addon&lt;/a&gt;, we’ve
 had a lot of feedback.  Many of the people who commented were looking for
 the option of getting an ad-supported account instead of paying for email
@@ -253,13 +262,13 @@ the dialog in this mockup.)&lt;/p&gt;
 &lt;p&gt;And finally, once you pick one of the providers, we expand that list to
 show you all of the results for that provider.&lt;/p&gt;
 &lt;p&gt;&lt;/p&gt;&lt;center&gt;&lt;a href="https://bwinton.github.io/weblog.latte.ca/images/blake/GetAnAccount/05-Chosen.svg"&gt;&lt;img src="https://bwinton.github.io/weblog.latte.ca/images/blake/GetAnAccount/05-Chosen.svg" title="Choose a Provider" alt="Provider Chosen" width="50%" align="center"&gt;&lt;/a&gt;&lt;/center&gt;
-&lt;p&gt;Feedback, as always, is welcome, either here or in &lt;a href="http://groups.google.com/group/mozilla-labs"&gt;the forum&lt;/a&gt;.&lt;/p&gt;&lt;/div&gt;</description><category>getanaccount</category><category>mozilla</category><category>thunderbird</category><guid>https://bwinton.github.io/weblog.latte.ca/blake/tech/thunderbird/getanaccountuiupdate.html</guid><pubDate>Fri, 01 Apr 2011 01:41:40 GMT</pubDate></item><item><title>OpenSearch add-on for Thunderbird updated!</title><link>https://bwinton.github.io/weblog.latte.ca/blake/tech/thunderbird/opensearch.html</link><dc:creator>Blake Winton</dc:creator><description>&lt;div&gt;&lt;p&gt;Over the past week, I’ve been working on fixing some of &lt;a href="https://github.com/mozilla/opensearch/issues"&gt;the reported
+&lt;p&gt;Feedback, as always, is welcome, either here or in &lt;a href="http://groups.google.com/group/mozilla-labs"&gt;the forum&lt;/a&gt;.&lt;/p&gt;&lt;/div&gt;</description><category>getanaccount</category><category>mozilla</category><category>thunderbird</category><guid>https://bwinton.github.io/weblog.latte.ca/blake/tech/thunderbird/getanaccountuiupdate/</guid><pubDate>Fri, 01 Apr 2011 01:41:40 GMT</pubDate></item><item><title>OpenSearch add-on for Thunderbird updated!</title><link>https://bwinton.github.io/weblog.latte.ca/blake/tech/thunderbird/opensearch/</link><dc:creator>Blake Winton</dc:creator><description>&lt;div&gt;&lt;p&gt;Over the past week, I’ve been working on fixing some of &lt;a href="https://github.com/mozilla/opensearch/issues"&gt;the reported
 bugs&lt;/a&gt; in the OpenSearch
 add-on for Thunderbird, and now I think I’ve &lt;a href="https://github.com/mozilla/opensearch/issues/closed"&gt;fixed enough&lt;/a&gt; of them to release a
 new version.  &lt;/p&gt;
 &lt;p&gt;You can find the full details on &lt;a href="http://mozillalabs.com/messaging/2011/02/25/opensearch-updated/"&gt;the Mozilla Labs blog&lt;/a&gt;, or you
 could just jump straight to &lt;a href="https://addons.mozilla.org/en-US/thunderbird/addon/opensearch/"&gt;the OpenSearch add-on page&lt;/a&gt; to install
-it.  And please leave your feedback about the add-on on &lt;a href="https://groups.google.com/d/topic/mozilla-labs/t1wGyH8CDmQ/discussion"&gt;our Google group&lt;/a&gt;!&lt;/p&gt;&lt;/div&gt;</description><category>mozilla</category><category>opensearch</category><category>thunderbird</category><guid>https://bwinton.github.io/weblog.latte.ca/blake/tech/thunderbird/opensearch.html</guid><pubDate>Fri, 25 Feb 2011 16:25:47 GMT</pubDate></item><item><title>What files have the most bugs?</title><link>https://bwinton.github.io/weblog.latte.ca/blake/tech/thunderbird/wherearethebugs.html</link><dc:creator>Blake Winton</dc:creator><description>&lt;div&gt;&lt;p&gt;I was reading &lt;a href="http://oreilly.com/catalog/9780596808303"&gt;Making Software&lt;/a&gt;
+it.  And please leave your feedback about the add-on on &lt;a href="https://groups.google.com/d/topic/mozilla-labs/t1wGyH8CDmQ/discussion"&gt;our Google group&lt;/a&gt;!&lt;/p&gt;&lt;/div&gt;</description><category>mozilla</category><category>opensearch</category><category>thunderbird</category><guid>https://bwinton.github.io/weblog.latte.ca/blake/tech/thunderbird/opensearch/</guid><pubDate>Fri, 25 Feb 2011 16:25:47 GMT</pubDate></item><item><title>What files have the most bugs?</title><link>https://bwinton.github.io/weblog.latte.ca/blake/tech/thunderbird/wherearethebugs/</link><dc:creator>Blake Winton</dc:creator><description>&lt;div&gt;&lt;p&gt;I was reading &lt;a href="http://oreilly.com/catalog/9780596808303"&gt;Making Software&lt;/a&gt;
 by Andy Oram and Greg Wilson, and got to the chapter about An Automated
 Fault Prediction System.  It’s a pretty neat chapter, and it got me
 wondering which files in the &lt;a href="http://mxr.mozilla.org/comm-central/"&gt;Thunderbird code base&lt;/a&gt; had the most bugs.  Now, I don’t have
@@ -315,9 +324,12 @@ Let me just paste (&lt;a href="https://bwinton.github.io/weblog.latte.ca/static/
 &lt;span class="n"&gt;counts&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;reverse&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
 &lt;span class="k"&gt;print&lt;/span&gt; &lt;span class="s2"&gt;"&lt;/span&gt;&lt;span class="se"&gt;\n&lt;/span&gt;&lt;span class="s2"&gt;"&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;join&lt;/span&gt;&lt;span class="p"&gt;([&lt;/span&gt;&lt;span class="n"&gt;c&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt; &lt;span class="o"&gt;+&lt;/span&gt; &lt;span class="s2"&gt;":"&lt;/span&gt; &lt;span class="o"&gt;+&lt;/span&gt; &lt;span class="nb"&gt;str&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;c&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;])&lt;/span&gt; &lt;span class="k"&gt;for&lt;/span&gt; &lt;span class="n"&gt;c&lt;/span&gt; &lt;span class="ow"&gt;in&lt;/span&gt; &lt;span class="n"&gt;counts&lt;/span&gt;&lt;span class="p"&gt;[:&lt;/span&gt;&lt;span class="mi"&gt;10&lt;/span&gt;&lt;span class="p"&gt;]])&lt;/span&gt;
 &lt;/pre&gt;
-&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;p&gt;And so, without further ado, here are the files that have been changed the
+&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+
+&lt;p&gt;And so, without further ado, here are the files that have been changed the
 most in bug fixes, and the number of times they've been changed:&lt;/p&gt;
-&lt;ul&gt;&lt;li&gt;mail/base/content/mailWindowOverlay.js:109&lt;/li&gt;
+&lt;ul&gt;
+&lt;li&gt;mail/base/content/mailWindowOverlay.js:109&lt;/li&gt;
 &lt;li&gt;suite/browser/browser-prefs.js:73&lt;/li&gt;
 &lt;li&gt;suite/browser/navigator.js:70&lt;/li&gt;
 &lt;li&gt;mail/base/content/msgMail3PaneWindow.js:69&lt;/li&gt;
@@ -327,8 +339,11 @@ most in bug fixes, and the number of times they've been changed:&lt;/p&gt;
 &lt;li&gt;mailnews/imap/src/nsImapMailFolder.cpp:56&lt;/li&gt;
 &lt;li&gt;suite/browser/tabbrowser.xml:53&lt;/li&gt;
 &lt;li&gt;mail/base/content/msgHdrViewOverlay.js:52&lt;/li&gt;
-&lt;/ul&gt;&lt;hr&gt;&lt;p&gt;&lt;small&gt;As a side note, for the &lt;a href="http://mxr.mozilla.org/mozilla-central/"&gt;mozilla repo&lt;/a&gt; it looks like this:&lt;/small&gt;&lt;/p&gt;
-&lt;ul&gt;&lt;li&gt;&lt;small&gt;js/src/jstracer.cpp:780&lt;/small&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;p&gt;&lt;small&gt;As a side note, for the &lt;a href="http://mxr.mozilla.org/mozilla-central/"&gt;mozilla repo&lt;/a&gt; it looks like this:&lt;/small&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;small&gt;js/src/jstracer.cpp:780&lt;/small&gt;&lt;/li&gt;
 &lt;li&gt;&lt;small&gt;browser/base/content/browser.js:654&lt;/small&gt;&lt;/li&gt;
 &lt;li&gt;&lt;small&gt;layout/base/nsCSSFrameConstructor.cpp:410&lt;/small&gt;&lt;/li&gt;
 &lt;li&gt;&lt;small&gt;layout/base/nsPresShell.cpp:400&lt;/small&gt;&lt;/li&gt;
@@ -338,7 +353,7 @@ most in bug fixes, and the number of times they've been changed:&lt;/p&gt;
 &lt;li&gt;&lt;small&gt;toolkit/components/places/src/nsNavHistory.cpp:374&lt;/small&gt;&lt;/li&gt;
 &lt;li&gt;&lt;small&gt;js/src/jsinterp.cpp:345&lt;/small&gt;&lt;/li&gt;
 &lt;li&gt;&lt;small&gt;js/src/jsapi.cpp:343&lt;/small&gt;&lt;/li&gt;
-&lt;/ul&gt;&lt;/div&gt;</description><category>making_software</category><category>mozilla</category><category>thunderbird</category><guid>https://bwinton.github.io/weblog.latte.ca/blake/tech/thunderbird/wherearethebugs.html</guid><pubDate>Fri, 24 Dec 2010 19:59:24 GMT</pubDate></item><item><title>Making sure I don’t forget things.</title><link>https://bwinton.github.io/weblog.latte.ca/blake/tech/thunderbird/checklists.html</link><dc:creator>Blake Winton</dc:creator><description>&lt;div&gt;&lt;p&gt;I’ve created a couple of checklists, and would like to hear any feedback on
+&lt;/ul&gt;&lt;/div&gt;</description><category>making_software</category><category>mozilla</category><category>thunderbird</category><guid>https://bwinton.github.io/weblog.latte.ca/blake/tech/thunderbird/wherearethebugs/</guid><pubDate>Fri, 24 Dec 2010 19:59:24 GMT</pubDate></item><item><title>Making sure I don’t forget things.</title><link>https://bwinton.github.io/weblog.latte.ca/blake/tech/thunderbird/checklists/</link><dc:creator>Blake Winton</dc:creator><description>&lt;div&gt;&lt;p&gt;I’ve created a couple of checklists, and would like to hear any feedback on
 them.  They are a &lt;a href="https://wiki.mozilla.org/User:Bwinton/Review_Checklist"&gt;Review Checklist&lt;/a&gt;, and a &lt;a href="https://wiki.mozilla.org/User:Bwinton/Commit_Checklist"&gt;Commit
 Checklist&lt;/a&gt;.&lt;/p&gt;
 &lt;p&gt;They came about after I had been working mostly on experimental add-ons for
@@ -352,7 +367,7 @@ patch, so that I could refer to them later, since if &lt;a href="http://us.macmi
 lives&lt;/a&gt;, then I figure they
 can probably also help me do my job better.  But before I go to that, I
 needed to review a patch, so I wrote up some of the things I look for when
-I review a patch too.&lt;/p&gt;&lt;/div&gt;</description><category>checklists</category><category>commit</category><category>mozilla</category><category>review</category><category>thunderbird</category><guid>https://bwinton.github.io/weblog.latte.ca/blake/tech/thunderbird/checklists.html</guid><pubDate>Sun, 05 Dec 2010 00:49:11 GMT</pubDate></item><item><title>DOM appendChild error in Gecko 2.0</title><link>https://bwinton.github.io/weblog.latte.ca/blake/tech/thunderbird/appendchild.html</link><dc:creator>Blake Winton</dc:creator><description>&lt;div&gt;&lt;p&gt;I was recently modifying an add-on for the upcoming Thunderbird 3.3, and
+I review a patch too.&lt;/p&gt;&lt;/div&gt;</description><category>checklists</category><category>commit</category><category>mozilla</category><category>review</category><category>thunderbird</category><guid>https://bwinton.github.io/weblog.latte.ca/blake/tech/thunderbird/checklists/</guid><pubDate>Sun, 05 Dec 2010 00:49:11 GMT</pubDate></item><item><title>DOM appendChild error in Gecko 2.0</title><link>https://bwinton.github.io/weblog.latte.ca/blake/tech/thunderbird/appendchild/</link><dc:creator>Blake Winton</dc:creator><description>&lt;div&gt;&lt;p&gt;I was recently modifying an add-on for the upcoming Thunderbird 3.3, and
 part of what I wanted to do was to run some javascript in a chrome context
 that added some DOM nodes to a document in a content context.  But when I
 ran the following code:&lt;/p&gt;
@@ -374,7 +389,9 @@ ran the following code:&lt;/p&gt;
 &lt;span class="nx"&gt;dump&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;"fC = "&lt;/span&gt;&lt;span class="o"&gt;+&lt;/span&gt;&lt;span class="nx"&gt;doc&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;body&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;firstChild&lt;/span&gt;&lt;span class="o"&gt;+&lt;/span&gt;&lt;span class="s2"&gt;"\n"&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;
 &lt;span class="nx"&gt;doc&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;body&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;insertBefore&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nx"&gt;topBar&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="nx"&gt;doc&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;body&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;firstChild&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;
 &lt;/pre&gt;
-&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;p&gt;I got the following error:&lt;/p&gt;
+&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+
+&lt;p&gt;I got the following error:&lt;/p&gt;
 &lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="n"&gt;WARNING&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt; &lt;span class="n"&gt;NS_ENSURE_SUCCESS&lt;/span&gt;&lt;span class="o"&gt;(&lt;/span&gt;&lt;span class="n"&gt;rv&lt;/span&gt;&lt;span class="o"&gt;,&lt;/span&gt; &lt;span class="n"&gt;rv&lt;/span&gt;&lt;span class="o"&gt;)&lt;/span&gt; &lt;span class="n"&gt;failed&lt;/span&gt; &lt;span class="k"&gt;with&lt;/span&gt; &lt;span class="n"&gt;result&lt;/span&gt; &lt;span class="mh"&gt;0x80530009&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt; &lt;span class="n"&gt;file&lt;/span&gt; &lt;span class="sr"&gt;/Volumes/Devel/thunderbird/src-central/mozilla/content/base/src/&lt;/span&gt;&lt;span class="n"&gt;nsNodeUtils&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="na"&gt;h&lt;/span&gt;&lt;span class="o"&gt;,&lt;/span&gt; &lt;span class="n"&gt;line&lt;/span&gt; &lt;span class="mi"&gt;304&lt;/span&gt;
 &lt;span class="n"&gt;WARNING&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt; &lt;span class="n"&gt;NS_ENSURE_SUCCESS&lt;/span&gt;&lt;span class="o"&gt;(&lt;/span&gt;&lt;span class="n"&gt;rv&lt;/span&gt;&lt;span class="o"&gt;,&lt;/span&gt; &lt;span class="n"&gt;rv&lt;/span&gt;&lt;span class="o"&gt;)&lt;/span&gt; &lt;span class="n"&gt;failed&lt;/span&gt; &lt;span class="k"&gt;with&lt;/span&gt; &lt;span class="n"&gt;result&lt;/span&gt; &lt;span class="mh"&gt;0x80530009&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt; &lt;span class="n"&gt;file&lt;/span&gt; &lt;span class="sr"&gt;/Volumes/Devel/thunderbird/src-central/mozilla/content/base/src/&lt;/span&gt;&lt;span class="n"&gt;nsGenericElement&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="na"&gt;cpp&lt;/span&gt;&lt;span class="o"&gt;,&lt;/span&gt; &lt;span class="n"&gt;line&lt;/span&gt; &lt;span class="mi"&gt;4077&lt;/span&gt;
 &lt;span class="o"&gt;--&lt;/span&gt; &lt;span class="n"&gt;Exception&lt;/span&gt; &lt;span class="n"&gt;object&lt;/span&gt; &lt;span class="o"&gt;--&lt;/span&gt;
@@ -413,4 +430,4 @@ myContentNode.appendChild(myContentNode.ownerDocument.createElement("span"))
 document.createElement("div");&lt;/tt&gt; to &lt;tt&gt;var topBar =
 doc.createElement("div");&lt;/tt&gt;
 , it all started working beautifully.&lt;/p&gt;
-&lt;p&gt;Thank you, Jonathan!&lt;/p&gt;&lt;/div&gt;</description><category>firefox</category><category>mozilla</category><category>thunderbird</category><guid>https://bwinton.github.io/weblog.latte.ca/blake/tech/thunderbird/appendchild.html</guid><pubDate>Tue, 30 Nov 2010 15:58:11 GMT</pubDate></item></channel></rss>
+&lt;p&gt;Thank you, Jonathan!&lt;/p&gt;&lt;/div&gt;</description><category>firefox</category><category>mozilla</category><category>thunderbird</category><guid>https://bwinton.github.io/weblog.latte.ca/blake/tech/thunderbird/appendchild/</guid><pubDate>Tue, 30 Nov 2010 15:58:11 GMT</pubDate></item></channel></rss>

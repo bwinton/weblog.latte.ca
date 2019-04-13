@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<?xml-stylesheet type="text/xsl" href="../assets/xml/rss.xsl" media="all"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Blog-O! (school)</title><link>https://bwinton.github.io/weblog.latte.ca/</link><description></description><atom:link href="https://bwinton.github.io/weblog.latte.ca/tags/school.xml" type="application/rss+xml" rel="self"></atom:link><language>en</language><lastBuildDate>Sun, 30 Oct 2016 01:56:54 GMT</lastBuildDate><generator>https://getnikola.com/</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Cordelia is...</title><link>https://bwinton.github.io/weblog.latte.ca/amy/girls/cordeliais.html</link><dc:creator>Amy Brown</dc:creator><description>&lt;div&gt;&lt;p&gt;...independent!  We had Cordelia's parent-teacher "chat" today,
+<?xml-stylesheet type="text/xsl" href="../assets/xml/rss.xsl" media="all"?><rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/"><channel><title>Blog-O! (Posts about school)</title><link>https://bwinton.github.io/weblog.latte.ca/</link><description></description><atom:link rel="self" href="https://bwinton.github.io/weblog.latte.ca/tags/school.xml" type="application/rss+xml"></atom:link><language>en</language><lastBuildDate>Sat, 13 Apr 2019 21:03:25 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Cordelia is...</title><link>https://bwinton.github.io/weblog.latte.ca/amy/girls/cordeliais/</link><dc:creator>Amy Brown</dc:creator><description>&lt;div&gt;&lt;p&gt;...independent!  We had Cordelia's parent-teacher "chat" today,
 with her nursery school teachers.  I love talking about my 
 children, so I was very excited to be there, and of course Blake
 doesn't have a job so he came along 'coz he doesn't have anything
@@ -26,7 +26,7 @@ for her.&lt;/p&gt;
 &lt;p&gt;That's their only concern for kindergarten, that she
 won't be able to make connections with other kids and
 with the teacher.  Academically, in terms of colours,
-shapes, letters and numbers, she's just fine!&lt;/p&gt;&lt;/div&gt;</description><category>cordelia</category><category>development</category><category>school</category><guid>https://bwinton.github.io/weblog.latte.ca/amy/girls/cordeliais.html</guid><pubDate>Tue, 25 Nov 2008 13:35:08 GMT</pubDate></item><item><title>First Day of Senior Kindergarten</title><link>https://bwinton.github.io/weblog.latte.ca/delphine/firstdaysk.html</link><dc:creator>Amy Brown</dc:creator><description>&lt;div&gt;&lt;p&gt;Last Tuesday was Delphine's last day of summer vacation.
+shapes, letters and numbers, she's just fine!&lt;/p&gt;&lt;/div&gt;</description><category>cordelia</category><category>development</category><category>school</category><guid>https://bwinton.github.io/weblog.latte.ca/amy/girls/cordeliais/</guid><pubDate>Tue, 25 Nov 2008 13:35:08 GMT</pubDate></item><item><title>First Day of Senior Kindergarten</title><link>https://bwinton.github.io/weblog.latte.ca/delphine/firstdaysk/</link><dc:creator>Amy Brown</dc:creator><description>&lt;div&gt;&lt;p&gt;Last Tuesday was Delphine's last day of summer vacation.
 We stuck labels on her &lt;a href="http://www.landsend.com/pp/SolidClassMateJuniorBackpack~146384_-1.html?bcc=y&amp;amp;action=order_more&amp;amp;sku_0=::PRO&amp;amp;CM_MERCH=IDX_00004__0000000491"&gt;new backpack&lt;/a&gt;, 
 lunch bag and 
 &lt;a href="http://zeta.zappos.com/product/7319163/color/16179"&gt;shoes&lt;/a&gt;, and speculated about her new teacher, which
@@ -95,4 +95,4 @@ considering there are only eight SKs.  But I'm
 borrowing trouble, I'm sure we'll work something out.
 Now it's time to make lunch and haul everyone off to
 school, at least once I manage to get some clothes
-on Cordelia.&lt;/p&gt;&lt;/div&gt;</description><category>delphine</category><category>school</category><guid>https://bwinton.github.io/weblog.latte.ca/delphine/firstdaysk.html</guid><pubDate>Tue, 09 Sep 2008 18:59:11 GMT</pubDate></item></channel></rss>
+on Cordelia.&lt;/p&gt;&lt;/div&gt;</description><category>delphine</category><category>school</category><guid>https://bwinton.github.io/weblog.latte.ca/delphine/firstdaysk/</guid><pubDate>Tue, 09 Sep 2008 18:59:11 GMT</pubDate></item></channel></rss>

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<?xml-stylesheet type="text/xsl" href="../assets/xml/rss.xsl" media="all"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Blog-O! (basie)</title><link>https://bwinton.github.io/weblog.latte.ca/</link><description></description><atom:link href="https://bwinton.github.io/weblog.latte.ca/tags/basie.xml" type="application/rss+xml" rel="self"></atom:link><language>en</language><lastBuildDate>Sun, 30 Oct 2016 01:56:50 GMT</lastBuildDate><generator>https://getnikola.com/</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Some ideas for the next version of Basie.</title><link>https://bwinton.github.io/weblog.latte.ca/blake/tech/basie/basieideas.html</link><dc:creator>Blake Winton</dc:creator><description>&lt;div&gt;&lt;p&gt;Yesterday I went to see a presentation by Kosta Zabashta about the
+<?xml-stylesheet type="text/xsl" href="../assets/xml/rss.xsl" media="all"?><rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/"><channel><title>Blog-O! (Posts about basie)</title><link>https://bwinton.github.io/weblog.latte.ca/</link><description></description><atom:link rel="self" href="https://bwinton.github.io/weblog.latte.ca/tags/basie.xml" type="application/rss+xml"></atom:link><language>en</language><lastBuildDate>Sat, 13 Apr 2019 21:03:22 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Some ideas for the next version of Basie.</title><link>https://bwinton.github.io/weblog.latte.ca/blake/tech/basie/basieideas/</link><dc:creator>Blake Winton</dc:creator><description>&lt;div&gt;&lt;p&gt;Yesterday I went to see a presentation by Kosta Zabashta about the
 work he did on Basie.  The presentation went fairly well, but while
 listening to it, I had a few ideas that I thought I should write down.&lt;/p&gt;
 &lt;p&gt;First, since the configurations for Exim and Postfix are so
@@ -29,7 +29,7 @@ interesting than useful.  :)&lt;/p&gt;
 version of Basie.  I suppose the next step will be to get Greg to link
 to this, and get other people commenting.  (And now that I’ve written
 it all out, I suppose it might have been cleverer to post this to the
-Basie blog.  Ah well.  Live and learn.)&lt;/p&gt;&lt;/div&gt;</description><category>0.2</category><category>basie</category><category>ideas</category><category>presentation</category><guid>https://bwinton.github.io/weblog.latte.ca/blake/tech/basie/basieideas.html</guid><pubDate>Thu, 04 Dec 2008 19:35:15 GMT</pubDate></item><item><title>How to start developing Basie</title><link>https://bwinton.github.io/weblog.latte.ca/blake/tech/basie/startingdevelopment.html</link><dc:creator>Blake Winton</dc:creator><description>&lt;div&gt;&lt;p&gt;So, first off, I think Python developers these days need to use stuff
+Basie blog.  Ah well.  Live and learn.)&lt;/p&gt;&lt;/div&gt;</description><category>0.2</category><category>basie</category><category>ideas</category><category>presentation</category><guid>https://bwinton.github.io/weblog.latte.ca/blake/tech/basie/basieideas/</guid><pubDate>Thu, 04 Dec 2008 19:35:15 GMT</pubDate></item><item><title>How to start developing Basie</title><link>https://bwinton.github.io/weblog.latte.ca/blake/tech/basie/startingdevelopment/</link><dc:creator>Blake Winton</dc:creator><description>&lt;div&gt;&lt;p&gt;So, first off, I think Python developers these days need to use stuff
 like virtualenv and zc.buildout in order to develop in a sane manner.
 Yeah, this is the first project I’m using them on, but do what I say,
 not what I do.&lt;/p&gt;
@@ -66,7 +66,9 @@ Mine looks like this:&lt;/p&gt;
 &lt;span class="na"&gt;project&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s"&gt;basie&lt;/span&gt;
 &lt;span class="na"&gt;wsgi&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s"&gt;true&lt;/span&gt;
 &lt;/pre&gt;
-&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;p&gt;You’ll also need a
+&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+
+&lt;p&gt;You’ll also need a
 &lt;a href="http://bwinton.latte.ca/Programming/Basie/bootstrap.py"&gt;bootstrap.py&lt;/a&gt;,
 which will look a little something like this:&lt;/p&gt;
 &lt;table class="codehilitetable"&gt;&lt;tr&gt;&lt;td class="linenos"&gt;&lt;div class="linenodiv"&gt;&lt;pre&gt; 1
@@ -193,7 +195,9 @@ which will look a little something like this:&lt;/p&gt;
 &lt;span class="n"&gt;zc&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;buildout&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;buildout&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;main&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;sys&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;argv&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;:]&lt;/span&gt; &lt;span class="o"&gt;+&lt;/span&gt; &lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="s1"&gt;'bootstrap'&lt;/span&gt;&lt;span class="p"&gt;])&lt;/span&gt;
 &lt;span class="n"&gt;shutil&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;rmtree&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;tmpeggs&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
 &lt;/pre&gt;
-&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;p&gt;After you’ve got those, it’s basically:&lt;/p&gt;
+&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+
+&lt;p&gt;After you’ve got those, it’s basically:&lt;/p&gt;
 &lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;python bootstrap.py
 buildout -v
 django help
@@ -203,4 +207,4 @@ django runserver
 
 &lt;p&gt;And when you’re done,
     deactivate&lt;/p&gt;
-&lt;p&gt;Any comments on things that don’t work would be highly appreciated.&lt;/p&gt;&lt;/div&gt;</description><category>basie</category><category>django</category><category>drproject</category><category>python</category><guid>https://bwinton.github.io/weblog.latte.ca/blake/tech/basie/startingdevelopment.html</guid><pubDate>Wed, 27 Aug 2008 21:03:24 GMT</pubDate></item></channel></rss>
+&lt;p&gt;Any comments on things that don’t work would be highly appreciated.&lt;/p&gt;&lt;/div&gt;</description><category>basie</category><category>django</category><category>drproject</category><category>python</category><guid>https://bwinton.github.io/weblog.latte.ca/blake/tech/basie/startingdevelopment/</guid><pubDate>Wed, 27 Aug 2008 21:03:24 GMT</pubDate></item></channel></rss>

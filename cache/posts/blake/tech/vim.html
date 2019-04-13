@@ -36,21 +36,21 @@ blog-check function in vim/python:</p>
 16
 17
 18</pre></div></td><td class="code"><pre class="code literal-block"><span></span><span class="k">function</span><span class="p">!</span> BlogCheck<span class="p">()</span>
-  <span class="k">python</span> <span class="o">&lt;&lt;</span> END
-<span class="p">:::</span><span class="n">python</span>
-<span class="kn">import</span> <span class="nn">re</span>
-<span class="kn">import</span> <span class="nn">vim</span>
-<span class="n">pattern</span> <span class="o">=</span> <span class="n">re</span><span class="o">.</span><span class="n">compile</span><span class="p">(</span> <span class="s2">r&quot;\s&quot;</span> <span class="p">)</span>
-<span class="n">count</span> <span class="o">=</span> <span class="mi">0</span>
-<span class="k">for</span> <span class="n">line</span> <span class="ow">in</span> <span class="n">vim</span><span class="o">.</span><span class="n">current</span><span class="o">.</span><span class="n">buffer</span><span class="p">:</span>
-  <span class="n">line</span> <span class="o">=</span> <span class="n">pattern</span><span class="o">.</span><span class="n">sub</span><span class="p">(</span> <span class="s2">&quot;&quot;</span><span class="p">,</span> <span class="n">line</span> <span class="p">)</span>
-  <span class="n">count</span> <span class="o">+=</span> <span class="nb">len</span><span class="p">(</span><span class="n">line</span><span class="p">)</span>
-<span class="k">if</span> <span class="n">count</span> <span class="o">&lt;=</span> <span class="mi">5000</span><span class="p">:</span>
-  <span class="n">message</span> <span class="o">=</span> <span class="s2">&quot;Okay so far&quot;</span>
-<span class="k">else</span><span class="p">:</span>
-  <span class="n">message</span> <span class="o">=</span> <span class="s2">&quot;Dude, too long&quot;</span>
-<span class="k">print</span> <span class="s2">&quot;</span><span class="si">%s</span><span class="s2">:  </span><span class="si">%d</span><span class="s2"> chars, </span><span class="si">%d</span><span class="s2"> words&quot;</span> <span class="o">%</span> <span class="p">(</span><span class="n">message</span><span class="p">,</span> <span class="n">count</span><span class="p">,</span> <span class="n">count</span><span class="o">/</span><span class="mi">5</span><span class="p">)</span>
-<span class="p">:::</span><span class="n">vim</span>
+  <span class="k">python</span> <span class="o">&amp;</span><span class="n">lt</span><span class="p">;</span><span class="o">&amp;</span><span class="n">lt</span><span class="p">;</span> <span class="n">END</span>
+<span class="p">:</span>::python
+import <span class="k">re</span>
+import <span class="k">vim</span>
+pattern <span class="p">=</span> <span class="k">re</span>.<span class="k">compile</span><span class="p">(</span> <span class="k">r</span><span class="s2">&quot;\s&quot;</span> <span class="p">)</span>
+count <span class="p">=</span> <span class="m">0</span>
+<span class="k">for</span> line <span class="k">in</span> <span class="k">vim</span>.current.buffer:
+  line <span class="p">=</span> pattern.sub<span class="p">(</span> <span class="s2">&quot;&quot;</span><span class="p">,</span> line <span class="p">)</span>
+  count <span class="p">+=</span> len<span class="p">(</span>line<span class="p">)</span>
+<span class="k">if</span> count &amp;<span class="k">lt</span>;<span class="p">=</span> <span class="m">5000</span>:
+  message <span class="p">=</span> <span class="s2">&quot;Okay so far&quot;</span>
+<span class="k">else</span>:
+  message <span class="p">=</span> <span class="s2">&quot;Dude, too long&quot;</span>
+print <span class="s2">&quot;%s:  %d chars, %d words&quot;</span> % <span class="p">(</span>message<span class="p">,</span> count<span class="p">,</span> count/<span class="m">5</span><span class="p">)</span>
+<span class="p">:</span>::<span class="k">vim</span>
 END
 <span class="k">endfunction</span>
 </pre>

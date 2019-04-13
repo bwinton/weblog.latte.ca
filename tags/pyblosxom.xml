@@ -1,24 +1,27 @@
 <?xml version="1.0" encoding="utf-8"?>
-<?xml-stylesheet type="text/xsl" href="../assets/xml/rss.xsl" media="all"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Blog-O! (pyblosxom)</title><link>https://bwinton.github.io/weblog.latte.ca/</link><description></description><atom:link href="https://bwinton.github.io/weblog.latte.ca/tags/pyblosxom.xml" type="application/rss+xml" rel="self"></atom:link><language>en</language><lastBuildDate>Sun, 30 Oct 2016 01:56:50 GMT</lastBuildDate><generator>https://getnikola.com/</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>How to add Markdown to your PyBlosxom Blog.</title><link>https://bwinton.github.io/weblog.latte.ca/blake/tech/markdown.html</link><dc:creator>Blake Winton</dc:creator><description>&lt;div&gt;&lt;p&gt;Hopefully this all just works.  Include A&amp;amp;B, and 4 &amp;lt; 5.&lt;/p&gt;
+<?xml-stylesheet type="text/xsl" href="../assets/xml/rss.xsl" media="all"?><rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/"><channel><title>Blog-O! (Posts about pyblosxom)</title><link>https://bwinton.github.io/weblog.latte.ca/</link><description></description><atom:link rel="self" href="https://bwinton.github.io/weblog.latte.ca/tags/pyblosxom.xml" type="application/rss+xml"></atom:link><language>en</language><lastBuildDate>Sat, 13 Apr 2019 21:03:18 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>How to add Markdown to your PyBlosxom Blog.</title><link>https://bwinton.github.io/weblog.latte.ca/blake/tech/markdown/</link><dc:creator>Blake Winton</dc:creator><description>&lt;div&gt;&lt;p&gt;Hopefully this all just works.  Include A&amp;amp;B, and 4 &amp;lt; 5.&lt;/p&gt;
 &lt;h2&gt;Headers&lt;/h2&gt;
 &lt;h3&gt;Smaller headers&lt;/h3&gt;
 &lt;blockquote&gt;
 &lt;p&gt;Blockquotes.&lt;/p&gt;
 &lt;/blockquote&gt;
-&lt;ul&gt;&lt;li&gt;Lists&lt;/li&gt;
+&lt;ul&gt;
+&lt;li&gt;Lists&lt;/li&gt;
 &lt;li&gt;of &lt;/li&gt;
 &lt;li&gt;
 &lt;p&gt;things&lt;/p&gt;
 &lt;p&gt;Blocks of python code could be here.&lt;/p&gt;
 &lt;/li&gt;
-&lt;/ul&gt;&lt;hr&gt;&lt;p&gt;&lt;em&gt;etc&lt;/em&gt;, &lt;strong&gt;etc&lt;/strong&gt;.&lt;/p&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;p&gt;&lt;em&gt;etc&lt;/em&gt;, &lt;strong&gt;etc&lt;/strong&gt;.&lt;/p&gt;
 &lt;p&gt;Okay, so now that I’ve determined that it works, here’s how I did it:
 I added a new entry parser, called pymarkdown.py, to my plugins
 directory.  The content of the code looks like this:&lt;/p&gt;
 &lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="n"&gt;FILE_EXT&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s1"&gt;'md'&lt;/span&gt;
 
 &lt;span class="n"&gt;__version__&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s1"&gt;'pymarkdown 0.1'&lt;/span&gt;
-&lt;span class="n"&gt;__author__&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s1"&gt;'Blake Winton &amp;lt;bwinton+python@latte.ca&amp;gt;'&lt;/span&gt;
+&lt;span class="n"&gt;__author__&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s1"&gt;'Blake Winton &amp;amp;lt;bwinton+python@latte.ca&amp;amp;gt;'&lt;/span&gt;
 
 &lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="nn"&gt;markdown&lt;/span&gt;
 
@@ -73,4 +76,4 @@ both Amy and I are obviously comfortable writing straight HTML.  Well,
 custom-built Wiki-ish-syntax parser to a &lt;a href="http://www.freewisdom.org/projects/python-markdown/"&gt;third-party&lt;/a&gt; Markdown parser,
 and I figured this would give me a bit of a headstart on getting used
 to the new syntax, and also give me a bit of a playground for testing
-out new features that I might want to add.&lt;/p&gt;&lt;/div&gt;</description><category>drproject</category><category>markdown</category><category>pyblosxom</category><category>python</category><guid>https://bwinton.github.io/weblog.latte.ca/blake/tech/markdown.html</guid><pubDate>Wed, 27 Feb 2008 17:16:41 GMT</pubDate></item></channel></rss>
+out new features that I might want to add.&lt;/p&gt;&lt;/div&gt;</description><category>drproject</category><category>markdown</category><category>pyblosxom</category><category>python</category><guid>https://bwinton.github.io/weblog.latte.ca/blake/tech/markdown/</guid><pubDate>Wed, 27 Feb 2008 17:16:41 GMT</pubDate></item></channel></rss>

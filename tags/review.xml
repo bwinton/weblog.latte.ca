@@ -1,29 +1,33 @@
 <?xml version="1.0" encoding="utf-8"?>
-<?xml-stylesheet type="text/xsl" href="../assets/xml/rss.xsl" media="all"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Blog-O! (review)</title><link>https://bwinton.github.io/weblog.latte.ca/</link><description></description><atom:link href="https://bwinton.github.io/weblog.latte.ca/tags/review.xml" type="application/rss+xml" rel="self"></atom:link><language>en</language><lastBuildDate>Sun, 30 Oct 2016 01:56:57 GMT</lastBuildDate><generator>https://getnikola.com/</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Who should review my change?</title><link>https://bwinton.github.io/weblog.latte.ca/blake/tech/thunderbird/reviewerchooser.html</link><dc:creator>Blake Winton</dc:creator><description>&lt;div&gt;&lt;p&gt;One of the big questions I had when I started writing patches was who I
+<?xml-stylesheet type="text/xsl" href="../assets/xml/rss.xsl" media="all"?><rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/"><channel><title>Blog-O! (Posts about review)</title><link>https://bwinton.github.io/weblog.latte.ca/</link><description></description><atom:link rel="self" href="https://bwinton.github.io/weblog.latte.ca/tags/review.xml" type="application/rss+xml"></atom:link><language>en</language><lastBuildDate>Sat, 13 Apr 2019 21:03:22 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Who should review my change?</title><link>https://bwinton.github.io/weblog.latte.ca/blake/tech/thunderbird/reviewerchooser/</link><dc:creator>Blake Winton</dc:creator><description>&lt;div&gt;&lt;p&gt;One of the big questions I had when I started writing patches was who I
 should ask to review them.  Now that I’ve been in the community for a
 while, I’ve got a much better sense of who I should be talking to for the
 type of things I’m likely to write, but there are still times when I want
 to make a change in a part of the code that I haven’t touched before, and
 I’m not sure who to ask.  In those cases, I usually fall back to a fairly
 simple (if non-obvious) set of steps to try and figure out who to pick.&lt;/p&gt;
-&lt;ol&gt;&lt;li&gt;Get the list of files I’ve changed.&lt;/li&gt;
+&lt;ol&gt;
+&lt;li&gt;Get the list of files I’ve changed.&lt;/li&gt;
 &lt;li&gt;Get the hg log for those files.&lt;/li&gt;
 &lt;li&gt;Check through the log for “r=”, and “sr=”.&lt;/li&gt;
-&lt;/ol&gt;&lt;p&gt;Of course, that’s a fairly easy set of steps to automate, and so I present
+&lt;/ol&gt;
+&lt;p&gt;Of course, that’s a fairly easy set of steps to automate, and so I present
 my first cut at &lt;a href="https://github.com/bwinton/Mozilla-Tools/blob/master/getReviewer.py"&gt;the automated reviewer chooser&lt;/a&gt;!&lt;/p&gt;
 &lt;p&gt;Of course, there are a lot of things I’ld like to do with this, such as:&lt;/p&gt;
-&lt;ul&gt;&lt;li&gt;Improving the documentation.&lt;/li&gt;
+&lt;ul&gt;
+&lt;li&gt;Improving the documentation.&lt;/li&gt;
 &lt;li&gt;Checking to see how well this script would have done on previous commits.&lt;/li&gt;
 &lt;li&gt;Taking into account the length of the queues for the reviewers.&lt;/li&gt;
 &lt;li&gt;Adding some sort of recent-ness calculations.&lt;/li&gt;
-&lt;/ul&gt;&lt;p&gt;But I think that this tool is useful enough in its current state that
+&lt;/ul&gt;
+&lt;p&gt;But I think that this tool is useful enough in its current state that
 releasing it and getting feedback on what to actually work on would be a
 win.&lt;/p&gt;
 &lt;p&gt;To use it, be in a mercurial source repo, and type &lt;code&gt;getReviewer.py&lt;/code&gt; to get
 a list of suggested reviewers for the current differences, or
 &lt;code&gt;getReviewer.py temp.diff&lt;/code&gt; or &lt;code&gt;getReviewer.py
 https://bugzilla.mozilla.org/attachment.cgi\?id\=536017&lt;/code&gt; to specify a
-different set of changes.&lt;/p&gt;&lt;/div&gt;</description><category>mozilla</category><category>review</category><category>thunderbird</category><guid>https://bwinton.github.io/weblog.latte.ca/blake/tech/thunderbird/reviewerchooser.html</guid><pubDate>Thu, 02 Jun 2011 00:13:37 GMT</pubDate></item><item><title>Making sure I don’t forget things.</title><link>https://bwinton.github.io/weblog.latte.ca/blake/tech/thunderbird/checklists.html</link><dc:creator>Blake Winton</dc:creator><description>&lt;div&gt;&lt;p&gt;I’ve created a couple of checklists, and would like to hear any feedback on
+different set of changes.&lt;/p&gt;&lt;/div&gt;</description><category>mozilla</category><category>review</category><category>thunderbird</category><guid>https://bwinton.github.io/weblog.latte.ca/blake/tech/thunderbird/reviewerchooser/</guid><pubDate>Thu, 02 Jun 2011 00:13:37 GMT</pubDate></item><item><title>Making sure I don’t forget things.</title><link>https://bwinton.github.io/weblog.latte.ca/blake/tech/thunderbird/checklists/</link><dc:creator>Blake Winton</dc:creator><description>&lt;div&gt;&lt;p&gt;I’ve created a couple of checklists, and would like to hear any feedback on
 them.  They are a &lt;a href="https://wiki.mozilla.org/User:Bwinton/Review_Checklist"&gt;Review Checklist&lt;/a&gt;, and a &lt;a href="https://wiki.mozilla.org/User:Bwinton/Commit_Checklist"&gt;Commit
 Checklist&lt;/a&gt;.&lt;/p&gt;
 &lt;p&gt;They came about after I had been working mostly on experimental add-ons for
@@ -37,7 +41,7 @@ patch, so that I could refer to them later, since if &lt;a href="http://us.macmi
 lives&lt;/a&gt;, then I figure they
 can probably also help me do my job better.  But before I go to that, I
 needed to review a patch, so I wrote up some of the things I look for when
-I review a patch too.&lt;/p&gt;&lt;/div&gt;</description><category>checklists</category><category>commit</category><category>mozilla</category><category>review</category><category>thunderbird</category><guid>https://bwinton.github.io/weblog.latte.ca/blake/tech/thunderbird/checklists.html</guid><pubDate>Sun, 05 Dec 2010 00:49:11 GMT</pubDate></item><item><title>Malted Barley Flour Review</title><link>https://bwinton.github.io/weblog.latte.ca/blake/random/bread/maltedbarley.html</link><dc:creator>Blake Winton</dc:creator><description>&lt;p&gt;At the Royal Winter Fair this year, Amy picked up a small bag of
+I review a patch too.&lt;/p&gt;&lt;/div&gt;</description><category>checklists</category><category>commit</category><category>mozilla</category><category>review</category><category>thunderbird</category><guid>https://bwinton.github.io/weblog.latte.ca/blake/tech/thunderbird/checklists/</guid><pubDate>Sun, 05 Dec 2010 00:49:11 GMT</pubDate></item><item><title>Malted Barley Flour Review</title><link>https://bwinton.github.io/weblog.latte.ca/blake/random/bread/maltedbarley/</link><dc:creator>Blake Winton</dc:creator><description>&lt;p&gt;At the Royal Winter Fair this year, Amy picked up a small bag of
 malted barley flour, because she likes the taste of malt, and because
 we have a recipe for malt bread which calls for malted (not barley)
 flour.  We’ve since tried to use it in a few different loaves, and
@@ -52,7 +56,7 @@ up, but I still haven’t figured out how little to put in to get a
 slightly-moister bread which doesn’t adhere to the knife.  If I do,
 I’ll be sure to post a comment, but until then, if you manage to get
 some malted barley flour, be exceedingly sparing in your use of it,
-and I’ll continue experimenting and picking bread out of my teeth.&lt;/p&gt;</description><category>barley</category><category>bread</category><category>flour</category><category>malt</category><category>review</category><guid>https://bwinton.github.io/weblog.latte.ca/blake/random/bread/maltedbarley.html</guid><pubDate>Fri, 07 Dec 2007 15:04:27 GMT</pubDate></item><item><title>The Forecast - In The Shadow Of Two Gunmen</title><link>https://bwinton.github.io/weblog.latte.ca/blake/reviews/forecast.html</link><dc:creator>Blake Winton</dc:creator><description>&lt;p&gt;When I listened to the first song, they sounded like a band I listened
+and I’ll continue experimenting and picking bread out of my teeth.&lt;/p&gt;</description><category>barley</category><category>bread</category><category>flour</category><category>malt</category><category>review</category><guid>https://bwinton.github.io/weblog.latte.ca/blake/random/bread/maltedbarley/</guid><pubDate>Fri, 07 Dec 2007 15:04:27 GMT</pubDate></item><item><title>The Forecast - In The Shadow Of Two Gunmen</title><link>https://bwinton.github.io/weblog.latte.ca/blake/reviews/forecast/</link><dc:creator>Blake Winton</dc:creator><description>&lt;p&gt;When I listened to the first song, they sounded like a band I listened
 to back in university.  Something like a cross between Sloan and Live,
 or The Lowest of the Low.  Live, maybe?  It wasn't any of those but
 that was the sort of genre it reminds me of...&lt;/p&gt;
@@ -73,7 +77,7 @@ man, this reviewing thing is hard.  All the harder when I'm only
 listening to music at the office, where I'm really trying to
 concentrate on my job, instead of on the music.  The first few times I
 listened to the album, I was halfway through the following album
-before I realized that I should have been listening.&lt;/p&gt;</description><category>alternative</category><category>from_jessica</category><category>music</category><category>new_music</category><category>review</category><guid>https://bwinton.github.io/weblog.latte.ca/blake/reviews/forecast.html</guid><pubDate>Thu, 15 Feb 2007 22:12:00 GMT</pubDate></item><item><title>Dieselboy - The Human Resource</title><link>https://bwinton.github.io/weblog.latte.ca/blake/reviews/dieselboy.html</link><dc:creator>Blake Winton</dc:creator><description>&lt;p&gt;Pretty sweet.  They were described to me as "slightly-harder drum
+before I realized that I should have been listening.&lt;/p&gt;</description><category>alternative</category><category>from_jessica</category><category>music</category><category>new_music</category><category>review</category><guid>https://bwinton.github.io/weblog.latte.ca/blake/reviews/forecast/</guid><pubDate>Thu, 15 Feb 2007 22:12:00 GMT</pubDate></item><item><title>Dieselboy - The Human Resource</title><link>https://bwinton.github.io/weblog.latte.ca/blake/reviews/dieselboy/</link><dc:creator>Blake Winton</dc:creator><description>&lt;p&gt;Pretty sweet.  They were described to me as "slightly-harder drum
 and bass", which worried me a little, since I didn't know if I would
 be up for something heavy, but either it was only slightly-harder, or
 I don't know how hard regular drum and bass is, or I ended up being in
@@ -92,7 +96,7 @@ will have to be my baseline for future reviews.&lt;/p&gt;
 &lt;p&gt;Oh, one more thing, the next few reviews might run a little late,
 because even though I've listened to the music, I only have a couple
 of hundred words written about each of them, and I'm guessing that
-it'll take some re-listening to think of more things to say.&lt;/p&gt;</description><category>drum_and_bass</category><category>from_jon</category><category>music</category><category>new_music</category><category>review</category><guid>https://bwinton.github.io/weblog.latte.ca/blake/reviews/dieselboy.html</guid><pubDate>Thu, 01 Feb 2007 19:16:00 GMT</pubDate></item><item><title>New Feature: Music reviews.</title><link>https://bwinton.github.io/weblog.latte.ca/blake/reviews/intro.html</link><dc:creator>Blake Winton</dc:creator><description>&lt;p&gt;Since our &lt;del&gt;receptionist&lt;/del&gt; (Oops, "Office Manager") left,
+it'll take some re-listening to think of more things to say.&lt;/p&gt;</description><category>drum_and_bass</category><category>from_jon</category><category>music</category><category>new_music</category><category>review</category><guid>https://bwinton.github.io/weblog.latte.ca/blake/reviews/dieselboy/</guid><pubDate>Thu, 01 Feb 2007 19:16:00 GMT</pubDate></item><item><title>New Feature: Music reviews.</title><link>https://bwinton.github.io/weblog.latte.ca/blake/reviews/intro/</link><dc:creator>Blake Winton</dc:creator><description>&lt;p&gt;Since our &lt;del&gt;receptionist&lt;/del&gt; (Oops, "Office Manager") left,
 and I took the opportunity to grab a copy of her entire iTunes folder,
 I've been listening to a lot of new music.  Most of it is even
 actually new, and not just new to 33-year old fogeys who are stuck
@@ -115,4 +119,4 @@ review, so I don't mind.&lt;/p&gt;
 &lt;p&gt;And I've just realized that I lied.  I'll probably be doing some
 book reviews as well, and perhaps even a review of a restaurant, if
 one catches my fancy.  If I were younger, with more desposable income,
-I'ld be all over the new gadget reviews, too.&lt;/p&gt;</description><category>admin</category><category>introduction</category><category>music</category><category>review</category><guid>https://bwinton.github.io/weblog.latte.ca/blake/reviews/intro.html</guid><pubDate>Wed, 31 Jan 2007 23:09:00 GMT</pubDate></item></channel></rss>
+I'ld be all over the new gadget reviews, too.&lt;/p&gt;</description><category>admin</category><category>introduction</category><category>music</category><category>review</category><guid>https://bwinton.github.io/weblog.latte.ca/blake/reviews/intro/</guid><pubDate>Wed, 31 Jan 2007 23:09:00 GMT</pubDate></item></channel></rss>

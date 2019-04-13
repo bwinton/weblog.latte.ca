@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<?xml-stylesheet type="text/xsl" href="../assets/xml/rss.xsl" media="all"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Blog-O! (_2005)</title><link>https://bwinton.github.io/weblog.latte.ca/</link><description></description><atom:link href="https://bwinton.github.io/weblog.latte.ca/tags/_2005.xml" type="application/rss+xml" rel="self"></atom:link><language>en</language><lastBuildDate>Sun, 30 Oct 2016 01:56:55 GMT</lastBuildDate><generator>https://getnikola.com/</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>2005 Books Overview</title><link>https://bwinton.github.io/weblog.latte.ca/amy/books/_2005/overview.html</link><dc:creator>Amy Brown</dc:creator><description>&lt;p&gt;
+<?xml-stylesheet type="text/xsl" href="../assets/xml/rss.xsl" media="all"?><rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/"><channel><title>Blog-O! (Posts about _2005)</title><link>https://bwinton.github.io/weblog.latte.ca/</link><description></description><atom:link rel="self" href="https://bwinton.github.io/weblog.latte.ca/tags/_2005.xml" type="application/rss+xml"></atom:link><language>en</language><lastBuildDate>Sat, 13 Apr 2019 21:03:17 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>2005 Books Overview</title><link>https://bwinton.github.io/weblog.latte.ca/amy/books/_2005/overview/</link><dc:creator>Amy Brown</dc:creator><description>&lt;p&gt;
 (This is going to be kind of boring for anyone who isn't me.
 Precisely the kind of thing one shouldn't post on one's
 website.)
@@ -23,7 +23,7 @@ I shudder to think how boring and ignorant I would be if I
 hadn't read the books that I have read.
 &lt;/p&gt;&lt;p&gt;
 In short: books, good.  News at eleven.
-&lt;/p&gt;</description><category>_2005</category><guid>https://bwinton.github.io/weblog.latte.ca/amy/books/_2005/overview.html</guid><pubDate>Mon, 16 Jan 2006 02:29:00 GMT</pubDate></item><item><title>December Books</title><link>https://bwinton.github.io/weblog.latte.ca/amy/books/_2005/december24.html</link><dc:creator>Amy Brown</dc:creator><description>&lt;p&gt;
+&lt;/p&gt;</description><category>_2005</category><guid>https://bwinton.github.io/weblog.latte.ca/amy/books/_2005/overview/</guid><pubDate>Mon, 16 Jan 2006 02:29:00 GMT</pubDate></item><item><title>December Books</title><link>https://bwinton.github.io/weblog.latte.ca/amy/books/_2005/december24/</link><dc:creator>Amy Brown</dc:creator><description>&lt;p&gt;
 My list of books read but not written about is getting unwieldy:
 &lt;/p&gt;
 &lt;h4&gt;&lt;em&gt;Death Sentences: How Cliches, Weasel Words and Management-Speak
@@ -140,7 +140,7 @@ Who should read this book: Beth (thursday) because it might give her
 some insight into her (very boyish) boys, Kathryn because she has
 to deal with boys and girls every day at work, and Ellen because
 I know she's interested in this stuff.
-&lt;/p&gt;</description><category>_2005</category><guid>https://bwinton.github.io/weblog.latte.ca/amy/books/_2005/december24.html</guid><pubDate>Sat, 24 Dec 2005 18:57:00 GMT</pubDate></item><item><title>Books</title><link>https://bwinton.github.io/weblog.latte.ca/amy/books/_2005/december.html</link><dc:creator>Amy Brown</dc:creator><description>&lt;h4&gt;&lt;em&gt;Potty Training Your Baby: A Practical Guide for Easier Toilet Training&lt;/em&gt; by 
+&lt;/p&gt;</description><category>_2005</category><guid>https://bwinton.github.io/weblog.latte.ca/amy/books/_2005/december24/</guid><pubDate>Sat, 24 Dec 2005 18:57:00 GMT</pubDate></item><item><title>Books</title><link>https://bwinton.github.io/weblog.latte.ca/amy/books/_2005/december/</link><dc:creator>Amy Brown</dc:creator><description>&lt;h4&gt;&lt;em&gt;Potty Training Your Baby: A Practical Guide for Easier Toilet Training&lt;/em&gt; by 
 Katie Van Pelt&lt;/h4&gt;
 
 &lt;p&gt;
@@ -181,7 +181,9 @@ In fact, her six-month-old has already peed in the potty more times than her two
 and a half year old.  
 &lt;/p&gt;
 
-&lt;hr width="40%"&gt;&lt;h4&gt;&lt;em&gt;Men's Style: The Thinking Man's Guide to Style&lt;/em&gt; by Russell Smith&lt;/h4&gt;
+&lt;hr width="40%"&gt;
+
+&lt;h4&gt;&lt;em&gt;Men's Style: The Thinking Man's Guide to Style&lt;/em&gt; by Russell Smith&lt;/h4&gt;
 &lt;p&gt;
 Russell Smith is a men's fashion columnist for the Globe and Mail, and
 he has written this book about men's fashion.  He covers the history 
@@ -197,7 +199,7 @@ library so I can't give you any quotes, you'll just have to read it yourself.
 I can't agree with all his style opinions, though.  I think a man in a
 sweater can be very attractive, and rust is a fine colour.  He's right about
 three-piece suits, though: SEXY.
-&lt;/p&gt;</description><category>_2005</category><guid>https://bwinton.github.io/weblog.latte.ca/amy/books/_2005/december.html</guid><pubDate>Fri, 09 Dec 2005 20:55:00 GMT</pubDate></item><item><title>Three More Books</title><link>https://bwinton.github.io/weblog.latte.ca/amy/books/_2005/november18.html</link><dc:creator>Amy Brown</dc:creator><description>&lt;h4&gt;&lt;em&gt;Anne of Avonlea&lt;/em&gt; by Lucy Maud Montgomery&lt;/h4&gt;
+&lt;/p&gt;</description><category>_2005</category><guid>https://bwinton.github.io/weblog.latte.ca/amy/books/_2005/december/</guid><pubDate>Fri, 09 Dec 2005 20:55:00 GMT</pubDate></item><item><title>Three More Books</title><link>https://bwinton.github.io/weblog.latte.ca/amy/books/_2005/november18/</link><dc:creator>Amy Brown</dc:creator><description>&lt;h4&gt;&lt;em&gt;Anne of Avonlea&lt;/em&gt; by Lucy Maud Montgomery&lt;/h4&gt;
 &lt;p&gt;
 I wanted to know what happened next, so I read this book despite having
 heard, on numerous occasions, that the other Anne books aren't as good
@@ -245,7 +247,7 @@ attachment parenting folks haven't gotten ahold of this method, it's
 right up their alley.
 &lt;/p&gt;&lt;p&gt;
 Also the name makes me gag.
-&lt;/p&gt;</description><category>_2005</category><guid>https://bwinton.github.io/weblog.latte.ca/amy/books/_2005/november18.html</guid><pubDate>Fri, 18 Nov 2005 18:09:00 GMT</pubDate></item><item><title>Early November Reading</title><link>https://bwinton.github.io/weblog.latte.ca/amy/books/_2005/november11.html</link><dc:creator>Amy Brown</dc:creator><description>&lt;h4&gt;&lt;em&gt;The Long Emergency: Surviving the End of the Oil Age, Climate
+&lt;/p&gt;</description><category>_2005</category><guid>https://bwinton.github.io/weblog.latte.ca/amy/books/_2005/november18/</guid><pubDate>Fri, 18 Nov 2005 18:09:00 GMT</pubDate></item><item><title>Early November Reading</title><link>https://bwinton.github.io/weblog.latte.ca/amy/books/_2005/november11/</link><dc:creator>Amy Brown</dc:creator><description>&lt;h4&gt;&lt;em&gt;The Long Emergency: Surviving the End of the Oil Age, Climate
 Change , and Other Converging Catastrophes of the
 Twenty-First Century&lt;/em&gt; by James Howard Kunstler&lt;/h4&gt;
 &lt;p&gt;
@@ -341,7 +343,7 @@ fellation of Joss Whedon.  It's kind of cheap and tacky too,
 with a large font, lots of pull quotes and pictures, and some
 fairly bad writing.  I think people would take Whedon more
 seriously if stuff about him and his work wasn't so Tiger Beat-ish.
-&lt;/p&gt;</description><category>_2005</category><guid>https://bwinton.github.io/weblog.latte.ca/amy/books/_2005/november11.html</guid><pubDate>Fri, 11 Nov 2005 19:30:00 GMT</pubDate></item><item><title>Some More Books I have Read in October</title><link>https://bwinton.github.io/weblog.latte.ca/amy/books/_2005/october.html</link><dc:creator>Amy Brown</dc:creator><description>&lt;h4&gt;&lt;em&gt;French Women Don't Get Fat: The Secret of Eating for Pleasure&lt;/em&gt; 
+&lt;/p&gt;</description><category>_2005</category><guid>https://bwinton.github.io/weblog.latte.ca/amy/books/_2005/november11/</guid><pubDate>Fri, 11 Nov 2005 19:30:00 GMT</pubDate></item><item><title>Some More Books I have Read in October</title><link>https://bwinton.github.io/weblog.latte.ca/amy/books/_2005/october/</link><dc:creator>Amy Brown</dc:creator><description>&lt;h4&gt;&lt;em&gt;French Women Don't Get Fat: The Secret of Eating for Pleasure&lt;/em&gt; 
 by Mireille Guiliano&lt;/h4&gt;
 
 &lt;p&gt;
@@ -392,7 +394,9 @@ The bottom line is to put a lot more consideration into what you
 eat, respect the food and you will derive more value out of less
 of it.  
 &lt;/p&gt;
-&lt;hr width="40%"&gt;&lt;h4&gt;&lt;em&gt;Anne of Green Gables&lt;/em&gt; by Lucy Maud Montgomery&lt;/h4&gt;
+&lt;hr width="40%"&gt;
+
+&lt;h4&gt;&lt;em&gt;Anne of Green Gables&lt;/em&gt; by Lucy Maud Montgomery&lt;/h4&gt;
 &lt;p&gt;
 I got this out of the library because I needed to get the
 Cordelia quote out of it, and because I hadn't read it for a while.
@@ -407,7 +411,8 @@ It's funny, being a parent.  You suddenly find yourself on the other
 side of a glass wall, seeing the world from a slightly new angle.  
 &lt;/p&gt;
 
-&lt;hr width="40%"&gt;&lt;h4&gt;&lt;em&gt;Slack: Getting Past Burnout, Busywork and the Myth of Total
+&lt;hr width="40%"&gt;
+&lt;h4&gt;&lt;em&gt;Slack: Getting Past Burnout, Busywork and the Myth of Total
 Efficiency&lt;/em&gt; by Tom DeMarco&lt;/h4&gt;
 &lt;p&gt;
 This is a book about how being super-efficient -- that is, cutting
@@ -423,7 +428,9 @@ Unfortunately it doesn't argue well for my version of "slack",
 which is really just "screwing around".
 &lt;/p&gt;
 
-&lt;hr width="40%"&gt;&lt;strong&gt;&lt;em&gt;Toilet Training without Tears or Trauma&lt;/em&gt; by
+&lt;hr width="40%"&gt;
+
+&lt;strong&gt;&lt;em&gt;Toilet Training without Tears or Trauma&lt;/em&gt; by
 Penny Warner and Paula Kelly, MD&lt;/strong&gt; and &lt;strong&gt;&lt;em&gt;Pee,
 Poop and Potty Training&lt;/em&gt; by Alison Mackonochie&lt;/strong&gt;
 &lt;p&gt;
@@ -445,7 +452,9 @@ I also like that the other book is colour with lots of pretty
 photographs.
 &lt;/p&gt;
 
-&lt;hr width="40%"&gt;&lt;h4&gt;&lt;em&gt;Cutting Your Family's Hair&lt;/em&gt; by Gloria Handel&lt;/h4&gt;
+&lt;hr width="40%"&gt;
+
+&lt;h4&gt;&lt;em&gt;Cutting Your Family's Hair&lt;/em&gt; by Gloria Handel&lt;/h4&gt;
 &lt;p&gt;
 I got this out because I ballsed up Delphine's last haircut and
 wondered what I should do differently next time.  I learned a
@@ -469,7 +478,9 @@ guides?  I
 don't know -- she doesn't say.  It's confusing.
 &lt;/p&gt;
 
-&lt;hr width="40%"&gt;&lt;h4&gt;&lt;em&gt;100 Best Books For Children&lt;/em&gt; by Anita Silvey&lt;/h4&gt;
+&lt;hr width="40%"&gt;
+
+&lt;h4&gt;&lt;em&gt;100 Best Books For Children&lt;/em&gt; by Anita Silvey&lt;/h4&gt;
 &lt;p&gt;
 One of the best things about having kids is getting to revisit
 children's literature.  This book is a list of one hundred really
@@ -485,7 +496,7 @@ only issue I have with it is that it's American and so the books
 she recommends tend to be American, but it balances nicely with
 my favourite meta-book, Dorothy Butler's &lt;em&gt;Babies Need Books&lt;/em&gt; 
 which is Australian and is satisfyingly Anglo-centric.
-&lt;/p&gt;</description><category>_2005</category><guid>https://bwinton.github.io/weblog.latte.ca/amy/books/_2005/october.html</guid><pubDate>Mon, 31 Oct 2005 17:18:00 GMT</pubDate></item><item><title>&lt;em&gt;The Rebel Sell: Why The Culture Can't Be Jammed&lt;/em&gt; by Joseph Heath and Andrew Potter</title><link>https://bwinton.github.io/weblog.latte.ca/amy/books/_2005/heathpotterdiamond.html</link><dc:creator>Amy Brown</dc:creator><description>&lt;p&gt;
+&lt;/p&gt;</description><category>_2005</category><guid>https://bwinton.github.io/weblog.latte.ca/amy/books/_2005/october/</guid><pubDate>Mon, 31 Oct 2005 17:18:00 GMT</pubDate></item><item><title>&lt;em&gt;The Rebel Sell: Why The Culture Can't Be Jammed&lt;/em&gt; by Joseph Heath and Andrew Potter</title><link>https://bwinton.github.io/weblog.latte.ca/amy/books/_2005/heathpotterdiamond/</link><dc:creator>Amy Brown</dc:creator><description>&lt;p&gt;
 This book should be subtitled "Everything You Thought You Knew Is Wrong",
 especially if you are or have had any contact with "radicals" or 
 "non-conformists" or "progressives", if you think everyone (else) is
@@ -512,7 +523,9 @@ needs a few tweaks.  Heath and Potter call bullshit and explain
 why in fairly convincing, and amusing, terms.  Also they smack down 
 Naomi Klein and Kalle Lasn pretty good, which is fun.
 &lt;/p&gt;
-&lt;hr width="40%"&gt;&lt;h4&gt;&lt;em&gt;Guns, Germs and Steel: The Fates of Human Societies&lt;/em&gt; 
+&lt;hr width="40%"&gt;
+
+&lt;h4&gt;&lt;em&gt;Guns, Germs and Steel: The Fates of Human Societies&lt;/em&gt; 
 by Jared Diamond&lt;/h4&gt;
 
 &lt;p&gt;
@@ -526,7 +539,7 @@ This book ends up being a history of the world, and the most interesting
 one I have ever read.  I am much smarter now that I have read 
 this.  You should read it too (except you probably already have;
 I am kind of behind the curve here.)
-&lt;/p&gt;</description><category>_2005</category><guid>https://bwinton.github.io/weblog.latte.ca/amy/books/_2005/heathpotterdiamond.html</guid><pubDate>Wed, 12 Oct 2005 16:21:00 GMT</pubDate></item><item><title>Two More Mysteries</title><link>https://bwinton.github.io/weblog.latte.ca/amy/books/_2005/mysteries.html</link><dc:creator>Amy Brown</dc:creator><description>&lt;p&gt;
+&lt;/p&gt;</description><category>_2005</category><guid>https://bwinton.github.io/weblog.latte.ca/amy/books/_2005/heathpotterdiamond/</guid><pubDate>Wed, 12 Oct 2005 16:21:00 GMT</pubDate></item><item><title>Two More Mysteries</title><link>https://bwinton.github.io/weblog.latte.ca/amy/books/_2005/mysteries/</link><dc:creator>Amy Brown</dc:creator><description>&lt;p&gt;
 &lt;em&gt;Morality for Beautiful Girls&lt;/em&gt; by Alexander MacCall Smith
 was nice but I am going to have to spread these books far apart, because
 I seem to get tired of them quickly.  I'm not sure why.
@@ -536,7 +549,7 @@ nice to read a book set in Canada, and this guy is a hell of a mystery
 writer.  It was kind of gruesome, but I seem to be sensitive to that
 these days, so it was possibly no more gruesome than most murder
 mysteries.  I will read more by this guy.
-&lt;/p&gt;</description><category>_2005</category><guid>https://bwinton.github.io/weblog.latte.ca/amy/books/_2005/mysteries.html</guid><pubDate>Tue, 27 Sep 2005 13:41:00 GMT</pubDate></item><item><title>&lt;em&gt;Black Like Me&lt;/em&gt; by John Howard Griffin</title><link>https://bwinton.github.io/weblog.latte.ca/amy/books/_2005/griffinblacklikeme.html</link><dc:creator>Amy Brown</dc:creator><description>&lt;p&gt;
+&lt;/p&gt;</description><category>_2005</category><guid>https://bwinton.github.io/weblog.latte.ca/amy/books/_2005/mysteries/</guid><pubDate>Tue, 27 Sep 2005 13:41:00 GMT</pubDate></item><item><title>&lt;em&gt;Black Like Me&lt;/em&gt; by John Howard Griffin</title><link>https://bwinton.github.io/weblog.latte.ca/amy/books/_2005/griffinblacklikeme/</link><dc:creator>Amy Brown</dc:creator><description>&lt;p&gt;
 I read this in high school as part of a Black culture and racism section.  At
 the time I thought it was weird and stupid that we should study black
 culture and racism in a school in a town that was forty percent Native
@@ -554,7 +567,7 @@ cynical to say about it now, but I don't.  I haven't really studied
 or considered race relations much in the intervening fifteen years so
 maybe that accounts for my lack of insight, or maybe it's just still a really
 good book.
-&lt;/p&gt;</description><category>_2005</category><guid>https://bwinton.github.io/weblog.latte.ca/amy/books/_2005/griffinblacklikeme.html</guid><pubDate>Fri, 23 Sep 2005 13:55:00 GMT</pubDate></item><item><title>&lt;em&gt;The Great Betrayal: Fraud in Science&lt;/em&gt; by Horace Freeland Judson</title><link>https://bwinton.github.io/weblog.latte.ca/amy/books/_2005/judsonbetrayal.html</link><dc:creator>Amy Brown</dc:creator><description>&lt;p&gt;
+&lt;/p&gt;</description><category>_2005</category><guid>https://bwinton.github.io/weblog.latte.ca/amy/books/_2005/griffinblacklikeme/</guid><pubDate>Fri, 23 Sep 2005 13:55:00 GMT</pubDate></item><item><title>&lt;em&gt;The Great Betrayal: Fraud in Science&lt;/em&gt; by Horace Freeland Judson</title><link>https://bwinton.github.io/weblog.latte.ca/amy/books/_2005/judsonbetrayal/</link><dc:creator>Amy Brown</dc:creator><description>&lt;p&gt;
 I think I should have enjoyed this more than I did, but perhaps I am
 more interested in science itself than in when the processes that
 make up modern science go wrong.  Still, the book is an examination
@@ -570,4 +583,4 @@ book in a half-assed manner, when you are watching TV or half-asleep.
 I haven't read a book that required actual concentration and focusing
 on the words on the page for a while, so it was a bit of a shock.   I
 need to read harder books more often.
-&lt;/p&gt;</description><category>_2005</category><guid>https://bwinton.github.io/weblog.latte.ca/amy/books/_2005/judsonbetrayal.html</guid><pubDate>Fri, 23 Sep 2005 13:46:00 GMT</pubDate></item></channel></rss>
+&lt;/p&gt;</description><category>_2005</category><guid>https://bwinton.github.io/weblog.latte.ca/amy/books/_2005/judsonbetrayal/</guid><pubDate>Fri, 23 Sep 2005 13:46:00 GMT</pubDate></item></channel></rss>

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<?xml-stylesheet type="text/xsl" href="../assets/xml/rss.xsl" media="all"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Blog-O! (garden)</title><link>https://bwinton.github.io/weblog.latte.ca/</link><description></description><atom:link href="https://bwinton.github.io/weblog.latte.ca/tags/garden.xml" type="application/rss+xml" rel="self"></atom:link><language>en</language><lastBuildDate>Sun, 30 Oct 2016 01:56:51 GMT</lastBuildDate><generator>https://getnikola.com/</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Spring</title><link>https://bwinton.github.io/weblog.latte.ca/amy/houseandhome/garden/spring.html</link><dc:creator>Amy Brown</dc:creator><description>&lt;p&gt;
+<?xml-stylesheet type="text/xsl" href="../assets/xml/rss.xsl" media="all"?><rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/"><channel><title>Blog-O! (Posts about garden)</title><link>https://bwinton.github.io/weblog.latte.ca/</link><description></description><atom:link rel="self" href="https://bwinton.github.io/weblog.latte.ca/tags/garden.xml" type="application/rss+xml"></atom:link><language>en</language><lastBuildDate>Sat, 13 Apr 2019 21:03:24 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Spring</title><link>https://bwinton.github.io/weblog.latte.ca/amy/houseandhome/garden/spring/</link><dc:creator>Amy Brown</dc:creator><description>&lt;p&gt;
 Spring has arrived with an unlikely two sunny warm days
 in a row, over a weekend!  We celebrated by playing in 
 the muck.  We raked most of last fall's leaves off the
@@ -49,7 +49,10 @@ lovely frame without swearing or drawing blood, so I think
 he might be handier than either of us suspected.  The frame
 is gracing our garden and waiting patiently for some nice
 compost and lots of seeds.
-&lt;/p&gt;</description><category>garden</category><category>spring</category><guid>https://bwinton.github.io/weblog.latte.ca/amy/houseandhome/garden/spring.html</guid><pubDate>Mon, 07 Apr 2008 18:48:55 GMT</pubDate></item><item><title>Deck Party!</title><link>https://bwinton.github.io/weblog.latte.ca/amy/houseandhome/reno/deck/party.html</link><dc:creator>Blake Winton</dc:creator><description>&lt;p&gt;And now the details:&lt;br&gt;&lt;b&gt;When:&lt;/b&gt; September 8th, 3:00 until 8:00 (or later)...&lt;br&gt;&lt;b&gt;Where:&lt;/b&gt; &lt;a href="mailto:bwinton%2Bparty%40latte%2Eca%0D%0A?subject=Where%20are%20you%3F"&gt;redacted&lt;/a&gt;&lt;br&gt;&lt;b&gt;What:&lt;/b&gt; Beer, pizza, some kind of munchie thing, and some sort of
+&lt;/p&gt;</description><category>garden</category><category>spring</category><guid>https://bwinton.github.io/weblog.latte.ca/amy/houseandhome/garden/spring/</guid><pubDate>Mon, 07 Apr 2008 18:48:55 GMT</pubDate></item><item><title>Deck Party!</title><link>https://bwinton.github.io/weblog.latte.ca/amy/houseandhome/reno/deck/party/</link><dc:creator>Blake Winton</dc:creator><description>&lt;p&gt;And now the details:&lt;br&gt;
+&lt;b&gt;When:&lt;/b&gt; September 8th, 3:00 until 8:00 (or later)...&lt;br&gt;
+&lt;b&gt;Where:&lt;/b&gt; &lt;a href="mailto:bwinton%2Bparty%40latte%2Eca%0D%0A?subject=Where%20are%20you%3F"&gt;redacted&lt;/a&gt;&lt;br&gt;
+&lt;b&gt;What:&lt;/b&gt; Beer, pizza, some kind of munchie thing, and some sort of
 fancy blended drink (originally scheduled to be Margaritas, although I
 don't know if I'm up for tequila (&lt;i&gt;shudder&lt;/i&gt;), so maybe Piña
 Coladas, or some sort of Daiquiri).&lt;/p&gt;
@@ -62,7 +65,7 @@ screaming, or whatever it is children do when they get together in
 large groups.&lt;/p&gt;
 &lt;p&gt;
 See you there,&lt;br&gt;
-Blake.&lt;/p&gt;</description><category>deck</category><category>garden</category><category>party</category><category>reno</category><guid>https://bwinton.github.io/weblog.latte.ca/amy/houseandhome/reno/deck/party.html</guid><pubDate>Thu, 16 Aug 2007 14:06:16 GMT</pubDate></item><item><title>Daily Deck Update 11</title><link>https://bwinton.github.io/weblog.latte.ca/amy/houseandhome/reno/deck/july29.html</link><dc:creator>Blake Winton</dc:creator><description>&lt;p&gt;Okay, I think the deck is officially done, and so it’s party time!
+Blake.&lt;/p&gt;</description><category>deck</category><category>garden</category><category>party</category><category>reno</category><guid>https://bwinton.github.io/weblog.latte.ca/amy/houseandhome/reno/deck/party/</guid><pubDate>Thu, 16 Aug 2007 14:06:16 GMT</pubDate></item><item><title>Daily Deck Update 11</title><link>https://bwinton.github.io/weblog.latte.ca/amy/houseandhome/reno/deck/july29/</link><dc:creator>Blake Winton</dc:creator><description>&lt;p&gt;Okay, I think the deck is officially done, and so it’s party time!
 If you’re actually going to have a chance of making it here (sorry,
 Dave), please &lt;a href="https://bwinton.github.io/weblog.latte.ca/amy/houseandhome/reno/deck/july29.html"&gt;leave
 a comment&lt;/a&gt; or &lt;a href="mailto:bwinton@latte.ca?Subject=Available%20Party%20Dates."&gt;email
@@ -70,62 +73,82 @@ me&lt;/a&gt; with the dates that work well for you, and I’ll see what works
 out the best for the most people.&lt;/p&gt;
 
 &lt;p&gt;The tricky part, I expect, will be restraining myself from writing
-a program to figure out the optimal solution.&lt;/p&gt;</description><category>deck</category><category>garden</category><category>party</category><category>reno</category><guid>https://bwinton.github.io/weblog.latte.ca/amy/houseandhome/reno/deck/july29.html</guid><pubDate>Sun, 29 Jul 2007 22:56:11 GMT</pubDate></item><item><title>Daily Deck Update 10</title><link>https://bwinton.github.io/weblog.latte.ca/amy/houseandhome/reno/deck/july26.html</link><dc:creator>Blake Winton</dc:creator><description>&lt;p&gt;&lt;a href="https://bwinton.github.io/weblog.latte.ca/images/deck2007/0726a.jpg"&gt;&lt;img align="left" src="https://bwinton.github.io/weblog.latte.ca/images/deck2007/small/0726a.jpg" alt="Get it?  Agate?  Get it?" style="margin-right:10px;margin-bottom:5px"&gt;&lt;/a&gt;
+a program to figure out the optimal solution.&lt;/p&gt;</description><category>deck</category><category>garden</category><category>party</category><category>reno</category><guid>https://bwinton.github.io/weblog.latte.ca/amy/houseandhome/reno/deck/july29/</guid><pubDate>Sun, 29 Jul 2007 22:56:11 GMT</pubDate></item><item><title>Daily Deck Update 10</title><link>https://bwinton.github.io/weblog.latte.ca/amy/houseandhome/reno/deck/july26/</link><dc:creator>Blake Winton</dc:creator><description>&lt;p&gt;&lt;a href="https://bwinton.github.io/weblog.latte.ca/images/deck2007/0726a.jpg"&gt;&lt;img align="left" src="https://bwinton.github.io/weblog.latte.ca/images/deck2007/small/0726a.jpg" alt="Get it?  Agate?  Get it?" style="margin-right:10px;margin-bottom:5px"&gt;&lt;/a&gt;
 
 A Gate!  No longer just a &lt;a href="http://en.wikipedia.org/wiki/Agate"&gt;pretty stone&lt;/a&gt;, we now
 have a gate to keep out whatever’s been pooing in our yard.  (Assuming
 it isn’t one of the girls.  Or a raccoon.  Or someone’s cat.  Or
 something that could squeeze through the gap in the bottom.  But
-still, it’s got to be less likely to continue, right?)&lt;br clear="left"&gt;&lt;a href="https://bwinton.github.io/weblog.latte.ca/images/deck2007/0726b.jpg"&gt;&lt;img align="left" src="https://bwinton.github.io/weblog.latte.ca/images/deck2007/small/0726b.jpg" alt="The Shed." style="margin-right:10px;margin-bottom:5px"&gt;&lt;/a&gt;
+still, it’s got to be less likely to continue, right?)&lt;br clear="left"&gt;
+
+&lt;a href="https://bwinton.github.io/weblog.latte.ca/images/deck2007/0726b.jpg"&gt;&lt;img align="left" src="https://bwinton.github.io/weblog.latte.ca/images/deck2007/small/0726b.jpg" alt="The Shed." style="margin-right:10px;margin-bottom:5px"&gt;&lt;/a&gt;
 
 Our garbage shed!  It’s a bit larger than I thought it would be which
 I think is partially due to the sloped roof, which is mandatory in
 places that get as much snow as we sometimes do, and partially
 because…  Well, I don’t know why else it might be so big.  Maybe just
-because that was the scale of the space it had to take up.  &lt;br clear="left"&gt;&lt;a href="https://bwinton.github.io/weblog.latte.ca/images/deck2007/0726c.jpg"&gt;&lt;img align="left" src="https://bwinton.github.io/weblog.latte.ca/images/deck2007/small/0726c.jpg" alt="Screen!" style="margin-right:10px;margin-bottom:5px"&gt;&lt;/a&gt;
+because that was the scale of the space it had to take up.  &lt;br clear="left"&gt;
+
+&lt;a href="https://bwinton.github.io/weblog.latte.ca/images/deck2007/0726c.jpg"&gt;&lt;img align="left" src="https://bwinton.github.io/weblog.latte.ca/images/deck2007/small/0726c.jpg" alt="Screen!" style="margin-right:10px;margin-bottom:5px"&gt;&lt;/a&gt;
 
 And an old-new screen door.  This should get some air moving through
 the house without my having to worry too much about finding a hornet
 in my bed (again!)  And when the screen on the front gets installed,
-it should be even sweeter.&lt;br clear="all"&gt;&lt;/p&gt;</description><category>deck</category><category>garden</category><category>reno</category><guid>https://bwinton.github.io/weblog.latte.ca/amy/houseandhome/reno/deck/july26.html</guid><pubDate>Fri, 27 Jul 2007 00:07:11 GMT</pubDate></item><item><title>Daily Deck Update 9</title><link>https://bwinton.github.io/weblog.latte.ca/amy/houseandhome/reno/deck/july25.html</link><dc:creator>Blake Winton</dc:creator><description>&lt;p&gt;It was late, I was tired.  No pictures today.  Try again tomorrow.&lt;/p&gt;</description><category>deck</category><category>garden</category><category>reno</category><guid>https://bwinton.github.io/weblog.latte.ca/amy/houseandhome/reno/deck/july25.html</guid><pubDate>Thu, 26 Jul 2007 01:45:00 GMT</pubDate></item><item><title>Daily Deck Update 8</title><link>https://bwinton.github.io/weblog.latte.ca/amy/houseandhome/reno/deck/july24.html</link><dc:creator>Blake Winton</dc:creator><description>&lt;p&gt;&lt;a href="https://bwinton.github.io/weblog.latte.ca/images/deck2007/0724a.jpg"&gt;&lt;img align="left" src="https://bwinton.github.io/weblog.latte.ca/images/deck2007/small/0724a.jpg" alt="Stairs!" style="margin-right:10px;margin-bottom:5px"&gt;&lt;/a&gt;
+it should be even sweeter.&lt;br clear="all"&gt;
+
+&lt;/p&gt;</description><category>deck</category><category>garden</category><category>reno</category><guid>https://bwinton.github.io/weblog.latte.ca/amy/houseandhome/reno/deck/july26/</guid><pubDate>Fri, 27 Jul 2007 00:07:11 GMT</pubDate></item><item><title>Daily Deck Update 9</title><link>https://bwinton.github.io/weblog.latte.ca/amy/houseandhome/reno/deck/july25/</link><dc:creator>Blake Winton</dc:creator><description>&lt;p&gt;It was late, I was tired.  No pictures today.  Try again tomorrow.&lt;/p&gt;</description><category>deck</category><category>garden</category><category>reno</category><guid>https://bwinton.github.io/weblog.latte.ca/amy/houseandhome/reno/deck/july25/</guid><pubDate>Thu, 26 Jul 2007 01:45:00 GMT</pubDate></item><item><title>Daily Deck Update 8</title><link>https://bwinton.github.io/weblog.latte.ca/amy/houseandhome/reno/deck/july24/</link><dc:creator>Blake Winton</dc:creator><description>&lt;p&gt;&lt;a href="https://bwinton.github.io/weblog.latte.ca/images/deck2007/0724a.jpg"&gt;&lt;img align="left" src="https://bwinton.github.io/weblog.latte.ca/images/deck2007/small/0724a.jpg" alt="Stairs!" style="margin-right:10px;margin-bottom:5px"&gt;&lt;/a&gt;
 
 It’s getting close...  The planters are done, and the garbage bin
-(which seems larger than I thought it would be) is framed in.&lt;br clear="left"&gt;&lt;a href="https://bwinton.github.io/weblog.latte.ca/images/deck2007/0724b.jpg"&gt;&lt;img align="left" src="https://bwinton.github.io/weblog.latte.ca/images/deck2007/small/0724b.jpg" alt="Stonehenge.  Kinda." style="margin-right:10px;margin-bottom:5px"&gt;&lt;/a&gt;
+(which seems larger than I thought it would be) is framed in.&lt;br clear="left"&gt;
+
+&lt;a href="https://bwinton.github.io/weblog.latte.ca/images/deck2007/0724b.jpg"&gt;&lt;img align="left" src="https://bwinton.github.io/weblog.latte.ca/images/deck2007/small/0724b.jpg" alt="Stonehenge.  Kinda." style="margin-right:10px;margin-bottom:5px"&gt;&lt;/a&gt;
 
 A closer-up view of one of the planters, along with the base to the
-umbrella for the patio table, and the gas hookup for the barbeque.&lt;br clear="left"&gt;&lt;a href="https://bwinton.github.io/weblog.latte.ca/images/deck2007/0724c.jpg"&gt;&lt;img align="left" src="https://bwinton.github.io/weblog.latte.ca/images/deck2007/small/0724c.jpg" alt="Stairs!" style="margin-right:10px;margin-bottom:5px"&gt;&lt;/a&gt;
+umbrella for the patio table, and the gas hookup for the barbeque.&lt;br clear="left"&gt;
+
+&lt;a href="https://bwinton.github.io/weblog.latte.ca/images/deck2007/0724c.jpg"&gt;&lt;img align="left" src="https://bwinton.github.io/weblog.latte.ca/images/deck2007/small/0724c.jpg" alt="Stairs!" style="margin-right:10px;margin-bottom:5px"&gt;&lt;/a&gt;
 
 And the inside of the garbage bin, with obligatory cat.&lt;br clear="all"&gt;
 
 Okay, so the comments were a little weak today, I’m recovering from a
 severe arm wound, cut me some slack.
 
-&lt;/p&gt;</description><category>deck</category><category>garden</category><category>reno</category><guid>https://bwinton.github.io/weblog.latte.ca/amy/houseandhome/reno/deck/july24.html</guid><pubDate>Wed, 25 Jul 2007 02:23:21 GMT</pubDate></item><item><title>Daily Deck Update 7</title><link>https://bwinton.github.io/weblog.latte.ca/amy/houseandhome/reno/deck/july23.html</link><dc:creator>Blake Winton</dc:creator><description>&lt;p&gt;&lt;a href="https://bwinton.github.io/weblog.latte.ca/images/deck2007/0723a.jpg"&gt;&lt;img align="left" src="https://bwinton.github.io/weblog.latte.ca/images/deck2007/small/0723a.jpg" alt="Stairs!" style="margin-right:10px;margin-bottom:5px"&gt;&lt;/a&gt;
+&lt;/p&gt;</description><category>deck</category><category>garden</category><category>reno</category><guid>https://bwinton.github.io/weblog.latte.ca/amy/houseandhome/reno/deck/july24/</guid><pubDate>Wed, 25 Jul 2007 02:23:21 GMT</pubDate></item><item><title>Daily Deck Update 7</title><link>https://bwinton.github.io/weblog.latte.ca/amy/houseandhome/reno/deck/july23/</link><dc:creator>Blake Winton</dc:creator><description>&lt;p&gt;&lt;a href="https://bwinton.github.io/weblog.latte.ca/images/deck2007/0723a.jpg"&gt;&lt;img align="left" src="https://bwinton.github.io/weblog.latte.ca/images/deck2007/small/0723a.jpg" alt="Stairs!" style="margin-right:10px;margin-bottom:5px"&gt;&lt;/a&gt;
 
 The facing went on!  Apparently we got fewer long planks than we
 needed, so Cory couldn’t finish the deck itself, so instead he put on
 the facing, and started building the frames for the planters.  Hey,
-I just noticed the big long stair at the front.  Neat!&lt;br clear="left"&gt;&lt;a href="https://bwinton.github.io/weblog.latte.ca/images/deck2007/0723b.jpg"&gt;&lt;img align="left" src="https://bwinton.github.io/weblog.latte.ca/images/deck2007/small/0723b.jpg" alt="Stonehenge.  Kinda." style="margin-right:10px;margin-bottom:5px"&gt;&lt;/a&gt;
+I just noticed the big long stair at the front.  Neat!&lt;br clear="left"&gt;
 
-And another shot of the side stairs, with facing.&lt;br clear="all"&gt;&lt;/p&gt;</description><category>deck</category><category>garden</category><category>reno</category><guid>https://bwinton.github.io/weblog.latte.ca/amy/houseandhome/reno/deck/july23.html</guid><pubDate>Tue, 24 Jul 2007 00:42:00 GMT</pubDate></item><item><title>Daily Deck Update 6</title><link>https://bwinton.github.io/weblog.latte.ca/amy/houseandhome/reno/deck/july20.html</link><dc:creator>Blake Winton</dc:creator><description>&lt;p&gt;&lt;a href="https://bwinton.github.io/weblog.latte.ca/images/deck2007/0720a.jpg"&gt;&lt;img align="left" src="https://bwinton.github.io/weblog.latte.ca/images/deck2007/small/0720a.jpg" alt="Stairs!" style="margin-right:10px;margin-bottom:5px"&gt;&lt;/a&gt;
+&lt;a href="https://bwinton.github.io/weblog.latte.ca/images/deck2007/0723b.jpg"&gt;&lt;img align="left" src="https://bwinton.github.io/weblog.latte.ca/images/deck2007/small/0723b.jpg" alt="Stonehenge.  Kinda." style="margin-right:10px;margin-bottom:5px"&gt;&lt;/a&gt;
+
+And another shot of the side stairs, with facing.&lt;br clear="all"&gt;
+
+&lt;/p&gt;</description><category>deck</category><category>garden</category><category>reno</category><guid>https://bwinton.github.io/weblog.latte.ca/amy/houseandhome/reno/deck/july23/</guid><pubDate>Tue, 24 Jul 2007 00:42:00 GMT</pubDate></item><item><title>Daily Deck Update 6</title><link>https://bwinton.github.io/weblog.latte.ca/amy/houseandhome/reno/deck/july20/</link><dc:creator>Blake Winton</dc:creator><description>&lt;p&gt;&lt;a href="https://bwinton.github.io/weblog.latte.ca/images/deck2007/0720a.jpg"&gt;&lt;img align="left" src="https://bwinton.github.io/weblog.latte.ca/images/deck2007/small/0720a.jpg" alt="Stairs!" style="margin-right:10px;margin-bottom:5px"&gt;&lt;/a&gt;
 
 Finally, a set of stairs!  I can’t tell you how excited I am about
 those, although I am a little curious as to why that first step is
 twice as long as the second…  Maybe the ground moved up.  Yeah, that's
-what I'll go with.&lt;br clear="left"&gt;&lt;a href="https://bwinton.github.io/weblog.latte.ca/images/deck2007/0720b.jpg"&gt;&lt;img align="left" src="https://bwinton.github.io/weblog.latte.ca/images/deck2007/small/0720b.jpg" alt="Stonehenge.  Kinda." style="margin-right:10px;margin-bottom:5px"&gt;&lt;/a&gt;
+what I'll go with.&lt;br clear="left"&gt;
+
+&lt;a href="https://bwinton.github.io/weblog.latte.ca/images/deck2007/0720b.jpg"&gt;&lt;img align="left" src="https://bwinton.github.io/weblog.latte.ca/images/deck2007/small/0720b.jpg" alt="Stonehenge.  Kinda." style="margin-right:10px;margin-bottom:5px"&gt;&lt;/a&gt;
 
 This line of stones brought to you by Cordelia.  It’s nice to see that
-she can create order as well as chaos.&lt;br clear="left"&gt;&lt;a href="https://bwinton.github.io/weblog.latte.ca/images/deck2007/0720c.jpg"&gt;&lt;img align="left" src="https://bwinton.github.io/weblog.latte.ca/images/deck2007/small/0720c.jpg" alt="A window to nowhere." style="margin-right:10px"&gt;&lt;/a&gt;
+she can create order as well as chaos.&lt;br clear="left"&gt;
+
+&lt;a href="https://bwinton.github.io/weblog.latte.ca/images/deck2007/0720c.jpg"&gt;&lt;img align="left" src="https://bwinton.github.io/weblog.latte.ca/images/deck2007/small/0720c.jpg" alt="A window to nowhere." style="margin-right:10px"&gt;&lt;/a&gt;
 
 And finally, a bonus picture for Andrew.  Yes, that was a window you
 saw under our deck.  I’m not sure how we’ll get light into the
 basement now.  Perhaps with electricity.  (I’m also not sure what is
 going to happen to the edge of the deck, so we just might still get
-some light from the edges.&lt;br clear="all"&gt;&lt;/p&gt;</description><category>deck</category><category>garden</category><category>reno</category><guid>https://bwinton.github.io/weblog.latte.ca/amy/houseandhome/reno/deck/july20.html</guid><pubDate>Fri, 20 Jul 2007 23:24:27 GMT</pubDate></item><item><title>Daily Deck Update 5</title><link>https://bwinton.github.io/weblog.latte.ca/amy/houseandhome/reno/deck/july19.html</link><dc:creator>Blake Winton</dc:creator><description>&lt;p&gt;&lt;a href="http://www.weatheroffice.gc.ca/city/pages/on-143_metric_e.html"&gt;&lt;img align="left" src="https://bwinton.github.io/weblog.latte.ca/images/deck2007/small/0719.gif" alt="Il Pleut." style="margin-right:10px"&gt;&lt;/a&gt;It’s raining, with thunderstorms even,
+some light from the edges.&lt;br clear="all"&gt;
+
+&lt;/p&gt;</description><category>deck</category><category>garden</category><category>reno</category><guid>https://bwinton.github.io/weblog.latte.ca/amy/houseandhome/reno/deck/july20/</guid><pubDate>Fri, 20 Jul 2007 23:24:27 GMT</pubDate></item><item><title>Daily Deck Update 5</title><link>https://bwinton.github.io/weblog.latte.ca/amy/houseandhome/reno/deck/july19/</link><dc:creator>Blake Winton</dc:creator><description>&lt;p&gt;&lt;a href="http://www.weatheroffice.gc.ca/city/pages/on-143_metric_e.html"&gt;&lt;img align="left" src="https://bwinton.github.io/weblog.latte.ca/images/deck2007/small/0719.gif" alt="Il Pleut." style="margin-right:10px"&gt;&lt;/a&gt;It’s raining, with thunderstorms even,
 and so nothing’s going to happen to the deck today.  Perhaps
 tomorrow.&lt;br&gt;(Oh, and the weather department doesn't keep historical
 pages active, so by the time you click on the little cloud, it might
-say something completely different.)&lt;br clear="all"&gt;&lt;/p&gt;</description><category>deck</category><category>garden</category><category>reno</category><guid>https://bwinton.github.io/weblog.latte.ca/amy/houseandhome/reno/deck/july19.html</guid><pubDate>Thu, 19 Jul 2007 14:20:47 GMT</pubDate></item><item><title>Daily Deck Update 4</title><link>https://bwinton.github.io/weblog.latte.ca/amy/houseandhome/reno/deck/july18.html</link><dc:creator>Blake Winton</dc:creator><description>&lt;p&gt;&lt;a href="https://bwinton.github.io/weblog.latte.ca/images/deck2007/0718.jpg"&gt;&lt;img align="left" src="https://bwinton.github.io/weblog.latte.ca/images/deck2007/small/0718.jpg" alt="Halfway done." style="margin-right:10px"&gt;&lt;/a&gt;Wow, is that ever going quickly.  At
+say something completely different.)&lt;br clear="all"&gt;&lt;/p&gt;</description><category>deck</category><category>garden</category><category>reno</category><guid>https://bwinton.github.io/weblog.latte.ca/amy/houseandhome/reno/deck/july19/</guid><pubDate>Thu, 19 Jul 2007 14:20:47 GMT</pubDate></item><item><title>Daily Deck Update 4</title><link>https://bwinton.github.io/weblog.latte.ca/amy/houseandhome/reno/deck/july18/</link><dc:creator>Blake Winton</dc:creator><description>&lt;p&gt;&lt;a href="https://bwinton.github.io/weblog.latte.ca/images/deck2007/0718.jpg"&gt;&lt;img align="left" src="https://bwinton.github.io/weblog.latte.ca/images/deck2007/small/0718.jpg" alt="Halfway done." style="margin-right:10px"&gt;&lt;/a&gt;Wow, is that ever going quickly.  At
 least, far quicker than I would have been able to do it.  The last
 quarter of the last board in the big group on the right isn't screwed
 down yet, but I’m sure it’s only a matter of time.&lt;/p&gt;
@@ -136,4 +159,4 @@ friend of the family is downsizing, and might give us her’s, but
 either way, I plan on having a party when the deck is done, with beer
 and margaritas and some sort of munchie thing.  And of course you’re
 all invited!  I’ll start planning it after the deck is actually done,
-and post details when they’re finalized.&lt;br clear="all"&gt;&lt;/p&gt;</description><category>deck</category><category>garden</category><category>reno</category><guid>https://bwinton.github.io/weblog.latte.ca/amy/houseandhome/reno/deck/july18.html</guid><pubDate>Thu, 19 Jul 2007 01:41:21 GMT</pubDate></item></channel></rss>
+and post details when they’re finalized.&lt;br clear="all"&gt;&lt;/p&gt;</description><category>deck</category><category>garden</category><category>reno</category><guid>https://bwinton.github.io/weblog.latte.ca/amy/houseandhome/reno/deck/july18/</guid><pubDate>Thu, 19 Jul 2007 01:41:21 GMT</pubDate></item></channel></rss>

@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html prefix="og: http://ogp.me/ns# article: http://ogp.me/ns/article# " lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ES6 Templates | Blog-O!</title>
+<link href="../../../../assets/css/bootstrap.min.css" rel="stylesheet" type="text/css">
+<link href="../../../../assets/css/baguetteBox.min.css" rel="stylesheet" type="text/css">
+<link href="../../../../assets/css/rst.css" rel="stylesheet" type="text/css">
+<link href="../../../../assets/css/code.css" rel="stylesheet" type="text/css">
+<link href="../../../../assets/css/theme.css" rel="stylesheet" type="text/css">
+<link href="../../../../assets/css/bootblog.css" rel="stylesheet" type="text/css">
+<link href="https://fonts.googleapis.com/css?family=Playfair+Display:700,900" rel="stylesheet">
+<meta name="theme-color" content="#5670d4">
+<meta name="generator" content="Nikola (getnikola.com)">
+<link rel="alternate" type="application/rss+xml" title="RSS" href="../../../../rss.xml">
+<link rel="canonical" href="https://bwinton.github.io/weblog.latte.ca/blake/tech/firefox/templates/">
+<!--[if lt IE 9]><script src="../../../../assets/js/html5.js"></script><![endif]--><meta name="author" content="Blake Winton">
+<link rel="prev" href="../../../random/newyears2015/" title="New Year’s Resolutions…" type="text/html">
+<link rel="next" href="../../../../amy/stuff/lostphone/" title="A Pocket of Calm" type="text/html">
+<meta property="og:site_name" content="Blog-O!">
+<meta property="og:title" content="ES6 Templates">
+<meta property="og:url" content="https://bwinton.github.io/weblog.latte.ca/blake/tech/firefox/templates/">
+<meta property="og:description" content="One of my favourite upcoming features in ES6 is Template Strings.  I’ve used
+JQuery’s templates in
+some previous code I’ve
+worked on, and while it was very useful in finishing the feature on time, it’">
+<meta property="og:type" content="article">
+<meta property="article:published_time" content="2015-01-12T14:45:00-05:00">
+<meta property="article:tag" content="es6">
+<meta property="article:tag" content="mozilla">
+<meta property="article:tag" content="templates">
+</head>
+<body>
+<a href="#content" class="sr-only sr-only-focusable">Skip to main content</a>
+
+<!-- Header and menu bar -->
+<div class="container">
+      <header class="blog-header py-3"><div class="row nbb-header align-items-center">
+          <div class="col-md-3 col-xs-2 col-sm-2" style="width: auto;">
+            <button class="navbar-toggler navbar-light bg-light nbb-navbar-toggler" type="button" data-toggle="collapse" data-target=".bs-nav-collapsible" aria-controls="bs-navbar" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse bs-nav-collapsible bootblog4-search-form-holder">
+                
+<!-- Custom search -->
+<form method="get" id="search" action="//duckduckgo.com/" class="navbar-form pull-right">
+<input type="hidden" name="sites" value="https://bwinton.github.io/weblog.latte.ca/"><input type="hidden" name="k8" value="#444444"><input type="hidden" name="k9" value="#D51920"><input type="hidden" name="kt" value="h"><input type="text" name="q" maxlength="255" placeholder="Search…" style="margin-top: 4px;"><input type="submit" value="DuckDuckGo Search" style="visibility: hidden;">
+</form>
+<!-- End of custom search -->
+
+            </div>
+        </div>
+          <div class="col-md-6 col-xs-10 col-sm-10 bootblog4-brand" style="width: auto;">
+            <a class="navbar-brand blog-header-logo text-dark" href="https://bwinton.github.io/weblog.latte.ca/">
+
+            <span id="blog-title">Blog-O!</span>
+        </a>
+          </div>
+            <div class="col-md-3 justify-content-end align-items-center bs-nav-collapsible collapse flex-collapse bootblog4-right-nav">
+            <nav class="navbar navbar-light bg-white"><ul class="navbar-nav bootblog4-right-nav"></ul></nav>
+</div>
+    </div>
+</header><nav class="navbar navbar-expand-md navbar-light bg-white static-top"><div class="collapse navbar-collapse bs-nav-collapsible" id="bs-navbar">
+            <ul class="navbar-nav nav-fill d-flex w-100">
+<li class="nav-item">
+<a href="../../../../archive.html" class="nav-link">Archive</a>
+                </li>
+<li class="nav-item">
+<a href="../../../../tags/index.html" class="nav-link">Tags</a>
+                </li>
+<li class="nav-item">
+<a href="../../../../rss.xml" class="nav-link">RSS feed</a>
+
+                
+            </li>
+</ul>
+</div>
+<!-- /.navbar-collapse -->
+</nav>
+</div>
+
+<div class="container" id="content" role="main">
+    <div class="body-content">
+        <!--Body content-->
+        
+        
+<article class="post-text h-entry hentry postpage" itemscope="itemscope" itemtype="http://schema.org/Article"><header><h1 class="p-name entry-title" itemprop="headline name"><a href="." class="u-url">ES6 Templates</a></h1>
+
+        <div class="metadata">
+            <p class="byline author vcard"><span class="byline-name fn" itemprop="author">
+                    <a href="../../../../authors/blake-winton/">Blake Winton</a>
+            </span></p>
+            <p class="dateline">
+            <a href="." rel="bookmark">
+            <time class="published dt-published" datetime="2015-01-12T14:45:00-05:00" itemprop="datePublished" title="2015-01-12 14:45">2015-01-12 14:45</time></a>
+            </p>
+                <p class="commentline">
+        
+    <a href="#disqus_thread" data-disqus-identifier="cache/posts/blake/tech/firefox/templates.html">Comments</a>
+
+
+            
+
+        </p>
+</div>
+        
+
+    </header><div class="e-content entry-content" itemprop="articleBody text">
+    <div>
+<p>One of my favourite upcoming features in ES6 is Template Strings.  I’ve used
+JQuery’s <a href="http://ejohn.org/blog/javascript-micro-templating/">templates</a> in
+<a href="https://bugzilla.mozilla.org/show_bug.cgi?id=686347">some previous code</a> I’ve
+worked on, and while it was very useful in finishing the feature on time, it’s
+aged now and relying on third-party libraries which we don’t have time to keep
+up to date isn’t the best idea and so we’re in the middle of <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1014609">some work to
+remove them</a>.  So having
+said that, I’m quite happy to see something similar arriving in the base
+language, so that we can take advantage of it without having to add any extra
+code.</p>
+<blockquote>
+<p>As an aside, all the code below was tested in <a href="http://getfirefox.com">Firefox
+34</a>, using the
+<a href="https://developer.mozilla.org/en-US/docs/Tools/Scratchpad">Scratchpad</a>.  The
+comments are pasted in below the code when you select it and choose the
+<code>Execute » Display</code> menu item or hit <code>Ctrl+L</code> (<code>Cmd+L</code> on Mac).  I
+<a href="https://twitter.com/addyosmani/status/541978036904554496">hear</a> they also
+<a href="https://plus.google.com/+AddyOsmani/posts/BW5h61SoGf8">work in Chrome</a>, but
+they didn’t seem to in the version I was running (39.0.2171.95), and I didn’t
+want to start messing with an <code>--es-staging</code> flag.  If someone can confirm
+whether they work or not, I would certainly appreciate it!  :)</p>
+</blockquote>
+<!-- TEASER_END -->
+
+<p>At their simplest, template strings are just like regular strings, only with
+backticks (<code>`</code>) instead of single (<code>'</code>) or double (<code>"</code>) quotes.</p>
+<pre class="code literal-block"><span></span><span class="kd">function</span> <span class="nx">test0</span><span class="p">()</span> <span class="p">{</span>
+  <span class="k">return</span> <span class="sb">`Just a normal-ish string.`</span>
+<span class="p">}</span>
+
+<span class="nx">test0</span><span class="p">();</span>
+
+<span class="cm">/*</span>
+<span class="cm">Just a normal-ish string.</span>
+<span class="cm">*/</span>
+</pre>
+
+
+<p>but if that were all they were, they wouldn’t be very useful, so obviously they
+can do more.  And the first extra thing they can do is capture the values of
+variables from the scope they’re defined in, and insert them into the string,
+like so:</p>
+<pre class="code literal-block"><span></span><span class="kd">function</span> <span class="nx">test1</span><span class="p">()</span> <span class="p">{</span>
+  <span class="kd">let</span> <span class="nx">x</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span>
+  <span class="kd">let</span> <span class="nx">y</span> <span class="o">=</span> <span class="s1">'foo'</span><span class="p">;</span>
+
+  <span class="k">return</span> <span class="sb">`x is </span><span class="si">${</span><span class="nx">x</span><span class="si">}</span><span class="sb">, and y is </span><span class="si">${</span><span class="nx">y</span><span class="si">}</span><span class="sb">.`</span>
+<span class="p">}</span>
+
+<span class="nx">test1</span><span class="p">();</span>
+
+<span class="cm">/*</span>
+<span class="cm">x is 1, and y is foo.</span>
+<span class="cm">*/</span>
+</pre>
+
+
+<p>Now, you may say “But Blake, I could have just put the values right in the
+string myself!”.  Well, in this case yes, you could, but those values don’t have
+to be statically defined in the function they’re used from…</p>
+<pre class="code literal-block"><span></span><span class="kd">function</span> <span class="nx">test2</span><span class="p">(</span><span class="nx">x</span><span class="p">,</span> <span class="nx">y</span><span class="p">)</span> <span class="p">{</span>
+  <span class="k">return</span> <span class="sb">`x is </span><span class="si">${</span><span class="nx">x</span><span class="si">}</span><span class="sb">, and y is </span><span class="si">${</span><span class="nx">y</span><span class="si">}</span><span class="sb">.`</span>
+<span class="p">}</span>
+
+<span class="nx">test2</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="s1">'foo'</span><span class="p">);</span>
+
+<span class="cm">/*</span>
+<span class="cm">x is 1, and y is foo.</span>
+<span class="cm">*/</span>
+</pre>
+
+
+<p>I’m sure you can imagine the values coming from the result of an XHR call, or
+some other asynchronous function.  But just to hammer the point home even
+further, the variables themselves don’t need to be in the function at all…</p>
+<pre class="code literal-block"><span></span><span class="kd">function</span> <span class="nx">test3</span><span class="p">(</span><span class="nx">x</span><span class="p">)</span> <span class="p">{</span>
+  <span class="k">return</span> <span class="kd">function</span> <span class="p">(</span><span class="nx">y</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">return</span> <span class="sb">`x is </span><span class="si">${</span><span class="nx">x</span><span class="si">}</span><span class="sb">, and y is </span><span class="si">${</span><span class="nx">y</span><span class="si">}</span><span class="sb">, and the sum is </span><span class="si">${</span><span class="nx">x</span> <span class="o">+</span> <span class="nx">y</span><span class="si">}</span><span class="sb">.`</span>
+  <span class="p">}</span>
+<span class="p">}</span>
+
+<span class="kd">let</span> <span class="nx">partial</span> <span class="o">=</span> <span class="nx">test3</span><span class="p">(</span><span class="mi">1</span><span class="p">);</span>
+<span class="nx">partial</span><span class="p">(</span><span class="mi">2</span><span class="p">);</span>
+
+<span class="cm">/*</span>
+<span class="cm">x is 1, and y is 2, and the sum is 3.</span>
+<span class="cm">*/</span>
+</pre>
+
+
+<p>Notice that we can also evaluate expressions in the template string.  That would
+be much harder to do with hard-coded values.</p>
+<p><a href="https://www.youtube.com/watch?v=ZTpXh33Mbeg">But wait, there’s more!</a></p>
+<p>It turns out we have control not only over what we inject into the string, but
+also what comes out of the injected string!  If we put the name of a function
+before the backtick, then it will get called when the string is created, and it
+can return <em>whatever</em> it wants.  Like, really, <strong><em>whatever</em></strong>!  :)</p>
+<pre class="code literal-block"><span></span><span class="kd">function</span> <span class="nx">test4</span><span class="p">()</span> <span class="p">{</span>
+  <span class="kd">function</span> <span class="nx">replace</span><span class="p">(</span><span class="nx">template</span><span class="p">,</span> <span class="nx">arg</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">return</span> <span class="k">new</span> <span class="nb">Date</span><span class="p">(</span><span class="nx">arg</span><span class="p">);</span>
+  <span class="p">}</span>
+  <span class="kd">let</span> <span class="nx">x</span> <span class="o">=</span> <span class="s2">"2014-12-27T04:09:57.054Z"</span><span class="p">;</span>
+
+  <span class="k">return</span> <span class="nx">replace</span><span class="sb">`This doesn’t matter we only use </span><span class="si">${</span><span class="nx">x</span><span class="si">}</span><span class="sb"> here.`</span><span class="p">.</span><span class="nx">getUTCDate</span><span class="p">();</span>
+<span class="p">}</span>
+
+<span class="nx">test4</span><span class="p">();</span>
+
+<span class="cm">/*</span>
+<span class="cm">27</span>
+<span class="cm">*/</span>
+</pre>
+
+
+<p>Have you ever called <code>.getUTCDate()</code> on a string before?  Me either!  Of course,
+you’re not limited to dates.  You could also return a model object that was
+populated from various pieces of data you passed in, if you felt like rolling
+framework-style.  For the rest of the examples, I think I’ll stick to returning
+strings, though, since more complicated structures just show up as <code>[object]</code>,
+which isn’t so helpful for demonstrating stuff.</p>
+<p>So, let’s see just what gets passed in to this function…</p>
+<pre class="code literal-block"><span></span><span class="kd">function</span> <span class="nx">test5</span><span class="p">()</span> <span class="p">{</span>
+  <span class="kd">function</span> <span class="nx">modify</span><span class="p">(</span><span class="nx">template</span><span class="p">,</span> <span class="p">...</span><span class="nx">args</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">return</span> <span class="s1">'Nope!\n  template='</span> <span class="o">+</span> <span class="nx">JSON</span><span class="p">.</span><span class="nx">stringify</span><span class="p">(</span><span class="nx">template</span><span class="p">)</span> <span class="o">+</span>
+      <span class="s1">'\n  args='</span> <span class="o">+</span> <span class="nx">JSON</span><span class="p">.</span><span class="nx">stringify</span><span class="p">(</span><span class="nx">args</span><span class="p">);</span>
+  <span class="p">}</span>
+  <span class="kd">let</span> <span class="nx">x</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span>
+  <span class="kd">let</span> <span class="nx">y</span> <span class="o">=</span> <span class="mi">3</span><span class="p">;</span>
+
+  <span class="k">return</span> <span class="nx">modify</span><span class="sb">`x is </span><span class="si">${</span><span class="nx">x</span><span class="si">}</span><span class="sb">, and y is </span><span class="si">${</span><span class="nx">y</span><span class="si">}</span><span class="sb">, and the sum is </span><span class="si">${</span><span class="nx">x</span> <span class="o">+</span> <span class="nx">y</span><span class="si">}</span><span class="sb">.`</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="nx">test5</span><span class="p">();</span>
+
+<span class="cm">/*</span>
+<span class="cm">Nope!</span>
+<span class="cm">  template=["x is ",", and y is ",", and the sum is ","."]</span>
+<span class="cm">  args=[1,3,4]</span>
+<span class="cm">*/</span>
+</pre>
+
+
+<p>Well, that’s not so terrible.  The template string is broken up into the pieces
+between the arguments, and the arguments are pre-calculated before being passed
+in.  Hmm, I wonder what happens if you have two expressions right beside each
+other?</p>
+<pre class="code literal-block"><span></span><span class="kd">function</span> <span class="nx">test6</span><span class="p">()</span> <span class="p">{</span>
+  <span class="kd">function</span> <span class="nx">modify</span><span class="p">(</span><span class="nx">template</span><span class="p">,</span> <span class="p">...</span><span class="nx">args</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">return</span> <span class="s1">'Nope!\n  template='</span> <span class="o">+</span> <span class="nx">JSON</span><span class="p">.</span><span class="nx">stringify</span><span class="p">(</span><span class="nx">template</span><span class="p">)</span> <span class="o">+</span>
+      <span class="s1">'\n  args='</span> <span class="o">+</span> <span class="nx">JSON</span><span class="p">.</span><span class="nx">stringify</span><span class="p">(</span><span class="nx">args</span><span class="p">);</span>
+  <span class="p">}</span>
+  <span class="kd">let</span> <span class="nx">x</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span>
+  <span class="kd">let</span> <span class="nx">y</span> <span class="o">=</span> <span class="s1">'foo'</span><span class="p">;</span>
+
+  <span class="k">return</span> <span class="nx">modify</span><span class="sb">`Adjacent items give: </span><span class="si">${</span><span class="nx">x</span><span class="si">}${</span><span class="nx">y</span><span class="si">}</span><span class="sb">.`</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="nx">test6</span><span class="p">();</span>
+
+<span class="cm">/*</span>
+<span class="cm">Nope!</span>
+<span class="cm">  template=["Adjacent items give: ","","."]</span>
+<span class="cm">  args=[1,"foo"]</span>
+<span class="cm">*/</span>
+</pre>
+
+
+<p>You get an empty string.  Seems reasonable.  Now, if you want to put the string
+back together, you’ll need to loop over each item in the template, and append
+the expression in the same position (if it exists!  If the template string ends
+with static content, then there will be no last expression).  Of course, while
+you’re doing that, you can process the arguments in any way you see fit, like,
+say, selectively escaping unsafe HTML characters…</p>
+<pre class="code literal-block"><span></span><span class="kd">function</span> <span class="nx">test7</span><span class="p">()</span> <span class="p">{</span>
+  <span class="kd">function</span> <span class="nx">escape</span><span class="p">(</span><span class="nx">data</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">return</span> <span class="nx">data</span><span class="p">.</span><span class="nx">replace</span><span class="p">(</span><span class="sr">/&amp;/g</span><span class="p">,</span> <span class="s1">'&amp;amp;'</span><span class="p">).</span><span class="nx">replace</span><span class="p">(</span><span class="sr">/&lt;/g</span><span class="p">,</span> <span class="s1">'&amp;lt;'</span><span class="p">).</span><span class="nx">replace</span><span class="p">(</span><span class="sr">/&gt;/g</span><span class="p">,</span> <span class="s1">'&amp;gt;'</span><span class="p">);</span>
+  <span class="p">}</span>
+  <span class="kd">function</span> <span class="nx">html</span><span class="p">(</span><span class="nx">template</span><span class="p">,</span> <span class="p">...</span><span class="nx">args</span><span class="p">)</span> <span class="p">{</span>
+    <span class="kd">let</span> <span class="nx">retval</span> <span class="o">=</span> <span class="s1">''</span><span class="p">;</span>
+    <span class="k">for</span> <span class="p">(</span><span class="kd">let</span> <span class="nx">i</span> <span class="k">in</span> <span class="nx">template</span><span class="p">)</span> <span class="p">{</span>
+      <span class="nx">retval</span> <span class="o">+=</span> <span class="nx">template</span><span class="p">[</span><span class="nx">i</span><span class="p">]</span> <span class="o">+</span> <span class="p">(</span><span class="nx">args</span><span class="p">[</span><span class="nx">i</span><span class="p">]</span> <span class="o">?</span> <span class="nx">escape</span><span class="p">(</span><span class="nx">args</span><span class="p">[</span><span class="nx">i</span><span class="p">])</span> <span class="o">:</span> <span class="s1">''</span><span class="p">);</span>
+    <span class="p">}</span>
+    <span class="k">return</span> <span class="nx">retval</span><span class="p">;</span>
+  <span class="p">}</span>
+  <span class="kd">let</span> <span class="nx">x</span> <span class="o">=</span> <span class="s1">'my &amp; name'</span><span class="p">;</span>
+  <span class="kd">let</span> <span class="nx">y</span> <span class="o">=</span> <span class="s1">'&lt;script&gt;&lt;!--'</span><span class="p">;</span>
+
+  <span class="k">return</span> <span class="nx">html</span><span class="sb">`&lt;span&gt;x is </span><span class="si">${</span><span class="nx">x</span><span class="si">}</span><span class="sb">&lt;/span&gt;, and &lt;span&gt;y is </span><span class="si">${</span><span class="nx">y</span><span class="si">}</span><span class="sb">&lt;/span&gt;.`</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="nx">test7</span><span class="p">();</span>
+
+<span class="cm">/*</span>
+<span class="cm">&lt;span&gt;x is my &amp;amp; name&lt;/span&gt;, and &lt;span&gt;y is &amp;lt;script&amp;gt;&amp;lt;!--&lt;/span&gt;.</span>
+<span class="cm">*/</span>
+</pre>
+
+
+<p>Or better yet, automatically translating your strings into another language!</p>
+<pre class="code literal-block"><span></span><span class="kd">function</span> <span class="nx">test8</span><span class="p">()</span> <span class="p">{</span>
+  <span class="nx">locale</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="s1">'my first string'</span> <span class="o">:</span> <span class="kd">function</span> <span class="p">(</span><span class="nx">args</span><span class="p">)</span> <span class="p">{</span>
+      <span class="k">return</span> <span class="s1">'mi primera cadena'</span><span class="p">;</span>
+    <span class="p">},</span>
+    <span class="s1">'My name is |, and I like |.'</span> <span class="o">:</span> <span class="kd">function</span> <span class="p">(</span><span class="nx">args</span><span class="p">)</span> <span class="p">{</span>
+      <span class="nx">retval</span> <span class="o">=</span> <span class="s1">''</span><span class="p">;</span>
+      <span class="nx">translated</span> <span class="o">=</span> <span class="s1">'Mi nombre es |, y me gusta |.'</span><span class="p">.</span><span class="nx">split</span><span class="p">(</span><span class="s1">'|'</span><span class="p">);</span>
+      <span class="k">for</span> <span class="p">(</span><span class="kd">let</span> <span class="nx">i</span> <span class="k">in</span> <span class="nx">translated</span><span class="p">)</span> <span class="p">{</span>
+        <span class="nx">retval</span> <span class="o">+=</span> <span class="nx">translated</span><span class="p">[</span><span class="nx">i</span><span class="p">]</span> <span class="o">+</span> <span class="p">(</span><span class="nx">args</span><span class="p">[</span><span class="nx">i</span><span class="p">]</span> <span class="o">||</span> <span class="s1">''</span><span class="p">);</span>
+      <span class="p">}</span>
+
+      <span class="k">return</span> <span class="nx">retval</span><span class="p">;</span>
+    <span class="p">}</span>
+  <span class="p">}</span>
+  <span class="kd">function</span> <span class="nx">_</span><span class="p">(</span><span class="nx">template</span><span class="p">,</span> <span class="p">...</span><span class="nx">args</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">return</span> <span class="nx">locale</span><span class="p">[</span><span class="nx">template</span><span class="p">.</span><span class="nx">join</span><span class="p">(</span><span class="s1">'|'</span><span class="p">)](</span><span class="nx">args</span><span class="p">);</span>
+  <span class="p">}</span>
+  <span class="kd">let</span> <span class="nx">x</span> <span class="o">=</span> <span class="s1">'Blake'</span><span class="p">;</span>
+  <span class="kd">let</span> <span class="nx">y</span> <span class="o">=</span> <span class="s1">'JavaScript'</span><span class="p">;</span>
+
+  <span class="k">return</span> <span class="nx">_</span><span class="sb">`My name is </span><span class="si">${</span><span class="nx">x</span><span class="si">}</span><span class="sb">, and I like </span><span class="si">${</span><span class="nx">y</span><span class="si">}</span><span class="sb">.`</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="nx">test8</span><span class="p">();</span>
+
+<span class="cm">/*</span>
+<span class="cm">Mi nombre es Blake, y me gusta JavaScript.</span>
+<span class="cm">*/</span>
+</pre>
+
+
+<p>(We have to pretend that the <code>locale</code> dictionary gets loaded from a more
+complicated sub-system, and yes, this totally fails to handle languages with a
+different word order, but I trust you get the idea behind it, and I can leave
+the hard work of actually implementing it to the reader.)</p>
+<p>Hopefully this brief set of examples has piqued your curiousity.  If you’ld like
+to read some more technical infomation about template strings, you should check
+out <a href="http://tc39wiki.calculist.org/es6/template-strings/">this wiki page</a>…</p>
+</div>
+    </div>
+    <aside class="postpromonav"><nav><ul itemprop="keywords" class="tags">
+<li><a class="tag p-category" href="../../../../tags/es6/" rel="tag">es6</a></li>
+            <li><a class="tag p-category" href="../../../../tags/mozilla/" rel="tag">mozilla</a></li>
+            <li><a class="tag p-category" href="../../../../tags/templates/" rel="tag">templates</a></li>
+        </ul>
+<ul class="pager hidden-print">
+<li class="previous">
+                <a href="../../../random/newyears2015/" rel="prev" title="New Year’s Resolutions…">Previous post</a>
+            </li>
+            <li class="next">
+                <a href="../../../../amy/stuff/lostphone/" rel="next" title="A Pocket of Calm">Next post</a>
+            </li>
+        </ul></nav></aside><section class="comments hidden-print"><h2>Comments</h2>
+        
+        
+        <div id="disqus_thread"></div>
+        <script>
+        var disqus_shortname ="latteblog",
+            disqus_url="https://bwinton.github.io/weblog.latte.ca/blake/tech/firefox/templates/",
+        disqus_title="ES6 Templates",
+        disqus_identifier="cache/posts/blake/tech/firefox/templates.html",
+        disqus_config = function () {
+            this.language = "en";
+        };
+        (function() {
+            var dsq = document.createElement('script'); dsq.async = true;
+            dsq.src = 'https://' + disqus_shortname + '.disqus.com/embed.js';
+            (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+        })();
+    </script><noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a>
+</noscript>
+    <a href="https://disqus.com" class="dsq-brlink" rel="nofollow">Comments powered by <span class="logo-disqus">Disqus</span></a>
+
+
+        </section></article><script>var disqus_shortname="latteblog";(function(){var a=document.createElement("script");a.async=true;a.src="https://"+disqus_shortname+".disqus.com/count.js";(document.getElementsByTagName("head")[0]||document.getElementsByTagName("body")[0]).appendChild(a)}());</script><!--End of body content--><footer id="footer"><div style="margin-bottom: 12px">Contents © 2019         <a href="mailto:bwinton@latte.ca">Blake Winton</a>
+<a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/2.5/">
+<img alt="Creative Commons License BY-NC-SA" style="border-width: 0; vertical-align: bottom" src="https://licensebuttons.net/l/by-nc-sa/2.5/88x31.png"></a>
+</div>
+            
+        </footer>
+</div>
+</div>
+
+
+            <script src="../../../../assets/js/jquery.min.js"></script><script src="../../../../assets/js/popper.min.js"></script><script src="../../../../assets/js/bootstrap.min.js"></script><script src="../../../../assets/js/baguetteBox.min.js"></script><script>
+    baguetteBox.run('div#content', {
+        ignoreClass: 'islink',
+        captions: function(element) {
+            return element.getElementsByTagName('img')[0].alt;
+    }});
+    </script><script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-5805429-2', 'auto');
+  ga('send', 'pageview');
+
+</script>
+</body>
+</html>

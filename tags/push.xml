@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<?xml-stylesheet type="text/xsl" href="../assets/xml/rss.xsl" media="all"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Blog-O! (push)</title><link>https://bwinton.github.io/weblog.latte.ca/</link><description></description><atom:link href="https://bwinton.github.io/weblog.latte.ca/tags/push.xml" type="application/rss+xml" rel="self"></atom:link><language>en</language><lastBuildDate>Sun, 30 Oct 2016 01:56:58 GMT</lastBuildDate><generator>https://getnikola.com/</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>More hurray!</title><link>https://bwinton.github.io/weblog.latte.ca/blake/tech/thunderbird/firstcommit.html</link><dc:creator>Blake Winton</dc:creator><description>&lt;div&gt;&lt;p&gt;&lt;a href="http://weblog.latte.ca/blake/tech/thunderbird/FirstPatch"&gt;A while ago&lt;/a&gt; I had my
+<?xml-stylesheet type="text/xsl" href="../assets/xml/rss.xsl" media="all"?><rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/"><channel><title>Blog-O! (Posts about push)</title><link>https://bwinton.github.io/weblog.latte.ca/</link><description></description><atom:link rel="self" href="https://bwinton.github.io/weblog.latte.ca/tags/push.xml" type="application/rss+xml"></atom:link><language>en</language><lastBuildDate>Sat, 13 Apr 2019 21:03:20 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>More hurray!</title><link>https://bwinton.github.io/weblog.latte.ca/blake/tech/thunderbird/firstcommit/</link><dc:creator>Blake Winton</dc:creator><description>&lt;div&gt;&lt;p&gt;&lt;a href="http://weblog.latte.ca/blake/tech/thunderbird/FirstPatch"&gt;A while ago&lt;/a&gt; I had my
 first patch to Thunderbird committed.&lt;/p&gt;
 &lt;p&gt;&lt;a href="http://hg.mozilla.org/releases/comm-1.9.1/pushloghtml?startdate=2009-10-28+11%3A00&amp;amp;enddate=2009-10-28+11%3A20"&gt;Today&lt;/a&gt; I pushed my first patch, all by myself.&lt;/p&gt;
 &lt;p&gt;It’s kind of exciting, having checkin privileges.  It means that I
@@ -13,7 +13,7 @@ not worry about it anymore.)  And basically there’s just a lot of new
 stuff for me to keep track of, and figure out.  But since anything I
 do is going to show up in the official history, I need to figure it
 out &lt;em&gt;before&lt;/em&gt; I do it, which always adds a little pressure, which in
-this case is probably a good thing.&lt;/p&gt;&lt;/div&gt;</description><category>hg</category><category>mozilla</category><category>patch</category><category>push</category><category>thunderbird</category><guid>https://bwinton.github.io/weblog.latte.ca/blake/tech/thunderbird/firstcommit.html</guid><pubDate>Wed, 28 Oct 2009 18:57:44 GMT</pubDate></item><item><title>Some notes on Bazaar</title><link>https://bwinton.github.io/weblog.latte.ca/blake/tech/bzr/bazaarnotes1.html</link><dc:creator>Blake Winton</dc:creator><description>&lt;p&gt;This started off as a reply to some email on the Bazaar-NG list,
+this case is probably a good thing.&lt;/p&gt;&lt;/div&gt;</description><category>hg</category><category>mozilla</category><category>patch</category><category>push</category><category>thunderbird</category><guid>https://bwinton.github.io/weblog.latte.ca/blake/tech/thunderbird/firstcommit/</guid><pubDate>Wed, 28 Oct 2009 18:57:44 GMT</pubDate></item><item><title>Some notes on Bazaar</title><link>https://bwinton.github.io/weblog.latte.ca/blake/tech/bzr/bazaarnotes1/</link><dc:creator>Blake Winton</dc:creator><description>&lt;p&gt;This started off as a reply to some email on the Bazaar-NG list,
 but it sort of grew and grew, until there were a whole bunch of things
 in it, and I thought it would probably be better as a weblog entry, so
 that I could find it later.&lt;/p&gt;
@@ -26,14 +26,17 @@ Martin Pool wrote:&lt;br&gt;
 &amp;gt; then on the second machine (eg at work)&lt;br&gt;
 &amp;gt;   bzr init-repo ~/myproject&lt;br&gt;
 &amp;gt;   cd myproject&lt;br&gt;
-&amp;gt;   bzr branch sftp://user@host/~/myproject/mybranch&lt;br&gt;&lt;/p&gt;
+&amp;gt;   bzr branch sftp://user@host/~/myproject/mybranch&lt;br&gt;
+&lt;/p&gt;
 
 &lt;p&gt;As a related question, if I wanted other people to be able to download
 my branch over http, would it suffice to do something on the server
-like&lt;br&gt;&lt;br&gt;
+like&lt;br&gt;
+&lt;br&gt;
 bzr init-repo ~/www/myproject&lt;br&gt;
 cd ~/www/myproject&lt;br&gt;
-bzr branch sftp://user@host/~/myproject/mybranch&lt;br&gt;&lt;br&gt;
+bzr branch sftp://user@host/~/myproject/mybranch&lt;br&gt;
+&lt;br&gt;
 or would I need to push straight to ~/www/myproject/mybranch?
 &lt;/p&gt;
 
@@ -42,7 +45,8 @@ common problem.  On the one hand, the repo I created by following the
 steps in the first part of Martin's message&lt;br&gt;
 &amp;gt;   bzr init-repo sftp://user@host/~/myproject&lt;br&gt;
 &amp;gt;   bzr push sftp://user@host/~/myproject/mybranch&lt;br&gt;
-should be just the same as any other repository, right?&lt;br&gt;&lt;br&gt;
+should be just the same as any other repository, right?&lt;br&gt;
+&lt;br&gt;
 But, on the other hand, when I ssh to "user@host", and look in
 ~/myproject, all I see is a .bzr directory.  None of the files I
 allegedly pushed.
@@ -80,14 +84,18 @@ Using bzrlib: C:\Program Files\Bazaar\lib\library.zip\bzrlib&lt;br&gt;
 Using Bazaar configuration: C:/Documents and
 Settings/blake/Application Data/bazaar/2.0&lt;br&gt;
 Using Bazaar log file: C:\Documents and Settings\blake\My
-Documents\.bzr.log&lt;br&gt;&lt;br&gt;
+Documents\.bzr.log&lt;br&gt;
+&lt;br&gt;
 Copyright 2005, 2006, 2007 Canonical Ltd.&lt;br&gt;
-http://bazaar-vcs.org/&lt;br&gt;&lt;br&gt;
+http://bazaar-vcs.org/&lt;br&gt;
+&lt;br&gt;
 bzr comes with ABSOLUTELY NO WARRANTY.  bzr is free software, and you
 may use, modify and redistribute it under the terms of the GNU General
 Public License version 2 or later.&lt;br&gt;
-"""&lt;br&gt;&lt;br&gt;
-So, where should I put the plugins in this case?&lt;br&gt;&lt;/p&gt;
+"""&lt;br&gt;
+&lt;br&gt;
+So, where should I put the plugins in this case?&lt;br&gt;
+&lt;/p&gt;
 
 &lt;p&gt;The answer, as given on irc, seems to be "put it somewhere else and
 set the BZR_PLUGIN_PATH env variable".  Works for me, although it
@@ -95,4 +103,4 @@ would have been nice if the Windows standalone installer did that for
 me, by creating a Plugins directory under the install directory.  And
 as one final note, the BZR_PLUGIN_PATH, which it may contain spaces
 (i.e. "C:\Program Files\Bazaar\Plugins"), must not end in a trailing
-"\".&lt;/p&gt;</description><category>bazaar-ng</category><category>bzr</category><category>http</category><category>notes</category><category>plugins</category><category>push</category><category>sftp</category><category>windows</category><guid>https://bwinton.github.io/weblog.latte.ca/blake/tech/bzr/bazaarnotes1.html</guid><pubDate>Mon, 30 Jul 2007 19:06:13 GMT</pubDate></item></channel></rss>
+"\".&lt;/p&gt;</description><category>bazaar-ng</category><category>bzr</category><category>http</category><category>notes</category><category>plugins</category><category>push</category><category>sftp</category><category>windows</category><guid>https://bwinton.github.io/weblog.latte.ca/blake/tech/bzr/bazaarnotes1/</guid><pubDate>Mon, 30 Jul 2007 19:06:13 GMT</pubDate></item></channel></rss>

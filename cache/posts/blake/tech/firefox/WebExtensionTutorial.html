@@ -51,7 +51,7 @@ Of course, we have no idea if it works yet, so let’s install it in Firefox
 (we’re using Firefox Nightly for the latest implementation). You could try to
 drag the <code>manifest.json</code>, or the whole directory, onto Firefox, but that really
 won’t give you what you want.</p>
-<p><a href="/images/blake/WebExtensions/HowTo/large/1-DirectoryListing.png"><img alt="The directory listing." src="/images/blake/WebExtensions/HowTo/1-DirectoryListing.png" /></a></p>
+<p><a href="/images/blake/WebExtensions/HowTo/large/1-DirectoryListing.png"><img alt="The directory listing." src="/images/blake/WebExtensions/HowTo/1-DirectoryListing.png"></a></p>
 <h3>Installing</h3>
 <p>To make Firefox recognize your extension as an add-on, you need to give it a zip
 file which ends in <code>.xpi</code>, so let’s make one of those by first installing
@@ -59,7 +59,7 @@ file which ends in <code>.xpi</code>, so let’s make one of those by first inst
 on Mac or Linux, the <code>zip</code> command should be built-in, so just type <code>zip
 catgifs.xpi manifest.json</code>.) Then you can drag the <code>catgifs.xpi</code> onto Firefox,
 and it will show you an error because our extension is unsigned.</p>
-<p><a href="/images/blake/WebExtensions/HowTo/large/2-FirstError.png"><img alt="The first error." src="/images/blake/WebExtensions/HowTo/2-FirstError.png" /></a></p>
+<p><a href="/images/blake/WebExtensions/HowTo/large/2-FirstError.png"><img alt="The first error." src="/images/blake/WebExtensions/HowTo/2-FirstError.png"></a></p>
 <p>We can work around this by going to <code>about:config</code>, typing
 <code>xpinstall.signatures.required</code> in the search box, double-clicking the entry to
 set it to false, and then closing that tab.  After that, when we drop
@@ -71,9 +71,9 @@ versions of the brower, so even if you set the preference described above, you
 will soon still need to be running Firefox Nightly or Developer Edition to
 follow this tutorial.</p>
 </blockquote>
-<p><a href="/images/blake/WebExtensions/HowTo/large/3-SuccessDialog.png"><img alt="Success!!!" src="/images/blake/WebExtensions/HowTo/3-SuccessDialog.png" /></a></p>
+<p><a href="/images/blake/WebExtensions/HowTo/large/3-SuccessDialog.png"><img alt="Success!!!" src="/images/blake/WebExtensions/HowTo/3-SuccessDialog.png"></a></p>
 <p>Of course, our add-on doesn’t do a whole lot yet.</p>
-<p><a href="/images/blake/WebExtensions/HowTo/large/4-ButtonClick.png"><img alt="I click and click, but nothing happens." src="/images/blake/WebExtensions/HowTo/4-ButtonClick.png" /></a></p>
+<p><a href="/images/blake/WebExtensions/HowTo/large/4-ButtonClick.png"><img alt="I click and click, but nothing happens." src="/images/blake/WebExtensions/HowTo/4-ButtonClick.png"></a></p>
 <p>So let’s fix that!</p>
 <h3>Adding features</h3>
 <p>First, we’ll add the following lines to <code>manifest.json</code>, above the line
@@ -104,7 +104,7 @@ yet, so we should create that, too.  Let’s paste the following javascript in i
 add-on by typing <code>7z a catgifs.xpi manifest.json background.js</code> (or <code>zip
 catgifs.xpi manifest.json background.js</code>), and drop <code>catgifs.xpi</code> onto Firefox
 again, and now, when we click the button, we should get a new tab!  😄</p>
-<p><img alt="Cat Gifs!" src="/images/blake/WebExtensions/HowTo/5-CatGifs.gif" /></p>
+<p><img alt="Cat Gifs!" src="/images/blake/WebExtensions/HowTo/5-CatGifs.gif"></p>
 <h3>Automating the build</h3>
 <p>I don’t know about you, but I ended up typing <code>7z a catgifs.xpi manifest.json</code> a
 disappointing number of times, and wondering why my <code>background.js</code> file wasn’t
@@ -130,7 +130,7 @@ tell it how to build our add-on.</p>
 
 <p>Once you have that file looking something <a href="https://github.com/bwinton/catgif-extension/releases/tag/step-3" title="Step Three">like this</a>, you can type
 <code>gulp</code>, and see output that looks something like this</p>
-<p><a href="/images/blake/WebExtensions/HowTo/large/6-GulpOutput.png"><img alt="Just some command line stuff, nbd." src="/images/blake/WebExtensions/HowTo/6-GulpOutput.png" /></a></p>
+<p><a href="/images/blake/WebExtensions/HowTo/large/6-GulpOutput.png"><img alt="Just some command line stuff, nbd." src="/images/blake/WebExtensions/HowTo/6-GulpOutput.png"></a></p>
 <p>Now, you may notice that we didn’t actually build the add-on.  To do that, we
 will need to install another package to zip things up.  So, type <code>npm install
 gulp-zip</code>, and then change the <code>gulpfile.js</code> to contain the following:</p>
@@ -159,11 +159,11 @@ it out and make sure it’s working, and you might have ended up with a lot of
 tabs.  While this will ensure you remain extra-chill, it would probably be nicer
 to only have one tab, either creating it, or switching to it if it exists, when
 we click the button.  So let’s go ahead and add that.</p>
-<p><img alt="Lots and lots of cats." src="/images/blake/WebExtensions/HowTo/7-ManyTabbys.gif" /></p>
+<p><img alt="Lots and lots of cats." src="/images/blake/WebExtensions/HowTo/7-ManyTabbys.gif"></p>
 <p>The first thing we want to do is see if the tab exists, so let’s edit the
 <code>browserAction.onClicked</code> listener in <code>background.js</code> to contain the following:</p>
 <pre class="code literal-block"><span></span><span class="nx">chrome</span><span class="p">.</span><span class="nx">browserAction</span><span class="p">.</span><span class="nx">onClicked</span><span class="p">.</span><span class="nx">addListener</span><span class="p">(</span><span class="kd">function</span><span class="p">(</span><span class="nx">aTab</span><span class="p">)</span> <span class="p">{</span>
-  <span class="nx">chrome</span><span class="p">.</span><span class="nx">tabs</span><span class="p">.</span><span class="nx">query</span><span class="p">({</span><span class="s1">&#39;url&#39;</span><span class="o">:</span> <span class="s1">&#39;http://chilloutandwatchsomecatgifs.com/&#39;</span><span class="p">},</span> <span class="p">(</span><span class="nx">tabs</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="p">{</span>
+  <span class="nx">chrome</span><span class="p">.</span><span class="nx">tabs</span><span class="p">.</span><span class="nx">query</span><span class="p">({</span><span class="s1">&#39;url&#39;</span><span class="o">:</span> <span class="s1">&#39;http://chilloutandwatchsomecatgifs.com/&#39;</span><span class="p">},</span> <span class="p">(</span><span class="nx">tabs</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="p">{</span>
     <span class="k">if</span> <span class="p">(</span><span class="nx">tabs</span><span class="p">.</span><span class="nx">length</span> <span class="o">===</span> <span class="mi">0</span><span class="p">)</span> <span class="p">{</span>
       <span class="c1">// There is no catgif tab!</span>
       <span class="nx">chrome</span><span class="p">.</span><span class="nx">tabs</span><span class="p">.</span><span class="nx">create</span><span class="p">({</span><span class="s1">&#39;url&#39;</span><span class="o">:</span> <span class="s1">&#39;http://chilloutandwatchsomecatgifs.com/&#39;</span><span class="p">,</span> <span class="s1">&#39;active&#39;</span><span class="o">:</span> <span class="kc">true</span><span class="p">});</span>
@@ -191,7 +191,7 @@ ta-da!  Only one catgif tab!  Of course, if we’re on another tab it doesn’t 
 anything, so let’s fix that.  We can change the <code>else</code> block to contain the
 following:</p>
 <pre class="code literal-block"><span></span>      <span class="c1">// Do something here…</span>
-      <span class="nx">chrome</span><span class="p">.</span><span class="nx">tabs</span><span class="p">.</span><span class="nx">query</span><span class="p">({</span><span class="s1">&#39;url&#39;</span><span class="o">:</span> <span class="s1">&#39;http://chilloutandwatchsomecatgifs.com/&#39;</span><span class="p">,</span> <span class="s1">&#39;active&#39;</span><span class="o">:</span> <span class="kc">true</span><span class="p">},</span> <span class="p">(</span><span class="nx">active</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="p">{</span>
+      <span class="nx">chrome</span><span class="p">.</span><span class="nx">tabs</span><span class="p">.</span><span class="nx">query</span><span class="p">({</span><span class="s1">&#39;url&#39;</span><span class="o">:</span> <span class="s1">&#39;http://chilloutandwatchsomecatgifs.com/&#39;</span><span class="p">,</span> <span class="s1">&#39;active&#39;</span><span class="o">:</span> <span class="kc">true</span><span class="p">},</span> <span class="p">(</span><span class="nx">active</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="p">{</span>
         <span class="k">if</span> <span class="p">(</span><span class="nx">active</span><span class="p">.</span><span class="nx">length</span> <span class="o">===</span> <span class="mi">0</span><span class="p">)</span> <span class="p">{</span>
           <span class="nx">chrome</span><span class="p">.</span><span class="nx">tabs</span><span class="p">.</span><span class="nx">update</span><span class="p">(</span><span class="nx">tabs</span><span class="p">[</span><span class="mi">0</span><span class="p">].</span><span class="nx">id</span><span class="p">,</span> <span class="p">{</span><span class="s1">&#39;active&#39;</span><span class="o">:</span> <span class="kc">true</span><span class="p">});</span>
         <span class="p">}</span>
@@ -236,7 +236,7 @@ before the <code>default_title</code>:</p>
 
 
 <p>Re-run the build, and re-install the add-on, and <a href="https://github.com/bwinton/catgif-extension/releases/tag/step-7" title="Step Seven">we’re done</a>!  😀</p>
-<p><a href="/images/blake/WebExtensions/HowTo/large/8-PrettyIcon.png"><img alt="New, prettier, icons." src="/images/blake/WebExtensions/HowTo/8-PrettyIcon.png" /></a></p>
+<p><a href="/images/blake/WebExtensions/HowTo/large/8-PrettyIcon.png"><img alt="New, prettier, icons." src="/images/blake/WebExtensions/HowTo/8-PrettyIcon.png"></a></p>
 <h3>One more thing…</h3>
 <p>Well, there is another thing we could try to do.  I mean, we have an add-on that
 works beautifully in Firefox, but one of the advantages of the new WebExtension
@@ -246,13 +246,13 @@ both browsers!</p>
 <p>We’ll start by launching Chrome, and trying to load the add-on, and see what
 errors it gives us.  To load our extension, we’ll need to go to
 <code>chrome://extensions/</code>, and check the <code>Developer mode</code> checkbox, as shown below:</p>
-<p><a href="/images/blake/WebExtensions/HowTo/large/9-ChromeDeveloper.png"><img alt="Now we’re hackers!" src="/images/blake/WebExtensions/HowTo/9-ChromeDeveloper.png" /></a></p>
+<p><a href="/images/blake/WebExtensions/HowTo/large/9-ChromeDeveloper.png"><img alt="Now we’re hackers!" src="/images/blake/WebExtensions/HowTo/9-ChromeDeveloper.png"></a></p>
 <p>Then we can click the “Load unpacked extension…” button, and choose our
 directory to load our add-on!  Uh-oh, it looks like we’ve got an error.</p>
-<p><a href="/images/blake/WebExtensions/HowTo/large/10-ChromeAlmost.png"><img alt="Close, but not quite." src="/images/blake/WebExtensions/HowTo/10-ChromeAlmost.png" /></a></p>
+<p><a href="/images/blake/WebExtensions/HowTo/large/10-ChromeAlmost.png"><img alt="Close, but not quite." src="/images/blake/WebExtensions/HowTo/10-ChromeAlmost.png"></a></p>
 <p>Since the <code>applications</code> key is required for Firefox, I think we can safely
 ignore this error.  And anyways, the button shows up!  And when we click it…</p>
-<p><img alt="Cats!" src="/images/blake/WebExtensions/HowTo/11-ChromeCats.gif" /></p>
+<p><img alt="Cats!" src="/images/blake/WebExtensions/HowTo/11-ChromeCats.gif"></p>
 <p>So, I guess we’re done!  (I used to have a section in here about how to load
 <a href="https://babeljs.io/" title="Babel!">babel.js</a>, because the version of Chrome I was using didn’t support
 ES6’s <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/Arrow_functions" title="a.k.a. Fat-Arrows.">arrow functions</a>, but apparently they upgraded their JavaScript

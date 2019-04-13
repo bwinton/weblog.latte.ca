@@ -22,8 +22,8 @@ lets me change the text to whatever I want.</p>
 13
 14</pre></div></td><td class="code"><pre class="code literal-block"><span></span>#! /usr/bin/gsi
 (define (flmod x y) (fl- x (fl* (floor (fl/ x y)) y)))
-(define (%100 time) (flmod (floor (time-&gt;seconds time))
-(fixnum-&gt;flonum 100)))
+(define (%100 time) (flmod (floor (time-&amp;gt;seconds time))
+(fixnum-&amp;gt;flonum 100)))
 (define (f)
   (begin
     (with-output-to-file
@@ -39,4 +39,4 @@ lets me change the text to whatever I want.</p>
 
 <p>changes the text every three seconds to the number of seconds, modulo
 100.  Which turns out to be a mostly-random number, as shown below.</p>
-<p><img alt="The number 8." src="/images/blake/led.png" title="Ocho!" /></p>
+<p><img alt="The number 8." src="/images/blake/led.png" title="Ocho!"></p>

@@ -122,8 +122,8 @@ finally got something which would do what I wanted.  First, the code:</p>
         <span class="n">y</span> <span class="o">=</span> <span class="n">urllib</span><span class="o">.</span><span class="n">urlopen</span><span class="p">(</span> <span class="nb">str</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">wUrl</span><span class="p">)</span> <span class="p">)</span><span class="o">.</span><span class="n">read</span><span class="p">()</span>
         <span class="n">b</span> <span class="o">=</span> <span class="n">BeautifulSoup</span><span class="p">(</span> <span class="n">y</span> <span class="p">)</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">view</span><span class="o">.</span><span class="n">mainFrame</span><span class="p">()</span><span class="o">.</span><span class="n">loadHTMLString_baseURL_</span><span class="p">(</span>
-            <span class="sd">&quot;&quot;&quot;&lt;html&gt;&lt;head&gt;&lt;title&gt;test&lt;title&gt;%s&lt;head&gt;</span>
-<span class="sd">            &lt;body&gt;%s&lt;body&gt;&lt;html&gt;&quot;&quot;&quot;</span> <span class="o">%</span>
+            <span class="sd">&quot;&quot;&quot;&amp;lt;html&amp;gt;&amp;lt;head&amp;gt;&amp;lt;title&amp;gt;test&amp;lt;title&amp;gt;%s&amp;lt;head&amp;gt;</span>
+<span class="sd">            &amp;lt;body&amp;gt;%s&amp;lt;body&amp;gt;&amp;lt;html&amp;gt;&quot;&quot;&quot;</span> <span class="o">%</span>
             <span class="p">(</span><span class="s2">&quot;&quot;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span> <span class="p">[</span><span class="nb">str</span><span class="p">(</span><span class="n">x</span><span class="p">)</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">b</span><span class="o">.</span><span class="n">head</span><span class="o">.</span><span class="n">findAll</span><span class="p">(</span> <span class="s1">&#39;style&#39;</span> <span class="p">)]),</span> <span class="n">b</span><span class="o">.</span><span class="n">body</span><span class="o">.</span><span class="n">div</span><span class="o">.</span><span class="n">div</span><span class="o">.</span><span class="n">div</span><span class="o">.</span><span class="n">div</span><span class="o">.</span><span class="n">div</span><span class="p">),</span>
             <span class="bp">self</span><span class="o">.</span><span class="n">wUrl</span> <span class="p">)</span>
 
@@ -149,7 +149,7 @@ finally got something which would do what I wanted.  First, the code:</p>
     <span class="n">AppHelper</span><span class="o">.</span><span class="n">runEventLoop</span><span class="p">(</span><span class="n">installInterrupt</span><span class="o">=</span><span class="bp">True</span><span class="p">)</span>
 
 
-<span class="k">if</span> <span class="n">__name__</span> <span class="o">==</span> <span class="s2">&quot;__main__&quot;</span><span class="p">:</span>
+<span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s2">&quot;__main__&quot;</span><span class="p">:</span>
     <span class="k">while</span> <span class="bp">True</span><span class="p">:</span>
         <span class="k">if</span> <span class="n">os</span><span class="o">.</span><span class="n">stat</span><span class="p">(</span> <span class="s2">&quot;/dev/console&quot;</span> <span class="p">)[</span><span class="n">stat</span><span class="o">.</span><span class="n">ST_UID</span><span class="p">]</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
             <span class="c1"># If the console is owned by root, start the app.</span>
@@ -189,34 +189,34 @@ And next, the launchd plist file that keeps it running:</p>
 25
 26
 27
-28</pre></div></td><td class="code"><pre class="code literal-block"><span></span><span class="cp">&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;</span>
-<span class="cp">&lt;!DOCTYPE plist PUBLIC &quot;-//Apple Computer//DTD PLIST 1.0//EN&quot;</span>
-<span class="cp">&quot;http://www.apple.</span>
-<span class="cp">com/DTDs/PropertyList-1.0.dtd&quot;&gt;</span>
-<span class="nt">&lt;plist</span> <span class="na">version=</span><span class="s">&quot;1.0&quot;</span><span class="nt">&gt;</span>
-<span class="nt">&lt;dict&gt;</span>  
-    <span class="nt">&lt;key&gt;</span>Label<span class="nt">&lt;/key&gt;</span>
-    <span class="nt">&lt;string&gt;</span>ca.latte.update.login.weather<span class="nt">&lt;/string&gt;</span>
-    <span class="nt">&lt;key&gt;</span>ProgramArguments<span class="nt">&lt;/key&gt;</span>
-    <span class="nt">&lt;array&gt;</span> 
-        <span class="nt">&lt;string&gt;</span>/path/to/test.py<span class="nt">&lt;/string&gt;</span>
-    <span class="nt">&lt;/array&gt;</span>
-    <span class="nt">&lt;key&gt;</span>ServiceDescription<span class="nt">&lt;/key&gt;</span>
-    <span class="nt">&lt;string&gt;</span>A program to pop up the weather in a box<span class="nt">&lt;/string&gt;</span>
-    <span class="nt">&lt;key&gt;</span>LowPriorityIO<span class="nt">&lt;/key&gt;</span>
-    <span class="nt">&lt;true/&gt;</span>
-    <span class="nt">&lt;key&gt;</span>RunAtLoad<span class="nt">&lt;/key&gt;</span>
-    <span class="nt">&lt;true/&gt;</span>
-    <span class="nt">&lt;key&gt;</span>OnDemand<span class="nt">&lt;/key&gt;</span>
-    <span class="nt">&lt;false/&gt;</span>
-    <span class="nt">&lt;key&gt;</span>Nice<span class="nt">&lt;/key&gt;</span>
-    <span class="nt">&lt;integer&gt;</span>1<span class="nt">&lt;/integer&gt;</span>
-    <span class="nt">&lt;key&gt;</span>StandardOutPath<span class="nt">&lt;/key&gt;</span>
-    <span class="nt">&lt;string&gt;</span>/path/to/loginWeather.out<span class="nt">&lt;/string&gt;</span>
-    <span class="nt">&lt;key&gt;</span>StandardErrorPath<span class="nt">&lt;/key&gt;</span>
-    <span class="nt">&lt;string&gt;</span>/path/to/loginWeather.err<span class="nt">&lt;/string&gt;</span>
-<span class="nt">&lt;/dict&gt;</span>
-<span class="nt">&lt;/plist&gt;</span>
+28</pre></div></td><td class="code"><pre class="code literal-block"><span></span><span class="ni">&amp;lt;</span>?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?<span class="ni">&amp;gt;</span>
+<span class="ni">&amp;lt;</span>!DOCTYPE plist PUBLIC &quot;-//Apple Computer//DTD PLIST 1.0//EN&quot;
+&quot;http://www.apple.
+com/DTDs/PropertyList-1.0.dtd&quot;<span class="ni">&amp;gt;</span>
+<span class="ni">&amp;lt;</span>plist version=&quot;1.0&quot;<span class="ni">&amp;gt;</span>
+<span class="ni">&amp;lt;</span>dict<span class="ni">&amp;gt;</span>  
+    <span class="ni">&amp;lt;</span>key<span class="ni">&amp;gt;</span>Label<span class="ni">&amp;lt;</span>/key<span class="ni">&amp;gt;</span>
+    <span class="ni">&amp;lt;</span>string<span class="ni">&amp;gt;</span>ca.latte.update.login.weather<span class="ni">&amp;lt;</span>/string<span class="ni">&amp;gt;</span>
+    <span class="ni">&amp;lt;</span>key<span class="ni">&amp;gt;</span>ProgramArguments<span class="ni">&amp;lt;</span>/key<span class="ni">&amp;gt;</span>
+    <span class="ni">&amp;lt;</span>array<span class="ni">&amp;gt;</span> 
+        <span class="ni">&amp;lt;</span>string<span class="ni">&amp;gt;</span>/path/to/test.py<span class="ni">&amp;lt;</span>/string<span class="ni">&amp;gt;</span>
+    <span class="ni">&amp;lt;</span>/array<span class="ni">&amp;gt;</span>
+    <span class="ni">&amp;lt;</span>key<span class="ni">&amp;gt;</span>ServiceDescription<span class="ni">&amp;lt;</span>/key<span class="ni">&amp;gt;</span>
+    <span class="ni">&amp;lt;</span>string<span class="ni">&amp;gt;</span>A program to pop up the weather in a box<span class="ni">&amp;lt;</span>/string<span class="ni">&amp;gt;</span>
+    <span class="ni">&amp;lt;</span>key<span class="ni">&amp;gt;</span>LowPriorityIO<span class="ni">&amp;lt;</span>/key<span class="ni">&amp;gt;</span>
+    <span class="ni">&amp;lt;</span>true/<span class="ni">&amp;gt;</span>
+    <span class="ni">&amp;lt;</span>key<span class="ni">&amp;gt;</span>RunAtLoad<span class="ni">&amp;lt;</span>/key<span class="ni">&amp;gt;</span>
+    <span class="ni">&amp;lt;</span>true/<span class="ni">&amp;gt;</span>
+    <span class="ni">&amp;lt;</span>key<span class="ni">&amp;gt;</span>OnDemand<span class="ni">&amp;lt;</span>/key<span class="ni">&amp;gt;</span>
+    <span class="ni">&amp;lt;</span>false/<span class="ni">&amp;gt;</span>
+    <span class="ni">&amp;lt;</span>key<span class="ni">&amp;gt;</span>Nice<span class="ni">&amp;lt;</span>/key<span class="ni">&amp;gt;</span>
+    <span class="ni">&amp;lt;</span>integer<span class="ni">&amp;gt;</span>1<span class="ni">&amp;lt;</span>/integer<span class="ni">&amp;gt;</span>
+    <span class="ni">&amp;lt;</span>key<span class="ni">&amp;gt;</span>StandardOutPath<span class="ni">&amp;lt;</span>/key<span class="ni">&amp;gt;</span>
+    <span class="ni">&amp;lt;</span>string<span class="ni">&amp;gt;</span>/path/to/loginWeather.out<span class="ni">&amp;lt;</span>/string<span class="ni">&amp;gt;</span>
+    <span class="ni">&amp;lt;</span>key<span class="ni">&amp;gt;</span>StandardErrorPath<span class="ni">&amp;lt;</span>/key<span class="ni">&amp;gt;</span>
+    <span class="ni">&amp;lt;</span>string<span class="ni">&amp;gt;</span>/path/to/loginWeather.err<span class="ni">&amp;lt;</span>/string<span class="ni">&amp;gt;</span>
+<span class="ni">&amp;lt;</span>/dict<span class="ni">&amp;gt;</span>
+<span class="ni">&amp;lt;</span>/plist<span class="ni">&amp;gt;</span>
 </pre>
 </td></tr></table>
 

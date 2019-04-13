@@ -1,14 +1,20 @@
 <?xml version="1.0" encoding="utf-8"?>
-<?xml-stylesheet type="text/xsl" href="../assets/xml/rss.xsl" media="all"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Blog-O! (video)</title><link>https://bwinton.github.io/weblog.latte.ca/</link><description></description><atom:link href="https://bwinton.github.io/weblog.latte.ca/tags/video.xml" type="application/rss+xml" rel="self"></atom:link><language>en</language><lastBuildDate>Sun, 30 Oct 2016 01:56:55 GMT</lastBuildDate><generator>https://getnikola.com/</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Graduation Videos</title><link>https://bwinton.github.io/weblog.latte.ca/amy/diversions/gradvids.html</link><dc:creator>Amy Brown</dc:creator><description>&lt;p&gt;
+<?xml-stylesheet type="text/xsl" href="../assets/xml/rss.xsl" media="all"?><rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/"><channel><title>Blog-O! (Posts about video)</title><link>https://bwinton.github.io/weblog.latte.ca/</link><description></description><atom:link rel="self" href="https://bwinton.github.io/weblog.latte.ca/tags/video.xml" type="application/rss+xml"></atom:link><language>en</language><lastBuildDate>Sat, 13 Apr 2019 21:03:24 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Graduation Videos</title><link>https://bwinton.github.io/weblog.latte.ca/amy/diversions/gradvids/</link><dc:creator>Amy Brown</dc:creator><description>&lt;p&gt;
 Here is Cordelia watching, bemused, as everyone else participates
 in "Sticky Bubblegum":
 &lt;/p&gt;
 &lt;object width="425" height="344"&gt;
-  &lt;param name="movie" value="http://www.youtube.com/v/lNoEYU5GL4M"&gt;&lt;embed src="http://www.youtube.com/v/lNoEYU5GL4M" type="application/x-shockwave-flash" width="425" height="344"&gt;&lt;/embed&gt;&lt;/object&gt;
+  &lt;param name="movie" value="http://www.youtube.com/v/lNoEYU5GL4M"&gt;
+  
+  &lt;embed src="http://www.youtube.com/v/lNoEYU5GL4M" type="application/x-shockwave-flash" width="425" height="344"&gt;
+  &lt;/embed&gt;
+&lt;/object&gt;
 
 &lt;p&gt;
 And here is Delphine and her class performing a chant about
 recycling:
 &lt;/p&gt;
 &lt;object width="425" height="344"&gt;
-  &lt;param name="movie" value="http://www.youtube.com/v/qdtJ7ueQ95c"&gt;&lt;embed src="http://www.youtube.com/v/qdtJ7ueQ95c" type="application/x-shockwave-flash" width="425" height="344"&gt;&lt;/embed&gt;&lt;/object&gt;</description><category>cordelia</category><category>delphine</category><category>video</category><guid>https://bwinton.github.io/weblog.latte.ca/amy/diversions/gradvids.html</guid><pubDate>Fri, 20 Jun 2008 17:25:52 GMT</pubDate></item></channel></rss>
+  &lt;param name="movie" value="http://www.youtube.com/v/qdtJ7ueQ95c"&gt;
+  
+  &lt;embed src="http://www.youtube.com/v/qdtJ7ueQ95c" type="application/x-shockwave-flash" width="425" height="344"&gt;&lt;/embed&gt;&lt;/object&gt;</description><category>cordelia</category><category>delphine</category><category>video</category><guid>https://bwinton.github.io/weblog.latte.ca/amy/diversions/gradvids/</guid><pubDate>Fri, 20 Jun 2008 17:25:52 GMT</pubDate></item></channel></rss>
