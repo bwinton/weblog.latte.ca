@@ -1,6 +1,6 @@
 <!--
 .. title: Neat new feature in Rust…
-.. date: 2019-04-19 16:49:00
+.. date: 2019-04-13 16:49:00
 .. author: Blake Winton
 .. tags: adventofcode, rust, iterators, generators
 -->
