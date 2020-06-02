@@ -5,12 +5,12 @@ STOP_RENDERING = runtime.STOP_RENDERING
 __M_dict_builtin = dict
 __M_locals_builtin = locals
 _magic_number = 10
-_modified_time = 1555190475.1109345
+_modified_time = 1591103920.249771
 _enable_loop = True
-_template_filename = '/home/travis/virtualenv/python3.4.6/lib/python3.4/site-packages/nikola/data/themes/bootstrap4/templates/authors.tmpl'
+_template_filename = '/home/travis/virtualenv/python3.8.0/lib/python3.8/site-packages/nikola/data/themes/bootstrap4/templates/authors.tmpl'
 _template_uri = 'authors.tmpl'
 _source_encoding = 'utf-8'
-_exports = ['content', 'extra_head']
+_exports = ['extra_head', 'content']
 
 
 def _mako_get_namespace(context, name):
@@ -32,15 +32,15 @@ def render_body(context,**pageargs):
         __M_locals = __M_dict_builtin(pageargs=pageargs)
         _import_ns = {}
         _mako_get_namespace(context, 'feeds_translations')._populate(_import_ns, ['*'])
-        hidden_authors = _import_ns.get('hidden_authors', context.get('hidden_authors', UNDEFINED))
         items = _import_ns.get('items', context.get('items', UNDEFINED))
+        kind = _import_ns.get('kind', context.get('kind', UNDEFINED))
         feeds_translations = _mako_get_namespace(context, 'feeds_translations')
-        def content():
-            return render_content(context._locals(__M_locals))
-        messages = _import_ns.get('messages', context.get('messages', UNDEFINED))
         def extra_head():
             return render_extra_head(context._locals(__M_locals))
-        kind = _import_ns.get('kind', context.get('kind', UNDEFINED))
+        def content():
+            return render_content(context._locals(__M_locals))
+        hidden_authors = _import_ns.get('hidden_authors', context.get('hidden_authors', UNDEFINED))
+        messages = _import_ns.get('messages', context.get('messages', UNDEFINED))
         __M_writer = context.writer()
         __M_writer('\n')
         __M_writer('\n\n')
@@ -59,18 +59,36 @@ def render_body(context,**pageargs):
         context.caller_stack._pop_frame()
 
 
+def render_extra_head(context,**pageargs):
+    __M_caller = context.caller_stack._push_frame()
+    try:
+        _import_ns = {}
+        _mako_get_namespace(context, 'feeds_translations')._populate(_import_ns, ['*'])
+        feeds_translations = _mako_get_namespace(context, 'feeds_translations')
+        kind = _import_ns.get('kind', context.get('kind', UNDEFINED))
+        def extra_head():
+            return render_extra_head(context)
+        __M_writer = context.writer()
+        __M_writer('\n    ')
+        __M_writer(str(feeds_translations.head(kind=kind, feeds=False)))
+        __M_writer('\n')
+        return ''
+    finally:
+        context.caller_stack._pop_frame()
+
+
 def render_content(context,**pageargs):
     __M_caller = context.caller_stack._push_frame()
     try:
         _import_ns = {}
         _mako_get_namespace(context, 'feeds_translations')._populate(_import_ns, ['*'])
-        hidden_authors = _import_ns.get('hidden_authors', context.get('hidden_authors', UNDEFINED))
         items = _import_ns.get('items', context.get('items', UNDEFINED))
+        kind = _import_ns.get('kind', context.get('kind', UNDEFINED))
         feeds_translations = _mako_get_namespace(context, 'feeds_translations')
         def content():
             return render_content(context)
+        hidden_authors = _import_ns.get('hidden_authors', context.get('hidden_authors', UNDEFINED))
         messages = _import_ns.get('messages', context.get('messages', UNDEFINED))
-        kind = _import_ns.get('kind', context.get('kind', UNDEFINED))
         __M_writer = context.writer()
         __M_writer('\n')
         if items:
@@ -94,26 +112,8 @@ def render_content(context,**pageargs):
         context.caller_stack._pop_frame()
 
 
-def render_extra_head(context,**pageargs):
-    __M_caller = context.caller_stack._push_frame()
-    try:
-        _import_ns = {}
-        _mako_get_namespace(context, 'feeds_translations')._populate(_import_ns, ['*'])
-        feeds_translations = _mako_get_namespace(context, 'feeds_translations')
-        def extra_head():
-            return render_extra_head(context)
-        kind = _import_ns.get('kind', context.get('kind', UNDEFINED))
-        __M_writer = context.writer()
-        __M_writer('\n    ')
-        __M_writer(str(feeds_translations.head(kind=kind, feeds=False)))
-        __M_writer('\n')
-        return ''
-    finally:
-        context.caller_stack._pop_frame()
-
-
 """
 __M_BEGIN_METADATA
-{"source_encoding": "utf-8", "uri": "authors.tmpl", "filename": "/home/travis/virtualenv/python3.4.6/lib/python3.4/site-packages/nikola/data/themes/bootstrap4/templates/authors.tmpl", "line_map": {"115": 109, "75": 9, "76": 10, "77": 11, "78": 11, "79": 11, "80": 13, "81": 13, "82": 16, "83": 17, "84": 18, "85": 19, "86": 20, "23": 3, "88": 20, "89": 20, "90": 20, "91": 23, "29": 0, "97": 5, "107": 5, "108": 6, "45": 2, "46": 3, "51": 7, "56": 25, "87": 20, "109": 6, "62": 9}}
+{"filename": "/home/travis/virtualenv/python3.8.0/lib/python3.8/site-packages/nikola/data/themes/bootstrap4/templates/authors.tmpl", "uri": "authors.tmpl", "source_encoding": "utf-8", "line_map": {"23": 3, "29": 0, "45": 2, "46": 3, "51": 7, "56": 25, "62": 5, "72": 5, "73": 6, "74": 6, "80": 9, "93": 9, "94": 10, "95": 11, "96": 11, "97": 11, "98": 13, "99": 13, "100": 16, "101": 17, "102": 18, "103": 19, "104": 20, "105": 20, "106": 20, "107": 20, "108": 20, "109": 23, "115": 109}}
 __M_END_METADATA
 """
