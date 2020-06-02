@@ -1,0 +1,7 @@
+[Theme]
+parent = bootstrap3
+author = Blake Winton
+author_url = https://bwinton.latte.ca/
+based_on = Bootstrap 3 <http://getbootstrap.com/>
+license = MIT
+tags = latte
