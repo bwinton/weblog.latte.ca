@@ -1,7 +1,12 @@
 [Theme]
-parent = bootstrap3
+engine = mako
+parent = bootstrap4
 author = Blake Winton
 author_url = https://bwinton.latte.ca/
-based_on = Bootstrap 3 <http://getbootstrap.com/>
 license = MIT
+based_on = Bootstrap 4 <http://getbootstrap.com/>
 tags = latte
+
+[Family]
+family = latte
+jinja_version = latte-jinja
