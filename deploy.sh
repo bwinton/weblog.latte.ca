@@ -31,6 +31,7 @@ cd dist
 cp -r ../git/.git .
 cp ../.doit.db .
 cp -r ../cache .
+cp ../CNAME .
 
 git config user.name "Travis CI"
 git config user.email "weblog@latte.ca"
