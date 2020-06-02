@@ -3,7 +3,7 @@ Mako
 Markdown
 MarkupSafe
 Nikola
-Pillow==3.3.2
+Pillow
 PyRSS2Gen
 Pygments
 Unidecode
