@@ -5,9 +5,9 @@ STOP_RENDERING = runtime.STOP_RENDERING
 __M_dict_builtin = dict
 __M_locals_builtin = locals
 _magic_number = 10
-_modified_time = 1591106457.945712
+_modified_time = 1611336474.481235
 _enable_loop = True
-_template_filename = '/home/travis/virtualenv/python3.8.0/lib/python3.8/site-packages/nikola/data/themes/bootstrap4/templates/gallery.tmpl'
+_template_filename = '/home/travis/virtualenv/python3.8.7/lib/python3.8/site-packages/nikola/data/themes/base/templates/gallery.tmpl'
 _template_uri = 'gallery.tmpl'
 _source_encoding = 'utf-8'
 _exports = ['sourcelink', 'content', 'extra_head', 'extra_js']
@@ -26,6 +26,9 @@ def _mako_generate_namespaces(context):
     ns = runtime.TemplateNamespace('ui', context._clean_inheritance_tokens(), templateuri='ui_helper.tmpl', callables=None,  calling_uri=_template_uri)
     context.namespaces[(__name__, 'ui')] = ns
 
+    ns = runtime.TemplateNamespace('post_helper', context._clean_inheritance_tokens(), templateuri='post_helper.tmpl', callables=None,  calling_uri=_template_uri)
+    context.namespaces[(__name__, 'post_helper')] = ns
+
 def _mako_inherit(template, context):
     _mako_generate_namespaces(context)
     return runtime._inherit_from(context, 'base.tmpl', _template_uri)
@@ -33,33 +36,36 @@ def render_body(context,**pageargs):
     __M_caller = context.caller_stack._push_frame()
     try:
         __M_locals = __M_dict_builtin(pageargs=pageargs)
-        translations = context.get('translations', UNDEFINED)
-        photo_array_json = context.get('photo_array_json', UNDEFINED)
-        def sourcelink():
-            return render_sourcelink(context._locals(__M_locals))
-        comments = _mako_get_namespace(context, 'comments')
-        post = context.get('post', UNDEFINED)
-        enable_comments = context.get('enable_comments', UNDEFINED)
         def extra_js():
             return render_extra_js(context._locals(__M_locals))
-        gallery_path = context.get('gallery_path', UNDEFINED)
-        crumbs = context.get('crumbs', UNDEFINED)
-        folders = context.get('folders', UNDEFINED)
-        ui = _mako_get_namespace(context, 'ui')
-        len = context.get('len', UNDEFINED)
-        thumbnail_size = context.get('thumbnail_size', UNDEFINED)
-        photo_array = context.get('photo_array', UNDEFINED)
-        title = context.get('title', UNDEFINED)
-        parent = context.get('parent', UNDEFINED)
+        _link = context.get('_link', UNDEFINED)
+        comments = _mako_get_namespace(context, 'comments')
         def extra_head():
             return render_extra_head(context._locals(__M_locals))
-        site_has_comments = context.get('site_has_comments', UNDEFINED)
+        permalink = context.get('permalink', UNDEFINED)
+        post = context.get('post', UNDEFINED)
+        galleries_use_thumbnail = context.get('galleries_use_thumbnail', UNDEFINED)
+        parent = context.get('parent', UNDEFINED)
+        translations = context.get('translations', UNDEFINED)
+        enable_comments = context.get('enable_comments', UNDEFINED)
+        crumbs = context.get('crumbs', UNDEFINED)
+        post_helper = _mako_get_namespace(context, 'post_helper')
+        lang = context.get('lang', UNDEFINED)
+        photo_array_json = context.get('photo_array_json', UNDEFINED)
+        thumbnail_size = context.get('thumbnail_size', UNDEFINED)
         def content():
             return render_content(context._locals(__M_locals))
-        lang = context.get('lang', UNDEFINED)
-        permalink = context.get('permalink', UNDEFINED)
-        _link = context.get('_link', UNDEFINED)
+        ui = _mako_get_namespace(context, 'ui')
+        site_has_comments = context.get('site_has_comments', UNDEFINED)
+        photo_array = context.get('photo_array', UNDEFINED)
+        title = context.get('title', UNDEFINED)
+        def sourcelink():
+            return render_sourcelink(context._locals(__M_locals))
+        gallery_path = context.get('gallery_path', UNDEFINED)
+        len = context.get('len', UNDEFINED)
+        folders = context.get('folders', UNDEFINED)
         __M_writer = context.writer()
+        __M_writer('\n')
         __M_writer('\n')
         __M_writer('\n')
         __M_writer('\n')
@@ -102,18 +108,20 @@ def render_sourcelink(context,**pageargs):
 def render_content(context,**pageargs):
     __M_caller = context.caller_stack._push_frame()
     try:
-        crumbs = context.get('crumbs', UNDEFINED)
-        folders = context.get('folders', UNDEFINED)
-        ui = _mako_get_namespace(context, 'ui')
-        photo_array = context.get('photo_array', UNDEFINED)
-        title = context.get('title', UNDEFINED)
+        thumbnail_size = context.get('thumbnail_size', UNDEFINED)
         comments = _mako_get_namespace(context, 'comments')
-        site_has_comments = context.get('site_has_comments', UNDEFINED)
         def content():
             return render_content(context)
-        post = context.get('post', UNDEFINED)
-        enable_comments = context.get('enable_comments', UNDEFINED)
+        ui = _mako_get_namespace(context, 'ui')
         permalink = context.get('permalink', UNDEFINED)
+        photo_array = context.get('photo_array', UNDEFINED)
+        site_has_comments = context.get('site_has_comments', UNDEFINED)
+        post = context.get('post', UNDEFINED)
+        galleries_use_thumbnail = context.get('galleries_use_thumbnail', UNDEFINED)
+        title = context.get('title', UNDEFINED)
+        enable_comments = context.get('enable_comments', UNDEFINED)
+        crumbs = context.get('crumbs', UNDEFINED)
+        folders = context.get('folders', UNDEFINED)
         __M_writer = context.writer()
         __M_writer('\n    ')
         __M_writer(str(ui.breadcrumbs(crumbs)))
@@ -127,14 +135,41 @@ def render_content(context,**pageargs):
             __M_writer(str(post.text()))
             __M_writer('\n    </p>\n')
         if folders:
-            __M_writer('    <ul>\n')
-            for folder, ftitle in folders:
-                __M_writer('        <li><a href="')
-                __M_writer(str(folder))
-                __M_writer('">📂&nbsp;')
-                __M_writer(filters.html_escape(str(ftitle)))
-                __M_writer('</a></li>\n')
-            __M_writer('    </ul>\n')
+            if galleries_use_thumbnail:
+                for (folder, ftitle, fpost) in folders:
+                    __M_writer('            <div class="thumnbnail-container">\n                <a href="')
+                    __M_writer(str(folder))
+                    __M_writer('" class="thumbnail image-reference" title="')
+                    __M_writer(filters.html_escape(str(ftitle)))
+                    __M_writer('">\n')
+                    if fpost and fpost.previewimage:
+                        __M_writer('                        <img src="')
+                        __M_writer(str(fpost.previewimage))
+                        __M_writer('" alt="')
+                        __M_writer(filters.html_escape(str(ftitle)))
+                        __M_writer('" loading="lazy" style="max-width:')
+                        __M_writer(str(thumbnail_size))
+                        __M_writer('px; max-height:')
+                        __M_writer(str(thumbnail_size))
+                        __M_writer('px;" />\n')
+                    else:
+                        __M_writer('                        <div style="height: ')
+                        __M_writer(str(thumbnail_size))
+                        __M_writer('px; width: ')
+                        __M_writer(str(thumbnail_size))
+                        __M_writer('px; background-color: #eee;"></div>\n')
+                    __M_writer('                <p class="thumbnail-caption">')
+                    __M_writer(filters.html_escape(str(ftitle)))
+                    __M_writer('</p>\n                </a>\n            </div>\n')
+            else:
+                __M_writer('            <ul>\n')
+                for folder, ftitle in folders:
+                    __M_writer('                <li><a href="')
+                    __M_writer(str(folder))
+                    __M_writer('">📂&nbsp;')
+                    __M_writer(filters.html_escape(str(ftitle)))
+                    __M_writer('</a></li>\n')
+                __M_writer('            </ul>\n')
         __M_writer('\n<div id="gallery_container"></div>\n')
         if photo_array:
             __M_writer('<noscript>\n<ul class="thumbnails">\n')
@@ -147,9 +182,10 @@ def render_content(context,**pageargs):
                 __M_writer(str(image['url_thumb']))
                 __M_writer('" alt="')
                 __M_writer(filters.html_escape(str(image['title'])))
-                __M_writer('" /></a>\n')
+                __M_writer('" loading="lazy" /></a>\n')
             __M_writer('</ul>\n</noscript>\n')
         if site_has_comments and enable_comments:
+            __M_writer('    ')
             __M_writer(str(comments.comment_form(None, permalink, title)))
             __M_writer('\n')
         return ''
@@ -160,14 +196,16 @@ def render_content(context,**pageargs):
 def render_extra_head(context,**pageargs):
     __M_caller = context.caller_stack._push_frame()
     try:
-        translations = context.get('translations', UNDEFINED)
-        len = context.get('len', UNDEFINED)
         _link = context.get('_link', UNDEFINED)
-        parent = context.get('parent', UNDEFINED)
         def extra_head():
             return render_extra_head(context)
-        lang = context.get('lang', UNDEFINED)
+        post = context.get('post', UNDEFINED)
+        parent = context.get('parent', UNDEFINED)
+        translations = context.get('translations', UNDEFINED)
         gallery_path = context.get('gallery_path', UNDEFINED)
+        post_helper = _mako_get_namespace(context, 'post_helper')
+        len = context.get('len', UNDEFINED)
+        lang = context.get('lang', UNDEFINED)
         __M_writer = context.writer()
         __M_writer('\n')
         __M_writer(str(parent.extra_head()))
@@ -180,6 +218,13 @@ def render_extra_head(context,**pageargs):
                     __M_writer('" href="')
                     __M_writer(str(_link('gallery', gallery_path, langname)))
                     __M_writer('">\n')
+        __M_writer('<link rel="alternate" type="application/rss+xml" title="RSS" href="rss.xml">\n')
+        if post:
+            __M_writer('    ')
+            __M_writer(str(post_helper.open_graph_metadata(post)))
+            __M_writer('\n    ')
+            __M_writer(str(post_helper.twitter_card_information(post)))
+            __M_writer('\n')
         return ''
     finally:
         context.caller_stack._pop_frame()
@@ -188,10 +233,10 @@ def render_extra_head(context,**pageargs):
 def render_extra_js(context,**pageargs):
     __M_caller = context.caller_stack._push_frame()
     try:
-        photo_array_json = context.get('photo_array_json', UNDEFINED)
         def extra_js():
             return render_extra_js(context)
         thumbnail_size = context.get('thumbnail_size', UNDEFINED)
+        photo_array_json = context.get('photo_array_json', UNDEFINED)
         __M_writer = context.writer()
         __M_writer('\n<script src="/assets/js/justified-layout.min.js"></script>\n<script src="/assets/js/gallery.min.js"></script>\n<script>\nvar jsonContent = ')
         __M_writer(str(photo_array_json))
@@ -205,6 +250,6 @@ def render_extra_js(context,**pageargs):
 
 """
 __M_BEGIN_METADATA
-{"filename": "/home/travis/virtualenv/python3.8.0/lib/python3.8/site-packages/nikola/data/themes/bootstrap4/templates/gallery.tmpl", "uri": "gallery.tmpl", "source_encoding": "utf-8", "line_map": {"23": 3, "26": 4, "32": 0, "63": 2, "64": 3, "65": 4, "70": 5, "75": 39, "80": 59, "85": 70, "91": 5, "102": 7, "118": 7, "119": 8, "120": 8, "121": 9, "122": 10, "123": 10, "124": 10, "125": 12, "126": 13, "127": 14, "128": 14, "129": 17, "130": 18, "131": 19, "132": 20, "133": 20, "134": 20, "135": 20, "136": 20, "137": 22, "138": 24, "139": 26, "140": 27, "141": 29, "142": 30, "143": 30, "144": 30, "145": 30, "146": 30, "147": 31, "148": 31, "149": 31, "150": 31, "151": 33, "152": 36, "153": 37, "154": 37, "160": 41, "172": 41, "173": 42, "174": 42, "175": 52, "176": 53, "177": 54, "178": 55, "179": 55, "180": 55, "181": 55, "182": 55, "188": 61, "196": 61, "197": 65, "198": 65, "199": 66, "200": 66, "206": 200}}
+{"filename": "/home/travis/virtualenv/python3.8.7/lib/python3.8/site-packages/nikola/data/themes/base/templates/gallery.tmpl", "uri": "gallery.tmpl", "source_encoding": "utf-8", "line_map": {"23": 3, "26": 4, "29": 5, "35": 0, "68": 2, "69": 3, "70": 4, "71": 5, "76": 6, "81": 55, "86": 80, "91": 91, "97": 6, "108": 8, "126": 8, "127": 9, "128": 9, "129": 10, "130": 11, "131": 11, "132": 11, "133": 13, "134": 14, "135": 15, "136": 15, "137": 18, "138": 19, "139": 20, "140": 21, "141": 22, "142": 22, "143": 22, "144": 22, "145": 23, "146": 24, "147": 24, "148": 24, "149": 24, "150": 24, "151": 24, "152": 24, "153": 24, "154": 24, "155": 25, "156": 26, "157": 26, "158": 26, "159": 26, "160": 26, "161": 28, "162": 28, "163": 28, "164": 32, "165": 33, "166": 34, "167": 35, "168": 35, "169": 35, "170": 35, "171": 35, "172": 37, "173": 40, "174": 42, "175": 43, "176": 45, "177": 46, "178": 46, "179": 46, "180": 46, "181": 46, "182": 47, "183": 47, "184": 47, "185": 47, "186": 49, "187": 52, "188": 53, "189": 53, "190": 53, "196": 57, "210": 57, "211": 58, "212": 58, "213": 68, "214": 69, "215": 70, "216": 71, "217": 71, "218": 71, "219": 71, "220": 71, "221": 75, "222": 76, "223": 77, "224": 77, "225": 77, "226": 78, "227": 78, "233": 82, "241": 82, "242": 86, "243": 86, "244": 87, "245": 87, "251": 245}}
 __M_END_METADATA
 """

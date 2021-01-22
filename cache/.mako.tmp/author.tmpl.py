@@ -5,9 +5,9 @@ STOP_RENDERING = runtime.STOP_RENDERING
 __M_dict_builtin = dict
 __M_locals_builtin = locals
 _magic_number = 10
-_modified_time = 1591106457.4978204
+_modified_time = 1611336474.8240974
 _enable_loop = True
-_template_filename = '/home/travis/virtualenv/python3.8.0/lib/python3.8/site-packages/nikola/data/themes/base/templates/author.tmpl'
+_template_filename = '/home/travis/virtualenv/python3.8.7/lib/python3.8/site-packages/nikola/data/themes/base/templates/author.tmpl'
 _template_uri = 'author.tmpl'
 _source_encoding = 'utf-8'
 _exports = ['extra_head', 'content']
@@ -32,16 +32,16 @@ def render_body(context,**pageargs):
         __M_locals = __M_dict_builtin(pageargs=pageargs)
         _import_ns = {}
         _mako_get_namespace(context, 'feeds_translations')._populate(_import_ns, ['*'])
-        kind = _import_ns.get('kind', context.get('kind', UNDEFINED))
-        feeds_translations = _mako_get_namespace(context, 'feeds_translations')
-        title = _import_ns.get('title', context.get('title', UNDEFINED))
-        posts = _import_ns.get('posts', context.get('posts', UNDEFINED))
+        author = _import_ns.get('author', context.get('author', UNDEFINED))
         def extra_head():
             return render_extra_head(context._locals(__M_locals))
         def content():
             return render_content(context._locals(__M_locals))
-        author = _import_ns.get('author', context.get('author', UNDEFINED))
         description = _import_ns.get('description', context.get('description', UNDEFINED))
+        kind = _import_ns.get('kind', context.get('kind', UNDEFINED))
+        title = _import_ns.get('title', context.get('title', UNDEFINED))
+        feeds_translations = _mako_get_namespace(context, 'feeds_translations')
+        posts = _import_ns.get('posts', context.get('posts', UNDEFINED))
         date_format = _import_ns.get('date_format', context.get('date_format', UNDEFINED))
         __M_writer = context.writer()
         __M_writer('\n')
@@ -66,11 +66,11 @@ def render_extra_head(context,**pageargs):
     try:
         _import_ns = {}
         _mako_get_namespace(context, 'feeds_translations')._populate(_import_ns, ['*'])
-        author = _import_ns.get('author', context.get('author', UNDEFINED))
         kind = _import_ns.get('kind', context.get('kind', UNDEFINED))
+        feeds_translations = _mako_get_namespace(context, 'feeds_translations')
+        author = _import_ns.get('author', context.get('author', UNDEFINED))
         def extra_head():
             return render_extra_head(context)
-        feeds_translations = _mako_get_namespace(context, 'feeds_translations')
         __M_writer = context.writer()
         __M_writer('\n    ')
         __M_writer(str(feeds_translations.head(author, kind, rss_override=False)))
@@ -85,14 +85,14 @@ def render_content(context,**pageargs):
     try:
         _import_ns = {}
         _mako_get_namespace(context, 'feeds_translations')._populate(_import_ns, ['*'])
-        kind = _import_ns.get('kind', context.get('kind', UNDEFINED))
-        feeds_translations = _mako_get_namespace(context, 'feeds_translations')
-        title = _import_ns.get('title', context.get('title', UNDEFINED))
         author = _import_ns.get('author', context.get('author', UNDEFINED))
-        posts = _import_ns.get('posts', context.get('posts', UNDEFINED))
+        description = _import_ns.get('description', context.get('description', UNDEFINED))
         def content():
             return render_content(context)
-        description = _import_ns.get('description', context.get('description', UNDEFINED))
+        kind = _import_ns.get('kind', context.get('kind', UNDEFINED))
+        title = _import_ns.get('title', context.get('title', UNDEFINED))
+        feeds_translations = _mako_get_namespace(context, 'feeds_translations')
+        posts = _import_ns.get('posts', context.get('posts', UNDEFINED))
         date_format = _import_ns.get('date_format', context.get('date_format', UNDEFINED))
         __M_writer = context.writer()
         __M_writer('\n<article class="authorpage">\n    <header>\n        <h1>')
@@ -128,6 +128,6 @@ def render_content(context,**pageargs):
 
 """
 __M_BEGIN_METADATA
-{"filename": "/home/travis/virtualenv/python3.8.0/lib/python3.8/site-packages/nikola/data/themes/base/templates/author.tmpl", "uri": "author.tmpl", "source_encoding": "utf-8", "line_map": {"23": 3, "29": 0, "47": 2, "48": 3, "53": 7, "58": 28, "64": 5, "75": 5, "76": 6, "77": 6, "83": 9, "98": 9, "99": 12, "100": 12, "101": 13, "102": 14, "103": 14, "104": 14, "105": 16, "106": 17, "107": 17, "108": 20, "109": 21, "110": 22, "111": 23, "112": 23, "113": 23, "114": 23, "115": 23, "116": 23, "117": 23, "118": 23, "119": 23, "120": 23, "121": 23, "122": 25, "123": 27, "129": 123}}
+{"filename": "/home/travis/virtualenv/python3.8.7/lib/python3.8/site-packages/nikola/data/themes/base/templates/author.tmpl", "uri": "author.tmpl", "source_encoding": "utf-8", "line_map": {"23": 3, "29": 0, "47": 2, "48": 3, "53": 7, "58": 28, "64": 5, "75": 5, "76": 6, "77": 6, "83": 9, "98": 9, "99": 12, "100": 12, "101": 13, "102": 14, "103": 14, "104": 14, "105": 16, "106": 17, "107": 17, "108": 20, "109": 21, "110": 22, "111": 23, "112": 23, "113": 23, "114": 23, "115": 23, "116": 23, "117": 23, "118": 23, "119": 23, "120": 23, "121": 23, "122": 25, "123": 27, "129": 123}}
 __M_END_METADATA
 """
